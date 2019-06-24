@@ -1,0 +1,23 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  --gray-100: #f3f4f6;
+  --gray-200: #d2d7e0;
+  --gray-300: #809099;
+  --gray-400: #405059;
+  --gray-500: #122230;
+
+  --green-100: hsl(168, 56%, 45%);
+  --green-200: hsl(168, 99%, 32%);
+  --green-300: hsl(168, 99%, 25%);
+
+  --primary: var(--green-200);
+  --primary-dark: var(--green-300);
+  --primary-light: var(--green-100);
+
+  --sans-serif: proxima-nova, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --monospace: 'Hack', Inconsolata, Monaco, Consolas, 'Courier New', Courier,
+    monospace;
+}

@@ -1,0 +1,55 @@
+import React from 'react';
+import TemplateWrapper from '../components/PageWrapper';
+import get from '../utils/get';
+import PostOverview from '../components/PostOverview';
+import PageSwitcher from '../components/PageSwitcher';
+import { graphql } from 'gatsby';
+
+const PostOverviewTemplate = ({ data, pageContext }) => {
+  const posts = get(data, 'allMarkdownRemark.edges', []);
+
+  return (
+    <TemplateWrapper>
+      <main className="overview" role="feed">
+        <PostOverview posts={posts} tags={true} />
+      </main>
+      <PageSwitcher prev={pageContext.prev} next={pageContext.next} />
+    </TemplateWrapper>
+  );
+};
+
+export default PostOverviewTemplate;
+
+export const postOverviewPageQuery = graphql`
+  query BlogPage($skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(
+      limit: $limit
+      skip: $skip
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      totalCount
+      edges {
+        node {
+          excerpt(pruneLength: 300)
+          wordCount {
+            words
+          }
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            tags
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+  }
+`;

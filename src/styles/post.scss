@@ -1,0 +1,73 @@
+.post {
+  max-width: 48rem;
+  padding: 0rem 2rem 2rem;
+}
+
+.post__body {
+  p {
+    font-size: 1.125rem;
+  }
+
+  p + p {
+    margin-top: 0.5rem;
+  }
+
+  * + * {
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    list-style: disc outside;
+  }
+
+  ol {
+    list-style: decimal outside;
+  }
+
+  p .gatsby-resp-image-link {
+    margin: 1.5rem -2rem !important;
+  }
+
+  [href^='http']:not([href*='http://kevtiq.co']):after {
+    content: ' ☍';
+  }
+}
+
+.post__header {
+  padding: 0rem 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    color: var(--gray-500);
+    padding-bottom: 0.25rem;
+  }
+
+  span {
+    font-family: var(--monospace);
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .post {
+    padding: 0rem 1rem 2rem;
+  }
+
+  .post__header {
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    margin: 0px;
+  }
+
+  .post__footer {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+
+  .post__body p .gatsby-resp-image-link {
+    margin: 1.5rem -1rem !important;
+  }
+}

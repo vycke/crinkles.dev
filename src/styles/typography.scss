@@ -1,0 +1,89 @@
+// HEADINGS
+h1,
+h2,
+h3 {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+// LINKS
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+a.svg {
+  position: relative;
+  display: inline-block;
+}
+
+// QUOTES
+blockquote {
+  border-left: 0.25rem solid var(--primary);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--gray-400);
+}
+
+// CODE BLOCKS
+pre[class*='language-'] {
+  font-size: 0.85rem;
+  padding: 2rem;
+  margin: 0rem -2rem;
+
+  > code[class*='language-'] {
+    font-family: var(--monospace);
+  }
+}
+
+pre[class*='language-']::selection {
+  color: var(--gray-100);
+}
+
+// INLINE CODE
+:not(pre) > code,
+:not(pre) > code[class*='language-'] {
+  font-family: var(--monospace);
+  font-size: 1rem;
+  color: var(--primary);
+  background-color: transparent !important;
+
+  &::selection {
+    color: (--white);
+    background: var(--primary);
+  }
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--white);
+  text-shadow: 0 0 0 var(--gray-500);
+}
+
+@media (max-width: 30rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+  }
+
+  pre[class*='language-'] {
+    margin: 0 -1rem;
+  }
+}

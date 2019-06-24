@@ -1,0 +1,32 @@
+.feather {
+  height: 1.5rem;
+  transition: all ease-in-out 300ms;
+}
+
+header {
+  .feather {
+    stroke: var(--gray-400);
+    fill: var(--gray-200);
+
+    &:hover,
+    &:focus,
+    &:active {
+      stroke: var(--primary);
+      fill: var(--primary-light);
+    }
+  }
+}
+
+footer {
+  .feather {
+    stroke: var(--white);
+    fill: var(--gray-400);
+
+    &:hover,
+    &:focus,
+    &:active {
+      stroke: var(--gray-200);
+      fill: var(--gray-200);
+    }
+  }
+}

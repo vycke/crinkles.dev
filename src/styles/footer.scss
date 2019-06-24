@@ -9,6 +9,7 @@ footer {
   justify-content: center;
   line-height: 1;
   font-size: 1.5rem;
+  margin-top: 2rem;
 
   a,
   a:link,
@@ -30,5 +31,11 @@ footer {
 
   > * + * {
     margin-left: 1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  footer {
+    margin-top: 0rem;
   }
 }

@@ -5,8 +5,8 @@
 
 header {
   .feather {
-    stroke: var(--gray-400);
-    fill: var(--gray-200);
+    stroke: var(--gray-300);
+    fill: var(--gray-100);
 
     &:hover,
     &:focus,
@@ -19,7 +19,7 @@ header {
 
 footer {
   .feather {
-    stroke: var(--white);
+    stroke: var(--gray-200);
     fill: var(--gray-400);
 
     &:hover,

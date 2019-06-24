@@ -23,6 +23,9 @@ main {
 
 .page404 {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   span {
     font-size: 1.5rem;

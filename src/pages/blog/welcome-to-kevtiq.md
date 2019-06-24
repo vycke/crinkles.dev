@@ -34,7 +34,11 @@ Code examples incoming...
 
 ## How it is build
 
-Years I have spend hours designing and developing various iterations of my own brand and website. I have tried solutions like WordPress, Drupal and even tried creating my own CMS system hooked up to a SQL database. But in the end, all of these solutions took too much effort to finish for small personal side project. So I lost interest. But like many other front-end engineers, I discovered static site generators.
+Years I have spend hours designing and developing various iterations of my own brand and website. The brand itself definitely had more iterations than the website itself, but finally I settled for the identity below (at least for now).
+
+![The color palette of Kevtiq.co](/img/color-palette.png 'The color palette of Kevtiq.co')
+
+I have tried solutions like WordPress, Drupal and even tried creating my own CMS system hooked up to a SQL database. But in the end, all of these solutions took too much effort to finish for small personal side project. So I lost interest. But like many other front-end engineers, I discovered static site generators.
 
 A static site generator does exactly what the name suggests. It generates webpages based on templates and content files (like `.md`-files). In general, static site generators make it very easy to push a new static website fairly quickly. My current job requires me to do a lot of React. As I continuously learn new things, I wanted my personal website allowing me to play around with React. With this in mind, I stumbled upon the static site generator [Gatsby](https://gatsbyjs.org).
 

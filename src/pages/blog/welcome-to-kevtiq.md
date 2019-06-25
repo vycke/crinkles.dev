@@ -43,6 +43,6 @@ I have tried solutions like WordPress, Drupal and even tried creating my own CMS
 A static site generator does exactly what the name suggests. It generates webpages based on templates and content files (like `.md` files). In general, static site generators make it very easy to push a new static website fairly quickly. My current job requires me to do a lot of React. As I continuously learn new things, I wanted my website allowing me to play around with React. With this in mind, I stumbled upon the static site generator, [Gatsby](https://gatsbyjs.org).
 
 Although creating a website with Gatsby or any other static site generator is daily easy, it was still missing a CMS. Luckily, there are several 'headless' CMS options available. These solutions make content from a repository available via a RESTful API for display on any device. My choice fell on [Netlify CMS](https://www.netlifycms.org/), which is easy to use for blog posts, static pages and media, such as images.
-This was an easy choice, as choose [Netlify](https://www.netlify.com/) for the site hosting ([GitHub Pages](https://pages.github.com/) is a good alternative).
+This was an easy choice, as choose [Netlify](https://www.netlify.com/) for the site hosting ([Github Pages](https://pages.github.com/) is a good alternative).
 
 If you are interested, you can find the source-code of this website on [Github](https://github.com/kevtiq/kevtiq.co).

@@ -18,8 +18,12 @@ const Header = () => {
           <span className="logo__text">kevtiq</span>
         </Link>
         <Toggle
-          checked={window.__theme === 'light'}
-          onClick={(v) => window.__setPreferredTheme(v ? 'light' : 'dark')}
+          checked={
+            typeof window !== `undefined` ? window.__theme === 'light' : true
+          }
+          onClick={(v) => {
+            if (window) window.__setPreferredTheme(v ? 'light' : 'dark');
+          }}
           label="Switch between Dark and Light mode"
           icons={[Sun, Moon]}
         />

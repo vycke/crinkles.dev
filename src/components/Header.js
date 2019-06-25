@@ -22,7 +22,8 @@ const Header = () => {
             typeof window !== `undefined` ? window.__theme === 'light' : true
           }
           onClick={(v) => {
-            if (window) window.__setPreferredTheme(v ? 'light' : 'dark');
+            if (typeof window !== `undefined`)
+              window.__setPreferredTheme(v ? 'light' : 'dark');
           }}
           label="Switch between Dark and Light mode"
           icons={[Sun, Moon]}

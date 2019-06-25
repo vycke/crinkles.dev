@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import BlogPostTemplate from '../components/BlogPostTemplate';
-import TemplateWrapper from '../components/PageWrapper';
+import Layout from '../components/Layout';
 import PageSwitcher from '../components/PageSwitcher';
 
 const BlogPost = ({ data, pageContext }) => {
@@ -26,13 +26,13 @@ const BlogPost = ({ data, pageContext }) => {
   };
 
   return (
-    <TemplateWrapper
+    <Layout
       meta={{ ...post.frontmatter, slug: post.fields.slug }}
       footer={true}
       className="post">
       <BlogPostTemplate meta={meta}>{post.html}</BlogPostTemplate>
       <PageSwitcher prev={prev} next={next} />
-    </TemplateWrapper>
+    </Layout>
   );
 };
 

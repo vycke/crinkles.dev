@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateWrapper from '../components/PageWrapper';
+import Layout from '../components/Layout';
 import get from '../utils/get';
 import PostOverview from '../components/PostOverview';
 import PageSwitcher from '../components/PageSwitcher';
@@ -11,7 +11,7 @@ const TagsTemplate = ({ data, pageContext }) => {
   const { tag, tags, prev, next } = pageContext;
 
   return (
-    <TemplateWrapper
+    <Layout
       meta={{
         title: `Kevtiq.co | ${tag}`,
         description: `All posts on Kevtiq.co with the tag: ${tag}`
@@ -22,7 +22,7 @@ const TagsTemplate = ({ data, pageContext }) => {
         <PostOverview posts={posts} />
       </main>
       <PageSwitcher prev={prev} next={next} />
-    </TemplateWrapper>
+    </Layout>
   );
 };
 

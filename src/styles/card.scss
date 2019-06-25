@@ -1,8 +1,8 @@
 .card {
   padding: 2rem;
   transition: all ease-in-out 200ms;
-  background: var(--gray-100);
-  border: 1px solid var(--gray-100);
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card);
 
   &:hover {
     > * {
@@ -20,14 +20,14 @@
   .card {
     margin: 0rem -1rem;
     padding: 1rem;
-    background: var(--white);
-    border: 1px solid var(--white);
+    background: var(--bg-default);
+    border: 1px solid var(--bg-default);
 
     &:hover {
       box-shadow: none;
       margin: 0rem -1rem;
       padding: 1rem;
-      border: 1px solid var(--white);
+      border: 1px solid var(--bg-default);
     }
   }
 }

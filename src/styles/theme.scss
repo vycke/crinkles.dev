@@ -1,0 +1,19 @@
+body.light {
+  --bg-default: var(--white);
+  --bg-footer: var(--gray-400);
+  --bg-card: var(--gray-100);
+
+  --text-default: var(--gray-500);
+  --text-primary: var(--gray-500);
+  --text-secondary: var(--gray-300);
+}
+
+body.dark {
+  --bg-default: var(--gray-500);
+  --bg-footer: var(--gray-500);
+  --bg-card: var(--gray-400);
+
+  --text-default: var(--gray-100);
+  --text-primary: var(--white);
+  --text-secondary: var(--gray-200);
+}

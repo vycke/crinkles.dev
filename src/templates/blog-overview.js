@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateWrapper from '../components/PageWrapper';
+import Layout from '../components/Layout';
 import get from '../utils/get';
 import PostOverview from '../components/PostOverview';
 import PageSwitcher from '../components/PageSwitcher';
@@ -9,12 +9,12 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
 
   return (
-    <TemplateWrapper>
+    <Layout>
       <main className="overview" role="feed">
         <PostOverview posts={posts} tags={true} />
       </main>
       <PageSwitcher prev={pageContext.prev} next={pageContext.next} />
-    </TemplateWrapper>
+    </Layout>
   );
 };
 

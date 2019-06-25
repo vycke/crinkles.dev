@@ -2,14 +2,16 @@ html {
   font-size: 16px;
   font-size: 100%;
   font-family: var(--sans-serif);
-  color: var(--gray-500);
   height: 100%;
   line-height: 1.5;
-  background-color: var(--gray-400);
+  background-color: var(--bg-default);
 }
 
 body {
   height: 100%;
+  color: var(--text-default);
+  background-color: var(--bg-default);
+  transition: all ease-in-out 100ms;
 }
 
 /**
@@ -37,7 +39,6 @@ main {
   min-height: 100vh;
   flex-direction: column;
   width: 100%;
-  background-color: var(--white);
 }
 
 .visually-hidden {

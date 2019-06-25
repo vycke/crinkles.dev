@@ -2,7 +2,7 @@
 * FOOTER *
 **/
 footer {
-  background: var(--gray-400);
+  background: var(--bg-footer);
   padding: 2rem;
   display: flex;
   flex-direction: row;
@@ -31,6 +31,20 @@ footer {
 
   > * + * {
     margin-left: 1rem;
+  }
+
+  .feather {
+    fill: var(--gray-400);
+    stroke: var(--gray-100);
+    height: 1.5rem;
+    transition: all ease-in-out 300ms;
+
+    &:hover,
+    &:focus,
+    &:active {
+      stroke: var(--primary-light);
+      fill: var(--primary-dark);
+    }
   }
 }
 

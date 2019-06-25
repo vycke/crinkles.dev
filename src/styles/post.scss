@@ -46,14 +46,14 @@
   flex-direction: column;
 
   h1 {
-    color: var(--gray-500);
+    color: var(--text-primary);
     padding-bottom: 0.25rem;
   }
 
   span {
     font-family: var(--monospace);
     font-size: 0.75rem;
-    color: var(--gray-300);
+    color: var(--text-secondary);
     padding-bottom: 0.5rem;
   }
 }

@@ -53,12 +53,9 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script
-          async
-          defer
-          src="https://cdn.simpleanalytics.io/hello.js"></script>
+        <script async defer src="https://visits.kevtiq.co/app.js"></script>
         <noscript>
-          <img src="https://api.simpleanalytics.io/hello.gif" alt="" />
+          <img src="https://visits.kevtiq.co/image.gif" alt="" />
         </noscript>
       </body>
     </html>

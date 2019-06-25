@@ -9,6 +9,10 @@ const Toggle = ({ checked, onClick, icons, label }) => {
     setCheck(!check);
   };
 
+  React.useEffect(() => {
+    setCheck(checked);
+  }, [checked]);
+
   return (
     <label className="toggle" data-state={check ? 'checked' : 'unchecked'}>
       {icons && icons.map((I, i) => <I key={i} />)}

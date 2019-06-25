@@ -6,6 +6,12 @@ import Moon from './Moon';
 import Toggle from './Toggle';
 
 const Header = () => {
+  const [checked, setChecked] = React.useState(false);
+
+  React.useEffect(() => {
+    setChecked(window.__theme === 'light');
+  }, [checked]);
+
   return (
     <React.Fragment>
       <header role="banner">
@@ -18,9 +24,7 @@ const Header = () => {
           <span className="logo__text">kevtiq</span>
         </Link>
         <Toggle
-          checked={
-            typeof window !== `undefined` ? window.__theme === 'light' : true
-          }
+          checked={checked}
           onClick={(v) => {
             if (typeof window !== `undefined`)
               window.__setPreferredTheme(v ? 'light' : 'dark');

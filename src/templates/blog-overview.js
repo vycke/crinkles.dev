@@ -35,7 +35,7 @@ export const postOverviewPageQuery = graphql`
       totalCount
       edges {
         node {
-          excerpt(pruneLength: 300)
+          excerpt(pruneLength: 250)
           wordCount {
             words
           }

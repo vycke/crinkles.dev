@@ -9,7 +9,7 @@
   height: 1.5em;
   font-size: inherit;
   transition: all ease-in-out 100ms;
-  background: var(--gray-400);
+  background: var(--toggle-bg);
   border-radius: 2rem;
 }
 
@@ -33,11 +33,11 @@
   height: 1.75rem;
   width: 1.75rem;
   margin: -0.125rem;
-  background: var(--primary);
+  background: var(--toggle-thumb);
   border-radius: 2rem;
-  transition: all ease-in-out 100ms;
+  transition: all ease-in-out 200ms;
 }
 
-.toggle[data-state='checked'] .thumb {
+.toggle[data-state='true'] .thumb {
   transform: translateX(2em);
 }

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Toggle = ({ checked, onClick, icons, label }) => {
   const [check, setCheck] = React.useState(checked);
 
-  const handleClick = () => {
-    if (onClick) onClick(!check);
-    setCheck(!check);
+  const handleClick = (e) => {
+    e.preventDefault();
+    onClick(!check);
   };
 
   React.useEffect(() => {
@@ -14,7 +14,7 @@ const Toggle = ({ checked, onClick, icons, label }) => {
   }, [checked]);
 
   return (
-    <label className="toggle" data-state={check ? 'checked' : 'unchecked'}>
+    <label className="toggle" data-state={check}>
       {icons && icons.map((I, i) => <I key={i} />)}
       <div className="thumb" />
       <input
@@ -28,8 +28,7 @@ const Toggle = ({ checked, onClick, icons, label }) => {
 };
 
 Toggle.defaultProps = {
-  className: '',
-  checked: false
+  className: ''
 };
 
 Toggle.propTypes = {

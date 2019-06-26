@@ -6,11 +6,11 @@ import Moon from './Moon';
 import Toggle from './Toggle';
 
 const Header = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [theme, setTheme] = React.useState(null);
 
   React.useEffect(() => {
-    setChecked(window.__theme === 'light');
-  }, [checked]);
+    setTheme(window.__theme);
+  }, []);
 
   return (
     <React.Fragment>
@@ -23,15 +23,17 @@ const Header = () => {
           />
           <span className="logo__text">kevtiq</span>
         </Link>
-        <Toggle
-          checked={checked}
-          onClick={(v) => {
-            if (typeof window !== `undefined`)
-              window.__setPreferredTheme(v ? 'light' : 'dark');
-          }}
-          label="Switch between Dark and Light mode"
-          icons={[Sun, Moon]}
-        />
+        {theme && (
+          <Toggle
+            checked={theme === 'dark'}
+            onClick={(v) => {
+              window.__setPreferredTheme(v ? 'dark' : 'light');
+              setTheme(v ? 'dark' : 'light');
+            }}
+            label="Switch between Dark and Light mode"
+            icons={[Moon, Sun]}
+          />
+        )}
       </header>
       <aside className="welcome">
         <p className="welcome-text">

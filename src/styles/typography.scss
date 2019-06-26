@@ -25,7 +25,7 @@ a:link,
 a:hover,
 a:visited,
 a:active {
-  color: var(--primary);
+  color: var(--text-link);
   text-decoration: underline;
 }
 
@@ -36,10 +36,10 @@ a.svg {
 
 // QUOTES
 blockquote {
-  border-left: 0.25rem solid var(--primary);
+  border-left: 0.25rem solid var(--blockqoute-border);
   padding-left: 1rem;
   font-style: italic;
-  color: var(--gray-400);
+  color: var(--blockquote-text);
 }
 
 // CODE BLOCKS
@@ -53,28 +53,22 @@ pre[class*='language-'] {
   }
 }
 
-pre[class*='language-']::selection {
-  color: var(--gray-100);
-}
-
 // INLINE CODE
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
   font-family: var(--monospace);
+  font-weight: 600;
   font-size: 1rem;
-  color: var(--primary);
+  color: var(--text-code);
   background-color: transparent !important;
-
-  &::selection {
-    color: (--white);
-    background: var(--primary);
-  }
 }
 
-::selection {
-  background-color: var(--primary);
-  color: var(--white);
-  text-shadow: 0 0 0 var(--gray-500);
+::selection,
+pre[class*='language-']::selection,
+code[class*='language-']::selection {
+  color: (--selection-text) !important;
+  background: var(--selection-bg) !important;
+  text-shadow: 0 0 0 #000000;
 }
 
 @media (max-width: 30rem) {

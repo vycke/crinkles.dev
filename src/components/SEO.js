@@ -13,7 +13,6 @@ const SEO = ({ description, title, tags, slug }) => {
     <Helmet title={metaTitle}>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keys} />
-      <meta name="theme-color" content="#01A282" />
 
       <link
         rel="stylesheet"

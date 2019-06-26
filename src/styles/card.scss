@@ -1,8 +1,9 @@
 .card {
   padding: 2rem;
   transition: all ease-in-out 200ms;
-  background: var(--bg-card);
-  border: 1px solid var(--bg-card);
+  background: var(--card-bg);
+  border: 1px solid var(--card-bg);
+  border-radius: 0.5rem;
 
   &:hover {
     > * {
@@ -12,20 +13,17 @@
     box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
     margin: -0.5rem;
     padding: 2.5rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--card-border);
   }
 }
 
 @media (max-width: 45rem) {
   .card {
-    margin: 0rem -1rem;
     padding: 1rem;
-    background: var(--bg-default);
-    border: 1px solid var(--bg-default);
 
     &:hover {
       box-shadow: none;
-      margin: 0rem -1rem;
+      margin: 0;
       padding: 1rem;
       border: 1px solid var(--bg-default);
     }

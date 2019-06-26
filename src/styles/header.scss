@@ -11,8 +11,8 @@ header {
   padding: 2rem 2rem 0rem;
 
   .feather {
-    fill: var(--gray-300);
-    stroke: var(--gray-100);
+    fill: var(--header-icon-fill);
+    stroke: var(--header-icon-stroke);
   }
 }
 
@@ -27,13 +27,6 @@ aside.welcome {
   > * {
     max-width: 20rem;
   }
-
-  a:link,
-  a:hover,
-  a:visited,
-  a:active {
-    color: var(--text-primary);
-  }
 }
 
 a.logo {
@@ -42,10 +35,6 @@ a.logo {
   text-decoration: none;
   align-items: center;
   cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .logo__img {
@@ -59,10 +48,6 @@ a.logo {
   color: var(--text-primary);
 }
 
-.logo__text:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 30rem) {
   header {
     padding: 1rem 1rem 0rem;
@@ -70,6 +55,6 @@ a.logo {
 
   aside.welcome {
     padding-left: 3.5rem;
-    padding-bottom: 0rem;
+    padding-bottom: 1rem;
   }
 }

@@ -12,9 +12,10 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="theme-color" content="#2CBAA7" />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="light">
+      <body {...props.bodyAttributes} className="dark">
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -36,9 +37,9 @@ export default function HTML(props) {
                 } catch (err) { }
                 var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
                 darkQuery.addListener(function(e) {
-                  window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+                  window.__setPreferredTheme(e.matches ? 'light' : 'dark')
                 });
-                setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+                setTheme(preferredTheme || (darkQuery.matches ? 'light' : 'dark'));
               })();
             `
           }}

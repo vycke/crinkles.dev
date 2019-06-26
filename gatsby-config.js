@@ -24,8 +24,8 @@ module.exports = {
         name: 'A front-end engineer',
         short_name: 'Kevtiq',
         start_url: '/',
-        background_color: '#e0e0e0',
-        theme_color: '#20282d',
+        background_color: '#ffffff',
+        theme_color: '#2CBAA7',
         display: 'standalone',
         icon: 'src/img/favicon.svg'
       }

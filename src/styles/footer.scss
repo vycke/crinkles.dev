@@ -2,7 +2,7 @@
 * FOOTER *
 **/
 footer {
-  background: var(--bg-footer);
+  background: var(--footer-bg);
   padding: 2rem;
   display: flex;
   flex-direction: row;
@@ -11,39 +11,21 @@ footer {
   font-size: 1.5rem;
   margin-top: 2rem;
 
-  a,
-  a:link,
-  a:hover,
-  a:focus,
-  a:active,
-  a:visited {
-    color: var(--gray-100);
-    transition: all ease-in-out 300ms;
-
-    > i {
-      transition: all ease-in-out 300ms;
-    }
-
-    &:hover {
-      color: var(--white);
-    }
-  }
-
   > * + * {
     margin-left: 1rem;
   }
 
   .feather {
-    fill: var(--gray-400);
-    stroke: var(--gray-100);
+    fill: var(--footer-bg);
+    stroke: var(--footer-icon-stroke);
     height: 1.5rem;
     transition: all ease-in-out 300ms;
 
     &:hover,
     &:focus,
     &:active {
-      stroke: var(--primary-light);
-      fill: var(--primary-dark);
+      stroke: var(--footer-icon-fill-hover);
+      fill: var(--footer-icon-stroke-hover);
     }
   }
 }

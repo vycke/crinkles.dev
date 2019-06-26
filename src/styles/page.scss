@@ -46,15 +46,15 @@
     text-decoration: none;
     padding: 0.125rem 0.5rem;
     border-radius: 0.25rem;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--tag-bg);
+    color: var(--tag-text);
     transition: all ease-in-out 200ms;
 
     &:hover,
     &:focus,
     &:active {
-      color: var(--white);
-      background: var(--primary-dark);
+      color: var(--tag-text);
+      background: var(--tag-hover);
     }
   }
 

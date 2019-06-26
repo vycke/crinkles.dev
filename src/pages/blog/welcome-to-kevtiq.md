@@ -14,7 +14,19 @@ You might be thinking, why not use an existing platform like [Medium](https://me
 
 Therefore I decided to design, develop, redesign, start over and finally finish (kind of...) my own personal blog website called **kevtiq.co**. And now it is here!
 
-![An image welcoming all the readers](/img/welcome-hello.png "An image welcoming all the readers")
+```
+              , , , , ,
+              # # # # #
+             _#_#_#_#_#_
+            {_` ` ` ` `_}
+           _{_._._._._._}_
+          {_._._._._._._._}               Have some welcoming
+         _{_._._._._._._._}_              ASCII art
+        {_._._._._._._._._._}
+    .---{_._._._._._._._._._}---.
+   (   `"""""""""""""""""""""`   )
+    `~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+```
 
 ## What can you expect
 
@@ -27,10 +39,6 @@ I hear you thinking, what in the World would Kevin be writing about? Well, as yo
 * How I would create certain UI elements.
 
 In the future, this list will definitely expand, as it already did in the last week. But it is definitely a good starting point for now. The order of topics and posts will be random, but I will ensure articles are updated with links to newer articles if necessary. As I like code examples and pretty visuals, expect enough of those too!
-
-```jsx
-Code examples incoming...
-```
 
 ## How it is build
 

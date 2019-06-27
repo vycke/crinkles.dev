@@ -1,16 +1,23 @@
 body {
   --footer-icon-stroke: var(--gray-200);
-  --footer-icon-fill-hover: var(--green-100);
-  --footer-icon-stroke-hover: var(--green-200);
+  --footer-icon-fill-hover: var(--red-100);
+  --footer-icon-stroke-hover: var(--red-200);
 
   --toggle-bg: var(--gray-400);
-  --toggle-thumb: var(--green-200);
+  --toggle-thumb: var(--red-200);
 
   --header-icon-fill: var(--gray-300);
   --header-icon-stroke: var(--gray-100);
 
-  --selection-bg: var(--green-200);
-  --selection-text: var(--gray-500);
+  --selection-bg: var(--red-200);
+  --selection-text: var(--white);
+
+  --tag-bg: var(--red-200);
+  --tag-text: var(--white);
+  --tag-hover: var(--red-300);
+
+  --text-link: var(--red-200);
+  --text-code: var(--red-200);
 }
 
 body.light {
@@ -20,15 +27,9 @@ body.light {
   --text-default: var(--gray-500);
   --text-primary: var(--gray-500);
   --text-secondary: var(--gray-300);
-  --text-link: var(--blue-200);
-  --text-code: var(--blue-200);
 
-  --blockquote-border: var(--green-200);
+  --blockquote-border: var(--red-200);
   --blockquote-text: var(--gray-400);
-
-  --tag-bg: var(--blue-200);
-  --tag-text: var(--white);
-  --tag-hover: var(--blue-300);
 
   --card-bg: var(--gray-100);
   --card-border: var(--gray-200);
@@ -41,15 +42,9 @@ body.dark {
   --text-default: var(--gray-100);
   --text-primary: var(--white);
   --text-secondary: var(--gray-200);
-  --text-link: var(--green-200);
-  --text-code: var(--green-200);
 
-  --blockquote-border: var(--green-200);
+  --blockquote-border: var(--red-200);
   --blockquote-text: var(--gray-200);
-
-  --tag-bg: var(--green-200);
-  --tag-text: var(--gray-500);
-  --tag-hover: var(--green-300);
 
   --card-bg: var(--gray-400);
   --card-border: var(--gray-200);

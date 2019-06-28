@@ -22,7 +22,7 @@ aside.welcome {
   max-width: 53rem;
   width: 100%;
   color: var(--text-secondary);
-  padding: 0rem 0rem 2rem 4.5rem;
+  padding: 0rem 0rem 2rem 4.25rem;
 
   > * {
     max-width: 20rem;
@@ -38,12 +38,13 @@ a.logo {
 }
 
 .logo__img {
-  width: 1.5rem;
+  width: 1.25rem;
   margin-right: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .logo__text {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
 }

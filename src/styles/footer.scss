@@ -16,7 +16,6 @@ footer {
   }
 
   .feather {
-    fill: var(--footer-bg);
     stroke: var(--footer-icon-stroke);
     height: 1.5rem;
     transition: all ease-in-out 300ms;
@@ -24,8 +23,7 @@ footer {
     &:hover,
     &:focus,
     &:active {
-      stroke: var(--footer-icon-fill-hover);
-      fill: var(--footer-icon-stroke-hover);
+      stroke: var(--footer-icon-stroke-hover);
     }
   }
 }

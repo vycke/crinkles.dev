@@ -27,7 +27,7 @@ const PageWrapper = ({ children, meta }) => {
         <header role="banner">
           <Link to="/" className="logo">
             <img
-              src={theme === 'dark' ? logoWhite : logoDark}
+              src={theme === 'dark' ? logo : logo}
               alt="Kevtiq logo used by Kevin Pennekamp"
               className="logo__img"
             />

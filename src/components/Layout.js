@@ -2,8 +2,6 @@ import React from 'react';
 import Github from './Github';
 import Twitter from './Twitter';
 import logo from '../img/logo.svg';
-import logoWhite from '../img/logo-white.svg';
-import logoDark from '../img/logo-dark.svg';
 import { Link } from 'gatsby';
 import Sun from './Sun';
 import Moon from './Moon';

@@ -1,15 +1,15 @@
 body {
-  --footer-icon-stroke: var(--gray-200);
+  --footer-icon-stroke: var(--gray-100);
 
   --toggle-bg: var(--gray-400);
 
   --header-icon-fill: var(--gray-300);
   --header-icon-stroke: var(--gray-100);
 
-  --selection-bg: var(--green-200);
+  --selection-bg: var(--green-300);
   --selection-text: var(--white);
 
-  --blockquote-border: var(--green-200);
+  --blockquote-border: var(--green-300);
 }
 
 body.light {
@@ -28,12 +28,12 @@ body.light {
   --text-link: var(--green-300);
   --text-code: var(--green-300);
 
-  --tag-bg: var(--green-300);
-  --tag-text: var(--white);
-  --tag-hover: var(--green-300);
+  --tag-bg: var(--green-200);
+  --tag-text: var(--gray-500);
+  --tag-hover: var(--green-200);
 
-  --toggle-thumb: var(--green-300);
-  --footer-icon-stroke-hover: var(--green-300);
+  --toggle-thumb: var(--green-200);
+  --footer-icon-stroke-hover: var(--green-200);
 }
 
 body.dark {
@@ -57,5 +57,5 @@ body.dark {
   --tag-hover: var(--green-200);
 
   --toggle-thumb: var(--green-200);
-  --footer-icon-stroke-hover: var(--green-00);
+  --footer-icon-stroke-hover: var(--green-200);
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Github from './Github';
 import Twitter from './Twitter';
-import logo from '../img/logo.svg';
+import logoDark from '../img/logo-dark.svg';
+import logoLight from '../img/logo-light.svg';
 import { Link } from 'gatsby';
 import Sun from './Sun';
 import Moon from './Moon';
@@ -25,7 +26,7 @@ const PageWrapper = ({ children, meta }) => {
         <header role="banner">
           <Link to="/" className="logo">
             <img
-              src={theme === 'dark' ? logo : logo}
+              src={theme === 'dark' ? logoDark : logoLight}
               alt="Kevtiq logo used by Kevin Pennekamp"
               className="logo__img"
             />

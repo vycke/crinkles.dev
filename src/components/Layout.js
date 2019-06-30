@@ -11,6 +11,7 @@ import Toggle from './Toggle';
 import '../styles/styles.scss';
 import 'prism-theme-night-owl';
 import SEO from './SEO';
+import Dribbble from './Dribbble';
 
 const PageWrapper = ({ children, meta }) => {
   const [theme, setTheme] = React.useState(null);
@@ -59,6 +60,9 @@ const PageWrapper = ({ children, meta }) => {
           </a>
           <a href="https://github.com/kevtiq" alt="Link to my Github page">
             <Github />
+          </a>
+          <a href="https://dribbble.com/kevtiq" alt="Link to my Dribbble page">
+            <Dribbble />
           </a>
         </footer>
       </div>

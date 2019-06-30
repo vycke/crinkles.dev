@@ -15,8 +15,9 @@ footer {
     margin-left: 1rem;
   }
 
-  .feather {
+  .icon {
     stroke: var(--footer-icon-stroke);
+    color: var(--footer-icon-stroke);
     height: 1.5rem;
     transition: all ease-in-out 300ms;
 
@@ -24,6 +25,7 @@ footer {
     &:focus,
     &:active {
       stroke: var(--footer-icon-stroke-hover);
+      color: var(--footer-icon-stroke-hover);
     }
   }
 }

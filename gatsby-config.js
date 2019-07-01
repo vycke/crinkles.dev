@@ -9,7 +9,9 @@ module.exports = {
       'Front-end Engineer',
       'Software Engineer',
       'Web Developer',
-      'Consultant'
+      'Consultant',
+      'UI Designer',
+      'Designer'
     ]
   },
   plugins: [
@@ -25,7 +27,7 @@ module.exports = {
         short_name: 'Kevtiq',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#2CBAA7',
+        theme_color: '#212938',
         display: 'standalone',
         icon: 'src/img/favicon.svg'
       }

@@ -36,8 +36,10 @@ a.svg {
 
 // QUOTES
 blockquote {
-  border-left: 0.25rem solid var(--blockqoute-border);
-  padding-left: 1rem;
+  border-left: 0.25rem solid var(--blockquote-border);
+  border-top: 0.25rem solid var(--blockquote-border);
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 0.5rem;
   font-style: italic;
   color: var(--blockquote-text);
 }

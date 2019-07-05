@@ -20,7 +20,7 @@ The process starts with research, of which user input is very important. This us
 
 ![The UX design and engineering process](/img/design-process.png 'The UX design and engineering process')
 
-After gathering enough quantitative and qualitative data, a UX designer starts modeling. He or she starts designing a solution for the found problem. The goal if this phase is to find a solution for the problem (e.g. ensure better decision-making by the user). I can imagine the first thing that will cross your mind is creating a UI design. But, many types of models exist that a UX designer can create to get more information out of users.
+After gathering enough quantitative and qualitative data, a UX designer starts modeling. He or she starts designing a solution for the found problem. The goal of this phase is to find a solution for the problem (e.g. ensure better decision-making by the user). I can imagine the first thing that will cross your mind is creating a UI design. But, many types of models exist that a UX designer can create to get more information out of users.
 
 - UI designs / design system;
 - Information architecture / functional map /screen flows;

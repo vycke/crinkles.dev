@@ -5,6 +5,7 @@
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   padding: 2rem;
+  height: 0;
 }
 
 .overview__title {
@@ -14,6 +15,7 @@
 .entry {
   display: flex;
   flex-direction: column;
+  align-self: start;
   color: var(--text-secondary);
   min-width: 18rem;
 }

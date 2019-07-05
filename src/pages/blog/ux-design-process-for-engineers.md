@@ -24,7 +24,7 @@ After gathering enough quantitative and qualitative data, a UX designer starts m
 
 - UI designs / design system;
 - Information architecture / functional map /screen flows;
-- Context map;
+- Context mapping;
 - Customer journey map;
 
 The outcome of the above modeling techniques is often verified with users and stakeholders by the designers. If the designed solution is verified, it can be handed over to an engineering team. At this point, the designers have converted a user problem into an engineering problem! It is up to the engineers to find a solution and for an implementation problem.

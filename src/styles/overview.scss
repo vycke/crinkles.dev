@@ -55,14 +55,10 @@ a.entry__title {
 @media (max-width: 30rem) {
   .overview {
     padding: 1rem;
-    grid-row-gap: 0rem;
+    grid-row-gap: 1rem;
   }
 
   .overview__title {
     padding: 2rem 1rem 0rem;
-  }
-
-  .entry {
-    margin-bottom: 0rem;
   }
 }

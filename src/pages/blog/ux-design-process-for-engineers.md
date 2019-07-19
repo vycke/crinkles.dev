@@ -48,6 +48,7 @@ As engineers, we can gather feedback on the design step from our colleague engin
 At the same conference, this year, [CSS Day](https://cssday.nl/2019), [Jared Spool](https://twitter.com/jmspool) had a very strong remark about design with a team. Like with almost every aspect of team-work, you are as weak as your weakest link. However, when it comes to design, it goes beyond your own team. Everybody that can influence the design decisions is a link in the process.
 
 > You are as weak as your weakest design influencer
+> <cite>[Jared Spool](https://twitter.com/jmspool)</cite>
 
 This sounds familiar to everybody. However, if you think about it, we underestimate it very often. Have you ever seen a design implementation of a stereotype back-end engineer or DevOps engineer? When you have front-end engineers in your team you would hardly ever let others implement a design of course. But this does not mean they cannot influence it. If you look back at the process, the engineering team can influence the designs by providing insights into technical feasibility, but also in the research phase. The engineering feedback should be given as a team, not by sole developers. So your backend and DevOps engineers become design influencers.
 
@@ -64,9 +65,12 @@ Jared Spool explained the position of UX design within a team or organization du
 An important milestone in this maturity model is getting to stage three, 'UX design as a service'. To get to this stage, executive management has to decide to start investing in UX design resources, for the first time. From a business perspective, getting to this strategic decision is a big step. It is important, however, to keep in mind that a team or organization is not on a fixed spot in the maturity model. Each design influencer and each team occupies its own place in the model. In the end, you are as weak as your weakest design influencer.
 
 > Each design influencer and team occupies its own place in the maturity model
+> <cite>[Jared Spool](https://twitter.com/jmspool)</cite>
 
 ## Honeywell vs. Nest
 
 I am not going to explain all the steps and transitions in this model, You should watch the talk of Jared Spool instead. But Jared uses a striking example of what the competitive edge of having a high level of UX design maturity in your team or organization. Honeywell was your go-to supplier for thermostats, but they were not able to offer a real experience. They thought, after offering a model with many features, that thermostats could not be innovated anymore. But this was a business and engineering decision. How could Nest beat Honeywell? The Nest-team was at the last stage of the maturity model. They started with an experienced team that all had fluent design skills. This resulted in building a company that was sold within a few years for over three billion dollars.
+
+## Conclusion
 
 As a software engineer you have to wonder yourself, do you want to be on the Nest or Honeywell side of the coin? If you want to be the next Nest, do not underestimate the value of UX design. Find out where your team stands on the maturity scale, and see what you can do to let your team take the next step!

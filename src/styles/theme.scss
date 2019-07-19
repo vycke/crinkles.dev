@@ -14,11 +14,13 @@ body {
 
 body.light {
   --bg-default: var(--white);
-  --footer-bg: var(--gray-500);
+  --footer-bg: var(--gray-400);
+  --code-bg: var(--gray-500);
 
   --text-default: var(--gray-500);
   --text-primary: var(--gray-500);
   --text-secondary: var(--gray-300);
+  --text-header: var(--gray-400);
 
   --blockquote-text: var(--gray-400);
 
@@ -39,10 +41,12 @@ body.light {
 body.dark {
   --bg-default: var(--gray-500);
   --footer-bg: var(--gray-500);
+  --code-bg: var(--gray-400);
 
   --text-default: var(--gray-100);
   --text-primary: var(--white);
   --text-secondary: var(--gray-200);
+  --text-header: var(--gray-100);
 
   --blockquote-text: var(--gray-200);
 

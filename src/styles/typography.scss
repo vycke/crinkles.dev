@@ -3,6 +3,7 @@ h1,
 h2,
 h3 {
   width: 100%;
+  color: var(--text-header);
 }
 
 h1 {
@@ -49,6 +50,7 @@ pre[class*='language-'] {
   font-size: 0.85rem;
   padding: 2rem;
   margin: 0rem -2rem;
+  background-color: var(--code-bg);
 
   > code[class*='language-'] {
     font-family: var(--monospace);
@@ -73,6 +75,16 @@ code[class*='language-']::selection {
   text-shadow: 0 0 0 #000000;
 }
 
+.header-anchor {
+  &:before {
+    content: '#';
+    width: 1.5rem;
+    display: inline-block;
+    color: var(--text-link);
+    margin-left: -1.5rem;
+  }
+}
+
 @media (max-width: 30rem) {
   h1 {
     font-size: 1.5rem;
@@ -84,5 +96,20 @@ code[class*='language-']::selection {
 
   pre[class*='language-'] {
     margin: 0 -1rem;
+  }
+
+  .header-anchor:before {
+    margin-left: 0rem;
+  }
+}
+
+cite {
+  width: 100%;
+  font-size: 1rem;
+  display: block;
+  text-align: right;
+
+  &:before {
+    content: '-- ';
   }
 }

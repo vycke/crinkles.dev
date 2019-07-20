@@ -10,7 +10,7 @@ const SEO = ({ description, title, tags, slug, img }) => {
     description: description || meta.description,
     keywords: (tags || meta.keywords).join(', '),
     twitter: meta.twitterName,
-    image: img || meta.image,
+    image: `${meta.siteUrl}${img || meta.image}`,
     url: `${meta.siteUrl}${slug ? slug : ''}`
   };
 

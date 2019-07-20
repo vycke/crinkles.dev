@@ -10,6 +10,8 @@ const useSiteMeta = () => {
             description
             keywords
             siteUrl
+            image
+            twitterName
           }
         }
       }

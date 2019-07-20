@@ -28,7 +28,7 @@ const SEO = ({ description, title, tags, slug }) => {
       <meta name="twitter:creator" content="@kevtiq" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:card" content={metaDescription} />
+      <meta name="twitter:card" content="summary" />
     </Helmet>
   );
 };

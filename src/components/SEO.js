@@ -22,11 +22,13 @@ const SEO = ({ description, title, tags, slug }) => {
 
       <meta property="og:title" content={metaTitle} />
       <meta property="og:url" content={url} />
-      <meta property="og:image" content="/img/logo-dark.svg" />
+      <meta property="og:image" content="/img/kevtiq-logo.png" />
       <meta property="og:description" content={metaDescription} />
-      <meta name="twitter:creator" content="Kevin  Pennekamp" />
+      <meta name="twitter:site" content="@kevtiq" />
+      <meta name="twitter:creator" content="@kevtiq" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:card" content={metaDescription} />
     </Helmet>
   );
 };

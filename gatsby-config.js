@@ -3,6 +3,8 @@ module.exports = {
     siteUrl: 'https://www.kevtiq.co',
     author: 'Kevin Pennekamp',
     title: 'kevtiq.co | Kevin Pennekamp',
+    image: '/img/kevtiq-logo.png',
+    twitterName: '@kevtiq',
     description:
       'Personal website of Kevin Pennekamp, a blog about my opinions about CSS, front-end engineering, and web design',
     keywords: [
@@ -29,7 +31,6 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#2a3654',
         display: 'standalone',
-        image: '/img/kevtiq-logo.png',
         icon: 'src/img/favicon.svg'
       }
     },

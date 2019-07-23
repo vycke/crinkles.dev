@@ -46,8 +46,8 @@ blockquote {
 // CODE BLOCKS
 pre[class*='language-'] {
   font-size: 0.85rem;
-  padding: 2rem;
-  margin: 0rem -2rem;
+  padding: 1.25rem;
+  margin: 0rem -1.25rem;
   background-color: var(--code-bg);
   border-radius: 0.5rem;
 
@@ -75,8 +75,8 @@ pre[class*='language-'] {
 pre .gatsby-highlight-code-line {
   background-color: var(--code-highlight-bg);
   display: block;
-  margin: 0rem -2rem;
-  padding-left: 1.75rem;
+  margin: 0rem -1.25rem;
+  padding-left: 1rem;
   padding-right: 2rem;
   border-left: 0.25em solid var(--text-link);
 }

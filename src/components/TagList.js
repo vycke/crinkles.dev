@@ -4,7 +4,7 @@ import camelCase from '../utils/camelCase';
 
 const TagList = ({ tags, className, max }) => {
   return (
-    <ul className={`tags ${className}`}>
+    <ul className={className}>
       {(tags || []).slice(0, max).map((t, i) => (
         <li key={i}>
           <Link key={i} to={`/tags/${camelCase(t)}`}>
@@ -17,7 +17,7 @@ const TagList = ({ tags, className, max }) => {
 };
 
 TagList.defaultProps = {
-  className: '',
+  className: 'tags',
   max: 100
 };
 

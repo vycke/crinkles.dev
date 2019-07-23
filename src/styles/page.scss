@@ -49,6 +49,11 @@
     background: var(--tag-bg);
     color: var(--tag-text);
     transition: all ease-in-out 200ms;
+    position: relative;
+
+    &:before {
+      content: '#';
+    }
 
     &:hover,
     &:focus,

@@ -22,7 +22,8 @@ const BlogPost = ({ data, pageContext }) => {
 
   const meta = {
     ...post.frontmatter,
-    words: post.wordCount.words
+    words: post.wordCount.words,
+    url: `https://www.kevtiq.co${data.markdownRemark.fields.slug}`
   };
 
   return (
@@ -54,6 +55,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredImage
       }
     }
   }

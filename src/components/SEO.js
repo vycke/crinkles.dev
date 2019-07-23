@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import useSiteMeta from '../hooks/useSiteMeta';
 
-const SEO = ({ description, title, tags, slug, img }) => {
+const SEO = ({ description, title, tags, slug, featuredImage }) => {
   const meta = useSiteMeta();
 
   const seo = {
@@ -10,7 +10,9 @@ const SEO = ({ description, title, tags, slug, img }) => {
     description: description || meta.description,
     keywords: (tags || meta.keywords).join(', '),
     twitter: meta.twitterName,
-    image: `${meta.siteUrl}${img || meta.image}`,
+    image: `${meta.siteUrl}${
+      featuredImage ? `/img/${featuredImage}` : meta.image
+    }`,
     url: `${meta.siteUrl}${slug ? slug : ''}`
   };
 
@@ -27,7 +29,10 @@ const SEO = ({ description, title, tags, slug, img }) => {
       <meta name="twitter:creator" content={seo.twitter} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:card"
+        content={featuredImage ? 'summary_large_image' : 'summary'}
+      />
       <meta name="twitter:image" content={seo.image} />
 
       <link

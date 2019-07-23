@@ -1,37 +1,38 @@
 body {
   --footer-icon-stroke: var(--gray-100);
 
-  --toggle-bg: var(--gray-400);
+  --toggle-bg: var(--gray-500);
 
-  --header-icon-fill: var(--gray-300);
+  --header-icon-fill: var(--gray-200);
   --header-icon-stroke: var(--gray-100);
 
   --selection-bg: var(--green-200);
-  --selection-text: var(--gray-500);
+  --selection-text: var(--gray-600);
 
   --blockquote-border: var(--green-200);
 }
 
 body.light {
   --bg-default: var(--white);
-  --footer-bg: var(--gray-400);
-  --code-bg: var(--gray-500);
+  --footer-bg: var(--gray-500);
+  --code-bg: var(--gray-600);
+  --code-highlight-bg: var(--gray-500);
 
-  --text-default: var(--gray-500);
-  --text-primary: var(--gray-500);
-  --text-secondary: var(--gray-300);
-  --text-header: var(--gray-400);
+  --text-default: var(--gray-600);
+  --text-primary: var(--gray-600);
+  --text-secondary: var(--gray-400);
+  --text-header: var(--gray-500);
 
-  --blockquote-text: var(--gray-400);
+  --blockquote-text: var(--gray-500);
 
   --card-bg: var(--gray-100);
-  --card-border: var(--gray-200);
+  --card-border: var(--gray-300);
 
   --text-link: var(--green-300);
   --text-code: var(--green-300);
 
   --tag-bg: var(--green-200);
-  --tag-text: var(--gray-500);
+  --tag-text: var(--gray-600);
   --tag-hover: var(--green-200);
 
   --toggle-thumb: var(--green-200);
@@ -39,9 +40,10 @@ body.light {
 }
 
 body.dark {
-  --bg-default: var(--gray-500);
-  --footer-bg: var(--gray-500);
-  --code-bg: var(--gray-400);
+  --bg-default: var(--gray-600);
+  --footer-bg: var(--gray-600);
+  --code-bg: var(--gray-500);
+  --code-highlight-bg: var(--gray-400);
 
   --text-default: var(--gray-100);
   --text-primary: var(--white);
@@ -50,14 +52,14 @@ body.dark {
 
   --blockquote-text: var(--gray-200);
 
-  --card-bg: var(--gray-400);
+  --card-bg: var(--gray-500);
   --card-border: var(--gray-200);
 
   --text-link: var(--green-200);
   --text-code: var(--green-200);
 
   --tag-bg: var(--green-200);
-  --tag-text: var(--gray-500);
+  --tag-text: var(--gray-600);
   --tag-hover: var(--green-200);
 
   --toggle-thumb: var(--green-200);

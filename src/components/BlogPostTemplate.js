@@ -7,6 +7,8 @@ const BlogPostTemplate = ({ meta, children }) => {
   const content =
     typeof children === 'string' ? string2html(children) : children;
 
+  const twt = `${meta.title} by @kevtiq ${meta.url}`;
+
   return (
     <main className="post">
       <article>
@@ -15,12 +17,7 @@ const BlogPostTemplate = ({ meta, children }) => {
           <span>
             <time dateTime={meta.date}>{meta.date}</time>
             {` • ${formatReadingTime(meta.words)} • `}
-            <a
-              href={`https://twitter.com/intent/tweet?text=${
-                meta.title
-              } by @kevtiq ${meta.tags.map((t) => `#${t}`).join(' ')} ${
-                meta.url
-              }`}>
+            <a href={`https://twitter.com/intent/tweet?text=${twt}`}>
               share on twitter
             </a>
           </span>

@@ -97,8 +97,8 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               tags
-              title
               date
+              title
               templateKey
             }
           }

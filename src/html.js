@@ -12,7 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="theme-color" content="#21293A" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes} className="dark">

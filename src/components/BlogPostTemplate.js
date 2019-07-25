@@ -14,9 +14,19 @@ const BlogPostTemplate = ({ meta, children }) => {
           <h1>{meta.title}</h1>
           <span>
             <time dateTime={meta.date}>{meta.date}</time>
-            {` • ${formatReadingTime(meta.words)}`}
+            {` • ${formatReadingTime(meta.words)} • `}
+            <a
+              href={`https://twitter.com/intent/tweet?text=${
+                meta.title
+              } by @kevtiq ${meta.tags.map((t) => `#${t}`).join(' ')} ${
+                meta.url
+              }`}>
+              share on twitter
+            </a>
           </span>
-          {meta.tags && meta.tags.length > 0 && <TagList tags={meta.tags} />}
+          {meta.tags && meta.tags.length > 0 && (
+            <TagList className="tags" tags={meta.tags} />
+          )}
         </section>
 
         <section className="post__body">{content}</section>

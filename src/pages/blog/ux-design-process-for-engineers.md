@@ -29,7 +29,7 @@ After gathering enough quantitative and qualitative data, a UX designer starts m
 
 The outcome of the above modeling techniques is often verified with users and stakeholders by the designers. If the designed solution is verified, it can be handed over to an engineering team. At this point, the designers have converted a user problem into an engineering problem! It is up to the engineers to find a solution and for an implementation problem.
 
-> Design solutions are engineering problems
+> "Design solutions are engineering problems"
 
 An engineering team does not have to start after the solution of a UX designer is verified. Often it is even better if engineers are involved earlier in the process of the UX designer. They can provide valuable input in the technical feasibility of the designed solution. If something is more difficult to implement, a different solution for a problem can be found. The designer can verify a solution taking the technical limitations into account.
 
@@ -47,7 +47,7 @@ As engineers, we can gather feedback on the design step from our colleague engin
 
 At the same conference, this year, [CSS Day](https://cssday.nl/2019), [Jared Spool](https://twitter.com/jmspool) had a very strong remark about design with a team. Like with almost every aspect of team-work, you are as weak as your weakest link. However, when it comes to design, it goes beyond your own team. Everybody that can influence the design decisions is a link in the process.
 
-> You are as weak as your weakest design influencer
+> "You are as weak as your weakest design influencer"
 > <cite>[Jared Spool](https://twitter.com/jmspool)</cite>
 
 This sounds familiar to everybody. However, if you think about it, we underestimate it very often. Have you ever seen a design implementation of a stereotype back-end engineer or DevOps engineer? When you have front-end engineers in your team you would hardly ever let others implement a design of course. But this does not mean they cannot influence it. If you look back at the process, the engineering team can influence the designs by providing insights into technical feasibility, but also in the research phase. The engineering feedback should be given as a team, not by sole developers. So your backend and DevOps engineers become design influencers.
@@ -64,7 +64,7 @@ Jared Spool explained the position of UX design within a team or organization du
 
 An important milestone in this maturity model is getting to stage three, 'UX design as a service'. To get to this stage, executive management has to decide to start investing in UX design resources, for the first time. From a business perspective, getting to this strategic decision is a big step. It is important, however, to keep in mind that a team or organization is not on a fixed spot in the maturity model. Each design influencer and each team occupies its own place in the model. In the end, you are as weak as your weakest design influencer.
 
-> Each design influencer and team occupies its own place in the maturity model
+> "Each design influencer and team occupies its own place in the maturity model"
 > <cite>[Jared Spool](https://twitter.com/jmspool)</cite>
 
 ## Honeywell vs. Nest

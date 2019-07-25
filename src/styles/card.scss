@@ -5,6 +5,7 @@
   border: 1px solid var(--card-bg);
   border-radius: 0.5rem;
 
+  &:focus-within,
   &:hover {
     > * {
       transition: all ease-in-out 300ms;

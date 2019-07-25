@@ -38,9 +38,7 @@ a.svg {
 // QUOTES
 blockquote {
   border-left: 0.25rem solid var(--blockquote-border);
-  border-top: 0.25rem solid var(--blockquote-border);
   padding: 0.5rem 1rem;
-  border-top-left-radius: 0.5rem;
   font-style: italic;
   color: var(--blockquote-text);
 }
@@ -48,9 +46,10 @@ blockquote {
 // CODE BLOCKS
 pre[class*='language-'] {
   font-size: 0.85rem;
-  padding: 2rem;
-  margin: 0rem -2rem;
+  padding: 1.25rem;
+  margin: 0rem -1.25rem;
   background-color: var(--code-bg);
+  border-radius: 0.5rem;
 
   > code[class*='language-'] {
     font-family: var(--monospace);
@@ -67,12 +66,19 @@ pre[class*='language-'] {
   background-color: transparent !important;
 }
 
-::selection,
-pre[class*='language-']::selection,
-code[class*='language-']::selection {
+::selection:not(pre):not(code) {
   color: (--selection-text) !important;
   background: var(--selection-bg) !important;
   text-shadow: 0 0 0 #000000;
+}
+
+pre .gatsby-highlight-code-line {
+  background-color: var(--code-highlight-bg);
+  display: block;
+  margin: 0rem -1.25rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  border-left: 0.25em solid var(--text-link);
 }
 
 .header-anchor {
@@ -82,6 +88,12 @@ code[class*='language-']::selection {
     display: inline-block;
     color: var(--text-link);
     margin-left: -1.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  pre[class*='language-'] {
+    border-radius: 0rem;
   }
 }
 
@@ -96,6 +108,14 @@ code[class*='language-']::selection {
 
   pre[class*='language-'] {
     margin: 0 -1rem;
+    padding: 1rem;
+    border-radius: 0rem;
+  }
+
+  pre .gatsby-highlight-code-line {
+    margin: 0rem -1rem;
+    padding-left: 0.75rem;
+    padding-right: 1rem;
   }
 
   .header-anchor:before {

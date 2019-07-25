@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: An ode to the lobotomized CSS owl selector
+title: An ode to the CSS owl selector
 date: 2019-07-26T00:00:00.000Z
 featuredImage: owl-selector.png
 description: >-

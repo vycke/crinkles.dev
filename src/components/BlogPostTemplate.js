@@ -14,7 +14,7 @@ const BlogPostTemplate = ({ meta, children }) => {
       <article>
         <section className="post__header" role="contentinfo">
           <h1>{meta.title}</h1>
-          <span>
+          <span className="post__meta">
             <time dateTime={meta.date}>{meta.date}</time>
             {` • ${formatReadingTime(meta.words)} • `}
             <a href={`https://twitter.com/intent/tweet?text=${twt}`}>

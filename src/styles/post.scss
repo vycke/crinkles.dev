@@ -62,6 +62,10 @@
   }
 }
 
+.post__meta a {
+  white-space: nowrap;
+}
+
 @media (max-width: 30rem) {
   .post {
     padding: 0rem 1rem 2rem;

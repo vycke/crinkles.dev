@@ -8,4 +8,4 @@ The personal website of Kevin Pennekamp. Created using:
 - [JAMstack architecture](https://jamstack.org);
 - [Netlify CMS](https://www.netlifycms.org);
 - [Netlify](https://www.netlify.com);
-- [Feather icons](https://feathericons.com/).
+- [Feather icons](https://feathericons.com/);

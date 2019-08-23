@@ -28,14 +28,14 @@ body.light {
   --card-bg: var(--gray-100);
   --card-border: var(--gray-300);
 
-  --text-link: var(--blue-300);
-  --text-code: var(--blue-300);
+  --text-link: var(--blue-200);
+  --text-code: var(--blue-200);
 
   --tag-bg: var(--green-200);
   --tag-text: var(--gray-500);
   --tag-hover: var(--green-200);
 
-  --toggle-thumb: var(--blue-300);
+  --toggle-thumb: var(--green-200);
 }
 
 body.dark {
@@ -57,9 +57,9 @@ body.dark {
   --text-link: var(--green-200);
   --text-code: var(--green-200);
 
-  --tag-bg: var(--blue-300);
+  --tag-bg: var(--blue-200);
   --tag-text: var(--gray-100);
-  --tag-hover: var(--blue-300);
+  --tag-hover: var(--blue-200);
 
   --toggle-thumb: var(--green-200);
 }

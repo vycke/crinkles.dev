@@ -18,7 +18,7 @@ const PageWrapper = ({ children, meta }) => {
   const [theme, setTheme] = React.useState(null);
 
   React.useEffect(() => {
-    setTheme(window.__theme);
+    setTheme(window.__theme || 'dark');
   }, []);
 
   return (

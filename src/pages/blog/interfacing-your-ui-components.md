@@ -6,10 +6,8 @@ description: >-
   Interfacing on a UI component is a difficult concept. Interfaces exist not only towards the users through the UI, but they also exist internally. Other engineers should be able to use our components within looking at the internals. To achieve this, understand certain parts of the anatomy of a UI component becomes important.
 tags:
   - UI
+  - Architecture
   - API
-  - Interface
-  - component
-  - React
 ---
 
 In recent years, front-end development became an important part of my life. But when I started years ago, I did not understand what an API was. I worked with them, but I never cared what it exactly was, or what it requires building one. I knew what the concept of interfaces in UI, but its relation with the letter "I" of API was lost to me. At a certain point, collaboration becomes more important. Your colleagues should be able to use and understand your work. This was the point for me I started to see the connection between API and UI in front-end development.

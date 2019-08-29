@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: How to create a scalable and maintainable front-end architecture
+pinned: true
 date: 2019-08-26T00:00:00.000Z
 featuredImage: detailed-architecture.png
 description: >-

@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: The UX design process for engineers
+pinned: true
 date: 2019-07-05T00:00:00.000Z
 description: >-
   As a software engineer, it sometimes can be difficult to understand what UX designing is and where it fits in the process. Especially the difference between UX and UI can be difficult to understand. Some recent insights provided valuable information to visualize and explain the concept of UX.

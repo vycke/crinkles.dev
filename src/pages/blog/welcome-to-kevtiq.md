@@ -6,7 +6,7 @@ description: >-
   A welcome post from Kevin Pennekamp, to his personal blog: kevtiq.co. This
   post tells you what kind of posts you can expect on this website.
 tags:
-  - banter
+  - writing
 ---
 
 For years I have had the ambition to start my blog. Blogs are a great way to share knowledge with others. These can be facts, opinions, guidelines or lessons learns through failure and success. Although the ambition was there, I never really pulled through and finished a working blog website that I was actively using.

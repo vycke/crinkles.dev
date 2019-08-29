@@ -4,11 +4,12 @@
   padding: 0rem 2rem 2rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 48rem;
+  max-width: 55rem;
 
   .previous,
   .next {
     display: flex;
+    max-width: 10rem;
     flex-direction: row;
     text-decoration: underline;
     align-items: center;
@@ -17,7 +18,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 20rem;
+      max-width: 18rem;
     }
   }
 

@@ -9,28 +9,28 @@
   .previous,
   .next {
     display: flex;
-    max-width: 10rem;
     flex-direction: row;
     text-decoration: underline;
     align-items: center;
+    max-width: 18rem;
 
     > span {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 18rem;
+      max-width: 100%;
     }
   }
 
   .previous {
-    justify-content: flex-start;
+    justify-self: flex-start;
     > span {
       margin-left: 0.25rem;
     }
   }
 
   .next {
-    justify-content: flex-end;
+    justify-self: flex-end;
     > span {
       margin-right: 0.25rem;
     }
@@ -80,6 +80,10 @@
 }
 
 @media (max-width: 45rem) {
+  .switcher {
+    grid-template-columns: 1fr;
+  }
+
   .tags--page {
     justify-content: flex-start;
     max-width: 30rem;
@@ -89,7 +93,6 @@
 
 @media (max-width: 30rem) {
   .switcher {
-    grid-template-columns: 1fr;
     margin-top: 1rem;
     padding: 0rem 1rem 2rem;
   }

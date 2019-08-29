@@ -54,7 +54,7 @@ const PageWrapper = ({ children, meta }) => {
             </a>
           </p>
         </aside>
-        {children}
+        <main>{children}</main>
         <footer>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
             <Twitter />

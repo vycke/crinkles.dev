@@ -1,32 +1,110 @@
 .card {
-  padding: 2rem;
   transition: all ease-in-out 200ms;
   background: var(--card-bg);
   border: 1px solid var(--card-bg);
   border-radius: 0.5rem;
+  min-width: 18rem;
+  color: var(--text-secondary);
+  position: relative;
+  overflow: hidden;
+
+  a:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 
   &:focus-within,
   &:hover {
-    > * {
-      transition: all ease-in-out 300ms;
-    }
-
     box-shadow: 0rem 0.25rem 2rem rgba(0, 0, 0, 0.2);
-    margin: -0.5rem;
-    padding: 2.5rem;
+    transform: scale(1.05);
+
     border: 1px solid var(--card-border);
   }
 }
 
-@media (max-width: 45rem) {
-  .card {
-    padding: 1rem;
+.card__image {
+  width: 100%;
+  height: 7.5rem;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
 
-    &:hover {
-      box-shadow: none;
-      margin: 0;
-      padding: 1rem;
-      border: 1px solid var(--bg-default);
+.card__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+a.card__title {
+  text-decoration: none;
+  color: var(--text-header);
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  &:hover *,
+  &:active *,
+  &:focus * {
+    text-decoration: underline;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.card__subtitle {
+  font-family: var(--monospace);
+  font-size: 0.75rem;
+}
+
+.card__tags {
+  display: flex;
+  font-size: 0.85rem;
+  font-family: var(--monospace);
+  flex-wrap: wrap;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    &:before {
+      content: '#';
     }
+  }
+
+  > li {
+    padding: 0.25rem 0rem;
+  }
+
+  > * + * {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 45rem) {
+  .card:hover {
+    transform: scale(1);
+    box-shadow: none;
+    border: 1px solid var(--bg-default);
+  }
+
+  .card__content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  a.card__title {
+    font-size: 1.125rem;
   }
 }

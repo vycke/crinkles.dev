@@ -1,18 +1,31 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import get from '../utils/get';
-import PostOverview from '../components/PostOverview';
+import EntryCard from '../components/EntryCard';
 import PageSwitcher from '../components/PageSwitcher';
 import { graphql } from 'gatsby';
+import PinnedPostsOverview from '../components/PinnedPosts';
 
 const PostOverviewTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
 
   return (
     <Layout>
-      <main className="overview" role="feed">
-        <PostOverview posts={posts} tags={true} />
-      </main>
+      <section className="overview overview--grid" role="feed">
+        <PinnedPostsOverview />
+      </section>
+      {pageContext.currentPage === 1 && (
+        <h1 className="overview__title">Latest posts</h1>
+      )}
+      {pageContext.currentPage > 1 && (
+        <h1 className="overview__title">{`Latest posts (page: ${pageContext.currentPage})`}</h1>
+      )}
+      <section className="overview overview--list" role="feed">
+        {posts.map((p, i) => {
+          const post = p.node;
+          return <EntryCard key={i} post={post} />;
+        })}
+      </section>
       <PageSwitcher prev={pageContext.prev} next={pageContext.next} />
     </Layout>
   );

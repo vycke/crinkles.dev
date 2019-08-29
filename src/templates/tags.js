@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import get from '../utils/get';
-import PostOverview from '../components/PostOverview';
 import PageSwitcher from '../components/PageSwitcher';
 import { graphql } from 'gatsby';
 import TagList from '../components/TagList';
+import EntryCard from '../components/EntryCard';
 
 const TagsTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
@@ -21,9 +21,12 @@ const TagsTemplate = ({ data, pageContext }) => {
         tags={tags.filter((t) => t !== tag)}
         className="tags tags--page"
       />
-      <main className="overview" role="feed">
-        <PostOverview posts={posts} />
-      </main>
+      <section className="overview overview--grid" role="feed">
+        {posts.map((p, i) => {
+          const post = p.node;
+          return <EntryCard key={i} post={post} showTags={false} />;
+        })}
+      </section>
       <PageSwitcher prev={prev} next={next} />
     </Layout>
   );

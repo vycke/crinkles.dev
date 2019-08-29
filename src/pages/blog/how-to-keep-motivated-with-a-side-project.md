@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: How did I find my motivation to get my side projects going?
-date: 2019-08-30T00:00:00.000Z
+date: 2019-08-29T00:00:00.000Z
 featuredImage: detailed-architecture.png
 description: >-
   Balancing side projects next to a full-time job is hard. Very hard. We often have big plans and so little time to spend. I could finally find a good flow in which I can combine different interests of mine. My main goal? To keep learning new and interesting things.
@@ -36,11 +36,8 @@ I now had my initial version of my website finally pushed live. It even had a fi
 To keep my motivation, I made a deal with myself. As my professional career revolves around programming, my priority would be writing. But, with every article I write, I will implement one idea for my website or something related to it. To give you some idea, these are some of my iterations.
 
 - On my second blog post, I implemented a dark theme for my website;
-
 - After that, I improved upon the SEO, which learned me some great new stuff;
-
 - Next was improvements on social media sharing (e.g. ability to set an image for sharing on Twitter);
-
 - In my last post, I created various components in Figma to create consistent diagrams. This learned me a lot about the constraint system in [Figma](https://www.figma.com/).
 
 ![My diagram components in Figma](/img/diagram-design-system.png 'My diagram components in Figma')
@@ -51,7 +48,7 @@ What? That last one has nothing to do with my website. It does not have to be a 
 
 But what will be my next iterations? I try to prioritize my blog posts and improvements. There are two important aspects that have impact on prioritizing. First and most important: The stuff that I am most excited about is getting the highest priority. Second, I try to combine an improvement to my website with the next blog post I write.
 
-My website is growing in content and visitors. So I have two options in that regard already. I can make a 'pinned' article section to ensure that my favorite posts are always accessible. Another option is to create an 'about me' page, to provide more context about myself. It will be the first one, as this a higher technical challenge (although not a big challenge) to solve.
+My website is growing in content and visitors. So I have two options in that regard already. I can make a 'pinned' article section to ensure that my favorite posts are always accessible. Another option is to create an 'about me' page, to provide more context about myself. I decided to ship the first feature together with this article.
 
 > My priorities change, and they change often
 

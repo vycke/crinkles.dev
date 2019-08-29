@@ -4,7 +4,7 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 5;
 
 function createPaginatedPages(createPage, posts, pathName, context) {
   const numPages = Math.ceil(posts.length / PAGE_SIZE);
@@ -111,7 +111,9 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    let posts = _.get(result, 'data.allMarkdownRemark.edges', []).filter(
+      (p) => new Date(_.get(p, 'node.frontmatter.date')) <= new Date()
+    );
 
     createPostPage(createPage, posts);
     createIndexPages(createPage, posts);

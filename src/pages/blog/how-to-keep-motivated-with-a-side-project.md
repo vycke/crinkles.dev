@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: How did I find my motivation to get my side projects going?
+title: How do you find motivation to get your side projects going?
 date: 2019-08-29T00:00:00.000Z
 featuredImage: motivation.png
 description: >-

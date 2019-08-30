@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How did I find my motivation to get my side projects going?
 date: 2019-08-29T00:00:00.000Z
-featuredImage: detailed-architecture.png
+featuredImage: motivation.png
 description: >-
   Balancing side projects next to a full-time job is hard. Very hard. We often have big plans and so little time to spend. I could finally find a good flow in which I can combine different interests of mine. My main goal? To keep learning new and interesting things.
 tags:
@@ -17,7 +17,7 @@ Ever since I tried to find a balance between my hobbies to start something. For 
 
 ## Start small
 
-![Motivational process](/img/motivation.png 'Motivational process')
+![Motivational process](/img/motivation-process.png 'Motivational process')
 
 Balancing your time for side-projects or hobbies is very difficult. It does not matter if it's a painting, website or podcast. The bigger your initial scope is, the bigger it might fail. Nothing feels worse than failing with something you love.
 

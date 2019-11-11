@@ -3,7 +3,7 @@ templateKey: blog-post
 title: How to create a scalable and maintainable front-end architecture
 pinned: true
 date: 2019-08-26T00:00:00.000Z
-featuredImage: detailed-architecture.png
+featuredImage: architecture-detailed.png
 description: >-
   Modern front-end frameworks and libraries make it easy to create reusable UI components. But, in many projects over the years I have found that making reusable components is often not enough. We need a scalable front-end architecture.
 tags:

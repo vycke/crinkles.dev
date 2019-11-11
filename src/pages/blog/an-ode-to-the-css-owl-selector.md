@@ -9,6 +9,7 @@ description: >-
 tags:
   - CSS
   - UI
+  - frontend
 ---
 
 ![The owl selector](/img/owl-selector.png 'The owl selector')

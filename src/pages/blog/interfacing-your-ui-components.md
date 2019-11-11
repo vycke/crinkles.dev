@@ -6,7 +6,7 @@ description: >-
   Interfacing on a UI component is a difficult concept. Interfaces exist not only towards the users through the UI, but they also exist internally. Other engineers should be able to use our components within looking at the internals. To achieve this, understand certain parts of the anatomy of a UI component becomes important.
 tags:
   - UI
-  - Architecture
+  - frontend
   - API
 ---
 

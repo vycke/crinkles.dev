@@ -23,11 +23,15 @@ h3 {
 
 // LINKS
 a:link,
-a:hover,
 a:visited,
 a:active {
-  color: var(--text-link);
+  transition: all ease-in-out 100ms;
   text-decoration: underline;
+  text-decoration-color: var(--text-link);
+}
+
+a:hover {
+  color: var(--text-link);
 }
 
 a.svg {
@@ -60,7 +64,6 @@ pre[class*='language-'] {
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
   font-family: var(--monospace);
-  font-weight: 600;
   font-size: 1rem;
   color: var(--text-code);
   background-color: transparent !important;

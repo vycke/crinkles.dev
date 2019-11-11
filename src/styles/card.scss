@@ -1,7 +1,6 @@
 .card {
   transition: all ease-in-out 200ms;
   background: var(--card-bg);
-  border: 1px solid var(--card-bg);
   border-radius: 0.5rem;
   min-width: 18rem;
   color: var(--text-secondary);
@@ -19,9 +18,8 @@
   &:focus-within,
   &:hover {
     box-shadow: 0rem 0.25rem 2rem rgba(0, 0, 0, 0.2);
+    background: var(--card-bg-hover);
     transform: scale(1.05);
-
-    border: 1px solid var(--card-border);
   }
 }
 
@@ -75,8 +73,12 @@ a.card__title {
   flex-wrap: wrap;
   position: relative;
 
-  a {
+  a:link,
+  a:visited,
+  a:active {
     text-decoration: none;
+    color: var(--text-link);
+
     &:before {
       content: '#';
     }

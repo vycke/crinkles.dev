@@ -28,7 +28,7 @@ As mentioned though, this is not the only place where interfaces play a role. Wh
 
 So we are dealing with two types of interfaces when designing and developing components. By combining multiple of these components we can create a UI that the user can use that connects to our system. Great! Are we done? Not completely. When we change something in one interface, it affects the other interface of the same component. To understand this better, we have to look at the component anatomy.
 
-![The UI component anatomy](/img/ui-component-anatomy.png 'The UI component anatomy')
+![The UI component anatomy](/img/architecture-component.png 'The UI component anatomy')
 
 A UI component consists, as you can see, of several parts that interact with each other. When a user interacts with the UI by clicking a button, some logic triggers inside the component. Depending on the logic, several things can happen within the component. The internal state of the component gets updated, we send a request to the back end, or we provide information back to the user. One important path inside the component is missing though. Through its API, it can provide information to other components. This only works when other components connect to your component, by providing a callback function (e.g. an `onClick` function for a button component).
 

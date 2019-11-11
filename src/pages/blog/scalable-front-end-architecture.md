@@ -26,7 +26,7 @@ We expect modern front-end applications to do more and more of the heavy lifting
 
 ![High-level scalable front-end architecture](/img/architecture-high-level.png 'High-level scalable front-end architecture')
 
-## High-level architecture
+## Filling in the details
 
 Our goal as front-end developers is to provide value to our users by letting them interact with our work. When they do, the application routing will guide the user to the correct module. Each module can is a separate domain. Business logic shapes these domains. Various modules use this logic, such as retrieving data from a back-end service. This logic is thus placed in the application layer. This is the core setup of a scalable front-end architecture.
 
@@ -39,19 +39,18 @@ src/
 ├── components/
 ├── lib/
 ├── modules/
-├── styles/
-└── __tests__/
+└── styles/
 ```
 
 The remaining directories hold our static `assets` (e.g. images) or helper functions in `lib`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
 
-The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the application layer, the architecture shines. Below I zoomed in on the application layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them.
+The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the application layer, the architecture shines. Below I zoomed in on the application layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and controllers directly talk o the stores and API clients.
 
 ![Detailed architecture of a module](/img/architecture-detailed.png 'Detailed architecture of a module')
 
 ## The application backbone
 
-The application layer is the backbone of the architecture. The goal of this part of the application is to be scalable and framework-agnostic. There are three main parts in this layer: API clients, a pub/sub and one or more stores. Stores come in many sizes. At first glance, you might think about the application state. And you are right, that is one store. But what about your user's history stack? This is, in fact, another example of a store.
+The application layer is the backbone of the architecture. The goal of this part of the application is to be scalable and framework-agnostic. There are a few main parts in this layer: API clients, a pub/sub and one or more stores. You can have some [web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) running on this level as well. Stores come in many sizes. At first glance, you might think about the application state. And you are right, that is one store. But what about your user's history stack? This is, in fact, another example of a store.
 
 When you look at stores in this light, you find many of them. Application state, navigation history, session management, API caches and logger history. These should live on an application level. This also means that they should be configured here. You can, for instance, download the [history package on npm](https://www.npmjs.com/package/history) and use this for navigation history. In the store, you can expand the package by adding your functions (e.g. a different `push`). You can now also expose these to the rest of your application.
 

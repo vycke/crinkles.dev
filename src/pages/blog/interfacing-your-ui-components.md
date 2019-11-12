@@ -6,8 +6,8 @@ description: >-
   Interfacing on a UI component is a difficult concept. Interfaces exist not only towards the users through the UI, but they also exist internally. Other engineers should be able to use our components within looking at the internals. To achieve this, understand certain parts of the anatomy of a UI component becomes important.
 tags:
   - UI
-  - Architecture
-  - API
+  - frontend
+  - architecture
 ---
 
 In recent years, front-end development became an important part of my life. But when I started years ago, I did not understand what an API was. I worked with them, but I never cared what it exactly was, or what it requires building one. I knew what the concept of interfaces in UI, but its relation with the letter "I" of API was lost to me. At a certain point, collaboration becomes more important. Your colleagues should be able to use and understand your work. This was the point for me I started to see the connection between API and UI in front-end development.
@@ -28,7 +28,7 @@ As mentioned though, this is not the only place where interfaces play a role. Wh
 
 So we are dealing with two types of interfaces when designing and developing components. By combining multiple of these components we can create a UI that the user can use that connects to our system. Great! Are we done? Not completely. When we change something in one interface, it affects the other interface of the same component. To understand this better, we have to look at the component anatomy.
 
-![The UI component anatomy](/img/ui-component-anatomy.png 'The UI component anatomy')
+![The UI component anatomy](/img/architecture-component.png 'The UI component anatomy')
 
 A UI component consists, as you can see, of several parts that interact with each other. When a user interacts with the UI by clicking a button, some logic triggers inside the component. Depending on the logic, several things can happen within the component. The internal state of the component gets updated, we send a request to the back end, or we provide information back to the user. One important path inside the component is missing though. Through its API, it can provide information to other components. This only works when other components connect to your component, by providing a callback function (e.g. an `onClick` function for a button component).
 

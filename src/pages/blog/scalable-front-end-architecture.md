@@ -2,122 +2,129 @@
 templateKey: blog-post
 title: How to create a scalable and maintainable front-end architecture
 pinned: true
-date: 2019-08-26T00:00:00.000Z
-featuredImage: detailed-architecture.png
+date: 2019-11-11T00:00:00.000Z
+featuredImage: architecture-detailed.png
 description: >-
   Modern front-end frameworks and libraries make it easy to create reusable UI components. But, in many projects over the years I have found that making reusable components is often not enough. We need a scalable front-end architecture.
 tags:
-  - Architecture
-  - API
-  - UI
+  - architecture
+  - frontend
 ---
+
+_**November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the application layer have been redone._
 
 Modern front-end frameworks and libraries make it easy to create [reusable UI components](/blog/interfacing-your-ui-components/). This is a step in a good direction to create maintainable front-end applications. Yet, in many projects over the years I have found that making reusable components is often not enough. My projects became unmaintainable, as requirements changed or new requirements came up. It took longer and longer to find the correct file or debug something across many files.
 
 Change needed to happen. I can improve my search skills, or be more proficient in using Visual Studio Code. But, I often not the only one working on the front-end. So, we need to the setup of our front-end projects. We need to make them maintainable and scalable. This means that we can apply changes in the current features, but also add new features quicker.
 
-## High-level architecture
+## Finding a scalable architecture
 
-In back-end development, we have many [architectural patterns](https://en.wikipedia.org/wiki/Software_design_pattern) we can follow. Two concepts currently used are [domain-driven development (DDD)](https://martinfowler.com/bliki/BoundedContext.html) and [separation of concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns). These two concepts add great value to front-end development. In DDD you try to groups of similar features and decouple them as much as possible from other groups (e.g. modules). While with SoC we, for instance, separate logic, views, and data-models (e.g. using the MVC or MVVM design pattern).
+In traditional development, we have many [architectural patterns](https://en.wikipedia.org/wiki/Software_design_pattern) we can follow. Two of them that are still popular are [domain-driven development (DDD)](https://martinfowler.com/bliki/BoundedContext.html) and [separation of concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns). In front-end development, they too can be of great value. With DDD you try to groups of similar features and decouple them as much as possible from other groups (e.g. modules). While with SoC we, for instance, separate logic, views, and data-models (e.g. using the MVC or MVVM design pattern).
 
-We expect modern front-end applications to do more and more of the heavy lifting. With this added complexity, bugs are becoming more frequent. Because users interact with the front-end, we need a reliable architecture, that is both maintainable and scalable. My preferred architecture at this is modular and domain-driven. Note that my vision might change, but this is my preferred approach at this moment.
+We expect modern front-end applications to do more and more of the heavy lifting. With this added complexity, bugs are becoming more frequent. We need a reliable architecture, that is both maintainable and scalable. My goal was, and still is, to find such a front-end architecture which is framework-agnostic. The architecture should provide a developer or a team to build a scalable front-end. By adopting the architecture (e.g. remove parts), you can adapt it to small and big projects.
 
-![High-level scalable front-end architecture](/img/high-level-architecture.png 'High-level scalable front-end architecture')
+![High-level scalable front-end architecture](/img/architecture-high-level.png 'High-level scalable front-end architecture')
 
-When a user interacts with our application, he or she is directed to the correct module by the app routing. Every module is completely contained. But, as a user expect to use one application, not a few small ones, some coupling will exist. This coupling exists on specific features or business logic. We can share several features between modules. You can put this logic into the application layer. This means that each module has the option to interact with the application layer. A good example is a setup requiring to connect to our back-end, or API gateway, through the client-side API.
+## Filling in the details
+
+Our goal as front-end developers is to provide value to our users by letting them interact with our work. When they do, the application routing will guide the user to the correct module. Each module can is a separate domain. Business logic shapes these domains. Various modules use this logic, such as retrieving data from a back-end service. This logic is thus placed in the application layer. This is the core setup of a scalable front-end architecture.
 
 When looking at a project structure, we can follow something like shown below. All code for the application layer is in the `app` directory. While all modules have a directory in the `modules` directory. Reusable UI components (e.g. tables) that do not rely on business logic are in the `components` directory.
 
 ```
-app/
-assets/
-components/
-lib/
-modules/
-styles/
+src/
+├── app/
+├── assets/
+├── components/
+├── lib/
+├── modules/
+└── styles/
 ```
 
-The remaining directories hold our static `assets` (e.g. images) or helper functions in `lib`. Helpers functions can be very simple. They can convert something to a certain format, or help to work with objects. But more complex code can be present in the `lib` directory. Working with schemas or graphs (e.g. algorithms to check for loops in directed graphs) are no exception.
+The remaining directories hold our static `assets` (e.g. images) or helper functions in `lib`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
 
-Many use something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/), but I prefer plain-old (S)CSS. Why? We can solve many UI problems using CSS and HTML and no JavaScript. For me, this becomes easier to do when we apply the concept of SoC. Also, maintaining CSS in one place makes it more maintainable, as you duplicate less. This requires a solid CSS architecture. Although I will discuss this in a different blog post, my CSS architecture is based on [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/).
+The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the application layer, the architecture shines. Below I zoomed in on the application layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and controllers directly talk o the stores and API clients.
 
-## Filling in the application details
+![Detailed architecture of a module](/img/architecture-detailed.png 'Detailed architecture of a module')
 
-With the high-level and project structure, we have made a good start. But, we need more details on various aspects to implement this front-end architecture. First, let's look at a more detailed architectural diagram, as shown below. In this diagram, I have zoomed in on the application layer but also zoomed in on a module. The application layer is the core of our front-end application, so let's discuss this first.
+## The application backbone
 
-![Detailed architecture of a module](/img/detailed-architecture.png 'Detailed architecture of a module')
+The application layer is the backbone of the architecture. The goal of this part of the application is to be scalable and framework-agnostic. There are a few main parts in this layer: API clients, a pub/sub and one or more stores. You can have some [web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) running on this level as well. Stores come in many sizes. At first glance, you might think about the application state. And you are right, that is one store. But what about your user's history stack? This is, in fact, another example of a store.
 
-The application layer comprises two parts: a store and a client-side API. The store is our global application state. This state holds data accessible by different modules at the same time. Even when the data is not needed on the screen, it will persist in the store. As you can see, every update request that goes towards the store can go through a chain of logic. This is what we call middleware. This is a pattern used in for instance [Redux](https://redux.js.org/advanced/middleware). An easy example of middleware is the logging of incoming requests of the store.
+When you look at stores in this light, you find many of them. Application state, navigation history, session management, API caches and logger history. These should live on an application level. This also means that they should be configured here. You can, for instance, download the [history package on npm](https://www.npmjs.com/package/history) and use this for navigation history. In the store, you can expand the package by adding your functions (e.g. a different `push`). You can now also expose these to the rest of your application.
 
-Sometimes, the incoming request for the store needs to be enhanced with data from an external service. With Redux, we use a `Promise` to handle this call. This can be our back-end service, but it can also be a public third-party API. Something it suffices to only use the browsers `fetch` API for a single purpose REST-calls. When you want to use the same API for various calls, it might be a good idea to create an API client definition.
+On the other side, we have one or more API clients. Some of our projects have a dedicated back-end service to talk to. Be it an API gateway on top of a [Kubernetes](https://kubernetes.io/) cluster with many micro-services, or a single monolith back-end. But sometimes we need to connect to different external services. Each of these services requires configuration (e.g. authentication). All these configurations and invoked clients live in the application layer. This way they can be used by all modules.
 
-A basic API client handles external requests, responses, and errors. You can even make it such that it can provide you information about the request state (e.g. loading). More complex API clients handle a lot more though. Some APIs connect through a web-socket or even connect to a GraphQL API. In such a case, you have a lot more configuration options, as illustrated below.
+![Using the pub/sub as the linking pin between controllers and API clients](/img/architecture-pubsub.png 'Using the pub/sub as the linking pin between controllers and API clients')
 
-![Anatomy of an API client](/img/api-client.png 'Anatomy of an API client')
+The different stores and API clients can become a consistency problem. Try to combine GraphQL requests and REST requests to show the correct data. By using a pub/sub we can generalize how controllers interact with all the different parts on this level. They publish request events and subscribe to response events. This reassembles how many modern state management libraries work. Another upside of this approach is that you can change a client API, without the modules ever knowing.
 
-In more complex API clients we get the possibility to alter all outgoing requests through middleware (e.g. add authentication headers). The response can be altered using afterware (e.g. changing the data-structure). After altering the response, we store it in the client's cache, which is like our application store. The difference? The cache only handles incoming API data, while we can put any data in your application store.
-
-Many front-end applications will have a dedicated back-end service to talk to. Be it an API gateway on top of a [Kubernetes](https://kubernetes.io/) cluster with many micro-services, or a single monolith back-end. But sometimes we need to connect to different external services. With this architecture, we can create many API clients. Each of the API clients can have a cache, middleware, and afterware. Different parts of our application should be able to interact with each of these API clients.
+This all sounds like overkill for smaller applications, and it often can be. You can reduce the complexity in this architecture though. When you only have a single API client, you can remove the pub/sub. In such a case, you can 'talk' to the API client and the different stores.
 
 A corresponding project structure for the `app` directory can be something like:
 
 ```
-app/
-  api/
-config/
-  store/
-pubsub/
-  schemas/
-  index.js
+.
+└── app/
+    ├── apis/
+    ├── config/
+    ├── controllers/
+    ├── events/
+    ├── lib/
+    ├── models/
+    ├── stores/
+    ├── workers/
+    └── index.js
 ```
 
-Two of the directories inside `app` should sound familiar by now: `api` and `store`. These hold all the related to the use-cases described already. The `config` holds static definitions and configurations (e.g. constants) used throughout the entire application. A `schema` describes a specific data structure for JavaScript objects. This can be used both when using TypeScript or JavaScript. All generic schemas for the application are stored within the `schemas` directory.
+Most directories within the `app` folder should be self-explanatory by now. The `controllers` and `models` directories share the same purpose as those inside a module. The `lib` directory holds all helper functions (e.g. a `createPubSub` function). Last, we can have scheduled events (e.g. an auto sign out event) stored in the `events` directory.
 
-The `pubsub` is a great example of a feature that can expand the basic architecture of our front-end. We can use the `pubsub` for module communication or for managing scheduled jobs. As it can be critical for the core of the application, it lives within the `app` directory. Last, we have the `index.js` file. Within this file, we can add all functions and constants from within the `app` directory. This means that the functions of this file as our entry-point towards the application logic.
+## modules, modules & more modules
 
-## Architecture of a module
+What defines a module and how is it separate from complex UI components? The key-word here is _business logic_. Take everything around uploading a file. You could combine generic components like a drag-and-drop zone. But, the actual uploading is different for each application, guided by technological choices. By combining the UI component and the actual action to upload a file, we create a small contained module. The moment we combine components with business logic, we convert them into modules.
 
-With our application layer described, we only have the modules left. The detailed architecture diagram already shows the internals of a module. When the application routing points towards a specific module, the module determines how the routing should continue. The module routing determines which page should be shown. A page comprises a lot of UI components, which is what the user will get to see on the screen.
+The detailed architecture diagram already shows the internals of a module. The structure of a module is inspired by the ideas of MVC and MVVM. Most times, the application routing points towards a specific module. The routing of the module itself determines which page it loads, i.e. a single page is linked to a single route. A page is what a user sees and comprises out of UI components and controllers.
 
-A page in this context does not differ from a UI component. It is a big UI component. But, other modules can interact with components (and actions), but not with pages. The only way how pages from different modules can interact with each other is with nested routing. This means you put the module routing inside a page from a different module.
-
-Components interact with the application layer through actions. These actions can come in different formats. They can be plain JavaScript functions, Redux related functions or React Hooks. Sometimes you have small utility functions specific for a module. In that case, you can put them in the `actions` directory, or you create a dedicated `utils` directory for a module. The module structure for a project is shown below.
+Controllers are an umbrella term for actions and interfaces. Out users trigger actions when they interact with our applications. Interfaces listen to changes in states, be it in the module or somewhere else in the application. In most cases they are (partly) separated from the UI components. But they can also live in your component. If they are not required in other components, why separate them? React Context with a reducer function is a great example of a combined component. It all depends on the complexity of the problem you try to solve.
 
 ```
-users/
-  actions/
-  components/
-config/
-    constants.js
-    routes.js
-    tables.js
-    forms.js
-  pages/
-gql/
-  schemas/
-  index.js
+.
+└── modules/
+    └── users/
+        ├── components/
+        ├── config/
+        │   ├── constants.js
+        │   ├── routes.js
+        │   ├── tables.js
+        │   └── forms.js
+        ├── controllers/
+        ├── models/
+        ├── pages/
+        ├── queries/
+        ├── state/
+        └── index.js
 ```
 
-Like the application layer, we can have static code (e.g. constants or schema definitions) that is only relevant for our module. In that case, we put that code in the `config` or `schema` directories. When working with GraphQL, we can have query and mutation definitions. These should be in the `gql` directory (or a directory with a similar purpose). While working with an application store for this module, add an `interfaces.js` file. This file describes how to access data in the store.
+Controllers are most times (small) actions, and so can come in different formats. They can be plain JavaScript functions (e.g. utility functions), or React Hooks. But we can separate them from the components in the `controllers` directory.
 
-The `index.js` acts as the `index.js` of the `app` directory. Here we describe all the components, actions and constants accessible for others.
+Like the application layer, a module can have its own state management and static definitions, i.e. constants. In that case, we put that code in the `state`, `config` and `models` directories (or files). Depending on our API clients, we want to define and group queries (e.g. GraphQL). These should be in the `queries` directory.
 
-## Module communication
+## Sharing between modules
 
-Not every module needs to have all the directories and files as described. Some modules, for instance, do not need pages, as they only comprise components and actions. A great example is a 'files' module. This module can combine components and actions for viewing and uploading files. An example is a drag-and-drop area for files that uploads the result to a blob storage. This could be a reusable component. Yet, the actual uploading of files depends on the service we can use for it. By combining the UI component and the actual action to upload a file, we create a small contained module. The moment we combine components with business logic, we convert them into modules.
+Never have I seen an application in which we could decouple modules completely. It is inevitable that you have to share models, controllers and components between modules. But how can modules interact with each other?
 
-But how can other modules use the components or actions from the files module? The `index.js` file of a module describes which components, actions, and constants are accessible for other components. So we could use the file drop-zone or the upload action from the files module. But, sometimes we have to choose what we are exposing to other modules. Will it be an action, or are we combine the action into a component?
+The `index.js` file of a module describes which components, controllers, and models are accessible for other components. So we could use a file drop-zone or the upload controller from the files module. But, sometimes we have to choose what we are exposing to other modules. Will it be a controller, or are we combine the controller into a component?
 
-Let's look at the example of a user drop-down. We can create an action that provides us all the users we can select from different modules. But, we now need to create a specific drop-down in all other modules. This might not need much effort to have a generic drop-down component. But this component might not work in a form. It might be worth the investment to create one `UserDropdown` component that we can use. When something changes around users, we now change only one component. So sometimes we need to choose what to expose: actions or components.
-
-![Using a PubSub](/img/pubsub.png 'Using a PubSub')
-
-One advanced pattern that we can use between components is the use of the `pubsub`. With this pattern, it is not possible to share components, but we can share data. The diagram above shows how it works. Again, this is an advanced pattern and only use it if you want to go a micro front-end route, or when you need it.
+Let's look at the example of a user drop-down. We can create an action that provides us all the users we can select from different modules. But, we now need to create a specific drop-down in all other modules. This might not need much effort to have a generic drop-down component. But this component might not work in a form. It might be worth the investment to create one `UserDropdown` component that we can use. When something changes around users, we now change only one component. So sometimes we need to choose what to expose: controllers or components.
 
 ## UI component anatomy
 
 One last detail level is missing still, and that is the architecture of a UI component. In a [previous](/blog/interfacing-your-ui-components/) blog post I described this already. When you look at this anatomy, you will see some concepts back that we apply on a bigger scale.
 
-![The UI component anatomy](/img/ui-component-anatomy.png 'The UI component anatomy')
+![The UI component anatomy](/img/architecture-component.png 'The UI component anatomy')
 
-The front-end is the first point of entry for our users. With our front-end projects growing in features, we will also introduce more bugs. But our users expect no bugs, and new features fast. This is impossible. Yet, by using a good architecture we can only try to achieve this as much as possible.
+The front-end is the first point of entry for our users. With our front-end projects growing in features, we will also introduce more bugs. But our users expect no bugs, and new features fast. This is impossible. Yet, by using good architecture we can only try to achieve this as much as possible.
+
+## Conclusion
+
+In front-end development, we often adjust our project to the framework we use. Although we live inside an ecosystem when we do so, it often is not scalable towards the future. By looking at existing concepts we can adjust our view on front-end problems. By seeing front-end concepts for what they are, we can create a scalable architecture that works for small or big, many or few.

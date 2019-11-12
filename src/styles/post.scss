@@ -23,7 +23,7 @@
     margin-top: 0.25rem;
   }
 
-  * + * {
+  > * + * {
     margin-top: 1.5rem;
   }
 
@@ -35,7 +35,7 @@
     list-style: decimal outside;
   }
 
-  p .gatsby-resp-image-link {
+  p .gatsby-resp-image-wrapper {
     margin: 1.5rem -2rem !important;
   }
 

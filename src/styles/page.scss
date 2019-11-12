@@ -13,6 +13,8 @@
     text-decoration: underline;
     align-items: center;
     max-width: 18rem;
+    background: none;
+    color: var(--text-link);
 
     > span {
       white-space: nowrap;
@@ -39,34 +41,24 @@
 
 .tags {
   display: flex;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-family: var(--monospace);
   flex-wrap: wrap;
+  position: relative;
 
-  a {
+  a:link,
+  a:visited,
+  a:active {
     text-decoration: none;
-    padding: 0.125rem 0.5rem;
-    border-radius: 0.25rem;
-    background: var(--tag-bg);
-    color: var(--tag-text);
-    transition: all ease-in-out 200ms;
-    position: relative;
+    color: var(--text-link);
 
     &:before {
       content: '#';
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--tag-text);
-      background: var(--tag-hover);
     }
   }
 
   > li {
     padding: 0.25rem 0rem;
-    margin-bottom: 0.25rem;
   }
 
   > * + * {

@@ -7,7 +7,7 @@ featuredImage: architecture-detailed.png
 description: >-
   Modern front-end frameworks and libraries make it easy to create reusable UI components. But, in many projects over the years I have found that making reusable components is often not enough. We need a scalable front-end architecture.
 tags:
-  - Architecture
+  - architecture
   - frontend
 ---
 
@@ -73,6 +73,7 @@ A corresponding project structure for the `app` directory can be something like:
     ├── lib/
     ├── models/
     ├── stores/
+    ├── workers/
     └── index.js
 ```
 

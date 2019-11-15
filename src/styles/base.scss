@@ -9,6 +9,7 @@ html {
 
 body {
   height: 100%;
+  line-height: 1.5;
   color: var(--text-default);
   background-color: var(--bg-default);
   transition: all ease-in-out 100ms;
@@ -48,4 +49,11 @@ main {
   height: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media (max-width: 30rem) {
+  html,
+  body {
+    line-height: 1.8;
+  }
 }

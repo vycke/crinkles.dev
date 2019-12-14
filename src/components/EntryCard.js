@@ -1,7 +1,6 @@
 import React from 'react';
 import { formatReadingTime } from '../utils/readingTime';
 import TagList from './TagList';
-import excerpt from '../utils/excerpt';
 
 const Card = ({
   post,
@@ -9,10 +8,8 @@ const Card = ({
   showDescription = true,
   showImage = false
 }) => {
-  console.log(post);
-
   return (
-    <section className="card" role="article">
+    <section className={`card ${showImage ? 'card--bg' : ''}`} role="article">
       {showImage && (
         <img
           className="card__image"
@@ -34,11 +31,6 @@ const Card = ({
             tags={post.frontmatter.tags}
             max={3}
           />
-        )}
-        {showDescription && (
-          <p className="entry__description">
-            {excerpt(post.frontmatter.description || '')}
-          </p>
         )}
       </div>
     </section>

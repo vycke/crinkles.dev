@@ -21,7 +21,7 @@ const TagsTemplate = ({ data, pageContext }) => {
         tags={tags.filter((t) => t !== tag)}
         className="tags tags--page"
       />
-      <section className="overview overview--grid" role="feed">
+      <section className="overview overview--list" role="feed">
         {posts.map((p, i) => {
           const post = p.node;
           return <EntryCard key={i} post={post} showTags={false} />;

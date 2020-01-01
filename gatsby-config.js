@@ -24,6 +24,18 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-catch-links',
     {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/admin', '/tags/links']
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'A front-end engineer',

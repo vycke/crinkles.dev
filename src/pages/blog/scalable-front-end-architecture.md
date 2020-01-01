@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: How to create a scalable and maintainable front-end architecture
 pinned: true
+draft: false
 date: 2019-11-11T00:00:00.000Z
 featuredImage: architecture-detailed.png
 description: >-
@@ -11,7 +12,7 @@ tags:
   - frontend
 ---
 
-_**November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the application layer have been redone._
+_**November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the core layer have been redone._
 
 Modern front-end frameworks and libraries make it easy to create [reusable UI components](/blog/interfacing-your-ui-components/). This is a step in a good direction to create maintainable front-end applications. Yet, in many projects over the years I have found that making reusable components is often not enough. My projects became unmaintainable, as requirements changed or new requirements came up. It took longer and longer to find the correct file or debug something across many files.
 
@@ -29,13 +30,13 @@ We expect modern front-end applications to do more and more of the heavy lifting
 
 Our goal as front-end developers is to provide value to our users by letting them interact with our work. When they do, the application routing will guide the user to the correct module. Each module can is a separate domain. Business logic shapes these domains. Various modules use this logic, such as retrieving data from a back-end service. This logic is thus placed in the application layer. This is the core setup of a scalable front-end architecture.
 
-When looking at a project structure, we can follow something like shown below. All code for the application layer is in the `app` directory. While all modules have a directory in the `modules` directory. Reusable UI components (e.g. tables) that do not rely on business logic are in the `components` directory.
+When looking at a project structure, we can follow something like shown below. All code for the core layer is in the `app` directory. While all modules have a directory in the `modules` directory. Reusable UI components (e.g. tables) that do not rely on business logic are in the `components` directory.
 
 ```
 src/
-├── app/
 ├── assets/
 ├── components/
+├── core/
 ├── lib/
 ├── modules/
 └── styles/
@@ -43,17 +44,17 @@ src/
 
 The remaining directories hold our static `assets` (e.g. images) or helper functions in `lib`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
 
-The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the application layer, the architecture shines. Below I zoomed in on the application layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and controllers directly talk o the stores and API clients.
+The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the core layer, the architecture shines. Below I zoomed in on the core layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and controllers directly talk o the stores and API clients.
 
 ![Detailed architecture of a module](/img/architecture-detailed.png 'Detailed architecture of a module')
 
 ## The application backbone
 
-The application layer is the backbone of the architecture. The goal of this part of the application is to be scalable and framework-agnostic. There are a few main parts in this layer: API clients, a pub/sub and one or more stores. You can have some [web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) running on this level as well. Stores come in many sizes. At first glance, you might think about the application state. And you are right, that is one store. But what about your user's history stack? This is, in fact, another example of a store.
+The core layer is the backbone of the architecture. The goal of this part of the application is to be scalable and framework-agnostic. There are a few main parts in this layer: API clients, a pub/sub and one or more stores. You can have some [web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) running on this level as well. Stores come in many sizes. At first glance, you might think about the application state. And you are right, that is one store. But what about your user's history stack? This is, in fact, another example of a store.
 
 When you look at stores in this light, you find many of them. Application state, navigation history, session management, API caches and logger history. These should live on an application level. This also means that they should be configured here. You can, for instance, download the [history package on npm](https://www.npmjs.com/package/history) and use this for navigation history. In the store, you can expand the package by adding your functions (e.g. a different `push`). You can now also expose these to the rest of your application.
 
-On the other side, we have one or more API clients. Some of our projects have a dedicated back-end service to talk to. Be it an API gateway on top of a [Kubernetes](https://kubernetes.io/) cluster with many micro-services, or a single monolith back-end. But sometimes we need to connect to different external services. Each of these services requires configuration (e.g. authentication). All these configurations and invoked clients live in the application layer. This way they can be used by all modules.
+On the other side, we have one or more API clients. Some of our projects have a dedicated back-end service to talk to. Be it an API gateway on top of a [Kubernetes](https://kubernetes.io/) cluster with many micro-services, or a single monolith back-end. But sometimes we need to connect to different external services. Each of these services requires configuration (e.g. authentication). All these configurations and invoked clients live in the core layer. This way they can be used by all modules.
 
 ![Using the pub/sub as the linking pin between controllers and API clients](/img/architecture-pubsub.png 'Using the pub/sub as the linking pin between controllers and API clients')
 
@@ -65,7 +66,7 @@ A corresponding project structure for the `app` directory can be something like:
 
 ```
 .
-└── app/
+└── core/
     ├── apis/
     ├── config/
     ├── controllers/
@@ -107,7 +108,7 @@ Controllers are an umbrella term for actions and interfaces. Out users trigger a
 
 Controllers are most times (small) actions, and so can come in different formats. They can be plain JavaScript functions (e.g. utility functions), or React Hooks. But we can separate them from the components in the `controllers` directory.
 
-Like the application layer, a module can have its own state management and static definitions, i.e. constants. In that case, we put that code in the `state`, `config` and `models` directories (or files). Depending on our API clients, we want to define and group queries (e.g. GraphQL). These should be in the `queries` directory.
+Like the core layer, a module can have its own state management and static definitions, i.e. constants. In that case, we put that code in the `state`, `config` and `models` directories (or files). Depending on our API clients, we want to define and group queries (e.g. GraphQL). These should be in the `queries` directory.
 
 ## Sharing between modules
 

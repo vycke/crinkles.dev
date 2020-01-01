@@ -10,7 +10,9 @@ const PinnedPostsOverview = () => {
         query HeadingQuery {
           allMarkdownRemark(
             limit: 3
-            filter: { frontmatter: { pinned: { eq: true } } }
+            filter: {
+              frontmatter: { pinned: { eq: true }, draft: { eq: false } }
+            }
             sort: { fields: [frontmatter___date], order: DESC }
           ) {
             totalCount

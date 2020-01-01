@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: How do you find motivation to get your side projects going?
 date: 2019-08-29T00:00:00.000Z
+draft: false
 featuredImage: motivation.png
 description: >-
   Balancing side projects next to a full-time job is hard. Very hard. We often have big plans and so little time to spend. I could finally find a good flow in which I can combine different interests of mine. My main goal? To keep learning new and interesting things.

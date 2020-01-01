@@ -39,10 +39,11 @@ This path continued and will continue in (the beginning of) 2020. In the meantim
 
 Looking at front-end development, I have some clear goals for 2020. With growing projects in size, our way of tackling these projects has to mature. We already looked into a [scalable architecture](https://kevtiq.co/blog/scalable-front-end-architecture/), but that was the beginning. Always trying the 'next best thing' is fun, but our applications do not always benefit from them. They become less reliable. 2020 will be the year I grow myself in fundamental knowledge to improve reliability. I am going 'reliability first'. This means I will focus on:
 
+- Become better in testing my code;
 - Research and apply concepts like 'finite state machines' in front-end state management;
 - Research concepts are known from back-end development and see how they can be applied in front-end (and if they should be applied!). A good example is the publish-subscribe pattern, that we already use in our [architecture](https://kevtiq.co/blog/scalable-front-end-architecture/);
 - Determine how to track user behavior and errors. This should provide insights on what to focus on when maintaining applications (e.g. performance improvements);
-- Developing with performance in mind (e.g. optimizing assets, lazy loading, code splitting);
+- Developing with performance in mind (e.g. optimizing assets, lazy loading, code splitting, or apply memoization);
 - Applying data normalization in state management and study the impact on the application and the collaboration within a team when applied;
 - Data structures and algorithms. When to apply them in front-end development;
 

@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Welcome to kevtiq.co
+draft: false
 date: 2019-06-24T00:00:00.000Z
 description: >-
   A welcome post from Kevin Pennekamp, to his personal blog: kevtiq.co. This

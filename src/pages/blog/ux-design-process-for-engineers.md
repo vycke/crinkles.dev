@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: The UX design process for engineers
 pinned: true
+draft: false
 date: 2019-07-05T00:00:00.000Z
 featuredImage: design-process.png
 description: >-

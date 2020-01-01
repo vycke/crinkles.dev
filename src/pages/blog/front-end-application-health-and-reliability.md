@@ -2,7 +2,8 @@
 templateKey: blog-post
 title: Front-end application health and reliability
 pinned: true
-date: 2019-12-10T00:00:00.000Z
+draft: true
+date: 2019-12-31T00:00:00.000Z
 featuredImage: request-times.png
 description: >-
   Modern front-end applications are becoming bug and have the responsibility to perform a lot of logic for our users. Keeping our applications healthy and reliable is complex, and difficult to achieve.

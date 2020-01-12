@@ -25,7 +25,7 @@ When looking at this definition with my front-end goggles, I directly see the wo
 
 As mentioned though, this is not the only place where interfaces play a role. When a user clicks on a button, or fills in a form and submits it, he or she is interacting with one (or more) of our components. The UI the user is interacting with is the shared boundary from the interface definition. The interactions of a user are a way of transferring information about his or her intentions towards our components.
 
-## Component anatomy
+## High-level component anatomy
 
 So we are dealing with two types of interfaces when designing and developing components. By combining multiple of these components we can create a UI that the user can use that connects to our system. Great! Are we done? Not completely. When we change something in one interface, it affects the other interface of the same component. To understand this better, we have to look at the component anatomy.
 
@@ -33,7 +33,7 @@ So we are dealing with two types of interfaces when designing and developing com
 
 A UI component consists, as you can see, of several parts that interact with each other. When a user interacts with the UI by clicking a button, some logic triggers inside the component. Depending on the logic, several things can happen within the component. The internal state of the component gets updated, we send a request to the back end, or we provide information back to the user. One important path inside the component is missing though. Through its API, it can provide information to other components. This only works when other components connect to your component, by providing a callback function (e.g. an `onClick` function for a button component).
 
-Your component can provide information to others through their APIs, and vice versa. Another component can provide information through the API to your component. This is the interface used by other engineers. Our components runs some logic when another connects through the API. Depending on the logic, it either updates its internal state, provides information back, or update the UI based on the information.
+Your component can provide information to others through their APIs, and vice versa. Another component can provide information through the API to your component. This is the interface used by other engineers. Our components runs some logic when another connects through the API.
 
 In the last case, it is our component that describes in its API how it can connect with other components. It describes what type of information it can receive, but also when it can provide information back (e.g. callback functions like `onClick`). We can often assume that other engineers are not aware of the internals of our UI components. So the interfaces become a way to describe how we want others to use and interact with our work. But how can we describe our interfaces to ensure others know of how they should interact with them?
 

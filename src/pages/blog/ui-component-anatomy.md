@@ -123,7 +123,8 @@ function MyModal ({ value }) {
   const [show, setShow] = useState(false);
 
   const showModal = show && value !== null;
-  return (<br/>    <>
+  return (
+    <>
       <span>My component!</span>
       {showModal && <Modal onClose={handleShow}>...</Modal>
     </>

@@ -5,16 +5,16 @@ body {
   --header-icon-fill: var(--gray-300);
   --header-icon-stroke: var(--gray-100);
 
-  --selection-bg: var(--green-200);
+  --selection-bg: var(--primary);
   --selection-text: var(--gray-500);
 
-  --blockquote-border: var(--green-200);
-  --footer-icon-stroke-hover: var(--green-200);
+  --blockquote-border: var(--primary);
+  --footer-icon-stroke-hover: var(--primary);
 
-  --text-link: var(--green-200);
-  --text-code: var(--green-200);
+  --text-link: var(--primary);
+  --text-code: var(--primary);
 
-  --toggle-thumb: var(--green-200);
+  --toggle-thumb: var(--primary);
 }
 
 body.light {
@@ -30,6 +30,9 @@ body.light {
 
   --card-bg: var(--gray-100);
   --card-bg-hover: var(--gray-100);
+
+  --tag-color: var(--black);
+  --tag-bg: var(--primary);
 }
 
 body.dark {
@@ -45,4 +48,7 @@ body.dark {
 
   --card-bg: var(--gray-400);
   --card-bg-hover: var(--gray-400);
+
+  --tag-color: var(--primary);
+  --tag-bg: none;
 }

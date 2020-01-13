@@ -82,7 +82,10 @@ a.card__title {
   a:visited,
   a:active {
     text-decoration: none;
-    color: var(--text-link);
+    color: var(--tag-color);
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+    background: var(--tag-bg);
 
     &:before {
       content: '#';

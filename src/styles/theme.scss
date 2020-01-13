@@ -25,6 +25,7 @@ body.light {
 
   --text-default: var(--black);
   --text-secondary: var(--gray-400);
+  --text-code: var(--gray-400);
 
   --blockquote-text: var(--gray-500);
 
@@ -36,9 +37,9 @@ body.light {
 }
 
 body.dark {
-  --bg-default: var(--gray-500);
-  --footer-bg: var(--gray-500);
-  --code-bg: var(--gray-600);
+  --bg-default: var(--gray-600);
+  --footer-bg: var(--gray-600);
+  --code-bg: var(--gray-500);
   --code-highlight-bg: var(--gray-400);
 
   --text-default: var(--white);

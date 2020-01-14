@@ -50,7 +50,10 @@
   a:visited,
   a:active {
     text-decoration: none;
-    color: var(--text-link);
+    color: var(--tag-color);
+    background: var(--tag-bg);
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
 
     &:before {
       content: '#';

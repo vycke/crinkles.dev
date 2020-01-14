@@ -34,11 +34,11 @@ export default function HTML(props) {
                 try {
                   preferredTheme = localStorage.getItem('theme');
                 } catch (err) { }
-                var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-                darkQuery.addListener(function(e) {
-                  window.__setPreferredTheme(e.matches ? 'dark' : 'light')
-                });
-                setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+                  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                  darkQuery.addListener(function(e) {
+                    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+                  });
+                  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
               })();
             `
           }}

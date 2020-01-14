@@ -25,21 +25,21 @@ body.light {
 
   --text-default: var(--black);
   --text-secondary: var(--gray-400);
-  --text-code: var(--gray-400);
+  --text-code: var(--primary-dark);
 
   --blockquote-text: var(--gray-500);
 
   --card-bg: var(--gray-100);
   --card-bg-hover: var(--gray-100);
 
-  --tag-color: var(--black);
-  --tag-bg: var(--primary);
+  --tag-color: var(--primary-dark);
+  --tag-bg: none;
 }
 
 body.dark {
-  --bg-default: var(--gray-600);
-  --footer-bg: var(--gray-600);
-  --code-bg: var(--gray-500);
+  --bg-default: var(--gray-500);
+  --footer-bg: var(--gray-500);
+  --code-bg: var(--gray-600);
   --code-highlight-bg: var(--gray-400);
 
   --text-default: var(--white);

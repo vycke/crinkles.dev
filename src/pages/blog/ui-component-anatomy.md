@@ -17,21 +17,23 @@ In complex applications, UI components consist of more building blocks than some
 
 ![The UI component anatomy](/img/architecture-component-detailed.png 'The UI component anatomy')
 
-## The API
+## The API, also known as properties
 
 Interfaces are a way to describe how we want others to use and interact with our work, our components. The UI is a good example of an interface. It describes what we want our users to see and what we allow for interaction.
 
 > "Interfaces are a way to describe how we want others to use and interact with our components"
 
-But what about the developers? The API of our components, better known as _props_ in React, is the interface for developers. There are some different API types we can define for other developers.
+But what about the developers? The API of our components, better known as _props_ or _properties_ in most frameworks, is the interface for developers. There are some different API types we can define for other developers.
 
 - **Configuration**: interfaces that allow developers to determine how our UI component should look and act. These are often static values that do not change based on user interaction. Examples are `className` or `usePortal`;
 - **Data**: data often lives higher in the component tree. These interfaces allow data to be present and used in our component. These flows are uni-directional. An example is the `value` property;
-- **Actions**: sometimes we need to invoke changes higher in the component tree. This requires callback functions to pass through the API. An example is on `onChange` property.
+- **Actions**: sometimes we need to invoke changes higher in the component tree. This requires callback functions to pass through the API. An example is the `onChange` property.
+
+_Note: to be in line with modern frameworks, I both use the terms properties and API_
 
 ## State
 
-State is a mutable object that dictates the behavior and UI of our component. It is often combined with data received through the API of our component. In the example below, we have a modal component with an incorporated button. When clicking the button, we set the value of `show` to `true`. Now our modal becomes visible for the user.
+State is a mutable object that dictates the behavior and UI of our component. It is often combined with data received through the API. In the example below, we have a modal component with an incorporated button. When clicking the button, we set the value of `show` to `true`. Now our modal becomes visible for the user.
 
 ```js
 function MyModal (props) {
@@ -46,7 +48,7 @@ function MyModal (props) {
 }
 ```
 
-The addition of a state to a component makes it sometimes easy to introduce bugs. The data and action interfaces of the API are part of the '[data-flow](https://overreacted.io/writing-resilient-components/)'. But we often interrupt this with our state by copying values from the data interfaces into our state. But what happens if the values change? Does our state also change? Should it? Look at the example below look of what happens when `showModal` updates. If `MyComponent` is already part of the component tree, then nothing happens. We have interrupted the data-flow. Don't.
+The addition of a state to a component makes it sometimes easy to introduce bugs. The data and action properties are part of the '[data-flow](https://overreacted.io/writing-resilient-components/)'. But we often interrupt this with our state by copying values from the data properties into our state. But what happens if the values change? Does our state also change? Should it? Look at the example below look of what happens when `showModal` updates. If `MyComponent` is already part of the component tree, then nothing happens. We have interrupted the data-flow. Don't.
 
 ```js
 function MyModal({ showModal }) {
@@ -59,7 +61,7 @@ function MyModal({ showModal }) {
 
 ## Actions
 
-As you can see in the diagram, actions link everything together. They are functions harboring small pieces logic. User interaction (e.g. a button click) trigger actions. But life-cycle methods, as described later, also trigger actions. Triggered actions can use data from the state and API in their execution. Actions can come in many forms:
+As you can see in the diagram, actions link everything together. They are functions harboring small pieces logic. User interaction (e.g. a button click) trigger actions. But life-cycle methods, as described later, also trigger actions. Triggered actions can use data from the state and properties in their execution. Actions can come in many forms:
 
 - Actions defined inside the component as a separate function;
 - Actions defined in the life-cycle method of the component;
@@ -92,7 +94,7 @@ _Note: the above component has some small flaws, as does two different state upd
 
 User inaction results in changes in the state of our component, or higher in the component tree. Data received through the API reflect these changes. When change happens, our component needs to update itself to reflect these changes. Or it needs to re-render. Sometimes, we want your component to execute extra logic when this happens. A so-called 'side-effect' needs to be triggered. of the changing values.
 
-A simple example is a search component. When our user types, the state of the component should change, invoking a re-render. Every time we type, we want our component to perform an API-call. We can do this in the handler used on the `onChange` of the `<input />`. But what if our API-call depends on a value provided through the interface? And what if that value changes? We need to move our API-call to an update life-cycle method, as you can see below.
+A simple example is a search component. When our user types, the state of the component should change, invoking a re-render. Every time we type, we want our component to perform an API-call. We can do this with the `onChange` handler of `<input />`. But what if our API-call depends on a value provided through the properties? And what if that value changes? We need to move our API-call to an update life-cycle method, as you can see below.
 
 ```js
 function SearchComponent({ query }) {
@@ -114,7 +116,7 @@ Most times, the logic called in life-cycles methods can be shared with other lif
 
 ## The UI
 
-The UI describes what we want our users to interact with. These interactions, such as clicking on a button, trigger actions. It results from the rendering of our UI component. State changes or changing values in the API trigger the rendering. It is possible to trigger some 'side-effects' when this happens in the components' life-cycle methods.
+The UI describes what we want our users to interact with. These interactions, such as clicking on a button, trigger actions. It results from the rendering of our UI component. State changes or changing properties trigger the rendering. It is possible to trigger some 'side-effects' when this happens in the components' life-cycle methods.
 
 It is often possible to add logic to our rendering. Examples are conditional visibility or showing a list of data with varying sizes. To do so, we need logic, rendering logic. This be something simple as using a boolean value from the state, or use an `array.map()` function. But sometimes we must combining many values in our rendering logic or even use functions to help us. In such a case, I would take that logic outside the rendering function itself as much as possible.
 

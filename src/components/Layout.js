@@ -6,7 +6,6 @@ import logoLight from '../img/logo-light.svg';
 import { Link } from 'gatsby';
 import Sun from './Sun';
 import Moon from './Moon';
-import Toggle from './Toggle';
 
 import '../styles/styles.scss';
 import 'prism-theme-night-owl';
@@ -34,17 +33,17 @@ const PageWrapper = ({ children, meta }) => {
             />
             <span className="logo__text">kevtiq</span>
           </Link>
-          {theme && (
-            <Toggle
-              checked={theme === 'dark'}
-              onClick={(v) => {
-                window.__setPreferredTheme(v ? 'dark' : 'light');
-                setTheme(v ? 'dark' : 'light');
-              }}
-              label="Switch between Dark and Light mode"
-              icons={[Moon, Sun]}
-            />
-          )}
+          <button
+            className={`toggle toggle__${theme}`}
+            type="button"
+            onClick={() => {
+              const newTheme = theme === 'dark' ? 'light' : 'dark';
+              setTheme(newTheme);
+              window.__setPreferredTheme(newTheme);
+            }}>
+            {theme === 'light' && <Moon />}
+            {theme === 'dark' && <Sun />}
+          </button>
         </header>
         <aside className="welcome">
           <p className="welcome-text">

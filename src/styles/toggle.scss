@@ -5,39 +5,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 3.5em;
-  height: 1.5em;
   font-size: inherit;
   transition: all ease-in-out 100ms;
-  background: var(--toggle-bg);
-  border-radius: 2rem;
-}
-
-/* Hide default HTML checkbox */
-.toggle input {
-  display: none;
 }
 
 .toggle .feather {
   height: 1rem;
   margin: 0 1px;
-}
 
-.toggle .thumb {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1.75rem;
-  width: 1.75rem;
-  margin: -0.125rem;
-  background: var(--toggle-thumb);
-  border-radius: 2rem;
-  transition: all ease-in-out 200ms;
-}
-
-.toggle[data-state='true'] .thumb {
-  transform: translateX(2em);
+  fill: var(--header-icon-fill);
+  stroke: var(--header-icon-stroke);
 }

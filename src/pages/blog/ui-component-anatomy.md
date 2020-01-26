@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: UI component anatomy - the architecture of a component
+title: Demystifying the component architecture
 date: 2020-01-12T00:00:00.000Z
 draft: false
 pinned: true

@@ -36,13 +36,15 @@ When looking at a project structure, we can follow something like shown below. A
 src/
 ├── assets/
 ├── components/
+├── config/
 ├── core/
 ├── lib/
 ├── modules/
 └── styles/
+
 ```
 
-The remaining directories hold our static `assets` (e.g. images) or helper functions in `lib`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
+The remaining directories hold our static `assets` (e.g. images), configuration files in `config` (e.g. one for development and one for production), or helper functions in `lib`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
 
 The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the core layer, the architecture shines. Below I zoomed in on the core layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and actions directly talk o the stores and API clients.
 
@@ -62,23 +64,19 @@ The different stores and API clients can become a consistency problem. Try to co
 
 This all sounds like overkill for smaller applications, and it often can be. You can reduce the complexity in this architecture though. When you only have a single API client, you can remove the pub/sub. In such a case, you can 'talk' to the API client and the different stores.
 
-A corresponding project structure for the `app` directory can be something like:
+A corresponding project structure for the `core` directory can be something like:
 
 ```
 .
 └── core/
     ├── apis/
-    ├── config/
-    ├── actions/
     ├── events/
-    ├── lib/
-    ├── models/
     ├── stores/
     ├── workers/
     └── index.js
 ```
 
-Most directories within the `app` folder should be self-explanatory by now. The `actions` and `models` directories share the same purpose as those inside a module. The `lib` directory holds all helper functions (e.g. a `createPubSub` function). Last, we can have scheduled events (e.g. an auto sign out event) stored in the `events` directory.
+Most directories within the `core` folder should be self-explanatory by now. The `stores` directory holds all different types of persistant information for the application (e.g. session or system tracker). The `events` directory holds all scheduled events (e.g. an auto sign out event). The displayed PubSub is invoked and exposed in the `index.js` file of the `core` directory.
 
 ## modules, modules & more modules
 

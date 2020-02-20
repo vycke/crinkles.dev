@@ -13,7 +13,7 @@ tags:
   - architecture
 ---
 
-In complex applications, UI components consist of more building blocks than some state and UI. Before I already [described](/blog/interfacing-your-ui-components/) a different way to look at our reusable UI components. We can look at them from developers' and users' perspectives at the same time. But on a conceptual level, components have more elements important to their behavior. It is important for developers to understand these concepts. Especially when working on big, complex and critical applications. We have to dive into the anatomy of a UI component.
+In complex applications, UI components consist of more building blocks than some state and UI. Before I already [described](/blog/interfacing-your-ui-components/) a different way to look at our reusable UI components. We can look at them from developers' and users' perspectives at the same time. But on a conceptual level, components have more elements important to their behavior. It is important for developers to understand these concepts. Especially when working on big, complex and critical applications. By having an uniform way of looking at a component, we create the 'UI component anatomy'. Those familiar with the [flux-pattern](https://facebook.github.io/flux/docs/in-depth-overview/) can this pattern coming back as well in the anatomy.
 
 ![The UI component anatomy](/img/architecture-component-detailed.png 'The UI component anatomy')
 
@@ -29,7 +29,7 @@ But what about the developers? The API of our components, better known as _props
 - **Data**: data often lives higher in the component tree. These interfaces allow data to be present and used in our component. These flows are uni-directional. An example is the `value` property;
 - **Actions**: sometimes we need to invoke changes higher in the component tree. This requires callback functions to pass through the API. An example is the `onChange` property.
 
-_Note: to be in line with modern frameworks, I both use the terms properties and API_
+_Note: to be in line with modern frameworks, I both use the terms props/properties and API_
 
 ## State
 
@@ -136,4 +136,4 @@ function MyModal ({ value }) {
 
 ## Conclusion
 
-When building our components, we can use various building blocks that work together. On both ends, we have interfaces for different audiences. We allow developers to interact with our UI components and change their behavior. On the other side, we have users interacting with our components. Different elements inside a component link these two interfaces together.
+When building our components, we can use various building blocks that work together. On both ends, we have interfaces for different audiences. We allow developers to interact with our UI components and change their behavior. On the other side, we have users interacting with our components. Different elements inside a component link these two interfaces together. By using a uniform structure for our components with established patterns, we can create realiable and maintainable UIs.

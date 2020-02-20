@@ -38,13 +38,13 @@ src/
 ├── components/
 ├── config/
 ├── core/
-├── lib/
+├── utils/
 ├── modules/
 └── styles/
 
 ```
 
-The remaining directories hold our static `assets` (e.g. images), configuration files in `config` (e.g. one for development and one for production), or helper functions in `lib`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
+The remaining directories hold our static `assets` (e.g. images), configuration files in `config` (e.g. one for development and one for production), or helper functions in `utils`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
 
 The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the core layer, the architecture shines. Below I zoomed in on the core layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and actions directly talk o the stores and API clients.
 

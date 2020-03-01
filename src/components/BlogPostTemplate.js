@@ -1,12 +1,8 @@
 import React from 'react';
-import { string2html } from '../utils/string2html';
 import { formatReadingTime } from '../utils/readingTime';
 import TagList from './TagList';
 
 const BlogPostTemplate = ({ meta, children }) => {
-  const content =
-    typeof children === 'string' ? string2html(children) : children;
-
   const twt = `${meta.title} by @kevtiq ${meta.url}`;
 
   return (
@@ -26,7 +22,10 @@ const BlogPostTemplate = ({ meta, children }) => {
           )}
         </section>
 
-        <section className="post__body">{content}</section>
+        <section
+          className="post__body"
+          dangerouslySetInnerHTML={{ __html: children }}
+        />
       </article>
     </main>
   );

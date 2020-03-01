@@ -41,12 +41,7 @@ const PinnedPostsOverview = () => {
         return posts.map((p, i) => {
           const post = p.node;
           return (
-            <EntryCard
-              key={i}
-              post={post}
-              showImage={true}
-              showDescription={false}
-            />
+            <EntryCard key={i} post={post} showImage={true} showTags={true} />
           );
         });
       }}></StaticQuery>

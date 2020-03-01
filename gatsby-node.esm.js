@@ -100,6 +100,7 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               date
               title
+              description
               templateKey
             }
           }

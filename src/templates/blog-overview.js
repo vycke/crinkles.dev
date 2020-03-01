@@ -9,21 +9,28 @@ import PinnedPostsOverview from '../components/PinnedPosts';
 const PostOverviewTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
 
+  let title = 'Recently published';
+  if (pageContext.currentPage > 1)
+    title += ` (page: ${pageContext.currentPage})`;
+
   return (
     <Layout>
       <section className="overview overview--grid" role="feed">
         <PinnedPostsOverview />
       </section>
-      {pageContext.currentPage === 1 && (
-        <h1 className="overview__title">Latest posts</h1>
-      )}
-      {pageContext.currentPage > 1 && (
-        <h1 className="overview__title">{`Latest posts (page: ${pageContext.currentPage})`}</h1>
-      )}
+
       <section className="overview overview--list" role="feed">
+        <h1 className="overview__title">{title}</h1>
         {posts.map((p, i) => {
           const post = p.node;
-          return <EntryCard key={i} post={post} />;
+          return (
+            <EntryCard
+              key={i}
+              post={post}
+              showTags={false}
+              showDescription={true}
+            />
+          );
         })}
       </section>
       <PageSwitcher prev={pageContext.prev} next={pageContext.next} />

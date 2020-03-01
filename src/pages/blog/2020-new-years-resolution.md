@@ -5,10 +5,9 @@ draft: false
 date: 2020-01-01T00:00:00.000Z
 featuredImage: new-years-resolution.png
 description: >-
-  Reliability first, going fast second. This is the motto of my 2020 new year's resolution.
+  Reliability and resilience first, going fast second.
 tags:
   - writing
-  - frontend
 ---
 
 ![New years resolution](/img/new-years-resolution.png 'New years resolution')

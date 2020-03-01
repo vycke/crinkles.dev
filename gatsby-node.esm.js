@@ -4,7 +4,7 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 20;
 
 function createPaginatedPages(createPage, posts, pathName, context) {
   const numPages = Math.ceil(posts.length / PAGE_SIZE);

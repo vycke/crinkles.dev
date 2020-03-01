@@ -6,10 +6,9 @@ draft: false
 date: 2019-11-11T00:00:00.000Z
 featuredImage: architecture-detailed.png
 description: >-
-  Modern front-end frameworks and libraries make it easy to create reusable UI components. But, in many projects over the years I have found that making reusable components is often not enough. We need a scalable front-end architecture.
+  A modern architecture for enterprise level applications
 tags:
   - architecture
-  - frontend
 ---
 
 _**November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the core layer have been redone._

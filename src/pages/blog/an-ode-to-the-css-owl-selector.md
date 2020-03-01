@@ -6,11 +6,10 @@ draft: false
 date: 2019-07-26T00:00:00.000Z
 featuredImage: owl-selector.png
 description: >-
-  Some CSS selectors are beautiful, elegant, simple but yet so powerful. The owl selector by Heydon Pickering is a keen example. This article shows you what the mental model is for using these types of selectors.
+  One off the most beautiful CSS selectors
 tags:
   - CSS
   - UI
-  - frontend
 ---
 
 ![The owl selector](/img/owl-selector.png 'The owl selector')

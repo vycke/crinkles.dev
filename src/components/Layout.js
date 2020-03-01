@@ -1,17 +1,19 @@
 import React from 'react';
-import Github from './Github';
-import Twitter from './Twitter';
+import { Link } from 'gatsby';
+
+import SEO from './SEO';
 import logoDark from '../img/logo-dark.svg';
 import logoLight from '../img/logo-light.svg';
-import { Link } from 'gatsby';
-import Sun from './Sun';
-import Moon from './Moon';
+
+import Dribbble from '../icons/Dribbble';
+import Dev from '../icons/Dev';
+import Sun from '../icons/Sun';
+import Moon from '../icons/Moon';
+import Github from '../icons/Github';
+import Twitter from '../icons/Twitter';
 
 import '../styles/styles.scss';
 import 'prism-theme-night-owl';
-import SEO from './SEO';
-import Dribbble from './Dribbble';
-import Dev from './Dev';
 
 const PageWrapper = ({ children, meta }) => {
   const [theme, setTheme] = React.useState(null);

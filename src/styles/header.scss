@@ -43,6 +43,23 @@ a.logo {
   color: var(--text-default);
 }
 
+/* The switch - the box around the slider */
+.toggle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: inherit;
+  transition: all ease-in-out 100ms;
+}
+
+.toggle .feather {
+  height: 1.25rem;
+  fill: var(--header-icon-fill);
+  stroke: var(--header-icon-stroke);
+}
+
 @media (max-width: 30rem) {
   header {
     padding: 1rem 1rem 0rem;

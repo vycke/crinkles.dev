@@ -2,16 +2,9 @@ body {
   --footer-icon-stroke: var(--gray-100);
   --toggle-bg: var(--gray-400);
 
-  --selection-bg: var(--primary);
   --selection-text: var(--gray-500);
 
-  --blockquote-border: var(--primary);
   --footer-icon-stroke-hover: var(--primary);
-
-  --text-link: var(--primary);
-  --text-code: var(--primary);
-
-  --toggle-thumb: var(--primary);
 }
 
 body.light {
@@ -20,20 +13,29 @@ body.light {
   --code-bg: var(--gray-600);
   --code-highlight-bg: var(--gray-500);
 
-  --header-icon-fill: var(--primary);
+  --header-icon-fill: none;
   --header-icon-stroke: var(--gray-500);
 
   --text-default: var(--black);
   --text-secondary: var(--gray-400);
-  --text-code: var(--primary-dark);
+  --text-code: var(--secondary);
 
   --blockquote-text: var(--gray-500);
 
   --card-bg: var(--gray-100);
   --card-bg-hover: var(--gray-100);
 
-  --tag-color: var(--primary-dark);
+  --tag-color: var(--secondary);
   --tag-bg: none;
+
+  --page-header: var(--secondary);
+
+  --text-link: var(--secondary);
+  --text-code: var(--secondary);
+
+  --toggle-thumb: var(--secondary);
+
+  --blockquote-border: var(--secondary);
 }
 
 body.dark {
@@ -55,4 +57,13 @@ body.dark {
 
   --tag-color: var(--primary);
   --tag-bg: none;
+
+  --page-header: var(--primary);
+
+  --text-link: var(--primary);
+  --text-code: var(--primary);
+
+  --toggle-thumb: var(--primary);
+
+  --blockquote-border: var(--primary);
 }

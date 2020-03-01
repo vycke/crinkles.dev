@@ -5,8 +5,8 @@ import TagList from './TagList';
 const Card = ({
   post,
   showTags = true,
-  showDescription = true,
-  showImage = false
+  showImage = false,
+  showDescription = false
 }) => {
   return (
     <section className={`card ${showImage ? 'card--bg' : ''}`} role="article">
@@ -21,10 +21,14 @@ const Card = ({
         <a href={post.fields.slug} className="card__title">
           {post.frontmatter.title || ''}
         </a>
-        <span className="card__subtitle">
+        {showDescription && (
+          <span className="card__subtitle">{post.frontmatter.description}</span>
+        )}
+        <span className="card__meta">
           <time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time>
           {` • ${formatReadingTime(post.wordCount.words)}`}
         </span>
+
         {showTags && (
           <TagList
             className="card__tags"

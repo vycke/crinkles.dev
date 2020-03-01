@@ -6,9 +6,8 @@ draft: false
 date: 2019-07-05T00:00:00.000Z
 featuredImage: design-process.png
 description: >-
-  As a software engineer, it sometimes can be difficult to understand what UX designing is and where it fits in the process. Especially the difference between UX and UI can be difficult to understand. Some recent insights provided valuable information to visualize and explain the concept of UX.
+  How can we work together with UX designers?
 tags:
-  - UX
   - design
   - process
 ---

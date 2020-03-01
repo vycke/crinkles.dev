@@ -16,18 +16,20 @@ const TagsTemplate = ({ data, pageContext }) => {
         title: `Kevtiq.co | ${tag}`,
         description: `All posts on Kevtiq.co with the tag: ${tag}`
       }}>
-      <h1 className="overview__title">{`Selected tag: ${tag.toLowerCase()}`}</h1>
-      <TagList
-        tags={tags.filter((t) => t !== tag)}
-        className="tags tags--page"
-      />
       <section className="overview overview--list" role="feed">
+        <h1 className="overview__title">{tag}</h1>
+
         {posts.map((p, i) => {
           const post = p.node;
           return <EntryCard key={i} post={post} showTags={false} />;
         })}
       </section>
       <PageSwitcher prev={prev} next={next} />
+
+      <TagList
+        tags={tags.filter((t) => t !== tag)}
+        className="tags tags--page"
+      />
     </Layout>
   );
 };

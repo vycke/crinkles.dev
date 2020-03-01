@@ -149,23 +149,6 @@ pre .gatsby-highlight-code-line {
   }
 }
 
-/* The switch - the box around the slider */
-.toggle {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: inherit;
-  transition: all ease-in-out 100ms;
-}
-
-.toggle .feather {
-  height: 1.25rem;
-  fill: var(--header-icon-fill);
-  stroke: var(--header-icon-stroke);
-}
-
 @media (max-width: 48rem) {
   pre[class*='language-'] {
     border-radius: 0rem;

@@ -1,6 +1,7 @@
 .post {
   max-width: 48.5rem;
   padding: 0rem 2rem 2rem;
+  margin: 0 auto;
 }
 
 .post__body {
@@ -48,6 +49,7 @@
   padding: 0rem 0rem 1rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   h1 {
     color: var(--text-default);

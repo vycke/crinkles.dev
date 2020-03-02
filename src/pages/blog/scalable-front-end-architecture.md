@@ -11,6 +11,7 @@ tags:
   - architecture
 ---
 
+_**March 2020**: updated the 'application backbone' chapter to reflect reality better._
 _**November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the core layer have been redone._
 
 Modern front-end frameworks and libraries make it easy to create [reusable UI components](/blog/interfacing-your-ui-components/). This is a step in a good direction to create maintainable front-end applications. Yet, in many projects over the years I have found that making reusable components is often not enough. My projects became unmaintainable, as requirements changed or new requirements came up. It took longer and longer to find the correct file or debug something across many files.
@@ -40,10 +41,9 @@ src/
 ├── utils/
 ├── modules/
 └── styles/
-
 ```
 
-The remaining directories hold our static `assets` (e.g. images), configuration files in `config` (e.g. one for development and one for production), or helper functions in `utils`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
+The remaining directories hold our static `assets` (e.g. images), configuration files in `config` (e.g. one for development and one for production), or helper functions and constants in `utils`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
 
 The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the core layer, the architecture shines. Below I zoomed in on the core layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and actions directly talk o the stores and API clients.
 
@@ -51,17 +51,13 @@ The above does not look like something special. This is a standard modular appro
 
 ## The application backbone
 
-The core layer is the backbone of the architecture. The goal of this part of the application is to be scalable and framework-agnostic. There are a few main parts in this layer: API clients, a pub/sub and one or more stores. You can have some [web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) running on this level as well. Stores come in many sizes. At first glance, you might think about the application state. And you are right, that is one store. But what about your user's history stack? This is, in fact, another example of a store.
+The core layer is the backbone of the architecture. The goal of this part of the application is to be scalable and framework-agnostic. There are a few main parts in this layer: API clients, a pub/sub and one or more stores. You can include [web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) for the heavy lifting on this level as well. Stores come in many sizes. At first glance, you might think about the application state. And you are right, that is one store. But what about your user's history stack? This is, in fact, another example of a store.
 
 When you look at stores in this light, you find many of them. Application state, navigation history, session management, API caches and logger history. These should live on an application level. This also means that they should be configured here. You can, for instance, download the [history package on npm](https://www.npmjs.com/package/history) and use this for navigation history. In the store, you can expand the package by adding your functions (e.g. a different `push`). You can now also expose these to the rest of your application.
 
 On the other side, we have one or more API clients. Some of our projects have a dedicated back-end service to talk to. Be it an API gateway on top of a [Kubernetes](https://kubernetes.io/) cluster with many micro-services, or a single monolith back-end. But sometimes we need to connect to different external services. Each of these services requires configuration (e.g. authentication). All these configurations and invoked clients live in the core layer. This way they can be used by all modules.
 
-![Using the pub/sub as the linking pin between actions and API clients](/img/architecture-pubsub.png 'Using the pub/sub as the linking pin between actions and API clients')
-
-The different stores and API clients can become a consistency problem. Try to combine GraphQL requests and REST requests to show the correct data. By using a pub/sub we can generalize how actions interact with all the different parts on this level. They publish request events and subscribe to response events. This reassembles how many modern state management libraries work. Another upside of this approach is that you can change a client API, without the modules ever knowing.
-
-This all sounds like overkill for smaller applications, and it often can be. You can reduce the complexity in this architecture though. When you only have a single API client, you can remove the pub/sub. In such a case, you can 'talk' to the API client and the different stores.
+A pub/sub can be used with many different goals in mind. It can loosely couple your modules from various API clients for instance. This ensures one uniform way to use API calls across your application, regardless of the API clients you are using. But, the pub/sub can have different purposes as well. When your application has an 'auto signoff' feature based on inactivity, the pub/sub can easily be used to reset the timer on different actions. Or you can use it to synchronous concurrent API calls at the moment you need to refresh your authentication first. And when you use a package like [Pubbel](https://github.com/kevtiq/pubbel) as your pub/sub, you can use it to synchronize events across browser window tabs without persisting data in your `localStorage`.
 
 A corresponding project structure for the `core` directory can be something like:
 
@@ -113,7 +109,7 @@ The `index.js` file of a module describes which components, actions, and models 
 
 Let's look at the example of a user drop-down. We can create an action that provides us all the users we can select from different modules. But, we now need to create a specific drop-down in all other modules. This might not need much effort to have a generic drop-down component. But this component might not work in a form. It might be worth the investment to create one `UserDropdown` component that we can use. When something changes around users, we now change only one component. So sometimes we need to choose what to expose: actions or components.
 
-## UI component anatomy
+## UI component architecture
 
 One last detail level is missing still, and that is the architecture of a UI component. In a [different](/blog/ui-component-anatomy/) blog post I describe this article. When you look at this anatomy, you will see some concepts back that we apply on a bigger scale. More details can be found in this article.
 

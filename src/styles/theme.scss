@@ -13,8 +13,8 @@ body.light {
   --code-bg: var(--gray-600);
   --code-highlight-bg: var(--gray-500);
 
-  --header-icon-fill: none;
-  --header-icon-stroke: var(--gray-500);
+  --header-icon-fill: var(--secondary);
+  --header-icon-stroke: none;
 
   --text-default: var(--black);
   --text-secondary: var(--gray-400);

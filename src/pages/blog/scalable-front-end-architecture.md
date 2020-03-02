@@ -57,7 +57,7 @@ When you look at stores in this light, you find many of them. Application state,
 
 On the other side, we have one or more API clients. Some of our projects have a dedicated back-end service to talk to. Be it an API gateway on top of a [Kubernetes](https://kubernetes.io/) cluster with many micro-services, or a single monolith back-end. But sometimes we need to connect to different external services. Each of these services requires configuration (e.g. authentication). All these configurations and invoked clients live in the core layer. This way they can be used by all modules.
 
-A pub/sub can be used with many different goals in mind. It can loosely couple your modules from various API clients for instance. This ensures one uniform way to use API calls across your application, regardless of the API clients you are using. But, the pub/sub can have different purposes as well. When your application has an 'auto signoff' feature based on inactivity, the pub/sub can easily be used to reset the timer on different actions. Or you can use it to synchronous concurrent API calls at the moment you need to refresh your authentication first. And when you use a package like [Pubbel](https://github.com/kevtiq/pubbel) as your pub/sub, you can use it to synchronize events across browser window tabs without persisting data in your `localStorage`.
+A pub/sub can be used with many different goals in mind. It can loosely couple your modules from various API clients for instance. This ensures one uniform way to use API calls across your application, regardless of the API clients you are using. But, the pub/sub can have different purposes as well. When your application has an 'auto sign out' feature based on inactivity, the pub/sub can easily be used to reset the timer on different actions. Or you can use it to synchronous concurrent API calls at the moment you need to refresh your authentication first. And when you use a package like [Pubbel](https://github.com/kevtiq/pubbel) as your pub/sub, you can use it to synchronize events across browser window tabs without persisting data in your `localStorage`.
 
 A corresponding project structure for the `core` directory can be something like:
 
@@ -94,12 +94,11 @@ Actions combine ways to get capture interaction and get information out of our m
         ├── actions/
         ├── models/
         ├── pages/
-        ├── queries/
         ├── state/
         └── index.js
 ```
 
-Like the core layer, a module can have its own state management and static definitions, i.e. constants. In that case, we put that code in the `state`, `config` and `models` directories. Depending on our API clients, we want to define and group queries (e.g. GraphQL). These should be in the `queries` directory.
+Like the core layer, a module can have its own state management and static definitions, i.e. constants. In that case, we put that code in the `state` (e.g. a `reducer` function), `config` and `models` directories. Depending on our API clients, we can add additional directories. For instance, when working with GraphQL it might be benificial to include a `queries` and/or `mutations` directory. However, as they are used inside `actions` most of the times, you can also include them there.
 
 ## Sharing between modules
 

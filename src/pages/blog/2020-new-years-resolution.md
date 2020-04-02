@@ -5,7 +5,7 @@ draft: false
 date: 2020-01-01T00:00:00.000Z
 featuredImage: new-years-resolution.png
 description: >-
-  Reliability and resilience first, going fast second.
+  Reliability and resilience first, going fast second
 tags:
   - writing
 ---

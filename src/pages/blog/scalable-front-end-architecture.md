@@ -28,22 +28,19 @@ We expect modern front-end applications to do more and more of the heavy lifting
 
 ## Filling in the details
 
-Our goal as front-end developers is to provide value to our users by letting them interact with our work. When they do, the application routing will guide the user to the correct module. Each module can is a separate domain. Business logic shapes these domains. Various modules use this logic, such as retrieving data from a back-end service. This logic is thus placed in the application layer. This is the core setup of a scalable front-end architecture.
-
-When looking at a project structure, we can follow something like shown below. All code for the core layer is in the `app` directory. While all modules have a directory in the `modules` directory. Reusable UI components (e.g. tables) that do not rely on business logic are in the `components` directory.
+Our goal as front-end developers is to provide value to our users by letting them interact with our work. When they do, the application routing will guide the user to the correct module. Each module can is a separate domain. Business logic shapes these domains. Various modules use this logic, such as retrieving data from a back-end service. This logic is thus placed in the application layer. This is the core setup of a scalable front-end architecture. The architecture resolves around three directories. The `core` directory holds all code for the displayed core layer, while the `modules` directory holds all the different modules based on the different identified domains. Lastly, there is the `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture. As you can see, there are many other different directories present in the architecture. Depending on the framework or the use case, directories like `hooks` (for React Hooks) or `mocks` (for mock data during development) can be included in the project.
 
 ```
 src/
-├── assets/
-├── components/
-├── config/
+├── assets/        // e.g. images
+├── components/    // generic reusable UI components
+├── config/        // configurations for different builds
+├── constants/     // holds constants and static data
 ├── core/
-├── utils/
+├── utils/         // generic JavaScript helper functions
 ├── modules/
 └── styles/
 ```
-
-The remaining directories hold our static `assets` (e.g. images), configuration files in `config` (e.g. one for development and one for production), or helper functions and constants in `utils`. These can differ from simple utility functions to complex auto-layout logic for graphs, or even hold generic React Hooks. Finally, we have a `styles` directory. Many prefer something like `CSS-in-JS` or [styled-components](https://www.styled-components.com/). I prefer a solid CSS architecture, such as [Harry Roberts' ITCSS](https://csswizardry.com/2018/11/itcss-and-skillshare/), that follows the SoC mindset of the architecture.
 
 The above does not look like something special. This is a standard modular approach for development. But, by zooming in on a module and the core layer, the architecture shines. Below I zoomed in on the core layer and a single module. In the rest of this blog post, I discuss each of the different topics and the ideas behind them. The dotted connections are optional connections that you can use when you want a less complex architecture. In this case, the pub/sub and workers are removed from the architecture and actions directly talk o the stores and API clients.
 
@@ -59,16 +56,20 @@ On the other side, we have one or more API clients. Some of our projects have a 
 
 A pub/sub can be used with many different goals in mind. It can loosely couple your modules from various API clients for instance. This ensures one uniform way to use API calls across your application, regardless of the API clients you are using. But, the pub/sub can have different purposes as well. When your application has an 'auto sign out' feature based on inactivity, the pub/sub can easily be used to reset the timer on different actions. Or you can use it to synchronous concurrent API calls at the moment you need to refresh your authentication first. And when you use a package like [Pubbel](https://github.com/kevtiq/pubbel) as your pub/sub, you can use it to synchronize events across browser window tabs without persisting data in your `localStorage`.
 
-A corresponding project structure for the `core` directory can be something like:
+A corresponding project structure for the `core` directory can be something like displayed below. This is an example from one of my recent projects, although it did not include a (redux) store, as it used the cache from the GraphQL API client.
 
 ```
 .
 └── core/
-    ├── apis/
-    ├── events/
-    ├── stores/
+    ├── api/
+    │   ├── grapql/
+    │   ├── my-external-api/
     ├── workers/
-    └── index.js
+    ├── events.js                // e.g. auto signout on inactivity
+    ├── history.js
+    ├── pubsub.js
+    ├── store.js                 // e.g. redux store configuration
+    └── tracker.js               // e.g. error tracker
 ```
 
 Most directories within the `core` folder should be self-explanatory by now. The `stores` directory holds all different types of persistant information for the application (e.g. session or system tracker). The `events` directory holds all scheduled events (e.g. an auto sign out event). The displayed PubSub is invoked and exposed in the `index.js` file of the `core` directory.

@@ -49,7 +49,7 @@ const PageWrapper = ({ children, meta }) => {
         </header>
         <aside className="welcome">
           <p className="welcome-text">
-            Hello, I am Kevin Pennekamp a front-end engineer @{' '}
+            Hello, I am Kevin Pennekamp a front-end architect, working @{' '}
             <a href="https://finaps.nl" alt="Finaps website">
               Finaps
             </a>

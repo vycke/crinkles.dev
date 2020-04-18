@@ -11,19 +11,6 @@ header {
   padding: 2rem 2rem 0rem;
 }
 
-aside.welcome {
-  margin: 0 auto;
-  font-size: 1rem;
-  max-width: 53rem;
-  width: 100%;
-  color: var(--text-secondary);
-  padding: 0rem 1rem 2rem 4.25rem;
-
-  > * {
-    max-width: 20rem;
-  }
-}
-
 a.logo {
   display: flex;
   flex-direction: row;
@@ -33,13 +20,13 @@ a.logo {
 }
 
 .logo__img {
-  width: 1.25rem;
+  width: 1.375rem;
   margin-right: 1rem;
   margin-bottom: 0.125rem;
 }
 
 .logo__text {
-  font-size: 1.875rem;
+  font-size: 1.625rem;
   color: var(--text-default);
 }
 
@@ -65,8 +52,11 @@ a.logo {
     padding: 1rem 1rem 0rem;
   }
 
-  aside.welcome {
-    padding-left: 3.5rem;
-    padding-bottom: 1rem;
+  .logo__img {
+    width: 1.125rem;
+  }
+
+  .logo__text {
+    font-size: 1.4rem;
   }
 }

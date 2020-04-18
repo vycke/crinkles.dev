@@ -48,6 +48,7 @@ a.card__title {
   color: var(--text-default);
   cursor: pointer;
   font-size: 1.25rem;
+  line-height: 1.4rem;
   font-weight: 600;
 
   &:hover *,
@@ -125,7 +126,6 @@ a.card__title {
   .card:hover {
     transform: scale(1);
     box-shadow: none;
-    border: 1px solid var(--bg-default);
   }
 
   .card__content {
@@ -136,5 +136,17 @@ a.card__title {
 @media (max-width: 30rem) {
   a.card__title {
     font-size: 1.125rem;
+  }
+
+  .card {
+    border-radius: 0rem;
+  }
+
+  .card__image {
+    padding: 0rem;
+  }
+
+  .card--bg {
+    background: none;
   }
 }

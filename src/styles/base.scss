@@ -1,20 +1,18 @@
-html {
+html,
+body {
   font-size: 16px;
   font-size: 100%;
   font-display: swap;
+  font-weight: 400;
   font-family: var(--sans-serif);
   height: 100%;
-  line-height: 1.5;
+  line-height: 1.75;
   background-color: var(--bg-default);
+  color: var(--text-default);
 }
 
 body {
-  height: 100%;
-  line-height: 1.5;
-  color: var(--text-default);
-  background-color: var(--bg-default);
   transition: all ease-in-out 100ms;
-  font-display: swap;
   min-width: 20rem;
 }
 

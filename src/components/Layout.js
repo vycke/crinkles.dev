@@ -33,7 +33,7 @@ const PageWrapper = ({ children, meta }) => {
               alt="Kevtiq logo used by Kevin Pennekamp"
               className="logo__img"
             />
-            <span className="logo__text">kevtiq</span>
+            <span className="logo__text">kevtiq;</span>
           </Link>
           <button
             className={`toggle toggle__${theme}`}
@@ -47,14 +47,14 @@ const PageWrapper = ({ children, meta }) => {
             {theme === 'dark' && <Sun />}
           </button>
         </header>
-        <aside className="welcome">
+        {/* <aside className="welcome">
           <p className="welcome-text">
-            Hello, I am Kevin Pennekamp a front-end architect, working @{' '}
+            Front-end architect, working @{' '}
             <a href="https://finaps.nl" alt="Finaps website">
               Finaps
             </a>
           </p>
-        </aside>
+        </aside> */}
         <main>{children}</main>
         <footer>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">

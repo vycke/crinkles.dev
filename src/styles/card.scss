@@ -1,6 +1,5 @@
 .card {
   transition: all ease-in-out 200ms;
-  border-radius: 0.5rem;
   min-width: 18rem;
   color: var(--text-secondary);
   position: relative;
@@ -29,6 +28,7 @@
 .card__image {
   width: 100%;
   height: 10rem;
+  border-radius: 0.5rem;
   object-fit: cover;
   display: inline-block;
   vertical-align: middle;
@@ -139,12 +139,9 @@ a.card__title {
     font-size: 1.125rem;
   }
 
-  .card {
-    border-radius: 0rem;
-  }
-
   .card__image {
     padding: 0rem;
+    border-radius: 0rem;
   }
 
   .card--bg {

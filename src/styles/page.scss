@@ -41,7 +41,7 @@
 
 .tags {
   display: flex;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-family: var(--monospace);
   flex-wrap: wrap;
   position: relative;
@@ -61,7 +61,7 @@
   }
 
   > li {
-    padding: 0.25rem 0rem;
+    padding: 0rem 0rem;
   }
 
   > * + * {

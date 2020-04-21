@@ -43,9 +43,9 @@ body.light {
 body.dark {
   --main-color: var(--secondary);
 
-  --bg-default: var(--gray-500);
-  --footer-bg: var(--gray-500);
-  --code-bg: var(--gray-600);
+  --bg-default: var(--gray-600);
+  --footer-bg: var(--gray-600);
+  --code-bg: var(--gray-500);
   --code-highlight-bg: var(--gray-400);
 
   --header-icon-stroke: var(--gray-100);
@@ -55,6 +55,6 @@ body.dark {
 
   --blockquote-text: var(--gray-200);
 
-  --card-bg: var(--gray-400);
-  --card-bg-hover: var(--gray-400);
+  --card-bg: var(--gray-500);
+  --card-bg-hover: var(--gray-500);
 }

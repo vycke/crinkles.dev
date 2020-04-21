@@ -18,9 +18,9 @@
 
   &:focus-within,
   &:hover {
-    box-shadow: 0rem 0.25rem 2rem rgba(0, 0, 0, 0.2);
+    // box-shadow: 0rem 0.25rem 2rem rgba(0, 0, 0, 0.2);
     background: var(--card-bg-hover);
-    transform: scale(1.05);
+    // transform: scale(1.05);
   }
 }
 
@@ -45,16 +45,19 @@
 
 a.card__title {
   text-decoration: none;
+  text-decoration-color: var(--text-link);
+  transition: all ease-in-out 200ms;
   color: var(--text-default);
   cursor: pointer;
   font-size: 1.25rem;
   line-height: 1.4rem;
   font-weight: 600;
 
-  &:hover *,
-  &:active *,
-  &:focus * {
+  &:hover,
+  &:active,
+  &:focus {
     text-decoration: underline;
+    text-decoration-color: var(--text-link);
   }
 
   &:after {
@@ -126,6 +129,7 @@ a.card__title {
   .card:hover {
     transform: scale(1);
     box-shadow: none;
+    border: none;
   }
 
   .card__content {

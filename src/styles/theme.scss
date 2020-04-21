@@ -27,15 +27,15 @@ body.light {
   --code-bg: var(--gray-600);
   --code-highlight-bg: var(--gray-500);
 
-  --header-icon-stroke: var(--gray-500);
+  --header-icon-stroke: var(--black);
 
-  --text-default: var(--gray-500);
+  --text-default: var(--black);
   --text-secondary: var(--gray-300);
 
   --blockquote-text: var(--gray-500);
 
-  --card-bg: var(--white);
-  --card-bg-hover: var(--gray-200);
+  --card-bg: var(--gray-100);
+  --card-bg-hover: var(--gray-100);
 
   --tag-bg: none;
 }

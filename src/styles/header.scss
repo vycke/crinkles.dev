@@ -29,6 +29,11 @@ a.logo {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-default);
+
+  &::after {
+    color: var(--main-color);
+    content: ';';
+  }
 }
 
 /* The switch - the box around the slider */

@@ -47,14 +47,6 @@ const PageWrapper = ({ children, meta }) => {
             {theme === 'dark' && <Sun />}
           </button>
         </header>
-        {/* <aside className="welcome">
-          <p className="welcome-text">
-            Front-end architect, working @{' '}
-            <a href="https://finaps.nl" alt="Finaps website">
-              Finaps
-            </a>
-          </p>
-        </aside> */}
         <main>{children}</main>
         <footer>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">

@@ -17,6 +17,8 @@ body {
   --tag-color: var(--main-color);
   --text-code: var(--main-color);
   --tag-bg: none;
+  --card-bg: none;
+  --card-bg-hover: none;
 }
 
 body.light {
@@ -34,10 +36,8 @@ body.light {
 
   --blockquote-text: var(--gray-500);
 
-  --card-bg: var(--gray-100);
-  --card-bg-hover: var(--gray-100);
-
-  --tag-bg: none;
+  --card-bg: none;
+  --card-bg-hover: none;
 }
 
 body.dark {
@@ -54,7 +54,4 @@ body.dark {
   --text-secondary: var(--gray-200);
 
   --blockquote-text: var(--gray-200);
-
-  --card-bg: var(--gray-600);
-  --card-bg-hover: var(--gray-600);
 }

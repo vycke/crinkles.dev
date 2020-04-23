@@ -19,8 +19,8 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
         <PinnedPostsOverview />
       </section>
 
-      <section className="overview overview--list" role="feed">
-        <h1 className="overview__title">{title}</h1>
+      <h1 className="overview__title">{title}</h1>
+      <section className="overview overview--grid" role="feed">
         {posts.map((p, i) => {
           const post = p.node;
           return (

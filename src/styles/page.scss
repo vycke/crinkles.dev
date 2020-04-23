@@ -4,7 +4,7 @@
   padding: 0rem 2rem 2rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 55rem;
+  max-width: 80rem;
 
   .previous,
   .next {
@@ -36,6 +36,26 @@
     > span {
       margin-right: 0.25rem;
     }
+  }
+}
+
+.divider {
+  margin: 3rem 0rem;
+
+  img {
+    width: 3.5rem;
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    background: var(--bg-default);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    margin-top: calc(-1.75rem - 2px);
+    border: 1px solid var(--text-default);
   }
 }
 

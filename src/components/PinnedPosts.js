@@ -9,7 +9,7 @@ const PinnedPostsOverview = () => {
       query={graphql`
         query HeadingQuery {
           allMarkdownRemark(
-            limit: 3
+            limit: 2
             filter: {
               frontmatter: { pinned: { eq: true }, draft: { eq: false } }
             }

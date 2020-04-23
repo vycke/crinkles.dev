@@ -3,16 +3,30 @@
 **/
 footer {
   background: var(--footer-bg);
-  padding: 2rem;
+  padding: 3rem 2rem;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
   line-height: 1;
   font-size: 1.5rem;
   margin-top: 2rem;
+  color: var(--footer-icon-stroke);
 
-  > * + * {
-    margin-left: 1rem;
+  .copyright {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    // visibility: hidden;
+  }
+
+  .socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    > * + * {
+      margin-left: 1rem;
+    }
   }
 
   .icon {

@@ -1,8 +1,12 @@
 import React from 'react';
 import { formatReadingTime } from '../utils/readingTime';
 import TagList from './TagList';
+import logoDark from '../img/logo-dark.svg';
+import logoLight from '../img/logo-light.svg';
+import { AppContext } from './Context';
 
 const BlogPostTemplate = ({ meta, children }) => {
+  const { theme } = React.useContext(AppContext);
   const twt = `${meta.title} by @kevtiq ${meta.url}`;
 
   return (
@@ -25,6 +29,13 @@ const BlogPostTemplate = ({ meta, children }) => {
         className="post__body"
         dangerouslySetInnerHTML={{ __html: children }}
       />
+      <div className="divider">
+        <img
+          src={theme === 'dark' ? logoDark : logoLight}
+          alt="Kevtiq logo used by Kevin Pennekamp"
+          className="logo__img"
+        />
+      </div>
     </article>
   );
 };

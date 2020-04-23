@@ -14,13 +14,10 @@ import Twitter from '../icons/Twitter';
 
 import '../styles/styles.scss';
 import 'prism-theme-night-owl';
+import { AppContext } from './Context';
 
 const PageWrapper = ({ children, meta }) => {
-  const [theme, setTheme] = React.useState(null);
-
-  React.useEffect(() => {
-    setTheme(window.__theme || 'dark');
-  }, []);
+  const { theme, updateTheme } = React.useContext(AppContext);
 
   return (
     <React.Fragment>
@@ -38,29 +35,33 @@ const PageWrapper = ({ children, meta }) => {
           <button
             className={`toggle toggle__${theme}`}
             type="button"
-            onClick={() => {
-              const newTheme = theme === 'dark' ? 'light' : 'dark';
-              setTheme(newTheme);
-              window.__setPreferredTheme(newTheme);
-            }}>
+            onClick={updateTheme}>
             {theme === 'light' && <Moon />}
             {theme === 'dark' && <Sun />}
           </button>
         </header>
         <main>{children}</main>
         <footer>
-          <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
-            <Twitter />
-          </a>
-          <a href="https://github.com/kevtiq" alt="Link to my Github page">
-            <Github />
-          </a>
-          <a href="https://dribbble.com/kevtiq" alt="Link to my Dribbble page">
-            <Dribbble />
-          </a>
-          <a href="https://dev.to/kevtiq" alt="Kevin Pennekamp's DEV Profile">
-            <Dev />
-          </a>
+          <div className="socialmedia">
+            <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
+              <Twitter />
+            </a>
+            <a href="https://github.com/kevtiq" alt="Link to my Github page">
+              <Github />
+            </a>
+            <a
+              href="https://dribbble.com/kevtiq"
+              alt="Link to my Dribbble page">
+              <Dribbble />
+            </a>
+            <a href="https://dev.to/kevtiq" alt="Kevin Pennekamp's DEV Profile">
+              <Dev />
+            </a>
+          </div>
+
+          <span className="copyright">
+            © 2019-present Kevin Pennekamp. All Rights Reserved.
+          </span>
         </footer>
       </div>
     </React.Fragment>

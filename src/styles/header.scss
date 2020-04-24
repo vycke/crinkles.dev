@@ -20,7 +20,7 @@ a.logo {
 }
 
 .logo__img {
-  width: 1.25rem;
+  width: var(--logo-size);
   margin-right: 1rem;
   margin-bottom: 0.125rem;
 }
@@ -56,10 +56,6 @@ a.logo {
 @media (max-width: 30rem) {
   header {
     padding: 1rem 1rem 0rem;
-  }
-
-  .logo__img {
-    width: 1.125rem;
   }
 
   .logo__text {

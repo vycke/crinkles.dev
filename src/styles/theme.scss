@@ -19,6 +19,12 @@ body {
   --tag-bg: none;
   --card-bg: none;
   --card-bg-hover: none;
+
+  --logo-size: 1.25rem;
+
+  @media (max-width: 30rem) {
+    --logo-size: 1.125rem;
+  }
 }
 
 body.light {

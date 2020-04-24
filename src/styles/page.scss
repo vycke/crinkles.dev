@@ -43,7 +43,7 @@
   margin: 3rem 0rem;
 
   img {
-    width: 3.5rem;
+    width: calc(var(--logo-size) + 2rem);
     padding: 1rem;
     margin: 0 auto;
     position: relative;
@@ -54,7 +54,7 @@
   &::after {
     content: '';
     display: block;
-    margin-top: calc(-1.75rem - 2px);
+    margin-top: calc(-1 * (var(--logo-size) / 2) * (6 / 5) - 1rem - 1px);
     border: 1px solid var(--text-default);
   }
 }

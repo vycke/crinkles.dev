@@ -117,9 +117,15 @@ exports.createPages = ({ actions, graphql }) => {
       (p) => new Date(_.get(p, 'node.frontmatter.date')) <= new Date()
     );
 
+    const blogposts = posts.filter(
+      (p) => _.get(p, 'node.frontmatter.templateKey') === 'blog-post'
+    );
+
+    console.log(posts.length, blogposts.length);
+
     createPostPage(createPage, posts);
-    createIndexPages(createPage, posts);
-    createTagPages(createPage, posts);
+    createIndexPages(createPage, blogposts);
+    createTagPages(createPage, blogposts);
   });
 };
 

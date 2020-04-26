@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.kevtiq.co',
     author: 'Kevin Pennekamp',
-    title: 'kevtiq; Kevin Pennekamp',
+    title: 'kvtiq | Kevin Pennekamp',
     image: '/img/kevtiq-logo.png',
     twitterName: '@kevtiq',
     description:

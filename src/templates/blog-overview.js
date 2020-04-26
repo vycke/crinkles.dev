@@ -51,7 +51,9 @@ export const postOverviewPageQuery = graphql`
       limit: $limit
       skip: $skip
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { eq: false } } }
+      filter: {
+        frontmatter: { draft: { eq: false }, templateKey: { eq: "blog-post" } }
+      }
     ) {
       totalCount
       edges {

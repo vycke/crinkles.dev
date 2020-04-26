@@ -32,7 +32,6 @@ const BlogPost = ({ data, pageContext }) => {
       footer={true}
       className="post">
       <PageTemplate meta={meta}>{post.html}</PageTemplate>
-      <PageSwitcher prev={prev} next={next} />
     </Layout>
   );
 };

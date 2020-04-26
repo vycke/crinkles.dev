@@ -11,11 +11,6 @@ const BlogPostTemplate = ({ meta, children }) => {
     <article className="post">
       <header className="post__header" role="contentinfo">
         <h1>{meta.title}</h1>
-        <span className="post__meta">
-          <a href={`https://twitter.com/intent/tweet?text=${twt}`}>
-            share on twitter
-          </a>
-        </span>
       </header>
 
       <section

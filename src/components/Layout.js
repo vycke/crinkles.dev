@@ -30,7 +30,7 @@ const PageWrapper = ({ children, meta }) => {
               alt="Kevtiq logo used by Kevin Pennekamp"
               className="logo__img"
             />
-            <span className="logo__text">kevtiq</span>
+            <span className="logo__text">kvtq</span>
           </Link>
           <button
             className={`toggle toggle__${theme}`}

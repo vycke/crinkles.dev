@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.kevtiq.co',
+    siteUrl: 'https://www.kevtiq.dev',
     author: 'Kevin Pennekamp',
     title: 'kevtiq | Kevin Pennekamp',
     image: '/img/kevtiq-logo.png',

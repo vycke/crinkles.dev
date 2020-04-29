@@ -13,8 +13,8 @@ const TagsTemplate = ({ data, pageContext }) => {
   return (
     <Layout
       meta={{
-        title: `Kevtiq.co | ${tag}`,
-        description: `All posts on Kevtiq.co with the tag: ${tag}`
+        title: `kevtiq.dev | ${tag}`,
+        description: `All posts on kevtiq.dev with the tag: ${tag}`
       }}>
       <section className="overview overview--list" role="feed">
         <h1 className="overview__title">{tag}</h1>

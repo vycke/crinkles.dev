@@ -40,7 +40,7 @@
     margin: 1.5rem -2rem !important;
   }
 
-  [href^='http']:not([href*='http://kevtiq.co']):after {
+  [href^='http']:not([href*='http://kevtiq.dev']):after {
     content: '';
   }
 }

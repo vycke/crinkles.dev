@@ -1,9 +1,9 @@
 {
-  "name": "kevtiq.co",
-  "description": "Kevtiq.co website",
+  "name": "kevtiq.dev",
+  "description": "kevtiq.dev website",
   "version": "1.0.0",
-  "author": "Kevin Pennekamp <hello@kevtiq.co> (https://kevtiq.co/)",
-  "repository": "https://github.com/kevtiq/kevtiq.co",
+  "author": "Kevin Pennekamp <hello@kevtiq.dev> (https://kevtiq.dev/)",
+  "repository": "https://github.com/kevtiq/kevtiq.dev",
   "dependencies": {
     "gatsby": "^2.19.23",
     "gatsby-cli": "^2.9.0",

@@ -32,7 +32,7 @@
   column-gap: 2rem;
 
   .card__image {
-    height: 20rem;
+    height: 22.5rem;
   }
 
   &.reverse {
@@ -98,6 +98,10 @@ a.card__title {
 @media (max-width: 62rem) {
   .card--h {
     font-size: 1.25rem;
+
+    .card__image {
+      height: 17.5rem;
+    }
   }
 }
 

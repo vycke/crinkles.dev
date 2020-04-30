@@ -35,6 +35,7 @@ const PageWrapper = ({ children, meta, className = '' }) => {
           <button
             className={`toggle toggle__${theme}`}
             type="button"
+            aria-label="theme switcher"
             onClick={updateTheme}>
             {theme === 'light' && <Moon />}
             {theme === 'dark' && <Sun />}

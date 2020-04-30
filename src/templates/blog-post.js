@@ -29,8 +29,7 @@ const BlogPost = ({ data, pageContext }) => {
   return (
     <Layout
       meta={{ ...post.frontmatter, slug: post.fields.slug }}
-      footer={true}
-      className="post">
+      footer={true}>
       <BlogPostTemplate meta={meta}>{post.html}</BlogPostTemplate>
       <PageSwitcher prev={prev} next={next} />
     </Layout>

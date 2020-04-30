@@ -20,7 +20,7 @@
   row-gap: 1rem;
 
   .card__image {
-    height: 10rem;
+    height: 12rem;
     grid-column: 1;
   }
 }
@@ -97,9 +97,15 @@ a.card__title {
 
 @media (max-width: 62rem) {
   .card--h {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 45rem) {
+  .card--h {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    row-gap: 2rem;
+    row-gap: 1rem;
 
     .card__image,
     .card__content,
@@ -111,20 +117,26 @@ a.card__title {
     &.reverse .card__content {
       grid-row: 2;
     }
-  }
-}
-
-@media (max-width: 45rem) {
-  .card--h {
-    row-gap: 1rem;
 
     .card__image {
-      height: 10rem;
+      height: 12rem;
     }
   }
+
+  // .card--h {
+  //   row-gap: 1rem;
+
+  //   .card__image {
+  //     height: 10rem;
+  //   }
+  // }
 }
 
 @media (max-width: 30rem) {
+  .card--h {
+    font-size: 1rem;
+  }
+
   a.card__title {
     font-size: 1.25em;
   }

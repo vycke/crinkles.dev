@@ -3,6 +3,7 @@
 **/
 header {
   display: flex;
+  position: fixed;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +52,17 @@ a.logo {
   fill: var(--header-icon-fill);
   stroke: var(--header-icon-stroke);
 }
+
+@media (max-width: 89rem) {
+  header {
+    position: relative;
+  }
+
+  .logo__text {
+    display: block;
+  }
+}
+
 @media (max-width: 45rem) {
   header {
     padding: 2rem 2rem 0rem;

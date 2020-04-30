@@ -6,7 +6,7 @@ draft: false
 date: 2019-07-26T00:00:00.000Z
 featuredImage: owl-selector.png
 description: >-
-  One off the most beautiful CSS selectors
+  One off the most beautiful CSS selectors is the Lobotomized Owl Selector of Heydon Pickering
 tags:
   - CSS
   - UI

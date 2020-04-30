@@ -20,10 +20,10 @@ body {
   --card-bg: none;
   --card-bg-hover: none;
 
-  --logo-size: 1.25rem;
+  --logo-size: 1.125rem;
 
   @media (max-width: 30rem) {
-    --logo-size: 1.125rem;
+    --logo-size: 1rem;
   }
 }
 
@@ -39,6 +39,7 @@ body.light {
 
   --text-default: var(--black);
   --text-secondary: var(--gray-300);
+  --text-tertiary: var(--gray-400);
 
   --blockquote-text: var(--gray-500);
 
@@ -58,6 +59,7 @@ body.dark {
 
   --text-default: var(--white);
   --text-secondary: var(--gray-200);
+  --text-tertiary: var(--gray-100);
 
   --blockquote-text: var(--gray-200);
 }

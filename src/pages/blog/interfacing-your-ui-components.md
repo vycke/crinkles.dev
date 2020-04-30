@@ -3,8 +3,9 @@ templateKey: blog-post
 title: Interfacing your UI components
 date: 2019-07-19T00:00:00.000Z
 draft: false
+featuredImage: architecture-component.png
 description: >-
-  Interfaces are everywhere, for users and developers
+  Interfaces are everywhere, for users and developers, so why not use them?
 tags:
   - UI
   - architecture

@@ -5,7 +5,7 @@ date: 2019-08-29T00:00:00.000Z
 draft: false
 featuredImage: motivation.png
 description: >-
-  Keep learning something new on each iteration
+  Keep learning something new on each iteration of your side project to keep yourself motivated
 tags:
   - writing
 ---

@@ -121,8 +121,6 @@ exports.createPages = ({ actions, graphql }) => {
       (p) => _.get(p, 'node.frontmatter.templateKey') === 'blog-post'
     );
 
-    console.log(posts.length, blogposts.length);
-
     createPostPage(createPage, posts);
     createIndexPages(createPage, blogposts);
     createTagPages(createPage, blogposts);

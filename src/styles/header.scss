@@ -6,9 +6,9 @@ header {
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  max-width: 53rem;
+  max-width: 75rem;
   width: 100%;
-  padding: 2rem 2rem 0rem;
+  padding: 2rem 3rem 0rem;
 }
 
 a.logo {
@@ -51,6 +51,11 @@ a.logo {
   height: 1.25rem;
   fill: var(--header-icon-fill);
   stroke: var(--header-icon-stroke);
+}
+@media (max-width: 45rem) {
+  header {
+    padding: 2rem 2rem 0rem;
+  }
 }
 
 @media (max-width: 30rem) {

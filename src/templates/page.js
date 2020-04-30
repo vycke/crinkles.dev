@@ -2,23 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PageTemplate from '../components/PageTemplate';
 import Layout from '../components/Layout';
-import PageSwitcher from '../components/PageSwitcher';
 
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data;
-  let next, prev;
-
-  if (pageContext.next)
-    next = {
-      link: pageContext.next.fields.slug,
-      title: pageContext.next.frontmatter.title
-    };
-
-  if (pageContext.prev)
-    prev = {
-      link: pageContext.prev.fields.slug,
-      title: pageContext.prev.frontmatter.title
-    };
 
   const meta = {
     ...post.frontmatter,

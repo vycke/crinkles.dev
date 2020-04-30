@@ -6,7 +6,7 @@ draft: false
 pinned: true
 featuredImage: architecture-component-detailed.png
 description: >-
-  Components are more than just our UI elements
+  Our little UI components do more for us than we give them credits for. Their internals are more complex than we know.
 tags:
   - UI
   - architecture

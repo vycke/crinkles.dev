@@ -1,34 +1,48 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import get from '../utils/get';
-import EntryCard from '../components/EntryCard';
+import Card from '../components/Card';
 import PageSwitcher from '../components/PageSwitcher';
 import { graphql } from 'gatsby';
-import PinnedPostsOverview from '../components/PinnedPosts';
+import { formatReadingTime } from '../utils/readingTime';
+import { NUM_HIGHLIGHT } from '../config';
 
 const PostOverviewTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
 
-  let title = 'Recently published';
-  if (pageContext.currentPage > 1)
-    title += ` (page: ${pageContext.currentPage})`;
+  const highlights = posts.slice(0, NUM_HIGHLIGHT);
 
   return (
-    <Layout>
-      <section className="overview overview--grid" role="feed">
-        <PinnedPostsOverview />
-      </section>
+    <Layout className="page page--wide">
+      {highlights.map((p, i) => (
+        <Card
+          key={i}
+          className={`highlight ${i % 2 !== 0 ? 'reverse' : ''}`}
+          title={p.node.frontmatter.title}
+          url={p.node.fields.slug}
+          subtitle={p.node.frontmatter.description}
+          image={p.node.frontmatter.featuredImage}
+          orientation="h"
+          meta={`${p.node.frontmatter.date} • ${formatReadingTime(
+            p.node.wordCount.words
+          )}`}
+        />
+      ))}
 
-      <h1 className="overview__title">{title}</h1>
       <section className="overview overview--grid" role="feed">
-        {posts.map((p, i) => {
+        {posts.slice(NUM_HIGHLIGHT).map((p, i) => {
           const post = p.node;
           return (
-            <EntryCard
+            <Card
               key={i}
-              post={post}
-              showTags={false}
-              showDescription={true}
+              title={post.frontmatter.title}
+              url={post.fields.slug}
+              subtitle={post.frontmatter.description}
+              image={post.frontmatter.featuredImage}
+              orientation="v"
+              meta={`${post.frontmatter.date} • ${formatReadingTime(
+                post.wordCount.words
+              )}`}
             />
           );
         })}
@@ -68,6 +82,7 @@ export const postOverviewPageQuery = graphql`
             title
             description
             tags
+            featuredImage
             date(formatString: "MMMM DD, YYYY")
           }
         }

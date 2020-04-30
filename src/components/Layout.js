@@ -16,7 +16,7 @@ import '../styles/styles.scss';
 import 'prism-theme-night-owl';
 import { AppContext } from './Context';
 
-const PageWrapper = ({ children, meta }) => {
+const PageWrapper = ({ children, meta, className = '' }) => {
   const { theme, updateTheme } = React.useContext(AppContext);
 
   return (
@@ -40,7 +40,7 @@ const PageWrapper = ({ children, meta }) => {
             {theme === 'dark' && <Sun />}
           </button>
         </header>
-        <main>{children}</main>
+        <main className={className}>{children}</main>
         <footer>
           <div className="socialmedia">
             <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">

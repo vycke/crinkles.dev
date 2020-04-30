@@ -13,11 +13,16 @@ const TagsTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout
+      className="page page--small"
       meta={{
         title: `kevtiq.dev | ${tag}`,
         description: `All posts on kevtiq.dev with the tag: ${tag}`
       }}>
-      <h1 className="overview__title">{tag}</h1>
+      <h1 className="page__title">{tag}</h1>
+      <TagList
+        tags={tags.filter((t) => t !== tag)}
+        className="tags tags--page"
+      />
       <section className="overview overview--list" role="feed">
         {posts.map((p, i) => {
           const post = p.node;
@@ -29,7 +34,7 @@ const TagsTemplate = ({ data, pageContext }) => {
               subtitle={post.frontmatter.description}
               image={post.frontmatter.featuredImage}
               tags={post.frontmatter.tags}
-              orientation="h"
+              orientation="v"
               meta={`${post.frontmatter.date} • ${formatReadingTime(
                 post.wordCount.words
               )}`}
@@ -38,11 +43,6 @@ const TagsTemplate = ({ data, pageContext }) => {
         })}
       </section>
       <PageSwitcher prev={prev} next={next} />
-
-      <TagList
-        tags={tags.filter((t) => t !== tag)}
-        className="tags tags--page"
-      />
     </Layout>
   );
 };

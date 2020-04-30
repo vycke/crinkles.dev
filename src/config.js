@@ -1,1 +1,1 @@
-export const NUM_HIGHLIGHT = 2;
+export const NUM_HIGHLIGHT = 1;

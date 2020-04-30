@@ -1,7 +1,7 @@
 .card {
   transition: all ease-in-out 200ms;
   min-width: 18rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: var(--text-secondary);
   position: relative;
   overflow: hidden;
@@ -92,6 +92,7 @@ a.card__title {
 .card__meta {
   font-family: var(--monospace);
   font-size: 0.75rem;
+  margin-top: 0.5rem;
   color: var(--text-tertiary);
 }
 

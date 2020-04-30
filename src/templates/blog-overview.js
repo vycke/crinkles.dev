@@ -14,6 +14,10 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout className="page page--wide">
+      <h1 className="overview__title">
+        A blog about front-end engineering and architecture, and everything else
+        that pops up in my mind.
+      </h1>
       {highlights.map((p, i) => (
         <Card
           key={i}
@@ -28,7 +32,6 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           )}`}
         />
       ))}
-
       <section className="overview overview--grid" role="feed">
         {posts.slice(NUM_HIGHLIGHT).map((p, i) => {
           const post = p.node;

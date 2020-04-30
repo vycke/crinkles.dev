@@ -12,10 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <link
-          rel="stylesheet"
-          href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css"
-        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes} className="dark">

@@ -35,6 +35,10 @@ const SEO = ({ description, title, tags, slug, featuredImage }) => {
       />
       <meta name="twitter:image" content={seo.image} />
       <link rel="stylesheet" href="https://use.typekit.net/jhi5xcf.css" />
+      <link
+        rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css"
+      />
     </Helmet>
   );
 };

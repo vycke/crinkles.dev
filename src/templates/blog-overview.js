@@ -15,8 +15,8 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   return (
     <Layout className="page page--wide">
       <h1 className="overview__title">
-        A blog about front-end engineering and architecture, and everything else
-        that pops up in my mind.
+        A blog about front-end engineering and architecture, but also everything
+        that pops up in my mind
       </h1>
       {highlights.map((p, i) => (
         <Card

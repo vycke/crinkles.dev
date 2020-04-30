@@ -1,7 +1,7 @@
 /**
 * HEADER *
 **/
-header {
+header[role='banner'] {
   display: flex;
   position: fixed;
   margin: 0 auto;
@@ -54,7 +54,7 @@ a.logo {
 }
 
 @media (max-width: 89rem) {
-  header {
+  header[role='banner'] {
     position: relative;
   }
 
@@ -64,13 +64,13 @@ a.logo {
 }
 
 @media (max-width: 45rem) {
-  header {
+  header[role='banner'] {
     padding: 2rem 2rem 0rem;
   }
 }
 
 @media (max-width: 30rem) {
-  header {
+  header[role='banner'] {
     padding: 1rem 1rem 0rem;
   }
 

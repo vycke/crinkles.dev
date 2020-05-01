@@ -15,8 +15,13 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   return (
     <Layout className="page page--wide">
       <h1 className="overview__title">
-        A blog about front-end engineering and architecture, but also everything
-        that pops up in my mind
+        <span role="img" aria-label="waving hand">
+          👋
+        </span>{' '}
+        <span>
+          Hello. I', Kevin. I write about front-end architecture, and everything
+          that pops up in my mind
+        </span>
       </h1>
       {highlights.map((p, i) => (
         <Card

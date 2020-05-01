@@ -3,7 +3,7 @@ templateKey: blog-post
 title: How do you find motivation to get your side projects going?
 date: 2019-08-29T00:00:00.000Z
 draft: false
-featuredImage: motivation.png
+featuredImage: headers/header-6.png
 description: >-
   Keep learning something new on each iteration of your side project to keep yourself motivated
 tags:

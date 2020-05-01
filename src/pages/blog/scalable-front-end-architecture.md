@@ -4,7 +4,7 @@ title: How to create a scalable and maintainable front-end architecture
 pinned: true
 draft: false
 date: 2019-11-11T00:00:00.000Z
-featuredImage: architecture-detailed.png
+featuredImage: headers/header-2.png
 description: >-
   A modern architecture for digital enterprises build on existing ideas, but let you scale quickly
 tags:

@@ -4,7 +4,7 @@ title: The UX design process for engineers
 pinned: true
 draft: false
 date: 2019-07-05T00:00:00.000Z
-featuredImage: design-process.png
+featuredImage: headers/header-3.png
 description: >-
   How can we work together with UX designers? Their process has more in common with ours than we know
 tags:

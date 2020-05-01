@@ -4,7 +4,7 @@ title: Demystifying the component architecture
 date: 2020-01-12T00:00:00.000Z
 draft: false
 pinned: true
-featuredImage: architecture-component-detailed.png
+featuredImage: headers/header-1.png
 description: >-
   Our little UI components do more for us than we give them credits for. Their internals are more complex than we know.
 tags:

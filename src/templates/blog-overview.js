@@ -19,7 +19,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           👋
         </span>{' '}
         <span>
-          Hello. I', Kevin. I write about front-end architecture, and everything
+          Hey, I'm Kevin. I write about front-end architecture, and everything
           that pops up in my mind
         </span>
       </h1>

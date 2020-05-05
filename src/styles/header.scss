@@ -21,7 +21,7 @@ a.logo {
 
 .logo__img {
   width: var(--logo-size);
-  margin-right: 1rem;
+  margin-right: calc(var(--logo-size) * 0.5);
   margin-bottom: 0.125rem;
 }
 

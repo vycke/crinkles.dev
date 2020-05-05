@@ -19,8 +19,8 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           👋
         </span>{' '}
         <span>
-          Hey, I'm Kevin. I write about front-end architecture, and everything
-          that pops up in my mind
+          Hey, I'm Kevin. I write about anything that pops up in my mind about
+          front-end engineering
         </span>
       </h1>
       {highlights.map((p, i) => (

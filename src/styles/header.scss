@@ -20,13 +20,13 @@ a.logo {
 }
 
 .logo__img {
-  width: var(--logo-size);
+  height: var(--logo-size);
   margin-right: calc(var(--logo-size) * 0.5);
   margin-bottom: 0.125rem;
 }
 
 .logo__text {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 600;
   color: var(--text-default);
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import PageSwitcher from '../components/PageSwitcher';
+import Pagination from '../components/Pagination';
 import { Link } from 'gatsby';
 import camelCase from '../utils/camelCase';
 import { formatReadingTime } from '../utils/readingTime';
@@ -73,7 +73,7 @@ const BlogPost = ({ data, pageContext }) => {
         </footer>
       </main>
 
-      <PageSwitcher prev={prev} next={next} />
+      <Pagination prev={prev} next={next} />
     </Layout>
   );
 };

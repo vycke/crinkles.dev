@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import get from '../utils/get';
 import Card from '../components/Card';
-import PageSwitcher from '../components/PageSwitcher';
 import { graphql } from 'gatsby';
 import { formatReadingTime } from '../utils/readingTime';
 import { NUM_HIGHLIGHT } from '../config';
@@ -56,7 +55,6 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
             );
           })}
         </section>
-        <PageSwitcher prev={pageContext.prev} next={pageContext.next} />
       </main>
     </Layout>
   );

@@ -1,10 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import BlogPostTemplate from '../components/BlogPostTemplate';
 import Layout from '../components/Layout';
 import PageSwitcher from '../components/PageSwitcher';
+import { Link } from 'gatsby';
+import camelCase from '../utils/camelCase';
+import { formatReadingTime } from '../utils/readingTime';
+import logoDark from '../img/logo-dark.svg';
+import logoLight from '../img/logo-light.svg';
+import { AppContext } from '../components/Context';
 
 const BlogPost = ({ data, pageContext }) => {
+  const { theme } = React.useContext(AppContext);
   const { markdownRemark: post } = data;
   let next, prev;
 
@@ -26,11 +32,47 @@ const BlogPost = ({ data, pageContext }) => {
     url: `https://www.kevtiq.dev${data.markdownRemark.fields.slug}`
   };
 
+  const twt = `${meta.title} by @kevtiq ${meta.url}`;
+
   return (
-    <Layout
-      meta={{ ...post.frontmatter, slug: post.fields.slug }}
-      footer={true}>
-      <BlogPostTemplate meta={meta}>{post.html}</BlogPostTemplate>
+    <Layout meta={{ ...post.frontmatter, slug: post.fields.slug }}>
+      <main className="content post stack-medium">
+        <header className="grid sm post__header" role="contentinfo">
+          <h1 className="cell--middle">{meta.title}</h1>
+          <span className="cell--middle post__meta">
+            <time dateTime={meta.date}>{meta.date}</time>
+            {` • ${formatReadingTime(meta.words)} • `}
+            <a href={`https://twitter.com/intent/tweet?text=${twt}`}>
+              share on twitter
+            </a>
+          </span>
+          {meta.tags && meta.tags.length > 0 && (
+            <ul className="cell--middle tags">
+              {(meta.tags || []).slice(0, 100).map((t, i) => (
+                <li key={i}>
+                  <Link key={i} to={`/tags/${camelCase(t)}`}>
+                    {t.toLowerCase()}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </header>
+
+        <article
+          className="grid sm post__body stack-small"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+
+        <footer className="grid sm post__footer">
+          <img
+            src={theme === 'dark' ? logoDark : logoLight}
+            alt="Kevtiq logo used by Kevin Pennekamp"
+            className="cell--middle logo__img"
+          />
+        </footer>
+      </main>
+
       <PageSwitcher prev={prev} next={next} />
     </Layout>
   );

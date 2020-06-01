@@ -1,11 +1,11 @@
 @import 'reset';
 // @import 'dank';
-@import 'vars';
-@import 'theme';
-@import 'base';
-@import 'header';
-@import 'footer';
+@import 'settings';
+@import 'generic';
+@import 'layout';
 @import 'page';
-@import 'card';
 @import 'post';
-@import 'overview';
+@import 'misc';
+// Redo
+@import 'components/card';
+@import 'components/switcher';

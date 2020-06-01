@@ -1,5 +1,4 @@
 import React from 'react';
-import TagList from './TagList';
 
 const Card = ({
   post,
@@ -30,7 +29,6 @@ const Card = ({
         </a>
         {subtitle && <span className="card__subtitle">{subtitle}</span>}
         {meta && <span className="card__meta">{meta}</span>}
-        {tags && <TagList className="card__tags" tags={tags} max={3} />}
       </div>
     </section>
   );

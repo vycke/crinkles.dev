@@ -11,7 +11,7 @@ export default () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="icon">
+    className="footer__icon">
     <title>Dribbble logo</title>
     <path
       fill="currentColor"

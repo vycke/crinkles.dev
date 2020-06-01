@@ -59,9 +59,27 @@ function createTagPages(createPage, posts) {
   });
 }
 
+function createWebsitePage(createPage, posts) {
+  posts.forEach(({ node }, i) => {
+    const id = node.id;
+
+    createPage({
+      path: node.fields.slug,
+      tags: node.frontmatter.tags,
+      component: path.resolve(
+        `src/templates/${String(node.frontmatter.templateKey)}.js`
+      ),
+      context: {
+        id
+      }
+    });
+  });
+}
+
 function createPostPage(createPage, posts) {
   posts.forEach(({ node }, i) => {
     const id = node.id;
+
     const prev = i === 0 ? null : posts[i - 1].node;
     const next = i === posts.length - 1 ? null : posts[i + 1].node;
 
@@ -121,7 +139,12 @@ exports.createPages = ({ actions, graphql }) => {
       (p) => _.get(p, 'node.frontmatter.templateKey') === 'blog-post'
     );
 
-    createPostPage(createPage, posts);
+    const pages = posts.filter(
+      (p) => _.get(p, 'node.frontmatter.templateKey') === 'page'
+    );
+
+    createWebsitePage(createPage, pages);
+    createPostPage(createPage, blogposts);
     createIndexPages(createPage, blogposts);
     createTagPages(createPage, blogposts);
   });

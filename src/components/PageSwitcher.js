@@ -7,12 +7,12 @@ const PageSwitcher = ({ next, prev }) => {
     <section className="switcher">
       {!next && prev && <div />}
       {next && (
-        <Link to={next.link} className="next">
+        <Link to={next.link} className="switcher__link switcher--next">
           ←<span>{next.title}</span>
         </Link>
       )}
       {prev && (
-        <Link to={prev.link} className="previous">
+        <Link to={prev.link} className="switcher__link switcher--previous">
           <span>{prev.title}</span>→
         </Link>
       )}

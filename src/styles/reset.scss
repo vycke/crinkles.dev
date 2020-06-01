@@ -1,89 +1,54 @@
-html,
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
 body,
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
-a,
 p,
-span,
-em,
-small,
-strong,
-sub,
-sup,
-mark,
-del,
-ins,
-strike,
-abbr,
-dfn,
-blockquote,
-q,
-cite,
-code,
-pre,
-ol,
-ul,
+ul[class],
+ol[class],
 li,
-dl,
-dt,
-dd,
-div,
-section,
-article,
-main,
-aside,
-nav,
-header,
-hgroup,
-footer,
-img,
 figure,
 figcaption,
-address,
-time,
-audio,
-video,
-canvas,
-iframe,
-details,
-summary,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-button {
+blockquote,
+dl,
+dd {
   margin: 0;
-  padding: 0;
-  border: 0;
 }
 
-html {
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.75;
   font-size: 16px;
   font-size: 100%;
-  -webkit-text-size-adjust: 100%;
+  font-display: swap;
 }
 
-body {
-  font-size: 1rem;
-  line-height: 1.5;
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
 }
 
-* {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 a,
@@ -91,49 +56,13 @@ a:visited {
   color: inherit;
 }
 
-article,
-aside,
-footer,
-header,
-nav,
-section,
-main {
+/* Make images easier to work with */
+img {
+  max-width: 100%;
   display: block;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-img,
-video {
-  max-width: 100%;
-}
-
-img {
-  border-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
+/* buttons */
 button {
   margin: 0;
   padding: 0;
@@ -141,14 +70,20 @@ button {
   border: none;
 }
 
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: '';
-  content: none;
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1.25rem;
 }
 
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Misc. */
 [hidden] {
   display: none !important;
 }
@@ -159,4 +94,14 @@ q:before {
 
 :focus:not(:focus-visible) {
   outline: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

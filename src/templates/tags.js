@@ -1,48 +1,56 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import get from '../utils/get';
-import PageSwitcher from '../components/PageSwitcher';
 import { graphql } from 'gatsby';
-import TagList from '../components/TagList';
 import Card from '../components/Card';
 import { formatReadingTime } from '../utils/readingTime';
+import { Link } from 'gatsby';
+import camelCase from '../utils/camelCase';
 
 const TagsTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
-  const { tag, tags, prev, next } = pageContext;
+  const { tag, tags } = pageContext;
 
   return (
     <Layout
-      className="page page--small"
       meta={{
         title: `kevtiq.dev | ${tag}`,
         description: `All posts on kevtiq.dev with the tag: ${tag}`
       }}>
-      <h1 className="page__title">{tag}</h1>
-      <TagList
-        tags={tags.filter((t) => t !== tag)}
-        className="tags tags--page"
-      />
-      <section className="overview overview--list" role="feed">
-        {posts.map((p, i) => {
-          const post = p.node;
-          return (
-            <Card
-              key={i}
-              title={post.frontmatter.title}
-              url={post.fields.slug}
-              subtitle={post.frontmatter.description}
-              image={post.frontmatter.featuredImage}
-              tags={post.frontmatter.tags}
-              orientation="v"
-              meta={`${post.frontmatter.date} • ${formatReadingTime(
-                post.wordCount.words
-              )}`}
-            />
-          );
-        })}
-      </section>
-      <PageSwitcher prev={prev} next={next} />
+      <main className="grid content sm">
+        <div className="stack-medium cell--middle">
+          <h1 className="title">{tag}</h1>
+
+          <ul className=" tags">
+            {(tags.filter((t) => t !== tag) || []).slice(0, 100).map((t, i) => (
+              <li key={i}>
+                <Link key={i} to={`/tags/${camelCase(t)}`}>
+                  {t.toLowerCase()}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <section className="grow" role="feed">
+            {posts.map((p, i) => {
+              const post = p.node;
+              return (
+                <Card
+                  key={i}
+                  title={post.frontmatter.title}
+                  url={post.fields.slug}
+                  subtitle={post.frontmatter.description}
+                  image={post.frontmatter.featuredImage}
+                  tags={post.frontmatter.tags}
+                  orientation="v"
+                  meta={`${post.frontmatter.date} • ${formatReadingTime(
+                    post.wordCount.words
+                  )}`}
+                />
+              );
+            })}
+          </section>
+        </div>
+      </main>
     </Layout>
   );
 };

@@ -1,31 +1,53 @@
-.post {
-  max-width: 48.5rem;
-  padding: 2rem;
-  margin: 0 auto;
+p .gatsby-resp-image-wrapper,
+pre[class*='language-'] {
+  margin-right: calc(-1 * var(--spacing)) !important;
+  margin-left: calc(-1 * var(--spacing)) !important;
+}
+
+pre[class*='language-'] {
+  border-radius: 0.5rem;
+  padding: var(--spacing);
+}
+
+.post__header {
+  span {
+    font-family: var(--monospace);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    padding-bottom: 0.25rem;
+  }
+}
+
+.post__footer {
+  img {
+    height: calc(var(--logo-size) + 2rem);
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    background: var(--bg-default);
+  }
+
+  &::after {
+    content: '';
+    height: 2px;
+    grid-column: 2;
+    display: block;
+    margin-top: calc(-1 * (var(--logo-size) / 2) - 1rem - 1px);
+    border: 1px solid var(--text-default);
+  }
 }
 
 .post__body {
-  p,
-  ul,
-  ol,
-  li {
-    font-size: 1.125rem;
-  }
-
-  blockquote p {
-    font-size: 1.25rem;
-  }
-
-  p + p {
-    margin-top: 1.25rem;
-  }
+  width: 100%;
+  font-size: 1.125rem;
 
   li + li {
     margin-top: 0.25rem;
   }
 
-  > * + * {
-    margin-top: 1.5rem;
+  * {
+    grid-column: 2;
   }
 
   ul {
@@ -35,62 +57,41 @@
   ol {
     list-style: decimal outside;
   }
-
-  p .gatsby-resp-image-wrapper {
-    margin: 1.5rem -2rem !important;
-  }
-
-  [href^='http']:not([href*='http://kevtiq.dev']):after {
-    content: '';
-  }
-}
-
-.post__header {
-  padding: 0rem 0rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  h1 {
-    color: var(--text-default);
-    padding-bottom: 0rem;
-  }
-
-  span {
-    font-family: var(--monospace);
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    padding-bottom: 0.25rem;
-  }
 }
 
 .post__meta a {
   white-space: nowrap;
 }
 
+.anchor {
+  &:before {
+    content: '#';
+    width: 1.5rem;
+    display: inline-block;
+    color: var(--text-link);
+    margin-left: -1.5rem;
+  }
+}
+
+@media (max-width: 52.5rem) {
+  pre[class*='language-'] {
+    border-radius: 0rem;
+  }
+}
+
 @media (max-width: 30rem) {
-  .post {
-    padding: 0rem 1rem 2rem;
-  }
-
   .post__header {
-    padding-top: 2rem;
-    margin: 0px;
+    line-height: 1.4;
   }
 
-  .post__footer {
-    grid-template-columns: 1fr;
-    margin-top: 1rem;
+  .anchor:before {
+    margin-left: 0rem;
   }
 
   .post__body {
     ul,
     ol {
-      margin-left: 1rem;
+      padding-left: 1.5rem;
     }
-  }
-
-  .post__body p .gatsby-resp-image-wrapper {
-    margin: 1.5rem -1rem !important;
   }
 }

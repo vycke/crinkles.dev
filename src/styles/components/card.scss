@@ -1,16 +1,11 @@
 .card {
   transition: all ease-in-out 200ms;
-  min-width: 18rem;
+  min-width: var(--card);
   line-height: 1.5;
   color: var(--text-secondary);
   position: relative;
   overflow: hidden;
   display: grid;
-
-  &:focus-within,
-  &:hover {
-    background: var(--card-bg-hover);
-  }
 }
 
 .card--v {
@@ -127,14 +122,6 @@ a.card__title {
       height: 12rem;
     }
   }
-
-  // .card--h {
-  //   row-gap: 1rem;
-
-  //   .card__image {
-  //     height: 10rem;
-  //   }
-  // }
 }
 
 @media (max-width: 30rem) {

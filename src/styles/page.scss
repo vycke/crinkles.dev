@@ -12,13 +12,13 @@
 * Main site header *
 **/
 .header {
+  background: var(--footer-bg);
+  padding: var(--spacing);
   display: flex;
-  position: fixed;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: calc(1.5 * var(--spacing)) calc(1.5 * var(--spacing)) 0rem;
 }
 
 .header__logo {
@@ -43,7 +43,7 @@
   > .icon {
     height: 1.25rem;
     fill: var(--icon-fill);
-    stroke: var(--icon-stroke);
+    stroke: var(--white);
   }
 }
 
@@ -52,13 +52,12 @@
 **/
 .footer {
   background: var(--footer-bg);
-  padding: calc(var(--spacing) * 1.5);
+  padding: var(--spacing);
   display: flex;
   flex-direction: row;
   align-items: center;
   line-height: 1;
-  font-size: 0.75rem;
-  margin-top: calc(2 * var(--spacing));
+  font-size: 0.8 5rem;
   color: var(--white);
 
   span {
@@ -84,7 +83,7 @@
 .content {
   flex-grow: 1;
   width: 100%;
-  margin-top: var(--spacing);
+  padding: var(--spacing) 0;
 }
 
 .title,
@@ -108,16 +107,6 @@
   font-size: 4rem;
 }
 
-/**
-* Media query *
-**/
-@media (max-width: 82rem) {
-  .header {
-    position: relative;
-    max-width: 60rem;
-  }
-}
-
 @media (max-width: 45rem) {
   .title,
   .subtitle {
@@ -126,10 +115,6 @@
 }
 
 @media (max-width: 30rem) {
-  .content {
-    margin-top: calc(2 * var(--spacing));
-  }
-
   .title,
   .subtitle {
     line-height: 1.4;

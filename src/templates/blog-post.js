@@ -63,14 +63,6 @@ const BlogPost = ({ data, pageContext }) => {
           className="grid sm post__body stack-small"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-
-        <footer className="grid sm post__footer">
-          <img
-            src={theme === 'dark' ? logoDark : logoLight}
-            alt="Kevtiq logo used by Kevin Pennekamp"
-            className="cell--middle logo__img"
-          />
-        </footer>
       </main>
 
       <Pagination prev={prev} next={next} />

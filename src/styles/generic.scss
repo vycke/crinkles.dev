@@ -56,7 +56,8 @@ a:active {
   text-decoration-color: var(--text-link);
 }
 
-a:hover {
+a:hover,
+a > *:hover {
   color: var(--text-link);
 }
 

@@ -35,24 +35,23 @@
   grid-template-columns: 1fr 1fr;
   padding: var(--spacing);
   column-gap: var(--spacing);
-  font-size: 1.75rem;
 
   a {
     text-decoration: none;
-
     > h2 {
-      transition: all ease-in-out 100ms;
-      text-decoration: underline;
-      text-decoration-color: var(--text-link);
       display: flex;
       flex-direction: row;
       align-items: center;
     }
   }
 
-  .next {
-    text-align: left;
+  .next,
+  .previous {
+    display: flex;
+  }
 
+  .next {
+    justify-content: flex-start;
     &::before {
       content: '←';
       margin-right: var(--spacing);
@@ -60,7 +59,7 @@
   }
 
   .previous {
-    text-align: right;
+    justify-content: flex-end;
 
     &::after {
       content: '→';

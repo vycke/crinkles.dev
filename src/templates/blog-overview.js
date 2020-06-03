@@ -28,10 +28,11 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
             key={i}
             className={`cell--middle ${i % 2 !== 0 ? 'reverse' : ''}`}
             title={p.node.frontmatter.title}
+            variant="large"
             url={p.node.fields.slug}
             subtitle={p.node.frontmatter.description}
             image={p.node.frontmatter.featuredImage}
-            orientation="h"
+            orientation="horizontal"
             meta={`${p.node.frontmatter.date} • ${formatReadingTime(
               p.node.wordCount.words
             )}`}
@@ -47,7 +48,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
                 url={post.fields.slug}
                 subtitle={post.frontmatter.description}
                 image={post.frontmatter.featuredImage}
-                orientation="v"
+                orientation="vertical"
                 meta={`${post.frontmatter.date} • ${formatReadingTime(
                   post.wordCount.words
                 )}`}

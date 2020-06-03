@@ -3,6 +3,7 @@ import React from 'react';
 const Card = ({
   post,
   title = '',
+  variant,
   subtitle,
   meta,
   tags,
@@ -10,12 +11,13 @@ const Card = ({
   url,
   reverse,
   className = '',
-  orientation = 'v'
+  orientation = 'vertical'
 }) => {
+  let classes = `card card--${orientation}`;
+  if (variant) classes += ` card--${variant}`;
+
   return (
-    <section
-      className={`card card--${orientation} ${className}`}
-      role="article">
+    <section className={`${classes} ${className}`} role="article">
       {image && (
         <img
           className="card__image"
@@ -25,7 +27,7 @@ const Card = ({
       )}
       <div className="card__content">
         <a href={url} className="card__title">
-          {title}
+          <h2>{title}</h2>
         </a>
         {subtitle && <span className="card__subtitle">{subtitle}</span>}
         {meta && <span className="card__meta">{meta}</span>}

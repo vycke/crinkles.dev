@@ -41,7 +41,7 @@ const TagsTemplate = ({ data, pageContext }) => {
                   subtitle={post.frontmatter.description}
                   image={post.frontmatter.featuredImage}
                   tags={post.frontmatter.tags}
-                  orientation="v"
+                  orientation="vertical"
                   meta={`${post.frontmatter.date} • ${formatReadingTime(
                     post.wordCount.words
                   )}`}

@@ -1,23 +1,22 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PageTemplate from '../components/PageTemplate';
 import Layout from '../components/Layout';
 
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data;
 
-  const meta = {
-    ...post.frontmatter,
-    words: post.wordCount.words,
-    url: `https://www.kevtiq.dev${data.markdownRemark.fields.slug}`
-  };
+  // const meta = {
+  //   ...post.frontmatter,
+  //   words: post.wordCount.words,
+  //   url: `https://www.kevtiq.dev${data.markdownRemark.fields.slug}`
+  // };
 
   return (
-    <Layout
-      meta={{ ...post.frontmatter, slug: post.fields.slug }}
-      footer={true}
-      className="post">
-      <PageTemplate meta={meta}>{post.html}</PageTemplate>
+    <Layout meta={{ ...post.frontmatter, slug: post.fields.slug }}>
+      <main
+        className="content"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </Layout>
   );
 };

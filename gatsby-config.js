@@ -77,7 +77,7 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               icon: '',
-              className: `header-anchor`
+              className: `anchor`
             }
           },
           {
@@ -110,12 +110,12 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-netlify-cms',
+    //   options: {
+    //     modulePath: `${__dirname}/src/cms/cms.js`
+    //   }
+    // },
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {

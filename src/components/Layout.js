@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
-import SEO from './SEO';
 import logoDark from '../img/logo-dark.svg';
-import logoLight from '../img/logo-light.svg';
 
 import Dribbble from '../icons/Dribbble';
 import Dev from '../icons/Dev';
@@ -15,25 +12,57 @@ import Twitter from '../icons/Twitter';
 import '../styles/styles.scss';
 import 'prism-theme-night-owl';
 import { AppContext } from './Context';
+import useSiteMeta from '../hooks/useSiteMeta';
+import { Helmet } from 'react-helmet';
 
-const PageWrapper = ({ children, meta, className = '' }) => {
+const PageWrapper = ({ children, meta = {} }) => {
+  const sitemeta = useSiteMeta();
   const { theme, updateTheme } = React.useContext(AppContext);
+
+  const seo = {
+    title: meta.title || sitemeta.title,
+    description: meta.description || sitemeta.description,
+    keywords: (meta.tags || sitemeta.keywords).join(', '),
+    twitter: sitemeta.twitterName,
+    image: `${sitemeta.siteUrl}${
+      meta.featuredImage ? `/img/${meta.featuredImage}` : sitemeta.image
+    }`,
+    url: `${sitemeta.siteUrl}${meta.slug ? meta.slug : ''}`
+  };
 
   return (
     <React.Fragment>
-      <SEO {...meta} />
-      <div className="container">
-        <header role="banner">
-          <Link to="/" className="logo">
-            <img
-              src={theme === 'dark' ? logoDark : logoLight}
-              alt="Kevtiq logo used by Kevin Pennekamp"
-              className="logo__img"
-            />
-            <span className="logo__text">kvtq</span>
+      <Helmet title={seo.title}>
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keyword} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:url" content={seo.url} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:image" content={seo.image} />
+        {meta.slug && <meta property="og:type" content="article" />}
+        <meta name="twitter:site" content={seo.twitter} />
+        <meta name="twitter:creator" content={seo.twitter} />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+        <meta
+          name="twitter:card"
+          content={meta.featuredImage ? 'summary_large_image' : 'summary'}
+        />
+        <meta name="twitter:image" content={seo.image} />
+        <link rel="stylesheet" href="https://use.typekit.net/jhi5xcf.css" />
+        <link
+          rel="stylesheet"
+          href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css"
+        />
+      </Helmet>
+
+      <div className="site">
+        <header role="banner" className="header">
+          <Link to="/" className="header__logo">
+            <img src={logoDark} alt="Kevtiq logo used by Kevin Pennekamp" />
           </Link>
           <button
-            className={`toggle toggle__${theme}`}
+            className="header__toggle"
             type="button"
             aria-label="theme switcher"
             onClick={updateTheme}>
@@ -41,28 +70,21 @@ const PageWrapper = ({ children, meta, className = '' }) => {
             {theme === 'dark' && <Sun />}
           </button>
         </header>
-        <main className={className}>{children}</main>
-        <footer>
-          <div className="socialmedia">
-            <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
-              <Twitter />
-            </a>
-            <a href="https://github.com/kevtiq" alt="Link to my Github page">
-              <Github />
-            </a>
-            <a
-              href="https://dribbble.com/kevtiq"
-              alt="Link to my Dribbble page">
-              <Dribbble />
-            </a>
-            <a href="https://dev.to/kevtiq" alt="Kevin Pennekamp's DEV Profile">
-              <Dev />
-            </a>
-          </div>
-
-          <span className="copyright">
-            © 2019-present Kevin Pennekamp. All Rights Reserved.
-          </span>
+        {children}
+        <footer className="footer">
+          <span>© 2019-present Kevin Pennekamp. All Rights Reserved.</span>
+          <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
+            <Twitter />
+          </a>
+          <a href="https://github.com/kevtiq" alt="Link to my Github page">
+            <Github />
+          </a>
+          <a href="https://dribbble.com/kevtiq" alt="Link to my Dribbble page">
+            <Dribbble />
+          </a>
+          <a href="https://dev.to/kevtiq" alt="Kevin Pennekamp's DEV Profile">
+            <Dev />
+          </a>
         </footer>
       </div>
     </React.Fragment>

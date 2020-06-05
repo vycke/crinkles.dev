@@ -1,0 +1,67 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  --gray-100: #f2f3f5;
+  --gray-200: #cccccc;
+  --gray-300: #898989;
+  --gray-400: #404040;
+  --gray-500: #232323;
+  --gray-600: #131415;
+
+  --primary: #755cf2;
+
+  --sans-serif: proxima-nova, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
+
+  --size-h1: 2.25rem;
+  --size-h2: 1.625rem;
+  --size-h3: 1.25rem;
+}
+
+body {
+  --text-default: var(--black);
+  --bg-default: var(--white);
+  --main-color: var(--primary);
+  --text-link: var(--main-color);
+
+  --icon-fill: var(--main-color);
+  --icon-stroke: var(--text-default);
+  --footer-bg: var(--gray-600);
+
+  --code-bg: var(--gray-500);
+  --code-text: var(--white);
+  --code-highlight-bg: var(--gray-400);
+
+  --logo-size: 1.5rem;
+  --spacing: 2rem;
+
+  --card: 18rem;
+
+  @media (max-width: 45rem) {
+    --size-h1: 1.75rem;
+    --size-h2: 1.375rem;
+  }
+
+  @media (max-width: 30rem) {
+    --logo-size: 1.25rem;
+    --spacing: 1rem;
+  }
+}
+
+body.light {
+  --text-default: var(--gray-600);
+  --bg-default: var(--white);
+
+  --text-secondary: var(--gray-400);
+  --text-tertiary: var(--gray-300);
+}
+
+body.dark {
+  --text-default: var(--white);
+  --bg-default: var(--gray-600);
+
+  --text-secondary: var(--gray-100);
+  --text-tertiary: var(--gray-200);
+}

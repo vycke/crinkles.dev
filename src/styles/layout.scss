@@ -1,0 +1,53 @@
+:root {
+  --stack-spacing: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    minmax(var(--spacing), 1fr)
+    minmax(auto, var(--site-width))
+    minmax(var(--spacing), 1fr);
+}
+
+.cell--left {
+  grid-column: 1;
+}
+
+.cell--middle {
+  grid-column: 2;
+}
+
+.cell--right {
+  grid-column: 3;
+}
+
+.tiles {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-column-gap: var(--spacing);
+  grid-row-gap: calc(2 * var(--spacing));
+  grid-template-columns: repeat(auto-fill, minmax(var(--card), 1fr));
+}
+
+[class^='stack'] > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack-small > * + * {
+  margin-top: var(--stack-spacing);
+}
+
+.stack-medium > * + * {
+  margin-top: var(--spacing);
+}
+
+.stack-large > * + * {
+  margin-top: calc(2 * var(--spacing));
+}
+
+.grow {
+  flex-grow: 1;
+}

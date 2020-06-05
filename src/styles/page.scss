@@ -1,161 +1,122 @@
-.page {
-  margin: 0 auto;
-  padding: 2rem 3rem;
-}
-
-.page--wide {
-  max-width: 75rem;
-}
-
-.page--small {
-  max-width: 45rem;
-}
-
-.highlight {
-  margin-bottom: 6rem;
-  font-size: 1.5rem;
-}
-
-.page--title {
-  text-align: left;
-}
-
-.switcher {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0rem 2rem 2rem;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80rem;
-
-  .previous,
-  .next {
-    display: flex;
-    flex-direction: row;
-    text-decoration: underline;
-    align-items: center;
-    max-width: 18rem;
-    background: none;
-    color: var(--text-link);
-
-    > span {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 100%;
-    }
-  }
-
-  .next {
-    justify-self: flex-start;
-    > span {
-      margin-left: 0.25rem;
-    }
-  }
-
-  .previous {
-    justify-self: flex-end;
-    > span {
-      margin-right: 0.25rem;
-    }
-  }
-}
-
-.divider {
-  margin: 3rem 0rem;
-
-  img {
-    height: calc(var(--logo-size) + 2rem);
-    padding: 1rem;
-    margin: 0 auto;
-    position: relative;
-    display: block;
-    background: var(--bg-default);
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    margin-top: calc(-1 * (var(--logo-size) / 2) - 1rem - 1px);
-    border: 1px solid var(--text-default);
-  }
-}
-
-.tags {
+/**
+* Main site *
+**/
+.site {
   display: flex;
-  font-size: 0.75rem;
-  font-family: var(--monospace);
-  flex-wrap: wrap;
-  position: relative;
+  min-height: 100vh;
+  flex-direction: column;
+  max-width: 100%;
+}
 
-  a:link,
-  a:visited,
-  a:active {
-    text-decoration: none;
-    color: var(--tag-color);
-    background: var(--tag-bg);
-    border-radius: 0.25rem;
-    padding: 0 0.25rem;
+/**
+* Main site header *
+**/
+.header {
+  background: var(--footer-bg);
+  padding: var(--spacing);
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-    &:before {
-      content: '#';
-    }
-  }
+.header__logo {
+  margin-right: calc(var(--logo-size) * 0.5);
 
-  > li {
-    padding: 0rem 0rem;
-  }
-
-  > * + * {
-    margin-left: 1rem;
+  > img {
+    height: var(--logo-size);
+    margin-bottom: 0.125rem;
+    cursor: pointer;
   }
 }
 
-.tags--page {
-  margin-bottom: 2rem;
-  justify-content: flex-start;
+.header__toggle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: inherit;
+  transition: all ease-in-out 100ms;
+
+  > .icon {
+    height: 1.25rem;
+    fill: var(--icon-fill);
+    stroke: var(--white);
+  }
+}
+
+/**
+* Main site footer *
+**/
+.footer {
+  background: var(--footer-bg);
+  padding: var(--spacing);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 1;
+  font-size: 0.8 5rem;
+  color: var(--white);
+
+  span {
+    flex-grow: 1;
+  }
+}
+
+.footer__icon {
+  stroke: var(--white);
+  color: var(--white);
+  height: 1.25rem;
+  margin-left: 0.75rem;
+  transition: all ease-in-out 300ms;
+
+  &:hover,
+  &:focus,
+  &:active {
+    stroke: var(--main-color);
+    color: var(--main-color);
+  }
+}
+
+.content {
+  flex-grow: 1;
+  width: 100%;
+  padding: var(--spacing) 0;
+}
+
+.title,
+.subtitle {
+  text-align: left;
+  justify-self: center;
+  width: 75%;
+  display: block;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.title--center,
+.subtitle--center {
+  text-align: center;
+}
+
+.subtitle--emoji {
+  font-size: 4rem;
 }
 
 @media (max-width: 45rem) {
-  .page {
-    padding: 2rem;
-  }
-
-  .highlight {
-    margin-bottom: 2rem;
-    font-size: 1rem;
-  }
-
-  .switcher {
-    grid-template-columns: 1fr;
-  }
-
-  .tags--page {
-    justify-content: flex-start;
+  .title,
+  .subtitle {
+    width: 100%;
   }
 }
 
 @media (max-width: 30rem) {
-  .page {
-    padding: 0rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .page__title {
-    padding: 0rem 1rem;
-  }
-
-  .highlight {
-    margin-bottom: 1rem;
-  }
-
-  .switcher {
-    margin-top: 1rem;
-    padding: 0rem 1rem 2rem;
-  }
-
-  .tags--page {
-    padding: 0rem 1rem;
+  .title,
+  .subtitle {
+    line-height: 1.4;
   }
 }

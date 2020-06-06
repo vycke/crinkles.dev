@@ -60,8 +60,9 @@ pre[class*='language-'] {
 }
 
 @media (max-width: 30rem) {
-  .post__header {
+  .post__header > h1 {
     line-height: 1.4;
+    margin-bottom: 0.5rem;
   }
 
   .anchor:before {

@@ -4,40 +4,6 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-const PAGE_SIZE = 20;
-
-function createPaginatedPages(createPage, posts, pathName, context) {
-  const numPages = Math.ceil(posts.length / PAGE_SIZE);
-  const template = (context || {}).template;
-
-  Array.from({ length: numPages }).forEach((_, i) => {
-    let prev, next;
-
-    if (i + 1 < numPages)
-      prev = { title: 'Older posts', link: `${pathName}/${i + 2}` };
-
-    if (i === 1) next = { title: 'Newer posts', link: `${pathName}/` };
-    else if (i > 0) next = { title: 'Newer posts', link: `${pathName}/${i}` };
-
-    createPage({
-      path: i === 0 ? `${pathName}/` : `${pathName}/${i + 1}`,
-      component: path.resolve(template || `src/templates/blog-overview.js`),
-      context: {
-        limit: PAGE_SIZE,
-        skip: i * PAGE_SIZE,
-        next,
-        prev,
-        currentPage: i + 1,
-        ...context
-      }
-    });
-  });
-}
-
-function createIndexPages(createPage, posts) {
-  createPaginatedPages(createPage, posts, '');
-}
-
 function createTagPages(createPage, posts) {
   let tags = [];
   posts.forEach((edge) => {
@@ -47,31 +13,10 @@ function createTagPages(createPage, posts) {
 
   tags.forEach((tag) => {
     const tagPath = `/tags/${_.camelCase(tag)}`;
-    const filtered = posts.filter((p) =>
-      _.get(p, 'node.frontmatter.tags', []).includes(tag)
-    );
-
-    createPaginatedPages(createPage, filtered, tagPath, {
-      template: 'src/templates/tags.js',
-      tag,
-      tags
-    });
-  });
-}
-
-function createWebsitePage(createPage, posts) {
-  posts.forEach(({ node }, i) => {
-    const id = node.id;
-
     createPage({
-      path: node.fields.slug,
-      tags: node.frontmatter.tags,
-      component: path.resolve(
-        `src/templates/${String(node.frontmatter.templateKey)}.js`
-      ),
-      context: {
-        id
-      }
+      path: `${tagPath}/`,
+      component: path.resolve('src/templates/tags.js'),
+      context: { tag, tags },
     });
   });
 }
@@ -92,8 +37,8 @@ function createPostPage(createPage, posts) {
       context: {
         id,
         prev,
-        next
-      }
+        next,
+      },
     });
   });
 }
@@ -106,7 +51,12 @@ exports.createPages = ({ actions, graphql }) => {
       allMarkdownRemark(
         limit: 1000
         sort: { fields: [frontmatter___date], order: ASC }
-        filter: { frontmatter: { draft: { eq: false } } }
+        filter: {
+          frontmatter: {
+            draft: { eq: false }
+            templateKey: { eq: "blog-post" }
+          }
+        }
       ) {
         edges {
           node {
@@ -135,18 +85,8 @@ exports.createPages = ({ actions, graphql }) => {
       (p) => new Date(_.get(p, 'node.frontmatter.date')) <= new Date()
     );
 
-    const blogposts = posts.filter(
-      (p) => _.get(p, 'node.frontmatter.templateKey') === 'blog-post'
-    );
-
-    const pages = posts.filter(
-      (p) => _.get(p, 'node.frontmatter.templateKey') === 'page'
-    );
-
-    createWebsitePage(createPage, pages);
-    createPostPage(createPage, blogposts);
-    createIndexPages(createPage, blogposts);
-    createTagPages(createPage, blogposts);
+    createPostPage(createPage, posts);
+    createTagPages(createPage, posts);
   });
 };
 
@@ -159,7 +99,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };

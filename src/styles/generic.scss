@@ -117,7 +117,7 @@ pre[class*='language-'] {
   font-family: var(--monospace);
   font-size: 0.875rem;
   opacity: 0.9;
-  color: var(--text-default);
+  color: var(--text-default) !important;
   background-color: transparent !important;
   font-weight: 600;
   padding: 0rem 0.25rem;
@@ -128,7 +128,8 @@ pre[class*='language-'] {
   }
 }
 
-[href^='http']:not([href*='http://kevtiq.dev']):after {
+[href^='http']:not([href*='http://kevtiq.dev']):after
+{
   content: '';
   font-family: var(--monospace);
   font-size: 0.75rem;

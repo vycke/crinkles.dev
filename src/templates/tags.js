@@ -15,7 +15,9 @@ const TagsTemplate = ({ data, pageContext }) => {
     <Layout
       meta={{
         title: `kevtiq.dev | ${tag}`,
-        description: `All posts on kevtiq.dev with the tag: ${tag}`
+        description: `All posts on kevtiq.dev with the tag: ${tag}`,
+        tag,
+        tags,
       }}>
       <main className="grid content sm">
         <div className="stack-medium cell--middle">
@@ -58,15 +60,20 @@ const TagsTemplate = ({ data, pageContext }) => {
 export default TagsTemplate;
 
 export const postOverviewPageQuery = graphql`
-  query TagPage($tag: String, $skip: Int!, $limit: Int!) {
+  query TagPage($tag: String) {
     site {
       siteMetadata {
         title
+        description
+        keywords
+        siteUrl
+        image
+        twitterName
       }
     }
     allMarkdownRemark(
-      limit: $limit
-      skip: $skip
+      limit: 1000
+      skip: 0
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] }, draft: { eq: false } } }
     ) {

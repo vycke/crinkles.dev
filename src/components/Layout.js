@@ -12,22 +12,20 @@ import Twitter from '../icons/Twitter';
 import '../styles/styles.scss';
 import 'prism-theme-night-owl';
 import { AppContext } from './Context';
-import useSiteMeta from '../hooks/useSiteMeta';
 import { Helmet } from 'react-helmet';
 
 const PageWrapper = ({ children, meta = {} }) => {
-  const sitemeta = useSiteMeta();
   const { theme, updateTheme } = React.useContext(AppContext);
 
   const seo = {
-    title: meta.title || sitemeta.title,
-    description: meta.description || sitemeta.description,
-    keywords: (meta.tags || sitemeta.keywords).join(', '),
-    twitter: sitemeta.twitterName,
-    image: `${sitemeta.siteUrl}${
-      meta.featuredImage ? `/img/${meta.featuredImage}` : sitemeta.image
+    title: meta.title,
+    description: meta.description,
+    keywords: (meta.tags || meta.keywords).join(', '),
+    twitter: meta.twitterName,
+    image: `${meta.siteUrl}${
+      meta.featuredImage ? `/img/${meta.featuredImage}` : meta.image
     }`,
-    url: `${sitemeta.siteUrl}${meta.slug ? meta.slug : ''}`
+    url: `${meta.siteUrl}${meta.slug || ''}`,
   };
 
   return (
@@ -94,7 +92,7 @@ const PageWrapper = ({ children, meta = {} }) => {
 PageWrapper.defaultProps = {
   className: '',
   footer: false,
-  meta: {}
+  meta: {},
 };
 
 export default PageWrapper;

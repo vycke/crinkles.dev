@@ -8,11 +8,11 @@ import { NUM_HIGHLIGHT } from '../config';
 
 const PostOverviewTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
-
   const highlights = posts.slice(0, NUM_HIGHLIGHT);
+  const meta = data.site.siteMetadata;
 
   return (
-    <Layout>
+    <Layout meta={meta}>
       <main className="content stack-large grid lg">
         <h1 className="title cell--middle">
           <span role="img" aria-label="waving hand">
@@ -64,15 +64,20 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
 export default PostOverviewTemplate;
 
 export const postOverviewPageQuery = graphql`
-  query BlogPage($skip: Int!, $limit: Int!) {
+  query BlogPage {
     site {
       siteMetadata {
         title
+        description
+        keywords
+        siteUrl
+        image
+        twitterName
       }
     }
     allMarkdownRemark(
-      limit: $limit
-      skip: $skip
+      limit: 1000
+      skip: 0
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { draft: { eq: false }, templateKey: { eq: "blog-post" } }

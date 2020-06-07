@@ -172,4 +172,12 @@ a.card__title {
       align-self: start;
     }
   }
+
+  .pagination {
+    grid-template-columns: 1fr;
+
+    .previous {
+      margin-top: 1rem;
+    }
+  }
 }

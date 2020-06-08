@@ -24,7 +24,7 @@ const PostOverviewTemplate = ({ data }) => {
 export default PostOverviewTemplate;
 
 export const pageQuery = graphql`
-  query SiteMeta {
+  query {
     site {
       siteMetadata {
         title

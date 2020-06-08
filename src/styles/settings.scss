@@ -2,12 +2,9 @@
   --white: #ffffff;
   --black: #000000;
 
-  --gray-100: #f2f3f5;
-  --gray-200: #cccccc;
-  --gray-300: #898989;
-  --gray-400: #404040;
-  --gray-500: #232323;
-  --gray-600: #131415;
+  --gray-200: #d7d7d7;
+  --gray-400: #31343d;
+  --gray-600: #131418;
 
   --primary: #755cf2;
 
@@ -28,9 +25,9 @@ body {
 
   --icon-fill: var(--main-color);
   --icon-stroke: var(--text-default);
-  --footer-bg: var(--gray-600);
+  --bg: var(--gray-600);
+  --code-bg: var(--gray-400);
 
-  --code-bg: var(--gray-500);
   --code-text: var(--white);
   --code-highlight-bg: var(--gray-400);
 
@@ -55,13 +52,11 @@ body.light {
   --bg-default: var(--white);
 
   --text-secondary: var(--gray-400);
-  --text-tertiary: var(--gray-300);
 }
 
 body.dark {
   --text-default: var(--white);
   --bg-default: var(--gray-600);
 
-  --text-secondary: var(--gray-100);
-  --text-tertiary: var(--gray-200);
+  --text-secondary: var(--gray-200);
 }

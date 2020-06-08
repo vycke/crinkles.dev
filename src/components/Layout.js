@@ -9,8 +9,8 @@ import Moon from '../icons/Moon';
 import Github from '../icons/Github';
 import Twitter from '../icons/Twitter';
 
-import '../styles/styles.scss';
 import 'prism-theme-night-owl';
+import '../styles/styles.scss';
 import { AppContext } from './Context';
 import { Helmet } from 'react-helmet';
 

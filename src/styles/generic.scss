@@ -102,9 +102,8 @@ pre[class*='language-'] {
   padding: 1.25rem;
   margin: 0rem;
   overflow: auto;
-  color: var(--code-text);
-  background-color: var(--code-bg);
   max-width: 100vw;
+  background-color: var(--code-bg) !important;
 
   > code[class*='language-'] {
     font-family: var(--monospace);

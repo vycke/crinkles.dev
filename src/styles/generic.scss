@@ -1,11 +1,3 @@
-.lg {
-  --site-width: 75rem;
-}
-
-.sm {
-  --site-width: 48.5rem;
-}
-
 body {
   font-weight: 400;
   font-family: var(--sans-serif);
@@ -14,14 +6,6 @@ body {
   color: var(--text-default);
   transition: all ease-in-out 100ms;
   min-width: 20rem;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
 }
 
 // HEADINGS

@@ -1,72 +1,3 @@
-// Tags list
-.tags {
-  display: flex;
-  flex-direction: row;
-  font-size: 0.75rem;
-  font-family: var(--monospace);
-  flex-wrap: wrap;
-  position: relative;
-
-  a:link,
-  a:visited,
-  a:active {
-    text-decoration: none;
-    color: var(--main-color);
-    border-radius: 0.25rem;
-    padding: 0 0.25rem;
-
-    &:before {
-      content: '#';
-    }
-  }
-
-  > li {
-    padding: 0rem;
-  }
-
-  > * + * {
-    margin-left: 1rem;
-  }
-}
-
-// Pagination below blog posts
-.pagination {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: var(--spacing);
-  column-gap: var(--spacing);
-
-  a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-  }
-
-  .next,
-  .previous {
-    display: flex;
-    align-items: center;
-  }
-
-  .next {
-    justify-content: flex-start;
-    &::before {
-      content: '←';
-      margin-right: var(--spacing);
-    }
-  }
-
-  .previous {
-    justify-content: flex-end;
-    text-align: right;
-
-    &::after {
-      content: '→';
-      margin-left: var(--spacing);
-    }
-  }
-}
-
 // Cards
 .card {
   transition: all ease-in-out 200ms;
@@ -170,14 +101,6 @@ a.card__title {
     .card__content {
       grid-column: 1/3;
       align-self: start;
-    }
-  }
-
-  .pagination {
-    grid-template-columns: 1fr;
-
-    .previous {
-      margin-top: 1rem;
     }
   }
 }

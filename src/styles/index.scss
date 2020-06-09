@@ -1,0 +1,14 @@
+// reset, settings & generic styles
+@import 'reset';
+@import 'settings';
+@import 'generic';
+// Layout
+@import 'layout';
+// Utilities
+@import 'utilities';
+// Blocks & expectionss
+@import 'blocks/page';
+@import 'blocks/post';
+@import 'blocks/pagination';
+@import 'blocks/tags';
+@import 'blocks/card';

@@ -1,0 +1,40 @@
+// Pagination below blog posts
+.pagination {
+  display: grid;
+  width: 100%;
+  padding: var(--spacing);
+  grid-column-gap: var(--spacing);
+  grid-row-gap: calc(var(--spacing));
+  grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .next,
+  .previous {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .next {
+    justify-content: flex-start;
+    &::before {
+      content: '←';
+      margin-right: var(--spacing);
+    }
+  }
+
+  .previous {
+    justify-content: flex-end;
+    text-align: right;
+
+    &::after {
+      content: '→';
+      margin-left: var(--spacing);
+    }
+  }
+}

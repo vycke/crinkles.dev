@@ -10,7 +10,7 @@ import Github from '../icons/Github';
 import Twitter from '../icons/Twitter';
 
 import 'prism-theme-night-owl';
-import '../styles/styles.scss';
+import '../styles/index.scss';
 import { AppContext } from './Context';
 import { Helmet } from 'react-helmet';
 

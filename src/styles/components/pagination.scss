@@ -2,10 +2,10 @@
 .pagination {
   display: grid;
   width: 100%;
-  padding: var(--spacing);
-  grid-column-gap: var(--spacing);
-  grid-row-gap: calc(var(--spacing));
-  grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+  padding: var(--s1);
+  grid-column-gap: var(--s1);
+  grid-row-gap: calc(var(--s1));
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--min) * 1px), 1fr));
 
   a {
     text-decoration: none;
@@ -24,7 +24,7 @@
     justify-content: flex-start;
     &::before {
       content: '←';
-      margin-right: var(--spacing);
+      margin-right: var(--s1);
     }
   }
 
@@ -34,7 +34,7 @@
 
     &::after {
       content: '→';
-      margin-left: var(--spacing);
+      margin-left: var(--s1);
     }
   }
 }

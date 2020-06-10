@@ -1,9 +1,9 @@
 .grid {
   display: grid;
   grid-template-columns:
-    minmax(var(--spacing), 1fr)
+    minmax(var(--s1), 1fr)
     minmax(auto, var(--page-width))
-    minmax(var(--spacing), 1fr);
+    minmax(var(--s1), 1fr);
 }
 
 .cell--left {
@@ -22,7 +22,7 @@
   display: grid;
   width: 100%;
   margin: 0 auto;
-  grid-column-gap: var(--spacing);
-  grid-row-gap: calc(2 * var(--spacing));
+  grid-column-gap: var(--s1);
+  grid-row-gap: var(--s3);
   grid-template-columns: repeat(auto-fit, minmax(var(--card), 1fr));
 }

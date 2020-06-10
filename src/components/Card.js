@@ -11,7 +11,7 @@ const Card = ({
   url,
   reverse,
   className = '',
-  orientation = 'vertical'
+  orientation = 'vertical',
 }) => {
   let classes = `card card--${orientation}`;
   if (variant) classes += ` card--${variant}`;
@@ -27,7 +27,7 @@ const Card = ({
       )}
       <div className="card__content">
         <a href={url} className="card__title">
-          <h2>{title}</h2>
+          <h3>{title}</h3>
         </a>
         {subtitle && <span className="card__subtitle">{subtitle}</span>}
         {meta && <span className="card__meta">{meta}</span>}

@@ -7,8 +7,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
-  column-gap: 2rem;
-  row-gap: 0.5rem;
+  column-gap: var(--s1);
+  row-gap: var(--s0);
 }
 
 .card__image {
@@ -27,13 +27,12 @@
 
 a.card__title {
   text-decoration: none;
-  text-decoration-color: var(--text-link);
+  text-decoration-color: var(--primary);
   transition: all ease-in-out 200ms;
   color: var(--text-default);
   cursor: pointer;
 
-  > h2 {
-    line-height: 1.4;
+  > h3 {
     margin-bottom: 0.5rem;
   }
 
@@ -41,7 +40,7 @@ a.card__title {
   &:active,
   &:focus {
     text-decoration: underline;
-    text-decoration-color: var(--text-link);
+    text-decoration-color: var(--primary);
   }
 
   &:after {
@@ -76,22 +75,8 @@ a.card__title {
 }
 
 .card--large {
-  .card__title > h2 {
+  .card__title > h3 {
     font-size: var(--size-h1);
-  }
-
-  .card__subtitle {
-    font-size: var(--size-h3);
-  }
-}
-
-@media (max-width: 60rem) {
-  .card--large .card__title > h2 {
-    font-size: var(--size-h2);
-  }
-
-  .card--large .card__subtitle {
-    font-size: 1rem;
   }
 }
 

@@ -1,3 +1,7 @@
+.post {
+  --page-width: 65ch;
+}
+
 .post__header {
   span {
     font-family: var(--monospace);
@@ -9,7 +13,6 @@
 
 .post__body {
   width: 100%;
-  font-size: 1.125rem;
 
   li + li {
     margin-top: 0.25rem;
@@ -21,23 +24,24 @@
 
   ul {
     list-style: disc outside;
+    padding-left: var(--s2);
   }
 
   ol {
     list-style: decimal outside;
+    padding-left: 1.5rem;
   }
 
   img,
   .gatsby-highlight {
     grid-column: 1 / 4;
     width: 100%;
-    max-width: calc(var(--site-width) + 2 * var(--spacing));
+    max-width: calc(var(--page-width) + var(--s3));
     justify-self: center;
   }
 
   .gatsby-highlight pre[class*='language-'] {
-    border-radius: 0.5rem;
-    padding: var(--spacing);
+    padding: var(--s1);
   }
 }
 
@@ -50,31 +54,6 @@
     content: '#';
     width: 1.5rem;
     display: inline-block;
-    color: var(--text-link);
-    margin-left: -1.5rem;
-  }
-}
-
-@media (max-width: 52.5rem) {
-  .post__body .gatsby-highlight pre[class*='language-'] {
-    border-radius: 0rem;
-  }
-}
-
-@media (max-width: 30rem) {
-  .post__header > h1 {
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-  }
-
-  .anchor:before {
-    margin-left: 0rem;
-  }
-
-  .post__body {
-    ul,
-    ol {
-      padding-left: 1.5rem;
-    }
+    color: var(--primary);
   }
 }

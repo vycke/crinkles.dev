@@ -38,7 +38,7 @@ const BlogPost = ({ data, pageContext }) => {
         slug: post.fields.slug,
       }}>
       <main className="content post stack-medium">
-        <header className="grid sm post__header" role="contentinfo">
+        <header className="grid post__header" role="contentinfo">
           <h1 className="cell--middle">{meta.title}</h1>
           <span className="cell--middle post__meta">
             <time dateTime={meta.date}>{meta.date}</time>

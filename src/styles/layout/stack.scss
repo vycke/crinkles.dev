@@ -12,11 +12,11 @@
 }
 
 .stack-medium > * + * {
-  margin-top: var(--spacing);
+  margin-top: var(--s1);
 }
 
 .stack-large > * + * {
-  margin-top: calc(2 * var(--spacing));
+  margin-top: var(--s3);
 }
 
 .grow {

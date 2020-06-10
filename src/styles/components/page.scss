@@ -12,8 +12,8 @@
 * Main site header *
 **/
 .header {
-  background: var(--bg);
-  padding: var(--spacing);
+  background: var(--gray-600);
+  padding: var(--s1);
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -26,7 +26,6 @@
 
   > img {
     height: var(--logo-size);
-    margin-bottom: 0.125rem;
     cursor: pointer;
   }
 }
@@ -42,7 +41,7 @@
 
   > .icon {
     height: 1.25rem;
-    fill: var(--icon-fill);
+    fill: var(--primary);
     stroke: var(--white);
   }
 }
@@ -51,13 +50,13 @@
 * Main site footer *
 **/
 .footer {
-  background: var(--bg);
-  padding: var(--spacing);
+  background: var(--gray-600);
+  padding: var(--s1);
   display: flex;
   flex-direction: row;
   align-items: center;
   line-height: 1;
-  font-size: 0.8 5rem;
+  font-size: 0.85rem;
   color: var(--white);
 
   span {
@@ -75,48 +74,27 @@
   &:hover,
   &:focus,
   &:active {
-    stroke: var(--main-color);
-    color: var(--main-color);
+    stroke: var(--primary);
+    color: var(--primary);
   }
 }
 
 .content {
   flex-grow: 1;
   width: 100%;
-  padding: var(--spacing) 0;
+  padding: var(--s3) 0;
 }
 
-.title,
-.subtitle {
-  text-align: left;
+.title {
   justify-self: center;
-  width: 75%;
   display: block;
+  padding: 0 0 var(--s2);
 
   &::first-letter {
     text-transform: uppercase;
   }
 }
 
-.title--center,
-.subtitle--center {
-  text-align: center;
-}
-
 .subtitle--emoji {
   font-size: 4rem;
-}
-
-@media (max-width: 45rem) {
-  .title,
-  .subtitle {
-    width: 100%;
-  }
-}
-
-@media (max-width: 30rem) {
-  .title,
-  .subtitle {
-    line-height: 1.4;
-  }
 }

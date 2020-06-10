@@ -19,7 +19,7 @@ const TagsTemplate = ({ data, pageContext }) => {
         tag,
         tags,
       }}>
-      <main className="grid content sm">
+      <main className="grid content">
         <div className="stack-medium cell--middle">
           <h1 className="title">{tag}</h1>
 

@@ -1,77 +1,74 @@
 :root {
+  // Colors
   --white: #ffffff;
-  --black: #000000;
-
   --gray-200: #d7d7d7;
   --gray-400: #31343d;
   --gray-600: #131418;
-
   --primary: #755cf2;
 
+  // Spacing and sizes
+  --min-width: 320;
+  --max-width: 1200;
+  --base: 16;
+  --scale: 4;
+
+  // calculates the ratio that scales between 0px and 1px based on the screen
+  // size
+  --ratio: calc(
+    (
+        min(max(var(--min-width) * 1px, 100vw), var(--max-width) * 1px) -
+          var(--min-width) * 1px
+      ) / (var(--max-width) - var(--min-width))
+  );
+
+  // Font-sizes
+  --size-default: calc(var(--base) * 1px + var(--scale) * var(--ratio));
+  --size-h1: calc(1.75rem + 0.5 * var(--base) * var(--ratio));
+  --size-h2: calc(1.375rem + 0.25 * var(--base) * var(--ratio));
+  --size-h3: 1.25rem;
+
+  // spacing
+  --s1: calc(var(--base) * 1px + var(--base) * var(--ratio));
+  --s0: calc(0.5 * var(--s1));
+  --s2: calc(1.25 * var(--s1));
+  --s3: calc(2 * var(--s1));
+
+  // general-sizes
+  --page-width: calc(var(--max-width) * 1px);
+  --logo-size: calc(1.25 * var(--base) * 1px + 4 * var(--ratio));
+  --card: 18rem;
+
+  // font-family
   --sans-serif: proxima-nova, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
-
-  --size-h1: 2.25rem;
-  --size-h2: 1.625rem;
-  --size-h3: 1.25rem;
-}
-
-body {
-  --text-default: var(--black);
-  --bg-default: var(--white);
-  --main-color: var(--primary);
-  --text-link: var(--main-color);
-
-  --icon-fill: var(--main-color);
-  --icon-stroke: var(--text-default);
-  --bg: var(--gray-600);
-  --code-bg: var(--gray-400);
-
-  --code-text: var(--white);
-  --code-highlight-bg: var(--gray-400);
-
-  --logo-size: 1.5rem;
-  --spacing: 2rem;
-
-  --card: 18rem;
-
-  @media (max-width: 45rem) {
-    --size-h1: 1.75rem;
-    --size-h2: 1.375rem;
-  }
-
-  @media (max-width: 30rem) {
-    --logo-size: 1.25rem;
-    --spacing: 1rem;
-  }
 }
 
 body.light {
   --text-default: var(--gray-600);
   --bg-default: var(--white);
-
   --text-secondary: var(--gray-400);
 }
 
 body.dark {
   --text-default: var(--white);
   --bg-default: var(--gray-600);
-
   --text-secondary: var(--gray-200);
 }
 
 /*******
 * Generic styling
 *******/
+html,
 body {
   font-weight: 400;
+  font-size: var(--size-default);
   font-family: var(--sans-serif);
   line-height: 1.75;
   background-color: var(--bg-default);
   color: var(--text-default);
   transition: all ease-in-out 100ms;
-  min-width: 20rem;
+  min-width: calc(var(--min-width) * 1px);
 }
 
 // HEADINGS
@@ -85,16 +82,19 @@ h3 {
 h1 {
   font-size: var(--size-h1);
   font-weight: 600;
+  line-height: 1.4;
 }
 
 h2 {
   font-size: var(--size-h2);
   font-weight: 600;
+  line-height: 1.4;
 }
 
 h3 {
   font-size: var(--size-h3);
   font-weight: 600;
+  line-height: 1.4;
 }
 
 // LINKS
@@ -103,12 +103,12 @@ a:visited,
 a:active {
   transition: all ease-in-out 100ms;
   text-decoration: underline;
-  text-decoration-color: var(--text-link);
+  text-decoration-color: var(--primary);
 }
 
 a:hover,
 a > *:hover {
-  color: var(--text-link);
+  color: var(--primary);
 }
 
 a.svg {
@@ -124,19 +124,18 @@ a.svg {
 
 // QUOTES
 blockquote {
-  border-left: 0.25rem solid var(--main-color);
-  padding: 0.5rem 1rem;
+  border-left: 0.25rem solid var(--primary);
+  padding: 0.25rem 1rem;
   font-style: italic;
   color: var(--text-default);
 
   p {
-    font-size: 1.5rem;
     opacity: 0.7;
   }
 
   cite {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.875rem;
     display: block;
     text-align: right;
 
@@ -148,12 +147,9 @@ blockquote {
 
 // CODE BLOCKS
 pre[class*='language-'] {
-  font-size: 0.85rem;
-  padding: 1.25rem;
-  margin: 0rem;
+  font-size: 0.875rem;
   overflow: auto;
-  max-width: 100vw;
-  background-color: var(--code-bg) !important;
+  background-color: var(--gray-400) !important;
 
   > code[class*='language-'] {
     font-family: var(--monospace);
@@ -165,7 +161,6 @@ pre[class*='language-'] {
 :not(pre) > code[class*='language-'] {
   font-family: var(--monospace);
   font-size: 0.875rem;
-  opacity: 0.9;
   color: var(--text-default) !important;
   background-color: transparent !important;
   font-weight: 600;
@@ -174,24 +169,5 @@ pre[class*='language-'] {
   &::before,
   &::after {
     content: '`';
-  }
-}
-
-[href^='http']:not([href*='http://kevtiq.dev']):after
-{
-  content: '';
-  font-family: var(--monospace);
-  font-size: 0.75rem;
-}
-
-@media (max-width: 30rem) {
-  html,
-  body {
-    line-height: 1.8;
-  }
-
-  pre[class*='language-'] {
-    padding: 1rem;
-    border-radius: 0rem;
   }
 }

@@ -15,12 +15,8 @@
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
-  --ratio: calc(
-    (
-        min(max(var(--min-width) * 1px, 100vw), var(--max-width) * 1px) -
-          var(--min-width) * 1px
-      ) / (var(--max-width) - var(--min-width))
-  );
+  --screen: calc(min(100vw, var(--max-width) * 1px) - var(--min-width) * 1px);
+  --ratio: calc(var(--screen) / (var(--max-width) - var(--min-width)));
 
   // Font-sizes
   --size-default: calc(var(--base) * 1px + var(--scale) * var(--ratio));

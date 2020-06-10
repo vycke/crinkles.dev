@@ -1,7 +1,3 @@
-:root {
-  --stack-spacing: 1.25rem;
-}
-
 .grid {
   display: grid;
   grid-template-columns:
@@ -29,25 +25,4 @@
   grid-column-gap: var(--spacing);
   grid-row-gap: calc(2 * var(--spacing));
   grid-template-columns: repeat(auto-fit, minmax(var(--card), 1fr));
-}
-
-[class^='stack'] > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.stack-small > * + * {
-  margin-top: var(--stack-spacing);
-}
-
-.stack-medium > * + * {
-  margin-top: var(--spacing);
-}
-
-.stack-large > * + * {
-  margin-top: calc(2 * var(--spacing));
-}
-
-.grow {
-  flex-grow: 1;
 }

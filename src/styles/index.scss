@@ -2,12 +2,13 @@
 @import 'reset';
 @import 'settings';
 // Layout
-@import 'layout';
+@import 'layout/grid';
+@import 'layout/stack';
 // Utilities
-@import 'utilities';
+@import 'atoms';
 // Blocks & expectionss
-@import 'blocks/page';
-@import 'blocks/post';
-@import 'blocks/pagination';
-@import 'blocks/tags';
-@import 'blocks/card';
+@import 'components/page';
+@import 'components/post';
+@import 'components/pagination';
+@import 'components/tags';
+@import 'components/card';

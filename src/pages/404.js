@@ -6,7 +6,7 @@ export default ({ data }) => {
   const meta = data.site.siteMetadata;
   return (
     <Layout meta={meta}>
-      <main className="grid content sm">
+      <main className="grid content">
         <h1 className="title title--center cell--middle">Page not found</h1>
         <h2 className="subtitle subtitle--center subtitle--emoji cell--middle">
           <span role="img" aria-label="Sorry emoji" aria-labelledby="">

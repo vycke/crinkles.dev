@@ -12,7 +12,7 @@
 * Main site header *
 **/
 .header {
-  background: var(--bg);
+  background: var(--gray-600);
   padding: var(--spacing);
   display: flex;
   margin: 0 auto;
@@ -42,7 +42,7 @@
 
   > .icon {
     height: 1.25rem;
-    fill: var(--icon-fill);
+    fill: var(--primary);
     stroke: var(--white);
   }
 }
@@ -51,13 +51,13 @@
 * Main site footer *
 **/
 .footer {
-  background: var(--bg);
+  background: var(--gray-600);
   padding: var(--spacing);
   display: flex;
   flex-direction: row;
   align-items: center;
   line-height: 1;
-  font-size: 0.8 5rem;
+  font-size: 0.85rem;
   color: var(--white);
 
   span {
@@ -75,8 +75,8 @@
   &:hover,
   &:focus,
   &:active {
-    stroke: var(--main-color);
-    color: var(--main-color);
+    stroke: var(--primary);
+    color: var(--primary);
   }
 }
 

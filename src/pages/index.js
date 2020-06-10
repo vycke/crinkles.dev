@@ -13,7 +13,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout meta={meta}>
-      <main className="content stack-large grid lg">
+      <main className="content stack-large grid">
         <h1 className="title cell--middle">
           <span role="img" aria-label="waving hand">
             👋

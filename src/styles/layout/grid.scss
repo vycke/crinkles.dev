@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns:
     minmax(var(--spacing), 1fr)
-    minmax(auto, var(--site-width))
+    minmax(auto, var(--page-width))
     minmax(var(--spacing), 1fr);
 }
 

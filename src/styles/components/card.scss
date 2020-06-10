@@ -27,7 +27,7 @@
 
 a.card__title {
   text-decoration: none;
-  text-decoration-color: var(--text-link);
+  text-decoration-color: var(--primary);
   transition: all ease-in-out 200ms;
   color: var(--text-default);
   cursor: pointer;
@@ -41,7 +41,7 @@ a.card__title {
   &:active,
   &:focus {
     text-decoration: underline;
-    text-decoration-color: var(--text-link);
+    text-decoration-color: var(--primary);
   }
 
   &:after {

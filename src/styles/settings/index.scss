@@ -1,71 +1,61 @@
 :root {
+  // Colors
   --white: #ffffff;
-  --black: #000000;
-
   --gray-200: #d7d7d7;
   --gray-400: #31343d;
   --gray-600: #131418;
-
   --primary: #755cf2;
 
+  // Spacing and sizes
+  --min: 320;
+  --max: 1200;
+  --base: 16;
+  --scale: 4;
+
+  // calculates the ratio that scales between 0px and 1px based on the screen
+  // size
+  --ratio: calc(
+    (min(max(var(--min) * 1px, 100vw), var(--max) * 1px) - var(--min) * 1px) /
+      (var(--max) - var(--min))
+  );
+
+  // Font-sizes
+  --size-default: calc(var(--base) * 1px + var(--scale) * var(--ratio));
+  --size-h1: calc(1.75rem + 0.5 * var(--base) * var(--ratio));
+  --size-h2: calc(1.375rem + 0.25 * var(--base) * var(--ratio));
+  --size-h3: 1.25rem;
+
+  // spacing
+  --spacing: calc(var(--base) * 1px + var(--base) * var(--ratio));
+  --page-width: calc(var(--max) * 1px);
+  --card: 18rem;
+  --logo-size: calc(1.25 * var(--base) * 1px + 4 * var(--ratio));
+
+  // font-family
   --sans-serif: proxima-nova, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
-
-  --size-h1: 2.25rem;
-  --size-h2: 1.625rem;
-  --size-h3: 1.25rem;
-}
-
-body {
-  --text-default: var(--black);
-  --bg-default: var(--white);
-  --main-color: var(--primary);
-  --text-link: var(--main-color);
-
-  --icon-fill: var(--main-color);
-  --icon-stroke: var(--text-default);
-  --bg: var(--gray-600);
-  --code-bg: var(--gray-400);
-
-  --code-text: var(--white);
-  --code-highlight-bg: var(--gray-400);
-
-  --logo-size: 1.5rem;
-  --spacing: 2rem;
-
-  --card: 18rem;
-
-  @media (max-width: 45rem) {
-    --size-h1: 1.75rem;
-    --size-h2: 1.375rem;
-  }
-
-  @media (max-width: 30rem) {
-    --logo-size: 1.25rem;
-    --spacing: 1rem;
-  }
 }
 
 body.light {
   --text-default: var(--gray-600);
   --bg-default: var(--white);
-
   --text-secondary: var(--gray-400);
 }
 
 body.dark {
   --text-default: var(--white);
   --bg-default: var(--gray-600);
-
   --text-secondary: var(--gray-200);
 }
 
 /*******
 * Generic styling
 *******/
+html,
 body {
   font-weight: 400;
+  font-size: var(--size-default);
   font-family: var(--sans-serif);
   line-height: 1.75;
   background-color: var(--bg-default);
@@ -103,12 +93,12 @@ a:visited,
 a:active {
   transition: all ease-in-out 100ms;
   text-decoration: underline;
-  text-decoration-color: var(--text-link);
+  text-decoration-color: var(--primary);
 }
 
 a:hover,
 a > *:hover {
-  color: var(--text-link);
+  color: var(--primary);
 }
 
 a.svg {
@@ -124,7 +114,7 @@ a.svg {
 
 // QUOTES
 blockquote {
-  border-left: 0.25rem solid var(--main-color);
+  border-left: 0.25rem solid var(--primary);
   padding: 0.5rem 1rem;
   font-style: italic;
   color: var(--text-default);
@@ -153,7 +143,7 @@ pre[class*='language-'] {
   margin: 0rem;
   overflow: auto;
   max-width: 100vw;
-  background-color: var(--code-bg) !important;
+  background-color: var(--gray-400) !important;
 
   > code[class*='language-'] {
     font-family: var(--monospace);
@@ -177,21 +167,9 @@ pre[class*='language-'] {
   }
 }
 
-[href^='http']:not([href*='http://kevtiq.dev']):after
-{
-  content: '';
-  font-family: var(--monospace);
-  font-size: 0.75rem;
-}
-
 @media (max-width: 30rem) {
   html,
   body {
     line-height: 1.8;
-  }
-
-  pre[class*='language-'] {
-    padding: 1rem;
-    border-radius: 0rem;
   }
 }

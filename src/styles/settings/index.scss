@@ -7,16 +7,18 @@
   --primary: #755cf2;
 
   // Spacing and sizes
-  --min: 320;
-  --max: 1200;
+  --min-width: 320;
+  --max-width: 1200;
   --base: 16;
   --scale: 4;
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
   --ratio: calc(
-    (min(max(var(--min) * 1px, 100vw), var(--max) * 1px) - var(--min) * 1px) /
-      (var(--max) - var(--min))
+    (
+        min(max(var(--min-width) * 1px, 100vw), var(--max-width) * 1px) -
+          var(--min-width) * 1px
+      ) / (var(--max-width) - var(--min-width))
   );
 
   // Font-sizes
@@ -32,7 +34,7 @@
   --s3: calc(2 * var(--s1));
 
   // general-sizes
-  --page-width: calc(var(--max) * 1px);
+  --page-width: calc(var(--max-width) * 1px);
   --logo-size: calc(1.25 * var(--base) * 1px + 4 * var(--ratio));
   --card: 18rem;
 
@@ -66,7 +68,7 @@ body {
   background-color: var(--bg-default);
   color: var(--text-default);
   transition: all ease-in-out 100ms;
-  min-width: calc(var(--min) * 1px);
+  min-width: calc(var(--min-width) * 1px);
 }
 
 // HEADINGS

@@ -5,7 +5,10 @@
   padding: var(--s1);
   grid-column-gap: var(--s1);
   grid-row-gap: calc(var(--s1));
-  grid-template-columns: repeat(auto-fit, minmax(calc(var(--min) * 1px), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(var(--min-width) * 1px), 1fr)
+  );
 
   a {
     text-decoration: none;

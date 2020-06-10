@@ -70,7 +70,7 @@ const PageWrapper = ({ children, meta = {} }) => {
         </header>
         {children}
         <footer className="footer">
-          <span>© 2019-present Kevin Pennekamp. All Rights Reserved.</span>
+          <span>© 2019 - present Kevin Pennekamp. All Rights Reserved.</span>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
             <Twitter />
           </a>

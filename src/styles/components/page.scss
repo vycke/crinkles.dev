@@ -12,7 +12,7 @@
 * Main site header *
 **/
 .header {
-  background: var(--gray-600);
+  background: var(--gray-500);
   padding: var(--s1);
   display: flex;
   margin: 0 auto;
@@ -42,7 +42,7 @@
   > .icon {
     height: 1.25rem;
     fill: var(--primary);
-    stroke: var(--white);
+    stroke: var(--gray-100);
   }
 }
 
@@ -50,14 +50,14 @@
 * Main site footer *
 **/
 .footer {
-  background: var(--gray-600);
+  background: var(--gray-500);
   padding: var(--s1);
   display: flex;
   flex-direction: row;
   align-items: center;
   line-height: 1;
   font-size: 0.85rem;
-  color: var(--white);
+  color: var(--gray-100);
 
   span {
     flex-grow: 1;
@@ -65,8 +65,8 @@
 }
 
 .footer__icon {
-  stroke: var(--white);
-  color: var(--white);
+  stroke: var(--gray-100);
+  color: var(--gray-100);
   height: 1.25rem;
   margin-left: 0.75rem;
   transition: all ease-in-out 300ms;

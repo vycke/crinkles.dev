@@ -1,9 +1,10 @@
 :root {
   // Colors
-  --white: #ffffff;
+  --gray-100: #ffffff;
   --gray-200: #d7d7d7;
+  --gray-300: #838383;
   --gray-400: #31343d;
-  --gray-600: #131418;
+  --gray-500: #131418;
   --primary: #755cf2;
 
   // Spacing and sizes
@@ -45,14 +46,14 @@
 }
 
 body.light {
-  --text-default: var(--gray-600);
-  --bg-default: var(--white);
-  --text-secondary: var(--gray-400);
+  --text-default: var(--gray-500);
+  --bg-default: var(--gray-100);
+  --text-secondary: var(--gray-300);
 }
 
 body.dark {
-  --text-default: var(--white);
-  --bg-default: var(--gray-600);
+  --text-default: var(--gray-100);
+  --bg-default: var(--gray-500);
   --text-secondary: var(--gray-200);
 }
 

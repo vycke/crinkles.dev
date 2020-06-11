@@ -40,7 +40,7 @@ export default function HTML(props) {
                   });
                   setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
               })();
-            `
+            `,
           }}
         />
         {props.preBodyComponents}
@@ -68,5 +68,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array
+  postBodyComponents: PropTypes.array,
 };

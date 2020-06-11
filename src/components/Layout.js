@@ -42,6 +42,7 @@ const PageWrapper = ({ children, meta = {} }) => {
         <meta name="twitter:creator" content={seo.twitter} />
         <meta name="twitter:title" content={seo.title} />
         <meta name="twitter:description" content={seo.description} />
+        <meta name="monetization" content="$ilp.uphold.com/dDdhAM4apdQJ" />
         <meta
           name="twitter:card"
           content={meta.featuredImage ? 'summary_large_image' : 'summary'}

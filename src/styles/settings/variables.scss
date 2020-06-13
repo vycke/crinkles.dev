@@ -1,11 +1,15 @@
 :root {
   // Colors
   --gray-100: #ffffff;
-  --gray-200: #d7d7d7;
-  --gray-300: #939393;
-  --gray-400: #31343d;
-  --gray-500: #131418;
-  --primary: #755cf2;
+  --gray-200: #d7dce0;
+  --gray-300: #959aa0;
+  --gray-400: #33383d;
+  --gray-500: #131619;
+
+  --purple: #755cf2;
+  --green: #09a976;
+  --red: #e60067;
+  --blue: #4b6bdc;
 
   // Spacing and sizes
   --min-width: 320;
@@ -41,14 +45,19 @@
   --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
 }
 
-body.light {
+// default theme
+body {
   --text-default: var(--gray-500);
   --bg-default: var(--gray-100);
   --text-secondary: var(--gray-300);
+  --accent: var(--gray-300);
+
+  --bg-header: var(--gray-500);
+  --bg-footer: var(--gray-500);
 }
 
+// Themes
 body.dark {
   --text-default: var(--gray-100);
   --bg-default: var(--gray-500);
-  --text-secondary: var(--gray-300);
 }

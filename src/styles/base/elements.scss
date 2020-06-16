@@ -18,25 +18,21 @@ h1,
 h2,
 h3 {
   width: 100%;
+  font-weight: 400;
+  line-height: 1.4;
   color: var(--text-default);
 }
 
 h1 {
   font-size: var(--size-h1);
-  font-weight: 600;
-  line-height: 1.4;
 }
 
 h2 {
   font-size: var(--size-h2);
-  font-weight: 600;
-  line-height: 1.4;
 }
 
 h3 {
   font-size: var(--size-h3);
-  font-weight: 600;
-  line-height: 1.4;
 }
 
 // LINKS

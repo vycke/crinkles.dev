@@ -39,21 +39,23 @@ const BlogPost = ({ data, pageContext }) => {
         slug: post.fields.slug,
       }}>
       <main className="content stack-medium">
-        <header className="grid post__header" role="contentinfo">
-          <span className="cell--middle post__meta">
+        <header className="grid post__meta" role="contentinfo">
+          <span>
             <time dateTime={meta.date}>{meta.date}</time>
-            {` • ${formatReadingTime(meta.words)} • `}
-            <a href={`https://twitter.com/intent/tweet?text=${twt}`}>
-              share on twitter
-            </a>
+            {` • ${formatReadingTime(meta.words)}`}
           </span>
-          <h1 className="cell--middle">{meta.title}</h1>
+          <h1>{meta.title}</h1>
         </header>
 
         <article
           className="grid sm post__body stack-small"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <footer className="grid post__meta">
+          <a href={`https://twitter.com/intent/tweet?text=${twt}`}>
+            share on twitter
+          </a>
+        </footer>
       </main>
 
       <Pagination prev={prev} next={next} />

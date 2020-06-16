@@ -1,0 +1,20 @@
+// keyword: const, return, etc.
+// operator: ==, >=, etc.
+// punctuation: (, ), [, ], etc.
+// parameter: inside function
+// tag: <html tag/>
+// function: object.fn
+// string, number: primitives
+
+.token.keyword {
+  font-weight: bold;
+  color: var(--gray-100);
+}
+
+.token.operator,
+.token.punctuation,
+.token.string,
+.token.number,
+.token.comment {
+  color: var(--gray-300);
+}

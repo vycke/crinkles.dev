@@ -40,7 +40,8 @@ function MyModal (props) {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow((s) => !s);
 
-  return (<br/>    <>
+  return (
+    <>
       <button onClick={handleShow}>...</button>
       {show && <Modal onClose={handleShow}>...</Modal>
     </>

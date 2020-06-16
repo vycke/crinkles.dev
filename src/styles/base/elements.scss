@@ -11,6 +11,8 @@ body {
   color: var(--text-default);
   transition: all ease-in-out 100ms;
   min-width: calc(var(--min-width) * 1px);
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // HEADINGS
@@ -87,10 +89,17 @@ blockquote {
 pre[class*='language-'] {
   font-size: 0.875rem;
   overflow: auto;
+  line-height: 1.6;
+  color: var(--gray-100);
   background-color: var(--gray-400) !important;
 
   > code[class*='language-'] {
     font-family: var(--monospace);
+  }
+
+  ::selection {
+    color: var(--gray-500) !important;
+    background: var(--gray-100) !important;
   }
 }
 

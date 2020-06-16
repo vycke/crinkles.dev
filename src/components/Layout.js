@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import logoDark from '../img/logo-dark.svg';
+import logo_dark from '../img/logo-dark.svg';
+import logo_light from '../img/logo-light.svg';
 
 import Dribbble from '../icons/Dribbble';
 import Dev from '../icons/Dev';
-import Sun from '../icons/Sun';
-import Moon from '../icons/Moon';
 import Github from '../icons/Github';
 import Twitter from '../icons/Twitter';
 
@@ -14,7 +13,7 @@ import '../styles/index.scss';
 import { AppContext } from './Context';
 import { Helmet } from 'react-helmet';
 
-const PageWrapper = ({ children, meta = {} }) => {
+const PageWrapper = ({ children, meta = {}, className = '' }) => {
   const { theme, updateTheme } = React.useContext(AppContext);
 
   const seo = {
@@ -55,21 +54,41 @@ const PageWrapper = ({ children, meta = {} }) => {
         />
       </Helmet>
 
-      <div className="site">
+      <div className={`site ${className}`}>
         <header role="banner" className="header">
           <Link to="/" className="header__logo">
-            <img src={logoDark} alt="Kevtiq logo used by Kevin Pennekamp" />
+            <img
+              src={theme === 'dark' ? logo_dark : logo_light}
+              alt="Kevtiq logo used by Kevin Pennekamp"
+            />
           </Link>
           <button
             className="header__toggle"
             type="button"
             aria-label="theme switcher"
             onClick={updateTheme}>
-            {theme === 'light' && <Moon />}
-            {theme === 'dark' && <Sun />}
+            <svg
+              viewBox="0 0 32 32"
+              fill="currentcolor"
+              width="1em"
+              height="1em"
+              display="block"
+              color="neutral.1"
+              class="icon">
+              <circle
+                cx="16"
+                cy="16"
+                r="14"
+                fill="none"
+                stroke="currentcolor"
+                stroke-width="4"></circle>
+              <path d=" M 16 0 A 16 16 0 0 0 16 32 z "></path>
+            </svg>
           </button>
         </header>
+
         {children}
+
         <footer className="footer">
           <span>© 2019 - present Kevin Pennekamp. All Rights Reserved.</span>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">

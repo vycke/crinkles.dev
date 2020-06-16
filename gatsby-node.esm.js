@@ -4,23 +4,6 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-function createTagPages(createPage, posts) {
-  let tags = [];
-  posts.forEach((edge) => {
-    tags = tags.concat(_.get(edge, 'node.frontmatter.tags', []));
-  });
-  tags = _.uniq(tags);
-
-  tags.forEach((tag) => {
-    const tagPath = `/tags/${_.camelCase(tag)}`;
-    createPage({
-      path: `${tagPath}/`,
-      component: path.resolve('src/templates/tags.js'),
-      context: { tag, tags },
-    });
-  });
-}
-
 function createPostPage(createPage, posts) {
   posts.forEach(({ node }, i) => {
     const id = node.id;
@@ -86,7 +69,6 @@ exports.createPages = ({ actions, graphql }) => {
     );
 
     createPostPage(createPage, posts);
-    createTagPages(createPage, posts);
   });
 };
 

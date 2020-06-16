@@ -32,14 +32,14 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout
+      className="post"
       meta={{
         ...site.siteMetadata,
         ...post.frontmatter,
         slug: post.fields.slug,
       }}>
-      <main className="content post stack-medium">
+      <main className="content stack-medium">
         <header className="grid post__header" role="contentinfo">
-          <h1 className="cell--middle">{meta.title}</h1>
           <span className="cell--middle post__meta">
             <time dateTime={meta.date}>{meta.date}</time>
             {` • ${formatReadingTime(meta.words)} • `}
@@ -47,17 +47,7 @@ const BlogPost = ({ data, pageContext }) => {
               share on twitter
             </a>
           </span>
-          {meta.tags && meta.tags.length > 0 && (
-            <ul className="cell--middle tags">
-              {(meta.tags || []).slice(0, 100).map((t, i) => (
-                <li key={i}>
-                  <Link key={i} to={`/tags/${camelCase(t)}`}>
-                    {t.toLowerCase()}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          <h1 className="cell--middle">{meta.title}</h1>
         </header>
 
         <article

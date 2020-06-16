@@ -1,15 +1,14 @@
 // reset, settings & generic styles
-@import 'settings/variables';
-@import 'settings/reset';
-@import 'settings/elements';
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/elements';
 // Layout
 @import 'layout/grid';
 @import 'layout/stack';
 // Utilities
-@import 'atoms';
+@import 'utilities';
 // Blocks & expectionss
 @import 'blocks/page';
 @import 'blocks/post';
 @import 'blocks/pagination';
-@import 'blocks/tags';
 @import 'blocks/card';

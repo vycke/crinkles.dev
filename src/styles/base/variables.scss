@@ -1,8 +1,8 @@
 :root {
   // Colors
   --gray-100: #ffffff;
-  --gray-200: #d7dce0;
-  --gray-300: #868b8f;
+  --gray-200: #e0e6eb;
+  --gray-300: #8e9398;
   --gray-400: #2a2e32;
   --gray-500: #121319;
 
@@ -52,7 +52,6 @@ body {
   --text-secondary: var(--gray-300);
   --accent: var(--purple);
 
-  --bg-header: var(--gray-100);
   --bg-footer: var(--gray-500);
 }
 
@@ -60,6 +59,4 @@ body {
 body.dark {
   --text-default: var(--gray-100);
   --bg-default: var(--gray-500);
-
-  --bg-header: var(--gray-500);
 }

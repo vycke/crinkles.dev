@@ -46,6 +46,11 @@
     height: 1rem;
     color: var(--text-default);
     transition: all ease-in-out 100ms;
+    border-radius: 0.25rem;
+  }
+
+  > .icon:hover {
+    color: var(--text-secondary);
   }
 }
 
@@ -77,8 +82,8 @@
   &:hover,
   &:focus,
   &:active {
-    stroke: var(--accent);
-    color: var(--accent);
+    stroke: var(--text-secondary);
+    color: var(--text-secondary);
   }
 }
 

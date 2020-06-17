@@ -47,10 +47,6 @@
     max-width: calc(var(--page-width) + var(--s3));
     justify-self: center;
   }
-
-  .gatsby-highlight pre[class*='language-'] {
-    padding: var(--s1);
-  }
 }
 
 .anchor {

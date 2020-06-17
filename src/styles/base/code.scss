@@ -6,15 +6,60 @@
 // function: object.fn
 // string, number: primitives
 
-.token.keyword {
-  font-weight: bold;
-  color: var(--gray-100);
-}
-
 .token.operator,
 .token.punctuation,
 .token.string,
 .token.number,
 .token.comment {
   color: var(--gray-300);
+}
+
+.token.comment,
+.token.attr-name,
+.token.italic {
+  font-style: italic;
+}
+
+.token.keyword,
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+// CODE BLOCKS
+pre[class*='language-'] {
+  font-size: 0.875rem;
+  overflow: auto;
+  line-height: 1.6;
+  color: var(--gray-100);
+  padding: var(--s1);
+  background-color: var(--gray-400) !important;
+
+  > code[class*='language-'] {
+    font-family: var(--monospace);
+  }
+
+  ::selection {
+    color: var(--gray-500) !important;
+    background: var(--gray-100) !important;
+  }
+}
+
+// INLINE CODE
+:not(pre) > code,
+:not(pre) > code[class*='language-'] {
+  font-family: var(--monospace);
+  font-size: 0.875rem;
+  color: var(--text-default) !important;
+  background-color: transparent !important;
+  font-weight: 600;
+
+  &::before,
+  &::after {
+    content: '`';
+  }
+}
+
+.gatsby-highlight-code-line {
+  display: block;
 }

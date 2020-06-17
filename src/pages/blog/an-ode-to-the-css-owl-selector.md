@@ -62,9 +62,9 @@ function isSecond(item) { ... }
 
 function owl(list, apply) {
   for (i = 1; i < list.length; i++) {
-	  if (isFirst(list[i]) && isSecond(list[i - 1)) {
-	    apply(list[i]);
-	  }
+    if (isFirst(list[i]) && isSecond(list[i - 1])) {
+      apply(list[i]);
+    }
   }
 }
 ```
@@ -78,11 +78,11 @@ function hasChildren(item) { ... }
 
 function owl(list, apply) {
   for (i = 1; i < list.length; i++) {
-    if (isFirst(list[i]) && isSecond(list[i - 1)) {
+    if (isFirst(list[i]) && isSecond(list[i - 1])) {
       apply(list[i]);
     }
-    if (hasChildren(list[i]) {
-	    owl(list[i], apply);
+    if (hasChildren(list[i])) {
+      owl(list[i], apply);
     }
   }
 }

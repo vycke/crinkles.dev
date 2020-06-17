@@ -42,7 +42,7 @@ a:visited,
 a:active {
   transition: all ease-in-out 100ms;
   text-decoration: underline;
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--text-secondary);
 }
 
 a:hover,
@@ -63,7 +63,7 @@ a.svg {
 
 // QUOTES
 blockquote {
-  border-left: 0.25rem solid var(--accent);
+  border-left: 0.25rem solid var(--text-secondary);
   padding: 0.25rem 1rem;
   font-style: italic;
   color: var(--text-default);

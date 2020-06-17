@@ -11,11 +11,16 @@
   a {
     font-family: var(--monospace);
     font-size: 0.75rem;
+  }
+
+  span {
     color: var(--text-secondary);
   }
 
   a {
     white-space: nowrap;
+    color: var(--accent);
+    text-decoration-color: var(--accent);
   }
 }
 
@@ -54,6 +59,6 @@
     content: '#';
     width: 1.5rem;
     display: inline-block;
-    color: var(--accent);
+    color: var(--text-secondary);
   }
 }

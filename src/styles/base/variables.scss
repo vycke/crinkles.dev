@@ -49,9 +49,10 @@
 body {
   --text-default: var(--gray-500);
   --bg-default: var(--gray-100);
+  --bg-secondary: var(--gray-200);
   --text-secondary: var(--gray-300);
-  --accent: var(--purple);
 
+  --accent: var(--purple);
   --bg-footer: var(--gray-500);
 }
 
@@ -59,4 +60,5 @@ body {
 body.dark {
   --text-default: var(--gray-100);
   --bg-default: var(--gray-500);
+  --bg-secondary: var(--gray-400);
 }

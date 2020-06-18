@@ -8,12 +8,12 @@ export default function Pagination({ next, prev }) {
       {!next && prev && <div />}
       {next && (
         <Link to={next.link}>
-          <h2 className="next">{next.title}</h2>
+          <h3 className="next">{next.title}</h3>
         </Link>
       )}
       {prev && (
         <Link to={prev.link}>
-          <h2 className="previous">{prev.title}</h2>
+          <h3 className="previous">{prev.title}</h3>
         </Link>
       )}
     </section>

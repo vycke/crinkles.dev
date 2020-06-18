@@ -25,11 +25,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: calc(var(--logo-size) * 0.5);
+  border-radius: 0.25rem;
+  transition: all ease-in-out 100ms;
 
   > img {
-    margin-right: calc(var(--logo-size) * 0.5);
     height: var(--logo-size);
-    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: var(--bg-secondary);
   }
 }
 
@@ -40,17 +45,17 @@
   align-items: center;
   justify-content: space-between;
   font-size: inherit;
+  padding: calc(var(--logo-size) * 0.5);
+  border-radius: 0.25rem;
   transition: all ease-in-out 100ms;
 
   > .icon {
     height: 1rem;
     color: var(--text-default);
-    transition: all ease-in-out 100ms;
-    border-radius: 0.25rem;
   }
 
-  > .icon:hover {
-    color: var(--text-secondary);
+  &:hover {
+    background-color: var(--bg-secondary);
   }
 }
 

@@ -1,3 +1,5 @@
+@import 'fonts';
+
 :root {
   // Colors
   --gray-100: #ffffff;
@@ -40,7 +42,7 @@
   --card: 18rem;
 
   // font-family
-  --sans-serif: proxima-nova, system-ui, -apple-system, BlinkMacSystemFont,
+  --sans-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
 }

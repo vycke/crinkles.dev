@@ -80,7 +80,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
                 r="14"
                 fill="none"
                 stroke="currentcolor"
-                stroke-width="4"></circle>
+                strokeWidth="4"></circle>
               <path d=" M 16 0 A 16 16 0 0 0 16 32 z "></path>
             </svg>
           </button>

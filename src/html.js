@@ -53,10 +53,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        {/* <script async defer src="https://visits.kevtiq.co/app.js"></script>
-        <noscript>
-          <img src="https://visits.kevtiq.co/image.gif" alt="" />
-        </noscript> */}
       </body>
     </html>
   );

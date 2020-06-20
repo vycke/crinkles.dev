@@ -3,16 +3,12 @@
 *******/
 html,
 body {
-  font-weight: 400;
   font-size: var(--size-default);
   font-family: var(--sans-serif);
-  line-height: 1.75;
   background-color: var(--bg-default);
   color: var(--text-default);
   transition: all ease-in-out 100ms;
   min-width: calc(var(--min-width) * 1px);
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 // HEADINGS
@@ -41,7 +37,6 @@ a:link,
 a:visited,
 a:active {
   transition: all ease-in-out 100ms;
-  text-decoration: underline;
   text-decoration-color: var(--text-secondary);
 }
 
@@ -58,7 +53,6 @@ a.svg {
 ::selection {
   color: var(--bg-default) !important;
   background: var(--text-default) !important;
-  text-shadow: 0 0 0 (--bg-default);
 }
 
 // QUOTES

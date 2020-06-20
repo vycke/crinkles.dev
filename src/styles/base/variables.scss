@@ -4,9 +4,10 @@
   // Colors
   --gray-100: #ffffff;
   --gray-200: #e0e6eb;
-  --gray-300: #8e9398;
-  --gray-400: #2a2e32;
-  --gray-500: #121319;
+  --gray-300: #90959b;
+  --gray-400: #707478;
+  --gray-500: #2a2e32;
+  --gray-600: #121319;
 
   --purple: #755cf2;
   --green: #09a976;
@@ -49,18 +50,19 @@
 
 // default theme
 body {
-  --text-default: var(--gray-500);
+  --text-default: var(--gray-600);
+  --text-secondary: var(--gray-400);
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
-  --text-secondary: var(--gray-300);
 
   --accent: var(--purple);
-  --bg-footer: var(--gray-500);
+  --bg-footer: var(--gray-600);
 }
 
 // Themes
 body.dark {
   --text-default: var(--gray-100);
-  --bg-default: var(--gray-500);
-  --bg-secondary: var(--gray-400);
+  --text-secondary: var(--gray-300);
+  --bg-default: var(--gray-600);
+  --bg-secondary: var(--gray-500);
 }

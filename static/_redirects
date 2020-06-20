@@ -3,10 +3,3 @@
 # Redirect default Netlify subdomain to primary domain
 https://kevtiq.netlify.com/* https://kevtiq.dev/:splat 301!
 
-/favicon.ico /favicon-32x32.png
-/ads.txt /
-/wp-admin /
-/wp-login.php /
-/wordpress /
-/index.php /
-/data/admin/allowurl.txt /

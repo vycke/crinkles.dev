@@ -28,7 +28,7 @@ const Card = ({
       <div className="card__content">
         {meta && <span className="card__meta">{meta}</span>}
         <a href={url} className="card__title">
-          <h3>{title}</h3>
+          <h2>{title}</h2>
         </a>
 
         {subtitle && <span className="card__subtitle">{subtitle}</span>}

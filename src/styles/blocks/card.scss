@@ -32,7 +32,7 @@ a.card__title {
   color: var(--text-default);
   cursor: pointer;
 
-  > h3 {
+  > * {
     margin-bottom: 0.5rem;
   }
 
@@ -74,7 +74,7 @@ a.card__title {
 }
 
 .card--large {
-  .card__title > h3 {
+  .card__title > * {
     font-size: var(--size-h1);
   }
 }

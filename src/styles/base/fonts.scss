@@ -10,8 +10,8 @@
   font-family: 'Inter';
   font-weight: 600;
   font-display: swap;
-  src: url('/fonts/Inter-SemiBold.woff2?v=3.13') format('woff'),
-    url('/fonts/Inter-SemiBold.woff2?v=3.13') format('woff');
+  src: url('/fonts/Inter-SemiBold.woff2?v=3.13') format('woff2'),
+    url('/fonts/Inter-SemiBold.woff?v=3.13') format('woff');
 }
 
 @font-face {
@@ -19,8 +19,8 @@
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  src: url('/fonts/Inter-Italic.woff2?v=3.13') format('woff'),
-    url('/fonts/Inter-Italic.woff2?v=3.13') format('woff');
+  src: url('/fonts/Inter-Italic.woff2?v=3.13') format('woff2'),
+    url('/fonts/Inter-Italic.woff?v=3.13') format('woff');
 }
 
 @font-face {
@@ -28,6 +28,35 @@
   font-weight: 600;
   font-style: italic;
   font-display: swap;
-  src: url('/fonts/Inter-SemiBoldItalic.woff2?v3.13') format('woff'),
-    url('/fonts/Inter-SemiBoldItalic.woff2?v3.13') format('woff');
+  src: url('/fonts/Inter-SemiBoldItalic.woff2?v3.13') format('woff2'),
+    url('/fonts/Inter-SemiBoldItalic.woff?v3.13') format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-bold-subset.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-bold-subset.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-style: italic;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-italic-subset.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-italic-subset.woff')
+      format('woff');
 }

@@ -6,7 +6,7 @@ body {
   font-family: var(--sans-serif);
   background-color: var(--bg-default);
   color: var(--text-default);
-  transition: all ease-in-out 100ms;
+  transition: var(--transition);
   min-width: calc(var(--min-width) * 1px);
 }
 
@@ -35,7 +35,7 @@ h3 {
 a:link,
 a:visited,
 a:active {
-  transition: all ease-in-out 100ms;
+  transition: var(--transition);
   text-decoration-color: var(--text-secondary);
 }
 

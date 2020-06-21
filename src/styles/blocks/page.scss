@@ -27,7 +27,7 @@
   align-items: center;
   padding: calc(var(--logo-size) * 0.5);
   border-radius: 0.25rem;
-  transition: all ease-in-out 100ms;
+  transition: var(--transition);
 
   > img {
     height: var(--logo-size);
@@ -42,20 +42,15 @@
   height: calc(1.25rem + var(--logo-size));
   padding: calc(var(--logo-size) * 0.5);
   border-radius: 0.25rem;
-  transition: all ease-in-out 100ms;
+  transition: var(--transition);
+  color: var(--text-default);
 
   * {
     height: 1.25rem;
-    color: var(--text-default);
   }
 
   &:hover {
     background-color: var(--bg-secondary);
-
-    * {
-      stroke: var(--text-default);
-      color: var(--text-default);
-    }
   }
 }
 
@@ -81,20 +76,6 @@
 
   span {
     flex-grow: 1;
-  }
-}
-
-.footer .icon {
-  * {
-    stroke: var(--gray-100);
-    color: var(--gray-100);
-  }
-
-  &:hover {
-    * {
-      stroke: var(--text-default);
-      color: var(--text-default);
-    }
   }
 }
 

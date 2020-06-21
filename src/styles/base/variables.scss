@@ -46,6 +46,9 @@
   --sans-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
+
+  // utils
+  --transition: var(--transition);
 }
 
 // default theme

@@ -1,7 +1,6 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import Pagination from '../components/Pagination';
 import { formatReadingTime } from '../utils/readingTime';
 
 const BlogPost = ({ data, pageContext }) => {
@@ -49,7 +48,21 @@ const BlogPost = ({ data, pageContext }) => {
         />
       </main>
 
-      <Pagination prev={prev} next={next} />
+      <section className="pagination">
+        {!next && prev && <div />}
+        {next && (
+          <Link className="next" to={next.link}>
+            <span>← Next</span>
+            <h3>{next.title}</h3>
+          </Link>
+        )}
+        {prev && (
+          <Link className="previous" to={prev.link}>
+            <span>Previous →</span>
+            <h3>{prev.title}</h3>
+          </Link>
+        )}
+      </section>
     </Layout>
   );
 };

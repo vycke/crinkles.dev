@@ -1,10 +1,11 @@
 // Cards
 .card {
-  transition: all ease-in-out 200ms;
+  transition: var(--transition);
   color: var(--text-secondary);
   position: relative;
   overflow: hidden;
   display: grid;
+  font-size: calc(0.875 * var(--size-default));
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   column-gap: var(--s1);
@@ -13,7 +14,7 @@
 
 .card__image {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   object-fit: cover;
   display: inline-block;
   vertical-align: middle;
@@ -28,12 +29,12 @@
 a.card__title {
   text-decoration: none;
   text-decoration-color: var(--text-secondary);
-  transition: all ease-in-out 200ms;
+  transition: var(--transition);
   color: var(--text-default);
   cursor: pointer;
 
   > * {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
   }
 
   &:hover,
@@ -54,8 +55,10 @@ a.card__title {
 }
 
 .card__meta {
-  font-size: 0.75rem;
-  color: var(--text-default);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.75em;
 }
 
 .card--vertical {
@@ -72,13 +75,14 @@ a.card__title {
   }
 }
 
-.card--large {
-  .card__title > * {
-    font-size: var(--size-h1);
-  }
+.card--large .card__title > * {
+  font-size: var(--size-h1);
 }
 
 @media (max-width: 45rem) {
+  .card--large .card__title > * {
+    font-size: var(--size-h2);
+  }
   .card--horizontal {
     .card__image,
     .card__content {

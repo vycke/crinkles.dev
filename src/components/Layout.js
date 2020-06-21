@@ -3,11 +3,6 @@ import { Link } from 'gatsby';
 import logo_dark from '../img/logo-dark.svg';
 import logo_light from '../img/logo-light.svg';
 
-import Dribbble from '../icons/Dribbble';
-import Dev from '../icons/Dev';
-import Github from '../icons/Github';
-import Twitter from '../icons/Twitter';
-
 import '../styles/index.scss';
 import { AppContext } from './Context';
 import { Helmet } from 'react-helmet';
@@ -81,7 +76,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
         {children}
 
         <footer className="footer">
-          <span>kevtiq.dev</span>
+          <span>kevtiq.</span>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
             twitter
           </a>

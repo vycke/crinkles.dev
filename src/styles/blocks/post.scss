@@ -47,12 +47,3 @@
     justify-self: center;
   }
 }
-
-.anchor {
-  &:before {
-    content: '#';
-    width: 1.5em;
-    display: inline-block;
-    color: var(--text-secondary);
-  }
-}

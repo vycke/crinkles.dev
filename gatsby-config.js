@@ -75,13 +75,6 @@ module.exports = {
         plugins: [
           'gatsby-remark-unwrap-images',
           {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              icon: '',
-              className: `anchor`,
-            },
-          },
-          {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'uploads',

@@ -9,11 +9,10 @@
   --gray-500: #30303c;
   --gray-600: #121319;
 
-  --purple: #755cf2;
   --green: #09a976;
-  --red: #e60067;
+  --red: #ff4137;
   --blue: #4b6bdc;
-  --orange: #ff4924;
+  --yellow: #ffb700;
 
   // Spacing and sizes
   --min-width: 320;
@@ -58,7 +57,6 @@ body {
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
 
-  --accent: var(--orange);
   --bg-footer: var(--gray-600);
 }
 

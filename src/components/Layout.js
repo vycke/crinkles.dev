@@ -45,7 +45,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
       <div className={`site ${className}`}>
         <header role="banner" className="header">
-          <Link to="/" className="header__logo">
+          <Link to="/" className="logo">
             <img
               src={theme === 'dark' ? logo_dark : logo_light}
               alt="Kevtiq logo used by Kevin Pennekamp"

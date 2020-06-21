@@ -19,25 +19,23 @@
   .next,
   .previous {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 1rem 0;
+
+    > span {
+      font-size: 0.75em;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
   }
 
   .next {
-    justify-content: flex-start;
-    &::before {
-      content: '←';
-      margin-right: var(--s1);
-    }
+    align-items: flex-start;
   }
 
   .previous {
-    justify-content: flex-end;
+    align-items: flex-end;
     text-align: right;
-
-    &::after {
-      content: '→';
-      margin-left: var(--s1);
-    }
   }
 }

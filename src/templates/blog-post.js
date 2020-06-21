@@ -1,9 +1,6 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import Pagination from '../components/Pagination';
-import { Link } from 'gatsby';
-import camelCase from '../utils/camelCase';
 import { formatReadingTime } from '../utils/readingTime';
 
 const BlogPost = ({ data, pageContext }) => {
@@ -28,8 +25,6 @@ const BlogPost = ({ data, pageContext }) => {
     url: `https://www.kevtiq.dev${data.markdownRemark.fields.slug}`,
   };
 
-  const twt = `${meta.title} by @kevtiq ${meta.url}`;
-
   return (
     <Layout
       className="post"
@@ -51,14 +46,23 @@ const BlogPost = ({ data, pageContext }) => {
           className="grid sm post__body stack-small"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <footer className="grid post__meta">
-          <a href={`https://twitter.com/intent/tweet?text=${twt}`}>
-            share on twitter
-          </a>
-        </footer>
       </main>
 
-      <Pagination prev={prev} next={next} />
+      <section className="pagination">
+        {!next && prev && <div />}
+        {next && (
+          <Link className="next" to={next.link}>
+            <span>← Next</span>
+            <h3>{next.title}</h3>
+          </Link>
+        )}
+        {prev && (
+          <Link className="previous" to={prev.link}>
+            <span>Previous →</span>
+            <h3>{prev.title}</h3>
+          </Link>
+        )}
+      </section>
     </Layout>
   );
 };

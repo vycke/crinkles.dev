@@ -3,11 +3,6 @@ import { Link } from 'gatsby';
 import logo_dark from '../img/logo-dark.svg';
 import logo_light from '../img/logo-light.svg';
 
-import Dribbble from '../icons/Dribbble';
-import Dev from '../icons/Dev';
-import Github from '../icons/Github';
-import Twitter from '../icons/Twitter';
-
 import '../styles/index.scss';
 import { AppContext } from './Context';
 import { Helmet } from 'react-helmet';
@@ -57,18 +52,15 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
             />
           </Link>
           <button
-            className="header__toggle"
+            className="icon"
             type="button"
             aria-label="theme switcher"
             onClick={updateTheme}>
             <svg
               viewBox="0 0 32 32"
               fill="currentcolor"
-              width="1em"
-              height="1em"
               display="block"
-              color="neutral.1"
-              class="icon">
+              color="neutral.1">
               <circle
                 cx="16"
                 cy="16"
@@ -84,20 +76,20 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
         {children}
 
         <footer className="footer">
-          <span>© 2019 - present Kevin Pennekamp. All Rights Reserved.</span>
+          <span>kevtiq.</span>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
-            <Twitter />
+            twitter
           </a>
           <a href="https://github.com/kevtiq" alt="Link to my Github page">
-            <Github />
+            Github
           </a>
           <a href="https://dribbble.com/kevtiq" alt="Link to my Dribbble page">
-            <Dribbble />
+            Dribbble
           </a>
           <a
             href="https://dev.to/kevtiq"
             alt="Link to my the Practical Dev profile page">
-            <Dev />
+            Dev.to
           </a>
         </footer>
       </div>

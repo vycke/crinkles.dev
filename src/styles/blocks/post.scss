@@ -1,5 +1,6 @@
 .post {
-  --page-width: 65ch;
+  --page-width: 60ch;
+  font-size: var(--size-default);
 }
 
 .post__meta {
@@ -9,8 +10,10 @@
 
   span,
   a {
-    font-family: var(--monospace);
-    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.75em;
   }
 }
 
@@ -18,7 +21,7 @@
   width: 100%;
 
   li + li {
-    margin-top: 0.25rem;
+    margin-top: 0.25em;
   }
 
   * {
@@ -28,11 +31,12 @@
   ul {
     list-style: disc outside;
     padding-left: var(--s2);
+    margin-bottom: 0;
   }
 
   ol {
     list-style: decimal outside;
-    padding-left: 1.5rem;
+    padding-left: 1.5em;
   }
 
   img,
@@ -41,14 +45,5 @@
     width: 100%;
     max-width: calc(var(--page-width) + var(--s3));
     justify-self: center;
-  }
-}
-
-.anchor {
-  &:before {
-    content: '#';
-    width: 1.5rem;
-    display: inline-block;
-    color: var(--text-secondary);
   }
 }

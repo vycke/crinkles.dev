@@ -2,23 +2,23 @@
 
 :root {
   // Colors
-  --gray-100: #ffffff;
-  --gray-200: #e0e6eb;
+  --gray-100: #fafafa;
+  --gray-200: #d1d6db;
   --gray-300: #90959b;
   --gray-400: #707478;
-  --gray-500: #2a2e32;
+  --gray-500: #30303c;
   --gray-600: #121319;
 
   --purple: #755cf2;
   --green: #09a976;
   --red: #e60067;
   --blue: #4b6bdc;
+  --orange: #ff4924;
 
   // Spacing and sizes
   --min-width: 320;
   --max-width: 1200;
-  --base: 16;
-  --scale: 4;
+  --min-size: 18;
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
@@ -26,26 +26,29 @@
   --ratio: calc(var(--screen) / (var(--max-width) - var(--min-width)));
 
   // Font-sizes
-  --size-default: calc(var(--base) * 1px + var(--scale) * var(--ratio));
-  --size-h1: calc(1.75rem + 0.5 * var(--base) * var(--ratio));
-  --size-h2: calc(1.375rem + 0.25 * var(--base) * var(--ratio));
-  --size-h3: 1.25rem;
+  --size-default: calc(var(--min-size) * 1px + 4 * var(--ratio));
+  --size-h1: calc(1.75rem + 0.5 * var(--min-size) * var(--ratio));
+  --size-h2: calc(1.375rem + 0.25 * var(--min-size) * var(--ratio));
+  --size-h3: calc(1.25rem + 0.25 * var(--min-size) * var(--ratio));
 
   // spacing
-  --s1: calc(var(--base) * 1px + var(--base) * var(--ratio));
+  --s1: calc(var(--min-size) * 1px + var(--min-size) * var(--ratio));
   --s0: calc(0.5 * var(--s1));
   --s2: calc(1.25 * var(--s1));
   --s3: calc(2 * var(--s1));
 
   // general-sizes
   --page-width: calc(var(--max-width) * 1px);
-  --logo-size: calc(1.25 * var(--base) * 1px + 4 * var(--ratio));
+  --logo-size: calc(1.25 * var(--min-size) * 1px + 4 * var(--ratio));
   --card: 18rem;
 
   // font-family
   --sans-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
+
+  // utils
+  --transition: var(--transition);
 }
 
 // default theme
@@ -55,7 +58,7 @@ body {
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
 
-  --accent: var(--purple);
+  --accent: var(--orange);
   --bg-footer: var(--gray-600);
 }
 

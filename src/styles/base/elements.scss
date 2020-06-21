@@ -3,7 +3,6 @@
 *******/
 html,
 body {
-  font-size: var(--size-default);
   font-family: var(--sans-serif);
   background-color: var(--bg-default);
   color: var(--text-default);
@@ -58,7 +57,7 @@ a.svg {
 // QUOTES
 blockquote {
   border-left: 0.25rem solid var(--text-secondary);
-  padding: 0.25rem 1rem;
+  padding: 0 1rem;
   font-style: italic;
   color: var(--text-default);
 

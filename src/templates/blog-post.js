@@ -2,8 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Pagination from '../components/Pagination';
-import { Link } from 'gatsby';
-import camelCase from '../utils/camelCase';
 import { formatReadingTime } from '../utils/readingTime';
 
 const BlogPost = ({ data, pageContext }) => {
@@ -28,8 +26,6 @@ const BlogPost = ({ data, pageContext }) => {
     url: `https://www.kevtiq.dev${data.markdownRemark.fields.slug}`,
   };
 
-  const twt = `${meta.title} by @kevtiq ${meta.url}`;
-
   return (
     <Layout
       className="post"
@@ -51,11 +47,6 @@ const BlogPost = ({ data, pageContext }) => {
           className="grid sm post__body stack-small"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <footer className="grid post__meta">
-          <a href={`https://twitter.com/intent/tweet?text=${twt}`}>
-            share on twitter
-          </a>
-        </footer>
       </main>
 
       <Pagination prev={prev} next={next} />

@@ -1,4 +1,4 @@
-import _ from './src/utils';
+import get from './src/utils/get';
 
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
@@ -64,8 +64,8 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    let posts = _.get(result, 'data.allMarkdownRemark.edges', []).filter(
-      (p) => new Date(_.get(p, 'node.frontmatter.date')) <= new Date()
+    let posts = get(result, 'data.allMarkdownRemark.edges', []).filter(
+      (p) => new Date(get(p, 'node.frontmatter.date')) <= new Date()
     );
 
     createPostPage(createPage, posts);

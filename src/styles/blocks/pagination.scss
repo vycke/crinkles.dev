@@ -10,15 +10,11 @@
     minmax(calc(var(--min-width) * 1px), 1fr)
   );
 
-  a {
-    text-decoration: none;
+  a.next,
+  a.previous {
+    text-decoration-color: var(--bg-default);
     display: flex;
     justify-content: center;
-  }
-
-  .next,
-  .previous {
-    display: flex;
     flex-direction: column;
     padding: 1rem 0;
 

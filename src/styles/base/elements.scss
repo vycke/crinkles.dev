@@ -32,6 +32,8 @@ h3 {
 }
 
 // LINKS
+a,
+a > *,
 a:link,
 a:visited,
 a:active {
@@ -40,8 +42,9 @@ a:active {
 }
 
 a:hover,
-a > *:hover {
+a:hover > * {
   color: var(--text-secondary);
+  text-decoration-color: var(--text-secondary);
 }
 
 a.svg {

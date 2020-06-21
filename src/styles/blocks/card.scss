@@ -27,20 +27,14 @@
 }
 
 a.card__title {
-  text-decoration: none;
-  text-decoration-color: var(--text-secondary);
-  transition: var(--transition);
+  text-decoration-color: var(--bg-default);
   color: var(--text-default);
   cursor: pointer;
-
-  > * {
-    margin-bottom: 0.5em;
-  }
+  margin-bottom: 0.5em;
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration: underline;
     text-decoration-color: var(--text-secondary);
   }
 

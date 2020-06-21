@@ -81,30 +81,20 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
         {children}
 
         <footer className="footer">
-          <span>© 2019 - present kevtiq.dev</span>
-          <a
-            className="icon"
-            href="https://twitter.com/kevtiq"
-            alt="Link to my Twitter page">
-            <Twitter />
+          <span>kevtiq.dev</span>
+          <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
+            twitter
+          </a>
+          <a href="https://github.com/kevtiq" alt="Link to my Github page">
+            Github
+          </a>
+          <a href="https://dribbble.com/kevtiq" alt="Link to my Dribbble page">
+            Dribbble
           </a>
           <a
-            className="icon"
-            href="https://github.com/kevtiq"
-            alt="Link to my Github page">
-            <Github />
-          </a>
-          <a
-            className="icon"
-            href="https://dribbble.com/kevtiq"
-            alt="Link to my Dribbble page">
-            <Dribbble />
-          </a>
-          <a
-            className="icon"
             href="https://dev.to/kevtiq"
             alt="Link to my the Practical Dev profile page">
-            <Dev />
+            Dev.to
           </a>
         </footer>
       </div>

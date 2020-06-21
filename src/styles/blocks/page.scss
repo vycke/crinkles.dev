@@ -49,10 +49,13 @@
     color: var(--text-default);
   }
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     background-color: var(--bg-secondary);
+
+    * {
+      stroke: var(--text-default);
+      color: var(--text-default);
+    }
   }
 }
 
@@ -67,8 +70,14 @@
   align-items: center;
   line-height: 1;
   font-size: 0.875rem;
+  font-weight: 600;
+  flex-wrap: wrap;
   text-transform: uppercase;
   color: var(--gray-100);
+
+  > * {
+    padding: calc(var(--logo-size) * 0.5);
+  }
 
   span {
     flex-grow: 1;
@@ -81,9 +90,7 @@
     color: var(--gray-100);
   }
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     * {
       stroke: var(--text-default);
       color: var(--text-default);

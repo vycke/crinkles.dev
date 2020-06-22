@@ -27,14 +27,17 @@
   border-radius: 0.25rem;
   transition: var(--transition);
   color: var(--text-default);
+  fill: var(--text-default);
 
   &:hover {
     background-color: var(--bg-secondary);
   }
 }
 
-.logo img {
+.logo svg {
   height: var(--logo-size);
+  width: calc(var(--logo-size) * 250 / 300);
+  fill: var(--text-default);
 }
 
 .icon svg {

@@ -12,7 +12,7 @@
 * Main site header *
 **/
 .header {
-  padding: calc(var(--s1) - var(--logo-size) * 0.5);
+  padding: var(--s1) calc(var(--s1) - var(--logo-size) * 0.5);
   display: flex;
   margin: 0 auto;
   justify-content: space-between;

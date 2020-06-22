@@ -46,4 +46,10 @@
     max-width: calc(var(--page-width) + var(--s3));
     justify-self: center;
   }
+
+  img,
+  pre {
+    box-shadow: 0 0 calc(var(--size-default) * 3) calc(var(--size-default) / 2)
+      rgba(0, 0, 0, 0.06);
+  }
 }

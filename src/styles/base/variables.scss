@@ -3,10 +3,10 @@
 :root {
   // Colors
   --gray-100: #fafafa;
-  --gray-200: #d1d6db;
+  --gray-200: #e0e4e9;
   --gray-300: #90959b;
   --gray-400: #707478;
-  --gray-500: #30303c;
+  --gray-500: #292933;
   --gray-600: #121319;
 
   --green: #09a976;
@@ -34,7 +34,7 @@
   --s1: calc(var(--min-size) * 1px + var(--min-size) * var(--ratio));
   --s0: calc(0.5 * var(--s1));
   --s2: calc(1.25 * var(--s1));
-  --s3: calc(2 * var(--s1));
+  --s3: calc(1.5 * var(--s1));
 
   // general-sizes
   --page-width: calc(var(--max-width) * 1px);

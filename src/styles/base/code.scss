@@ -6,12 +6,16 @@
 // function: object.fn
 // string, number: primitives
 
+.token {
+  color: var(--text-default);
+}
+
 .token.operator,
 .token.punctuation,
 .token.string,
 .token.number,
 .token.comment {
-  color: var(--gray-300);
+  color: var(--text-secondary);
 }
 
 .token.comment,
@@ -31,17 +35,17 @@ pre[class*='language-'] {
   font-size: 0.875em;
   overflow: auto;
   line-height: 1.6;
-  color: var(--gray-100);
+  color: var(--text-default);
   padding: var(--s1);
-  background-color: var(--gray-500) !important;
+  background-color: var(--bg-secondary) !important;
 
   > code[class*='language-'] {
     font-family: var(--monospace);
   }
 
   ::selection {
-    color: var(--gray-600) !important;
-    background: var(--gray-100) !important;
+    color: var(--bg-default) !important;
+    background: var(--text-default) !important;
   }
 }
 

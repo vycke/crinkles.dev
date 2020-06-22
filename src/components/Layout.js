@@ -43,10 +43,14 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
       <div className={`site ${className}`}>
         <header role="banner" className="header">
-          <Link to="/" className="logo">
+          <Link
+            to="/"
+            aria-label="Logo that redirects to the homepage"
+            className="logo">
             <svg
               viewBox="0 0 250 300"
               fill="currentcolor"
+              aria-label="Logo that redirects to the homepage"
               color="neutral.1"
               display="block">
               <path

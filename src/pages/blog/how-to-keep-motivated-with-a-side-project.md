@@ -63,4 +63,4 @@ I started with the designs of my [logo](https://dribbble.com/shots/6709595-Perso
 
 ## What keeps you motivated?
 
-As you can read, there is a flow or process in how I could finally get my website started and keep my motivation going. How do you keep motivated about your hobbies and side projects? Let me know on [Twitter](https://twitter.com/kevtiq)!
+As you can read, there is a flow or process in how I could finally get my website started and keep my motivation going. How do you keep motivated about your hobbies and side projects? Let me know on [Twitter](https://twitter.com/vyckedev)!

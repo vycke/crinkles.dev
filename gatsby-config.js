@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.kevtiq.dev',
+    siteUrl: 'https://www.vycke.dev',
     author: 'Kevin Pennekamp',
-    title: 'kevtiq | Kevin Pennekamp',
-    image: '/img/kevtiq-logo.png',
-    twitterName: '@kevtiq',
+    title: 'Kevin Pennekamp',
+    image: '/img/logo.png',
+    twitterName: '@vyckedev',
     description:
       'Personal website of Kevin Pennekamp, a blog about my opinions about CSS, front-end engineering, and web design',
     keywords: [
@@ -39,7 +39,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'A front-end engineer',
-        short_name: 'Kevtiq',
+        short_name: 'vycke.dev',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#2a3654',

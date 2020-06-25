@@ -30,17 +30,17 @@ It was not until the last years of my studies that I got renewed interest inform
 - I became the lead engineer of the team;
 - We went from one front-end engineer (me) to five front-end engineers in the team.
 
-This path continued and will continue in (the beginning of) 2020. In the meantime, I finally launched my blog. This was in the works for over ten years, but I never pulled the trigger to release it. But in June 2019, I finally created the blog I always wanted. In the meantime, I have written a small set of articles and I even had some success. One of my articles took off on [The Practical Dev](https://dev.to/kevtiq/how-to-create-a-scalable-and-maintainable-front-end-architecture-4f47). Even with low visitor numbers, I found great joy in writing and updating my website.
+This path continued and will continue in (the beginning of) 2020. In the meantime, I finally launched my blog. This was in the works for over ten years, but I never pulled the trigger to release it. But in June 2019, I finally created the blog I always wanted. In the meantime, I have written a small set of articles and I even had some success. One of my articles took off on [The Practical Dev](https://dev.to/vycke/how-to-create-a-scalable-and-maintainable-front-end-architecture-4f47). Even with low visitor numbers, I found great joy in writing and updating my website.
 
 ## Going into 2020: 'reliability first'
 
 2020 will be a challenging year. I have to step up as team-lead. I have to keep my team happy and enable to grow in the directions they want. In the first half of the year, this will be a big focus. Not for the team, but for me, as I have much learning to do before I can enable my team.
 
-Looking at front-end development, I have some clear goals for 2020. With growing projects in size, our way of tackling these projects has to mature. We already looked into a [scalable architecture](https://kevtiq.dev/blog/scalable-front-end-architecture/), but that was the beginning. Always trying the 'next best thing' is fun, but our applications do not always benefit from them. They become less reliable. 2020 will be the year I grow myself in fundamental knowledge to improve reliability. I am going 'reliability first'. This means I will focus on:
+Looking at front-end development, I have some clear goals for 2020. With growing projects in size, our way of tackling these projects has to mature. We already looked into a [scalable architecture](https://vycke.dev/blog/scalable-front-end-architecture/), but that was the beginning. Always trying the 'next best thing' is fun, but our applications do not always benefit from them. They become less reliable. 2020 will be the year I grow myself in fundamental knowledge to improve reliability. I am going 'reliability first'. This means I will focus on:
 
 - Become better in testing my code;
 - Research and apply concepts like 'finite state machines' in front-end state management;
-- Research concepts are known from back-end development and see how they can be applied in front-end (and if they should be applied!). A good example is the publish-subscribe pattern, that we already use in our [architecture](https://kevtiq.dev/blog/scalable-front-end-architecture/);
+- Research concepts are known from back-end development and see how they can be applied in front-end (and if they should be applied!). A good example is the publish-subscribe pattern, that we already use in our [architecture](https://vycke.dev/blog/scalable-front-end-architecture/);
 - Determine how to track user behavior and errors. This should provide insights on what to focus on when maintaining applications (e.g. performance improvements);
 - Developing with performance in mind (e.g. optimizing assets, lazy loading, code splitting, or apply memoization);
 - Applying data normalization in state management and study the impact on the application and the collaboration within a team when applied;

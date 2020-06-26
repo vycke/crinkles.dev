@@ -13,7 +13,7 @@ function createPostPage(createPage, posts) {
 
     createPage({
       path: node.fields.slug,
-      tags: node.frontmatter.tags,
+      category: node.frontmatter.category,
       component: path.resolve(
         `src/templates/${String(node.frontmatter.templateKey)}.js`
       ),
@@ -48,7 +48,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
+              category
               date
               title
               description

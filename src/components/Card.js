@@ -6,8 +6,7 @@ const Card = ({
   variant,
   subtitle,
   meta,
-  tags,
-  image,
+  category,
   url,
   reverse,
   className = '',
@@ -16,12 +15,14 @@ const Card = ({
   let classes = `card card--${orientation}`;
   if (variant) classes += ` card--${variant}`;
 
+  console.log(category);
+
   return (
     <section className={`${classes} ${className}`} role="article">
-      {image && (
+      {category && (
         <img
           className="card__image"
-          src={`../../img/${image}`}
+          src={`../../img/headers/${category}.png`}
           alt="Featured of this card"
         />
       )}

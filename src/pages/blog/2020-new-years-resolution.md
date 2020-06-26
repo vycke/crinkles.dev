@@ -3,11 +3,9 @@ templateKey: blog-post
 title: 2020 New year's resolution
 draft: false
 date: 2020-01-01T00:00:00.000Z
-featuredImage: headers/header-5.png
 description: >-
   A new year with the focus on reliability, resilience and stable architecture.
-tags:
-  - writing
+category: misc
 ---
 
 ![New years resolution](/img/new-years-resolution.png 'New years resolution')

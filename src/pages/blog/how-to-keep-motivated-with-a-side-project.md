@@ -3,11 +3,9 @@ templateKey: blog-post
 title: How do you find motivation to get your side projects going?
 date: 2019-08-29T00:00:00.000Z
 draft: false
-featuredImage: headers/header-6.png
 description: >-
   Keep learning something new on each iteration of your side project to keep yourself motivated
-tags:
-  - writing
+category: misc
 ---
 
 I am doing web development for over 10 years. It all started with a free university license of Photoshop that got me into web design. I came to realize that if I wanted my designs coming to live on the web, I had to learn HTML and CSS to make it happen. Photoshop and some web development became a hobby of mine. Around the same time, I found another hobby: writing.

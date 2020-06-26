@@ -3,12 +3,9 @@ templateKey: blog-post
 title: Interfacing your UI components
 date: 2019-07-19T00:00:00.000Z
 draft: false
-featuredImage: headers/header-4.png
 description: >-
   Interfaces are everywhere, for users and developers, so why not use them?
-tags:
-  - UI
-  - architecture
+category: front-end
 ---
 
 In recent years, front-end development became an important part of my life. But when I started years ago, I did not understand what an API was. I worked with them, but I never cared what it exactly was, or what it requires building one. I knew what the concept of interfaces in UI, but its relation with the letter "I" of API was lost to me. At a certain point, collaboration becomes more important. Your colleagues should be able to use and understand your work. This was the point for me I started to see the connection between API and UI in front-end development.
@@ -71,15 +68,15 @@ const Button = ({ onClick, variant, children, override, className, type }) => {
 Button.propTypes = {
   variant: PropTypes.oneOf(['primary', 'stroke', 'flat']).isRequired,
   onClick: PropTypes.func.isRequired,
-  override: PropTypes.object
+  override: PropTypes.object,
 };
 
 Button.defaultProps = {
   variant: 'primary',
   className: '',
   override: {
-    defaultClassName: 'btn'
-  }
+    defaultClassName: 'btn',
+  },
 };
 ```
 

@@ -1,15 +1,11 @@
 ---
 templateKey: blog-post
 title: The UX design process for engineers
-pinned: true
 draft: false
 date: 2019-07-05T00:00:00.000Z
-featuredImage: headers/header-3.png
 description: >-
   How can we work together with UX designers? Their process has more in common with ours than we know
-tags:
-  - design
-  - process
+category: engineering
 ---
 
 As a software engineer, it sometimes can be difficult to understand what UX designing is. Is it the same as UI design? What is the direct value for my product/project I am working on? And so on. Some of these questions are not only asked by engineers but can also be asked by stakeholders or management. Especially when it is absent in your current situation, it can become difficult to sell the value of UX design to others. You will have a better understanding of the UX design process and its relation to software engineering after reading this blog post. Also, I'll give you some information on how to check the 'UX maturity' in your project, team or organization.

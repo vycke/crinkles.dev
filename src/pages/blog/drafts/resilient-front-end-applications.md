@@ -1,16 +1,11 @@
 ---
 templateKey: blog-post
 title: Resilient front-end applications
-pinned: true
 draft: true
 date: 2020-03-01T00:00:00.000Z
-featuredImage: request-times.png
 description: >-
   Keeping our applications healthy and reliable is complex, and difficult to achieve
-tags:
-  - resilience
-  - reliability
-  - logging
+category: engineering
 ---
 
 Our smartphones and computers are become powerful every year. We see the increase in power back on the web. Our front-end applications are becoming bigger and more complex. Previously, I have written about a [scalable architecture](/blog/scalable-front-end-architecture/) for front-end applications. A scalable architecture is a good first step towards a reliable and resilient applications. But we, as engineers, are responsible to maintain a single code-base that runs many different environments. How can we know what is going on within our applications when others are using it? And if we don't know what is happening on the inside, how ca we determine what needs to be improved?
@@ -32,8 +27,8 @@ Many different errors can happen in the front-end. Some are coming from our serv
 - Capture all errors on `window` level using the code-snippet displayed below (although this also captures errors from browser extensions).
 
 ```js
-window.addEventListener('error', function(event) {});
-window.addEventListener('unhandledrejection', function(event) {});
+window.addEventListener('error', function (event) {});
+window.addEventListener('unhandledrejection', function (event) {});
 ```
 
 But why should you capture and handle errors in the first place? The biggest reason is your user. You enable yourself to maintain a good user experience, even in the event of an error. You can provide a proper message, show it visually on the screen, or ensure only a small part of your application is not working.

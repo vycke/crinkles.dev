@@ -1,15 +1,11 @@
 ---
 templateKey: blog-post
 title: An ode to the CSS owl selector
-pinned: true
 draft: false
 date: 2019-07-26T00:00:00.000Z
-featuredImage: headers/owl.png
 description: >-
   One off the most beautiful CSS selectors is the Lobotomized Owl Selector of Heydon Pickering
-tags:
-  - CSS
-  - UI
+category: css
 ---
 
 ![The owl selector](/img/owl-selector.png 'The owl selector')

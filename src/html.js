@@ -14,7 +14,7 @@ export default function HTML(props) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="dark">
+      <body {...props.bodyAttributes}>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -22,7 +22,7 @@ export default function HTML(props) {
                 function setTheme(theme) {
                   window.__theme = theme;
                   preferredTheme = theme;
-                  document.body.className = theme;
+                  document.body.setAttribute('data-theme', theme);
                 }
                 window.__setPreferredTheme = function(theme) {
                   setTheme(theme);

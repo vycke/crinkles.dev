@@ -61,7 +61,7 @@ body {
 }
 
 // Themes
-body.dark {
+body[data-theme='dark'] {
   --text-default: var(--gray-100);
   --text-secondary: var(--gray-300);
   --bg-default: var(--gray-600);

@@ -11,6 +11,8 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   const highlights = posts.slice(0, NUM_HIGHLIGHT);
   const meta = data.site.siteMetadata;
 
+  console.log(posts);
+
   return (
     <Layout meta={meta}>
       <main className="content stack-large grid">
@@ -31,7 +33,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
             variant="large"
             url={p.node.fields.slug}
             subtitle={p.node.frontmatter.description}
-            image={p.node.frontmatter.featuredImage}
+            category={p.node.frontmatter.category}
             orientation="horizontal"
             meta={`${p.node.frontmatter.date} • ${formatReadingTime(
               p.node.wordCount.words
@@ -47,7 +49,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
                 title={post.frontmatter.title}
                 url={post.fields.slug}
                 subtitle={post.frontmatter.description}
-                image={post.frontmatter.featuredImage}
+                category={p.node.frontmatter.category}
                 orientation="vertical"
                 meta={`${post.frontmatter.date} • ${formatReadingTime(
                   post.wordCount.words
@@ -95,8 +97,7 @@ export const postOverviewPageQuery = graphql`
           frontmatter {
             title
             description
-            tags
-            featuredImage
+            category
             date(formatString: "MMMM DD, YYYY")
           }
         }

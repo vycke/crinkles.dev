@@ -4,7 +4,7 @@ module.exports = {
     author: 'Kevin Pennekamp',
     title: 'Kevin Pennekamp',
     image: '/img/logo.png',
-    twitterName: '@vyckedev',
+    twitterName: '@vycke_',
     description:
       'Personal website of Kevin Pennekamp, a blog about my opinions about CSS, front-end engineering, and web design',
     keywords: [
@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ['/admin', '/tags/links'],
+        exclude: ['/admin'],
       },
     },
     {

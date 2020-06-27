@@ -11,8 +11,6 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   const highlights = posts.slice(0, NUM_HIGHLIGHT);
   const meta = data.site.siteMetadata;
 
-  console.log(posts);
-
   return (
     <Layout meta={meta}>
       <main className="content stack-large grid">

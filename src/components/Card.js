@@ -15,8 +15,6 @@ const Card = ({
   let classes = `card card--${orientation}`;
   if (variant) classes += ` card--${variant}`;
 
-  console.log(category);
-
   return (
     <section className={`${classes} ${className}`} role="article">
       {category && (

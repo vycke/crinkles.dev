@@ -17,16 +17,15 @@
   // Spacing and sizes
   --unit: 1rem;
   --base: 16;
-  --min-width: calc(320 / var(--base));
-  --max-width: calc(1200 / var(--base));
-  --min-size: calc(18 / var(--base));
+  --min-width: 20;
+  --max-width: 75;
+  --min-size: 1.125;
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
-  --screen: calc(
-    min(100vw, var(--max-width) * var(--unit)) - var(--min-width) * var(--unit)
-  );
-  --ratio: calc(var(--screen) / (var(--max-width) - var(--min-width)));
+  --screen: calc(min(100vw, var(--max-width) * var(--unit)));
+  --area: calc(var(--screen) - var(--min-width) * var(--unit));
+  --ratio: calc(var(--area) / (var(--max-width) - var(--min-width)));
 
   // Font-sizes
   --size-default: calc(var(--unit) * var(--min-size) + 0.25 * var(--ratio));

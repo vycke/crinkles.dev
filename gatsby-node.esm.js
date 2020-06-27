@@ -64,11 +64,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    let posts = get(result, 'data.allMarkdownRemark.edges', []).filter(
-      (p) => new Date(get(p, 'node.frontmatter.date')) <= new Date()
-    );
-
-    createPostPage(createPage, posts);
+    createPostPage(createPage, get(result, 'data.allMarkdownRemark.edges', []));
   });
 };
 

@@ -86,4 +86,4 @@ All can have their own set of calculations for fluidity. These can be separate d
 
 ## Conclusion
 
-When refactoring [vycke.dev](https://vycke.dev) I wanted to reduce the number of media-queries, but maintain responsiveness. I wanted to reduce the CSS footprint of the website. But above all, I wanted to make my CSS more maintainable. Adding fluidity for font-sizes, element sizes, and spacing contributed to achieving this goal.
+When refactoring [vycke.dev](https://vycke.dev) I wanted to reduce the number of media-queries, but maintain responsiveness. I wanted to reduce the CSS footprint of the website. But above all, I wanted to make my CSS more maintainable. Adding fluidity for font-sizes, element sizes, and spacing contributed to achieving this goal. Want to see this fluidity in action? Just open this article on your laptop or PC, and slowly resize the browser window.

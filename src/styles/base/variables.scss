@@ -15,30 +15,34 @@
   --yellow: #ffb700;
 
   // Spacing and sizes
-  --min-width: 320;
-  --max-width: 1200;
-  --min-size: 18;
+  --unit: 1rem;
+  --base: 16;
+  --min-width: calc(320 / var(--base));
+  --max-width: calc(1200 / var(--base));
+  --min-size: calc(18 / var(--base));
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
-  --screen: calc(min(100vw, var(--max-width) * 1px) - var(--min-width) * 1px);
+  --screen: calc(
+    min(100vw, var(--max-width) * var(--unit)) - var(--min-width) * var(--unit)
+  );
   --ratio: calc(var(--screen) / (var(--max-width) - var(--min-width)));
 
   // Font-sizes
-  --size-default: calc(var(--min-size) * 1px + 4 * var(--ratio));
+  --size-default: calc(var(--unit) * var(--min-size) + 0.25 * var(--ratio));
   --size-h1: calc(1.75rem + 0.5 * var(--min-size) * var(--ratio));
   --size-h2: calc(1.375rem + 0.25 * var(--min-size) * var(--ratio));
   --size-h3: calc(1.25rem + 0.25 * var(--min-size) * var(--ratio));
 
   // spacing
-  --s1: calc(var(--min-size) * 1px + var(--min-size) * var(--ratio));
+  --s1: calc(var(--min-size) * var(--unit) + var(--min-size) * var(--ratio));
   --s0: calc(0.5 * var(--s1));
   --s2: calc(1.25 * var(--s1));
   --s3: calc(1.5 * var(--s1));
 
   // general-sizes
-  --page-width: calc(var(--max-width) * 1px);
-  --logo-size: calc(1.25 * var(--min-size) * 1px + 4 * var(--ratio));
+  --page-width: calc(var(--max-width) * var(--unit));
+  --logo-size: calc(1.25rem * var(--min-size) + 0.25 * var(--ratio));
   --card: 18rem;
 
   // font-family

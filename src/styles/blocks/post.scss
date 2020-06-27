@@ -24,6 +24,10 @@
     margin-top: 0.25em;
   }
 
+  p {
+    hyphens: auto;
+  }
+
   * {
     grid-column: 2;
   }

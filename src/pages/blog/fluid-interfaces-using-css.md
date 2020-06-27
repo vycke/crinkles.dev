@@ -23,9 +23,9 @@ With fluid interfaces, you scale up attributes linear when your website increase
 To determine the ratio, you first need to determine the min. and max. width your site has. Some sites take up all the available horizontal space, but many have a max. width. With a min. and max. determined, we can calculate the ratio with the equation below. With this ratio, we can scale a size between two values linearly.
 
 ```
-min(space, max-sw) - min-sw
+         min(space, max-sw) - min-sw
 ratio = -----------------------------
-max-sw - min-sw
+              max-sw - min-sw
 ```
 
 With this ratio, we can scale any size (e.g. font-sizes or spacing) based on how big the horizontal size of our website is.

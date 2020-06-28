@@ -8,4 +8,4 @@ The personal website of Kevin Pennekamp. This website is created using:
 - [JAMstack architecture](https://jamstack.org);
 - [Netlify](https://www.netlify.com);
 
-In addition, it uses some icons from [feather icons](https://feathericons.com/);
+In addition, [inter](https://rsms.me/inter/) and [Hack](https://sourcefoundry.org/hack/) are used as the fonts.

@@ -6,14 +6,16 @@ module.exports = {
     image: '/img/logo.png',
     twitterName: '@vycke_',
     description:
-      'Personal website of Kevin Pennekamp, a blog about my opinions about CSS, front-end engineering, and web design',
+      'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!',
     keywords: [
-      'Front-end Engineer',
-      'Software Engineer',
-      'Web Developer',
-      'Designer',
-      'UI Designer',
-      'Consultant',
+      'CSS',
+      'front-end',
+      'front end',
+      'web development',
+      'software development',
+      'web design',
+      'architecture',
+      'consultant',
     ],
   },
   plugins: [

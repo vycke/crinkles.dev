@@ -7,7 +7,7 @@
   grid-row-gap: calc(var(--s1));
   grid-template-columns: repeat(
     auto-fit,
-    minmax(calc(var(--min-width) * var(--unit)), 1fr)
+    minmax(calc(var(--min-width) * var(--unit) - 2 * var(--s1)), 1fr)
   );
 
   a.next,

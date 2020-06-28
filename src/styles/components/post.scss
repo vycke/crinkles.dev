@@ -62,19 +62,21 @@
   aside {
     position: relative;
     padding: var(--s0) var(--s1);
-    border-left: 4px solid var(--text-secondary);
+    color: var(--text-secondary);
+    border-left: 0.25rem solid var(--text-secondary);
 
     p {
       font-size: var(--size-small);
     }
 
     p:first-child::before {
-      content: '?';
-      font-size: 18px;
+      content: 'i';
+      font-family: var(--monospace);
+      font-size: 1rem;
       font-weight: 600;
       color: var(--text-secondary);
-      height: 30px;
-      width: 30px;
+      height: 2rem;
+      width: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,10 +84,10 @@
       position: absolute;
       top: 0;
       left: 0;
-      border: 4px solid var(--text-secondary);
+      border: 0.25rem solid var(--text-secondary);
       background: var(--bg-default);
       transition: var(--transition);
-      transform: translate(calc(-50% - 2px), 0);
+      transform: translate(calc(-50% - 0.125rem), 0);
     }
   }
 }

@@ -4,11 +4,8 @@
   width: 100%;
   padding: var(--s1);
   grid-column-gap: var(--s1);
-  grid-row-gap: calc(var(--s1));
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(calc(var(--min-width) * var(--unit) - 2 * var(--s1)), 1fr)
-  );
+  grid-row-gap: var(--s1);
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-el-width), 1fr));
 
   a.next,
   a.previous {

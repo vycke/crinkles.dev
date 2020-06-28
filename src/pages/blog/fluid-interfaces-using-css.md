@@ -36,7 +36,9 @@ size = min-size + (max-size - min-size) × ratio
 
 ## Calculating the ratio with `calc`
 
-To implement this concept, you need CSS variables and the `calc` function. Although it seems easy enough, the implementation comes with some quirks. But first, let's determine our base values. In this implementation all sizes are unitless or in `rem` (based on `--unit`). Every website has a default font-size in `px` that corresponds to `1rem`. Although this base value can be set by you, it can also be set by the user in the browser settings. This is a simple implementation of fluidity. Based on this value, we can set our initial variables.
+To implement this concept, you need CSS variables and the `calc` function. Although it seems easy enough, the implementation comes with some quirks. But first, let's determine our base values. In this implementation all sizes are unitless or in `rem` values. Based on this value, we can set our initial variables.
+
+> **INFO**: `rem` values correspond to the `px` font-size set on the `html` tag. This font-size can be changed by a user by changing his or her browser settings. For accessibility reasons, it is recommended to work as much as possible with `rem` (or `em`) values
 
 ```css
 /* base values */
@@ -56,8 +58,8 @@ The `--area` variable is the left-hand side of the described _ratio_ equation. N
 ```css
 /* ratio calculation */
 :root {
-  --screen: calc(min(100vw, var(--max-width) * var(--unit)));
-  --area: calc(var(--screen) - var(--min-width) * var(--unit));
+  --screen: calc(min(100vw, var(--max-width) * 1rem));
+  --area: calc(var(--screen) - var(--min-width) * 1rem);
   --ratio: calc(var(--area) / (var(--max-width) - var(--min-width)));
 }
 ```

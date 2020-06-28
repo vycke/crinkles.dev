@@ -12,7 +12,7 @@
 * Main site header *
 **/
 .header {
-  padding: var(--s1) calc(var(--s1) - var(--logo-size) * 0.5);
+  padding: var(--s1) calc(var(--s1) - var(--logo-padding));
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -23,7 +23,7 @@
 
 .logo,
 .icon {
-  padding: calc(var(--logo-size) * 0.5);
+  padding: var(--logo-padding);
   border-radius: 0.25rem;
   transition: var(--transition);
   color: var(--text-default);
@@ -61,7 +61,7 @@
   color: var(--gray-100);
 
   > * {
-    padding: calc(var(--logo-size) * 0.5);
+    padding: var(--logo-padding);
   }
 
   span {

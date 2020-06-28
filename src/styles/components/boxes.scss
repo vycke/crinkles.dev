@@ -1,0 +1,28 @@
+.info-box {
+  position: relative;
+  padding: var(--s0) var(--s1) 0;
+  color: var(--text-secondary);
+  border-left: 0.25rem solid var(--text-secondary);
+  font-size: var(--size-small);
+
+  *:first-child::before {
+    content: 'i';
+    font-family: var(--monospace);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    height: 1.75rem;
+    width: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0.25rem solid var(--text-secondary);
+    background: var(--bg-default);
+    transition: var(--transition);
+    transform: translate(calc(-50% - 0.125rem), 0);
+  }
+}

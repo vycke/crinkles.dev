@@ -8,7 +8,7 @@ description: >-
 category: architecture
 ---
 
-::: aside
+::: aside info-box
 _**March 2020**: updated the 'application backbone' chapter to reflect reality better._
 _**November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the core layer have been redone._
 :::

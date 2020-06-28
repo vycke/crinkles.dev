@@ -54,7 +54,7 @@ To implement this concept, you need CSS variables and the `calc` function. Altho
 With the base values known, we can start calculating the ratio. Here we find the quirks we need to handle. We need to use the `min` CSS function to calculate the `--area` value we can determine the ratio with. But, this function always needs values with units for comparison. Thus we multiply our `--max-width` with the `--unit`.
 
 ::: aside
-when multiplying using `calc`, at least one value needs to be unitless. At least the right-hand side of a division needs to be unitless. Adding and subtracting need all values to be unitless, or have (varying) units.
+When multiplying using `calc`, at least one value needs to be unitless. At least the right-hand side of a division needs to be unitless. Adding and subtracting need all values to be unitless, or have (varying) units.
 :::
 
 The `--area` variable is the left-hand side of the described _ratio_ equation. Now we can calculate the `--ratio`. Because `--area` already has a unit of `rem`, `--ratio` will be a value between `0rem` and `1rem`.

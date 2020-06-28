@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   display: grid;
-  font-size: calc(0.875 * var(--size-default));
+  font-size: var(--size-small);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   column-gap: var(--s1);

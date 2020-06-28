@@ -44,6 +44,7 @@
   }
 
   img,
+  aside,
   .gatsby-highlight {
     grid-column: 1 / 4;
     width: 100%;
@@ -52,8 +53,40 @@
   }
 
   img,
+  aside,
   pre {
     box-shadow: 0 0 calc(var(--size-default) * 3) calc(var(--size-default) / 2)
       rgba(0, 0, 0, 0.06);
+  }
+
+  aside {
+    position: relative;
+    background: var(--bg-secondary);
+    padding: var(--s0) var(--s1);
+    border-left: 0.2rem solid var(--text-secondary);
+
+    p {
+      font-size: var(--size-small);
+    }
+
+    p:first-child::before {
+      content: '?';
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      height: 30px;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 0.2rem solid var(--text-secondary);
+      background: var(--bg-default);
+      transition: var(--transition);
+      transform: translate(calc(-50% - 0.1rem), 0);
+    }
   }
 }

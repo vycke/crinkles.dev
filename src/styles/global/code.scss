@@ -32,7 +32,7 @@
 
 // CODE BLOCKS
 pre[class*='language-'] {
-  font-size: 0.875em;
+  font-size: var(--size-code);
   overflow: auto;
   line-height: 1.6;
   color: var(--text-default);

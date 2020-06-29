@@ -5,7 +5,7 @@
   border-left: 0.25rem solid var(--text-secondary);
   font-size: var(--size-small);
 
-  *:first-child::before {
+  > *:first-child::before {
     content: 'i';
     font-family: var(--monospace);
     font-size: 0.875rem;

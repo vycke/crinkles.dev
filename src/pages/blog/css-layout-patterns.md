@@ -55,13 +55,16 @@ Personally I do think that the paddings on the side should differ on various scr
 }
 ```
 
-::: aside info-box
 The above class has another benefit. When there is, for example, room for three columns, but there are only two elements, the two elements will be stretched across the entire width. This is due to the `auto-fit` value in the `repeat` function.
+
+::: aside info-box
+Did you know that you can set a `grid-column: span 2` attribute on your elements? When doing so, they will span two columns. So not all elements have to be the same size. Downside is that there will always be a minimum of two columns, and any potential gaps in the grid are not automatically filled.
 :::
 
 ## Two-way card layouts
 
 You often see big card layouts with an image and content next to each other, spanning a big horizontal space. Often they have a fixed ratio between them (e.g. 50%-50%). When reducing the screen size, you don't want these two next, but below each other. At this point, the ratio also changed to make better use of the available space. The height of the image is not 50% anymore. The wireframes below visualize this concept.
+
 ![CSS Grid for dynamic cards](/img/css-grid-card.png)
 
 Does this not sound like a familiar problem? Well it is. It is almost the same as the _auto-scaling grid-layout_ I already described. There is just one small addition. We need to add `grid-template-rows: auto 1fr;` to the `grid` class example. The `auto` value accommodates for the vertical orientation with a changed ratio. This does assume that the images have a landscape orientation. As there are only two child elements (the image and the content) CSS grids handle the rest.

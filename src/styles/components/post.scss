@@ -44,7 +44,6 @@
   }
 
   img,
-  // aside,
   .gatsby-highlight {
     grid-column: 1 / 4;
     width: 100%;
@@ -53,7 +52,7 @@
   }
 
   img,
-  // aside,
+  svg,
   pre {
     box-shadow: 0 0 calc(var(--size-default) * 3) calc(var(--size-default) / 2)
       rgba(0, 0, 0, 0.06);

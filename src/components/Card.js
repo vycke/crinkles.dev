@@ -3,20 +3,14 @@ import React from 'react';
 const Card = ({
   post,
   title = '',
-  variant,
   subtitle,
   meta,
   category,
   url,
-  reverse,
   className = '',
-  orientation = 'vertical',
 }) => {
-  let classes = `card card--${orientation}`;
-  if (variant) classes += ` card--${variant}`;
-
   return (
-    <section className={`${classes} ${className}`} role="article">
+    <section className={`card ${className}`} role="article">
       {category && (
         <img
           className="card__image"

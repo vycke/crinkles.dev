@@ -16,11 +16,11 @@ When refactoring [vycke.dev](https://vycke.dev) I wanted to remove the dependenc
 
 I was using media-queries for spacing values (e.g. `padding` and `margin`) and font-sizes. On big screens I want larger font-sizes and spacing compared to mobile. The goal is to improve usability and reduce wasted space. But with media-queries, I had to go over all different breakpoints and determine how I wanted to change the spacing and font-sizes. Introducing, fluid interfaces.
 
-With fluid interfaces, you scale up attributes linear when your website increases in size automatically (e.g. between `16px` and `20px`). To achieve this, we need to determine a _ratio_ (a value between 0 and 1) which we can use to scale values based on the website size.
+With fluid interfaces, you use [linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation) to scale attributes when your website increases in size automatically (e.g. between `16px` and `20px`). To achieve this, we need to determine a _ratio_ (a value between 0 and 1) which we can use to scale values based on the website size.
 
 ![Fluit ratio](/img/fluid-css-scale.png 'Fluid ratio')
 
-To determine the ratio, you first need to determine the min. and max. width your site has. Some sites take up all the available horizontal space, but many have a max. width. With a min. and max. determined, we can calculate the ratio with the equation below. With this ratio, we can scale a size between two values linearly.
+To determine the ratio, you first need to determine the min. and max. width your site has. Some sites take up all the available horizontal space, but many have a max. width. With a min. and max. determined, we can calculate the ratio with the equation below. With this ratio, we can interpolate a size between two values.
 
 ```
          min(space, max-sw) - min-sw

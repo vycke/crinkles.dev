@@ -4,11 +4,9 @@ import get from '../utils/get';
 import Card from '../components/Card';
 import { graphql } from 'gatsby';
 import { formatReadingTime } from '../utils/readingTime';
-import { NUM_HIGHLIGHT } from '../config';
 
 const PostOverviewTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
-  const highlights = posts.slice(0, NUM_HIGHLIGHT);
   const meta = data.site.siteMetadata;
 
   return (
@@ -23,23 +21,8 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
             architecture, engineering and writing about it!
           </span>
         </h1>
-        {highlights.map((p, i) => (
-          <Card
-            key={i}
-            className={`cell--middle ${i % 2 !== 0 ? 'reverse' : ''}`}
-            title={p.node.frontmatter.title}
-            variant="large"
-            url={p.node.fields.slug}
-            subtitle={p.node.frontmatter.description}
-            category={p.node.frontmatter.category}
-            orientation="horizontal"
-            meta={`${p.node.frontmatter.date} • ${formatReadingTime(
-              p.node.wordCount.words
-            )}`}
-          />
-        ))}
         <section className="cell--middle tiles" role="feed">
-          {posts.slice(NUM_HIGHLIGHT).map((p, i) => {
+          {posts.map((p, i) => {
             const post = p.node;
             return (
               <Card
@@ -48,7 +31,6 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
                 url={post.fields.slug}
                 subtitle={post.frontmatter.description}
                 category={p.node.frontmatter.category}
-                orientation="vertical"
                 meta={`${post.frontmatter.date} • ${formatReadingTime(
                   post.wordCount.words
                 )}`}

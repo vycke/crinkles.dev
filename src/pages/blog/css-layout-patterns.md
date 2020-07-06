@@ -52,13 +52,10 @@ Who does not know the responsive multi-column layout? A layout that changes the 
 If you have many grids, your CSS or HTML does not scale well. Luckily we have CSS grids these days. With CSS grids we do not define the column span for each element. Instead, we let the browser determine the number of columns on the screen. You can achieve the illustrated scalable layout with the code snippet below. Let's dissect it!
 
 ```css
-/* minimum column width */
---cw: 20rem;
-
 .grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(var(--cw), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 ```
 

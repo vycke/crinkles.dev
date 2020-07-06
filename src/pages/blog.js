@@ -12,15 +12,6 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   return (
     <Layout meta={meta}>
       <main className="content stack-large grid">
-        <h1 className="title cell--middle">
-          <span role="img" aria-label="waving hand">
-            👋
-          </span>{' '}
-          <span>
-            Hey, I'm Kevin. I'm a Dutch software engineer. I love CSS, front-end
-            architecture, engineering and writing about it!
-          </span>
-        </h1>
         <section className="cell--middle tiles" role="feed">
           {posts.map((p, i) => {
             const post = p.node;
@@ -46,7 +37,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
 export default PostOverviewTemplate;
 
 export const postOverviewPageQuery = graphql`
-  query HomePage {
+  query BlogPage {
     site {
       siteMetadata {
         title

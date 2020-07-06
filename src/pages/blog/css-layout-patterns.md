@@ -43,7 +43,7 @@ article > img {
 
 The paddings on the side should differ on various screen sizes. On smaller screens, you want to limit the wasted space, while on bigger screens more padding can improve the visual quality. But with the above solution you still need media-queries to use different side padding. You could mitigate this by adding [fluidity](https://vycke.dev/blog/fluid-interfaces-using-css/) to your website. We can replace the `2rem` with something like `calc(1rem + 1 * var(--ratio))`. By doing so, the side padding changes automatically when the screen size changes, without media-queries. Now we have a dynamic and maintainable layout for our articles.
 
-## Auto-scaling grid-layout
+## Responsive multi-column grid system
 
 ![CSS Grid tiles visualization when resizing the screen](/img/css-grid-tiles.png)
 

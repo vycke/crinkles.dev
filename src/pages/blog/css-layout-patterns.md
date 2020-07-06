@@ -2,9 +2,9 @@
 templateKey: blog-post
 title: Modern CSS grid solutions to common layout problems
 draft: false
-date: 2020-06-29T00:00:00.000Z
+date: 2020-07-06T00:00:00.000Z
 description: >-
-  Keeping our applications healthy and reliable is complex, and difficult to achieve
+  Responsive layouts are one of the more complicated problems in CSS. With the addition of CSS grids, we are now able to solve complex problems, keeping it maintainable.
 category: css
 ---
 

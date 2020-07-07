@@ -1,3 +1,87 @@
+/*******
+* Generic styling
+*******/
+html,
+body {
+  font-family: var(--sans-serif);
+  background-color: var(--bg-default);
+  color: var(--text-default);
+  transition: var(--transition);
+  min-width: calc(var(--min-width) * var(--unit));
+}
+
+// HEADINGS
+h1,
+h2,
+h3 {
+  width: 100%;
+  line-height: 1.4;
+  color: var(--text-default);
+  transition: var(--transition);
+}
+
+h1 {
+  font-size: var(--size-h1);
+}
+
+h2 {
+  font-size: var(--size-h2);
+}
+
+h3 {
+  font-size: var(--size-h3);
+}
+
+// LINKS
+a,
+a > *,
+a:link,
+a:visited,
+a:active {
+  transition: var(--transition);
+  text-decoration-color: var(--text-secondary);
+}
+
+a:hover,
+a:hover > * {
+  color: var(--text-secondary);
+  text-decoration-color: var(--text-secondary);
+}
+
+a.svg {
+  position: relative;
+  display: inline-block;
+}
+
+::selection {
+  color: var(--bg-default) !important;
+  background: var(--text-default) !important;
+}
+
+// QUOTES
+blockquote {
+  border-left: 0.25rem solid var(--text-secondary);
+  padding: 0 1rem;
+  font-style: italic;
+  font-size: var(--size-small);
+  color: var(--text-default);
+
+  p {
+    opacity: 0.7;
+  }
+
+  cite {
+    width: 100%;
+    font-size: 0.875rem;
+    display: block;
+    text-align: right;
+
+    &:before {
+      content: '-- ';
+    }
+  }
+}
+
 // keyword: const, return, etc.
 // operator: ==, >=, etc.
 // punctuation: (, ), [, ], etc.

@@ -1,8 +1,8 @@
 // reset, settings & generic styles
-@import 'global/variables';
-@import 'global/reset';
-@import 'global/elements';
-@import 'global/code';
+@import 'fonts';
+@import 'tokens';
+@import 'reset';
+@import 'global';
 // Layout
 @import 'layout/grid';
 @import 'layout/stack';

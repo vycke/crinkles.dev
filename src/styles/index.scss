@@ -7,10 +7,10 @@
 @import 'layout/grid';
 @import 'layout/stack';
 // Utilities
-@import 'utilities';
+@import 'atoms';
 // Blocks & expectionss
-@import 'components/page';
-@import 'components/post';
-@import 'components/pagination';
-@import 'components/card';
-@import 'components/boxes';
+@import 'blocks/page';
+@import 'blocks/post';
+@import 'blocks/pagination';
+@import 'blocks/card';
+@import 'blocks/boxes';

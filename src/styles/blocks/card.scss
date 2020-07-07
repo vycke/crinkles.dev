@@ -1,26 +1,26 @@
 // Cards
 .card {
-  transition: var(--transition);
-  color: var(--text-secondary);
   position: relative;
-  overflow: hidden;
   display: grid;
-  min-width: var(--card);
-  font-size: var(--size-small);
-  grid-template-columns: repeat(auto-fit, minmax(var(--card), 1fr));
   grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card), 1fr));
+  min-width: var(--card);
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-size: var(--size-small);
   column-gap: var(--s1);
+  transition: var(--transition);
   row-gap: var(--s0);
 }
 
 .card__image {
+  display: inline-block;
   width: 100%;
   height: 100%;
-  border-radius: 0.5em;
   object-fit: cover;
-  display: inline-block;
-  vertical-align: middle;
   text-align: center;
+  vertical-align: middle;
+  border-radius: 0.5em;
 }
 
 .card__content {
@@ -29,10 +29,10 @@
 }
 
 a.card__title {
-  text-decoration-color: var(--bg-default);
+  margin-bottom: 0.5em;
   color: var(--text-default);
   cursor: pointer;
-  margin-bottom: 0.5em;
+  text-decoration-color: var(--bg-default);
 
   &:hover,
   &:active,
@@ -40,19 +40,19 @@ a.card__title {
     text-decoration-color: var(--text-secondary);
   }
 
-  &:after {
+  &::after {
     position: absolute;
-    content: '';
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    content: '';
   }
 }
 
 .card__meta {
-  font-weight: 600;
   color: var(--text-secondary);
-  text-transform: uppercase;
+  font-weight: 600;
   font-size: 0.75em;
+  text-transform: uppercase;
 }

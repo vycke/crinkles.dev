@@ -2,27 +2,27 @@
   position: relative;
   padding: 0 var(--s1);
   color: var(--text-secondary);
-  border-left: 0.25rem solid var(--text-secondary);
   font-size: var(--size-small);
+  border-left: 0.25rem solid var(--text-secondary);
 
   > *:first-child::before {
-    content: 'i';
-    font-family: var(--monospace);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    height: 1.75rem;
-    width: 1.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
-    border: 0.25rem solid var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    font-family: var(--monospace);
     background: var(--bg-default);
-    transition: var(--transition);
+    border: 0.25rem solid var(--text-secondary);
+    border-radius: 50%;
     transform: translate(calc(-50% - 0.125rem), 0);
+    transition: var(--transition);
+    content: 'i';
   }
 }

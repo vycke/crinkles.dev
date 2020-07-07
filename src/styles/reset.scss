@@ -5,12 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
 /* Remove default margin */
 body,
 h1,
@@ -48,24 +42,25 @@ body {
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
+  padding: 0;
   list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  text-decoration: underline;
-}
-
 a,
 a:visited {
   color: inherit;
 }
 
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: underline;
+}
+
 /* Make images easier to work with */
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 /* buttons */
@@ -106,9 +101,9 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
+    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }

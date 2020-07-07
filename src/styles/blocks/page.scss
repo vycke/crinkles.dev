@@ -3,30 +3,30 @@
 **/
 .site {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   max-width: 100%;
+  min-height: 100vh;
 }
 
 /**
 * Main site header *
 **/
 .header {
-  padding: var(--s1) calc(var(--s1) - var(--logo-padding));
   display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: calc(var(--page-width) + 2 * var(--s1));
+  margin: 0 auto;
+  padding: var(--s1) calc(var(--s1) - var(--logo-padding));
 }
 
 .logo,
 .icon {
   padding: var(--logo-padding);
+  color: var(--text-default);
   border-radius: 0.25rem;
   transition: var(--transition);
-  color: var(--text-default);
   fill: var(--text-default);
 
   &:hover {
@@ -47,18 +47,18 @@
 * Main site footer *
 **/
 .footer {
-  background: var(--bg-footer);
-  padding: var(--s1);
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  line-height: 1;
-  font-size: 0.875rem;
-  font-weight: 600;
-  flex-wrap: wrap;
-  text-transform: uppercase;
+  padding: var(--s1);
   color: var(--gray-100);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-transform: uppercase;
+  background: var(--bg-footer);
 
   > * {
     padding: var(--logo-padding);
@@ -76,10 +76,10 @@
 }
 
 .title {
-  justify-self: center;
   display: block;
-  font-weight: 600;
+  justify-self: center;
   padding: 0 0 var(--s2);
+  font-weight: 600;
 
   &::first-letter {
     text-transform: uppercase;

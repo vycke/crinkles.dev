@@ -1,5 +1,6 @@
 .post {
   --page-width: 60ch;
+
   font-size: var(--size-default);
 }
 
@@ -10,10 +11,10 @@
 
   span,
   a {
-    font-weight: 600;
     color: var(--text-secondary);
-    text-transform: uppercase;
+    font-weight: 600;
     font-size: 0.75em;
+    text-transform: uppercase;
   }
 }
 
@@ -33,22 +34,22 @@
   }
 
   ul {
-    list-style: disc outside;
-    padding-left: var(--s2);
     margin-bottom: 0;
+    padding-left: var(--s2);
+    list-style: disc outside;
   }
 
   ol {
-    list-style: decimal outside;
     padding-left: 1.5em;
+    list-style: decimal outside;
   }
 
   img,
   .gatsby-highlight {
     grid-column: 1 / 4;
+    justify-self: center;
     width: 100%;
     max-width: calc(var(--page-width) + var(--s4));
-    justify-self: center;
   }
 
   img,

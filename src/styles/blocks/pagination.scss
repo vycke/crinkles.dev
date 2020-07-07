@@ -1,24 +1,24 @@
 // Pagination below blog posts
 .pagination {
   display: grid;
+  grid-row-gap: var(--s1);
+  grid-column-gap: var(--s1);
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-el-width), 1fr));
   width: 100%;
   padding: var(--s1);
-  grid-column-gap: var(--s1);
-  grid-row-gap: var(--s1);
-  grid-template-columns: repeat(auto-fit, minmax(var(--min-el-width), 1fr));
 
   a.next,
   a.previous {
-    text-decoration-color: var(--bg-default);
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     padding: 1rem 0;
+    text-decoration-color: var(--bg-default);
 
     > span {
-      font-size: 0.75em;
-      font-weight: 600;
       color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.75em;
       text-transform: uppercase;
     }
   }

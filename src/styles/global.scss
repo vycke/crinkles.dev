@@ -3,11 +3,11 @@
 *******/
 html,
 body {
+  min-width: calc(var(--min-width) * var(--unit));
+  color: var(--text-default);
   font-family: var(--sans-serif);
   background-color: var(--bg-default);
-  color: var(--text-default);
   transition: var(--transition);
-  min-width: calc(var(--min-width) * var(--unit));
 }
 
 // HEADINGS
@@ -15,8 +15,8 @@ h1,
 h2,
 h3 {
   width: 100%;
-  line-height: 1.4;
   color: var(--text-default);
+  line-height: 1.4;
   transition: var(--transition);
 }
 
@@ -60,23 +60,23 @@ a.svg {
 
 // QUOTES
 blockquote {
-  border-left: 0.25rem solid var(--text-secondary);
   padding: 0 1rem;
-  font-style: italic;
-  font-size: var(--size-small);
   color: var(--text-default);
+  font-size: var(--size-small);
+  font-style: italic;
+  border-left: 0.25rem solid var(--text-secondary);
 
   p {
     opacity: 0.7;
   }
 
   cite {
+    display: block;
     width: 100%;
     font-size: 0.875rem;
-    display: block;
     text-align: right;
 
-    &:before {
+    &::before {
       content: '-- ';
     }
   }
@@ -114,13 +114,28 @@ blockquote {
   font-weight: bold;
 }
 
+// INLINE CODE
+:not(pre) > code,
+:not(pre) > code[class*='language-'] {
+  color: var(--text-default) !important;
+  font-weight: 600;
+  font-size: 0.875em;
+  font-family: var(--monospace);
+  background-color: transparent !important;
+
+  &::before,
+  &::after {
+    content: '`';
+  }
+}
+
 // CODE BLOCKS
 pre[class*='language-'] {
-  font-size: var(--size-code);
-  overflow: auto;
-  line-height: 1.6;
-  color: var(--text-default);
   padding: var(--s1);
+  overflow: auto;
+  color: var(--text-default);
+  font-size: var(--size-code);
+  line-height: 1.6;
   background-color: var(--bg-secondary) !important;
 
   > code[class*='language-'] {
@@ -130,21 +145,6 @@ pre[class*='language-'] {
   ::selection {
     color: var(--bg-default) !important;
     background: var(--text-default) !important;
-  }
-}
-
-// INLINE CODE
-:not(pre) > code,
-:not(pre) > code[class*='language-'] {
-  font-family: var(--monospace);
-  font-size: 0.875em;
-  color: var(--text-default) !important;
-  background-color: transparent !important;
-  font-weight: 600;
-
-  &::before,
-  &::after {
-    content: '`';
   }
 }
 

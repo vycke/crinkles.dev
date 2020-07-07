@@ -1,5 +1,3 @@
-@import 'fonts';
-
 :root {
   // Colors
   --gray-100: #fafafa;
@@ -8,7 +6,6 @@
   --gray-400: #707478;
   --gray-500: #292933;
   --gray-600: #121319;
-
   --green: #09a976;
   --red: #ff4137;
   --blue: #4b6bdc;
@@ -50,9 +47,9 @@
   --card: calc(var(--min-width) * var(--unit) + 3 * var(--ratio));
 
   // font-family
-  --sans-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+  --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-  --monospace: Hack, Consolas, Menlo, Monaco, 'Courier New', monospace;
+  --monospace: hack, consolas, menlo, monaco, 'Courier New', monospace;
 
   // utils
   --transition: all ease-in-out 200ms;
@@ -64,7 +61,6 @@ body {
   --text-secondary: var(--gray-400);
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
-
   --bg-footer: var(--gray-600);
 }
 

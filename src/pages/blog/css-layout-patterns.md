@@ -59,7 +59,7 @@ If you have many grids, your CSS or HTML does not scale well. Luckily we have CS
 }
 ```
 
-With `repeat()` we say to the browser that it needs to repeat its argument. For example, `repeat(3, 1fr)` would create a layout of three equally sized columns that fill the entire screen. But, our elements almost always have a minimum width. With the `1fr` we can break them. With `minmax(20rem, 1fr)`, each column has a minimum width of `20rem`, but scales on larger screens.
+This is the so called **RAM pattern**: repeat, auto, minmax. With repeat()`we say to the browser that it needs to repeat its argument. For example,`repeat(3, 1fr)`would create a layout of three equally sized columns that fill the entire screen. But, our elements almost always have a minimum width. With the`1fr`we can break them. With`minmax(20rem, 1fr)`, each column has a minimum width of`20rem`, but scales on larger screens.
 
 The magic starts when replacing the fixed number with `auto-fit` or `auto-fill`. With both options, we let the browser determine the amount of available columns on the screen. When using `auto-fill` and `minmax(20rem, 1fr)` on a screen of `90rem` the browser creates four columns. The `auto-fit` option creates a maximum of four columns in this example. When there are only two elements to put in the grid `auto-fit` reduces the number of columns to two. This gives you great flexibility in responsive layouts, without using media-queries.
 

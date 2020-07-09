@@ -1,13 +1,16 @@
 {
-  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
-  "plugins": ["prettier", "react-hooks", "jsx-a11y"],
+  "extends": [
+    "react-app",
+    "eslint-config-prettier",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["react-hooks", "jsx-a11y"],
   "env": {
     "browser": true,
     "node": true,
     "jest": true
   },
   "rules": {
-    "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   },

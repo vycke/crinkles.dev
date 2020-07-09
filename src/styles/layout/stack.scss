@@ -19,6 +19,10 @@
   margin-top: var(--s3);
 }
 
+.stack-xl > * + * {
+  margin-top: var(--s5);
+}
+
 .grow {
   flex-grow: 1;
 }

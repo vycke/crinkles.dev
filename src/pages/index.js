@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import get from '../utils/get';
 import Card from '../components/Card';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { formatReadingTime } from '../utils/readingTime';
 
 const PostOverviewTemplate = ({ data, pageContext }) => {
@@ -11,32 +11,50 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout meta={meta}>
-      <main className="content stack-large grid">
-        <h1 className="title cell--middle">
-          <span role="img" aria-label="waving hand">
-            👋
-          </span>{' '}
-          <span>
-            Hey, I'm Kevin. I'm a Dutch software engineer. I love CSS, front-end
-            architecture, engineering and writing about it!
-          </span>
-        </h1>
-        <section className="cell--middle tiles" role="feed">
-          {posts.map((p, i) => {
-            const post = p.node;
-            return (
-              <Card
-                key={i}
-                title={post.frontmatter.title}
-                url={post.fields.slug}
-                subtitle={post.frontmatter.description}
-                category={p.node.frontmatter.category}
-                meta={`${post.frontmatter.date} • ${formatReadingTime(
-                  post.wordCount.words
-                )}`}
-              />
-            );
-          })}
+      <main className="content center-layout stack-xl overview">
+        <section className="tiles">
+          <div className="stack">
+            <h1 className="title">Hey, I'm Kevin.</h1>
+            <span>
+              And welcome to my laboratory! I'm a front-end engineer and a big
+              CSS lover. I like to try new things in the World of front-end, and{' '}
+              <Link className="next" to="/blog">
+                write about it
+              </Link>
+              . Currently working as a Team Lead and Senior Software Engineer at{' '}
+              <a href="https://finaps.nl" alt="Website of Finaps B.V.">
+                Finaps
+              </a>
+              .
+            </span>
+          </div>
+          <aside />
+        </section>
+
+        <section className="stack" role="feed">
+          <div className="tiles" role="feed">
+            {posts.map((p, i) => {
+              const post = p.node;
+              return (
+                <Card
+                  key={i}
+                  title={post.frontmatter.title}
+                  url={post.fields.slug}
+                  subtitle={post.frontmatter.description}
+                  // category={p.node.frontmatter.category}
+                  meta={`${post.frontmatter.date} • ${formatReadingTime(
+                    post.wordCount.words
+                  )}`}
+                />
+              );
+            })}
+          </div>
+          <aside className="pagination">
+            <Link className="previous" to="/blog">
+              <span>Blog →</span>
+              <h3>View more articles</h3>
+            </Link>
+          </aside>
         </section>
       </main>
     </Layout>
@@ -58,7 +76,7 @@ export const postOverviewPageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 1000
+      limit: 3
       skip: 0
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {

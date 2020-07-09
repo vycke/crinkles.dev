@@ -5,7 +5,7 @@ import '../styles/index.scss';
 import { AppContext } from './Context';
 import { Helmet } from 'react-helmet';
 
-const PageWrapper = ({ children, meta = {}, className = '' }) => {
+const PageWrapper = ({ children, meta = {}, className = '', title }) => {
   const { updateTheme } = React.useContext(AppContext);
 
   const seo = {
@@ -60,6 +60,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
               />
             </svg>
           </Link>
+          {title && <span className="site__title">{title}</span>}
           <button
             className="icon"
             type="button"

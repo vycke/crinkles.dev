@@ -38,6 +38,7 @@
   --s2: calc(1.25 * var(--s1));
   --s3: calc(1.5 * var(--s1));
   --s4: calc(2 * var(--s1));
+  --s5: calc(3 * var(--s1));
 
   // general-sizes
   --page-width: calc(var(--max-width) * var(--unit));

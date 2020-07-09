@@ -5,7 +5,6 @@
   grid-column-gap: var(--s1);
   grid-template-columns: repeat(auto-fit, minmax(var(--min-el-width), 1fr));
   width: 100%;
-  padding: var(--s1);
 
   a.next,
   a.previous {
@@ -18,7 +17,7 @@
     > span {
       color: var(--text-secondary);
       font-weight: 600;
-      font-size: 0.75em;
+      font-size: 0.875rem;
       text-transform: uppercase;
     }
   }

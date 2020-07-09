@@ -48,7 +48,7 @@ const BlogPost = ({ data, pageContext }) => {
         />
       </main>
 
-      <section className="pagination">
+      <section className="pagination padding-s1">
         {!next && prev && <div />}
         {next && (
           <Link className="next" to={next.link}>

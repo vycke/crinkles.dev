@@ -16,13 +16,12 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           <div className="stack">
             <h1 className="title">Hey, I'm Kevin.</h1>
             <span>
-              And welcome to vycke.dev, my laboratory! I'm a front-end engineer
-              and a big CSS lover. I always try to learn new front-end things,
-              and{' '}
+              And welcome to vycke, my lab! I'm a front-end engineer,
+              engineering manager and a big CSS lover.{' '}
               <Link className="next" to="/blog">
-                write about it
-              </Link>
-              . Currently working as a Team Lead and Senior Software Engineer at{' '}
+                Writing
+              </Link>{' '}
+              about engineering and code. Currently working at{' '}
               <a href="https://finaps.nl" alt="Website of Finaps B.V.">
                 Finaps
               </a>

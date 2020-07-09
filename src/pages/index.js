@@ -17,8 +17,8 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
             <h1 className="title">Hey, I'm Kevin.</h1>
             <span>
               And welcome to vycke.dev, my laboratory! I'm a front-end engineer
-              and a big CSS lover. I like to try new things in the World of
-              front-end, and{' '}
+              and a big CSS lover. I always try to learn new front-end things,
+              and{' '}
               <Link className="next" to="/blog">
                 write about it
               </Link>

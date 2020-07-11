@@ -121,6 +121,7 @@ blockquote {
   font-weight: 600;
   font-size: 0.875em;
   font-family: var(--monospace);
+  hyphens: none;
   background-color: transparent !important;
   transition: var(--transition);
 
@@ -132,12 +133,14 @@ blockquote {
 
 // CODE BLOCKS
 pre[class*='language-'] {
+  margin: 0;
   padding: var(--s1);
   overflow: auto;
   color: var(--text-default);
   font-size: var(--size-code);
   line-height: 1.6;
   background-color: var(--bg-secondary) !important;
+  outline: 1px solid var(--text-secondary);
   transition: var(--transition);
 
   > code[class*='language-'] {

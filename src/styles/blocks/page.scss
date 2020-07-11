@@ -81,8 +81,8 @@
   }
 }
 
-a.logo {
-  color: var(--text-secondary);
+a.logo:hover {
+  color: var(--text-primary);
 }
 
 .logo svg,
@@ -97,6 +97,6 @@ a.logo {
 }
 
 .icon svg {
-  height: 1.125rem;
+  height: 1.25rem;
   color: var(--text-default);
 }

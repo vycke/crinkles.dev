@@ -1,9 +1,12 @@
 .info-box {
   position: relative;
-  padding: 0 var(--s1);
+  padding-bottom: 0.75rem;
+  padding-left: 1.75rem;
   color: var(--text-secondary);
   font-size: var(--size-small);
-  border-left: 0.25rem solid var(--text-secondary);
+  border-bottom: 2px solid var(--green);
+  border-left: 2px solid var(--green);
+  border-bottom-left-radius: 1rem;
 
   > *:first-child::before {
     position: absolute;
@@ -12,16 +15,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.75rem;
-    height: 1.75rem;
-    color: var(--text-secondary);
+    width: 2rem;
+    height: 2rem;
+    color: var(--text-default);
     font-weight: 600;
     font-size: 0.875rem;
     font-family: var(--monospace);
     background: var(--bg-default);
-    border: 0.25rem solid var(--text-secondary);
+    border: 2px solid var(--green);
     border-radius: 50%;
-    transform: translate(calc(-50% - 0.125rem), 0);
+    transform: translate(calc(-50% - 1px), 0);
     transition: var(--transition);
     content: 'i';
   }

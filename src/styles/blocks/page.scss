@@ -69,7 +69,6 @@
   flex-direction: row;
   align-items: center;
   padding: var(--logo-padding);
-  color: var(--text-default);
   font-weight: 600;
   font-size: var(--size-small);
   text-transform: uppercase;
@@ -78,13 +77,12 @@
   transition: background-color var(--time);
 
   &:hover {
-    color: var(--text-default);
     background-color: var(--bg-secondary);
-
-    > span {
-      color: var(--text-default);
-    }
   }
+}
+
+a.logo {
+  color: var(--text-secondary);
 }
 
 .logo svg,
@@ -94,10 +92,11 @@
 
 .logo svg {
   height: var(--logo-size);
-  margin-right: var(--s0);
-  fill: var(--accent);
+  margin-right: var(--logo-padding);
+  fill: var(--green);
 }
 
 .icon svg {
-  height: 1.25rem;
+  height: 1.125rem;
+  color: var(--text-default);
 }

@@ -44,6 +44,7 @@ a:active {
 a:hover,
 a:hover > * {
   color: var(--text-secondary);
+  transition: var(--transition);
   text-decoration-color: var(--text-secondary);
 }
 

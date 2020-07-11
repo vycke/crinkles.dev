@@ -75,11 +75,6 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 0.25rem;
-  transition: var(--transition);
-
-  > span {
-    margin-left: var(--s0);
-  }
 
   &:hover {
     color: var(--text-default);
@@ -91,8 +86,14 @@
   }
 }
 
+.logo svg,
+.icon svg {
+  transition: var(--transition);
+}
+
 .logo svg {
   height: var(--logo-size);
+  margin-right: var(--s0);
   fill: var(--accent);
 }
 

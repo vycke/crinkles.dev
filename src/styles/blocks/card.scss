@@ -9,7 +9,6 @@
   color: var(--text-secondary);
   font-size: var(--size-small);
   column-gap: var(--s1);
-  transition: var(--transition);
   row-gap: var(--s0);
 }
 
@@ -32,13 +31,7 @@ a.card__title {
   margin-bottom: 0.5em;
   color: var(--text-default);
   cursor: pointer;
-  text-decoration-color: var(--bg-default);
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration-color: var(--text-secondary);
-  }
+  text-decoration-color: rgba(0, 0, 0, 0);
 
   &::after {
     position: absolute;

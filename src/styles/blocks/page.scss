@@ -75,6 +75,7 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 0.25rem;
+  transition: background-color var(--time);
 
   &:hover {
     color: var(--text-default);

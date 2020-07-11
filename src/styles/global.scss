@@ -38,7 +38,6 @@ a > *,
 a:link,
 a:visited,
 a:active {
-  transition: var(--transition);
   text-decoration-color: var(--text-secondary);
 }
 
@@ -122,6 +121,7 @@ blockquote {
   font-size: 0.875em;
   font-family: var(--monospace);
   background-color: transparent !important;
+  transition: var(--transition);
 
   &::before,
   &::after {
@@ -137,6 +137,7 @@ pre[class*='language-'] {
   font-size: var(--size-code);
   line-height: 1.6;
   background-color: var(--bg-secondary) !important;
+  transition: var(--transition);
 
   > code[class*='language-'] {
     font-family: var(--monospace);

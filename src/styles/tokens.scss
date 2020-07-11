@@ -54,7 +54,8 @@
   --monospace: hack, consolas, menlo, monaco, 'Courier New', monospace;
 
   // utils
-  --transition: all ease-in-out 200ms;
+  --time: ease-in-out 200ms;
+  --transition: all var(--time);
 }
 
 // default theme

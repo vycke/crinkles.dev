@@ -1,12 +1,16 @@
 .info-box {
   position: relative;
-  padding-bottom: 0.75rem;
-  padding-left: 1.75rem;
+  padding: 0.75rem 1.25rem;
   color: var(--text-secondary);
   font-size: var(--size-small);
-  border-bottom: 2px solid var(--green);
-  border-left: 2px solid var(--green);
-  border-bottom-left-radius: 1rem;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-image-source: linear-gradient(
+    to right,
+    var(--green),
+    var(--bg-default)
+  );
+  border-image-slice: 1;
 
   &::before {
     position: absolute;
@@ -24,7 +28,7 @@
     background: var(--bg-default);
     border: 2px solid var(--green);
     border-radius: 50%;
-    transform: translate(calc(-50% - 1px), 0);
+    transform: translate(calc(-1rem - 0.5px), calc(-1rem - 0.5px));
     transition: var(--transition);
     content: 'i';
   }

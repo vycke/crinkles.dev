@@ -23,15 +23,15 @@ With fluid interfaces, you use [linear interpolation](https://en.wikipedia.org/w
 To determine the ratio, you first need to determine the min. and max. width your site has. Some sites take up all the available horizontal space, but many have a max. width. With a min. and max. determined, we can calculate the ratio with the equation below. With this ratio, we can interpolate a size between two values.
 
 ```
-         min(space, max-sw) - min-sw
-ratio = -----------------------------
-              max-sw - min-sw
+         min(100vw, max) - min
+ratio = -----------------------
+              max - min
 ```
 
 With this ratio, we can scale any size (e.g. font-sizes or spacing) based on how big the horizontal size of our website is.
 
 ```
-size = min-size + (max-size - min-size) × ratio
+size = min + (max - min) × ratio
 ```
 
 ## Calculating the ratio with `calc`
@@ -43,15 +43,15 @@ size = min-size + (max-size - min-size) × ratio
 To implement this concept, you need CSS variables and the `calc` function. Although it seems easy enough, the implementation comes with some quirks. But first, let's determine our base values. In this implementation all sizes are unitless or in `rem` values. Based on this value, we can set our initial variables.
 
 ```css
-/* base values */
+/* based on 16px */
 :root {
   --unit: 1rem;
-  --min-width: 20; /* based on 16px */
-  --max-width: 75; /* based on 16px */
+  --min: 20;
+  --max: 75;
 }
 ```
 
-With the base values known, we can start calculating the ratio. Here we find the quirks we need to handle. We need to use the `min` CSS function to calculate the `--area` value we can determine the ratio with. But, this function always needs values with units for comparison. Thus we multiply our `--max-width` with the `--unit`.
+With the base values known, we can start calculating the ratio. Here we find the quirks we need to handle. We need to use the `min` CSS function to calculate the `--area` value we can determine the ratio with. But, this function always needs values with units for comparison. Thus we multiply our `--max` with the `--unit`.
 
 ::: aside info-box
 When multiplying using `calc`, at least one value needs to be unitless. At least the right-hand side of a division needs to be unitless. Adding and subtracting need all values to be unitless, or have (varying) units.
@@ -62,9 +62,9 @@ The `--area` variable is the left-hand side of the described _ratio_ equation. N
 ```css
 /* ratio calculation */
 :root {
-  --screen: calc(min(100vw, var(--max-width) * 1rem));
-  --area: calc(var(--screen) - var(--min-width) * 1rem);
-  --ratio: calc(var(--area) / (var(--max-width) - var(--min-width)));
+  --screen: calc(min(100vw, var(--max) * 1rem));
+  --area: calc(var(--screen) - var(--min) * 1rem);
+  --ratio: calc(var(--area) / (var(--max) - var(--min)));
 }
 ```
 

@@ -27,12 +27,12 @@ article {
     minmax(2rem, 1fr);
 }
 
-/* sets all children in the middle of the screen */
+/* Center all children */
 article > * {
   grid-column: 2;
 }
 
-/* overrides the above for images to be wider, but centered */
+/* Wider & centered images */
 article > img {
   grid-column: 1 / 4;
   justify-self: center;

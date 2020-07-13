@@ -20,19 +20,20 @@
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
-  --area: calc(100vw - var(--min-width) * var(--unit));
+  --screen: min(100vw, calc(var(--max-width) * var(--unit)));
+  --area: calc(var(--screen) - var(--min-width) * var(--unit));
   --ratio: calc(var(--area) / (var(--max-width) - var(--min-width)));
 
   // Font-sizes
-  --size-default: calc(var(--unit) * var(--min-size) + 0.25 * var(--ratio));
-  --size-h1: calc(1.75rem + 0.5 * var(--min-size) * var(--ratio));
-  --size-h2: calc(1.375rem + 0.25 * var(--min-size) * var(--ratio));
-  --size-h3: calc(1.25rem + 0.25 * var(--min-size) * var(--ratio));
-  --size-code: calc(0.8rem + 0.375 * var(--ratio));
+  --size-default: calc(var(--unit) * var(--min-size) + 0.25 * var(--ratio, 0));
+  --size-h1: calc(1.75rem + 0.5 * var(--min-size) * var(--ratio, 0));
+  --size-h2: calc(1.375rem + 0.25 * var(--min-size) * var(--ratio, 0));
+  --size-h3: calc(1.25rem + 0.25 * var(--min-size) * var(--ratio, 0));
+  --size-code: calc(0.8rem + 0.375 * var(--ratio, 0));
   --size-small: calc(0.875 * var(--size-default));
 
   // spacing
-  --s1: calc(var(--min-size) * var(--unit) + var(--min-size) * var(--ratio));
+  --s1: calc(var(--min-size) * var(--unit) + var(--min-size) * var(--ratio, 0));
   --s0: calc(0.5 * var(--s1));
   --s2: calc(1.25 * var(--s1));
   --s3: calc(1.5 * var(--s1));
@@ -41,10 +42,10 @@
 
   // general-sizes
   --page-width: calc(var(--max-width) * var(--unit));
-  --logo-size: calc(1.25rem * var(--min-size) + 0.125 * var(--ratio));
+  --logo-size: calc(1.25rem * var(--min-size) + 0.125 * var(--ratio, 0));
   --logo-padding: calc(var(--logo-size) * 0.5);
   --min-el-width: calc(var(--min-width) * var(--unit) - 2 * var(--s1));
-  --card: calc(var(--min-width) * var(--unit) + 3 * var(--ratio));
+  --card: calc(var(--min-width) * var(--unit) + 3 * var(--ratio, 0));
 
   // font-family
   --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,

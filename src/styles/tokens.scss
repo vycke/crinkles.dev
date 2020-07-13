@@ -17,6 +17,7 @@
   --min-width: 15;
   --max-width: 75;
   --min-size: 1.125;
+  --min-space: 1;
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
@@ -33,7 +34,9 @@
   --size-small: calc(0.875 * var(--size-default));
 
   // spacing
-  --s1: calc(var(--min-size) * var(--unit) + var(--min-size) * var(--ratio, 0));
+  --s1: calc(
+    var(--min-space) * var(--unit) + var(--min-size) * var(--ratio, 0)
+  );
   --s0: calc(0.5 * var(--s1));
   --s2: calc(1.25 * var(--s1));
   --s3: calc(1.5 * var(--s1));

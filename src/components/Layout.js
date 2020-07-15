@@ -88,15 +88,15 @@ const PageWrapper = ({ children, meta = {}, className = '', title }) => {
             twitter
           </a>
           <a href="https://github.com/vycke" alt="Link to my Github page">
-            Github
+            github
           </a>
           <a href="https://dribbble.com/vycke" alt="Link to my Dribbble page">
-            Dribbble
+            dribbble
           </a>
           <a
             href="https://dev.to/vycke"
             alt="Link to my the Practical Dev profile page">
-            Dev.to
+            dev.to
           </a>
         </footer>
       </div>

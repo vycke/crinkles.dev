@@ -10,7 +10,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   const meta = data.site.siteMetadata;
 
   return (
-    <Layout meta={meta} title="Blog">
+    <Layout meta={meta} title="blog">
       <main className="content center-layout">
         <section className="tiles" role="feed">
           {posts.map((p, i) => {

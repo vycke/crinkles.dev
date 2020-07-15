@@ -85,7 +85,7 @@ With a ratio based on the actual screen size between `0rem` and `1rem`, we can s
 On small screens, the font-size will be `1.125rem` and on big screens `1.375rem`. With a base font-size of `16px`, we can now calculate the exact font-sizes for different screen-sizes. A screen-size of `784px` will have an article font-size of `20.109px`. But font-sizes is one of many places where we can apply fluidity.
 
 - Font-sizes for paragraphs and headers.
-- Various spacing values used between and around element s.
+- Various spacing values used between and around elements.
 - Sizing of the site's logo and icons.
 
 All can have their own set of calculations for fluidity. These can be separate design tokens, or you can scale from the parent element (e.g. using `em` instead of `rem`).

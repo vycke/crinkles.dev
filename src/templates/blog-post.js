@@ -27,6 +27,7 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout
+      title="blog"
       className="post"
       meta={{
         ...site.siteMetadata,

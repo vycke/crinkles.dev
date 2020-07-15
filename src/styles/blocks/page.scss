@@ -38,8 +38,8 @@
   color: var(--gray-100);
   font-weight: 600;
   font-size: 0.875rem;
+  font-family: var(--monospace);
   line-height: 1;
-  text-transform: uppercase;
   background: var(--bg-footer);
 
   span {
@@ -47,14 +47,14 @@
   }
 
   > * + * {
-    margin-left: var(--logo-padding);
-    padding: var(--logo-padding) 0;
+    padding: var(--logo-padding) var(--s0);
   }
 }
 
 .content {
   flex-grow: 1;
   width: 100%;
+  padding-top: var(--s1);
   padding-bottom: var(--s3);
 }
 
@@ -69,8 +69,9 @@
   align-items: center;
   padding: var(--logo-padding);
   font-weight: 600;
-  font-size: var(--size-small);
-  text-transform: uppercase;
+  font-size: var(--size-default);
+  font-family: var(--monospace);
+  line-height: 1.2;
   text-decoration: none;
   border-radius: 0.25rem;
   transition: background-color var(--time);
@@ -81,7 +82,7 @@
 }
 
 a.logo:hover {
-  color: var(--text-primary);
+  color: var(--text-default);
 }
 
 .logo svg,

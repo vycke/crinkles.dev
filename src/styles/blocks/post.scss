@@ -35,8 +35,18 @@
 
   ul {
     margin-bottom: 0;
-    padding-left: var(--s2);
-    list-style: disc outside;
+    padding-left: 1rem;
+    list-style: none outside;
+
+    > li {
+      text-indent: -1rem;
+
+      &::before {
+        margin-right: 0.5rem;
+        font-weight: 600;
+        content: '-';
+      }
+    }
   }
 
   ol {

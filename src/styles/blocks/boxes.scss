@@ -8,7 +8,7 @@
   border-left: 2px solid;
   border-image-source: linear-gradient(
     to right,
-    var(--green),
+    var(--accent),
     var(--bg-default)
   );
   border-image-slice: 1;
@@ -27,7 +27,7 @@
     font-size: 0.75rem;
     font-family: var(--monospace);
     background: var(--bg-default);
-    border: 2px solid var(--green);
+    border: 2px solid var(--accent);
     border-radius: 1rem;
     transform: translate(calc(-0.8rem - 0.5px), calc(-50% - 0.5px));
     transition: var(--transition);

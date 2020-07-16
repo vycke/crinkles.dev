@@ -35,16 +35,25 @@
 
   ul {
     margin-bottom: 0;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     list-style: none outside;
 
     > li {
-      text-indent: -1rem;
+      position: relative;
+      padding-left: 1.5rem;
 
       &::before {
-        margin-right: 0.5rem;
-        font-weight: 600;
-        content: '-';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 5px;
+        margin-top: calc(1em - 5px);
+        background: var(--green);
+        border: 1px solid var(--green);
+        border-radius: 2rem;
+        content: '';
       }
     }
   }

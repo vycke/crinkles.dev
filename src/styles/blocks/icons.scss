@@ -1,0 +1,34 @@
+.logo,
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--icon-padding);
+  color: var(--text-default);
+  font-size: var(--size-default);
+  font-family: var(--monospace);
+  line-height: 1.2;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background-color var(--time);
+}
+
+.icon svg {
+  height: 1.25rem;
+  transition: var(--transition);
+}
+
+.icon svg + * {
+  margin-left: var(--icon-padding);
+}
+
+.icon:hover,
+.icon:hover * {
+  color: var(--text-default);
+  background-color: var(--bg-secondary);
+}
+
+.logo svg {
+  height: var(--logo-size);
+  fill: var(--green);
+}

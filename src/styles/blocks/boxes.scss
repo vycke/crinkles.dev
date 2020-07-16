@@ -21,7 +21,6 @@
     align-items: center;
     justify-content: center;
     min-width: 2rem;
-    height: 1.8rem;
     padding: 0 0.5rem;
     color: var(--text-default);
     font-weight: 600;
@@ -30,7 +29,7 @@
     background: var(--bg-default);
     border: 2px solid var(--green);
     border-radius: 1rem;
-    transform: translate(calc(-0.9rem - 0.5px), calc(-0.9rem - 0.5px));
+    transform: translate(calc(-0.8rem - 0.5px), calc(-50% - 0.5px));
     transition: var(--transition);
     content: 'info';
   }

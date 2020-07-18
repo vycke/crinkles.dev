@@ -1,6 +1,7 @@
 .info-box {
   position: relative;
-  padding: 0.75rem 1.25rem 0;
+  margin-left: 0.5rem;
+  padding: 0.75rem 0.75rem 0;
   color: var(--text-secondary);
   font-size: var(--size-small);
   border-top: 2px solid;
@@ -22,14 +23,13 @@
     justify-content: center;
     min-width: 2rem;
     padding: 0 0.5rem;
-    color: var(--text-default);
+    color: var(--accent);
     font-weight: 600;
     font-size: 0.75rem;
     font-family: var(--monospace);
+    text-transform: uppercase;
     background: var(--bg-default);
-    border: 2px solid var(--accent);
-    border-radius: 1rem;
-    transform: translate(calc(-0.8rem - 0.5px), calc(-50% - 0.5px));
+    transform: translate(-50%, calc(-50% - 0.5px));
     transition: var(--transition);
     content: 'info';
   }

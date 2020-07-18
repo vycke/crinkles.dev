@@ -46,7 +46,8 @@
 
   // general-sizes
   --page-width: calc(var(--max-width) * var(--unit));
-  --logo-size: var(--size-default);
+  // --logo-size: var(--size-default);
+  --logo-size: calc(1.25rem * var(--min-size) + 0.125 * var(--ratio, 0));
   --icon-padding: calc(var(--logo-size) * 0.5);
   --min-el-width: calc(var(--min-width) * var(--unit) - 2 * var(--s1));
   --card: calc(var(--min-width) * var(--unit) + 3 * var(--ratio, 0));
@@ -68,6 +69,7 @@ body {
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
   --bg-footer: var(--gray-600);
+  --logo-color: var(--text-default);
 }
 
 // Themes

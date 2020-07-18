@@ -24,11 +24,10 @@
 
 .icon:hover,
 .icon:hover * {
-  color: var(--text-default);
   background-color: var(--bg-secondary);
 }
 
 .logo svg {
   height: var(--logo-size);
-  fill: var(--accent);
+  fill: var(--logo-color);
 }

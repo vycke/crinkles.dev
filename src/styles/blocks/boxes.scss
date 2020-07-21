@@ -28,7 +28,7 @@
     font-size: 0.75rem;
     font-family: var(--monospace);
     text-transform: uppercase;
-    background: var(--bg-default);
+    background-color: var(--bg-default);
     transform: translate(-50%, calc(-50% - 0.5px));
     transition: var(--transition);
     content: 'info';

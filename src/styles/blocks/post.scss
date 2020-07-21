@@ -35,7 +35,7 @@
 
   ul {
     margin-bottom: 0;
-    padding-left: 0.5rem;
+    padding-left: 5px;
     list-style: none outside;
 
     > li {
@@ -48,19 +48,26 @@
         left: 0;
         display: inline-block;
         width: 10px;
-        height: 5px;
-        margin-top: calc(1em - 5px);
+        height: 4px;
+        margin-top: calc(0.875em - 2px);
         background: var(--accent);
         border: 1px solid var(--accent);
-        border-radius: 2rem;
         content: '';
       }
     }
   }
 
   ol {
-    padding-left: 1.5em;
+    padding-left: 1.65rem;
     list-style: decimal outside;
+
+    > li {
+      padding-left: 0.5rem;
+
+      &::marker {
+        font-weight: 600;
+      }
+    }
   }
 
   img,

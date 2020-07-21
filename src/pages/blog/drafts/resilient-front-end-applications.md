@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Resilient front-end applications
 draft: true
-date: 2020-03-01T00:00:00.000Z
+date: 2020-07-17T00:00:00.000Z
 description: >-
   Keeping our applications healthy and reliable is complex, and difficult to achieve
 category: engineering

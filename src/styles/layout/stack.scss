@@ -1,5 +1,5 @@
 :root {
-  --stack-spacing: 1.5rem;
+  --stack-spacing: 1.75rem;
 }
 
 [class^='stack'] > * {
@@ -12,7 +12,7 @@
 }
 
 .stack-medium > * + * {
-  margin-top: var(--s1);
+  margin-top: var(--s2);
 }
 
 .stack-large > * + * {

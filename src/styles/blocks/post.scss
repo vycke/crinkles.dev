@@ -25,6 +25,12 @@
     margin-top: 0.25em;
   }
 
+  * + h1,
+  * + h2,
+  * + h3 {
+    margin-top: 3rem;
+  }
+
   p {
     hyphens: auto;
   }

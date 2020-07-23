@@ -90,13 +90,18 @@ const PageWrapper = ({ children, meta = {}, className = '', title }) => {
           <a href="https://github.com/vycke" alt="Link to my Github page">
             github
           </a>
-          <a href="https://dribbble.com/vycke" alt="Link to my Dribbble page">
+          {/* <a href="https://dribbble.com/vycke" alt="Link to my Dribbble page">
             dribbble
-          </a>
+          </a> */}
           <a
             href="https://dev.to/vycke"
             alt="Link to my the Practical Dev profile page">
             dev.to
+          </a>
+          <a
+            href="https://vycke.dev/rss.xml"
+            alt="Link to the RSS feed of vycke.dev">
+            rss
           </a>
         </footer>
       </div>

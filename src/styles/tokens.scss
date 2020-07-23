@@ -6,11 +6,14 @@
   --gray-400: #707478;
   --gray-500: #292933;
   --gray-600: #121319;
-  --green: #09a976;
+  --green: #049988;
+  --green-dark: #006c60;
+  --green-light: #55c9bc;
   --red: #ff4137;
   --blue: #4b6bdc;
   --yellow: #fba436;
   --accent: var(--green);
+  --accent-light: var(--green-dark);
 
   // Spacing and sizes
   --unit: 1rem;
@@ -31,7 +34,7 @@
   --size-h1: calc(1.75rem + 0.5 * var(--min-size) * var(--ratio, 0));
   --size-h2: calc(1.375rem + 0.25 * var(--min-size) * var(--ratio, 0));
   --size-h3: calc(1.25rem + 0.25 * var(--min-size) * var(--ratio, 0));
-  --size-code: calc(0.8rem + 0.375 * var(--ratio, 0));
+  --size-code: calc(0.875rem + 0.25 * var(--ratio, 0));
   --size-small: calc(0.875 * var(--size-default));
 
   // spacing
@@ -78,4 +81,5 @@ body[data-theme='dark'] {
   --text-secondary: var(--gray-300);
   --bg-default: var(--gray-600);
   --bg-secondary: var(--gray-500);
+  --accent-light: var(--green-light);
 }

@@ -94,10 +94,15 @@ blockquote {
   color: var(--text-default);
 }
 
-.token.operator,
-.token.punctuation,
-.token.string,
+.token.builtin,
 .token.number,
+.token.string,
+.token.variable,
+.token.operator,
+.token.punctuation {
+  color: var(--accent-light);
+}
+
 .token.comment {
   color: var(--text-secondary);
 }
@@ -110,7 +115,9 @@ blockquote {
 
 .token.keyword,
 .token.important,
-.token.bold {
+.token.bold,
+.token.selector {
+  color: var(--accent);
   font-weight: bold;
 }
 

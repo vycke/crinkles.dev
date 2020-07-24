@@ -46,8 +46,20 @@
     flex-grow: 1;
   }
 
+  transition: var(--transition);
+
   > * + * {
     padding: var(--icon-padding) var(--s0);
+  }
+
+  > a {
+    border-radius: 0.25rem;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--gray-100);
+      background-color: var(--green);
+    }
   }
 }
 

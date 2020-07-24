@@ -91,7 +91,7 @@ blockquote {
 // string, number: primitives
 
 .token {
-  color: var(--text-default);
+  color: var(--code-default);
 }
 
 .token.builtin,
@@ -100,11 +100,11 @@ blockquote {
 .token.variable,
 .token.operator,
 .token.punctuation {
-  color: var(--accent-secondary);
+  color: var(--code-secondary);
 }
 
 .token.comment {
-  color: var(--text-secondary);
+  color: var(--code-tertiary);
 }
 
 .token.comment,
@@ -117,7 +117,7 @@ blockquote {
 .token.important,
 .token.bold,
 .token.selector {
-  color: var(--accent);
+  color: var(--code-primary);
   font-weight: bold;
 }
 

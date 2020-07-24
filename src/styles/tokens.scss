@@ -6,14 +6,14 @@
   --gray-400: #707478;
   --gray-500: #292933;
   --gray-600: #121319;
-  --green: #049988;
-  --green-dark: #006c60;
-  --green-light: #55c9bc;
-  --red: #ff4137;
+  --red: #d6372e;
   --blue: #4b6bdc;
   --yellow: #fba436;
+  --green: #00a576;
+  --green-light: #38f0bc;
+  --green-dark: #126b52;
   --accent: var(--green);
-  --accent-light: var(--green-dark);
+  --accent-secondary: var(--green-dark);
 
   // Spacing and sizes
   --unit: 1rem;
@@ -81,5 +81,5 @@ body[data-theme='dark'] {
   --text-secondary: var(--gray-300);
   --bg-default: var(--gray-600);
   --bg-secondary: var(--gray-500);
-  --accent-light: var(--green-light);
+  --accent-secondary: var(--green-light);
 }

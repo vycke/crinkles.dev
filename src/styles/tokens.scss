@@ -6,12 +6,11 @@
   --gray-400: #707478;
   --gray-500: #292933;
   --gray-600: #121319;
-  --red: #d6372e;
-  --blue: #225cff;
-  --yellow: #fba436;
-  --green: #00a576;
-  --green-light: #38f0bc;
+  --green: #00a560;
+  --green-light: #79e0bb;
   --green-dark: #24695c;
+  --blue: #1f477d;
+  --blue-dark: #102f59;
 
   // Spacing and sizes
   --unit: 1rem;
@@ -69,12 +68,12 @@ body {
   --text-secondary: var(--gray-400);
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
-  --bg-footer: var(--green-dark);
+  --bg-footer: var(--blue);
   --code-default: var(--text-default);
-  --code-primary: var(--green);
-  --code-secondary: var(--green-dark);
+  --code-primary: var(--blue);
+  --code-secondary: var(--blue-dark);
   --code-tertiary: var(--text-secondary);
-  --accent: var(--green-dark);
+  --accent: var(--green);
   --logo-color: var(--text-default);
 }
 
@@ -84,7 +83,7 @@ body[data-theme='dark'] {
   --text-secondary: var(--gray-300);
   --bg-default: var(--gray-600);
   --bg-secondary: var(--gray-500);
-  --bg-footer: var(--green-dark);
+  --bg-footer: var(--blue);
   --code-default: var(--text-default);
   --code-primary: var(--green);
   --code-secondary: var(--green-light);

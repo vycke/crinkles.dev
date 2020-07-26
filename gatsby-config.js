@@ -100,11 +100,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'A front-end engineer',
+        name: 'Vycke.dev',
         short_name: 'vycke.dev',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#2a3654',
+        background_color: '#131619',
+        theme_color: '#007A70',
         display: 'standalone',
         icon: 'src/img/favicon.svg',
       },

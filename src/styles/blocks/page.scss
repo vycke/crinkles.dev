@@ -54,7 +54,7 @@
 
   > a {
     text-decoration: none;
-    border-radius: 0.25rem;
+    border-radius: var(--radius);
     transition: var(--transition);
 
     &:hover {

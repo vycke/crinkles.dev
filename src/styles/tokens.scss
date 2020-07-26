@@ -6,9 +6,9 @@
   --gray-400: #707478;
   --gray-500: #292933;
   --gray-600: #121319;
-  --green: #00a560;
-  --green-light: #79e0bb;
-  --green-dark: #267055;
+  --green: #0d9e92;
+  --green-light: #7dded6;
+  --green-dark: #007a70;
   --blue: #1f477d;
   --blue-dark: #102f59;
 
@@ -49,6 +49,7 @@
   // --logo-size: var(--size-default);
   --logo-size: calc(1.25rem * var(--min-size) + 0.125 * var(--ratio, 0));
   --icon-padding: calc(var(--logo-size) * 0.5);
+  --radius: calc(0.25 * var(--logo-size));
   --min-el-width: calc(var(--min-width) * var(--unit) - 2 * var(--s1));
   --card: calc(var(--min-width) * var(--unit) + 3 * var(--ratio, 0));
 

@@ -71,10 +71,10 @@ body {
   --bg-secondary: var(--gray-200);
   --bg-footer: var(--green-dark);
   --code-default: var(--text-default);
-  --code-primary: var(--text-default);
-  --code-secondary: var(--text-secondary);
+  --code-primary: var(--green-dark);
+  --code-secondary: var(--green);
   --code-tertiary: var(--text-secondary);
-  --accent: var(--green-dark);
+  --accent: var(--green);
   --logo-color: var(--text-default);
 }
 
@@ -86,9 +86,9 @@ body[data-theme='dark'] {
   --bg-secondary: var(--gray-500);
   --bg-footer: var(--green-dark);
   --code-default: var(--text-default);
-  --code-primary: var(--text-default);
-  --code-secondary: var(--text-secondary);
+  --code-primary: var(--green);
+  --code-secondary: var(--green-light);
   --code-tertiary: var(--text-secondary);
-  --accent: var(--green-dark);
+  --accent: var(--green);
   --logo-color: var(--text-default);
 }

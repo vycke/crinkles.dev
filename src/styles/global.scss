@@ -95,12 +95,10 @@ blockquote {
 }
 
 .token.builtin,
-.token.number,
-.token.string,
 .token.variable,
 .token.operator,
 .token.punctuation {
-  color: var(--code-secondary);
+  color: var(--code-tertiary);
 }
 
 .token.comment {
@@ -113,12 +111,31 @@ blockquote {
   font-style: italic;
 }
 
-.token.keyword,
-.token.important,
-.token.bold,
-.token.selector {
-  color: var(--code-primary);
+.token.bold {
   font-weight: bold;
+}
+
+.token.keyword,
+.token.important {
+  color: var(--code-secondary);
+  // font-weight: bold;
+}
+
+.token.function,
+.token.selector,
+.token.tag {
+  color: var(--code-primary);
+  // font-weight: bold;
+}
+
+.token.string,
+.token.number {
+  color: var(--code-primary);
+}
+
+.token.attr-name,
+.token.attr-value {
+  color: var(--code-secondary);
 }
 
 // INLINE CODE

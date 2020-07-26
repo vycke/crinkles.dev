@@ -30,7 +30,7 @@ _Note: to be in line with modern frameworks, I both use the terms props/properti
 
 State is a mutable object that dictates the behavior and UI of our component. It is often combined with data received through the API. In the example below, we have a modal component with an incorporated button. When clicking the button, we set the value of `show` to `true`. Now our modal becomes visible for the user.
 
-```js
+```jsx
 function MyModal (props) {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow((s) => !s);
@@ -46,7 +46,7 @@ function MyModal (props) {
 
 The addition of a state to a component makes it sometimes easy to introduce bugs. The data and action properties are part of the '[data-flow](https://overreacted.io/writing-resilient-components/)'. But we often interrupt this with our state by copying values from the data properties into our state. But what happens if the values change? Does our state also change? Should it? Look at the example below look of what happens when `showModal` updates. If `MyComponent` is already part of the component tree, then nothing happens. We have interrupted the data-flow. Don't.
 
-```js
+```jsx
 function MyModal({ showModal }) {
   const [show, setShow] = useState(showModal);
 
@@ -65,7 +65,7 @@ As you can see in the diagram, actions link everything together. They are functi
 
 Below you can see part of a small React component example with two different actions. The first action changes the state on interaction (e.g. typing in an `<input />` field). The second action triggers the changes. It removes the modal, it makes an external call to a server to save the values and resets the internal state.
 
-```js
+```jsx
 function MyComponent(props) {
   const [show, setShow] = useState(true);
   const [state, setState] = useState();
@@ -92,7 +92,7 @@ User inaction results in changes in the state of our component, or higher in the
 
 A simple example is a search component. When our user types, the state of the component should change, invoking a re-render. Every time we type, we want our component to perform an API-call. We can do this with the `onChange` handler of `<input />`. But what if our API-call depends on a value provided through the properties? And what if that value changes? We need to move our API-call to an update life-cycle method, as you can see below.
 
-```js
+```jsx
 function SearchComponent({ query }) {
   const [search, setSearch] = useState('');
 
@@ -116,7 +116,7 @@ The UI describes what we want our users to interact with. These interactions, su
 
 It is often possible to add logic to our rendering. Examples are conditional visibility or showing a list of data with varying sizes. To do so, we need logic, rendering logic. This be something simple as using a boolean value from the state, or use an `array.map()` function. But sometimes we must combining many values in our rendering logic or even use functions to help us. In such a case, I would take that logic outside the rendering function itself as much as possible.
 
-```js
+```jsx
 function MyModal ({ value }) {
   const [show, setShow] = useState(false);
 

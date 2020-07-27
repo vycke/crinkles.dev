@@ -152,47 +152,18 @@ Now we have the layout score of the graph. As it counts the amount of crossings,
 
 ## Optimizing the result
 
-But, in most cases the initial graph does not have layout score of `0`, but a higher score. The layout can be optimized.
+But, in most cases the initial graph does not have layout score of `0`, but a higher score. The layout can be optimized. Note: the lower the score, t
 
-- Iterate over all ranks, except the first one
-- In each rank, go over all nodes.
-- Swap the node with the next node in the same rank
-- Check the amount of crossings and self crossings of the rank, compared to the previous rank
-- If the total amount is less, keep it, and move to the next rank.
-- at the end, evaluate the entire graph, if the score is lower? Execute again, but start with the new ranking. Is the score the same or worse, stop.
+1. Determine graph score
+2. Determine the rank score (`oldScore`) for the first rank
+3. Swap two successive nodes in a rank, and determine a new rank score (`newScore`)
+4. If `newScore > oldScore` and there are nodes left in the rank, swap the nodes back and go back to Step 3. Else, leave the nodes swapped.
+5. If there are ranks left, go back to Step 2 for the next rank.
+6. Determine the new graph score. If the new score is better, go back to Step 1.
 
 ![Highlight of the swaps in the heuristic](/img/graph-example-5.png)
 
-```js
-//
-function score(rank, prev, edges) {
-  return cross(rank, prev, edges) + selfCross(rank, edges);
-}
-
-function optimize(ranking, edges) {
-  const _ranking = [ranking[0]];
-
-  for (let i = 1; i < ranking.length; i++) {
-    let rank = [...ranking[i]];
-    const prev = _ranking[i - 1];
-    for (let j = 0; j < rank.length; j++) {
-      const _rank = [...rank];
-      _rank[k] = rank[k + 1];
-      _rank[k + 1] = rank[k];
-      // if there is a better score, replace the rank
-      // and proceed to the next rank
-      if (score(_rank, prev, edges) < score(rank, prev, edges)) {
-        rank = _rank;
-        break;
-      }
-    }
-  }
-  // Determine if the new score is better
-  if (graphScore(_ranking, edges) < graphScore(ranking, edges))
-    return optimize(_ranking, edges);
-  return _ranking;
-}
-```
+My implementation checks for each rank the number of crossing with the previous ranks. Why? In the displayed example, if you would look backwards and forwards, or at the total graph, it would not become better after the first switch, while in reality, it becomes better by 2 switches.
 
 ## positioning
 

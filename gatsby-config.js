@@ -84,7 +84,6 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
@@ -105,8 +104,10 @@ module.exports = {
         start_url: '/',
         background_color: '#131619',
         theme_color: '#007A70',
-        display: 'standalone',
+        display: 'minimal-ui',
+        lang: 'en',
         icon: 'src/img/favicon.svg',
+        theme_color_in_head: false,
       },
     },
     {
@@ -137,6 +138,7 @@ module.exports = {
         plugins: [
           'gatsby-remark-containers',
           'gatsby-remark-unwrap-images',
+          'gatsby-remark-autolink-headers',
           {
             resolve: 'gatsby-remark-relative-images',
             options: {

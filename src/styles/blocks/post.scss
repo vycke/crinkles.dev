@@ -39,6 +39,12 @@
     grid-column: 2;
   }
 
+  h1:hover svg,
+  h2:hover svg,
+  h3:hover svg {
+    fill: var(--accent);
+  }
+
   ul {
     margin-bottom: 0;
     padding-left: 5px;

@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   font-weight: 400;
@@ -105,5 +105,12 @@ select {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Hack to allow 100vh properly on iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
   }
 }

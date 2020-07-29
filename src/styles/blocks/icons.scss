@@ -4,7 +4,6 @@
   flex-direction: row;
   align-items: center;
   padding: var(--icon-padding);
-  color: var(--text-default);
   font-size: var(--size-default);
   font-family: var(--monospace);
   line-height: 1.2;
@@ -15,6 +14,7 @@
 
 .icon svg {
   height: 1.25rem;
+  color: var(--text-default);
   transition: var(--transition);
 }
 
@@ -24,10 +24,10 @@
 
 .icon:hover,
 .icon:hover * {
-  background-color: var(--bg-secondary);
+  background: var(--bg-secondary);
 }
 
 .logo svg {
   height: var(--logo-size);
-  fill: var(--logo-color);
+  color: var(--logo-color);
 }

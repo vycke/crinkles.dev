@@ -47,23 +47,24 @@
 
   ul {
     margin-bottom: 0;
-    padding-left: 5px;
+    padding-left: 0;
     list-style: none outside;
 
     > li {
       position: relative;
-      padding-left: 1.5rem;
+      padding-left: 1.2em;
 
       &::before {
         position: absolute;
         top: 0;
         left: 0;
         display: inline-block;
-        width: 10px;
-        height: 4px;
-        margin-top: calc(0.875em - 2px);
+        width: 0.5em;
+        height: 0.5em;
+        margin-top: calc(0.875em - 0.25em);
         background: var(--accent);
         border: 1px solid var(--accent);
+        border-radius: 0.1em;
         content: '';
       }
     }

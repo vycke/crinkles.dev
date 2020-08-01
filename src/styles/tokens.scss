@@ -6,13 +6,10 @@
   --gray-400: #707478;
   --gray-500: #292933;
   --gray-600: #121319;
-  --green: #0cac66;
-  --green-light: #abeed0;
-  --green-dark: #066f41;
   --purple: #504aed;
   --purple-light: #c2c0f2;
+  --purple-mid: #726ed9;
   --purple-dark: #100c73;
-  --gradient: linear-gradient(30deg, var(--purple), var(--green));
 
   // Spacing and sizes
   --unit: 1rem;
@@ -48,7 +45,6 @@
 
   // general-sizes
   --page-width: calc(var(--max-width) * var(--unit));
-  // --logo-size: var(--size-default);
   --logo-size: calc(1.25rem * var(--min-size) + 0.125 * var(--ratio, 0));
   --icon-padding: calc(var(--logo-size) * 0.5);
   --radius: calc(0.25 * var(--logo-size));
@@ -71,12 +67,12 @@ body {
   --text-secondary: var(--gray-400);
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
-  --bg-footer: var(--gradient);
+  --bg-footer: var(--purple);
   --code-default: var(--text-default);
-  --code-primary: var(--green-dark);
-  --code-secondary: var(--green);
+  --code-primary: var(--purple-dark);
+  --code-secondary: var(--purple);
   --code-tertiary: var(--text-secondary);
-  --accent: var(--green);
+  --accent: var(--purple);
   --logo-color: var(--text-default);
 }
 
@@ -86,11 +82,11 @@ body[data-theme='dark'] {
   --text-secondary: var(--gray-300);
   --bg-default: var(--gray-600);
   --bg-secondary: var(--gray-500);
-  --bg-footer: var(--gradient);
-  --code-default: var(--text-default);
-  --code-primary: var(--green);
-  --code-secondary: var(--green-light);
+  --bg-footer: var(--purple);
+  --code-default: var(--gray-200);
+  --code-primary: var(--purple-mid);
+  --code-secondary: var(--purple-light);
   --code-tertiary: var(--text-secondary);
-  --accent: var(--green);
+  --accent: var(--purple-light);
   --logo-color: var(--text-default);
 }

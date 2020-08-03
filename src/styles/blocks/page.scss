@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: var(--s1);
-  color: var(--gray-100);
+  color: var(--gray-600);
   font-weight: 600;
   font-size: 0.875rem;
   font-family: var(--monospace);
@@ -49,6 +49,7 @@
   transition: var(--transition);
 
   > * + * {
+    margin-left: 0.5rem;
     padding: var(--icon-padding) var(--s0);
   }
 

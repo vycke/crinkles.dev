@@ -6,10 +6,9 @@
   --gray-400: #707478;
   --gray-500: #292933;
   --gray-600: #121319;
-  --purple: #504aed;
-  --purple-light: #c2c0f2;
-  --purple-mid: #726ed9;
-  --purple-dark: #100c73;
+  --green: #0cb060;
+  --green-light: #a0e4c6;
+  --green-dark: #066f41;
 
   // Spacing and sizes
   --unit: 1rem;
@@ -67,12 +66,12 @@ body {
   --text-secondary: var(--gray-400);
   --bg-default: var(--gray-100);
   --bg-secondary: var(--gray-200);
-  --bg-footer: var(--purple);
+  --bg-footer: var(--green);
   --code-default: var(--text-default);
-  --code-primary: var(--purple-dark);
-  --code-secondary: var(--purple);
+  --code-primary: var(--green-dark);
+  --code-secondary: var(--green);
   --code-tertiary: var(--text-secondary);
-  --accent: var(--purple);
+  --accent: var(--green);
   --logo-color: var(--text-default);
 }
 
@@ -82,11 +81,11 @@ body[data-theme='dark'] {
   --text-secondary: var(--gray-300);
   --bg-default: var(--gray-600);
   --bg-secondary: var(--gray-500);
-  --bg-footer: var(--purple);
+  --bg-footer: var(--green);
   --code-default: var(--gray-200);
-  --code-primary: var(--purple-mid);
-  --code-secondary: var(--purple-light);
+  --code-primary: var(--green);
+  --code-secondary: var(--green-light);
   --code-tertiary: var(--text-secondary);
-  --accent: var(--purple-light);
+  --accent: var(--green);
   --logo-color: var(--text-default);
 }

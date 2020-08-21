@@ -4,9 +4,6 @@
   flex-direction: row;
   align-items: center;
   padding: var(--icon-padding);
-  font-size: var(--size-default);
-  font-family: var(--monospace);
-  line-height: 1.2;
   text-decoration: none;
   border-radius: var(--radius);
   transition: background-color var(--time);
@@ -30,4 +27,11 @@
 .logo svg {
   height: var(--logo-size);
   color: var(--logo-color);
+}
+
+.logo span {
+  margin-left: var(--s1);
+  font-size: var(--size-small);
+  font-family: var(--monospace);
+  line-height: 1.2;
 }

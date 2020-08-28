@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: var(--s1);
-  color: var(--gray-600);
+  color: var(--text-default);
   font-weight: 600;
   font-size: 0.875rem;
   font-family: var(--monospace);
@@ -60,7 +60,7 @@
 
     &:hover {
       color: var(--gray-100);
-      background-color: var(--gray-600);
+      background-color: var(--green);
     }
   }
 }

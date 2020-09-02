@@ -23,6 +23,11 @@
   max-width: calc(var(--page-width) + 2 * var(--s1));
   margin: 0 auto;
   padding: var(--s1) calc(var(--s1) - var(--icon-padding));
+
+  > a:hover,
+  a:hover span {
+    color: var(--text-default);
+  }
 }
 
 /**
@@ -60,7 +65,7 @@
 
     &:hover {
       color: var(--gray-100);
-      background-color: var(--green);
+      background-color: var(--primary);
     }
   }
 }

@@ -42,7 +42,7 @@
   h1:hover svg,
   h2:hover svg,
   h3:hover svg {
-    fill: var(--accent);
+    fill: var(--primary);
   }
 
   ul {
@@ -62,8 +62,8 @@
         width: 0.5em;
         height: 0.5em;
         margin-top: calc(0.875em - 0.25em);
-        background: var(--accent);
-        border: 1px solid var(--accent);
+        background: var(--primary);
+        border: 1px solid var(--primary);
         border-radius: 0.1em;
         content: '';
       }

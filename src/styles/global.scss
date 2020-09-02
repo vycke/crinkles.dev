@@ -43,9 +43,9 @@ a:active {
 
 a:hover,
 a:hover > * {
-  color: var(--accent);
+  color: var(--text-link);
   transition: var(--transition);
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--text-link);
 }
 
 a.svg {

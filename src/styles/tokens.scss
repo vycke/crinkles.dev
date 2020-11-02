@@ -6,9 +6,9 @@
   --gray-400: #667583;
   --gray-500: #333a41;
   --gray-600: #121319;
-  --primary: #ffb317;
-  --primary-light: #edd2a4;
-  --primary-dark: #b17e15;
+  --primary: #f4385a;
+  --primary-light: #ffabac;
+  --primary-dark: #a10622;
 
   // Spacing and sizes
   --unit: 1rem;
@@ -69,8 +69,8 @@ body {
   --bg-secondary: var(--gray-200);
   --bg-footer: var(--bg-secondary);
   --code-default: var(--text-default);
-  --code-primary: var(--primary-dark);
-  --code-secondary: var(--gray-400);
+  --code-primary: var(--primary);
+  --code-secondary: var(--primary-dark);
   --code-tertiary: var(--gray-300);
   --logo-color: var(--text-default);
 }

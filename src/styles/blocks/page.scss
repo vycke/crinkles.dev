@@ -16,17 +16,26 @@
 * Main site header *
 **/
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   width: 100%;
-  max-width: calc(var(--page-width) + 2 * var(--s1));
-  margin: 0 auto;
-  padding: var(--s1) calc(var(--s1) - var(--icon-padding));
+  margin: var(--s1) auto var(--s1);
+  backdrop-filter: saturate(180%) blur(20px);
 
-  > a:hover,
-  a:hover span {
-    color: var(--text-default);
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(var(--page-width) + 2 * var(--s1));
+    margin: 0 auto;
+    padding: 0.5rem calc(var(--s1) - var(--icon-padding));
+
+    > a:hover,
+    a:hover span {
+      color: var(--text-default);
+    }
   }
 }
 

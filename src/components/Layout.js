@@ -83,23 +83,23 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
         <footer className="footer">
           <span>© 2020 by Kevin Pennekamp</span>
-          <a href="https://twitter.com/vycke_" alt="Link to my Twitter page">
+          <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
             twitter
           </a>
-          <a href="https://github.com/vycke" alt="Link to my Github page">
+          <a href="https://github.com/kevtiq" alt="Link to my Github page">
             github
           </a>
           {/* <a href="https://dribbble.com/vycke" alt="Link to my Dribbble page">
               dribbble
             </a> */}
           <a
-            href="https://dev.to/vycke"
+            href="https://dev.to/kevtiq"
             alt="Link to my the Practical Dev profile page">
             dev.to
           </a>
           <a
-            href="https://vycke.dev/rss.xml"
-            alt="Link to the RSS feed of vycke.dev">
+            href="https://kevtiq.co/rss.xml"
+            alt="Link to the RSS feed of kevtiq.co">
             rss
           </a>
         </footer>

@@ -22,7 +22,7 @@ const BlogPost = ({ data, pageContext }) => {
   const meta = {
     ...post.frontmatter,
     words: post.wordCount.words,
-    url: `https://www.vycke.dev${data.markdownRemark.fields.slug}`,
+    url: `https://www.kevtiq.co${data.markdownRemark.fields.slug}`,
   };
 
   return (

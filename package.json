@@ -1,9 +1,9 @@
 {
-  "name": "vycke.dev",
-  "description": "vycke.dev website",
+  "name": "kevtiq.co",
+  "description": "kevtiq.co website",
   "version": "1.0.0",
-  "author": "Kevin Pennekamp <hello@vycke.dev> (https://vycke.dev/)",
-  "repository": "https://github.com/vycke/vycke.dev",
+  "author": "Kevin Pennekamp <hello@kevtiq.co> (https://kevtiq.co/)",
+  "repository": "https://github.com/kevtiq/kevtiq-website",
   "dependencies": {
     "gatsby": "^2.23.1",
     "gatsby-plugin-catch-links": "^2.3.4",

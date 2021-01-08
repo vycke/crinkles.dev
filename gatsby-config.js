@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.kevtiq.co',
+    siteUrl: 'https://www.kevtiq.dev',
     author: 'Kevin Pennekamp',
     title: 'Kevin Pennekamp',
     image: '/img/logo.png',
@@ -75,7 +75,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Kevtiq.co RSS Feed',
+            title: 'kevtiq.dev RSS Feed',
           },
         ],
       },
@@ -99,8 +99,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'kevtiq.co',
-        short_name: 'kevtiq.co',
+        name: 'kevtiq.dev',
+        short_name: 'kevtiq.dev',
         start_url: '/',
         background_color: '#131619',
         theme_color: '#007A70',

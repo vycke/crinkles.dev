@@ -98,8 +98,8 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
             dev.to
           </a>
           <a
-            href="https://kevtiq.co/rss.xml"
-            alt="Link to the RSS feed of kevtiq.co">
+            href="https://kevtiq.dev/rss.xml"
+            alt="Link to the RSS feed of kevtiq.dev">
             rss
           </a>
         </footer>

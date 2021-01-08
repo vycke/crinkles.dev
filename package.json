@@ -1,8 +1,8 @@
 {
-  "name": "kevtiq.co",
-  "description": "kevtiq.co website",
+  "name": "kevtiq.dev",
+  "description": "kevtiq.dev website",
   "version": "1.0.0",
-  "author": "Kevin Pennekamp <hello@kevtiq.co> (https://kevtiq.co/)",
+  "author": "Kevin Pennekamp <hello@kevtiq.dev> (https://kevtiq.dev/)",
   "repository": "https://github.com/kevtiq/kevtiq-website",
   "dependencies": {
     "gatsby": "^2.23.1",

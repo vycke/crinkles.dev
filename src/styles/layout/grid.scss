@@ -1,17 +1,17 @@
 .center-layout {
   width: 100%;
-  max-width: calc(var(--page-width, 75rem) + 2 * var(--spacing-1));
+  max-width: calc(var(--page-width, var(--size-5)) + 2 * var(--spacing-2));
   margin: 0 auto;
-  padding: 0 var(--spacing-1);
+  padding: 0 var(--spacing-0);
 }
 
 .grid {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns:
-    minmax(var(--spacing-1), 1fr)
-    minmax(auto, var(--page-width, 75rem))
-    minmax(var(--spacing-1), 1fr);
+    minmax(var(--spacing-0), 1fr)
+    minmax(auto, var(--page-width, var(--size-5)))
+    minmax(var(--spacing-0), 1fr);
 }
 
 .cell--left {
@@ -30,7 +30,7 @@
   display: grid;
   grid-row-gap: var(--spacing-3);
   grid-column-gap: var(--spacing-2);
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--size-1), 1fr));
   width: 100%;
   margin: 0 auto;
 }

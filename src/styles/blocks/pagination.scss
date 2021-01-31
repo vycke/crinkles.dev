@@ -8,6 +8,7 @@
     minmax(calc(var(--size-0) - 2 * var(--spacing-1)), 1fr)
   );
   width: 100%;
+  padding: var(--spacing-1);
 
   a.next,
   a.previous {

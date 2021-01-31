@@ -3,7 +3,7 @@
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--size-1), 1fr));
   min-width: var(--size-0);
   overflow: hidden;
   color: var(--text-secondary);

@@ -153,7 +153,7 @@ blockquote {
 // CODE BLOCKS
 pre[class*='language-'] {
   margin: 0;
-  padding: calc(0.5 * var(--spacing-3));
+  padding: var(--spacing-0);
   overflow: auto;
   color: var(--text-default);
   font-size: var(--text-00);

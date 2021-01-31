@@ -9,7 +9,7 @@
 }
 
 .overview {
-  font-size: var(--text-00);
+  font-size: var(--text-0);
 }
 
 /**
@@ -50,7 +50,7 @@
   justify-content: flex-end;
   padding: var(--spacing-1);
   color: var(--text-default);
-  font-weight: 600;
+
   font-size: var(--text-00);
   font-family: var(--monospace);
   line-height: 1;
@@ -70,6 +70,7 @@
   > a {
     text-decoration: none;
     border-radius: var(--radius-0);
+    font-weight: 600;
     transition: var(--transition);
 
     &:hover {

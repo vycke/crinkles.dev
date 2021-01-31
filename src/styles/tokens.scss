@@ -10,24 +10,13 @@
   --primary-light: #ffabac;
   --primary-dark: #a10622;
 
-  // Spacing and sizes
-  --screen-scale: calc(0.2 * 1.618vw); // based on golden ratio
-  --min-width: 15rem;
-  --max-width: 75rem;
-
-  // calculates the ratio that scales between 0px and 1px based on the screen
-  // size
-  --screen: min(100vw, var(--max-width));
-  --area: calc(var(--screen) - var(--min-width));
-  --ratio: calc(var(--area) / 60);
-
   // Typography system (based on golden ratio scaling
-  --text-3: calc(1.953rem + var(--screen-scale));
-  --text-2: calc(1.563rem + var(--screen-scale));
-  --text-1: calc(1.25rem + var(--screen-scale));
-  --text-0: calc(1rem + var(--screen-scale));
-  --text-00: calc(0.8rem + var(--screen-scale)); // small-font-size
-  --text-000: calc(0.64rem + var(--screen-scale)); // base-nav-size
+  --text-0: calc(1.125rem + 0.1 * 1.2vw);
+  --text-3: calc(1.953 * var(--text-0));
+  --text-2: calc(1.563 * var(--text-0));
+  --text-1: calc(1.25 * var(--text-0));
+  --text-00: calc(0.8 * var(--text-0)); // small-font-size
+  --text-000: calc(0.64 * var(--text-0)); // base-nav-size
 
   // box-shadow system
   --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -37,20 +26,18 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
   // Spacing (margin/padding) system
-  --s1: calc(1rem + var(--screen-scale));
-  --s0: calc(0.5 * var(--s1));
-  --s2: calc(1.25 * var(--s1));
-  --s3: calc(1.5 * var(--s1));
-  --s4: calc(2 * var(--s1));
-  --s5: calc(3 * var(--s1));
+  --s0: calc(1rem + 0.1 * 1.2vw);
+  --s00: calc(0.75 * var(--s0));
+  --s000: calc(0.5 * var(--s0));
+  --s1: calc(1.25 * var(--s0));
+  --s2: calc(2 * var(--s1));
+  --s3: calc(3 * var(--s1));
+
+  // misc
+  --radius: 0.375rem;
 
   // general-sizes
-  --page-width: var(--max-width);
-  --logo-size: calc(1.25rem + var(--screen-scale));
-  --icon-padding: calc(var(--logo-size) * 0.5);
-  --radius: calc(0.25 * var(--logo-size));
-  --min-el-width: calc(var(--min-width) - 2 * var(--s1));
-  --card: calc(var(--min-width) + 3 * (1rem + var(--screen-scale)));
+  --card: calc(15rem + 3 * (1rem + 0.1 * 1.2vw));
 
   // font-family
   --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,

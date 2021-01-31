@@ -16,8 +16,7 @@
 
     > span {
       color: var(--text-secondary);
-      font-weight: 600;
-      font-size: 0.875rem;
+      font-size: var(--text-00);
       text-transform: uppercase;
     }
   }

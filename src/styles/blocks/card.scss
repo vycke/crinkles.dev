@@ -3,8 +3,8 @@
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(var(--card), 1fr));
-  min-width: var(--card);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  min-width: 15rem;
   overflow: hidden;
   color: var(--text-secondary);
   font-size: var(--text-00);
@@ -48,7 +48,6 @@ a.card__title {
 
 .card__meta {
   color: var(--text-secondary);
-  font-weight: 600;
-  font-size: var(--text-000);
+  font-size: var(--text-00);
   text-transform: uppercase;
 }

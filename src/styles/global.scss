@@ -3,7 +3,7 @@
 *******/
 html,
 body {
-  min-width: calc(var(--min-width) * 1rem);
+  min-width: 15rem;
   color: var(--text-default);
   font-family: var(--sans-serif);
   background-color: var(--bg-default);
@@ -38,7 +38,7 @@ a > *,
 a:link,
 a:visited,
 a:active {
-  text-decoration-color: var(--text-secondary);
+  text-decoration-color: var(--primary);
 }
 
 a:hover,
@@ -141,18 +141,13 @@ blockquote {
 // INLINE CODE
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
-  color: var(--text-default) !important;
+  color: var(--primary) !important;
   font-weight: 600;
   font-size: 0.875em;
   font-family: var(--monospace);
   hyphens: none;
   background-color: transparent !important;
   transition: var(--transition);
-
-  &::before,
-  &::after {
-    content: '`';
-  }
 }
 
 // CODE BLOCKS

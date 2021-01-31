@@ -1,5 +1,5 @@
 .post {
-  --page-width: 60ch;
+  --page-width: clamp(15rem, 100vw, 70ch);
 
   font-size: var(--text-0);
 }
@@ -12,7 +12,6 @@
   span,
   a {
     color: var(--text-secondary);
-    font-weight: 600;
     font-size: var(--text-0);
     text-transform: uppercase;
   }

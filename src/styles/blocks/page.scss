@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: calc(var(--page-width) + 2 * var(--s1));
+    max-width: calc(var(--page-width, 75rem) + 2 * var(--s1));
     margin: 0 auto;
     padding: 0.5rem calc(var(--s1) - var(--icon-padding));
 

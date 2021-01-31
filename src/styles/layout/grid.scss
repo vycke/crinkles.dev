@@ -1,17 +1,17 @@
 .center-layout {
   width: 100%;
-  max-width: calc(var(--page-width, 75rem) + 2 * var(--s-1));
+  max-width: calc(var(--page-width, 75rem) + 2 * var(--spacing-1));
   margin: 0 auto;
-  padding: 0 var(--s-1);
+  padding: 0 var(--spacing-1);
 }
 
 .grid {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns:
-    minmax(var(--s-1), 1fr)
+    minmax(var(--spacing-1), 1fr)
     minmax(auto, var(--page-width, 75rem))
-    minmax(var(--s-1), 1fr);
+    minmax(var(--spacing-1), 1fr);
 }
 
 .cell--left {
@@ -28,8 +28,8 @@
 
 .tiles {
   display: grid;
-  grid-row-gap: var(--s-3);
-  grid-column-gap: var(--s-2);
+  grid-row-gap: var(--spacing-3);
+  grid-column-gap: var(--spacing-2);
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   width: 100%;
   margin: 0 auto;

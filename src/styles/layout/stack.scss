@@ -4,10 +4,10 @@
 }
 
 .stack > * + * {
-  margin-top: var(--s-2);
+  margin-top: var(--spacing-2);
 }
 .stack-large > * + * {
-  margin-top: var(--s-3);
+  margin-top: var(--spacing-3);
 }
 
 .grow {

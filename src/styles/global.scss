@@ -3,7 +3,7 @@
 *******/
 html,
 body {
-  min-width: var(--min-width);
+  min-width: var(--size-0);
   color: var(--text-default);
   font-family: var(--sans-serif);
   background-color: var(--bg-default);
@@ -153,7 +153,7 @@ blockquote {
 // CODE BLOCKS
 pre[class*='language-'] {
   margin: 0;
-  padding: calc(0.5 * var(--s-3));
+  padding: calc(0.5 * var(--spacing-3));
   overflow: auto;
   color: var(--text-default);
   font-size: var(--text-00);

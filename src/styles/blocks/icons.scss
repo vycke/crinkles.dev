@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: var(--s-00);
+  padding: var(--spacing-00);
   text-decoration: none;
-  border-radius: var(--radius);
+  border-radius: var(--radius-1);
   transition: background-color ease-in-out 200ms;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .icon svg + * {
-  margin-left: var(--s-00);
+  margin-left: var(--spacing-00);
 }
 
 .icon:hover,

@@ -3,7 +3,7 @@
 *******/
 html,
 body {
-  min-width: calc(var(--min-width) * var(--unit));
+  min-width: calc(var(--min-width) * 1rem);
   color: var(--text-default);
   font-family: var(--sans-serif);
   background-color: var(--bg-default);
@@ -21,15 +21,15 @@ h3 {
 }
 
 h1 {
-  font-size: var(--size-h1);
+  font-size: var(--text-3);
 }
 
 h2 {
-  font-size: var(--size-h2);
+  font-size: var(--text-2);
 }
 
 h3 {
-  font-size: var(--size-h3);
+  font-size: var(--text-1);
 }
 
 // LINKS
@@ -62,7 +62,7 @@ a.svg {
 blockquote {
   padding: 0 1rem;
   color: var(--text-default);
-  font-size: var(--size-small);
+  font-size: var(--text-0);
   font-style: italic;
   border-left: 0.25rem solid var(--text-secondary);
 
@@ -161,7 +161,7 @@ pre[class*='language-'] {
   padding: var(--s1);
   overflow: auto;
   color: var(--text-default);
-  font-size: var(--size-code);
+  font-size: var(--text-00);
   line-height: 1.4;
   background-color: var(--bg-secondary) !important;
   outline: 1px solid var(--text-secondary);

@@ -9,7 +9,7 @@
 }
 
 .overview {
-  font-size: var(--size-small);
+  font-size: var(--text-00);
 }
 
 /**
@@ -21,7 +21,7 @@
   z-index: 100;
   width: 100%;
   margin: var(--s1) auto var(--s1);
-  backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: blur(20px);
 
   .inner {
     display: flex;

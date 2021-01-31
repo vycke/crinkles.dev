@@ -1,7 +1,7 @@
 .post {
   --page-width: 60ch;
 
-  font-size: var(--size-default);
+  font-size: var(--text-0);
 }
 
 .post__meta {
@@ -13,7 +13,7 @@
   a {
     color: var(--text-secondary);
     font-weight: 600;
-    font-size: 0.75em;
+    font-size: var(--text-0);
     text-transform: uppercase;
   }
 }
@@ -89,8 +89,7 @@
     justify-self: center;
     width: 100%;
     max-width: calc(var(--page-width) + var(--s4));
-    box-shadow: 0 0 calc(var(--size-default) * 3) calc(var(--size-default) / 2)
-      rgba(0, 0, 0, 0.06);
+    box-shadow: var(--elevation-3);
   }
 
   img {

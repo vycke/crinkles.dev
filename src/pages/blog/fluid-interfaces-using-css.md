@@ -77,8 +77,8 @@ With a ratio based on the actual screen size between `0rem` and `1rem`, we can s
 :root {
   --min-size: 1.125rem;
   --max-size: 1.375rem;
-  --scale: calc(var(--max-size) - var(--min-size));
-  --size: calc(var(--min-size) + var(--scale) * var(--ratio));
+  --text: calc(var(--max-size) - var(--min-size));
+  --size: calc(var(--min-size) + var(--text) * var(--ratio));
 }
 ```
 

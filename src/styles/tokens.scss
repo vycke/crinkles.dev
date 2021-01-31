@@ -11,31 +11,33 @@
   --primary-dark: #a10622;
 
   // Spacing and sizes
-  --unit: 1rem;
-  --base: 16;
-  --min-width: 15;
-  --max-width: 75;
-  --min-size: 1.125;
-  --min-space: 1;
+  --screen-scale: calc(0.2 * 1.618vw); // based on golden ratio
+  --min-width: 15rem;
+  --max-width: 75rem;
 
   // calculates the ratio that scales between 0px and 1px based on the screen
   // size
-  --screen: min(100vw, calc(var(--max-width) * var(--unit)));
-  --area: calc(var(--screen) - var(--min-width) * var(--unit));
-  --ratio: calc(var(--area) / (var(--max-width) - var(--min-width)));
+  --screen: min(100vw, var(--max-width));
+  --area: calc(var(--screen) - var(--min-width));
+  --ratio: calc(var(--area) / 60);
 
-  // Font-sizes
-  --size-default: calc(var(--unit) * var(--min-size) + 0.25 * var(--ratio, 0));
-  --size-h1: calc(1.75rem + 0.5 * var(--min-size) * var(--ratio, 0));
-  --size-h2: calc(1.375rem + 0.25 * var(--min-size) * var(--ratio, 0));
-  --size-h3: calc(1.25rem + 0.25 * var(--min-size) * var(--ratio, 0));
-  --size-code: calc(0.875rem + 0.25 * var(--ratio, 0));
-  --size-small: calc(0.875 * var(--size-default));
+  // Typography system (based on golden ratio scaling
+  --text-3: calc(1.953rem + var(--screen-scale));
+  --text-2: calc(1.563rem + var(--screen-scale));
+  --text-1: calc(1.25rem + var(--screen-scale));
+  --text-0: calc(1rem + var(--screen-scale));
+  --text-00: calc(0.8rem + var(--screen-scale)); // small-font-size
+  --text-000: calc(0.64rem + var(--screen-scale)); // base-nav-size
 
-  // spacing
-  --s1: calc(
-    var(--min-space) * var(--unit) + var(--min-size) * var(--ratio, 0)
-  );
+  // box-shadow system
+  --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  // Spacing (margin/padding) system
+  --s1: calc(1rem + var(--screen-scale));
   --s0: calc(0.5 * var(--s1));
   --s2: calc(1.25 * var(--s1));
   --s3: calc(1.5 * var(--s1));
@@ -43,12 +45,12 @@
   --s5: calc(3 * var(--s1));
 
   // general-sizes
-  --page-width: calc(var(--max-width) * var(--unit));
-  --logo-size: calc(1.25rem * var(--min-size) + 0.125 * var(--ratio, 0));
+  --page-width: var(--max-width);
+  --logo-size: calc(1.25rem + var(--screen-scale));
   --icon-padding: calc(var(--logo-size) * 0.5);
   --radius: calc(0.25 * var(--logo-size));
-  --min-el-width: calc(var(--min-width) * var(--unit) - 2 * var(--s1));
-  --card: calc(var(--min-width) * var(--unit) + 3 * var(--ratio, 0));
+  --min-el-width: calc(var(--min-width) - 2 * var(--s1));
+  --card: calc(var(--min-width) + 3 * (1rem + var(--screen-scale)));
 
   // font-family
   --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,

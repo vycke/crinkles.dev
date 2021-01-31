@@ -7,7 +7,7 @@
   min-width: var(--card);
   overflow: hidden;
   color: var(--text-secondary);
-  font-size: var(--size-small);
+  font-size: var(--text-00);
   column-gap: var(--s1);
   row-gap: var(--s0);
 }
@@ -32,6 +32,10 @@ a.card__title {
   cursor: pointer;
   text-decoration-color: rgba(0, 0, 0, 0);
 
+  > h2 {
+    font-size: var(--text-1);
+  }
+
   &::after {
     position: absolute;
     top: 0;
@@ -45,6 +49,6 @@ a.card__title {
 .card__meta {
   color: var(--text-secondary);
   font-weight: 600;
-  font-size: 0.75em;
+  font-size: var(--text-000);
   text-transform: uppercase;
 }

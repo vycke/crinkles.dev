@@ -11,7 +11,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout meta={meta}>
-      <main className="content center-layout stack-xl overview">
+      <main className="content center-layout stack-large overview">
         <section className="tiles">
           <div className="stack">
             <h1 className="title">Hey, I'm Kevin.</h1>

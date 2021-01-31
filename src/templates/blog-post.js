@@ -33,7 +33,7 @@ const BlogPost = ({ data, pageContext }) => {
         ...post.frontmatter,
         slug: post.fields.slug,
       }}>
-      <main className="content stack-medium">
+      <main className="content stack">
         <header className="grid post__meta" role="contentinfo">
           <span>
             <time dateTime={meta.date}>{meta.date}</time>
@@ -43,7 +43,7 @@ const BlogPost = ({ data, pageContext }) => {
         </header>
 
         <article
-          className="grid sm post__body stack-small"
+          className="grid sm post__body stack"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </main>

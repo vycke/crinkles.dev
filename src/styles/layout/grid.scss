@@ -29,7 +29,7 @@
 .tiles {
   display: grid;
   grid-row-gap: var(--s3);
-  grid-column-gap: var(--s1);
+  grid-column-gap: var(--s2);
   grid-template-columns: repeat(auto-fit, minmax(var(--card), 1fr));
   width: 100%;
   margin: 0 auto;

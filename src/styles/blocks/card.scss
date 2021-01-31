@@ -3,8 +3,8 @@
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  min-width: 15rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
+  min-width: var(--min-width);
   overflow: hidden;
   color: var(--text-secondary);
   font-size: var(--text-00);
@@ -27,7 +27,7 @@
 }
 
 a.card__title {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--s000);
   color: var(--text-default);
   cursor: pointer;
   text-decoration-color: rgba(0, 0, 0, 0);

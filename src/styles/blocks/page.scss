@@ -30,7 +30,7 @@
     width: 100%;
     max-width: calc(var(--page-width, 75rem) + 2 * var(--s1));
     margin: 0 auto;
-    padding: 0.5rem calc(var(--s1) - var(--icon-padding));
+    padding: var(--s000) calc(var(--s1) - var(--s00));
 
     > a:hover,
     a:hover span {
@@ -51,7 +51,7 @@
   padding: var(--s1);
   color: var(--text-default);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: var(--text-00);
   font-family: var(--monospace);
   line-height: 1;
   background: var(--bg-footer);
@@ -63,8 +63,8 @@
   transition: var(--transition);
 
   > * + * {
-    margin-left: 0.5rem;
-    padding: var(--icon-padding) var(--s0);
+    margin-left: var(--s00);
+    padding: var(--s000) var(--s0);
   }
 
   > a {

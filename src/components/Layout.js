@@ -89,9 +89,6 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
           <a href="https://github.com/kevtiq" alt="Link to my Github page">
             github
           </a>
-          {/* <a href="https://dribbble.com/vycke" alt="Link to my Dribbble page">
-              dribbble
-            </a> */}
           <a
             href="https://dev.to/kevtiq"
             alt="Link to my the Practical Dev profile page">

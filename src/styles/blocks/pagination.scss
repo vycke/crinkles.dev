@@ -3,7 +3,10 @@
   display: grid;
   grid-row-gap: var(--s1);
   grid-column-gap: var(--s1);
-  grid-template-columns: repeat(auto-fit, minmax(var(--min-el-width), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(var(--min-width) - 2 * var(--s1)), 1fr)
+  );
   width: 100%;
 
   a.next,
@@ -11,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 0;
+    padding: var(--s0) 0;
     text-decoration-color: rgba(0, 0, 0, 0);
 
     > span {

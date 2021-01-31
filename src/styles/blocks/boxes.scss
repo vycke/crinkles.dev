@@ -1,7 +1,7 @@
 .info-box {
   position: relative;
-  margin-left: 0.5rem;
-  padding: 0.75rem 0.75rem 0;
+  margin-left: var(--s000);
+  padding: var(--s00) var(--s00) 0;
   color: var(--text-secondary);
   font-size: var(--text-00);
   border-top: 2px solid;
@@ -25,7 +25,7 @@
     padding: 0 0.5rem;
     color: var(--primary);
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: var(--text-00);
     font-family: var(--monospace);
     text-transform: uppercase;
     background-color: var(--bg-default);

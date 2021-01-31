@@ -1,26 +1,13 @@
-:root {
-  --stack-spacing: 1.75rem;
-}
-
 [class^='stack'] > * {
   margin: 0;
   margin-bottom: 0;
 }
 
-.stack-small > * + * {
-  margin-top: var(--stack-spacing);
-}
-
-.stack-medium > * + * {
+.stack > * + * {
   margin-top: var(--s2);
 }
-
 .stack-large > * + * {
   margin-top: var(--s3);
-}
-
-.stack-xl > * + * {
-  margin-top: var(--s5);
 }
 
 .grow {

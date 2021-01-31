@@ -1,5 +1,5 @@
 .post {
-  --page-width: clamp(15rem, 100vw, 70ch);
+  --page-width: clamp(var(--min-width), 100vw, 70ch);
 
   font-size: var(--text-0);
 }
@@ -27,7 +27,7 @@
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: 3rem;
+    margin-top: var(--s3);
   }
 
   p {
@@ -51,7 +51,7 @@
 
     > li {
       position: relative;
-      padding-left: 1.2em;
+      padding-left: var(--s1);
 
       &::before {
         position: absolute;
@@ -60,7 +60,7 @@
         display: inline-block;
         width: 0.5em;
         height: 0.5em;
-        margin-top: calc(0.875em - 0.25em);
+        margin-top: var(--s00);
         background: var(--primary);
         border: 1px solid var(--primary);
         border-radius: 0.1em;
@@ -74,7 +74,7 @@
     list-style: decimal outside;
 
     > li {
-      padding-left: 0.5rem;
+      padding-left: var(--s00);
 
       &::marker {
         font-weight: 600;
@@ -87,7 +87,7 @@
     grid-column: 1 / 4;
     justify-self: center;
     width: 100%;
-    max-width: calc(var(--page-width) + var(--s4));
+    max-width: calc(var(--page-width) + var(--s3));
     box-shadow: var(--elevation-3);
   }
 

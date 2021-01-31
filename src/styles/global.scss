@@ -3,7 +3,7 @@
 *******/
 html,
 body {
-  min-width: 15rem;
+  min-width: var(--min-width);
   color: var(--text-default);
   font-family: var(--sans-serif);
   background-color: var(--bg-default);
@@ -73,7 +73,7 @@ blockquote {
   cite {
     display: block;
     width: 100%;
-    font-size: 0.875rem;
+    font-size: var(--text-00);
     text-align: right;
 
     &::before {

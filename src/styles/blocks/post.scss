@@ -27,7 +27,7 @@
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: var(--s3);
+    margin-top: var(--s-3);
   }
 
   p {
@@ -51,7 +51,7 @@
 
     > li {
       position: relative;
-      padding-left: var(--s1);
+      padding-left: var(--s-1);
 
       &::before {
         position: absolute;
@@ -60,7 +60,7 @@
         display: inline-block;
         width: 0.5em;
         height: 0.5em;
-        margin-top: var(--s00);
+        margin-top: var(--s-00);
         background: var(--primary);
         border: 1px solid var(--primary);
         border-radius: 0.1em;
@@ -74,7 +74,7 @@
     list-style: decimal outside;
 
     > li {
-      padding-left: var(--s00);
+      padding-left: var(--s-00);
 
       &::marker {
         font-weight: 600;
@@ -87,7 +87,7 @@
     grid-column: 1 / 4;
     justify-self: center;
     width: 100%;
-    max-width: calc(var(--page-width) + var(--s3));
+    max-width: calc(var(--page-width) + var(--s-3));
     box-shadow: var(--elevation-3);
   }
 

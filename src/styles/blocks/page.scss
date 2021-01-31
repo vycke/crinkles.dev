@@ -20,7 +20,7 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  margin: var(--s1) auto var(--s1);
+  margin: var(--s-1) auto var(--s-1);
   backdrop-filter: blur(20px);
 
   .inner {
@@ -28,9 +28,9 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: calc(var(--page-width, 75rem) + 2 * var(--s1));
+    max-width: calc(var(--page-width, 75rem) + 2 * var(--s-1));
     margin: 0 auto;
-    padding: var(--s000) calc(var(--s1) - var(--s00));
+    padding: var(--s-000) calc(var(--s-1) - var(--s-00));
 
     > a:hover,
     a:hover span {
@@ -48,7 +48,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  padding: var(--s1);
+  padding: var(--s-1);
   color: var(--text-default);
   font-weight: 600;
   font-size: var(--text-00);
@@ -63,8 +63,8 @@
   transition: var(--transition);
 
   > * + * {
-    margin-left: var(--s00);
-    padding: var(--s000) var(--s0);
+    margin-left: var(--s-00);
+    padding: var(--s-000) var(--s-0);
   }
 
   > a {
@@ -82,10 +82,10 @@
 .content {
   flex-grow: 1;
   width: 100%;
-  padding-top: var(--s1);
-  padding-bottom: var(--s3);
+  padding-top: var(--s-1);
+  padding-bottom: var(--s-3);
 }
 
 .title {
-  padding-bottom: var(--s0);
+  padding-bottom: var(--s-0);
 }

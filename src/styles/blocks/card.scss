@@ -3,13 +3,13 @@
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   min-width: var(--min-width);
   overflow: hidden;
   color: var(--text-secondary);
   font-size: var(--text-00);
-  column-gap: var(--s1);
-  row-gap: var(--s0);
+  column-gap: var(--s-1);
+  row-gap: var(--s-0);
 }
 
 .card__image {
@@ -27,7 +27,7 @@
 }
 
 a.card__title {
-  margin-bottom: var(--s000);
+  margin-bottom: var(--s-000);
   color: var(--text-default);
   cursor: pointer;
   text-decoration-color: rgba(0, 0, 0, 0);

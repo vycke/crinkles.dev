@@ -7,9 +7,7 @@
   --gray-500: #333a4c;
   --gray-600: #131623;
 
-  --primary: #18b69b;
-  --primary-light: #89e4d5;
-  --primary-dark: #128975;
+  --accent: #ffb317;
 
   // Typography system (golden ratio)
   --text-0: calc(1.125rem + 0.1 * 1.4vw);
@@ -53,34 +51,16 @@
 
   // misc
   --transition: all ease-in-out 200ms;
-}
 
-// default theme
-body {
-  --text-default: var(--gray-600);
-  --text-secondary: var(--gray-400);
-  --text-link: var(--primary);
-  --bg-default: var(--gray-100);
-  --bg-secondary: var(--gray-200);
-  --bg-footer: var(--bg-secondary);
-  --code-default: var(--text-default);
-  --code-primary: var(--primary);
-  --code-secondary: var(--primary-dark);
-  --code-tertiary: var(--gray-300);
-  --logo-color: var(--text-default);
-}
-
-// Themes
-body[data-theme='dark'] {
+  // default theme
   --text-default: var(--gray-100);
   --text-secondary: var(--gray-300);
-  --text-link: var(--primary);
+  --text-link: var(--accent);
   --bg-default: var(--gray-600);
   --bg-secondary: var(--gray-500);
   --bg-footer: var(--bg-secondary);
   --code-default: var(--gray-200);
-  --code-primary: var(--primary);
-  --code-secondary: var(--primary-light);
-  --code-tertiary: var(--text-secondary);
+  --code-primary: var(--accent);
+  --code-secondary: var(--text-secondary);
   --logo-color: var(--text-default);
 }

@@ -1,5 +1,4 @@
-.logo,
-.icon {
+.logo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,18 +8,7 @@
   transition: background-color ease-in-out 200ms;
 }
 
-.icon svg {
-  height: var(--text-0);
-  color: var(--text-default);
-  transition: var(--transition);
-}
-
-.icon svg + * {
-  margin-left: var(--spacing-00);
-}
-
-.icon:hover,
-.icon:hover * {
+.logo:hover {
   background: var(--bg-secondary);
 }
 

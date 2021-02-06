@@ -9,7 +9,7 @@
   border-left: 2px solid;
   border-image-source: linear-gradient(
     to right,
-    var(--primary),
+    var(--accent),
     var(--bg-default)
   );
   border-image-slice: 1;
@@ -23,7 +23,7 @@
     justify-content: center;
     min-width: 2rem;
     padding: 0 0.5rem;
-    color: var(--primary);
+    color: var(--accent);
     font-weight: 600;
     font-size: var(--text-00);
     font-family: var(--monospace);

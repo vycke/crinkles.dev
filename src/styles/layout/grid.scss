@@ -10,7 +10,7 @@
   grid-template-rows: auto;
   grid-template-columns:
     minmax(var(--spacing-0), 1fr)
-    minmax(auto, var(--page-width, var(--size-5)))
+    minmax(auto, calc(var(--page-width, var(--size-5)) + 2 * var(--spacing-1)))
     minmax(var(--spacing-0), 1fr);
 }
 

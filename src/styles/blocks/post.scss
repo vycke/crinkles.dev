@@ -1,5 +1,5 @@
 .post {
-  --page-width: clamp(var(--size-0), 100vw, 70ch);
+  --page-width: clamp(var(--size-0), 100vw, 65ch);
 
   font-size: var(--text-0);
 }
@@ -41,7 +41,7 @@
   h1:hover svg,
   h2:hover svg,
   h3:hover svg {
-    fill: var(--primary);
+    fill: var(--accent);
   }
 
   ul {
@@ -61,8 +61,8 @@
         width: 0.5em;
         height: 0.5em;
         margin-top: var(--spacing-00);
-        background: var(--primary);
-        border: 1px solid var(--primary);
+        background: var(--accent);
+        border: 1px solid var(--accent);
         border-radius: 0.1em;
         content: '';
       }

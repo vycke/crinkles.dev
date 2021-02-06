@@ -7,8 +7,7 @@
   --gray-500: #333a4c;
   --gray-600: #131623;
 
-  --accent: #34e08d;
-  // --accent: #ffb317;
+  --accent: #e5702e;
 
   // Typography system (golden ratio)
   --text-0: calc(1.125rem + 0.1 * 1.4vw);
@@ -59,8 +58,8 @@
   --text-link: var(--accent);
   --bg-default: var(--gray-600);
   --bg-secondary: var(--gray-500);
-  --code-default: var(--gray-200);
+  --code-default: var(--gray-100);
   --code-primary: var(--accent);
-  --code-secondary: var(--text-secondary);
+  --code-secondary: var(--gray-300);
   --logo-color: var(--text-default);
 }

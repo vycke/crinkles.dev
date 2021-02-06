@@ -62,7 +62,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
         {children}
 
         <footer className="footer">
-          <span>© 2021 Kevtiq</span>
+          <span>© 2019-2021 Kevtiq</span>
           <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
             twitter
           </a>

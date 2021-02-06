@@ -50,12 +50,12 @@
   align-items: center;
   justify-content: flex-end;
   padding: var(--spacing-0) var(--spacing-1);
-  color: var(--text-default);
-
+  color: var(--gray-600);
+  font-weight: bold;
   font-size: var(--text-00);
   font-family: var(--monospace);
   line-height: 1;
-  background: var(--bg-footer);
+  background: var(--accent);
 
   span {
     flex-grow: 1;
@@ -71,14 +71,13 @@
   > a {
     text-decoration: none;
     border-radius: var(--radius-0);
-    font-weight: 600;
     transition: var(--transition);
     margin-top: var(--spacing-000);
     margin-bottom: var(--spacing-000);
 
     &:hover {
-      color: var(--gray-600);
-      background-color: var(--accent);
+      color: var(--accent);
+      background-color: var(--gray-600);
     }
   }
 }

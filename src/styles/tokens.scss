@@ -1,17 +1,18 @@
 :root {
   // Colors
   --gray-100: #fafafa;
-  --gray-200: #e0e4e9;
+  --gray-200: #e5eaed;
   --gray-300: #8a9eb5;
-  --gray-400: #667583;
-  --gray-500: #333a41;
-  --gray-600: #121319;
-  --primary: #e52e5c;
-  --primary-light: #ffabac;
-  --primary-dark: #a10622;
+  --gray-400: #66758a;
+  --gray-500: #333a4c;
+  --gray-600: #131623;
+
+  --primary: #18b69b;
+  --primary-light: #89e4d5;
+  --primary-dark: #128975;
 
   // Typography system (golden ratio)
-  --text-0: calc(1.125rem + 0.1 * 1.2vw);
+  --text-0: calc(1.125rem + 0.1 * 1.4vw);
   --text-00: calc(0.8 * var(--text-0)); // small-font-size
   --text-000: calc(0.64 * var(--text-0)); // base-nav-size
   --text-1: calc(1.25 * var(--text-0));

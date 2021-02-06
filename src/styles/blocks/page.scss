@@ -48,7 +48,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  padding: var(--spacing-1);
+  padding: var(--spacing-0) var(--spacing-1);
   color: var(--text-default);
 
   font-size: var(--text-00);
@@ -72,6 +72,8 @@
     border-radius: var(--radius-0);
     font-weight: 600;
     transition: var(--transition);
+    margin-top: var(--spacing-000);
+    margin-bottom: var(--spacing-000);
 
     &:hover {
       color: var(--gray-600);

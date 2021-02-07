@@ -97,12 +97,12 @@ blockquote {
 .token.builtin,
 .token.variable,
 .token.operator,
-.token.punctuation {
-  color: var(--code-tertiary);
-}
-
-.token.comment {
-  color: var(--code-tertiary);
+.token.punctuation,
+.token.attr-name,
+.token.comment,
+.token.keyword,
+.token.important {
+  color: var(--code-secondary);
 }
 
 .token.comment,
@@ -115,25 +115,13 @@ blockquote {
   font-weight: bold;
 }
 
-.token.keyword,
-.token.important {
-  color: var(--code-secondary);
-}
-
 .token.function,
 .token.selector,
-.token.tag {
-  color: var(--code-primary);
-}
-
+.token.tag,
+.token.attr-value,
 .token.string,
 .token.number {
   color: var(--code-primary);
-}
-
-.token.attr-name,
-.token.attr-value {
-  color: var(--code-secondary);
 }
 
 // INLINE CODE

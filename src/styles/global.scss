@@ -38,7 +38,7 @@ a > *,
 a:link,
 a:visited,
 a:active {
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent-200);
 }
 
 a:hover,
@@ -120,14 +120,15 @@ blockquote {
 .token.tag,
 .token.attr-value,
 .token.string,
-.token.number {
+.token.number,
+.token.class-name {
   color: var(--code-primary);
 }
 
 // INLINE CODE
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
-  color: var(--accent) !important;
+  color: var(--accent-200) !important;
   font-weight: 600;
   font-size: 0.875em;
   font-family: var(--monospace);

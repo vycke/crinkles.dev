@@ -18,7 +18,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
   return (
     <React.Fragment>
-      <Helmet title={seo.title}>
+      <Helmet htmlAttributes={{ lang: 'en' }} title={seo.title}>
         <meta name="description" content={seo.description} />
         <meta name="keywords" content={seo.keyword} />
         <meta property="og:title" content={seo.title} />

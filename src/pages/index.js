@@ -31,7 +31,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           <aside />
         </section>
 
-        <section className="stack" role="feed">
+        <section className="stack">
           <div className="tiles" role="feed">
             {posts.map((p, i) => {
               const post = p.node;

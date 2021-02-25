@@ -39,6 +39,7 @@
   ],
   "license": "MIT",
   "main": "n/a",
+  "browserslist": [">1%", "last 2 versions"],
   "scripts": {
     "clean": "rimraf .cache public",
     "start:app": "npm run develop",

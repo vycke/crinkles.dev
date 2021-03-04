@@ -2,14 +2,13 @@
   // Colors
   --gray-100: #fafafa;
   --gray-200: #e5eaed;
-  --gray-300: #8a9eb5;
-  --gray-400: #66758a;
-  --gray-500: #333a4c;
-  --gray-600: #131623;
+  --gray-300: #a7b8cb;
+  --gray-400: #383f53;
+  --gray-500: #131623;
 
   --accent-100: #85e0bb;
-  --accent-200: #2bbc8a;
-  --accent-300: #137c58;
+  --accent-200: #2ec997;
+  --accent-300: #1b8e67;
 
   // Typography system (golden ratio)
   --text-0: calc(1.125rem + 0.1 * 1.4vw);
@@ -58,8 +57,8 @@
   --text-default: var(--gray-100);
   --text-secondary: var(--gray-300);
   --text-link: var(--accent-200);
-  --bg-default: var(--gray-600);
-  --bg-secondary: var(--gray-500);
+  --bg-default: var(--gray-500);
+  --bg-secondary: var(--gray-400);
   --code-default: var(--gray-100);
   --code-primary: var(--accent-100);
   --code-secondary: var(--gray-300);

@@ -4,7 +4,7 @@ module.exports = {
     author: 'Kevin Pennekamp',
     title: 'Kevin Pennekamp',
     image: '/img/logo.png',
-    twitterName: '@vycke_',
+    twitterName: '@kevtiq',
     description:
       'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!',
     keywords: [
@@ -103,7 +103,7 @@ module.exports = {
         short_name: 'kevtiq.dev',
         start_url: '/',
         background_color: '#131619',
-        theme_color: '#007A70',
+        theme_color: '#2bbc8a',
         display: 'minimal-ui',
         lang: 'en',
         icon: 'src/img/favicon.svg',
@@ -138,7 +138,13 @@ module.exports = {
         plugins: [
           'gatsby-remark-containers',
           'gatsby-remark-unwrap-images',
-          'gatsby-remark-autolink-headers',
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+              icon: '#',
+            },
+          },
           {
             resolve: 'gatsby-remark-relative-images',
             options: {

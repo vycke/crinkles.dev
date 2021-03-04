@@ -20,6 +20,17 @@
 .post__body {
   width: 100%;
 
+  h1,
+  h2,
+  h3 {
+    margin-left: var(--spacing-1);
+  }
+
+  a.anchor {
+    text-decoration: none;
+    color: var(--accent-200);
+  }
+
   li + li {
     margin-top: 0.25em;
   }

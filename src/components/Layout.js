@@ -20,7 +20,9 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
     <React.Fragment>
       <Helmet htmlAttributes={{ lang: 'en' }} title={seo.title}>
         <meta name="description" content={seo.description} />
-        <meta name="keywords" content={seo.keyword} />
+        <meta name="keywords" content={seo.keywords} />
+        <meta name="content" content={seo.keywords} />
+        <meta name="property" content={seo.keywords} />
         <meta property="og:title" content={seo.title} />
         <meta property="og:url" content={seo.url} />
         <meta property="og:description" content={seo.description} />
@@ -39,7 +41,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
       </Helmet>
 
       <div className={`site ${className}`}>
-        <header role="banner" className="header">
+        <header className="header">
           <div className="inner">
             <Link
               to="/"
@@ -63,20 +65,20 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
         <footer className="footer">
           <span>© 2019-2021 Kevtiq</span>
-          <a href="https://twitter.com/kevtiq" alt="Link to my Twitter page">
+          <a href="https://twitter.com/kevtiq" title="Link to my Twitter page">
             twitter
           </a>
-          <a href="https://github.com/kevtiq" alt="Link to my Github page">
+          <a href="https://github.com/kevtiq" title="Link to my Github page">
             github
           </a>
           <a
             href="https://dev.to/kevtiq"
-            alt="Link to my the Practical Dev profile page">
+            title="Link to my the Practical Dev profile page">
             dev.to
           </a>
           <a
             href="https://kevtiq.dev/rss.xml"
-            alt="Link to the RSS feed of kevtiq.dev">
+            title="Link to the RSS feed of kevtiq.dev">
             rss
           </a>
         </footer>

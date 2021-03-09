@@ -22,7 +22,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
                 Writing
               </Link>{' '}
               about engineering and code. Currently working at{' '}
-              <a href="https://finaps.nl" alt="Website of Finaps B.V.">
+              <a href="https://finaps.nl" title="Website of Finaps B.V.">
                 Finaps
               </a>
               .

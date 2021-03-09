@@ -10,7 +10,7 @@ const Card = ({
   className = '',
 }) => {
   return (
-    <section className={`card ${className}`} role="article">
+    <div className={`card ${className}`} role="article">
       {category && (
         <img
           className="card__image"
@@ -26,7 +26,7 @@ const Card = ({
 
         {subtitle && <span className="card__subtitle">{subtitle}</span>}
       </div>
-    </section>
+    </div>
   );
 };
 

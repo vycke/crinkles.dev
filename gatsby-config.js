@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.kevtiq.dev',
+    siteUrl: 'https://www.crinkle.dev',
     author: 'Kevin Pennekamp',
     title: 'Kevin Pennekamp',
     image: '/img/logo.png',
@@ -75,7 +75,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'kevtiq.dev RSS Feed',
+            title: 'crinkle.dev RSS Feed',
           },
         ],
       },
@@ -99,8 +99,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'kevtiq.dev',
-        short_name: 'kevtiq.dev',
+        name: 'crinkle.dev',
+        short_name: 'crinkle.dev',
         start_url: '/',
         background_color: '#131619',
         theme_color: '#2bbc8a',

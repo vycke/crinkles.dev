@@ -13,11 +13,16 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
     <Layout meta={meta}>
       <main className="content center-layout stack-large overview">
         <section className="tiles">
-          <div className="stack">
+          <div className="flex-col">
             <h1 className="title">Hey, I'm Kevin.</h1>
+            <span className="italic text-000 pb-00">
+              "A crinkles (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on the surface
+              of something. It highlights personality and makes each surface
+              unique."
+            </span>
             <span>
-              Welcome to my playground! I'm a software engineer, UI architect,
-              engineering manager and a big CSS lover.{' '}
+              Welcome to my playground! I'm a software engineer and a big CSS
+              lover.{' '}
               <Link className="next" to="/blog">
                 Writing
               </Link>{' '}
@@ -31,7 +36,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           <aside />
         </section>
 
-        <section className="stack">
+        <section className="flex-col">
           <div className="tiles" role="feed">
             {posts.map((p, i) => {
               const post = p.node;
@@ -49,7 +54,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
               );
             })}
           </div>
-          <aside className="pagination">
+          <aside className="pagination mt-1">
             <Link className="previous" to="/blog">
               <span>Blog →</span>
               <h3>View more articles</h3>

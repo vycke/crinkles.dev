@@ -45,7 +45,7 @@
 **/
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -54,9 +54,17 @@
   font-family: var(--monospace);
   background-color: var(--gray-400);
 
-  > * + * {
-    margin-left: var(--spacing-00);
-    padding: var(--spacing-000) var(--spacing-0);
+  .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    > * + * {
+      margin-left: var(--spacing-00);
+      padding: var(--spacing-000) var(--spacing-0);
+    }
   }
 }
 

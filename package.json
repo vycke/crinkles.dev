@@ -1,9 +1,9 @@
 {
-  "name": "kevtiq.dev",
-  "description": "kevtiq.dev website",
+  "name": "crinkle.dev",
+  "description": "crinkle.dev website",
   "version": "1.0.0",
-  "author": "Kevin Pennekamp <hello@kevtiq.dev> (https://kevtiq.dev/)",
-  "repository": "https://github.com/kevtiq/kevtiq-website",
+  "author": "Kevin Pennekamp <hello@crinkle.dev> (https://crinkle.dev/)",
+  "repository": "https://github.com/kevtiq/crinkle.dev",
   "dependencies": {
     "gatsby": "^2.23.1",
     "gatsby-plugin-catch-links": "^2.3.4",
@@ -35,7 +35,8 @@
   "keywords": [
     "gatsby",
     "netlify",
-    "kevtiq"
+    "kevtiq",
+    "crinkle"
   ],
   "license": "MIT",
   "main": "n/a",

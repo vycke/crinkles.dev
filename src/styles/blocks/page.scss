@@ -51,7 +51,6 @@
   justify-content: center;
   padding: var(--spacing-1);
   font-size: var(--text-00);
-  font-family: var(--monospace);
   background-color: var(--gray-400);
 
   .links {
@@ -59,6 +58,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    font-family: var(--monospace);
     justify-content: center;
 
     > * + * {

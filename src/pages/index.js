@@ -21,16 +21,16 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
               unique."
             </span>
             <span>
-              Welcome to my playground! I'm a software engineer and a big CSS
-              lover.{' '}
-              <Link className="next" to="/blog">
-                Writing
-              </Link>{' '}
-              about engineering and code. Currently working at{' '}
+              Welcome to my playground! I'm a big CSS lover, currently working
+              as a software engineer at{' '}
               <a href="https://finaps.nl" title="Website of Finaps B.V.">
                 Finaps
               </a>
-              .
+              .{' '}
+              <Link className="next" to="/blog">
+                Writing
+              </Link>{' '}
+              about UI engineering.
             </span>
           </div>
           <aside />

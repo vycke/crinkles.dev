@@ -16,8 +16,8 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           <div className="flex-col">
             <h1 className="title">Hey, I'm Kevin.</h1>
             <span className="italic text-000 pb-00">
-              "A crinkles (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on the surface
-              of something. It highlights personality and makes each surface
+              "A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on the surface of
+              something. It highlights personality and makes each surface
               unique."
             </span>
             <span>

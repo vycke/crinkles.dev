@@ -86,7 +86,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
             </a>
           </div>
           <span className="italic text-000 pb-00">
-            "A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface It
+            "A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It
             highlights personality and uniqueness."
           </span>
         </footer>

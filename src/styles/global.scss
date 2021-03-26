@@ -38,14 +38,16 @@ a > *,
 a:link,
 a:visited,
 a:active {
-  text-decoration-color: var(--accent-200);
+  text-decoration-color: var(--red-200);
+  text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:hover > * {
-  color: var(--text-link);
+  color: var(--red-200);
   transition: var(--transition);
-  text-decoration-color: var(--text-link);
+  text-decoration-color: var(--red-200);
+  text-decoration-thickness: 2px;
 }
 
 a.svg {
@@ -60,11 +62,12 @@ a.svg {
 
 // QUOTES
 blockquote {
-  padding: 0 1rem;
+  padding: var(--spacing-0);
   color: var(--text-default);
-  font-size: var(--text-0);
+  font-size: var(--text-00);
+  background-color: var(--gray-400);
   font-style: italic;
-  border-left: 0.25rem solid var(--text-secondary);
+  border-left: 0.25rem solid var(--blue-200);
 
   p {
     opacity: 0.7;
@@ -91,7 +94,7 @@ blockquote {
 // string, number: primitives
 
 .token {
-  color: var(--code-default);
+  color: var(--gray-100);
 }
 
 .token.builtin,
@@ -102,7 +105,7 @@ blockquote {
 .token.comment,
 .token.keyword,
 .token.important {
-  color: var(--code-secondary);
+  color: var(--gray-300);
 }
 
 .token.comment,
@@ -122,14 +125,13 @@ blockquote {
 .token.string,
 .token.number,
 .token.class-name {
-  color: var(--code-primary);
+  color: var(--green-200);
 }
 
 // INLINE CODE
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
-  color: var(--accent-200) !important;
-  font-weight: 600;
+  color: var(--green-200) !important;
   font-size: 0.875em;
   font-family: var(--monospace);
   hyphens: none;
@@ -146,7 +148,6 @@ pre[class*='language-'] {
   font-size: var(--text-00);
   line-height: 1.4;
   background-color: var(--bg-secondary) !important;
-  outline: 1px solid var(--text-secondary);
   transition: var(--transition);
 
   > code[class*='language-'] {

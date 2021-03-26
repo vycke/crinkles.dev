@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: calc(var(--page-width, var(--size-5)) + 2 * var(--spacing-2));
+    max-width: calc(var(--page-width, var(--size-5)) + 2 * var(--spacing-1));
     margin: 0 auto;
     padding: var(--spacing-000) calc(var(--spacing-1) - var(--spacing-00));
 
@@ -52,6 +52,7 @@
   padding: var(--spacing-1);
   font-size: var(--text-00);
   background-color: var(--gray-400);
+  border-top: 1px solid var(--gray-300);
 
   .links {
     display: flex;
@@ -72,7 +73,7 @@
   flex-grow: 1;
   width: 100%;
   padding-top: var(--spacing-1);
-  padding-bottom: var(--spacing-1);
+  padding-bottom: var(--spacing-2);
 }
 
 .title {

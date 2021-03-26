@@ -9,10 +9,9 @@
 }
 
 .logo:hover {
-  background: var(--bg-secondary);
+  background: var(--gray-400);
 }
 
 .logo svg {
   height: var(--text-2);
-  fill: var(--logo-color);
 }

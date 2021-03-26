@@ -1,6 +1,6 @@
 .center-layout {
   width: 100%;
-  max-width: calc(var(--page-width, var(--size-5)) + 2 * var(--spacing-2));
+  max-width: calc(var(--page-width, var(--size-5)) + 2 * var(--spacing-1));
   margin: 0 auto;
   padding: 0 var(--spacing-0);
 }
@@ -10,7 +10,7 @@
   grid-template-rows: auto;
   grid-template-columns:
     minmax(var(--spacing-0), 1fr)
-    minmax(auto, calc(var(--page-width, var(--size-5)) + 2 * var(--spacing-1)))
+    minmax(auto, calc(var(--page-width, var(--size-5))))
     minmax(var(--spacing-0), 1fr);
 }
 

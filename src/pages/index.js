@@ -14,22 +14,20 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
       <main className="content center-layout stack-large overview">
         <section className="tiles">
           <div className="flex-col">
-            <h1 className="title">Hey, I'm Kevin.</h1>
-            <span className="italic text-000 pb-00">
-              "A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It
-              highlights personality and uniqueness."
-            </span>
+            <h1 className="title">Hi, I'm Kevin.</h1>
             <span>
-              Welcome to my playground! I'm a big CSS lover, currently working
-              as a software engineer at{' '}
+              <span className="bold text-blue-200">›</span>
+              <span className="bold text-red-200">›</span>
+              <span className="bold text-green-200">›</span> Welcome to my
+              playground! I am a front-end engineer, big CSS lover, and{' '}
+              <Link className="next" to="/blog">
+                writer
+              </Link>
+              . Currently working at{' '}
               <a href="https://finaps.nl" title="Website of Finaps B.V.">
                 Finaps
               </a>
-              .{' '}
-              <Link className="next" to="/blog">
-                Writing
-              </Link>{' '}
-              about UI engineering.
+              .
             </span>
           </div>
           <aside />

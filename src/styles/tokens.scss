@@ -1,34 +1,59 @@
+$colors: (
+  'gray-100': #fafafa,
+  'gray-200': #e5eaed,
+  'gray-300': #a7b8cb,
+  'gray-400': #383f53,
+  'gray-500': #131623,
+  'green-100': #85e0bb,
+  'green-200': #2ec997,
+  'green-300': #1b8e67,
+  'blue-200': #3676f8,
+  'red-200': #ff0056,
+);
+
+// Typography system (golden ratio)
+$base-text-size: calc(1.125rem + 0.15vw);
+$text-sizes: (
+  '0': 1,
+  '00': 0.8,
+  '000': 0.64,
+  '1': 1.25,
+  '2': 1.563,
+  '3': 1.953,
+);
+
+// Spacing system: padding, margin, gap
+$base-spacing: calc(1rem + 0.15vw);
+$spacing: (
+  '0': 1,
+  '00': 0.75,
+  '000': 0.5,
+  '1': 1.25,
+  '2': 2,
+  '3': 3,
+);
+
 :root {
-  // Colors
-  --gray-100: #fafafa;
-  --gray-200: #e5eaed;
-  --gray-300: #a7b8cb;
-  --gray-400: #383f53;
-  --gray-500: #131623;
+  // create CSS variables around colors
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
 
-  --accent-100: #85e0bb;
-  --accent-200: #2ec997;
-  --accent-300: #1b8e67;
+  // create CSS variables around text-sizes
+  --text-base: #{$base-text-size};
+  @each $name, $size in $text-sizes {
+    --text-#{$name}: calc(#{$size} * var(--text-base));
+  }
 
-  // Typography system (golden ratio)
-  --text-0: calc(1.125rem + 0.1 * 1.4vw);
-  --text-00: calc(0.8 * var(--text-0)); // small-font-size
-  --text-000: calc(0.64 * var(--text-0)); // base-nav-size
-  --text-1: calc(1.25 * var(--text-0));
-  --text-2: calc(1.563 * var(--text-0));
-  --text-3: calc(1.953 * var(--text-0));
+  // create CSS variables around spacing
+  --spacing-base: #{$base-spacing};
+  @each $name, $space in $spacing {
+    --spacing-#{$name}: calc(#{$space} * var(--spacing-base));
+  }
 
   --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   --monospace: hack, consolas, menlo, monaco, 'Courier New', monospace;
-
-  // Spacing system: padding, margin, gap
-  --spacing-0: calc(1rem + 0.1 * 1.2vw);
-  --spacing-00: calc(0.75 * var(--spacing-0));
-  --spacing-000: calc(0.5 * var(--spacing-0));
-  --spacing-1: calc(1.25 * var(--spacing-0));
-  --spacing-2: calc(2 * var(--spacing-1));
-  --spacing-3: calc(3 * var(--spacing-1));
 
   // box-shadow
   --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -56,11 +81,6 @@
   // default theme
   --text-default: var(--gray-100);
   --text-secondary: var(--gray-300);
-  --text-link: var(--accent-200);
   --bg-default: var(--gray-500);
   --bg-secondary: var(--gray-400);
-  --code-default: var(--gray-100);
-  --code-primary: var(--accent-100);
-  --code-secondary: var(--gray-300);
-  --logo-color: var(--text-default);
 }

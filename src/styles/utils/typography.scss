@@ -1,0 +1,19 @@
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: #{$color};
+  }
+}
+
+@each $name, $size in $text-sizes {
+  .text-#{$name} {
+    font-size: calc(#{$base-text-size} * #{$size});
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}

@@ -1,5 +1,5 @@
 .post {
-  --page-width: clamp(var(--size-0), 100vw, 65ch);
+  --page-width: 68ch;
 
   font-size: var(--text-0);
 }
@@ -20,19 +20,20 @@
 .post__body {
   width: 100%;
 
-  h1,
-  h2,
-  h3 {
-    margin-left: var(--spacing-1);
-  }
-
   a.anchor {
     text-decoration: none;
-    color: var(--accent-200);
   }
 
   li + li {
     margin-top: 0.25em;
+  }
+
+  * + * {
+    margin-top: var(--spacing-2);
+  }
+
+  h2 + p {
+    margin-top: var(--spacing-0);
   }
 
   * + h1,
@@ -52,7 +53,7 @@
   h1:hover svg,
   h2:hover svg,
   h3:hover svg {
-    fill: var(--accent-200);
+    fill: var(--red-200);
   }
 
   ul {
@@ -72,8 +73,8 @@
         width: 0.5em;
         height: 0.5em;
         margin-top: var(--spacing-00);
-        background: var(--accent-200);
-        border: 1px solid var(--accent-200);
+        background: var(--blue-200);
+        border: 1px solid var(--blue-200);
         border-radius: 0.1em;
         content: '';
       }
@@ -98,11 +99,7 @@
     grid-column: 1 / 4;
     justify-self: center;
     width: 100%;
-    max-width: calc(var(--page-width) + var(--spacing-2));
+    max-width: calc(var(--page-width) + 2 * var(--spacing-1));
     box-shadow: var(--elevation-3);
-  }
-
-  img {
-    outline: 1px solid var(--text-secondary);
   }
 }

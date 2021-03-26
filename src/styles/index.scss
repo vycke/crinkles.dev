@@ -1,5 +1,4 @@
 // reset, settings & generic styles
-@import 'fonts';
 @import 'tokens';
 @import 'reset';
 @import 'global';
@@ -7,7 +6,10 @@
 @import 'layout/grid';
 @import 'layout/stack';
 // Utilities
-@import 'atoms';
+@import 'utils/fonts';
+@import 'utils/layout';
+@import 'utils/typography';
+@import 'utils/spacing';
 // Blocks & expectionss
 @import 'blocks/page';
 @import 'blocks/post';

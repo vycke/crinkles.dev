@@ -1,3 +1,5 @@
+// List of colors that is used to generate utility classes, but also generate
+// CSS custom properties
 $colors: (
   'gray-100': #fafafa,
   'gray-200': #e5eaed,
@@ -12,8 +14,8 @@ $colors: (
 );
 
 // Typography system (golden ratio)
-$base-text-size: calc(1.125rem + 0.15vw);
-$text-sizes: (
+$base-font-size: calc(1.125rem + 0.15vw);
+$font-sizes: (
   '0': 1,
   '00': 0.8,
   '000': 0.64,
@@ -33,6 +35,19 @@ $spacing: (
   '3': 3,
 );
 
+// Size system
+$sizes: (
+  '0': 15rem,
+  '1': 20rem,
+  '2': 30rem,
+  '3': 40rem,
+  '4': 50rem,
+  '5': 75rem,
+);
+
+/*******
+* Generate CSS custom properties
+*******/
 :root {
   // create CSS variables around colors
   @each $name, $color in $colors {
@@ -40,8 +55,8 @@ $spacing: (
   }
 
   // create CSS variables around text-sizes
-  --text-base: #{$base-text-size};
-  @each $name, $size in $text-sizes {
+  --text-base: #{$base-font-size};
+  @each $name, $size in $font-sizes {
     --text-#{$name}: calc(#{$size} * var(--text-base));
   }
 
@@ -49,6 +64,11 @@ $spacing: (
   --spacing-base: #{$base-spacing};
   @each $name, $space in $spacing {
     --spacing-#{$name}: calc(#{$space} * var(--spacing-base));
+  }
+
+  // create CSS variables around sizes
+  @each $name, $size in $sizes {
+    --size-#{$name}: #{$size};
   }
 
   --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
@@ -68,15 +88,7 @@ $spacing: (
   --radius-1: calc(2 * var(--radius-0));
   --radius-2: calc(4 * var(--radius-0));
 
-  // (min-/max-)width/height
-  --size-0: 15rem;
-  --size-1: 20rem;
-  --size-2: 30rem;
-  --size-3: 40rem;
-  --size-4: 50rem;
-  --size-5: 75rem;
-
-  // Default page-width
+  // default page-width
   --page-width: 68ch;
 
   // misc

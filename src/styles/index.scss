@@ -5,11 +5,10 @@
 
 // Layout
 @import 'layout/flow';
-@import 'layout/grid';
+@import 'layout/tiles';
 @import 'layout/pancake';
 @import 'layout/splitter';
-@import 'layout/stack';
-@import 'layout/wrapper';
+@import 'layout/center-layout';
 
 // Utilities
 @import 'utilities/background';

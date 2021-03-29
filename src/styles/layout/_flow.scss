@@ -5,7 +5,7 @@
 }
 
 .flow {
-  --space: var(--spacing-1);
+  --space: var(--spacing-0);
 }
 
 .flow > * + * {
@@ -13,7 +13,8 @@
 }
 
 @each $name, $space in $spacing {
-  .flow-gap-#{$name} {
+  // Generate gap classes to be combined with 'flow'
+  .flow-g-#{$name} {
     --space: #{$space}rem;
   }
 
@@ -27,8 +28,25 @@
   }
 }
 
-.flow-gap-none,
+// Remove gap size
+.flow-g-none,
 .flow-t-none + *,
 .flow-b-none {
   --space: 0;
+}
+
+// Stop flow after x-th element (those elements are grouped at the bottom
+// Requires the height 100% when the flow is the only child of its parent
+// display:flex; is required for this.
+.flow-last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow-last-child:only-child {
+  height: 100%;
+}
+
+.flow-last-child > :last-child {
+  margin-bottom: auto;
 }

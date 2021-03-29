@@ -1,3 +1,4 @@
+// Utility classes for background colors and different pseudo-classes
 @each $name, $color in $colors {
   .bg-#{$name},
   .hover\:bg-#{$name}:hover,

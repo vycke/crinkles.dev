@@ -1,12 +1,14 @@
+// Generate utility classes around colors
 @each $name, $color in $colors {
   .text-#{$name} {
     color: #{$color};
   }
 }
 
-@each $name, $size in $text-sizes {
+// Generate utility classes around font-size
+@each $name, $size in $font-sizes {
   .text-#{$name} {
-    font-size: calc(#{$base-text-size} * #{$size});
+    font-size: calc(#{$base-font-size} * #{$size});
   }
 }
 

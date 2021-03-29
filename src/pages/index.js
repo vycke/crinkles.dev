@@ -11,10 +11,10 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   const meta = data.site.siteMetadata;
 
   return (
-    <Layout meta={meta} className="wide-layout">
-      <main className="wrapper flow flow-gap-3">
-        <section className="splitter mt-1">
-          <div className="flow flow-gap-000">
+    <Layout meta={meta} className="page-width-5">
+      <main className="center-layout flow flow-g-3">
+        <section className="splitter splitter-w-1 mt-1">
+          <div className="flow flow-g-000">
             <h1 className="title">Hi, I'm Kevin.</h1>
             <span>
               <Crinkle /> I'm a Software Engineer working at{' '}
@@ -32,7 +32,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
           <aside />
         </section>
 
-        <section className="grid" role="feed">
+        <section className="tiles tiles-g-2 tiles-w-1" role="feed">
           {posts.map((p, i) => {
             const post = p.node;
             return (

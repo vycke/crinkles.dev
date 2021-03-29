@@ -10,7 +10,9 @@ const Card = ({
   className = '',
 }) => {
   return (
-    <div className={`card splitter click-area ${className}`} role="article">
+    <div
+      className={`card splitter splitter-w-1 click-area ${className}`}
+      role="article">
       {category && (
         <img
           className="card__image"

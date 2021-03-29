@@ -1,3 +1,4 @@
+// Create various padding and margin utility classes
 @each $typename, $type in ('m': 'margin', 'p': 'padding') {
   @each $name, $value in $spacing {
     .#{$typename}b-#{$name} {

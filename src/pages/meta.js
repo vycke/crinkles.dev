@@ -8,7 +8,7 @@ const MetaPage = ({ data, pageContext }) => {
 
   return (
     <Layout meta={meta} className="text-00">
-      <main className="wrapper flow pb-3">
+      <main className="center-layout flow pb-3">
         <h1 className="flow-b-000">Meta</h1>
         <blockquote>
           "A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It
@@ -56,7 +56,9 @@ const MetaPage = ({ data, pageContext }) => {
             Gatsby
           </a>{' '}
           and my own{' '}
-          <a href="https://www.gatsbyjs.com" title="Github link for LAB CSS">
+          <a
+            href="https://github.com/kevtiq/css-framework"
+            title="Github link for CSS framework">
             (S)CSS framework
           </a>
           , based on{' '}

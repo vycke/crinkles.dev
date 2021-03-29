@@ -2,18 +2,29 @@
 @import 'tokens';
 @import 'reset';
 @import 'global';
+
 // Layout
+@import 'layout/flow';
 @import 'layout/grid';
+@import 'layout/pancake';
+@import 'layout/splitter';
 @import 'layout/stack';
+@import 'layout/wrapper';
+
 // Utilities
-@import 'utils/fonts';
-@import 'utils/layout';
-@import 'utils/typography';
-@import 'utils/spacing';
+@import 'utilities/background';
+@import 'utilities/center';
+@import 'utilities/fonts';
+@import 'utilities/typography';
+@import 'utilities/spacing';
+@import 'utilities/hidden';
+@import 'utilities/click-area';
+
 // Blocks & expectionss
-@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/footer';
 @import 'blocks/post';
 @import 'blocks/pagination';
 @import 'blocks/card';
-@import 'blocks/boxes';
-@import 'blocks/icons';
+@import 'blocks/info-box';
+@import 'blocks/code';

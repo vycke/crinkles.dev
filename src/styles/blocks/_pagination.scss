@@ -1,12 +1,6 @@
 // Pagination below blog posts
 .pagination {
-  display: grid;
-  grid-row-gap: var(--spacing-1);
-  grid-column-gap: var(--spacing-1);
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(calc(var(--size-0) - 2 * var(--spacing-1)), 1fr)
-  );
+  --gap: var(--spacing-1);
   width: 100%;
   padding: var(--spacing-1);
 
@@ -19,7 +13,7 @@
     text-decoration-color: rgba(0, 0, 0, 0);
 
     > span {
-      color: var(--text-secondary);
+      color: var(--gray-300);
       font-size: var(--text-00);
       text-transform: uppercase;
     }

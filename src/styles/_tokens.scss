@@ -1,13 +1,13 @@
 $colors: (
   'gray-100': #fafafa,
   'gray-200': #e5eaed,
-  'gray-300': #a7b8cb,
-  'gray-400': #383f53,
-  'gray-500': #131623,
+  'gray-300': #a7b1bc,
+  'gray-400': #19232a,
+  'gray-500': #0e141e,
   'green-100': #85e0bb,
   'green-200': #2ec997,
   'green-300': #1b8e67,
-  'blue-200': #3676f8,
+  'blue-200': #4876f8,
   'red-200': #ff0056,
 );
 
@@ -54,6 +54,7 @@ $spacing: (
   --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
   --monospace: hack, consolas, menlo, monaco, 'Courier New', monospace;
+  --serif: Georgia, serif;
 
   // box-shadow
   --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -75,12 +76,9 @@ $spacing: (
   --size-4: 50rem;
   --size-5: 75rem;
 
+  // Default page-width
+  --page-width: 68ch;
+
   // misc
   --transition: all ease-in-out 200ms;
-
-  // default theme
-  --text-default: var(--gray-100);
-  --text-secondary: var(--gray-300);
-  --bg-default: var(--gray-500);
-  --bg-secondary: var(--gray-400);
 }

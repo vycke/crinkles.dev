@@ -4,60 +4,56 @@ import get from '../utils/get';
 import Card from '../components/Card';
 import { graphql, Link } from 'gatsby';
 import { formatReadingTime } from '../utils/readingTime';
+import Crinkle from '../components/Crinkle';
 
 const PostOverviewTemplate = ({ data, pageContext }) => {
   const posts = get(data, 'allMarkdownRemark.edges', []);
   const meta = data.site.siteMetadata;
 
   return (
-    <Layout meta={meta}>
-      <main className="content center-layout stack-large overview">
-        <section className="tiles">
-          <div className="flex-col">
+    <Layout meta={meta} className="wide-layout">
+      <main className="wrapper flow flow-gap-3">
+        <section className="splitter mt-1">
+          <div className="flow flow-gap-000">
             <h1 className="title">Hi, I'm Kevin.</h1>
             <span>
-              <span className="bold text-blue-200">›</span>
-              <span className="bold text-red-200">›</span>
-              <span className="bold text-green-200">›</span> Welcome to my
-              playground! I am a front-end engineer, big CSS lover, and{' '}
-              <Link className="next" to="/blog">
-                writer
-              </Link>
-              . Currently working at{' '}
+              <Crinkle /> I'm a Software Engineer working at{' '}
               <a href="https://finaps.nl" title="Website of Finaps B.V.">
                 Finaps
-              </a>
-              .
+              </a>{' '}
+              where I lead a small team. I am a big <i>front-end</i> and{' '}
+              <i>CSS</i> lover, and occasionally{' '}
+              <Link className="next" to="/writing">
+                write
+              </Link>{' '}
+              about it.
             </span>
           </div>
           <aside />
         </section>
 
-        <section className="flex-col">
-          <div className="tiles" role="feed">
-            {posts.map((p, i) => {
-              const post = p.node;
-              return (
-                <Card
-                  key={i}
-                  title={post.frontmatter.title}
-                  url={post.fields.slug}
-                  subtitle={post.frontmatter.description}
-                  // category={p.node.frontmatter.category}
-                  meta={`${post.frontmatter.date} • ${formatReadingTime(
-                    post.wordCount.words
-                  )}`}
-                />
-              );
-            })}
-          </div>
-          <aside className="pagination mt-1">
-            <Link className="previous" to="/blog">
-              <span>Blog →</span>
-              <h3>View more articles</h3>
-            </Link>
-          </aside>
+        <section className="grid" role="feed">
+          {posts.map((p, i) => {
+            const post = p.node;
+            return (
+              <Card
+                key={i}
+                title={post.frontmatter.title}
+                url={post.fields.slug}
+                subtitle={post.frontmatter.description}
+                meta={`${post.frontmatter.date} • ${formatReadingTime(
+                  post.wordCount.words
+                )}`}
+              />
+            );
+          })}
         </section>
+        <aside className="pagination mt-1">
+          <Link className="previous" to="/writing">
+            <span>Blog →</span>
+            <h3>View more articles</h3>
+          </Link>
+        </aside>
       </main>
     </Layout>
   );

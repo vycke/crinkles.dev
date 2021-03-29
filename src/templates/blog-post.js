@@ -27,15 +27,14 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout
-      className="post"
       meta={{
         ...site.siteMetadata,
         ...post.frontmatter,
         slug: post.fields.slug,
       }}>
-      <main className="content stack">
-        <header className="grid post__meta" role="contentinfo">
-          <span>
+      <main className="flow pb-3 pt-1">
+        <header className="wrapper flow flow-gap-none" role="contentinfo">
+          <span className="text-gray-300 uppercase text-0">
             <time dateTime={meta.date}>{meta.date}</time>
             {` • ${formatReadingTime(meta.words)}`}
           </span>
@@ -43,12 +42,12 @@ const BlogPost = ({ data, pageContext }) => {
         </header>
 
         <article
-          className="grid sm post__body stack"
+          className="wrapper flow flow-gap-2 post"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </main>
 
-      <section className="pagination">
+      <section className="pagination splitter">
         {!next && prev && <div />}
         {next && (
           <Link className="next" to={next.link}>

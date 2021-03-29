@@ -1,0 +1,34 @@
+// Similar to stack, but without a display; flex;
+.flow > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.flow {
+  --space: var(--spacing-1);
+}
+
+.flow > * + * {
+  margin-top: var(--space);
+}
+
+@each $name, $space in $spacing {
+  .flow-gap-#{$name} {
+    --space: #{$space}rem;
+  }
+
+  // Can be set on children from the stack
+  .flow-t-#{$name} {
+    --space: #{$space}rem;
+  }
+
+  .flow-b-#{$name} + * {
+    --space: #{$space}rem;
+  }
+}
+
+.flow-gap-none,
+.flow-t-none + *,
+.flow-b-none {
+  --space: 0;
+}

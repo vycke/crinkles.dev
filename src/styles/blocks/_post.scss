@@ -1,0 +1,27 @@
+.post {
+  a.anchor {
+    text-decoration: none;
+  }
+
+  h2 + p {
+    margin-top: var(--spacing-0);
+  }
+
+  * + h2 {
+    margin-top: var(--spacing-3);
+  }
+
+  h2:hover svg {
+    fill: var(--red-200);
+    height: var(--text-1);
+    margin-left: var(--spacing-00);
+  }
+
+  img,
+  .gatsby-highlight {
+    grid-column: 1 / 4;
+    justify-self: center;
+    width: 100%;
+    max-width: calc(var(--page-width) + 2 * var(--spacing-2));
+  }
+}

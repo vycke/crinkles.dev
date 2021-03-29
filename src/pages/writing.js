@@ -10,9 +10,9 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
   const meta = data.site.siteMetadata;
 
   return (
-    <Layout meta={meta} title="blog">
-      <main className="content center-layout">
-        <section className="tiles" role="feed">
+    <Layout meta={meta} className="wide-layout">
+      <main className="wrapper pb-3 pt-1">
+        <section className="grid" role="feed">
           {posts.map((p, i) => {
             const post = p.node;
             return (
@@ -36,7 +36,7 @@ const PostOverviewTemplate = ({ data, pageContext }) => {
 
 export default PostOverviewTemplate;
 
-export const postOverviewPageQuery = graphql`
+export const pageQuery = graphql`
   query BlogPage {
     site {
       siteMetadata {

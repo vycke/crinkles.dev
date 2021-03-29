@@ -1,0 +1,29 @@
+/**
+* Main site header *
+**/
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: var(--spacing-1);
+  font-size: var(--text-00);
+  background-color: var(--gray-400);
+  border-top: 1px solid var(--gray-300);
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: var(--monospace);
+    justify-content: center;
+
+    > * + * {
+      margin-left: var(--spacing-00);
+      padding: var(--spacing-000) var(--spacing-0);
+    }
+  }
+}

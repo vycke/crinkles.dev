@@ -22,7 +22,7 @@
     }
 
     .#{$typename}y-#{$name} {
-      #{$typename}-top: calc(#{$base-spacing} * #{$value});
+      #{$type}-top: calc(#{$base-spacing} * #{$value});
       #{$type}-bottom: calc(#{$base-spacing} * #{$value});
     }
 

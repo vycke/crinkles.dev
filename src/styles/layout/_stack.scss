@@ -1,0 +1,41 @@
+// Classes for different stacks with varying gap-sizes between the children
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack {
+  --space: var(--spacing-1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+@each $name, $space in $spacing {
+  .stack-gap-#{$name} {
+    --space: #{$space}rem;
+  }
+
+  // Can be set on children from the stack
+  .stack-t-#{$name} {
+    --space: #{$space}rem;
+  }
+
+  .stack-b-#{$name} + * {
+    --space: #{$space}rem;
+  }
+}
+
+// Stop stack after x-th element (those elements are grouped at the bottom
+// Requires the height 100% when the stack is the only child of its parent
+.stack-last-child:only-child {
+  height: 100%;
+}
+
+.stack-last-child > :last-child {
+  margin-bottom: auto;
+}

@@ -1,0 +1,84 @@
+// keyword: const, return, etc.
+// operator: ==, >=, etc.
+// punctuation: (, ), [, ], etc.
+// parameter: inside function
+// tag: <html tag/>
+// function: object.fn
+// string, number: primitives
+
+.token {
+  color: var(--gray-100);
+}
+
+.token.builtin,
+.token.variable,
+.token.operator,
+.token.punctuation,
+.token.attr-name,
+.token.comment,
+.token.keyword,
+.token.important {
+  color: var(--gray-300);
+}
+
+.token.comment,
+.token.attr-name,
+.token.italic {
+  font-style: italic;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.function,
+.token.selector,
+.token.tag,
+.token.attr-value,
+.token.string,
+.token.number,
+.token.class-name {
+  color: var(--green-200);
+}
+
+// INLINE CODE
+:not(pre) > code,
+:not(pre) > code[class*='language-'] {
+  color: var(--green-200) !important;
+  font-size: 0.875em;
+  font-family: var(--monospace);
+  hyphens: none;
+  background-color: transparent !important;
+  transition: var(--transition);
+}
+
+// CODE BLOCKS
+pre[class*='language-'] {
+  margin: 0;
+  padding: var(--spacing-2);
+  overflow: auto;
+  color: var(--gray-100);
+  font-size: var(--text-00);
+  line-height: 1.4;
+  background-color: var(--gray-400) !important;
+  transition: var(--transition);
+
+  > code[class*='language-'] {
+    font-family: var(--monospace);
+  }
+
+  ::selection {
+    color: var(--gray-500) !important;
+    background: var(--gray-100) !important;
+  }
+}
+
+.gatsby-highlight-code-line {
+  display: block;
+}
+
+@media (max-width: 50rem) {
+  pre[class*='language-'] {
+    padding: var(--spacing-0);
+  }
+}

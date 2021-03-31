@@ -45,11 +45,13 @@
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
   color: var(--green-200) !important;
-  font-size: 0.875em;
+  font-size: 0.825em;
+  padding: 3px 6px;
   font-family: var(--monospace);
   hyphens: none;
-  background-color: transparent !important;
+  background-color: var(--gray-400);
   transition: var(--transition);
+  border-radius: var(--radius-0);
 }
 
 // CODE BLOCKS

@@ -10,9 +10,7 @@ category: engineering
 
 In the past year, the most exciting problem I had to solve was creating a workflow editor. There are many interesting user interactions and existing solutions. Great UI libraries exist that can get you a long way. There is one problem: the auto layout formatting, if existing did not play nice with the back-end. All UI libraries require layout coordinates to be stored, which was not possible. What we need it an algorithm that converts nodes and edges, into a layout mapping.
 
-::: aside info-box
-A graph is a set of nodes that are connected by edges. In a directed graph, the edges have a direction associated to them.
-:::
+> A graph is a set of nodes that are connected by edges. In a directed graph, the edges have a direction associated to them.
 
 ## Finding a solution
 
@@ -28,9 +26,7 @@ After some research I stumbled on a heuristic from [GraphViz](https://www.graphv
 4. Optimization heuristic
 5. Position each node inside the UI library
 
-::: aside info-box
-A heuristic is a practical problem solving approach that is not guaranteed to be optimal, perfect or rational. It is sufficient to a (intermediate) goal.
-:::
+> A heuristic is a practical problem solving approach that is not guaranteed to be optimal, perfect or rational. It is sufficient to a (intermediate) goal.
 
 ## Ranking all nodes
 
@@ -40,9 +36,7 @@ The first step is to rank all nodes in the graphs. The rank of a node is equal t
 
 To achieve this ranking, you need a [breadth-first search algorithm](https://en.wikipedia.org/wiki/Breadth-first_search). This algorithm slices the directed graph based on the distance of a node from the root. Exactly what we need. An example implementation is displayed below.
 
-::: aside info-box
-A recursive function is a function that calls itself during execution. This makes it ideal if you don't know how many times the function is required. A stop condition is crucial for its execution.
-:::
+> A recursive function is a function that calls itself during execution. This makes it ideal if you don't know how many times the function is required. A stop condition is crucial for its execution.
 
 ```js
 function rank(nodes, edges, ranking = [], visited = {}) {

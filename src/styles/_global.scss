@@ -58,7 +58,8 @@ p {
   hyphens: auto;
 }
 
-i {
+i,
+em {
   font-style: italic;
   font-family: var(--serif);
   color: var(--green-200);
@@ -66,21 +67,28 @@ i {
 
 // QUOTES
 blockquote {
+  display: block;
   padding: var(--spacing-0);
-  font-size: var(--text-00);
+  color: var(--gray-200);
   background-color: var(--gray-400);
-  font-style: italic;
   border-left: 0.25rem solid var(--blue-200);
+  border-radius: var(--radius-0);
+
+  p,
+  cite {
+    font-size: var(--text-00);
+  }
+
+  em {
+    color: var(--gray-200);
+    font-size: var(--text-0);
+  }
 
   cite {
     display: block;
     width: 100%;
-    font-size: var(--text-00);
+    font-style: italic;
     text-align: right;
-
-    &::before {
-      content: '-- ';
-    }
   }
 }
 

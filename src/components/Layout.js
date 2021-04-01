@@ -111,10 +111,10 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
         <footer className="footer">
           <div className="links">
-            <span>
+            <span className="flex-grow">
               © 2021{' '}
               <Link to="/meta">
-                <i>crinkle</i>
+                <i className="text-0">crinkle</i>
               </Link>
             </span>
             <a
@@ -126,20 +126,15 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
               github
             </a>
             <a
-              href="https://dev.to/kevtiq"
-              title="Link to my the Practical Dev profile page">
-              dev.to
-            </a>
-            <a
               href="https://crinkle.dev/rss.xml"
               title="Link to the RSS feed of crinkle.dev">
               rss
             </a>
           </div>
-          <span className="italic text-000 pb-00">
+          <i className="text-000 pb-00 text-gray-100">
             "A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It
             highlights personality and uniqueness."
-          </span>
+          </i>
         </footer>
       </div>
     </React.Fragment>

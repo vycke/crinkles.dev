@@ -80,7 +80,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-sass',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -175,20 +174,19 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-sass',
     // {
-    //   resolve: 'gatsby-plugin-netlify-cms',
+    //   resolve: 'gatsby-plugin-purgecss',
     //   options: {
-    //     modulePath: `${__dirname}/src/cms/cms.js`
-    //   }
-    // },
-    {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        develop: true,
-        printRejected: true,
-        purgeOnly: ['/styles/reset.scss'],
-      },
-    }, // must be after other CSS plugins
+    //     develop: true,
+    //     printRejected: true,
+    //     ignore: [
+    //       '/styles/blocks/',
+    //       '/styles/_global.scss',
+    //       '/styles/_reset.scss',
+    //     ],
+    //   },
+    // }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 };

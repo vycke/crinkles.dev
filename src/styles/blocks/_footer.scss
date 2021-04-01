@@ -5,9 +5,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+  align-items: flex-start;
   padding: var(--spacing-1);
   font-size: var(--text-00);
   background-color: var(--gray-400);
@@ -17,13 +15,16 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
     align-items: center;
-    font-family: var(--monospace);
-    justify-content: center;
+    justify-content: flex-end;
 
     > * + * {
       margin-left: var(--spacing-00);
       padding: var(--spacing-000) var(--spacing-0);
     }
+  }
+  i {
+    text-align: center;
   }
 }

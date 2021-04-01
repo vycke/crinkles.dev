@@ -111,12 +111,9 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
         <footer className="footer">
           <div className="links">
-            <span className="flex-grow">
-              © 2021{' '}
-              <Link to="/meta">
-                <i className="text-0">crinkle</i>
-              </Link>
-            </span>
+            <Link to="/meta" className="text-0 flex-grow">
+              <i>crinkle</i>
+            </Link>
             <a
               href="https://twitter.com/kevtiq"
               title="Link to my Twitter page">

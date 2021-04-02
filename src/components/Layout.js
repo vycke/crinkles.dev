@@ -111,7 +111,7 @@ const PageWrapper = ({ children, meta = {}, className = '' }) => {
 
         <footer className="footer">
           <div className="links">
-            <Link to="/meta" className="text-0 flex-grow">
+            <Link to="/meta" className="flex-grow">
               <i>crinkle</i>
             </Link>
             <a

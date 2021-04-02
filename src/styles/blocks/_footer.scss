@@ -20,8 +20,8 @@
     justify-content: flex-end;
 
     > * + * {
-      margin-left: var(--spacing-00);
-      padding: var(--spacing-000) var(--spacing-0);
+      margin-left: var(--spacing-0);
+      padding: var(--spacing-000);
     }
   }
   i {

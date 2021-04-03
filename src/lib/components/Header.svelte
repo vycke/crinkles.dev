@@ -50,6 +50,7 @@
 		z-index: 100;
 		width: 100%;
 		margin: var(--spacing-2) auto var(--spacing-0);
+		-webkit-backdrop-filter: blur(20px);
 		backdrop-filter: blur(20px);
 
 		.inner {

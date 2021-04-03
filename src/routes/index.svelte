@@ -1,4 +1,4 @@
-<script>
+<script context="module">
 	import Crinkle from '$lib/components/Crinkle.svelte';
 	import Pagination from '$lib/components/Pagination.svelte';
 </script>

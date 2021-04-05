@@ -1,5 +1,7 @@
 <script context="module">
 	import Crinkle from '$lib/components/Crinkle.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Page from '$lib/components/Page.svelte';
 	import Pagination from '$lib/components/Pagination.svelte';
 </script>
 
@@ -7,7 +9,7 @@
 	<title>Kevin Pennekamp</title>
 </svelte:head>
 
-<main class="center-layout flow flow-g-3 text-0">
+<Page width="5" class="center-layout flow flow-g-3">
 	<section class="splitter splitter-w-1 mt-1">
 		<div class="flow flow-g-000">
 			<h1 class="title">Hi, I'm Kevin.</h1>
@@ -22,10 +24,4 @@
 	</section>
 
 	<Pagination previous={{ url: '/writing', title: 'Writing', subtitle: 'View more articles' }} />
-</main>
-
-<style>
-	:root {
-		--page-width: var(--size-5);
-	}
-</style>
+</Page>

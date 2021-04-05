@@ -8,7 +8,7 @@
 // Generate utility classes around font-size
 @each $name, $size in $font-sizes {
 	.text-#{$name} {
-		font-size: calc(#{$base-font-size} * #{$size});
+		font-size: var(--text-#{$name});
 	}
 }
 

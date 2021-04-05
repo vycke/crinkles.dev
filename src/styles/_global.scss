@@ -3,32 +3,32 @@
 *******/
 html,
 body {
-  min-width: var(--size-0);
-  color: var(--gray-100);
-  font-family: var(--sans-serif);
-  background-color: var(--gray-500);
-  transition: var(--transition);
+	min-width: var(--size-0);
+	color: var(--gray-100);
+	font-family: var(--sans-serif);
+	background-color: var(--gray-500);
+	transition: var(--transition);
 }
 
 // HEADINGS
 h1,
 h2,
 h3 {
-  width: 100%;
-  line-height: 1.4;
-  transition: var(--transition);
+	width: 100%;
+	line-height: 1.4;
+	transition: var(--transition);
 }
 
 h1 {
-  font-size: var(--text-3);
+	font-size: var(--text-3);
 }
 
 h2 {
-  font-size: var(--text-2);
+	font-size: var(--text-2);
 }
 
 h3 {
-  font-size: var(--text-1);
+	font-size: var(--text-1);
 }
 
 // LINKS
@@ -37,98 +37,98 @@ a > *,
 a:link,
 a:visited,
 a:active {
-  text-decoration-color: var(--red-200);
-  text-decoration-thickness: 2px;
+	text-decoration-color: var(--red-200);
+	text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:hover > * {
-  color: var(--red-200);
-  transition: var(--transition);
-  text-decoration-color: var(--red-200);
-  text-decoration-thickness: 2px;
+	color: var(--red-200);
+	transition: var(--transition);
+	text-decoration-color: var(--red-200);
+	text-decoration-thickness: 2px;
 }
 
 ::selection {
-  color: var(--gray-500) !important;
-  background: var(--gray-100) !important;
+	color: var(--gray-500) !important;
+	background: var(--gray-100) !important;
 }
 
 p {
-  hyphens: auto;
+	hyphens: auto;
 }
 
 i,
 em {
-  font-style: italic;
-  font-family: var(--serif);
-  color: var(--green-200);
+	font-style: italic;
+	font-family: var(--serif);
+	color: var(--green-200);
 }
 
 // QUOTES
 blockquote {
-  display: block;
-  padding: var(--spacing-0);
-  color: var(--gray-200);
-  background-color: var(--gray-400);
-  border-left: 0.25rem solid var(--blue-200);
-  border-radius: var(--radius-0);
+	display: block;
+	padding: var(--spacing-0);
+	color: var(--gray-200);
+	background-color: var(--gray-400);
+	border-left: 0.25rem solid var(--blue-200);
+	border-radius: var(--radius-0);
 
-  p,
-  cite {
-    font-size: var(--text-00);
-  }
+	p,
+	cite {
+		font-size: var(--text-00);
+	}
 
-  em {
-    color: var(--gray-200);
-    font-size: var(--text-0);
-  }
+	em {
+		color: var(--gray-200);
+		font-size: var(--text-0);
+	}
 
-  cite {
-    display: block;
-    width: 100%;
-    font-style: italic;
-    text-align: right;
-  }
+	cite {
+		display: block;
+		width: 100%;
+		font-style: italic;
+		text-align: right;
+	}
 }
 
 // Styled unordered list
 ul {
-  padding-left: 0;
-  list-style: none outside;
+	padding-left: 0;
+	list-style: none outside;
 
-  > li {
-    padding-left: var(--spacing-2);
+	> li {
+		padding-left: var(--spacing-2);
 
-    &::before {
-      display: inline-block;
-      margin-left: calc(-1 * var(--spacing-2));
-      padding-left: var(--spacing-000);
-      width: var(--spacing-2);
-      display: inline-block;
-      font-weight: bold;
-      color: var(--blue-200);
-      content: '››';
-    }
-  }
+		&::before {
+			display: inline-block;
+			margin-left: calc(-1 * var(--spacing-2));
+			padding-left: var(--spacing-000);
+			width: var(--spacing-2);
+			display: inline-block;
+			font-weight: bold;
+			color: var(--blue-200);
+			content: '››';
+		}
+	}
 }
 
 // Ordered list
 ol {
-  padding-left: 1.65rem;
-  list-style: decimal outside;
+	padding-left: 1.65rem;
+	list-style: decimal outside;
 
-  > li {
-    padding-left: var(--spacing-00);
+	> li {
+		padding-left: var(--spacing-00);
 
-    &::marker {
-      font-weight: 600;
-      font-style: italic;
-      color: var(--blue-200);
-    }
-  }
+		&::marker {
+			font-weight: 600;
+			font-style: italic;
+			color: var(--blue-200);
+		}
+	}
 }
 
 li + li {
-  margin-top: 0.25em;
+	margin-top: 0.25em;
 }

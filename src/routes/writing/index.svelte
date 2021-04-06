@@ -11,11 +11,15 @@
 </script>
 
 <script>
+	import Page from '$lib/components/Page.svelte';
+
 	export let articles;
 </script>
 
-<ul>
-	{#each articles as article}
-		<li><a href="/writing/{article.slug}">{article.title}</a></li>
-	{/each}
-</ul>
+<Page width="4" class="center-layout">
+	<ul>
+		{#each articles as article}
+			<li><a href="/writing/{article.slug}">{article.title}</a></li>
+		{/each}
+	</ul>
+</Page>

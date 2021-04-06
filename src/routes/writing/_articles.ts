@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import * as fm from 'gray-matter';
+import fm from 'front-matter';
 import marked from 'marked';
 import prism from 'prismjs';
 

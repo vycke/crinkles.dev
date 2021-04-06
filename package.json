@@ -9,7 +9,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"gray-matter": "^4.0.2",
+		"front-matter": "^4.0.2",
 		"marked": "^2.0.1",
 		"prismjs": "^1.23.0"
 	},

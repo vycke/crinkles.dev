@@ -10,7 +10,7 @@
 
 		window.setTimeout(() => {
 			trigger();
-		}, 100);
+		}, 200);
 	}
 	$: if (triggered === max) triggered = 0;
 </script>
@@ -21,6 +21,6 @@
 
 <style>
 	span {
-		transition: all 50ms ease-in-out;
+		transition: all 200ms ease-in-out;
 	}
 </style>

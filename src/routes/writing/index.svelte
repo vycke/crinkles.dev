@@ -1,11 +1,7 @@
 <script context="module">
 	export async function load({ fetch }) {
 		const res = await fetch('/writing.json');
-		return {
-			props: {
-				articles: await res.json()
-			}
-		};
+		return { props: { articles: await res.json() } };
 	}
 </script>
 

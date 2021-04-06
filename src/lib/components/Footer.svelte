@@ -13,7 +13,7 @@
 			<i>crinkle</i>
 		</a>
 		{#each links as link}
-			<a href={link.url} title={link.alt} sveltekit:prefetch>{link.name}</a>
+			<a href={link.url} title={link.alt}>{link.name}</a>
 		{/each}
 
 		<a href="https://crinkle.dev/writing/rss.xml" title="RSS Feed" sveltekit:prefetch>rss</a>

@@ -1,10 +1,8 @@
 ---
-slug: sample
 title: Modern CSS grid solutions to common layout problems
 date: 2020-07-06T00:00:00.000Z
 description: >-
   Responsive layouts are one of the more complicated problems in CSS. With the addition of CSS grids, we are now able to solve complex problems.
-category: css
 ---
 
 Layout and composition are some of the most challenging topics within CSS. Especially when you have to take responsiveness into account. We often fall back on media-queries. But adding many media-queries for various breakpoints can make your CSS unmaintainable. But with the addition of grids, we can overcome media-query fatigue. Not only make our CSS more maintainable, but they also improve the user experience. We can let CSS handle the available space. In this article, I will describe three layout implementations that can improve your (personal) website.

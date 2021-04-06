@@ -13,13 +13,13 @@ export default function processFiles(location) {
 		const { body, ...matter } = fm(content);
 		// Use the marked library to turn markdown into html
 		const html: string = marked(body);
-		articles.push({ html, ...(matter.attributes as Record<string, unknown>) });
+		articles.push({ html, slug: files[i].split('.md')[0], ...(matter.attributes as Record<string, unknown>) });
 	}
 	
 	// Sort articles based on date front-matter attribute
 	articles = articles.sort((a, b) => {
-		if (a.date < b.date) return -1;
-		return 1;
+		if (a.date < b.date) return 1;
+		return -1;
 	})
 
 	return articles;

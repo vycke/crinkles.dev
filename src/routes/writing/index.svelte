@@ -1,19 +1,10 @@
 <script context="module">
-	// this is runned on load (check svelKit doc)
+	export const prerender = true;
 	export async function load({ fetch }) {
-		let articles;
-
-		try {
-			// here you should type your dev.to username
-			articles = await fetch(`https://dev.to/api/articles?username=ladvace`);
-			articles = await articles.json();
-		} catch (e) {
-			console.log(e);
-		}
-		// you can pass the `articles` via props like that
+		const res = await fetch('/writing.json');
 		return {
 			props: {
-				articles
+				articles: await res.json()
 			}
 		};
 	}
@@ -23,8 +14,8 @@
 	export let articles;
 </script>
 
-<div>
+<ul>
 	{#each articles as article}
-		<h2>{article.title}</h2>
+		<li><a href="/writing/{article.slug}">{article.title}</a></li>
 	{/each}
-</div>
+</ul>

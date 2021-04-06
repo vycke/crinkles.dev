@@ -1,4 +1,4 @@
-import articles from './_articles';
+import {articles} from './_articles';
 
 const render = (items) => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">

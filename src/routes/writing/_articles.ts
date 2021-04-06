@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import fm from 'front-matter';
+import * as fm from 'gray-matter';
 import marked from 'marked';
 import prism from 'prismjs';
 
@@ -45,7 +45,8 @@ const location = path.join(__dirname, 'src/content');
 	const articles: Result[] = [];
 
 	for (let i = 0; i < files.length; i++) {
-		const content = fs.readFileSync(`${location}/${files[i]}`, { encoding: 'utf-8' });
+    const content = fs.readFileSync(`${location}/${files[i]}`, { encoding: 'utf-8' });
+    console.log(content);
 		// Use the front-matter library to separate the body from the front matter
 		const { body, ...matter } = fm(content);
 		// Use the marked library to turn markdown into html

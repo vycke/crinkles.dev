@@ -46,7 +46,6 @@ const location = path.join(__dirname, 'src/content');
 
 	for (let i = 0; i < files.length; i++) {
     const content = fs.readFileSync(`${location}/${files[i]}`, { encoding: 'utf-8' });
-    console.log(content);
 		// Use the front-matter library to separate the body from the front matter
 		const { body, ...matter } = fm(content);
 		// Use the marked library to turn markdown into html

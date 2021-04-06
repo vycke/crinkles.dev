@@ -1,8 +1,20 @@
 <script context="module">
 	import Crinkle from '$lib/components/Crinkle.svelte';
-	import Header from '$lib/components/Header.svelte';
 	import Page from '$lib/components/Page.svelte';
 	import Pagination from '$lib/components/Pagination.svelte';
+
+	export async function load({ fetch }) {
+		const res = await fetch('/writing.json');
+		return {
+			props: {
+				articles: await res.json()
+			}
+		};
+	}
+</script>
+
+<script>
+	export let articles;
 </script>
 
 <svelte:head>
@@ -20,7 +32,13 @@
 				occasionally <a class="next" href="/writing">write</a> about it.
 			</span>
 		</div>
-		<aside />
+		<aside>
+			<ul>
+				{#each articles as article}
+					<li><a href="/writing/{article.slug}">{article.title}</a></li>
+				{/each}
+			</ul>
+		</aside>
 	</section>
 
 	<Pagination previous={{ url: '/writing', title: 'Writing', subtitle: 'View more articles' }} />

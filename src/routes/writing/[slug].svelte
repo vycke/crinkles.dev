@@ -33,3 +33,33 @@
 	</header>
 	<article class="center-layout flow flow-g-2 post">{@html article.html}</article>
 </Page>
+
+<style lang="scss">
+	:global(.post h2 + p) {
+		margin-top: var(--spacing-00);
+	}
+
+	:global(.post h2 a) {
+		text-decoration: none;
+		color: var(--gray-100);
+
+		&::after {
+			content: '#';
+			margin-left: var(--spacing-000);
+			color: var(--red-200);
+		}
+	}
+
+	:global(.post img),
+	:global(.post blockquote),
+	:global(.post pre) {
+		grid-column: 1 / 4;
+		justify-self: center;
+		width: 100%;
+		max-width: calc(var(--page-width) + 2 * var(--spacing-2));
+	}
+
+	:global(.post blockquote) {
+		max-width: calc(var(--page-width) - 2 * var(--spacing-2));
+	}
+</style>

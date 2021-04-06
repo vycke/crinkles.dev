@@ -10,6 +10,8 @@
 </script>
 
 <script>
+	import Card from '$lib/components/Card.svelte';
+
 	export let articles;
 </script>
 
@@ -18,7 +20,7 @@
 </svelte:head>
 
 <Page width="5" class="center-layout flow flow-g-3">
-	<section class="splitter splitter-w-1 mt-1">
+	<section class="splitter splitter-w-2 mt-1 splitter-g-3">
 		<div class="flow flow-g-000">
 			<h1 class="title">Hi, I'm Kevin.</h1>
 			<span>
@@ -28,14 +30,15 @@
 				occasionally <a class="next" href="/writing">write</a> about it.
 			</span>
 		</div>
-		<aside>
-			<ul>
-				{#each articles as article}
-					<li><a href="/writing/{article.slug}">{article.title}</a></li>
-				{/each}
-			</ul>
+		<aside class="flex-col flow">
+			<!-- <h2 class="text-1 mb-1">Writing</h2> -->
+			{#each articles as article}
+				<Card {...article} href="/writing/{article.slug}" />
+			{/each}
+
+			<a href="/writing" class="self-end mt-1 text-0" sveltekit:prefetch>View more articles →</a>
 		</aside>
 	</section>
 
-	<Pagination previous={{ url: '/writing', title: 'Writing', subtitle: 'View more articles' }} />
+	<!-- <Pagination previous={{ url: '/writing', title: 'Writing', subtitle: 'View more articles' }} /> -->
 </Page>

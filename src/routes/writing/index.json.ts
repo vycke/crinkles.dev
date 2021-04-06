@@ -1,4 +1,4 @@
-import articles from './_articles';
+import {articles} from './_articles';
 
 export function get() {
   return {

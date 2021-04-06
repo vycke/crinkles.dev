@@ -8,7 +8,7 @@ description: >-
 category: engineering
 ---
 
-Our smartphones and computers are become powerful every year. We see the increase in power back on the web. Our front-end applications are becoming bigger and more complex. Previously, I have written about a [scalable architecture](/blog/scalable-front-end-architecture/) for front-end applications. A scalable architecture is a good first step towards a reliable and resilient applications. But we, as engineers, are responsible to maintain a single code-base that runs many different environments. How can we know what is going on within our applications when others are using it? And if we don't know what is happening on the inside, how ca we determine what needs to be improved?
+Our smartphones and computers are become powerful every year. We see the increase in power back on the web. Our front-end applications are becoming bigger and more complex. Previously, I have written about a [scalable architecture](/writing/scalable-front-end-architecture/) for front-end applications. A scalable architecture is a good first step towards a reliable and resilient applications. But we, as engineers, are responsible to maintain a single code-base that runs many different environments. How can we know what is going on within our applications when others are using it? And if we don't know what is happening on the inside, how ca we determine what needs to be improved?
 
 ## Client(s) vs. server
 

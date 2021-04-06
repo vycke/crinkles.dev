@@ -38,7 +38,7 @@ article > img {
 }
 ```
 
-The paddings on the side should differ on various screen sizes. On smaller screens, you want to limit the wasted space, while on bigger screens more padding can improve the visual quality. But with the above solution you still need media-queries to use different side padding. You could mitigate this by adding [fluidity](https://crinkle.dev/blog/fluid-interfaces-using-css/) to your website. We can replace the `2rem` with something like `calc(1rem + 1 * var(--ratio))`. By doing so, the side padding changes automatically when the screen size changes, without media-queries. Now we have a dynamic and maintainable layout for our articles.
+The paddings on the side should differ on various screen sizes. On smaller screens, you want to limit the wasted space, while on bigger screens more padding can improve the visual quality. But with the above solution you still need media-queries to use different side padding. You could mitigate this by adding [fluidity](https://crinkle.dev/writing/fluid-interfaces-using-css/) to your website. We can replace the `2rem` with something like `calc(1rem + 1 * var(--ratio))`. By doing so, the side padding changes automatically when the screen size changes, without media-queries. Now we have a dynamic and maintainable layout for our articles.
 
 ## Responsive multi-column grid system
 
@@ -74,4 +74,4 @@ Does this not sound like a familiar problem? Well, it is. It is almost the same 
 
 ## Conclusion
 
-CSS grids enable you to solve responsive layout issues. There are ways to achieve the above, also without using media-queries. But in most cases they need more CSS to work, making those solutions more difficult to maintain. Especially when combined with [fluidity](https://crinkle.dev/blog/fluid-interfaces-using-css/) CSS grids (and flex boxes) enable you to create websites that flow with the screen size, and not worry about breakpoints. I mean, they are called *break*points for a reason, right?
+CSS grids enable you to solve responsive layout issues. There are ways to achieve the above, also without using media-queries. But in most cases they need more CSS to work, making those solutions more difficult to maintain. Especially when combined with [fluidity](https://crinkle.dev/writing/fluid-interfaces-using-css/) CSS grids (and flex boxes) enable you to create websites that flow with the screen size, and not worry about breakpoints. I mean, they are called *break*points for a reason, right?

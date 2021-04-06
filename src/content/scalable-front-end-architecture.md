@@ -9,7 +9,7 @@ description: >-
 >
 > **November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the core layer have been redone.
 
-Modern front-end frameworks and libraries make it easy to create [reusable UI components](/blog/interfacing-your-ui-components/). This is a step in a good direction to create maintainable front-end applications. Yet, in many projects over the years I have found that making reusable components is often not enough. My projects became unmaintainable, as requirements changed or new requirements came up. It took longer and longer to find the correct file or debug something across many files.
+Modern front-end frameworks and libraries make it easy to create [reusable UI components](/writing/interfacing-your-ui-components/). This is a step in a good direction to create maintainable front-end applications. Yet, in many projects over the years I have found that making reusable components is often not enough. My projects became unmaintainable, as requirements changed or new requirements came up. It took longer and longer to find the correct file or debug something across many files.
 
 Change needed to happen. I can improve my search skills, or be more proficient in using Visual Studio Code. But, I often not the only one working on the front-end. So, we need to the setup of our front-end projects. We need to make them maintainable and scalable. This means that we can apply changes in the current features, but also add new features quicker.
 
@@ -106,7 +106,7 @@ Let's look at the example of a user drop-down. We can create an action that prov
 
 ## UI component architecture
 
-One last detail level is missing still, and that is the architecture of a UI component. In a [different](/blog/ui-component-anatomy/) blog post I describe this article. When you look at this anatomy, you will see some concepts back that we apply on a bigger scale. More details can be found in this article.
+One last detail level is missing still, and that is the architecture of a UI component. In a [different](/writing/ui-component-anatomy/) blog post I describe this article. When you look at this anatomy, you will see some concepts back that we apply on a bigger scale. More details can be found in this article.
 
 ![The UI component anatomy](/img/architecture-component-detailed.png 'The UI component anatomy')
 

@@ -8,7 +8,7 @@ description: >-
 category: architecture
 ---
 
-In complex applications, UI components consist of more building blocks than some state and UI. Before I already [described](/blog/interfacing-your-ui-components/) a different way to look at our reusable UI components. We can look at them from developers' and users' perspectives at the same time. But on a conceptual level, components have more elements important to their behavior. It is important for developers to understand these concepts. Especially when working on big, complex and critical applications. By having an uniform way of looking at a component, we create the 'UI component anatomy'. Those familiar with the [flux-pattern](https://facebook.github.io/flux/docs/in-depth-overview/) can this pattern coming back as well in the anatomy.
+In complex applications, UI components consist of more building blocks than some state and UI. Before I already [described](/writing/interfacing-your-ui-components/) a different way to look at our reusable UI components. We can look at them from developers' and users' perspectives at the same time. But on a conceptual level, components have more elements important to their behavior. It is important for developers to understand these concepts. Especially when working on big, complex and critical applications. By having an uniform way of looking at a component, we create the 'UI component anatomy'. Those familiar with the [flux-pattern](https://facebook.github.io/flux/docs/in-depth-overview/) can this pattern coming back as well in the anatomy.
 
 ![The UI component anatomy](/img/architecture-component-detailed.png 'The UI component anatomy')
 
@@ -48,10 +48,10 @@ The addition of a state to a component makes it sometimes easy to introduce bugs
 
 ```jsx
 function MyModal({ showModal }) {
-  const [show, setShow] = useState(showModal);
+	const [show, setShow] = useState(showModal);
 
-  if (show) return null;
-  return <Modal onClose={handleShow}>...</Modal>;
+	if (show) return null;
+	return <Modal onClose={handleShow}>...</Modal>;
 }
 ```
 
@@ -61,7 +61,7 @@ As you can see in the diagram, actions link everything together. They are functi
 
 - Actions defined inside the component as a separate function;
 - Actions defined in the life-cycle method of the component;
-- actions defined outside the component and used in many components. Good examples are the actions within a module of the [scalable architecture](/blog/scalable-front-end-architecture).
+- actions defined outside the component and used in many components. Good examples are the actions within a module of the [scalable architecture](/writing/scalable-front-end-architecture).
 
 Below you can see part of a small React component example with two different actions. The first action changes the state on interaction (e.g. typing in an `<input />` field). The second action triggers the changes. It removes the modal, it makes an external call to a server to save the values and resets the internal state.
 
@@ -94,15 +94,15 @@ A simple example is a search component. When our user types, the state of the co
 
 ```jsx
 function SearchComponent({ query }) {
-  const [search, setSearch] = useState('');
+	const [search, setSearch] = useState('');
 
-  useEffect(() => {
-    myApiCall({ ...query, search });
-  }, [query, search]);
+	useEffect(() => {
+		myApiCall({ ...query, search });
+	}, [query, search]);
 
-  const handleSearch = (e) => setSearch(e.target.value);
+	const handleSearch = (e) => setSearch(e.target.value);
 
-  return <input value={search} onChange={handleSearch} />;
+	return <input value={search} onChange={handleSearch} />;
 }
 ```
 

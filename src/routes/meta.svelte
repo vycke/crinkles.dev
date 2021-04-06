@@ -43,10 +43,10 @@
 	</ul>
 	<p>
 		The current version of this website is created using <a
-			href="https://www.gatsbyjs.com"
-			title="Website of Gatsby"
+			href="https://kit.svelte.dev"
+			title="Website of SvelteKit"
 		>
-			Gatsby
+			SvelteKit
 		</a>
 		and my own
 		<a href="https://github.com/kevtiq/css-framework" title="Github link for CSS framework">

@@ -11,7 +11,7 @@ articles.forEach((post) => {
 });
 
 function getSummary(index) {
-	if (index >= 0 && index <= articles.length) {
+	if (index >= 0 && index <= articles.length - 1) {
 		const { title, slug } = articles[index];
 		return { title, slug }
 	}

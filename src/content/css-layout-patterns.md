@@ -13,7 +13,7 @@ We all know `margin: 0 auto` to center a layout. Ideal for article pages, right?
 
 ![Visualisation of a dynamic centered layout](/img/css-grid-article.png)
 
-What happens when you want to change these ultra-wide elements? You go over several media-queries to determine if your change is applied on various screens. What if we could cut the media-queries and still achieve this effect? Recently I came across [this post from Dave Geddes](https://mastery.games/post/article-grid-layout/). It shows us how we can achieve this effect using CSS Grids. You create a grid of three columns. The center column is the actual content area, while the two outer columns act as padding, but also create the effect of `margin: 0 auto`.
+What happens when you want to change these ultra-wide elements? You go over several media-queries to determine if your change is applied on various screens. What if we could cut the media-queries and still achieve this effect? Recently I came across [this post from Dave Geddes](https://mastery.games/post/article-grid-layout). It shows us how we can achieve this effect using CSS Grids. You create a grid of three columns. The center column is the actual content area, while the two outer columns act as padding, but also create the effect of `margin: 0 auto`.
 
 ```css
 article {
@@ -38,7 +38,7 @@ article > img {
 }
 ```
 
-The paddings on the side should differ on various screen sizes. On smaller screens, you want to limit the wasted space, while on bigger screens more padding can improve the visual quality. But with the above solution you still need media-queries to use different side padding. You could mitigate this by adding [fluidity](https://crinkle.dev/writing/fluid-interfaces-using-css/) to your website. We can replace the `2rem` with something like `calc(1rem + 1 * var(--ratio))`. By doing so, the side padding changes automatically when the screen size changes, without media-queries. Now we have a dynamic and maintainable layout for our articles.
+The paddings on the side should differ on various screen sizes. On smaller screens, you want to limit the wasted space, while on bigger screens more padding can improve the visual quality. But with the above solution you still need media-queries to use different side padding. You could mitigate this by adding [fluidity](/writing/fluid-interfaces-using-css) to your website. We can replace the `2rem` with something like `calc(1rem + 1 * var(--ratio))`. By doing so, the side padding changes automatically when the screen size changes, without media-queries. Now we have a dynamic and maintainable layout for our articles.
 
 ## Responsive multi-column grid system
 
@@ -74,4 +74,4 @@ Does this not sound like a familiar problem? Well, it is. It is almost the same 
 
 ## Conclusion
 
-CSS grids enable you to solve responsive layout issues. There are ways to achieve the above, also without using media-queries. But in most cases they need more CSS to work, making those solutions more difficult to maintain. Especially when combined with [fluidity](https://crinkle.dev/writing/fluid-interfaces-using-css/) CSS grids (and flex boxes) enable you to create websites that flow with the screen size, and not worry about breakpoints. I mean, they are called *break*points for a reason, right?
+CSS grids enable you to solve responsive layout issues. There are ways to achieve the above, also without using media-queries. But in most cases they need more CSS to work, making those solutions more difficult to maintain. Especially when combined with [fluidity](/writing/fluid-interfaces-using-css) CSS grids (and flex boxes) enable you to create websites that flow with the screen size, and not worry about breakpoints. I mean, they are called *break*points for a reason, right?

@@ -8,7 +8,7 @@ description: >-
 category: architecture
 ---
 
-In complex applications, UI components consist of more building blocks than some state and UI. Before I already [described](/writing/interfacing-your-ui-components/) a different way to look at our reusable UI components. We can look at them from developers' and users' perspectives at the same time. But on a conceptual level, components have more elements important to their behavior. It is important for developers to understand these concepts. Especially when working on big, complex and critical applications. By having an uniform way of looking at a component, we create the 'UI component anatomy'. Those familiar with the [flux-pattern](https://facebook.github.io/flux/docs/in-depth-overview/) can this pattern coming back as well in the anatomy.
+In complex applications, UI components consist of more building blocks than some state and UI. Before I already [described](/writing/interfacing-your-ui-components) a different way to look at our reusable UI components. We can look at them from developers' and users' perspectives at the same time. But on a conceptual level, components have more elements important to their behavior. It is important for developers to understand these concepts. Especially when working on big, complex and critical applications. By having an uniform way of looking at a component, we create the 'UI component anatomy'. Those familiar with the [flux-pattern](https://facebook.github.io/flux/docs/in-depth-overview/) can this pattern coming back as well in the anatomy.
 
 ![The UI component anatomy](/img/architecture-component-detailed.png 'The UI component anatomy')
 

@@ -3,7 +3,7 @@
 	font-family: 'Inter';
 	src: url('/fonts/Inter-Regular.woff2?v=3.13') format('woff2'),
 		url('/fonts/Inter-Regular.woff?v=3.13') format('woff');
-	font-display: optional;
+	font-display: swap;
 }
 
 @font-face {
@@ -11,12 +11,12 @@
 	font-family: 'Inter';
 	src: url('/fonts/Inter-SemiBold.woff2?v=3.13') format('woff2'),
 		url('/fonts/Inter-SemiBold.woff?v=3.13') format('woff');
-	font-display: optional;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Hack';
-	font-display: optional;
+	font-display: swap;
 	src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2')
 			format('woff2'),
 		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff')
@@ -30,13 +30,13 @@
 			format('woff2'),
 		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-bold-subset.woff')
 			format('woff');
-	font-display: optional;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Hack';
 	font-style: italic;
-	font-display: optional;
+	font-display: swap;
 	src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-italic-subset.woff2')
 			format('woff2'),
 		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-italic-subset.woff')

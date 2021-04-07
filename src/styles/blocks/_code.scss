@@ -7,7 +7,7 @@
 // string, number: primitives
 
 .token {
-  color: var(--gray-100);
+	color: var(--gray-100);
 }
 
 .token.builtin,
@@ -18,17 +18,17 @@
 .token.comment,
 .token.keyword,
 .token.important {
-  color: var(--gray-300);
+	color: var(--gray-300);
 }
 
 .token.comment,
 .token.attr-name,
 .token.italic {
-  font-style: italic;
+	font-style: italic;
 }
 
 .token.bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .token.function,
@@ -38,49 +38,46 @@
 .token.string,
 .token.number,
 .token.class-name {
-  color: var(--green-200);
+	color: var(--green-200);
 }
 
 // INLINE CODE
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
-  color: var(--green-200) !important;
-  font-size: 0.825em;
-  padding: 3px 6px;
-  font-family: var(--monospace);
-  hyphens: none;
-  background-color: var(--gray-400);
-  transition: var(--transition);
-  border-radius: var(--radius-0);
+	color: var(--green-200);
+	font-size: 0.825em;
+	padding: 3px 6px;
+	font-family: var(--monospace);
+	display: inline-block;
+	hyphens: none;
+	background-color: var(--gray-400);
+	transition: var(--transition);
+	border-radius: var(--radius-0);
 }
 
 // CODE BLOCKS
-pre[class*='language-'] {
-  margin: 0;
-  padding: var(--spacing-2);
-  overflow: auto;
-  color: var(--gray-100);
-  font-size: var(--text-00);
-  line-height: 1.4;
-  background-color: var(--gray-400) !important;
-  transition: var(--transition);
+pre {
+	padding: var(--spacing-2);
+	overflow: auto;
+	color: var(--gray-100);
+	font-size: var(--text-00);
+	line-height: 1.4;
+	background-color: var(--gray-400);
+	transition: var(--transition);
 
-  > code[class*='language-'] {
-    font-family: var(--monospace);
-  }
+	> code[class*='language-'] {
+		font-family: var(--monospace);
+		tab-size: 2;
+	}
 
-  ::selection {
-    color: var(--gray-500) !important;
-    background: var(--gray-100) !important;
-  }
-}
-
-.gatsby-highlight-code-line {
-  display: block;
+	::selection {
+		color: var(--gray-500);
+		background: var(--gray-100);
+	}
 }
 
 @media (max-width: 50rem) {
-  pre[class*='language-'] {
-    padding: var(--spacing-0);
-  }
+	pre {
+		padding: var(--spacing-0);
+	}
 }

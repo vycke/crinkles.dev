@@ -1,5 +1,0 @@
-# These rules will change if you change your site’s custom domains or HTTPS settings
-/blog /writing
-
-# Redirect default Netlify subdomain to primary domain
-https://crinkle.netlify.app/* https://crinkle.dev/:splat 301!

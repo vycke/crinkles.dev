@@ -1,4 +1,6 @@
 <script>
+	import Footer from '$lib/components/Footer.svelte';
+
 	import '../styles/index.scss';
 
 	let twitter = '@kevtiq';
@@ -20,3 +22,4 @@
 </svelte:head>
 
 <slot />
+<Footer />

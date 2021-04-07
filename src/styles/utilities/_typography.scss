@@ -1,6 +1,9 @@
 // Generate utility classes around colors
 @each $name, $color in $colors {
-	.text-#{$name} {
+	.text-#{$name},
+	.hover\:text-#{$name}:hover,
+	.focus\:text-#{$name}:focus,
+	.active\:text-#{$name}:active {
 		color: #{$color};
 	}
 }

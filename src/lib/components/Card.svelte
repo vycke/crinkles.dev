@@ -1,20 +1,27 @@
 <script>
-	export let title;
-	// export let description;
+	import formatDate from '$lib/utils/date';
+
 	export let href;
+	export let title;
+	export let description;
 	export let date;
 
-	$: formattedDate = new Date(date).toDateString();
+	let klass;
+	export { klass as class };
+
+	$: formattedDate = formatDate(date);
 </script>
 
-<div class="flex-col flex-g-000 click-area bg-gray-400 p-1">
-	<h2 class="text-0 text-gray-100"><a {href}>{title}</a></h2>
-	<span class="text-00 text-gray-300">{formattedDate}</span>
-	<!-- <span class="text-00 text-gray-300">{description}</span> -->
+<div class="flex-col click-area {klass}">
+	<span class="text-00 text-gray-300 uppercase">{formattedDate}</span>
+	<h2 class="text-0 text-gray-100">
+		<a {href} class="hover:text-green-200">{title}</a>
+	</h2>
+	<span class="text-00 text-gray-300 mt-000">{description}</span>
 </div>
 
-<style>
+<style lang="scss">
 	h2 a {
-		text-decoration-color: rgba(0, 0, 0, 0);
+		text-decoration: none;
 	}
 </style>

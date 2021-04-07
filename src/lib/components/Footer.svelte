@@ -26,7 +26,6 @@
 
 <style lang="scss">
 	footer {
-		grid-row: 3;
 		border-top: 1px solid var(--gray-300);
 	}
 

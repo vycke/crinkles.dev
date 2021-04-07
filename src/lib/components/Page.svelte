@@ -1,13 +1,13 @@
 <!-- src/component/PageTransitions.svelte -->
 <script>
 	import { fly } from 'svelte/transition';
-	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 
 	$: widthClass = `page-width-${width}`;
 	$: classes = `${widthClass} ${styles}`;
 
 	let styles;
+	export let showHeader = true;
 	export { styles as class };
 	export let width = '4';
 	export let title = 'Kevin Pennekamp';
@@ -25,8 +25,10 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<Header class={widthClass} />
+{#if showHeader}
+	<Header class={widthClass} />
+{/if}
 <main class={classes} in:fly={{ y: 50, duration: 250 }}>
 	<slot />
 </main>
-<Footer />
+<slot name="pagination" />

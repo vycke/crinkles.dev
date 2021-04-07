@@ -7,7 +7,7 @@
 	grid-auto-rows: max-content;
 	grid-template-columns:
 		minmax(var(--spacing), 1fr)
-		minmax(auto, var(--page-width, 68ch))
+		minmax(auto, var(--page-width, var(--size-4)))
 		minmax(var(--spacing), 1fr);
 
 	> * {

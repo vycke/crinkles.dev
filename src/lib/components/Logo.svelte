@@ -27,7 +27,13 @@
 	aria-label="Logo that redirects to the homepage"
 	class={`logo ${klass}`}
 >
-	<svg viewBox="0 0 238 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg
+		viewBox="0 0 238 280"
+		width="28.75"
+		height="35"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
 		<path
 			fill-rule="evenodd"
 			clip-rule="evenodd"
@@ -75,7 +81,6 @@
 		transition: background-color ease-in-out 200ms;
 
 		svg {
-			height: var(--text-2);
 			display: block;
 		}
 

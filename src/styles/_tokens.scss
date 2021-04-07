@@ -67,8 +67,8 @@ $sizes: (
 		--size-#{$name}: #{$size};
 	}
 
-	--sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto',
-		'Helvetica Neue', 'Arial', sans-serif;
+	--sans-serif: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Helvetica Neue',
+		'Arial', sans-serif;
 	--monospace: hack, consolas, menlo, monaco, 'Courier New', monospace;
 	--serif: Georgia, serif;
 

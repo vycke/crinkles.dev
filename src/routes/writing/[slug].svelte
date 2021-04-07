@@ -23,8 +23,8 @@
 	export let next;
 	export let prev;
 
-	$: pagePrevious = prev ? { url: `/writing/${prev.slug}`, subtitle: prev.title } : undefined;
-	$: pageNext = next ? { url: `/writing/${next.slug}`, subtitle: next.title } : undefined;
+	$: pagePrevious = prev ? { url: `/writing/${prev.slug}/`, subtitle: prev.title } : undefined;
+	$: pageNext = next ? { url: `/writing/${next.slug}/`, subtitle: next.title } : undefined;
 
 	$: date = formatDate(post.date);
 	$: num = length(post.html);

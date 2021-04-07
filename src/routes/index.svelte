@@ -29,7 +29,7 @@
 				<a href="https://finaps.nl" title="Website of Finaps B.V."> Finaps</a>, where I mostly do
 				front-end and lead a small team. I am a big <i>front-end</i> and <i>CSS</i> nerd, and love
 				to try new things on this personal playgroud. I occasionally
-				<a class="next" href="/writing">write</a> about my front-end journeys and opinions.
+				<a class="next" href="/writing/">write</a> about my front-end journeys and opinions.
 			</span>
 
 			<i class="flow-t-3 px-0 text-00 text-gray-300 text-center">
@@ -44,10 +44,10 @@
 					class="bg-gray-400 p-1"
 					title={article.title}
 					description={article.description}
-					href="/writing/{article.slug}"
+					href="/writing/{article.slug}/"
 				/>
 			{/each}
-			<a href="/writing" class="self-end mt-1 text-0 bold" sveltekit:prefetch
+			<a href="/writing/" class="self-end mt-1 text-0 bold" sveltekit:prefetch
 				>View more articles →</a
 			>
 		</aside>

@@ -23,7 +23,7 @@
 			date={article.date}
 			title={article.title}
 			description={article.description}
-			href="/writing/{article.slug}"
+			href="/writing/{article.slug}/"
 		/>
 	{/each}
 </Page>

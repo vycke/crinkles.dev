@@ -26,11 +26,11 @@
 		</li>
 		<li>Boxes to highlight extra information in my writing for those interested.</li>
 		<li>
-			A <a sveltekit:prefetch href="/writing/fluid-interfaces-using-css/">fluid</a> experience across
+			A <a sveltekit:prefetch href="/writing/fluid-interfaces-using-css">fluid</a> experience across
 			screen sizes, which you will only notice if you actively resize your screen.
 		</li>
 		<li>
-			Modern <a sveltekit:prefetch href="/writing/css-layout-patterns/">CSS patterns</a> to enhance the
+			Modern <a sveltekit:prefetch href="/writing/css-layout-patterns">CSS patterns</a> to enhance the
 			responsiveness of the website.
 		</li>
 	</ul>

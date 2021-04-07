@@ -1,4 +1,4 @@
-import {articles} from '../_articles';
+import {articles} from './_articles';
 
 type Input = { params: Record<string, unknown> }
 type Output = void | Record<string, unknown>

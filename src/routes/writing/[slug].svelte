@@ -42,7 +42,7 @@
 		</span>
 		<h1>{post.title}</h1>
 	</header>
-	<article class="flow flow-g-2 post center-layout">{@html post.html}</article>
+	<article class="flow flow-g-2 post center-layout mt-0">{@html post.html}</article>
 </Page>
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 

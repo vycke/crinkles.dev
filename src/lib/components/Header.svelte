@@ -6,7 +6,7 @@
 </script>
 
 <header class={styles}>
-	<div class="inner flex-row items-center justify-between">
+	<div class="inner flex-row items-center justify-between mb-0">
 		<Logo />
 	</div>
 </header>

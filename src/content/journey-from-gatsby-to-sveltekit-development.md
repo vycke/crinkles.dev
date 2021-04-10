@@ -1,5 +1,5 @@
 ---
-title: Journey from Gatsby to SvelteKit - development
+title: Journey from Gatsby to SvelteKit
 date: 2021-04-10T00:00:00.000Z
 description: >-
   Recently I rebuild my website in SvelteKit, coming from Gatsby. Not only did I had to learn a new framework/format, I also jumped the gun and moved from a stable environment to a public beta! 

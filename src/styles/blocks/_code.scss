@@ -57,6 +57,7 @@
 
 // CODE BLOCKS
 pre {
+	tab-size: 2;
 	padding: var(--spacing-2);
 	overflow: auto;
 	color: var(--gray-100);
@@ -65,7 +66,8 @@ pre {
 	background-color: var(--gray-400);
 	transition: var(--transition);
 
-	> code[class*='language-'] {
+	> code,
+	code[class*='language-'] {
 		font-family: var(--monospace);
 		tab-size: 2;
 	}

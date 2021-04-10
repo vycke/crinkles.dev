@@ -42,7 +42,7 @@
 		</span>
 		<h1>{post.title}</h1>
 	</header>
-	<article class="flow flow-g-2 post center-layout">{@html post.html}</article>
+	<article class="flow flow-g-2 post center-layout mt-0">{@html post.html}</article>
 </Page>
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
@@ -52,14 +52,18 @@
 	}
 
 	:global(.post h2 a) {
-		text-decoration: none;
+		text-decoration-line: none;
 		color: var(--gray-100);
 
-		&::after {
-			content: '#';
-			margin-left: var(--spacing-000);
+		&::before {
+			content: '»';
+			margin-right: var(--spacing-000);
 			color: var(--red-200);
 		}
+	}
+
+	:global(.post h2:hover a) {
+		text-decoration-line: underline;
 	}
 
 	:global(.post img),

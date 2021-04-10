@@ -75,13 +75,13 @@ blockquote {
 	border-radius: var(--radius-0);
 
 	p,
+	em,
 	cite {
 		font-size: var(--text-00);
 	}
 
 	em {
 		color: var(--gray-200);
-		font-size: var(--text-0);
 	}
 
 	cite {
@@ -108,7 +108,7 @@ ul {
 			display: inline-block;
 			font-weight: bold;
 			color: var(--blue-200);
-			content: '››';
+			content: '»';
 		}
 	}
 }
@@ -122,8 +122,8 @@ ol {
 		padding-left: var(--spacing-00);
 
 		&::marker {
-			font-weight: 600;
 			font-style: italic;
+			font-family: var(--serif);
 			color: var(--blue-200);
 		}
 	}

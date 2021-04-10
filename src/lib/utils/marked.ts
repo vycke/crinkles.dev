@@ -1,10 +1,11 @@
 import marked from 'marked';
 import prism from 'prismjs';
+import 'prism-svelte';
 
 // Hack to ensure images are not wrapped in a paragraph tag
 marked.Renderer.prototype.paragraph = function (text) {
 	if (text.startsWith('<img')) return text;
-	 return  '<p>' + text + '</p>';
+	return  '<p>' + text + '</p>';
 }
 
 // lazy loading images

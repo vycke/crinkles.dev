@@ -104,6 +104,6 @@ With a few more of these alterations (lazy loading of images and anchor tags on 
 
 ## Conclusion
 
-Up until this moment, the development experience (DX) of Svelte and SvelteKit has been tremendous. Don't get me wrong, I loved Gatsby the first time I used it. But after working with Svelte(Kit) I found its DX inferior to SvelteKit. For UI components that do not require (a lot of) state management, Svelte is also superior to React. But when moving to SvelteKit, you loose the community and plugins of Gatsby. This makes Gatsby superior for less tech-savvy people, or when you want to move quicker and do not want to control each detail. 
+Up until this moment, the development experience (DX) of Svelte and SvelteKit has been tremendous. Don't get me wrong, I loved Gatsby the first time I used it. But after working with Svelte(Kit) I found its DX inferior to SvelteKit. For UI components that do not require (a lot of) state management, Svelte is also superior to React. But when moving to SvelteKit, you loose the community and plugins of Gatsby. This makes Gatsby superior for less tech-savvy people, or when you want to move quicker and do not want to control each detail. In my [next post](/writing/journey-from-gatsby-to-sveltekit-deployment) I will tell you all about getting the new website live!
 
 > If you are curious about the result, check the code on the open [GitHub repository](https://github.com/kevtiq/crinkle.dev).

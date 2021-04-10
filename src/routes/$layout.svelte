@@ -5,7 +5,7 @@
 
 	let twitter = '@kevtiq';
 	let keywords = 'CSS, front-end, web design, consulting, architecture';
-	let img = '/logo.png';
+	let img = 'https://crinkle.dev/logo.png';
 </script>
 
 <svelte:head

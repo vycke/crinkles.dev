@@ -8,8 +8,10 @@
 <Page width="3" class="center-layout flow mb-3 text-00" title="Meta • Kevin Pennekamp">
 	<h1 class="flow-b-000">About this website.</h1>
 	<blockquote>
-		"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
-		uniqueness."
+		<em>
+			"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
+			uniqueness."
+		</em>
 	</blockquote>
 
 	<p>

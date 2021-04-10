@@ -5,7 +5,7 @@
 
 	let twitter = '@kevtiq';
 	let keywords = 'CSS, front-end, web design, consulting, architecture';
-	let img = '/img/logo.png';
+	let img = '/logo.png';
 </script>
 
 <svelte:head

@@ -1,6 +1,6 @@
 ---
 title: Journey from Gatsby to SvelteKit - deployment
-date: 2021-04-09T00:00:00.000Z
+date: 2021-04-10T01:00:00.000Z
 description: >-
   After the local transition of Gatsby to SvelteKit was finished, it was time to get the website live! But did I manage to get it there?
 ---
@@ -18,6 +18,8 @@ This is the moment I found out why SvelteKit is still in beta. In general, all t
 But wait a minute? The local version is not working anymore? Apparently, [Vite](https://vitejs.dev), the local build tool, did not like it when I moved the packages. After trying several things, I gave up. As SvelteKit is still in beta, community resources are scarce. I did found a few [Sapper](https://sapper.svelte.dev) examples, the predecessor of SvelteKit, using the `adapter-static`. Success! Well... kind of.
 
 I found that a few of my markdown files got transformed into pages correctly, but not all. After searching and debugging, I found the issue. The `adapter-static` traverses all links starting from the index route and generates pages for all the linked pages it can find. If a markdown file is not present as a link on a page (yet), it does not get generated.
+
+> The `adapter-static` changes the solution from SSR to SSG: the pre-rendered HTML is generated on build time instead of runtime.  
 
 ## Optimizing the website for SEO
 
@@ -39,8 +41,10 @@ But we can test more than the homepage. Other pages did not score that well for 
 
 By playing around with the 'Asset optimization' settings on Netlify, I was able to turn off this normalization. After redeploying and re-evaluating, the web.dev scores increased significantly. Now individual post pages score much better compared to their Gatsby counterpart. Especially on the 'time to interactivity' metric.
 
-> Turning off all asset optimizations on Netlify, especially normalized URLs, increased performance on my website. But, it can have unwanted side-effect for others. Use with caution.
+> Turning off all asset optimizations on Netlify increased performance on my website. But, it can have unwanted side-effect due to the lack of URL normalization. Use with caution.
 
 ## Conclusion
 
-When moving from the stable Gatsby to the unstable SvelteKit public beta, I took a risk. Not only did I have to learn a new framework, I also had to build logic to replace community plugins. I was at risk of encountering bugs that few encountered before me. With the knowledge that I could not rely on Google or Stack Overflow, I jumped into the deep. But in the end, it all paid off. I build a new website that is not only faster but also more enjoyable for me to work on. The experience that Svelte and SvelteKit bring is promising, and now I cannot shut up about it.
+When moving from the stable Gatsby to the unstable SvelteKit public beta, I took a risk. Not only did I have to learn a new framework, I had to build logic to replace community plugins. I was at risk of encountering bugs that few encountered before me. With the knowledge that I could not rely on Google or Stack Overflow, I jumped into the deep. But in the end, it all paid off. I build a new website that is not only faster but more enjoyable for me to work on. The experience that Svelte and SvelteKit bring is promising, and now I cannot shut up about it.
+
+> If you are curious about the result, check the code on the open [GitHub repository](https://github.com/kevtiq/crinkle.dev).

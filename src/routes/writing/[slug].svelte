@@ -52,14 +52,18 @@
 	}
 
 	:global(.post h2 a) {
-		text-decoration: none;
+		text-decoration-line: none;
 		color: var(--gray-100);
 
-		&::after {
-			content: '#';
-			margin-left: var(--spacing-000);
+		&::before {
+			content: '»';
+			margin-right: var(--spacing-000);
 			color: var(--red-200);
 		}
+	}
+
+	:global(.post h2:hover a) {
+		text-decoration-line: underline;
 	}
 
 	:global(.post img),

@@ -12,7 +12,7 @@
 	$: formattedDate = formatDate(date);
 </script>
 
-<div class="flex-col click-area {klass}">
+<div class="flex-col | click-area | {klass}">
 	<span class="text-00 text-gray-300 uppercase">{formattedDate}</span>
 	<h2 class="text-0 text-gray-100">
 		<a {href} class="hover:text-green-200">{title}</a>

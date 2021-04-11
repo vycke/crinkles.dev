@@ -19,8 +19,8 @@
 	<title>Kevin Pennekamp</title>
 </svelte:head>
 
-<Page width="5" showHeader={false} class="center-layout flow flow-g-3 mt-1">
-	<section class="splitter splitter-w-1 mt-1 splitter-g-3 mb-1">
+<Page width="5" showHeader={false} class="center flow flow-g-3 | mt-1">
+	<section class="splitter splitter-w-1 splitter-g-3 | my-1">
 		<div class="flow flex-col">
 			<Logo class="self-start" />
 			<h1 class="px-0">Hi, I'm Kevin.</h1>
@@ -32,12 +32,12 @@
 				<a class="next" href="/writing">write</a> about my front-end journeys and opinions.
 			</span>
 
-			<i class="flow-t-3 px-0 text-00 text-gray-300 text-center">
+			<i class="flow-t-3 | px-0 text-00 text-gray-300 text-center">
 				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 				uniqueness."
 			</i>
 		</div>
-		<aside class="flex-col flow">
+		<aside class="flow flex-col">
 			{#each articles as article}
 				<Card
 					date={article.date}
@@ -47,7 +47,7 @@
 					href="/writing/{article.slug}"
 				/>
 			{/each}
-			<a href="/writing" class="self-end mt-1 text-0 bold" sveltekit:prefetch
+			<a href="/writing" class="self-end | mt-1 text-0 bold" sveltekit:prefetch
 				>View more articles →</a
 			>
 		</aside>

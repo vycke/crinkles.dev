@@ -1,0 +1,80 @@
+---
+title: My CSS methodology and architecture
+date: 2021-04-13T00:00:00.000Z
+description: >-
+  In the last two years, I found that my CSS architecture was becoming too complex. But, utility-first frameworks were not doing it for me either. I needed a mix. Then came CUBE CSS and it all clicked.
+---
+
+For years I have used [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) as my goto CSS architecture for large projects. It helped me to keep my CSS maintainable with a small team. But in the last two years, I've found myself applying _utilities_ more, and writing CSS components/blocks less. More and more parts of ITCSS were left untouched and unused. My CSS architecture had become too complex for my daily use. And it was not just me. You see the movement in the community, but also within my own team. 
+
+I am a not [utility-first](https://tailwindcss.com/) guy. But 80% of my CSS code is utilities these days. The remaining parts consist of common [layout patterns](/writing/css-layout-patterns) and blocks that could be solved with utilities (e.g. using operators like `+` or `~`). At this point, I came across the [CUBE CSS](https://cube.fyi/) of [Andy Bell](https://twitter.com/piccalilli_). It is the methodology describing how I was, and still am, implementing CSS. So as every self-respecting front-end developer with an online presence, I took it, changed it, created a framework, and wrote about it!
+
+## From methodology to framework
+
+CUBE CSS is a methodology with *simplicity* at its core. It values CSS for what it is, and so should a framework. It should harness the power of the cascade and combine it with *custom properties*. This creates a *flexible*, *scalable* and *extensible* CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. There are a total of three layers: layout, utilities, and blocks. But CUBE CSS has four layers you say? That is true! I love using `data-`attributes in HTML tags for styling different UI states. But, I see them as an integral part of the blocks layer. When applied correctly, the layout and utility classes can cover over 80% of the applied styles.
+
+> Implementing and using this correctly requires knowledge about specificity and the cascade. Many of the layout patterns will apply CSS properties with a higher specificity compared to utilities. In some cases, the specificity might be the same, but you should not override layout properties with utilities.
+
+With this in mind, a framework can be created, such as [my own SCSS framework](https://github.com/kevtiq/css-framework). This framework is built around the ideas of CUBE CSS and with custom properties in mind. It has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest *co-locate* it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc. 
+
+```
+styles/
+├── layout/        // classes for layout patterns
+├── utilities/     // utility classes
+├── _global.scss   // global styles targeting HTML tags
+├── _reset.scss    // CSS reset
+├── _tokens.scss   // design tokens
+└── index.scss
+```
+
+## Diving into the details
+
+At its core is the `_token.scss` file. In this file, you define all your design tokens as SCSS variables. But why not define them as custom properties? As the framework is *extensible*, you should be able to define your own names for the variables, with your preferred names. Do you want to use `-xs` or `-4` as a name for spacing? This makes it impossible to correctly define all utility classes. But by using SCSS variables as the definitions, we can generate custom properties that can be used for all your additional (block) classes. 
+
+```scss
+$colors: (
+	'black': #000,
+	'white': #fff
+);
+
+:root {
+	@each $name, $color in $colors {
+		--#{$name}: #{$color};
+	}
+}
+```
+
+With the design tokens, we can generate all utility classes. Instead of setting the value of all the utility classes, we refer to the corresponding custom property, as shown below. Assume you change the value of `--black` for a specific page to `#fff`. All utility classes (and blocks) that have a reference to the custom property `--black`, will now use the value `#fff` instead of `#000` on this specific page. This creates a consistent but flexible experience for both the user and developer. We let the cascade of CSS do its work for custom properties. 
+
+```scss
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    Background-color: var(--#{$name});
+  }
+}
+```
+
+A similar approach is taken for the layout patterns. Many of the layout patterns still have properties that you want to adjust. Take the example below. This generates a [responsive overview of tiles](/writing/css-layout-patterns#responsive-multi-column-grid-system). But you want to be able to set the size of the gap. By generating utility classes we allow developers to set classes like `tiles tiles-g-xs` on elements. Similarly, other properties can be identified that can be replaced by additional layout utility classes (e.g. replacing the `20rem`). Although this flurries the lines between layout and utilities, this is okay. It aids towards the goal of covering 80% of the applied styles with this framework.
+
+```scss
+.tiles {
+	--tiles-gap: var(--spacing-0);
+
+	display: grid;
+	grid-row-gap: var(--tiles-gap);
+	grid-column-gap: var(--tiles-gap);
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	width: 100%;
+}
+
+// Generate classes to set the tile gap
+@each $name, $space in $spacing {
+	.tiles-g-#{$name} {
+		--tiles-gap: var(--spacing-#{$name});
+	}
+}
+```
+
+## Wrapping up
+
+The current version of the framework is open on [GitHub](https://github.com/kevtiq/css-framework). It is a small but working framework that is in use on two projects (this website, and an internal project for [Finaps](https://finaps.nl). It has several layout patterns and utilities build in already. I cannot say how long this will be my preferred way to work with CSS at scale. But for now, I intend to continue to improve and enrich the framework. Let me know in the [GitHub issues](https://github.com/kevtiq/css-framework/issues) what you think should be added!

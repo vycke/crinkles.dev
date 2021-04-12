@@ -68,11 +68,12 @@ em {
 // QUOTES
 blockquote {
 	display: block;
-	padding: var(--spacing-0);
+	padding: var(--spacing-0) var(--spacing-2);
 	color: var(--gray-200);
 	background-color: var(--gray-400);
-	border-left: 0.25rem solid var(--blue);
-	border-radius: var(--radius-0);
+	border-left: 0.5rem solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to bottom, var(--red), var(--blue));
 
 	p,
 	em,
@@ -131,4 +132,10 @@ ol {
 
 li + li {
 	margin-top: 0.25em;
+}
+
+@media (max-width: 50rem) {
+	blockquote {
+		padding: var(--spacing-0);
+	}
 }

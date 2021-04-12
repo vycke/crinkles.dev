@@ -74,8 +74,4 @@
 		width: 100%;
 		max-width: calc(var(--center-width, var(--size-4)) + 2 * var(--spacing-2));
 	}
-
-	:global(.post blockquote) {
-		max-width: calc(var(--center-width, var(--size-4)) - 2 * var(--spacing-2));
-	}
 </style>

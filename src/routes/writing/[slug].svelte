@@ -58,7 +58,7 @@
 		&::before {
 			content: '»';
 			margin-right: var(--spacing-000);
-			color: var(--red-200);
+			color: var(--red);
 		}
 	}
 

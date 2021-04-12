@@ -38,13 +38,13 @@
 .token.string,
 .token.number,
 .token.class-name {
-	color: var(--green-200);
+	color: var(--green);
 }
 
 // INLINE CODE
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
-	color: var(--green-200);
+	color: var(--green);
 	font-size: 0.825em;
 	padding: 3px 6px;
 	font-family: var(--monospace);

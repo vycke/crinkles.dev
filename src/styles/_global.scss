@@ -37,15 +37,15 @@ a > *,
 a:link,
 a:visited,
 a:active {
-	text-decoration-color: var(--red-200);
+	text-decoration-color: var(--red);
 	text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:hover > * {
-	color: var(--red-200);
+	color: var(--red);
 	transition: var(--transition);
-	text-decoration-color: var(--red-200);
+	text-decoration-color: var(--red);
 	text-decoration-thickness: 2px;
 }
 
@@ -62,7 +62,7 @@ i,
 em {
 	font-style: italic;
 	font-family: var(--serif);
-	color: var(--green-200);
+	color: var(--green);
 }
 
 // QUOTES
@@ -71,7 +71,7 @@ blockquote {
 	padding: var(--spacing-0);
 	color: var(--gray-200);
 	background-color: var(--gray-400);
-	border-left: 0.25rem solid var(--blue-200);
+	border-left: 0.25rem solid var(--blue);
 	border-radius: var(--radius-0);
 
 	p,
@@ -107,7 +107,7 @@ ul {
 			width: var(--spacing-2);
 			display: inline-block;
 			font-weight: bold;
-			color: var(--blue-200);
+			color: var(--blue);
 			content: '»';
 		}
 	}
@@ -124,7 +124,7 @@ ol {
 		&::marker {
 			font-style: italic;
 			font-family: var(--serif);
-			color: var(--blue-200);
+			color: var(--blue);
 		}
 	}
 }

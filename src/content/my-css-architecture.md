@@ -11,15 +11,15 @@ I am a not [utility-first](https://tailwindcss.com/) guy. But 80% of my CSS code
 
 ## From methodology to framework
 
-CUBE CSS is a methodology with *simplicity* at its core. It values CSS for what it is, and so should a framework. It should harness the power of the cascade and combine it with *custom properties*. This creates a *flexible*, *scalable* and *extensible* CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. When looking at my [own implementation](https://github.com/kevtiq/css-framework), there are three layers on top of the design tokens. CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks. 
+CUBE CSS is a methodology with *simplicity* at its core. It values CSS for what it is. The methodology works well with *custom properties* to implement a [framework](https://github.com/kevtiq/css-framework). The combination creates a *flexible*, *scalable* and *extensible* CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. My framework consists of three layers. 
 
-- **Layout**: 
-- **Utilities**:
-- **Blocks**:
+- **Layout**: classes that look at the macro-level of an application. They provide flexible and responsive layout solutions that are common across an application. 
+- **Utilities**: classes that do one job and do one job well. This is often a class that alters a single property. But utilities like the [`.click-area` class](https://github.com/kevtiq/css-framework/blob/main/src/utilities/click-area.scss) cover more than a single property but still do only one thing.  
+- **Blocks**: correspond to UI components. That what cannot be solved with layout and/or utility classes alone can be solved in blocks. You can choose to cover all styles of a component in a block, or you can only put those styles not covered by other classes in a block. 
 
-> Implementing and using this correctly requires knowledge about specificity and the cascade. Many of the layout patterns will apply CSS properties with a higher specificity compared to utilities. In some cases, the specificity might be the same, but you should not override layout properties with utilities.
+> CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks. 
 
-With this in mind, a framework can be created, such as [my own SCSS framework](https://github.com/kevtiq/css-framework). This framework is built around the ideas of CUBE CSS and with custom properties in mind. It has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest *co-locate* it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc. 
+If you look closely at the code of [my framework](https://github.com/kevtiq/css-framework), it has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest *co-locate* it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc. 
 
 ```
 styles/
@@ -31,7 +31,9 @@ styles/
 └── index.scss
 ```
 
-## Diving into the details
+Implementing and using this correctly requires knowledge about specificity and the cascade. Many of the layout patterns will apply CSS properties with a higher specificity compared to utilities. In some cases, the specificity might be the same, but you should not override layout properties with utilities.
+
+## detailed look at the framework
 
 At its core is the `_token.scss` file. In this file, you define all your design tokens as SCSS variables. But why not define them as custom properties? As the framework is *extensible*, you should be able to define your own names for the variables, with your preferred names. Do you want to use `-xs` or `-4` as a name for spacing? This makes it impossible to correctly define all utility classes. But by using SCSS variables as the definitions, we can generate custom properties that can be used for all your additional (block) classes. 
 
@@ -81,4 +83,4 @@ A similar approach is taken for the layout patterns. Many of the layout patterns
 
 ## Wrapping up
 
-The current version of the framework is open on [GitHub](https://github.com/kevtiq/css-framework). It is a small but working framework that is in use on two projects (this website, and an internal project for [Finaps](https://finaps.nl). It has several layout patterns and utilities build in already. I cannot say how long this will be my preferred way to work with CSS at scale. But for now, I intend to continue to improve and enrich the framework. Let me know in the [GitHub issues](https://github.com/kevtiq/css-framework/issues) what you think should be added!
+The moment I read about CUBE CSS, I was a fan of the methodology. How could I not? It was basically describing how I felt about CSS and how I was using it. At the same time, I became a big fan of customer properties. So why not combine the two into a framework? Which is what I did. The current version of the framework is open on [GitHub](https://github.com/kevtiq/css-framework). It is small but used in two projects (this website, and an internal project for [Finaps](https://finaps.nl). It has several layout and utility classes build in. For now, I intend to continue to improve and enrich the framework when I can. Let me know in the [GitHub issues](https://github.com/kevtiq/css-framework/issues) what you think should be added!

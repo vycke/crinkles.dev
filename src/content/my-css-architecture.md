@@ -11,7 +11,11 @@ I am a not [utility-first](https://tailwindcss.com/) guy. But 80% of my CSS code
 
 ## From methodology to framework
 
-CUBE CSS is a methodology with *simplicity* at its core. It values CSS for what it is, and so should a framework. It should harness the power of the cascade and combine it with *custom properties*. This creates a *flexible*, *scalable* and *extensible* CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. There are a total of three layers: layout, utilities, and blocks. But CUBE CSS has four layers you say? That is true! I love using `data-`attributes in HTML tags for styling different UI states. But, I see them as an integral part of the blocks layer. When applied correctly, the layout and utility classes can cover over 80% of the applied styles.
+CUBE CSS is a methodology with *simplicity* at its core. It values CSS for what it is, and so should a framework. It should harness the power of the cascade and combine it with *custom properties*. This creates a *flexible*, *scalable* and *extensible* CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. When looking at my [own implementation](https://github.com/kevtiq/css-framework), there are three layers on top of the design tokens. CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks. 
+
+- **Layout**: 
+- **Utilities**:
+- **Blocks**:
 
 > Implementing and using this correctly requires knowledge about specificity and the cascade. Many of the layout patterns will apply CSS properties with a higher specificity compared to utilities. In some cases, the specificity might be the same, but you should not override layout properties with utilities.
 

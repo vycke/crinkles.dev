@@ -2,16 +2,16 @@
 title: Journey from Gatsby to SvelteKit
 date: 2021-04-07T00:00:00.000Z
 description: >-
-  Recently I rebuild my website in SvelteKit, coming from Gatsby. Not only did I had to learn a new framework/format, I also jumped the gun and moved from a stable environment to a public beta! 
+  Recently I rebuild my website in SvelteKit, coming from Gatsby. Not only did I had to learn a new framework/format, I also jumped the gun and moved from a stable environment to a public beta!
 ---
 
 For the last few weeks or months, I was getting restless about everything: my work, my website, the environment, the World. I had to find something to change my focus to, restore my energy. Around a week or two ago, I found the news of [SvelteKit going into public beta](https://svelte.dev/blog/sveltekit-beta). This sparked excitement in myself I had not felt in a long time. So during Easter weekend, while in a Corona lockdown, I started with a new journey. An exciting journey. I was going to learn a new framework and rebuild this website! Or at least, try.
 
 ## Introducing Svelte and SvelteKit
 
-[React](https://reactjs.org) is a JavaScript library that makes it easy to write UIs. As it is a library, your code plus the library is shipped to the browser and executed there. Also, you have to write your HTML (or JSX) inside the `return` of a function, while other lifecycle information is also encapsulated inside that function. [Gatsby](https://www.gatsbyjs.com/) is a *static site generation (SSG)* solution build on top of React, and was used in the previous version of this website. An easy next step would be migrating to [Next.js](https://nextjs.org/), a *static-site rendering (SSR)* solution build on React. But then I came across the news of the SvelteKit public beta. 
+[React](https://reactjs.org) is a JavaScript library that makes it easy to write UIs. As it is a library, your code plus the library is shipped to the browser and executed there. Also, you have to write your HTML (or JSX) inside the `return` of a function, while other lifecycle information is also encapsulated inside that function. [Gatsby](https://www.gatsbyjs.com/) is a _static site generation (SSG)_ solution build on top of React, and was used in the previous version of this website. An easy next step would be migrating to [Next.js](https://nextjs.org/), a _static-site rendering (SSR)_ solution build on React. But then I came across the news of the SvelteKit public beta.
 
-> **SSG vs. SSR**: in both cases the server is responsible to pre-render the requested HTML page (in contrast to client-side rendering (CSR)). With SSG this happens at *build* time: all possible pages get pre-rendered. With SSR this happens at *runtime*: upon a page visit, the HTML gets pre-rendered using a template. 
+> **SSG vs. SSR**: in both cases the server is responsible to pre-render the requested HTML page (in contrast to client-side rendering (CSR)). With SSG this happens at _build_ time: all possible pages get pre-rendered. With SSR this happens at _runtime_: upon a page visit, the HTML gets pre-rendered using a template.
 
 [Svelte](https://svelte.dev/) is not a library or a framework, it is a compiler. This means that your code is not shipped in combination with packages to a browser, but it gets compiled to something else. This something is shipped to the browser. Because all code gets compiled, the total size decreases, but the performance increases. Besides, it allows you to break away from writing everything inside a JavaScript function, and have its optimized format.
 
@@ -19,7 +19,7 @@ For the last few weeks or months, I was getting restless about everything: my wo
 
 ## Working with (S)CSS in SvelteKit
 
-I am a big fan of CSS and have a strong [opinion](https://github.com/kevtiq/css-framework) on how it should be applied to websites/projects. My setup allows me to extract general layout patterns and combine them with general utility-first CSS. When I read about the 'scoped' styles of Svelte I got a bit anxious. Would my way of working deviate too much from Svelte(Kit)?
+I am a big fan of CSS and have a strong [opinion](https://github.com/kevtiq/lub-css) on how it should be applied to websites/projects. My setup allows me to extract general layout patterns and combine them with general utility-first CSS. When I read about the 'scoped' styles of Svelte I got a bit anxious. Would my way of working deviate too much from Svelte(Kit)?
 
 But quickly it hit me. The combination could work perfectly. It could allow me to create global `layout` and `utility` CSS, and use the 'scoped' CSS of Svelte to add styles specific to components or pages. The styles defined in the Svelte component could replace the entire `block` directory of my framework. This means that components would look something like shown below. On the `div` instead of the `header` tag, you see various utility classes applied, but also the defined `.inner` class.
 
@@ -31,11 +31,11 @@ But quickly it hit me. The combination could work perfectly. It could allow me t
 </header>
 
 <style lang="scss">
-  header {
-    ...
-
-    .inner { ... }
-  }
+	header {
+		... .inner {
+			...;
+		}
+	}
 </style>
 ```
 
@@ -43,7 +43,9 @@ This worked beautifully, for the most part. The compiler of Svelte is smart enou
 
 ```svelte
 <style>
-	:global(.post h2) { ... }
+	:global(.post h2) {
+		...;
+	}
 </style>
 ```
 
@@ -62,11 +64,11 @@ I think I am good at CSS, but bad at animations. I know my way around CSS transi
 But I do not write my articles in HTML, Svelte, or React, I write them in markdown. With Gatsby several steps had to be taken to make it all work:
 
 1. The markdown files inside the `/pages` directory needed to have a template name indicated as an attribute in the front-matter section.
-2. In the `gatsby-node.js` file you put the code on how the actual files should be handled. With a GraphQL query, all pages can be retrieved and you can transform the data into the format you require in your template file (e.g. in my case I had to extract the *next* and *previous* articles). 
+2. In the `gatsby-node.js` file you put the code on how the actual files should be handled. With a GraphQL query, all pages can be retrieved and you can transform the data into the format you require in your template file (e.g. in my case I had to extract the _next_ and _previous_ articles).
 3. The template file, located in a `/templates` directory allows query (again through GraphQL) an object defined (in my case an article and the adjacent articles) in the previous step can be obtained and transformed into an HTML page through React components.
 4. Configure a shit tone of plugins to handle images, code highlighting, relocation of files, etc. in the `gatsby-config.js` file.
 
-I don't know about you, but I found it not developer-friendly. Things are scattered everywhere, it is unclear why you have to use GraphQL everywhere, and the plugins obfuscate the actual logic. SvelteKit is much more intuitive. The `/routes` directory holds the code for rendering the pages, not the markdown files. It combines the `/templates` and parts of the `gatsby-node.js` corresponding to a page in one place. This co-location makes much more sense. 
+I don't know about you, but I found it not developer-friendly. Things are scattered everywhere, it is unclear why you have to use GraphQL everywhere, and the plugins obfuscate the actual logic. SvelteKit is much more intuitive. The `/routes` directory holds the code for rendering the pages, not the markdown files. It combines the `/templates` and parts of the `gatsby-node.js` corresponding to a page in one place. This co-location makes much more sense.
 
 The `[slug].json.js` file contains the logic of transforming a markdown file in a JSON structure that can be sent to a browser. `slug` corresponds to the filename without the extension. Instead of installing several plugins, I only had to install three npm packages, nothing more, nothing less.
 
@@ -74,33 +76,33 @@ The `[slug].json.js` file contains the logic of transforming a markdown file in 
 - `markedjs`: parse markdown into HTML.
 - `prismjs`: add code highlighting.
 
-The resulting JSON string is returned at the end of the function. On the `[slug].svelte` side, we need to fetch the generated JSON and return it in the `props`. We can then expose the property as shown below. This allows us to use the `article` object in the rendering code of this svelte plugin.  
+The resulting JSON string is returned at the end of the function. On the `[slug].svelte` side, we need to fetch the generated JSON and return it in the `props`. We can then expose the property as shown below. This allows us to use the `article` object in the rendering code of this svelte plugin.
 
 ```svelte
 <script context="module">
-  export async function load({ page, fetch }) {
-    const article = await fetch(`/writing/&{page.params.slug}.json`);
-    if (res.ok) return { props: { article } };
-  }
+	export async function load({ page, fetch }) {
+		const article = await fetch(`/writing/&{page.params.slug}.json`);
+		if (res.ok) return { props: { article } };
+	}
 </script>
 
 <script>
-  export let article;
+	export let article;
 </script>
 ```
 
 All the above was sufficient to have my Gatsby website transformed into a SvelteKit website, almost. There were small issues left. For instance, images on the articles were wrapped in a `<p></p>` tag, which made a [styling element](/writing/css-layout-patterns#dynamic-centered-layout) I used impossible (until the [`:has()`](https://drafts.csswg.org/selectors-4/#relational) gets released). But luckily you can alter how `markedjs` works.
 
 ```js
-import marked from 'markedjs'; 
+import marked from 'markedjs';
 
 marked.Renderer.prototype.paragraph = function (text) {
-  if (text.startsWith('<img')) return text;
-  return  '<p>' + text + '</p>';
-}
-``` 
+	if (text.startsWith('<img')) return text;
+	return '<p>' + text + '</p>';
+};
+```
 
-With a few more of these alterations (lazy loading of images and anchor tags on headings), I was able to create the same website in SvelteKit. Or even a better website, with [less code](https://drafts.csswg.org/selectors-4/#relational). 
+With a few more of these alterations (lazy loading of images and anchor tags on headings), I was able to create the same website in SvelteKit. Or even a better website, with [less code](https://drafts.csswg.org/selectors-4/#relational).
 
 ## Conclusion
 

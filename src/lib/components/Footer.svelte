@@ -7,8 +7,8 @@
 	];
 </script>
 
-<footer class="flex-col items-start p-1 text-00 bg-gray-400">
-	<div class="links flex-row items-center justify-end">
+<footer class="flex-col items-start | p-1 text-00 bg-gray-400">
+	<div class="links | flex-row items-center justify-end">
 		<a href="/meta" sveltekit:prefetch class="flex-grow">
 			<i>crinkle</i>
 		</a>

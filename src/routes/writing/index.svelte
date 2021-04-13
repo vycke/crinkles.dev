@@ -16,7 +16,7 @@
 	<title>Writing • Kevin Pennekamp</title>
 </svelte:head>
 
-<Page class="center-layout flow flow-g-2 mb-3">
+<Page class="center flow flow-g-2 | mb-3">
 	<h1>Writing.</h1>
 	{#each articles as article}
 		<Card

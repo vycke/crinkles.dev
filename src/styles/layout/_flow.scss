@@ -5,26 +5,26 @@
 }
 
 .flow {
-	--space: var(--spacing-0);
+	--flow-spacing: var(--spacing-0);
 }
 
 .flow > * + * {
-	margin-top: var(--space);
+	margin-top: var(--flow-spacing);
 }
 
 @each $name, $space in $spacing {
 	// Generate gap classes to be combined with 'flow'
 	.flow-g-#{$name} {
-		--space: var(--spacing-#{$name});
+		--flow-spacing: var(--spacing-#{$name});
 	}
 
 	// Can be set on children from the stack
 	.flow-t-#{$name} {
-		--space: var(--spacing-#{$name});
+		--flow-spacing: var(--spacing-#{$name});
 	}
 
 	.flow-b-#{$name} + * {
-		--space: var(--spacing-#{$name});
+		--flow-spacing: var(--spacing-#{$name});
 	}
 }
 
@@ -32,7 +32,7 @@
 .flow-g-none,
 .flow-t-none + *,
 .flow-b-none {
-	--space: 0;
+	--flow-spacing: 0;
 }
 
 // Stop flow after x-th element (those elements are grouped at the bottom

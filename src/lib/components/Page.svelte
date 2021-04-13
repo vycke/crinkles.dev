@@ -3,7 +3,7 @@
 	import { fly } from 'svelte/transition';
 	import Header from './Header.svelte';
 
-	$: widthClass = `page-width-${width}`;
+	$: widthClass = `center-w-${width}`;
 	$: classes = `${widthClass} ${styles}`;
 
 	let styles;

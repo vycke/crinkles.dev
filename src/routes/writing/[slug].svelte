@@ -35,14 +35,14 @@
 </svelte:head>
 
 <Page width="4" title={post.title} description={post.description}>
-	<header class="center-layout flow flow-g-none" role="contentinfo">
+	<header class="center flow flow-g-none" role="contentinfo">
 		<span class="text-gray-300 uppercase">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
 		<h1>{post.title}</h1>
 	</header>
-	<article class="flow flow-g-2 post center-layout mt-0">{@html post.html}</article>
+	<article class="post | center flow flow-g-2 | mt-0">{@html post.html}</article>
 </Page>
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
@@ -58,7 +58,7 @@
 		&::before {
 			content: '»';
 			margin-right: var(--spacing-000);
-			color: var(--red-200);
+			color: var(--red);
 		}
 	}
 
@@ -72,10 +72,6 @@
 		grid-column: 1 / 4;
 		justify-self: center;
 		width: 100%;
-		max-width: calc(var(--page-width) + 2 * var(--spacing-2));
-	}
-
-	:global(.post blockquote) {
-		max-width: calc(var(--page-width) - 2 * var(--spacing-2));
+		max-width: calc(var(--center-width, var(--size-4)) + 2 * var(--spacing-2));
 	}
 </style>

@@ -6,7 +6,7 @@
 </script>
 
 <header class={styles}>
-	<div class="inner flex-row items-center justify-between mb-0">
+	<div class="inner | flex-row items-center justify-between | mb-0">
 		<Logo />
 	</div>
 </header>
@@ -24,7 +24,7 @@
 
 		.inner {
 			width: 100%;
-			max-width: calc(var(--page-width) + 2 * var(--spacing-1));
+			max-width: calc(var(--center-width, var(--size-4)) + 2 * var(--spacing-1));
 			margin: 0 auto;
 			padding: var(--spacing-000) calc(var(--spacing-1) - var(--spacing-00));
 		}

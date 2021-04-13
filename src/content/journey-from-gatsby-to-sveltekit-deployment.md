@@ -1,6 +1,6 @@
 ---
 title: Deploying my newly created SvelteKit website
-date: 2021-04-10T01:00:00.000Z
+date: 2021-04-07T01:00:00.000Z
 description: >-
   After the local transition of Gatsby to SvelteKit was finished, it was time to get the website live! But did I manage to get it there?
 ---

@@ -1,6 +1,7 @@
 import marked from 'marked';
 import prism from 'prismjs';
 import 'prism-svelte';
+import 'prismjs/components/prism-scss.js';
 
 // Hack to ensure images are not wrapped in a paragraph tag
 marked.Renderer.prototype.paragraph = function (text) {

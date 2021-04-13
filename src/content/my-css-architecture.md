@@ -19,7 +19,9 @@ CUBE CSS is a methodology with _simplicity_ at its core. It values CSS for what 
 
 > CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks.
 
-If you look closely at the code of [my framework](https://github.com/kevtiq/css-framework), it has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest _co-locate_ it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc.
+If you look closely at the code of [my framework (LUBS)](https://github.com/kevtiq/css-framework), it has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest _co-locate_ it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc.
+
+> LUBS: layout, utility and block styles
 
 ```
 styles/
@@ -83,4 +85,4 @@ A similar approach is taken for the layout patterns. Many of the layout patterns
 
 ## Wrapping up
 
-The moment I read about CUBE CSS, I was a fan of the methodology. How could I not? It was basically describing how I felt about CSS and how I was using it. At the same time, I became a big fan of customer properties. So why not combine the two into a framework? Which is what I did. The current version of the framework is open on [GitHub](https://github.com/kevtiq/css-framework). It is small but used in two projects (this website, and an internal project for [Finaps](https://finaps.nl). It has several layout and utility classes build in. For now, I intend to continue to improve and enrich the framework when I can. Let me know in the [GitHub issues](https://github.com/kevtiq/css-framework/issues) what you think should be added!
+The moment I read about CUBE CSS, I was a fan of the methodology. How could I not? It was basically describing how I felt about CSS and how I was using it. At the same time, I became a big fan of customer properties. So why not combine the two into a framework? Which is what I did. The current version of the framework is open on [GitHub](https://github.com/kevtiq/lubs). It is small but used in two projects (this website, and an internal project for [Finaps](https://finaps.nl). It has several layout and utility classes build in. For now, I intend to continue to improve and enrich the framework when I can. Let me know in the [GitHub issues](https://github.com/kevtiq/lubs/issues) what you think should be added!

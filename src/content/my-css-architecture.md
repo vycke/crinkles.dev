@@ -1,5 +1,5 @@
 ---
-title: My CSS methodology and architecture
+title: CSS methodology and architecture
 date: 2021-04-15T00:00:00.000Z
 description: >-
   In the last two years, I found that my CSS architecture was becoming too complex. But, utility-first frameworks were not doing it for me either. I needed a mix. Then came CUBE CSS and it all clicked.

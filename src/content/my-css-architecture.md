@@ -5,21 +5,21 @@ description: >-
   In the last two years, I found that my CSS architecture was becoming too complex. But, utility-first frameworks were not doing it for me either. I needed a mix. Then came CUBE CSS and it all clicked.
 ---
 
-For years I have used [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) as my goto CSS architecture for large projects. It helped me to keep my CSS maintainable with a small team. But in the last two years, I've found myself applying _utilities_ more, and writing CSS components/blocks less. More and more parts of ITCSS were left untouched and unused. My CSS architecture had become too complex for my daily use. And it was not just me. You see the movement in the community, but also within my own team. 
+For years I have used [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) as my goto CSS architecture for large projects. It helped me to keep my CSS maintainable with a small team. But in the last two years, I've found myself applying _utilities_ more, and writing CSS components/blocks less. More and more parts of ITCSS were left untouched and unused. My CSS architecture had become too complex for my daily use. And it was not just me. You see the movement in the community, but also within my own team.
 
-I am a not [utility-first](https://tailwindcss.com/) guy. But 80% of my CSS code is utilities these days. The remaining parts consist of common [layout patterns](/writing/css-layout-patterns) and blocks that could be solved with utilities (e.g. using operators like `+` or `~`). At this point, I came across the [CUBE CSS](https://cube.fyi/) of [Andy Bell](https://twitter.com/piccalilli_). It is the methodology describing how I was, and still am, implementing CSS. So as every self-respecting front-end developer with an online presence, I took it, changed it, created a framework, and wrote about it!
+I am a not [utility-first](https://tailwindcss.com/) guy. But 80% of my CSS code is utilities these days. The remaining parts consist of CSS targeting layouts (e.g. grids) and blocks that could be solved with utilities (e.g. using operators like `+` or `~`). At this point, I came across the [CUBE CSS](https://cube.fyi/) of [Andy Bell](https://twitter.com/piccalilli_). It is the methodology describing how I was, and still am, implementing CSS. So as every self-respecting front-end developer with an online presence, I took it, changed it, created a framework, and wrote about it!
 
 ## From methodology to framework
 
-CUBE CSS is a methodology with *simplicity* at its core. It values CSS for what it is. The methodology works well with *custom properties* to implement a [framework](https://github.com/kevtiq/css-framework). The combination creates a *flexible*, *scalable* and *extensible* CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. My framework consists of three layers. 
+CUBE CSS is a methodology with _simplicity_ at its core. It values CSS for what it is. The methodology works well with _custom properties_ to implement a [framework](https://github.com/kevtiq/css-framework). The combination creates a _flexible_, _scalable_ and _extensible_ CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. My framework consists of three layers.
 
-- **Layout**: classes that look at the macro-level of an application. They provide flexible and responsive layout solutions that are common across an application. 
-- **Utilities**: classes that do one job and do one job well. This is often a class that alters a single property. But utilities like the [`.click-area` class](https://github.com/kevtiq/css-framework/blob/main/src/utilities/click-area.scss) cover more than a single property but still do only one thing.  
-- **Blocks**: correspond to UI components. That what cannot be solved with layout and/or utility classes alone can be solved in blocks. You can choose to cover all styles of a component in a block, or you can only put those styles not covered by other classes in a block. 
+- **Layout**: classes that look at the macro-level of an application, like the once I described [here](/writing/css-layout-patterns). They provide flexible and responsive layout solutions that are common across an application.
+- **Utilities**: classes that do one job and do one job well. This is often a class that alters a single property. But utilities like the [`.click-area` class](https://github.com/kevtiq/css-framework/blob/main/src/utilities/click-area.scss) cover more than a single property but still do only one thing.
+- **Blocks**: correspond to UI components. That what cannot be solved with layout and/or utility classes alone can be solved in blocks. You can choose to cover all styles of a component in a block, or you can only put those styles not covered by other classes in a block.
 
-> CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks. 
+> CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks.
 
-If you look closely at the code of [my framework](https://github.com/kevtiq/css-framework), it has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest *co-locate* it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc. 
+If you look closely at the code of [my framework](https://github.com/kevtiq/css-framework), it has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest _co-locate_ it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc.
 
 ```
 styles/
@@ -31,11 +31,11 @@ styles/
 └── index.scss
 ```
 
-Implementing and using this correctly requires knowledge about specificity and the cascade. Many of the layout patterns will apply CSS properties with a higher specificity compared to utilities. In some cases, the specificity might be the same, but you should not override layout properties with utilities.
+Implementing and using this correctly requires some basic knowledge about specificity and the cascade. Many of the layout patterns will apply CSS properties with a higher specificity compared to utilities. In some cases, the specificity might be the same, but you should not override layout properties with utilities.
 
 ## detailed look at the framework
 
-At its core is the `_token.scss` file. In this file, you define all your design tokens as SCSS variables. But why not define them as custom properties? As the framework is *extensible*, you should be able to define your own names for the variables, with your preferred names. Do you want to use `-xs` or `-4` as a name for spacing? This makes it impossible to correctly define all utility classes. But by using SCSS variables as the definitions, we can generate custom properties that can be used for all your additional (block) classes. 
+At its core is the `_token.scss` file. In this file, you define all your design tokens as SCSS variables. But why not define them as custom properties? As the framework is _extensible_, you should be able to define your own names for the variables, with your preferred names. Do you want to use `-xs` or `-4` as a name for spacing? This makes it impossible to correctly define all utility classes. But by using SCSS variables as the definitions, we can generate custom properties that can be used for all your additional (block) classes.
 
 ```scss
 $colors: (
@@ -50,13 +50,13 @@ $colors: (
 }
 ```
 
-With the design tokens, we can generate all utility classes. Instead of setting the value of all the utility classes, we refer to the corresponding custom property, as shown below. Assume you change the value of `--black` for a specific page to `#fff`. All utility classes (and blocks) that have a reference to the custom property `--black`, will now use the value `#fff` instead of `#000` on this specific page. This creates a consistent but flexible experience for both the user and developer. We let the cascade of CSS do its work for custom properties. 
+With the design tokens, we can generate all utility classes. Instead of setting the value of all the utility classes, we refer to the corresponding custom property, as shown below. Assume you change the value of `--black` for a specific page to `#fff`. All utility classes (and blocks) that have a reference to the custom property `--black`, will now use the value `#fff` instead of `#000` on this specific page. This creates a consistent but flexible experience for both the user and developer. We let the cascade of CSS do its work for custom properties.
 
 ```scss
 @each $name, $color in $colors {
-  .bg-#{$name} {
-    Background-color: var(--#{$name});
-  }
+	.bg-#{$name} {
+		background-color: var(--#{$name});
+	}
 }
 ```
 

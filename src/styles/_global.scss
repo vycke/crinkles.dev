@@ -71,15 +71,9 @@ blockquote {
 	padding: var(--spacing-0) var(--spacing-2);
 	color: var(--gray-200);
 	background-color: var(--gray-400);
-	border-left: 0.5rem solid;
+	border: 0.15rem solid;
 	border-image-slice: 1;
-	border-image-source: linear-gradient(to bottom, var(--red), var(--blue));
-
-	p,
-	em,
-	cite {
-		font-size: var(--text-00);
-	}
+	border-image-source: linear-gradient(to bottom right, var(--red), var(--blue));
 
 	em {
 		color: var(--gray-200);

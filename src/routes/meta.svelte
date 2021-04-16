@@ -44,7 +44,7 @@
 			SvelteKit
 		</a>
 		and my own
-		<a href="https://github.com/kevtiq/lub-css" title="Github link for CSS framework">
+		<a href="https://github.com/kevtiq/feo-css" title="Github link for CSS framework">
 			(S)CSS framework
 		</a>, based on
 		<a href="https://cube.fyi" title="Website for the CUBE CSS framework"> CUBE CSS</a>.

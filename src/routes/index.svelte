@@ -2,7 +2,6 @@
 	import Crinkle from '$lib/components/Crinkle.svelte';
 
 	export async function load({ fetch }) {
-		// fetch('writing/rss.xml');
 		const res = await fetch('/index.json');
 
 		return { props: { articles: await res.json() } };

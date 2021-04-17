@@ -1,4 +1,4 @@
-import { articles } from './_articles';
+import { articles } from './writing/_articles';
 
 const render = (
 	items

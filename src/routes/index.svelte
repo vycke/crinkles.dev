@@ -3,6 +3,7 @@
 
 	export async function load({ fetch }) {
 		const res = await fetch('/index.json');
+
 		return { props: { articles: await res.json() } };
 	}
 </script>

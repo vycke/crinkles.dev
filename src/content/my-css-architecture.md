@@ -2,12 +2,12 @@
 title: CSS methodology and architecture
 date: 2021-04-14T00:00:00.000Z
 description: >-
-  In the last two years, I found that my CSS architecture was becoming too complex. But, utility-first frameworks were not doing it for me either. I needed a mix. Then came CUBE CSS and it all clicked.
+  In the last two years, I found that my CSS architecture was becoming too complex. But, utility-first frameworks were not doing it for me either. I needed a mix, I needed utility-enabled. Then came CUBE CSS and it all clicked.
 ---
 
 For years I have used [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) as my goto CSS architecture for large projects. It helped me to keep my CSS maintainable with a small team. But in the last two years, I've found myself applying _utilities_ more, and writing CSS components/blocks less. More and more parts of ITCSS were left untouched and unused. My CSS architecture had become too complex for my daily use. And it was not just me. You see the movement in the community, but also within my own team.
 
-I am a not [utility-first](https://tailwindcss.com/) guy. But 80% of my CSS code is utilities these days. The remaining parts consist of CSS targeting layouts (e.g. grids) and blocks that could be solved with utilities (e.g. using operators like `+` or `~`). At this point, I came across the [CUBE CSS](https://cube.fyi/) of [Andy Bell](https://twitter.com/piccalilli_). It is the methodology describing how I was, and still am, implementing CSS. So as every self-respecting front-end developer with an online presence, I took it, changed it, created a framework, and wrote about it!
+I am a not [utility-first](https://tailwindcss.com/) guy. But 80% of my CSS code is utilities these days. You can call it *utility-enabled*. The remaining parts consist of CSS targeting layouts (e.g. grids) and blocks that could be solved with utilities (e.g. using operators like `+` or `~`). At this point, I came across the [CUBE CSS](https://cube.fyi/) of [Andy Bell](https://twitter.com/piccalilli_). It is the methodology describing how I was, and still am, implementing CSS. So as every self-respecting front-end developer with an online presence, I took it, changed it, created a framework, and wrote about it!
 
 ## From methodology to framework
 

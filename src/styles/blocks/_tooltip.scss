@@ -1,0 +1,19 @@
+[data-tip]:hover {
+	position: relative;
+}
+[data-tip]:hover::before,
+[data-tip]:active::before {
+	font-family: var(--sans-serif);
+	border-radius: var(--radius-0);
+	padding: 0 var(--spacing-000);
+	background-color: var(--gray-300);
+	content: attr(data-tip);
+	color: var(--gray-500);
+	position: absolute;
+	bottom: 100%;
+	width: 100px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+	font-size: var(--text-000);
+}

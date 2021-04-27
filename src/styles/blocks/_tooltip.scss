@@ -2,40 +2,39 @@
 	position: relative;
 }
 
-[data-tooltip]::before,
-[data-tooltip]::before {
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::before {
 	content: attr(data-tooltip);
 	position: absolute;
 
 	border-radius: var(--radius-0);
 	padding: 0 var(--spacing-000);
+	margin-bottom: var(--spacing-000);
 	background-color: var(--gray-300);
 	color: var(--gray-500);
 
 	bottom: 100%;
-	width: 100px;
+	width: 200px;
 	left: 50%;
 	transform: translate(-50%, 0);
+
 	text-align: center;
 	font-size: var(--text-000);
-	display: none;
 }
 
-[data-tooltip]::after {
+[data-tooltip]:hover::after {
 	content: '';
-	display: none;
 	position: absolute;
 	top: 0%;
 	left: 50%;
-	margin-left: -5px;
+	margin-top: calc(-1 * var(--spacing-000));
 	border-width: 5px;
 	border-style: solid;
 	border-color: var(--gray-300) transparent transparent transparent;
 }
 
-[data-tooltip]:hover::before,
-[data-tooltip]:active::before,
-[data-tooltip]:hover::after,
-[data-tooltip]:active::after {
-	display: block;
+[data-tooltip-position='left']:hover::before,
+[data-tooltip-position='left']:hover::before {
+	left: 0%;
+	transform: translate(0, 0);
 }

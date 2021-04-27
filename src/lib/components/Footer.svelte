@@ -10,13 +10,16 @@
 <footer class="flex-col items-start | p-1 text-00 bg-gray-400">
 	<div class="links | flex-row items-center justify-end">
 		<a href="/meta" sveltekit:prefetch class="flex-grow">
-			<i>crinkle</i>
+			<i
+				data-tooltip="A page explaining the idea behind the crinkle.dev website."
+				data-tooltip-position="left">crinkle</i
+			>
 		</a>
 		{#each links as link}
-			<a href={link.url} title={link.alt} data-tooltip={link.alt}>{link.name}</a>
+			<a href={link.url} title={link.alt}>{link.name}</a>
 		{/each}
 
-		<a href="/rss.xml" title="RSS Feed" data-tooltip="My RSS Feed" sveltekit:prefetch>rss</a>
+		<a href="/rss.xml" title="RSS Feed" sveltekit:prefetch>rss</a>
 	</div>
 	<i class="text-center text-000 pb-00 text-gray-100">
 		"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and

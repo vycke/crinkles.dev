@@ -4,8 +4,7 @@
 
 The personal website of Kevin Pennekamp. This website is created using:
 
-- [Gatsby](https://www.gatsbyjs.org);
-- [JAMstack architecture](https://jamstack.org);
+- [SvelteKit](https://kit.svelte.dev);
 - [Netlify](https://www.netlify.com);
 
 In addition, [inter](https://rsms.me/inter/) and [Hack](https://sourcefoundry.org/hack/) are used as the fonts.

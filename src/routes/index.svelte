@@ -30,10 +30,10 @@
 				<a href="https://finaps.nl" title="Website of Finaps B.V."> Finaps</a>, where I mostly do
 				front-end and lead a small team. I am a big <i>front-end</i> and <i>CSS</i> nerd, and love
 				to try new things on this personal playgroud. I occasionally
-				<a class="next" href="/writing">write</a> about my front-end journeys and opinions.
+				<a href="/writing">write</a> about my front-end journeys and opinions.
 			</span>
 
-			<i class="flow-t-3 | px-0 text-00 text-gray-300 text-center">
+			<i class="flow-t-3 | px-0 text-00 text-center">
 				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 				uniqueness."
 			</i>
@@ -56,3 +56,14 @@
 </Page>
 <!-- Hacker div for the pancake class -->
 <div />
+
+<style>
+	i {
+		background: -webkit-linear-gradient(45deg, var(--red), var(--blue), var(--green));
+		width: fit-content;
+		background-clip: text;
+		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+</style>

@@ -47,6 +47,14 @@
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
 <style lang="scss">
+	h1 {
+		background: -webkit-linear-gradient(45deg, var(--green), var(--blue) 80%);
+		background-clip: text;
+		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
 	:global(.post h2 + p) {
 		margin-top: var(--spacing-00);
 	}

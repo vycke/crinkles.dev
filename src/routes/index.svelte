@@ -58,7 +58,7 @@
 <div />
 
 <style>
-	i .rainbow {
+	.rainbow {
 		background: -webkit-linear-gradient(45deg, var(--red), var(--blue), var(--green));
 		width: fit-content;
 		background-clip: text;

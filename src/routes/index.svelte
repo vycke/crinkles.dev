@@ -33,7 +33,7 @@
 				<a href="/writing">write</a> about my front-end journeys and opinions.
 			</span>
 
-			<i class="flow-t-3 | px-0 text-00 text-center">
+			<i class="rainbow | flow-t-3 | px-0 text-00 text-center">
 				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 				uniqueness."
 			</i>
@@ -58,7 +58,7 @@
 <div />
 
 <style>
-	i {
+	i .rainbow {
 		background: -webkit-linear-gradient(45deg, var(--red), var(--blue), var(--green));
 		width: fit-content;
 		background-clip: text;

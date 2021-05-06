@@ -55,13 +55,21 @@ $sizes: (
 	// scales between 400px and 1000px clamp(1.125rem, 0.5vw + 1rem, 1.3rem)
 	// https://fluid-typography.netlify.app/
 	@each $name, $size in $font-sizes {
-		--text-#{$name}: clamp(1.125rem * #{$size}, 0.5vw + 1rem, 1.3rem * #{$size});
+		--text-#{$name}: clamp(
+			1.125rem * #{$size},
+			0.5vw * #{$size} + 1rem * #{$size},
+			1.3rem * #{$size}
+		);
 	}
 
 	// create CSS variables around spacing
 	// Scales between 250px and 1000px for base values 1rem and 1.15rem
 	@each $name, $space in $spacing {
-		--spacing-#{$name}: clamp(1rem * #{$space}, 0.3vw + 1rem, 1.15rem * #{$space});
+		--spacing-#{$name}: clamp(
+			1rem * #{$space},
+			0.3vw * #{$space} + 1rem * #{$space},
+			1.15rem * #{$space}
+		);
 	}
 
 	// create CSS variables around sizes

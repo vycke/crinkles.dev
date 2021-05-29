@@ -19,7 +19,7 @@ But wait a minute? The local version is not working anymore? Apparently, [Vite](
 
 I found that a few of my markdown files got transformed into pages correctly, but not all. After searching and debugging, I found the issue. The `adapter-static` traverses all links starting from the index route and generates pages for all the linked pages it can find. If a markdown file is not present as a link on a page (yet), it does not get generated.
 
-> The `adapter-static` changes the solution from SSR to SSG: the pre-rendered HTML is generated on build time instead of runtime.  
+> The `adapter-static` changes the solution from SSR to SSG: the pre-rendered HTML is generated on build time instead of runtime.
 
 ## Optimizing the website for SEO
 
@@ -47,4 +47,4 @@ By playing around with the 'Asset optimization' settings on Netlify, I was able 
 
 When moving from the stable Gatsby to the unstable SvelteKit public beta, I took a risk. Not only did I have to learn a new framework, I had to build logic to replace community plugins. I was at risk of encountering bugs that few encountered before me. With the knowledge that I could not rely on Google or Stack Overflow, I jumped into the deep. But in the end, it all paid off. I build a new website that is not only faster but more enjoyable for me to work on. The experience that Svelte and SvelteKit bring is promising, and now I cannot shut up about it.
 
-> If you are curious about the result, check the code on the open [GitHub repository](https://github.com/kevtiq/crinkle.dev).
+> If you are curious about the result, check the code on the open [GitHub repository](https://github.com/kevtiq/crinkles.io).

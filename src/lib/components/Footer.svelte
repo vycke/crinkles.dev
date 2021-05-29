@@ -11,8 +11,8 @@
 	<div class="links | flex-row items-center justify-end">
 		<a href="/meta" sveltekit:prefetch class="flex-grow">
 			<i
-				data-tooltip="A page explaining the idea behind the crinkle.dev website."
-				data-tooltip-position="left">crinkle</i
+				data-tooltip="A page explaining the idea behind the crinkles.io website."
+				data-tooltip-position="left">crinkles.io</i
 			>
 		</a>
 		{#each links as link}

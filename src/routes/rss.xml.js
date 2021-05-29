@@ -4,13 +4,13 @@ const render = (
 	items
 ) => `<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 <channel>
-	<title>Crinkle.dev RSS Feed</title>
+	<title>crinkles.io RSS Feed</title>
 	${items
 		.map(
 			(item) => `
 		<item>
 			<title>${item.title}</title>
-			<link>https://crinkle.dev/writing/${item.slug}</link>
+			<link>https://crinkles.io/writing/${item.slug}</link>
 			<description>${item.description}</description>
 			<pubDate>${new Date(item.date).toUTCString()}</pubDate>
 		</item>

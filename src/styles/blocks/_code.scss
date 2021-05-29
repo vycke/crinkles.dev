@@ -7,7 +7,7 @@
 // string, number: primitives
 
 .token {
-	color: var(--gray-100);
+	color: var(--color-gray-100);
 }
 
 .token.builtin,
@@ -18,7 +18,7 @@
 .token.comment,
 .token.keyword,
 .token.important {
-	color: var(--gray-300);
+	color: var(--color-gray-300);
 }
 
 .token.comment,
@@ -38,19 +38,19 @@
 .token.string,
 .token.number,
 .token.class-name {
-	color: var(--green);
+	color: var(--color-green);
 }
 
 // INLINE CODE
 :not(pre) > code,
 :not(pre) > code[class*='language-'] {
-	color: var(--green);
+	color: var(--color-green);
 	font-size: 0.825em;
 	padding: 3px 6px;
 	font-family: var(--monospace);
 	display: inline-block;
 	hyphens: none;
-	background-color: var(--gray-400);
+	background-color: var(--color-gray-400);
 	transition: var(--transition);
 	border-radius: var(--radius-0);
 }
@@ -60,10 +60,10 @@ pre {
 	tab-size: 2;
 	padding: var(--spacing-2);
 	overflow: auto;
-	color: var(--gray-100);
+	color: var(--color-gray-100);
 	font-size: var(--text-00);
 	line-height: 1.4;
-	background-color: var(--gray-400);
+	background-color: var(--color-gray-400);
 	transition: var(--transition);
 
 	> code,
@@ -73,8 +73,8 @@ pre {
 	}
 
 	::selection {
-		color: var(--gray-500);
-		background: var(--gray-100);
+		color: var(--color-gray-500);
+		background: var(--color-gray-100);
 	}
 }
 

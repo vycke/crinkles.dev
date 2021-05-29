@@ -79,7 +79,7 @@
 		}
 
 		&:hover {
-			background: var(--gray-400);
+			background: var(--color-gray-400);
 		}
 	}
 </style>

@@ -48,7 +48,7 @@
 
 <style lang="scss">
 	h1 {
-		background: -webkit-linear-gradient(45deg, var(--green), var(--blue) 80%);
+		background: -webkit-linear-gradient(45deg, var(--color-green), var(--color-blue) 80%);
 		background-clip: text;
 		color: transparent;
 		-webkit-background-clip: text;
@@ -61,12 +61,12 @@
 
 	:global(.post h2 a) {
 		text-decoration-line: none;
-		color: var(--gray-100);
+		color: var(--color-gray-100);
 
 		&::before {
 			content: '»';
 			margin-right: var(--spacing-000);
-			color: var(--red);
+			color: var(--color-red);
 		}
 	}
 

@@ -12,71 +12,10 @@ $colors: (
 	'yellow': #ecb015
 );
 
-// Typography system (golden ratio)
-$font-sizes: (
-	'0': 1,
-	'00': 0.8,
-	'000': 0.64,
-	'1': 1.25,
-	'2': 1.563,
-	'3': 1.953
-);
-
-// Spacing system: padding, margin, gap
-$spacing: (
-	'0': 1,
-	'00': 0.75,
-	'000': 0.5,
-	'1': 1.25,
-	'2': 2,
-	'3': 3
-);
-
-// Size system
-$sizes: (
-	'0': 15rem,
-	'1': 20rem,
-	'2': 30rem,
-	'3': 40rem,
-	'4': 52.5rem,
-	'5': 75rem
-);
-
 /*******
 * Generate CSS custom properties
 *******/
 :root {
-	// create CSS variables around colors
-	@each $name, $color in $colors {
-		--#{$name}: #{$color};
-	}
-
-	// create CSS variables around text-sizes
-	// scales between 400px and 1000px clamp(1.125rem, 0.5vw + 1rem, 1.3rem)
-	// https://fluid-typography.netlify.app/
-	@each $name, $size in $font-sizes {
-		--text-#{$name}: clamp(
-			1.125rem * #{$size},
-			0.5vw * #{$size} + 1rem * #{$size},
-			1.3rem * #{$size}
-		);
-	}
-
-	// create CSS variables around spacing
-	// Scales between 250px and 1000px for base values 1rem and 1.15rem
-	@each $name, $space in $spacing {
-		--spacing-#{$name}: clamp(
-			1rem * #{$space},
-			0.3vw * #{$space} + 1rem * #{$space},
-			1.15rem * #{$space}
-		);
-	}
-
-	// create CSS variables around sizes
-	@each $name, $size in $sizes {
-		--size-#{$name}: #{$size};
-	}
-
 	--sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto',
 		'Helvetica Neue', 'Arial', sans-serif;
 	--monospace: hack, consolas, menlo, monaco, 'Courier New', monospace;
@@ -86,11 +25,6 @@ $sizes: (
 	--elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 	--elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 	--elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-	// border-radius
-	--radius-0: 0.25rem;
-	--radius-1: calc(2 * var(--radius-0));
-	--radius-2: calc(4 * var(--radius-0));
 
 	// misc
 	--transition: all ease-in-out 200ms;

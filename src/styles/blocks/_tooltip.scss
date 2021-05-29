@@ -10,8 +10,8 @@
 	border-radius: var(--radius-0);
 	padding: 0 var(--spacing-000);
 	margin-bottom: var(--spacing-000);
-	background-color: var(--gray-300);
-	color: var(--gray-500);
+	background-color: var(--color-gray-300);
+	color: var(--color-gray-500);
 
 	bottom: 100%;
 	width: 200px;
@@ -30,7 +30,7 @@
 	margin-top: calc(-1 * var(--spacing-000));
 	border-width: 5px;
 	border-style: solid;
-	border-color: var(--gray-300) transparent transparent transparent;
+	border-color: var(--color-gray-300) transparent transparent transparent;
 }
 
 [data-tooltip-position='left']:hover::before,

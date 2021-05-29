@@ -21,7 +21,7 @@
 </svelte:head>
 
 <Page width="5" showHeader={false} class="center flow flow-g-3 | mt-1">
-	<section class="splitter splitter-w-1 splitter-g-3 | my-1">
+	<section class="split-left split-min-w-1 split-g-3 | my-1">
 		<div class="flow flex-col">
 			<Logo class="self-start" />
 			<h1 class="px-0">Hi, I'm Kevin.</h1>
@@ -59,7 +59,12 @@
 
 <style>
 	.rainbow {
-		background: -webkit-linear-gradient(45deg, var(--red), var(--blue), var(--green));
+		background: -webkit-linear-gradient(
+			45deg,
+			var(--color-red),
+			var(--color-blue),
+			var(--color-green)
+		);
 		width: fit-content;
 		background-clip: text;
 		color: transparent;

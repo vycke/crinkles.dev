@@ -29,7 +29,7 @@
 
 <style lang="scss">
 	footer {
-		border-top: 1px solid var(--gray-300);
+		border-top: 1px solid var(--color-gray-300);
 	}
 
 	.links {

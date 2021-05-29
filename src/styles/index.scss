@@ -1,24 +1,24 @@
 // reset, settings & generic styles
 @import 'tokens';
-@import 'reset';
+@import '../../node_modules/@crinkle/feo/feo.scss';
 @import 'global';
 
-// Layout
-@import 'layout/flow';
-@import 'layout/tiles';
-@import 'layout/pancake';
-@import 'layout/splitter';
-@import 'layout/center';
+// // Layout
+// @import 'layout/flow';
+// @import 'layout/tiles';
+// @import 'layout/pancake';
+// @import 'layout/split';
+// @import 'layout/center';
 
-// Utilities
-@import 'utilities/background';
-@import 'utilities/center';
-@import 'utilities/fonts';
-@import 'utilities/typography';
-@import 'utilities/spacing';
-@import 'utilities/hidden';
-@import 'utilities/click-area';
-@import 'utilities/flexbox';
+// // Utilities
+// @import 'utilities/background';
+// @import 'utilities/center';
+// @import 'utilities/fonts';
+// @import 'utilities/typography';
+// @import 'utilities/spacing';
+// @import 'utilities/hidden';
+// @import 'utilities/click-area';
+// @import 'utilities/flexbox';
 
 // Blocks & expections
 @import 'blocks/code';

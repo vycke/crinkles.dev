@@ -3,7 +3,7 @@
 	export let previous = undefined;
 </script>
 
-<section class="splitter splitter-w-1 splitter-g-1 | p-1 mt-3">
+<section class="split-left split-min-w-1 split-g-1 | p-1 mt-3">
 	{#if next}
 		<a class="flex-col items-start justify-center" sveltekit:prefetch href={next.url}>
 			<span>← {next.title || 'Next'}</span>
@@ -28,7 +28,7 @@
 	}
 
 	a > span {
-		color: var(--gray-300);
+		color: var(--color-gray-300);
 		font-size: var(--text-00);
 		text-transform: uppercase;
 	}

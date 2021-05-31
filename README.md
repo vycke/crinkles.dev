@@ -6,6 +6,6 @@ The personal website of Kevin Pennekamp. This website is created using:
 
 - [SvelteKit](https://kit.svelte.dev);
 - [Netlify](https://www.netlify.com);
-- [Feo CSS](https://github.com/kevtiq/feo-css);
+- [Feo CSS](https://github.com/crinklesio/feo-css);
 
 In addition, [inter](https://rsms.me/inter/) and [Hack](https://sourcefoundry.org/hack/) are used as the fonts.

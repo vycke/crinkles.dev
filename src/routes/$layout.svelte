@@ -3,7 +3,7 @@
 
 	import '../styles/index.scss';
 
-	let twitter = '@kevtiq';
+	let twitter = '@crinklesio';
 	let keywords = 'CSS, front-end, web design, consulting, architecture';
 	let img = 'https://crinkles.io/logo.png';
 </script>

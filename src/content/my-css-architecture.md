@@ -11,10 +11,10 @@ I moved to a [utility-first](https://tailwindcss.com/) approach. 80% of my CSS c
 
 ## From methodology to framework
 
-CUBE CSS is a methodology with _simplicity_ at its core. It values CSS for what it is. The methodology works well with _custom properties_ to implement a [framework](https://github.com/kevtiq/feo-css). The combination creates a _flexible_, _scalable_ and _extensible_ CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. My framework consists of three layers.
+CUBE CSS is a methodology with _simplicity_ at its core. It values CSS for what it is. The methodology works well with _custom properties_ to implement a [framework](https://github.com/crinklesio/feo-css). The combination creates a _flexible_, _scalable_ and _extensible_ CSS architecture. The custom properties act as [design tokens](https://css-tricks.com/what-are-design-tokens/) and can be used across all layers of the architecture. My framework consists of three layers.
 
 - **Layout**: classes that look at the macro-level of an application, like the ones I described [here](/writing/css-layout-patterns). They provide flexible and responsive layout solutions that are common across an application. For inspiration on common layout patterns, check [every-layout.dev](https://every-layout.dev).
-- **Utilities**: classes that do one job and do one job well. This is often a class that alters a single property. But utilities like the [`.click-area` class](https://github.com/kevtiq/feo-css/blob/main/src/utilities/_click-area.scss) cover more than a single property but still do only one thing.
+- **Utilities**: classes that do one job and do one job well. This is often a class that alters a single property. But utilities like the [`.click-area` class](https://github.com/crinklesio/feo-css/blob/main/src/utilities/_click-area.scss) cover more than a single property but still do only one thing.
 - **Blocks**: correspond to UI components. That what cannot be solved with layout and/or utility classes alone can be solved in blocks. You can choose to cover all styles of a component in a block, or you can only put those styles not covered by other classes in a block.
 
 > CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks.

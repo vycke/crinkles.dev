@@ -63,18 +63,24 @@ pre {
 	color: var(--color-gray-100);
 	font-size: var(--text-00);
 	line-height: 1.4;
+	position: relative;
 	background-color: var(--color-gray-400);
 	transition: var(--transition);
 
-	> code,
-	code[class*='language-'] {
+	> code {
 		font-family: var(--monospace);
 		tab-size: 2;
 	}
 
-	::selection {
-		color: var(--color-gray-500);
-		background: var(--color-gray-100);
+	> code[data-lang]::before {
+		content: attr(data-lang);
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: var(--spacing-000) var(--spacing-00);
+		font-size: var(--text-000);
+		background-color: var(--color-blue);
+		border-bottom-left-radius: var(--radius-2);
 	}
 }
 

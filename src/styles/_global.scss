@@ -37,15 +37,15 @@ a > *,
 a:link,
 a:visited,
 a:active {
-	text-decoration-color: var(--color-red);
+	text-decoration-color: var(--color-blue);
 	text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:hover > * {
-	color: var(--color-red);
+	color: var(--color-blue);
 	transition: var(--transition);
-	text-decoration-color: var(--color-red);
+	text-decoration-color: var(--color-blue);
 	text-decoration-thickness: 2px;
 }
 

@@ -21,15 +21,14 @@ marked.Renderer.prototype.heading = function (text, level, raw) {
 	return `<h${level} id=${id}><a href="#${id}" aria-label="${raw} permalink">${text}</a></h${level}>`;
 };
 
-// Use prism.js as the highlighter for the marked library
-marked.setOptions({
-	highlight: function (code, lang) {
-		if (prism.languages[lang]) {
-			return prism.highlight(code, prism.languages[lang], lang);
-		} else {
-			return code;
-		}
+// Hack to add lang as additional attribute so it can be displayed
+marked.Renderer.prototype.code = function (code, lang) {
+	try {
+		const formatted = prism.highlight(code, prism.languages[lang], lang);
+		return `<pre><code class="language-${lang}" data-lang="${lang}">${formatted}</code></pre>`;
+	} catch (e) {
+		return `<pre><code class="language-${lang}">${code}</code></pre>`;
 	}
-});
+};
 
 export default marked;

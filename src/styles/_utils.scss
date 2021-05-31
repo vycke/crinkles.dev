@@ -1,0 +1,9 @@
+.scale {
+	transition: var(--transition);
+}
+
+@media (min-width: 60rem) {
+	.scale:hover {
+		transform: scale(1.1);
+	}
+}

@@ -42,7 +42,7 @@
 			{#each articles as article}
 				<Card
 					date={article.date}
-					class="bg-gray-400 p-1"
+					class="scale bg-gray-400 p-1"
 					title={article.title}
 					description={article.description}
 					href="/writing/{article.slug}"

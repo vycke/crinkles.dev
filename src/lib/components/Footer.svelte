@@ -12,8 +12,9 @@
 		<a href="/meta" sveltekit:prefetch class="flex-grow">
 			<i
 				data-tooltip="A page explaining the idea behind the crinkles.io website."
-				data-tooltip-position="left">crinkles.io</i
-			>
+				data-tooltip-position="left"
+				>© crinkles
+			</i>
 		</a>
 		{#each links as link}
 			<a href={link.url} title={link.alt}>{link.name}</a>
@@ -37,7 +38,7 @@
 	}
 
 	.links > * + * {
-		margin-left: var(--spacing-0);
+		margin-left: var(--spacing-00);
 		padding: var(--spacing-000);
 	}
 </style>

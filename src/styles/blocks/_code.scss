@@ -42,7 +42,7 @@
 }
 
 // INLINE CODE
-:not(pre) code {
+p > code {
 	color: var(--color-green);
 	font-size: 0.825em;
 	padding: 3px 6px;
@@ -63,11 +63,10 @@ pre[data-lang] > div {
 	transition: var(--transition);
 	line-height: 1.4;
 
-	> code {
+	code {
 		font-family: var(--monospace);
 		font-size: var(--text-00);
 		color: var(--color-gray-100);
-		padding: 0;
 		tab-size: 2;
 	}
 }

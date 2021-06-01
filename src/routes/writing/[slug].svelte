@@ -64,8 +64,7 @@
 		color: var(--color-gray-100);
 
 		&::before {
-			content: '»';
-			margin-right: var(--spacing-000);
+			content: '» ';
 			color: var(--color-blue);
 		}
 	}

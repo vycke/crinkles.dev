@@ -21,20 +21,20 @@ The first step of the algorithm is to _rank all nodes_. All graphs have an initi
 
 ```js
 function getPaths(nodeId, edges, path = [], paths = []) {
-	const children = edges.filter((e) => e.source === nodeId);
-	
-	const _path = [...path, nodeId]
+  const children = edges.filter((e) => e.source === nodeId);
 
-	// To avoid cycles in paths
-	if (path.includes(nodeId)) {
-		paths.push(path);
-	} else if (!children || children.length === 0) {
-		paths.push(_path);
-	} else {
-		children.map((c) => getAllPaths(c.target, edges, _path, paths));
-	}
+  const _path = [...path, nodeId];
 
-	return paths.sort();
+  // To avoid cycles in paths
+  if (path.includes(nodeId)) {
+    paths.push(path);
+  } else if (!children || children.length === 0) {
+    paths.push(_path);
+  } else {
+    children.map((c) => getAllPaths(c.target, edges, _path, paths));
+  }
+
+  return paths.sort();
 }
 ```
 
@@ -50,19 +50,20 @@ The above visualization shows that ranking nodes following these steps can produ
 
 A vital part of this heuristic is the ability to give a configuration a _score_. This score is used to compare various mutations of the graph and find a (local) best based on this score. As mentioned before, the idea of this algorithm revolves around minimizing the amount of crossing edges. Thus, our score needs to be related to that. An easy scoring mechanism can be:
 
-- Count the number of edges that have the source and target in the same rank and are _not_ next to each other. You can also count the number of nodes between them. This would give a higher score when the source and target are further apart. 
+- Count the number of edges that have the source and target in the same rank and are _not_ next to each other. You can also count the number of nodes between them. This would give a higher score when the source and target are further apart.
 - Look at all combinations of ranks and count all edges between these two ranks (regardless of their directions), where the condition shown below is met.
 
 ```js
 // Assumes both edges have the source in a lower rank
 // edge = [sourceIndexInRank, targetIndexInRank]
+
 function edgesCross(edge1, edge2) {
-	if (edge1[0] < edge2[0] && edge1[1] > edge2[1]) {
-	  return true;
+  if (edge1[0] < edge2[0] && edge1[1] > edge2[1]) {
+    return true;
   } else if (edge1[0] < edge2[0] && edge1[1] > edge2[1]) {
     return true;
   }
-	return false;
+  return false;
 }
 ```
 
@@ -98,6 +99,6 @@ Solving the automatic (or magical) layout of a directed graph (or state machine)
 
 - Make it possible to change the weight of certain types of crossing edges (e.g. edges crossing with a rank have a higher weight). This allows you to control the algorithm to your own needs.
 - Allow for nodes to move between ranks during the optimization step. This is a helpful improvement when you have a graph with a fixed start and end node, but a big variation in the length of paths.
-- Optimize how mutations and which mutations are applied. Check only adjacent ranks to improve the performance for example. This can worsen the result though. 
+- Optimize how mutations and which mutations are applied. Check only adjacent ranks to improve the performance for example. This can worsen the result though.
 
 > I've created a JavaScript package called [DIGL](https://github.com/crinklesio/digl) that implements the described algorithm. It is framework agnostic and can be used in the front-end or back-end.

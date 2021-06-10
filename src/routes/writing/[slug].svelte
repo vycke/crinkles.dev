@@ -55,6 +55,14 @@
 		-webkit-text-fill-color: transparent;
 	}
 
+	h1::selection {
+		color: var(--color-gray-500);
+		background: none;
+		background-clip: none;
+		-webkit-background-clip: none;
+		-webkit-text-fill-color: var(--color-gray-500);
+	}
+
 	:global(.post h2 + p) {
 		margin-top: var(--spacing-00);
 	}

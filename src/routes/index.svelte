@@ -71,4 +71,11 @@
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+
+	.rainbow::selection {
+		color: var(--color-gray-500);
+		background-clip: none;
+		-webkit-background-clip: none;
+		-webkit-text-fill-color: var(--color-gray-500);
+	}
 </style>

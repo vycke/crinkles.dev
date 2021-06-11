@@ -62,13 +62,13 @@ pre[data-lang] > div {
 	background-color: var(--color-gray-400);
 	transition: var(--transition);
 	line-height: 1.4;
+}
 
-	code {
-		font-family: var(--monospace);
-		font-size: var(--text-00);
-		color: var(--color-gray-100);
-		tab-size: 2;
-	}
+pre code {
+	font-family: var(--monospace);
+	font-size: var(--text-00);
+	color: var(--color-gray-100);
+	tab-size: 2;
 }
 
 pre[data-lang] {

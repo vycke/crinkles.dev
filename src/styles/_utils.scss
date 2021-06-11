@@ -2,8 +2,6 @@
 	transition: var(--transition);
 }
 
-@media (min-width: 60rem) {
-	.scale:hover {
-		transform: scale(1.1);
-	}
+.scale:hover {
+	box-shadow: 0 0 0 var(--spacing-000) var(--color-gray-400);
 }

@@ -9,13 +9,7 @@
 
 <footer class="flex-col items-start | p-1 text-00 bg-gray-400">
 	<div class="links | flex-row items-center justify-end">
-		<a href="/meta" sveltekit:prefetch class="flex-grow">
-			<i
-				data-tooltip="A page explaining the idea behind the crinkles.io website."
-				data-tooltip-position="left"
-				>© crinkles
-			</i>
-		</a>
+		<a href="/meta" sveltekit:prefetch class="flex-grow">© crinkles</a>
 		{#each links as link}
 			<a href={link.url} title={link.alt}>{link.name}</a>
 		{/each}

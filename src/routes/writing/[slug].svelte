@@ -70,15 +70,14 @@
 	:global(.post h2 a) {
 		text-decoration-line: none;
 		color: var(--color-gray-100);
-
-		&::before {
-			content: '» ';
-			color: var(--color-blue);
-		}
 	}
 
 	:global(.post h2:hover a) {
 		text-decoration-line: underline;
+		&::after {
+			content: ' #';
+			color: var(--color-blue);
+		}
 	}
 
 	:global(.post img),

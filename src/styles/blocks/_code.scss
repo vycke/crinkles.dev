@@ -69,6 +69,8 @@ pre code {
 	font-size: var(--text-00);
 	color: var(--color-gray-100);
 	tab-size: 2;
+	// fix for increased font-size safari iOS
+	-webkit-text-size-adjust: none;
 }
 
 pre[data-lang] {

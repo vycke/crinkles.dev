@@ -42,11 +42,7 @@
 }
 
 // INLINE CODE
-p code,
-blockquote code,
-h1 code,
-h2 code,
-h3 code {
+:not(pre) code {
 	color: var(--color-green);
 	font-size: 0.825em;
 	padding: 3px 6px;

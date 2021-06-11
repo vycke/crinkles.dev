@@ -92,7 +92,8 @@ pre[data-lang] > span {
 }
 
 @media (max-width: 50rem) {
-	pre {
+	pre:not([data-lang]),
+	pre[data-lang] > div {
 		padding: var(--spacing-0);
 	}
 }

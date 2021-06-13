@@ -10,7 +10,20 @@
 		<meta name="theme-color" content="#0e141e" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="monetization" content="$ilp.uphold.com/dDdhAM4apdQJ" />
-		<link rel="stylesheet" href="https://use.typekit.net/jhi5xcf.css" />
+
+		<link rel="preconnect" href="https://use.typekit.net" crossorigin />
+		<link rel="preload" as="style" href="https://use.typekit.net/jhi5xcf.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.typekit.net/jhi5xcf.css"
+			media="print"
+			onload="this.media='all'"
+		/>
+
+		<noscript>
+			<link rel="stylesheet" href="https://use.typekit.net/jhi5xcf.css" />
+		</noscript>
+
 		%svelte.head%
 	</head>
 	<body>

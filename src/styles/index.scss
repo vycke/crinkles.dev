@@ -1,6 +1,32 @@
 // reset, settings & generic styles
 @import 'tokens';
 @import '../../node_modules/@crinkles/feo/feo.scss';
+
+/*******
+* Generate CSS custom properties
+*******/
+:root {
+	--sans-serif: proxima-nova, system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto',
+		'Helvetica Neue', 'Arial', sans-serif;
+	--monospace: consolas, menlo, monaco, 'Courier New', monospace;
+	--serif: Georgia, serif;
+
+	// box-shadow
+	--elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	--elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+	// misc
+	--transition: all ease-in-out 200ms;
+
+	--gradient: -webkit-linear-gradient(
+		45deg,
+		var(--color-gold),
+		var(--color-gray-300),
+		var(--color-blue)
+	);
+}
+
 @import 'global';
 
 // Blocks & expections

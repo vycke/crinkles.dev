@@ -59,12 +59,7 @@
 
 <style>
 	.rainbow {
-		background: -webkit-linear-gradient(
-			45deg,
-			var(--color-red),
-			var(--color-blue),
-			var(--color-green)
-		);
+		background: var(--gradient);
 		width: fit-content;
 		background-clip: text;
 		color: transparent;

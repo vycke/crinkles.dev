@@ -48,7 +48,7 @@
 
 <style lang="scss">
 	h1 {
-		background: -webkit-linear-gradient(45deg, var(--color-green), var(--color-blue) 80%);
+		background: var(--gradient);
 		background-clip: text;
 		color: transparent;
 		-webkit-background-clip: text;

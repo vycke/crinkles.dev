@@ -37,15 +37,15 @@ a > *,
 a:link,
 a:visited,
 a:active {
-	text-decoration-color: var(--color-blue);
+	text-decoration-color: var(--color-gold);
 	text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:hover > * {
-	color: var(--color-blue);
+	color: var(--color-gold);
 	transition: var(--transition);
-	text-decoration-color: var(--color-blue);
+	text-decoration-color: var(--color-gold);
 	text-decoration-thickness: 2px;
 }
 
@@ -62,7 +62,7 @@ i,
 em {
 	font-style: italic;
 	font-family: var(--serif);
-	color: var(--color-green);
+	color: var(--color-gold);
 }
 
 // QUOTES
@@ -73,7 +73,7 @@ blockquote {
 	background-color: var(--color-gray-400);
 	border: 0.15rem solid;
 	border-image-slice: 1;
-	border-image-source: linear-gradient(to bottom right, var(--color-red), var(--color-blue));
+	border-image-source: var(--gradient);
 
 	em {
 		color: var(--color-gray-200);

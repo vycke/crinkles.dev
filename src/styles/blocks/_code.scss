@@ -43,7 +43,7 @@
 
 // INLINE CODE
 :not(pre) code {
-	color: var(--color-blue);
+	color: var(--color-gold);
 	font-size: 0.825em;
 	padding: 3px 6px;
 	font-family: var(--monospace);
@@ -82,7 +82,7 @@ pre[data-lang] {
 pre[data-lang] > span {
 	font-size: var(--text-000);
 	font-family: var(--sans-serif);
-	color: var(--color-blue);
+	color: var(--color-gold);
 	background-color: var(--color-gray-400);
 	text-transform: uppercase;
 	border-top-left-radius: var(--radius-1);

@@ -5,7 +5,7 @@
 
 	function trigger() {
 		triggered++;
-		colors = [colors[1], colors[2], colors[0]];
+		colors = [colors[2], colors[0], colors[1]];
 		if (triggered === 0 || triggered >= max) return;
 
 		window.setTimeout(() => {

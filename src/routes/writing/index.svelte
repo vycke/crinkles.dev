@@ -7,6 +7,7 @@
 
 <script>
 	import Card from '$lib/components/Card.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import Page from '$lib/components/Page.svelte';
 
 	export let articles;
@@ -16,7 +17,7 @@
 	<title>Writing • Kevin Pennekamp</title>
 </svelte:head>
 
-<Page class="center flow flow-g-2 | mb-3">
+<Page class="flow-y flow-g-2 | mb-3">
 	<h1>Writing.</h1>
 	{#each articles as article}
 		<Card

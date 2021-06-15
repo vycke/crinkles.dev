@@ -1,11 +1,12 @@
 <script context="module">
 	import Crinkle from '$lib/components/Crinkle.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import Page from '$lib/components/Page.svelte';
 
 	export const prerender = true;
 </script>
 
-<Page width="3" class="center flow | mb-3 text-00" title="Meta • Kevin Pennekamp">
+<Page class="flow-y flow-g-0 | mb-3 text-00" title="Meta • Kevin Pennekamp">
 	<h1 class="flow-b-000">About this website.</h1>
 	<blockquote>
 		<em>

@@ -18,6 +18,7 @@
 	import formatDate from '$lib/utils/date';
 	import length from '$lib/utils/length';
 	import Page from '$lib/components/Page.svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	export let post;
 	export let next;
@@ -34,15 +35,16 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<Page width="4" title={post.title} description={post.description}>
-	<header class="center flow flow-g-none" role="contentinfo">
-		<span class="text-gray-300 uppercase">
+<Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
+	<aside class="flow-y flow-g-none | flow-next-0" role="contentinfo">
+		<div class="text-gray-300 uppercase">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
-		</span>
+		</div>
 		<h1>{post.title}</h1>
-	</header>
-	<article class="post | center flow flow-g-2 | mt-0">{@html post.html}</article>
+	</aside>
+
+	{@html post.html}
 </Page>
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
@@ -80,12 +82,9 @@
 		}
 	}
 
-	:global(.post img),
-	:global(.post blockquote),
-	:global(.post pre) {
-		grid-column: 1 / 4;
-		justify-self: center;
-		width: 100%;
-		max-width: calc(var(--center-width, var(--size-4)) + 2 * var(--spacing-2));
+	:global(.post img) {
+		max-width: min(100%, var(--center-width));
+		padding-left: 0;
+		padding-right: 0;
 	}
 </style>

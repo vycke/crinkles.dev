@@ -3,13 +3,8 @@
 	import { fly } from 'svelte/transition';
 	import Header from './Header.svelte';
 
-	$: widthClass = `center-w-${width}`;
-	$: classes = `${widthClass} ${styles}`;
-
 	let styles;
-	export let showHeader = true;
 	export { styles as class };
-	export let width = '4';
 	export let title = 'Kevin Pennekamp';
 	export let description =
 		'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
@@ -25,10 +20,9 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-{#if showHeader}
-	<Header class={widthClass} />
-{/if}
-<main class={classes} in:fly={{ y: 50, duration: 250 }}>
+<Header />
+
+<main class={`center center-w-4 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
 	<slot />
 </main>
 <slot name="pagination" />

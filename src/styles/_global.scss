@@ -7,7 +7,6 @@ body {
 	color: var(--color-gray-100);
 	font-family: var(--sans-serif);
 	background-color: var(--color-gray-500);
-	transition: var(--transition);
 }
 
 // HEADINGS
@@ -29,6 +28,10 @@ h2 {
 
 h3 {
 	font-size: var(--text-1);
+}
+
+main {
+	min-width: var(--size-0);
 }
 
 // LINKS
@@ -75,6 +78,10 @@ blockquote {
 	border-image-slice: 1;
 	border-image-source: var(--gradient);
 
+	> * {
+		font-size: var(--text-00);
+	}
+
 	em {
 		color: var(--color-gray-200);
 	}
@@ -87,34 +94,34 @@ blockquote {
 	}
 }
 
+li {
+	padding-left: var(--spacing-000);
+	margin-left: var(--spacing-2);
+	line-height: 1.5;
+
+	&::marker {
+		color: var(--color-blue);
+	}
+}
+
 // Styled unordered list
 ul {
-	padding-left: 2.5rem;
 	list-style: outside;
+	padding-left: var(--spacing-2);
 
-	> li {
-		padding-left: var(--spacing-000);
-
-		&::marker {
-			color: var(--color-blue);
-			font-size: var(--text-1);
-		}
+	> li::marker {
+		font-size: var(--text-1);
 	}
 }
 
 // Ordered list
 ol {
-	padding-left: 2.5rem;
 	list-style: decimal outside;
+	padding-left: var(--spacing-2);
 
-	> li {
-		padding-left: var(--spacing-000);
-
-		&::marker {
-			font-style: italic;
-			font-family: var(--serif);
-			color: var(--color-blue);
-		}
+	> li::marker {
+		font-style: italic;
+		font-family: var(--serif);
 	}
 }
 

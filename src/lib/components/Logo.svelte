@@ -55,7 +55,7 @@
 	.logo {
 		padding: var(--spacing-00);
 		text-decoration: none;
-		border-radius: var(--radius-1);
+		border-radius: var(--radius-3);
 		transition: background-color ease-in-out 200ms;
 
 		svg {

@@ -41,36 +41,46 @@
 	color: var(--color-gold);
 }
 
-// INLINE CODE
-:not(pre) code {
-	color: var(--color-gold);
+code {
 	font-size: 0.825em;
-	padding: 3px 6px;
+	color: var(--color-gold);
 	font-family: var(--monospace);
-	display: inline-block;
-	hyphens: none;
 	background-color: var(--color-gray-400);
-	transition: var(--transition);
+	hyphens: none;
+}
+
+// INLINE CODE
+p > code,
+li > p,
+h2 > p {
+	padding: 3px 6px;
+	display: inline-block;
 	border-radius: var(--radius-0);
 }
 
-// CODE BLOCKS
-pre:not([data-lang]),
-pre[data-lang] > div {
-	padding: var(--spacing-2);
-	overflow: auto;
-	background-color: var(--color-gray-400);
-	transition: var(--transition);
-	line-height: 1.4;
+pre {
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
 }
 
+pre,
 pre code {
-	font-family: var(--monospace);
-	font-size: var(--text-00);
-	color: var(--color-gray-100);
+	display: block;
+	overflow-x: auto;
+	line-height: 1.4;
 	tab-size: 2;
 	// fix for increased font-size safari iOS
 	-webkit-text-size-adjust: none;
+}
+
+pre code {
+	padding: var(--spacing-2);
+}
+
+pre:not([data-lang]) {
+	padding: 0;
 }
 
 pre[data-lang] {
@@ -85,8 +95,8 @@ pre[data-lang] > span {
 	color: var(--color-gold);
 	background-color: var(--color-gray-400);
 	text-transform: uppercase;
-	border-top-left-radius: var(--radius-1);
-	border-top-right-radius: var(--radius-1);
+	border-top-left-radius: var(--radius-00);
+	border-top-right-radius: var(--radius-00);
 	padding: 0 var(--spacing-00);
 	align-self: flex-end;
 	line-height: 2;
@@ -94,8 +104,7 @@ pre[data-lang] > span {
 }
 
 @media (max-width: 50rem) {
-	pre:not([data-lang]),
-	pre[data-lang] > div {
+	pre code {
 		padding: var(--spacing-0);
 	}
 }

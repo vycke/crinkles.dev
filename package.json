@@ -9,7 +9,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@crinkles/feo": "^1.4.1"
+		"@crinkles/feo": "^1.7.3"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^next",

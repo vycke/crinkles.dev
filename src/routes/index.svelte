@@ -14,15 +14,26 @@
 	import Page from '$lib/components/Page.svelte';
 
 	export let articles;
+
+	export let title = 'Kevin Pennekamp';
+	export let description =
+		'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
 </script>
 
 <svelte:head>
 	<title>Kevin Pennekamp</title>
-</svelte:head>
 
-<Page width="5" showHeader={false} class="center flow flow-g-3 | mt-1">
+	<title>{title}</title>
+	<meta name="twitter:title" content={title} />
+	<meta property="og:title" content={title} />
+
+	<meta name="description" content={description} />
+	<meta name="twitter:description" content={description} />
+	<meta property="og:description" content={description} />
+</svelte:head>
+<main class="center center-w-5 center-g-0 | mt-1">
 	<section class="split-left split-min-w-1 split-g-3 | my-1">
-		<div class="flow flex-col">
+		<div class="flow-y flow-g-0">
 			<Logo class="self-start" />
 			<h1 class="px-0">Hi, I'm Kevin.</h1>
 			<span class="px-0 text-00 text-gray-200">
@@ -33,12 +44,12 @@
 				<a href="/writing">write</a> about my front-end journeys and opinions.
 			</span>
 
-			<i class="rainbow | flow-t-3 | px-0 text-00 text-center">
+			<i class="rainbow | flow-self-3 | px-0 text-00 text-center">
 				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 				uniqueness."
 			</i>
 		</div>
-		<aside class="flow flex-col">
+		<aside class="flow-y flow-g-0">
 			{#each articles as article}
 				<Card
 					date={article.date}
@@ -53,7 +64,8 @@
 			>
 		</aside>
 	</section>
-</Page>
+</main>
+
 <!-- Hacker div for the pancake class -->
 <div />
 

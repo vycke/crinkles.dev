@@ -1,12 +1,9 @@
 <script>
 	import Logo from './Logo.svelte';
-
-	let styles;
-	export { styles as class };
 </script>
 
-<header class={styles}>
-	<div class="inner | flex-row items-center justify-between | mb-0">
+<header class="center center-w-4 center-g-000 | mt-2 mb-0">
+	<div class="flex-row items-center py-000">
 		<Logo />
 	</div>
 </header>
@@ -17,16 +14,7 @@
 		position: sticky;
 		top: 0;
 		z-index: 100;
-		width: 100%;
-		margin: var(--spacing-2) auto var(--spacing-0);
-		-webkit-backdrop-filter: blur(20px);
-		backdrop-filter: blur(20px);
-
-		.inner {
-			width: 100%;
-			max-width: calc(var(--center-width, var(--size-4)) + 2 * var(--spacing-1));
-			margin: 0 auto;
-			padding: var(--spacing-000) calc(var(--spacing-1) - var(--spacing-00));
-		}
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
 	}
 </style>

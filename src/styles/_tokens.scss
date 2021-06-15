@@ -1,22 +1,37 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-$colors: (
+$feo-colors: (
 	'gray-100': #fafafa,
 	'gray-200': #e5eaed,
 	'gray-300': #a7b1bc,
 	'gray-400': #19232a,
 	'gray-500': #0e141e,
-	'green': #3bd983,
 	'blue': #5467ff,
-	'red': #ff0056,
 	'gold': #e8d9ac
 );
 
-$sizes: (
-	'0': 15rem,
+// Typography system (golden ratio)
+$feo-font-sizes: (
+	'0': 1,
+	'00': 0.8,
+	'000': 0.64,
+	'1': 1.25,
+	'2': 1.563,
+	'3': 1.953
+);
+
+$feo-spacing: (
+	'none': 0,
+	'0': 1,
+	'00': 0.75,
+	'000': 0.5,
+	'1': 1.25,
+	'2': 2,
+	'3': 3
+);
+
+$feo-sizes: (
 	'1': 20rem,
-	'2': 30rem,
-	'3': 40rem,
-	'4': 48.5rem,
-	'5': 75rem
+	'4': 50rem,
+	'5': 77.5rem
 );

@@ -3,7 +3,7 @@
 *******/
 html,
 body {
-	min-width: var(--size-0);
+	min-width: var(--size-1);
 	color: var(--color-gray-100);
 	font-family: var(--sans-serif);
 	background-color: var(--color-gray-500);
@@ -31,7 +31,7 @@ h3 {
 }
 
 main {
-	min-width: var(--size-0);
+	min-width: var(--size-1);
 }
 
 // LINKS

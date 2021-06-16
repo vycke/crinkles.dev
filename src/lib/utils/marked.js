@@ -31,4 +31,34 @@ marked.Renderer.prototype.code = function (code, lang) {
 	}
 };
 
+const infoblock = {
+	name: 'infoBlock',
+	level: 'block',
+	start(src) {
+		return src.match(/^ {0,3}:{3,}\n/)?.index;
+	}, // Hint to Marked.js to stop and check for a match
+	tokenizer(src) {
+		const rule = /^ {0,3}(:{3,}(?=[^:\n]*\n)|~{3,})([^\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1[~:]* *(?:\n+|$)|$)/; // Regex for the complete token
+		const match = rule.exec(src);
+
+		if (match) {
+			return {
+				type: 'infoBlock',
+				raw: match[0],
+				tokens: this.inlineTokens(
+					match[0]
+						.replace(/:{3,}\n/, '')
+						.replace(/\n:{3,}/, '')
+						.trim()
+				)
+			};
+		}
+	},
+	renderer(token) {
+		return `<aside>${this.parseInline(token.tokens)}\n</aside>`;
+	}
+};
+
+marked.use({ extensions: [infoblock] });
+
 export default marked;

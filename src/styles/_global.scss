@@ -68,8 +68,7 @@ em {
 	color: var(--color-gold);
 }
 
-// QUOTES
-blockquote {
+.post aside {
 	display: block;
 	padding: var(--spacing-0) var(--spacing-2);
 	color: var(--color-gray-200);
@@ -77,19 +76,25 @@ blockquote {
 	border: 0.15rem solid;
 	border-image-slice: 1;
 	border-image-source: var(--gradient);
+	font-size: var(--text-00);
+}
 
-	> * {
-		font-size: var(--text-00);
-	}
-
-	em {
-		color: var(--color-gray-200);
-	}
+// QUOTES
+blockquote {
+	display: block;
+	padding: var(--spacing-0) var(--spacing-2);
+	color: var(--color-gold);
+	font-family: var(--serif);
+	font-size: var(--text-1);
+	text-align: center;
+	font-style: italic;
 
 	cite {
 		display: block;
 		width: 100%;
+		font-size: var(--text-00);
 		font-style: italic;
+		margin-top: var(--spacing-00);
 		text-align: right;
 	}
 }

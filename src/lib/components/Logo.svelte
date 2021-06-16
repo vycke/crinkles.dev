@@ -53,7 +53,7 @@
 
 <style lang="scss">
 	.logo {
-		padding: var(--spacing-00);
+		padding: var(--spacing-000);
 		text-decoration: none;
 		border-radius: var(--radius-3);
 		transition: background-color ease-in-out 200ms;

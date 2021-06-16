@@ -2,10 +2,10 @@
 title: Binding CSS and JavaScript with HTML data-attributes
 date: 2021-04-22T00:00:00.000Z
 description: >-
-  HTML data-attributes allow you to bind CSS and JavaScript more closely to each other. By utilizing this type of attribute, you can reduce the amount of JavaScript required for styling, and move this responsibility back to CSS. 
+  HTML data-attributes allow you to bind CSS and JavaScript more closely to each other. By utilizing this type of attribute, you can reduce the amount of JavaScript required for styling, and move this responsibility back to CSS.
 ---
 
-My [CSS architecture](/writing/my-css-architecture) is based on [CUBE CSS](https://cube.fyi). One of the layers of CUBE CSS describes *exceptions*. Although I see exceptions as an integral part of the *block* layer, they are important nonetheless. Exceptions are often captured by targeting semantic HTML attributes or `data-*` attributes in your CSS selectors. But what do these attributes enable you to do in CSS?
+My [CSS architecture](/writing/my-css-architecture) is based on [CUBE CSS](https://cube.fyi). One of the layers of CUBE CSS describes _exceptions_. Although I see exceptions as an integral part of the _block_ layer, they are important nonetheless. Exceptions are often captured by targeting semantic HTML attributes or `data-*` attributes in your CSS selectors. But what do these attributes enable you to do in CSS?
 
 ## Introducing HTML `data-*` attributes
 
@@ -25,7 +25,9 @@ Now assume the case where you use an existing UI library for your buttons. Most 
 }
 ```
 
-> This definition has a higher specificity compared to the `.ui-btn`. It will override any styles defined in the default `.ui-btn` class.
+:::
+This definition has a higher specificity compared to the `.ui-btn`. It will override any styles defined in the default `.ui-btn` class.
+:::
 
 ## Linking JavaScript and CSS
 
@@ -73,39 +75,44 @@ But one of the biggest advantages of `data-*` has not yet been discussed: state 
 }
 ```
 
-> A state machine is a machine that can be in one state at any given time. The machine can change from one state to another, based on transitions. A statechart allows for nesting, delays, automatic transitions, and parallel regions in state machines. 
+:::
+A state machine is a machine that can be in one state at any given time. The machine can change from one state to another, based on transitions. A statechart allows for nesting, delays, automatic transitions, and parallel regions in state machines.
+:::
 
-State machines have a lot of value in complex state management. In those cases, styling is often not impacted. Parts of the DOM tree are disregarded based on the current state. Although this could also be achieved with CSS (`display: none`), it is not the main strength of combining CSS and state machines. I have listed more practical use cases below. 
+State machines have a lot of value in complex state management. In those cases, styling is often not impacted. Parts of the DOM tree are disregarded based on the current state. Although this could also be achieved with CSS (`display: none`), it is not the main strength of combining CSS and state machines. I have listed more practical use cases below.
 
-- Disabling interactive elements (e.g. buttons) based on the loading state of fetch requests, and provide visual guidance. 
-- Different visualization of checkboxes (checked, unchecked, semi-checked). 
-- Different combinations of (un-)selected, hovering, and active. 
-- CSS animations based on statecharts with timers (e.g. fly-out animation). 
+- Disabling interactive elements (e.g. buttons) based on the loading state of fetch requests, and provide visual guidance.
+- Different visualization of checkboxes (checked, unchecked, semi-checked).
+- Different combinations of (un-)selected, hovering, and active.
+- CSS animations based on statecharts with timers (e.g. fly-out animation).
 
 By combining semantic HTML, HTML-attributes and `data-*` attributes, styling based on states can be made possible. It allows you to reduce the amount of JavaScript and use CSS what it is intended for in the first place: layout and styling.
 
 ## Sending data from JavaScript to CSS with the `attr()` function
-Another common example for usage of `data-*` attributes, are tooltips. Using these attributes is by far the easiest way to implement tooltips in complex applications. Just take a look at the small example below. We simply add a `data-tooltip` attribute with the text we want to appear in the tooltip. 
+
+Another common example for usage of `data-*` attributes, are tooltips. Using these attributes is by far the easiest way to implement tooltips in complex applications. Just take a look at the small example below. We simply add a `data-tooltip` attribute with the text we want to appear in the tooltip.
 
 ```html
 <a href="#" data-tooltip="my tooltip text" />
 ```
 
-For the tooltip to work, we need at least the CSS selectors shown below. More styles are required to make them look nice, but this is a the minimum. 
+For the tooltip to work, we need at least the CSS selectors shown below. More styles are required to make them look nice, but this is a the minimum.
 
 ```css
 [data-tooltip] {
-  position: relative;
+	position: relative;
 }
 
 // :focus is added for a11y reasons
-[data-tooltip]:hover::before, [data-tooltip]:focus::before {
-  position: absolute;
-  content: attr(data-tooltip);
+[data-tooltip]:hover::before,
+[data-tooltip]:focus::before {
+	position: absolute;
+	content: attr(data-tooltip);
 }
 ```
 
-The magic that makes this happen is in the `attr()` CSS-function. This function allows you to use any value provided via HTML attributes in your CSS. As most HTML is generated by JavaScript these days, it is just another layer to bind JavaScript to CSS. 
+The magic that makes this happen is in the `attr()` CSS-function. This function allows you to use any value provided via HTML attributes in your CSS. As most HTML is generated by JavaScript these days, it is just another layer to bind JavaScript to CSS.
 
 ## Wrapping up
+
 Good use of semantic HTML attributes make it possible to link CSS to JavaScript. As we have seen, the `data-*` attributes allow the creation of generic UI components that are styling less. Instead of imposing an opinionated style, they allow developers to override every aspect. When combined with semantic HTML-attributes, styling for state machines can be implemented, as in line with [CUBE CSS](https://cube.fyi).

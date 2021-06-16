@@ -36,13 +36,11 @@
 </svelte:head>
 
 <Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-	<aside class="flow-y flow-g-none | flow-next-0" role="contentinfo">
-		<div class="text-gray-300 uppercase">
-			<time datetime={date}>{date}</time>
-			{` • ${num}`}
-		</div>
-		<h1>{post.title}</h1>
-	</aside>
+	<span class="text-gray-300 uppercase flow-next-none">
+		<time datetime={date}>{date}</time>
+		{` • ${num}`}
+	</span>
+	<h1>{post.title}</h1>
 
 	{@html post.html}
 </Page>

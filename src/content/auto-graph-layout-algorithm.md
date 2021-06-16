@@ -21,20 +21,20 @@ The first step of the algorithm is to _rank all nodes_. All graphs have an initi
 
 ```js
 function getPaths(nodeId, edges, path = [], paths = []) {
-  const children = edges.filter((e) => e.source === nodeId);
+	const children = edges.filter((e) => e.source === nodeId);
 
-  const _path = [...path, nodeId];
+	const _path = [...path, nodeId];
 
-  // To avoid cycles in paths
-  if (path.includes(nodeId)) {
-    paths.push(path);
-  } else if (!children || children.length === 0) {
-    paths.push(_path);
-  } else {
-    children.map((c) => getAllPaths(c.target, edges, _path, paths));
-  }
+	// To avoid cycles in paths
+	if (path.includes(nodeId)) {
+		paths.push(path);
+	} else if (!children || children.length === 0) {
+		paths.push(_path);
+	} else {
+		children.map((c) => getAllPaths(c.target, edges, _path, paths));
+	}
 
-  return paths.sort();
+	return paths.sort();
 }
 ```
 
@@ -46,7 +46,9 @@ The example below visualizes a result when following these steps. You can see th
 
 The above visualization shows that ranking nodes following these steps can produce readable results. But, improvements can be achieved. As this is a so-called ['NP-hard'](https://en.wikipedia.org/wiki/NP-hardness) problem, there is no perfect solution possible. But, by following a certain sequence of steps, several times until we hit a boundary condition, we can approach a (local) optimum. Or you know, the minimum number of crossing edges. This is called a heuristic.
 
-> A heuristic is a practical problem-solving approach that is not guaranteed to be optimal, perfect, or rational. It is enough for an (intermediate) goal.
+:::
+A heuristic is a practical problem-solving approach that is not guaranteed to be optimal, perfect, or rational. It is enough for an (intermediate) goal.
+:::
 
 A vital part of this heuristic is the ability to give a configuration a _score_. This score is used to compare various mutations of the graph and find a (local) best based on this score. As mentioned before, the idea of this algorithm revolves around minimizing the amount of crossing edges. Thus, our score needs to be related to that. An easy scoring mechanism can be:
 
@@ -58,12 +60,12 @@ A vital part of this heuristic is the ability to give a configuration a _score_.
 // edge = [sourceIndexInRank, targetIndexInRank]
 
 function edgesCross(edge1, edge2) {
-  if (edge1[0] < edge2[0] && edge1[1] > edge2[1]) {
-    return true;
-  } else if (edge1[0] < edge2[0] && edge1[1] > edge2[1]) {
-    return true;
-  }
-  return false;
+	if (edge1[0] < edge2[0] && edge1[1] > edge2[1]) {
+		return true;
+	} else if (edge1[0] < edge2[0] && edge1[1] > edge2[1]) {
+		return true;
+	}
+	return false;
 }
 ```
 
@@ -101,4 +103,6 @@ Solving the automatic (or magical) layout of a directed graph (or state machine)
 - Allow for nodes to move between ranks during the optimization step. This is a helpful improvement when you have a graph with a fixed start and end node, but a big variation in the length of paths.
 - Optimize how mutations and which mutations are applied. Check only adjacent ranks to improve the performance for example. This can worsen the result though.
 
-> I've created a JavaScript package called [DIGL](https://github.com/crinklesio/digl) that implements the described algorithm. It is framework agnostic and can be used in the front-end or back-end.
+:::
+I've created a JavaScript package called [DIGL](https://github.com/crinklesio/digl) that implements the described algorithm. It is framework agnostic and can be used in the front-end or back-end.
+:::

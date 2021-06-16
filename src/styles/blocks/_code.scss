@@ -50,12 +50,12 @@ code {
 }
 
 // INLINE CODE
-p > code,
-li > p,
-h2 > p {
+p code,
+li code,
+h2 code {
 	padding: 3px 6px;
 	display: inline-block;
-	border-radius: var(--radius-0);
+	border-radius: var(--radius-000);
 }
 
 pre {
@@ -71,6 +71,7 @@ pre code {
 	overflow-x: auto;
 	line-height: 1.4;
 	tab-size: 2;
+	font-size: var(--text-00);
 	// fix for increased font-size safari iOS
 	-webkit-text-size-adjust: none;
 }

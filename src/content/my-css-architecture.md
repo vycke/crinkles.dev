@@ -17,7 +17,9 @@ CUBE CSS is a methodology with _simplicity_ at its core. It values CSS for what 
 - **Utilities**: classes that do one job and do one job well. This is often a class that alters a single property. But utilities like the [`.click-area` class](https://github.com/crinklesio/feo-css/blob/main/src/utilities/_click-area.scss) cover more than a single property but still do only one thing.
 - **Blocks**: correspond to UI components. That what cannot be solved with layout and/or utility classes alone can be solved in blocks. You can choose to cover all styles of a component in a block, or you can only put those styles not covered by other classes in a block.
 
-> CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks.
+:::
+CUBE CSS does include a fourth layer, exceptions. Although I love the `data-`attributes on HTML tags, I see them as a part of the blocks.
+:::
 
 If you look closely at the code of [my framework (Feo)](https://github.com/crinklesio/feo-css), it has the architecture outlined below. As you can see, it only focuses on layout and utility classes. Blocks and exceptions are very project-specific, and often tied to UI components. Therefore they are left out of scope in this framework. However, there are many ways how you can add blocks in conjunction with this framework to a project. You can add a directory to the framework, but I would suggest _co-locate_ it near the corresponding UI components. You could do this via CSS modules, styled-components, scoped styles in Svelte, etc.
 

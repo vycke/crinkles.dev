@@ -21,7 +21,9 @@ But what about the developers? The API of our components, better known as _props
 - **Data**: data often lives higher in the component tree. These interfaces allow data to be present and used in our component. These flows are uni-directional. An example is the `value` property;
 - **Actions**: sometimes we need to invoke changes higher in the component tree. This requires callback functions to pass through the API. An example is the `onChange` property.
 
-_Note: to be in line with modern frameworks, I both use the terms props/properties and API_
+:::
+Note: to be in line with modern frameworks, I both use the terms props/properties and API
+:::
 
 ## State
 

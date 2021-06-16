@@ -5,9 +5,10 @@ description: >-
   A modern architecture for digital enterprises build on existing ideas, but let you scale quickly
 ---
 
-> **March 2020**: updated the 'application backbone' chapter to reflect reality better.
->
-> **November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the core layer have been redone.
+:::
+**March 2020**: updated the 'application backbone' chapter to reflect reality better.
+**November 2019**: the original article from August 2019 is updated to highlight its link with MVC/MVVM. Also, the parts around the core layer have been redone.
+:::
 
 Modern front-end frameworks and libraries make it easy to create [reusable UI components](/writing/interfacing-your-ui-components). This is a step in a good direction to create maintainable front-end applications. Yet, in many projects over the years I have found that making reusable components is often not enough. My projects became unmaintainable, as requirements changed or new requirements came up. It took longer and longer to find the correct file or debug something across many files.
 

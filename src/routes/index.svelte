@@ -59,7 +59,7 @@
 					href="/writing/{article.slug}"
 				/>
 			{/each}
-			<a href="/writing" class="self-end | mt-1 text-0 bold" sveltekit:prefetch
+			<a href="/writing" class="self-end | mt-1 mb-3 text-0 bold" sveltekit:prefetch
 				>View more articles →</a
 			>
 		</aside>

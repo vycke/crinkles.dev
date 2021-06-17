@@ -3,7 +3,7 @@
 	export let previous = undefined;
 </script>
 
-<section class="split-left split-min-w-1 split-g-1 | p-1 mt-3">
+<section class="split-left split-min-w-1 split-g-1 | p-1 my-3">
 	{#if next}
 		<a class="flex-col items-start justify-center" sveltekit:prefetch href={next.url}>
 			<span>← {next.title || 'Next'}</span>

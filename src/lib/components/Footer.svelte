@@ -9,7 +9,7 @@
 
 <footer class="flex-col items-start | p-1 text-00 bg-gray-400">
 	<div class="endline self-center mb-00" />
-	<div class="links | flex-row items-center justify-end">
+	<div class="links | flex-row items-center self-center">
 		<a href="/meta" sveltekit:prefetch class="flex-grow">© crinkles</a>
 		{#each links as link}
 			<a href={link.url} title={link.alt}>{link.name}</a>
@@ -20,11 +20,16 @@
 </footer>
 
 <style lang="scss">
+	footer {
+		position: relative;
+	}
 	.endline {
+		position: absolute;
+		top: 0;
 		background: var(--gradient);
 		width: var(--size-0);
 		height: 0.5rem;
-		margin-top: calc(-1 * var(--spacing-1) - 0.25rem);
+		margin-top: -0.25rem;
 		border-radius: var(--radius-3);
 	}
 

@@ -25,7 +25,7 @@ marked.Renderer.prototype.heading = function (text, level, raw) {
 marked.Renderer.prototype.code = function (code, lang) {
 	try {
 		const formatted = prism.highlight(code, prism.languages[lang], lang);
-		return `<pre data-lang="${lang}"><span>${lang}</span><div data-lang="${lang}"><code class="language-${lang}">${formatted}</code></div></pre>`;
+		return `<pre data-lang="${lang}"><span>${lang}</span><code class="language-${lang}">${formatted}</code></pre>`;
 	} catch (e) {
 		return `<pre><code class="language-${lang}">${code}</code></pre>`;
 	}

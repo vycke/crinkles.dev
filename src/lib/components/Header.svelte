@@ -3,7 +3,7 @@
 </script>
 
 <header class="center center-w-4 center-g-000 | mt-2 mb-0">
-	<div class="flex-row items-center py-000">
+	<div class="flex-row items-center py-000 px-00">
 		<Logo />
 	</div>
 </header>
@@ -14,7 +14,7 @@
 		position: sticky;
 		top: 0;
 		z-index: 100;
-		-webkit-backdrop-filter: blur(5px);
-		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(15px);
+		backdrop-filter: saturate(180%) blur(15px);
 	}
 </style>

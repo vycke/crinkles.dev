@@ -2,7 +2,7 @@
 title: Engineering, UX design and agile
 date: 2021-06-16T00:00:00.000Z
 description: >-
-  In agile we focus on the delivery of solutions. As this is the playing field of engineers, UX designers get left behind. However, we should seek more alignment with them. 
+  In agile we focus on the delivery of solutions. As this is the playing field of engineers, UX designers get left behind. However, we should seek more alignment with them.
 ---
 
 Almost two years ago I wrote my [first blog post](/writing/ux-design-process-for-engineers) on this website about the alignment between UX and engineering. I got my inspiration based on a conference talk of [Steph Troeth](https://twitter.com/sniffles) on the [CSS Day of 2019](https://cssday.nl/2019). Since that time, I have learned a lot by working with UX designers. Although my initial ideas did not change, I did get a more complete picture of what the alignment between UX and engineering should and could be.
@@ -38,7 +38,7 @@ By just looking at these names, most of you will already see the importance of t
 
 ## Feedback cycles
 
-Both in agile software development and UX design, feedback is essential. As engineers, we want bug reports from our users. But, we also want live feedback showing the health of the systems we build and maintain. Feedback gives us opportunities to improve. It allows us to identify where we made a mistake.  Is it a mistake in the code, or is there a mistake in the design? Did we make design decisions based on a wrong assumption (e.g. amount of usage of a database)? 
+Both in agile software development and UX design, feedback is essential. As engineers, we want bug reports from our users. But, we also want live feedback showing the health of the systems we build and maintain. Feedback gives us opportunities to improve. It allows us to identify where we made a mistake. Is it a mistake in the code, or is there a mistake in the design? Did we make design decisions based on a wrong assumption (e.g. amount of usage of a database)?
 
 When evaluating (user) feedback, we can also find that designed a solution, but not _the_ solution. At this point, we see learning points for both UX designers and engineers in the design step. In more extreme cases you can even find that not only did you create the wrong solution, but you have the wrong requirements, to begin with. At this point, improvements can be made in the discovery phase.
 
@@ -46,4 +46,4 @@ But feedback does not have to wait until users are using a solution. Mistakes an
 
 ## Wrapping up
 
-The _discovery_, _design_ and _delivery_ phases are common when building software solutions. It shows that UX design and engineering are not too far apart and overlap. A UX designer focuses on discovery and design, but also has a role in the delivery. On a similar note, engineers focus on delivery but have to spend designing the system and exploring new technical options during the discovery phase. All three phases play an important part when developing solutions for users. With agile, we shorten the discovery and design phases and focus on delivery and feedback cycles. But, we should never forget the power of discovery and proper design. Never. 
+The _discovery_, _design_ and _delivery_ phases are common when building software solutions. It shows that UX design and engineering are not too far apart and overlap. A UX designer focuses on discovery and design, but also has a role in the delivery. On a similar note, engineers focus on delivery but have to spend designing the system and exploring new technical options during the discovery phase. All three phases play an important part when developing solutions for users. With agile, we shorten the discovery and design phases and focus on delivery and feedback cycles. But, we should never forget the power of discovery and proper design. Never.

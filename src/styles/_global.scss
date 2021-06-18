@@ -41,15 +41,15 @@ a:link,
 a:visited,
 a:active {
 	touch-action: manipulation;
-	text-decoration-color: var(--color-gold);
+	text-decoration-color: var(--color-green);
 	text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:hover > * {
-	color: var(--color-gold);
+	color: var(--color-green);
 	transition: var(--transition);
-	text-decoration-color: var(--color-gold);
+	text-decoration-color: var(--color-green);
 	text-decoration-thickness: 2px;
 }
 
@@ -66,7 +66,7 @@ i,
 em {
 	font-style: italic;
 	font-family: var(--serif);
-	color: var(--color-gold);
+	color: var(--color-green);
 }
 
 .post aside {
@@ -84,7 +84,7 @@ em {
 blockquote {
 	display: block;
 	padding: var(--spacing-0) var(--spacing-2);
-	color: var(--color-gold);
+	color: var(--color-green);
 	font-family: var(--serif);
 	font-size: var(--text-1);
 	text-align: center;

@@ -76,7 +76,7 @@
 		text-decoration-line: underline;
 		&::after {
 			content: ' #';
-			color: var(--color-gold);
+			color: var(--color-green);
 		}
 	}
 

@@ -43,7 +43,7 @@
 				y2="7.5"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="var(--color-gold)" />
+				<stop stop-color="var(--color-green)" />
 				<stop offset="0.5" stop-color="var(--color-gray-300)" />
 				<stop offset="1" stop-color="var(--color-blue)" />
 			</linearGradient>

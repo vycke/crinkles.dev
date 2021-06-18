@@ -38,12 +38,12 @@
 .token.string,
 .token.number,
 .token.class-name {
-	color: var(--color-gold);
+	color: var(--color-green);
 }
 
 code {
 	font-size: 0.825em;
-	color: var(--color-gold);
+	color: var(--color-green);
 	font-family: var(--monospace);
 	background-color: var(--color-gray-400);
 	hyphens: none;

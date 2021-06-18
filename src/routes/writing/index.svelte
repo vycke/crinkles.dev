@@ -7,7 +7,6 @@
 
 <script>
 	import Card from '$lib/components/Card.svelte';
-	import Header from '$lib/components/Header.svelte';
 	import Page from '$lib/components/Page.svelte';
 
 	export let articles;
@@ -19,12 +18,24 @@
 
 <Page class="flow-y flow-g-2 | mb-3">
 	<h1>Writing.</h1>
-	{#each articles as article}
-		<Card
-			date={article.date}
-			title={article.title}
-			description={article.description}
-			href="/writing/{article.slug}"
-		/>
+	{#each articles as group}
+		<span class="year">{group[0]}</span>
+		{#each group[1] as article}
+			<Card
+				date={article.date}
+				title={article.title}
+				description={article.description}
+				href="/writing/{article.slug}"
+			/>
+		{/each}
 	{/each}
 </Page>
+
+<style lang="scss">
+	.year {
+		font-size: var(--text-2);
+		font-weight: 600;
+		color: var(--color-green);
+		border-bottom: 2px solid var(--color-gray-300);
+	}
+</style>

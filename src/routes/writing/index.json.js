@@ -1,7 +1,8 @@
-import {articles} from './_articles';
+import groupByYear from '$lib/utils/groupByYear';
+import { excerps } from './_articles';
 
 export function get() {
-  return {
-    body: articles
-  };
+	return {
+		body: groupByYear(excerps)
+	};
 }

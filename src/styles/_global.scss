@@ -40,6 +40,7 @@ a > *,
 a:link,
 a:visited,
 a:active {
+	touch-action: manipulation;
 	text-decoration-color: var(--color-gold);
 	text-decoration-thickness: 2px;
 }

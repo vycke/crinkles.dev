@@ -8,8 +8,8 @@
 	let img = 'https://crinkles.io/logo.png';
 </script>
 
-<svelte:head
-	><meta name="keywords" content={keywords} />
+<svelte:head>
+	<meta name="keywords" content={keywords} />
 	<meta name="content" content={keywords} />
 	<meta name="property" content={keywords} />
 

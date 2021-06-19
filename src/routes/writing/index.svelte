@@ -19,7 +19,11 @@
 <Page class="flow-y flow-g-2 | mb-3">
 	<h1>Writing.</h1>
 	{#each articles as group}
-		<span class="year">{group[0]}</span>
+		<div class="year flex-row items-end justify-between">
+			<span class="text-0 text-green bold">{group[0]}</span><span class="text-00 text-gray-200"
+				>{group[1].length} articles</span
+			>
+		</div>
 		{#each group[1] as article}
 			<Card
 				date={article.date}
@@ -33,9 +37,6 @@
 
 <style lang="scss">
 	.year {
-		font-size: var(--text-2);
-		font-weight: 600;
-		color: var(--color-green);
 		border-bottom: 2px solid var(--color-gray-300);
 	}
 </style>

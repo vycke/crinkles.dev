@@ -53,6 +53,12 @@ a:hover > * {
 	text-decoration-thickness: 2px;
 }
 
+h1 a,
+h2 a,
+h3 a {
+	text-decoration: none;
+}
+
 ::selection {
 	color: var(--color-gray-500) !important;
 	background: var(--color-gray-100) !important;

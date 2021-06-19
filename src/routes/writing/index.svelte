@@ -6,8 +6,8 @@
 </script>
 
 <script>
-	import Card from '$lib/components/Card.svelte';
 	import Page from '$lib/components/Page.svelte';
+	import formatDate from '$lib/utils/date';
 
 	export let articles;
 </script>
@@ -25,12 +25,13 @@
 			>
 		</div>
 		{#each group[1] as article}
-			<Card
-				date={article.date}
-				title={article.title}
-				description={article.description}
-				href="/writing/{article.slug}"
-			/>
+			<div class="flex-col | click-area">
+				<span class="text-00 text-gray-300 uppercase">{formatDate(article.date)}</span>
+				<h2 class="text-0 text-gray-100">
+					<a href="/writing/{article.slug}">{article.title}</a>
+				</h2>
+				<span class="text-00 text-gray-300 mt-000">{article.description}</span>
+			</div>
 		{/each}
 	{/each}
 </Page>

@@ -11,7 +11,7 @@
 <script>
 	import Logo from '$lib/components/Logo.svelte';
 	import Card from '$lib/components/Card.svelte';
-	import Page from '$lib/components/Page.svelte';
+	import formatDate from '$lib/utils/date';
 
 	export let articles;
 
@@ -52,17 +52,44 @@
 		<aside class="flow-y flow-g-0">
 			{#each articles as article}
 				<Card
-					date={article.date}
-					class="scale bg-gray-400 p-1"
-					title={article.title}
-					description={article.description}
-					href="/writing/{article.slug}"
-				/>
+					><span class="text-00 text-gray-300 uppercase">{formatDate(article.date)}</span>
+					<h2 class="text-0 text-gray-100">
+						<a href="/writing/{article.slug}">{article.title}</a>
+					</h2>
+					<span class="text-00 text-gray-300 mt-000">{article.description}</span></Card
+				>
 			{/each}
-			<a href="/writing" class="self-end | mt-1 mb-3 text-0 bold" sveltekit:prefetch
+			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch
 				>View more articles →</a
 			>
 		</aside>
+	</section>
+	<section class="tiles tiles-w-1 tiles-g-0 | mb-3">
+		<Card>
+			<span class="text-000 text-gray-300">Project</span>
+			<h2 class="text-0 text-gray-100">
+				<a href="https://fsm.crinkles.io" title="Link to visual state machine editor">FSM Editor</a>
+			</h2>
+			<span class="text-00 text-gray-300 mt-000">Visual editor for state machines</span>
+		</Card>
+
+		<Card>
+			<span class="text-000 text-gray-300">(S)CSS</span>
+			<h2 class="text-0 text-gray-100">
+				<a href="https://github.com/crinklesio/feo-css" title="Link to Feo CSS source code"
+					>Feo CSS</a
+				>
+			</h2>
+			<span class="text-00 text-gray-300 mt-000">Layout and utility based CSS framework</span>
+		</Card>
+
+		<Card>
+			<span class="text-000 text-gray-300">JavaScript</span>
+			<h2 class="text-0 text-gray-100">
+				<a href="https://github.com/crinklesio/digl" title="Link to DIGL source code">DIGL</a>
+			</h2>
+			<span class="text-00 text-gray-300 mt-000">Library to determine the layout of a graph</span>
+		</Card>
 	</section>
 </main>
 
@@ -72,6 +99,8 @@
 <style>
 	.rainbow {
 		background: var(--gradient);
+		align-self: center;
+		max-width: 30rem;
 		width: fit-content;
 		background-clip: text;
 		color: transparent;

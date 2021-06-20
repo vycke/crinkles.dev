@@ -1,13 +1,14 @@
 <!-- src/component/PageTransitions.svelte -->
 <script>
+	import { DESCRIPTION, TITLE } from '$lib/constants';
+
 	import { fly } from 'svelte/transition';
 	import Header from './Header.svelte';
 
 	let styles;
 	export { styles as class };
-	export let title = 'Kevin Pennekamp';
-	export let description =
-		'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
+	export let title = TITLE;
+	export let description = DESCRIPTION;
 </script>
 
 <svelte:head>

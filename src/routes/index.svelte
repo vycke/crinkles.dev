@@ -12,25 +12,23 @@
 	import Logo from '$lib/components/Logo.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import formatDate from '$lib/utils/date';
+	import { DESCRIPTION, TITLE } from '$lib/constants';
 
 	export let articles;
-
-	export let title = 'Kevin Pennekamp';
-	export let description =
-		'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
 </script>
 
 <svelte:head>
 	<title>Kevin Pennekamp</title>
 
-	<title>{title}</title>
-	<meta name="twitter:title" content={title} />
-	<meta property="og:title" content={title} />
+	<title>{TITLE}</title>
+	<meta name="twitter:title" content={TITLE} />
+	<meta property="og:title" content={TITLE} />
 
-	<meta name="description" content={description} />
-	<meta name="twitter:description" content={description} />
-	<meta property="og:description" content={description} />
+	<meta name="description" content={DESCRIPTION} />
+	<meta name="twitter:description" content={DESCRIPTION} />
+	<meta property="og:description" content={DESCRIPTION} />
 </svelte:head>
+
 <main class="center center-w-5 center-g-1 | mt-1">
 	<section class="split-left split-min-w-1 split-g-3 | my-1">
 		<div class="flow-y flow-g-0">
@@ -59,26 +57,28 @@
 					<span class="text-00 text-gray-300 mt-000">{article.description}</span></Card
 				>
 			{/each}
-			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch
-				>View more articles →</a
-			>
+			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch>
+				View more articles →
+			</a>
 		</aside>
 	</section>
 	<section class="tiles tiles-w-1 tiles-g-0 | mb-3">
 		<Card>
 			<span class="text-000 text-gray-300">Project</span>
 			<h2 class="text-0 text-gray-100">
-				<a href="https://fsm.crinkles.io" title="Link to visual state machine editor">FSM Editor</a>
+				<a href="https://fsm.crinkles.io" title="Link to visual state machine editor">
+					State machine editor
+				</a>
 			</h2>
-			<span class="text-00 text-gray-300 mt-000">Visual editor for state machines</span>
+			<span class="text-00 text-gray-300 mt-000">Visual editor for finite state machines</span>
 		</Card>
 
 		<Card>
 			<span class="text-000 text-gray-300">(S)CSS</span>
 			<h2 class="text-0 text-gray-100">
-				<a href="https://github.com/crinklesio/feo-css" title="Link to Feo CSS source code"
-					>Feo CSS</a
-				>
+				<a href="https://github.com/crinklesio/feo-css" title="Link to Feo CSS source code">
+					Feo CSS
+				</a>
 			</h2>
 			<span class="text-00 text-gray-300 mt-000">Layout and utility based CSS framework</span>
 		</Card>
@@ -88,7 +88,7 @@
 			<h2 class="text-0 text-gray-100">
 				<a href="https://github.com/crinklesio/digl" title="Link to DIGL source code">DIGL</a>
 			</h2>
-			<span class="text-00 text-gray-300 mt-000">Library to determine the layout of a graph</span>
+			<span class="text-00 text-gray-300 mt-000">Directed graph Layout algorithm</span>
 		</Card>
 	</section>
 </main>

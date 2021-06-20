@@ -32,7 +32,7 @@
 <main class="center center-w-5 center-g-1 | mt-1">
 	<section class="split-left split-min-w-1 split-g-3 | my-1">
 		<div class="flow-y flow-g-0 pt-3">
-			<Logo class="self-start correction flow-next-3" />
+			<Logo class="self-start correction flow-next-1" />
 			<h1>Hi, I'm Kevin.</h1>
 			<span class="text-00 text-gray-200">
 				<Crinkle /> I'm a Software Engineer working at

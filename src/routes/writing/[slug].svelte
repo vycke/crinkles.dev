@@ -36,7 +36,7 @@
 </svelte:head>
 
 <Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-	<span class="text-gray-300 uppercase flow-next-none">
+	<span class="text-gray-300 uppercase flow-next-none monospace text-00">
 		<time datetime={date}>{date}</time>
 		{` • ${num}`}
 	</span>

@@ -15,6 +15,27 @@
 	import { DESCRIPTION, TITLE } from '$lib/constants';
 
 	export let articles;
+
+	export let projects = [
+		{
+			type: 'Project',
+			title: 'State machine editor',
+			href: 'https://fsm.crinkles.io',
+			description: 'Visual editor for finite state machines'
+		},
+		{
+			type: '(S)CSS',
+			title: 'Feo CSS',
+			href: 'https://github.com/crinklesio/feo-css',
+			description: 'Layout and utility based CSS framework'
+		},
+		{
+			type: 'JavaScript',
+			title: 'DIGL',
+			href: 'https://github.com/crinklesio/digl',
+			description: 'Directed graph Layout algorithm'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -49,13 +70,15 @@
 		</div>
 		<aside class="flow-y flow-g-0">
 			{#each articles as article}
-				<Card
-					><span class="text-000 text-gray-300 uppercase">{formatDate(article.date)}</span>
+				<Card>
+					<span class="text-000 text-gray-300 monospace uppercase">
+						{formatDate(article.date)}
+					</span>
 					<h2 class="text-0 text-gray-100">
 						<a href="/writing/{article.slug}">{article.title}</a>
 					</h2>
-					<span class="text-00 text-gray-300 mt-000">{article.description}</span></Card
-				>
+					<!-- <span class="text-00 text-gray-300 mt-000">{article.description}</span> -->
+				</Card>
 			{/each}
 			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch>
 				View more articles →
@@ -63,33 +86,17 @@
 		</aside>
 	</section>
 	<section class="tiles tiles-w-1 tiles-g-0 | mb-3">
-		<Card>
-			<span class="text-000 text-gray-300">Project</span>
-			<h2 class="text-0 text-gray-100">
-				<a href="https://fsm.crinkles.io" title="Link to visual state machine editor">
-					State machine editor
-				</a>
-			</h2>
-			<span class="text-00 text-gray-300 mt-000">Visual editor for finite state machines</span>
-		</Card>
-
-		<Card>
-			<span class="text-000 text-gray-300">(S)CSS</span>
-			<h2 class="text-0 text-gray-100">
-				<a href="https://github.com/crinklesio/feo-css" title="Link to Feo CSS source code">
-					Feo CSS
-				</a>
-			</h2>
-			<span class="text-00 text-gray-300 mt-000">Layout and utility based CSS framework</span>
-		</Card>
-
-		<Card>
-			<span class="text-000 text-gray-300">JavaScript</span>
-			<h2 class="text-0 text-gray-100">
-				<a href="https://github.com/crinklesio/digl" title="Link to DIGL source code">DIGL</a>
-			</h2>
-			<span class="text-00 text-gray-300 mt-000">Directed graph Layout algorithm</span>
-		</Card>
+		{#each projects as project}
+			<Card>
+				<span class="text-000 text-gray-300 monospace">{project.type}</span>
+				<h2 class="text-0 text-gray-100">
+					<a href={project.href} title="Link to {project.title}">
+						{project.title}
+					</a>
+				</h2>
+				<span class="text-00 text-gray-300 mt-000">{project.description}</span>
+			</Card>
+		{/each}
 	</section>
 </main>
 

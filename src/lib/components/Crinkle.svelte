@@ -16,11 +16,6 @@
 </script>
 
 <span on:mouseenter={trigger} class="bold">
-	<span class={colors[0]}>›</span><span class={colors[1]}>›</span><span class={colors[2]}>›</span>
+	<span class="transition-200 {colors[0]}">›</span><span class="transition-200{colors[1]}">›</span
+	><span class="transition-200 {colors[2]}">›</span>
 </span>
-
-<style>
-	span {
-		transition: all 200ms ease-in-out;
-	}
-</style>

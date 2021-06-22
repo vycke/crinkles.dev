@@ -25,7 +25,7 @@
 	{style}
 	href="/"
 	aria-label="Logo that redirects to the homepage"
-	class={`logo ${klass}`}
+	class={`logo | p-000 no-decoration radius-3 ${klass}`}
 >
 	<svg width="32" height="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path
@@ -53,9 +53,6 @@
 
 <style lang="scss">
 	.logo {
-		padding: var(--spacing-000);
-		text-decoration: none;
-		border-radius: var(--radius-3);
 		transition: background-color ease-in-out 200ms;
 
 		svg {

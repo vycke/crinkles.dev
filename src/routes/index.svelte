@@ -88,7 +88,7 @@
 	<section class="tiles tiles-w-1 tiles-g-0 | mb-3">
 		{#each projects as project}
 			<Card>
-				<span class="text-000 text-gray-300 monospace">{project.type}</span>
+				<span class="text-000 text-gray-300 monospace uppercase">{project.type}</span>
 				<h2 class="text-0 text-gray-100">
 					<a href={project.href} title="Link to {project.title}">
 						{project.title}

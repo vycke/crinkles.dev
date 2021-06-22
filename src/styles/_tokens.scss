@@ -37,3 +37,10 @@ $feo-sizes: (
 	'4': 50rem,
 	'5': 77.5rem
 );
+
+$feo-font-families: (
+	monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
+	serif: 'Georgia, serif',
+	sans-serif:
+		"system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+);

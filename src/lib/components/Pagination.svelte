@@ -5,31 +5,19 @@
 
 <section class="split-left split-min-w-1 split-g-1 | p-1 my-3">
 	{#if next}
-		<a class="flex-col items-start justify-center" sveltekit:prefetch href={next.url}>
-			<span>← {next.title || 'Next'}</span>
+		<a class="flex-col items-start justify-center no-decoration" sveltekit:prefetch href={next.url}>
+			<span class="text-gray-300 text-00 uppercase monospace">← Next</span>
 			<h3>{next.subtitle}</h3>
 		</a>
 	{/if}
 	{#if previous}
 		<a
-			class="flex-col items-end justify-center | text-right"
+			class="flex-col items-end justify-center | text-right no-decoration"
 			sveltekit:prefetch
 			href={previous.url}
 		>
-			<span>{previous.title || 'Previous'} →</span>
+			<span class="text-gray-300 text-00 uppercase monospace">Previous →</span>
 			<h3>{previous.subtitle}</h3>
 		</a>
 	{/if}
 </section>
-
-<style lang="scss">
-	a {
-		text-decoration-color: rgba(0, 0, 0, 0);
-	}
-
-	a > span {
-		color: var(--color-gray-300);
-		font-size: var(--text-00);
-		text-transform: uppercase;
-	}
-</style>

@@ -1,15 +1,7 @@
 .scale {
-	transition: var(--transition);
+	transition: all 200ms ease-in-out;
 }
 
 .scale:hover {
 	box-shadow: 0 0 0 var(--spacing-000) var(--color-gray-400);
-}
-
-.no-decoration {
-	text-decoration: none;
-}
-
-.monospace {
-	font-family: var(--monospace);
 }

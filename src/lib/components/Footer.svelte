@@ -9,13 +9,13 @@
 
 <footer class="flex-col items-start | p-1 text-00 bg-gray-400">
 	<div class="endline self-center mb-00" />
-	<div class="links | flex-row items-center self-center">
+	<div class="links | flow-x flow-g-00 | self-center">
 		<a href="/meta" sveltekit:prefetch class="flex-grow">© crinkles</a>
 		{#each links as link}
-			<a href={link.url} title={link.alt}>{link.name}</a>
+			<a href={link.url} title={link.alt} class="p-000">{link.name}</a>
 		{/each}
 
-		<a href="/rss.xml" title="RSS Feed" sveltekit:prefetch>rss</a>
+		<a href="/rss.xml" title="RSS Feed" sveltekit:prefetch class="p-000">rss</a>
 	</div>
 </footer>
 
@@ -35,10 +35,5 @@
 
 	.links {
 		width: 100%;
-	}
-
-	.links > * + * {
-		margin-left: var(--spacing-00);
-		padding: var(--spacing-000);
 	}
 </style>

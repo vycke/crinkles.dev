@@ -9,7 +9,7 @@
 	--gradient: -webkit-linear-gradient(
 		45deg,
 		var(--color-green),
-		var(--color-gray-300),
+		var(--color-blay),
 		var(--color-blue)
 	);
 }
@@ -17,8 +17,7 @@
 @import 'global';
 
 // Blocks & expections
-@import 'blocks/code';
-@import 'blocks/tooltip';
+@import 'code';
 
 // Utilities
 @import 'utils';

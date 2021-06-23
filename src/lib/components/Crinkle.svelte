@@ -1,7 +1,7 @@
 <script>
 	let max = 6;
 	let triggered = 0;
-	let colors = ['text-green', 'text-gray-300', 'text-blue'];
+	let colors = ['text-green', 'text-blay', 'text-blue'];
 
 	function trigger() {
 		triggered++;
@@ -16,6 +16,6 @@
 </script>
 
 <span on:mouseenter={trigger} class="bold">
-	<span class="transition-200 {colors[0]}">›</span><span class="transition-200{colors[1]}">›</span
+	<span class="transition-200 {colors[0]}">›</span><span class="transition-200 {colors[1]}">›</span
 	><span class="transition-200 {colors[2]}">›</span>
 </span>

@@ -3,7 +3,7 @@
 </script>
 
 <header class="center center-w-4 center-g-000 | mt-2 mb-0">
-	<div class="flex-row items-center py-000 px-00">
+	<div class="flex-row items-center py-000 px-1">
 		<Logo />
 	</div>
 </header>

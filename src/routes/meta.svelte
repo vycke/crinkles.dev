@@ -6,11 +6,7 @@
 	export const prerender = true;
 </script>
 
-<Page
-	class="flow-y flow-g-0 | mb-3 text-00"
-	title="Meta • Kevin Pennekamp"
-	headerTitle="About this website."
->
+<Page class="flow-y flow-g-0 | mb-3 text-00" title="Meta • Kevin Pennekamp" headerTitle="Meta.">
 	<blockquote>
 		<em>
 			"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and

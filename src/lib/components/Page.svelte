@@ -9,6 +9,7 @@
 	export { styles as class };
 	export let title = TITLE;
 	export let description = DESCRIPTION;
+	export let headerTitle = undefined;
 </script>
 
 <svelte:head>
@@ -21,7 +22,7 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<Header />
+<Header title={headerTitle} />
 
 <main class={`center center-w-4 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
 	<slot />

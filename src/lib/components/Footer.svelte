@@ -15,7 +15,7 @@
 			<a href={link.url} title={link.alt} class="p-000">{link.name}</a>
 		{/each}
 
-		<a href="/rss.xml" title="RSS Feed" sveltekit:prefetch class="p-000">rss</a>
+		<a href="/rss.xml" title="RSS Feed" class="p-000">rss</a>
 	</div>
 </footer>
 

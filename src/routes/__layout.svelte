@@ -1,3 +1,14 @@
+<script context="module">
+	export async function load({ fetch }) {
+		try {
+			await fetch('/rss.xml');
+			return true;
+		} catch (error) {
+			console.error(error);
+		}
+	}
+</script>
+
 <script>
 	import Footer from '$lib/components/Footer.svelte';
 

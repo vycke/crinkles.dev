@@ -1,12 +1,10 @@
 <script context="module">
-	import Crinkle from '$lib/components/Crinkle.svelte';
-	import Header from '$lib/components/Header.svelte';
-	import Page from '$lib/components/Page.svelte';
-
 	export const prerender = true;
+	import Crinkle from '$lib/components/Crinkle.svelte';
+	import Page from '$lib/components/Page.svelte';
 </script>
 
-<Page class="flow-y flow-g-0 | mb-3 text-00" title="Meta • Kevin Pennekamp" headerTitle="Meta.">
+<Page class="flow-y flow-g-0 | mb-3 text-00" title="Meta | Crinkles" headerTitle="Meta.">
 	<blockquote>
 		<em>
 			"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and

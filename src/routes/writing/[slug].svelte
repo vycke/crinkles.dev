@@ -1,6 +1,7 @@
 <script context="module">
+	export const prerender = true;
 	export async function load({ page, fetch }) {
-		const res = await fetch(`/writing/${page.params.slug}.json`);
+		const res = await fetch(`/api/${page.params.slug}.json`);
 		if (res.ok) {
 			const { post, next, prev } = await res.json();
 			return { props: { post, next, prev } };
@@ -18,7 +19,6 @@
 	import formatDate from '$lib/utils/date';
 	import length from '$lib/utils/length';
 	import Page from '$lib/components/Page.svelte';
-	import Header from '$lib/components/Header.svelte';
 
 	export let post;
 	export let next;
@@ -44,6 +44,7 @@
 
 	{@html post.html}
 </Page>
+
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
 <style lang="scss">

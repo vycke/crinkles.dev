@@ -1,9 +1,9 @@
 <script context="module">
+	// export const prerender = true;
 	import Crinkle from '$lib/components/Crinkle.svelte';
 
 	export async function load({ fetch }) {
-		const res = await fetch('/index.json');
-
+		const res = await fetch('/api/home.json');
 		return { props: { articles: await res.json() } };
 	}
 </script>
@@ -12,11 +12,10 @@
 	import Logo from '$lib/components/Logo.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import formatDate from '$lib/utils/date';
-	import { DESCRIPTION, TITLE } from '$lib/constants';
 
 	export let articles;
 
-	export let projects = [
+	let projects = [
 		{
 			type: 'Project',
 			title: 'State machine editor',
@@ -36,18 +35,20 @@
 			description: 'Directed graph Layout algorithm'
 		}
 	];
+
+	let title = 'Kevin Pennekamp | Crinkles';
+	let description =
+		'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
 </script>
 
 <svelte:head>
-	<title>Kevin Pennekamp</title>
+	<title>{title}</title>
+	<meta name="twitter:title" content={title} />
+	<meta property="og:title" content={title} />
 
-	<title>{TITLE}</title>
-	<meta name="twitter:title" content={TITLE} />
-	<meta property="og:title" content={TITLE} />
-
-	<meta name="description" content={DESCRIPTION} />
-	<meta name="twitter:description" content={DESCRIPTION} />
-	<meta property="og:description" content={DESCRIPTION} />
+	<meta name="description" content={description} />
+	<meta name="twitter:description" content={description} />
+	<meta property="og:description" content={description} />
 </svelte:head>
 
 <main class="center center-w-5 center-g-1 | mt-1">

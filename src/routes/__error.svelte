@@ -1,5 +1,4 @@
 <script>
-	import Header from '$lib/components/Header.svelte';
 	import Page from '$lib/components/Page.svelte';
 
 	export let error;

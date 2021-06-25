@@ -8,7 +8,6 @@
 
 <script>
 	import Page from '$lib/components/Page.svelte';
-	import formatDate from '$lib/utils/date';
 
 	export let articles;
 </script>
@@ -26,7 +25,7 @@
 		</div>
 		{#each group[1] as article}
 			<div class="flex-col | click-area">
-				<span class="text-000 text-gray-300 uppercase monospace">{formatDate(article.date)}</span>
+				<span class="text-000 text-gray-300 uppercase monospace">{article.formattedDate}</span>
 				<h2 class="text-0 text-gray-100">
 					<a href="/writing/{article.slug}">{article.title}</a>
 				</h2>

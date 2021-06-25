@@ -16,8 +16,6 @@
 
 <script>
 	import Pagination from '$lib/components/Pagination.svelte';
-	import formatDate from '$lib/utils/date';
-	import length from '$lib/utils/length';
 	import Page from '$lib/components/Page.svelte';
 
 	export let post;
@@ -27,8 +25,8 @@
 	$: pagePrevious = prev ? { url: `/writing/${prev.slug}`, subtitle: prev.title } : undefined;
 	$: pageNext = next ? { url: `/writing/${next.slug}`, subtitle: next.title } : undefined;
 
-	$: date = formatDate(post.date);
-	$: num = length(post.html);
+	$: date = post.formattedDate;
+	$: num = `${Math.ceil(post.html.split(' ').length / 200)} min read`;
 </script>
 
 <svelte:head>

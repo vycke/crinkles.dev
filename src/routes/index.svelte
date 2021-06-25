@@ -11,7 +11,6 @@
 <script>
 	import Logo from '$lib/components/Logo.svelte';
 	import Card from '$lib/components/Card.svelte';
-	import formatDate from '$lib/utils/date';
 
 	export let articles;
 
@@ -73,7 +72,7 @@
 			{#each articles as article}
 				<Card>
 					<span class="text-000 text-gray-300 monospace uppercase">
-						{formatDate(article.date)}
+						{article.formattedDate}
 					</span>
 					<h2 class="text-0 text-gray-100">
 						<a href="/writing/{article.slug}">{article.title}</a>

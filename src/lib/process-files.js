@@ -4,13 +4,36 @@ import fm from 'front-matter';
 import { resolve } from 'path';
 import renderer from '$lib/renderer';
 
+const months = [
+	'January',
+	'February',
+	'March',
+	'April',
+	'May',
+	'June',
+	'July',
+	'August',
+	'September',
+	'October',
+	'November',
+	'December'
+];
+
+function format(iso) {
+	const date = new Date(iso);
+
+	return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
+
 export async function getArticle(slug, html = true) {
 	const _path = resolve('content', slug + '.md');
 	const src = await fs.readFile(_path, 'utf8');
 	const { body, ...matter } = fm(src);
 
-	if (!html) return { slug, ...matter.attributes };
-	return { slug, html: renderer(body), ...matter.attributes };
+	const formattedDate = format(matter.attributes.date);
+
+	if (!html) return { slug, formattedDate, ...matter.attributes };
+	return { slug, html: renderer(body), formattedDate, ...matter.attributes };
 }
 
 export async function getArticles(length) {

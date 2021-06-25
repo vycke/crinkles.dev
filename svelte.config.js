@@ -1,6 +1,6 @@
 import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
-
+// import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte'],
@@ -16,7 +16,7 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		ssr: true,
-		vite: () => ({})
+		vite: {}
 	}
 };
 

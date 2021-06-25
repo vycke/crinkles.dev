@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs';
 import fm from 'front-matter';
 import { resolve } from 'path';
-import renderer from '$lib/marked';
+import renderer from '$lib/rendererer';
 
 export async function getArticle(slug, html = true) {
 	const _path = resolve('content', slug + '.md');

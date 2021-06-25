@@ -25,7 +25,7 @@
 	<div class="flex-row items-center py-000 px-1">
 		<Logo />
 		{#if headerTitle}
-			<h1 class="text-1 ml-1 normal monospace">/ {headerTitle}</h1>
+			<h1 class="text-0 bold ml-1 monospace">/ {headerTitle}</h1>
 		{/if}
 	</div>
 </header>

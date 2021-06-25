@@ -55,7 +55,7 @@
 		<div class="flow-y flow-g-0 pt-3">
 			<Logo class="self-start flow-next-1" />
 			<h1>Hi, I'm Kevin.</h1>
-			<span class="text-00 text-gray-200">
+			<span class="text-00 text-gray-300">
 				<Crinkle /> I'm a Software Engineer working at
 				<a href="https://finaps.nl" title="Website of Finaps B.V."> Finaps</a>, where I mostly do
 				front-end and lead a small team. I am a big <i>front-end</i> and <i>CSS</i> nerd, and love

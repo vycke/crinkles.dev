@@ -19,7 +19,7 @@
 <Page class="flow-y flow-g-2 | mb-3" headerTitle="Writing.">
 	{#each articles as group}
 		<div class="year flex-row items-end justify-between monospace">
-			<span class="text-0 text-green bold">{group[0]}</span><span class="text-00 text-gray-200"
+			<span class="text-0 text-green bold">{group[0]}</span><span class="text-00 text-gray-300"
 				>{group[1].length} articles</span
 			>
 		</div>

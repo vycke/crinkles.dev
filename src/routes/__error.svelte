@@ -1,9 +1,13 @@
 <script context="module">
 	export async function load({ error, status, fetch }) {
 		const res = await fetch('/api/latestArticles.json');
-		return {
-			props: { status, error }
-		};
+
+		if (res.ok)
+			return {
+				props: { status, error }
+			};
+
+		return { status: res.status };
 	}
 </script>
 

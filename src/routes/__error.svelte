@@ -1,8 +1,8 @@
 <script context="module">
 	export async function load({ error, status, fetch }) {
-		const res = await fetch('/api/latestArticles.json');
+		// const res = await fetch('/api/latestArticles.json');
 		return {
-			props: { status, error, articles: await res.json() }
+			props: { status, error }
 		};
 	}
 </script>

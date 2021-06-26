@@ -1,6 +1,6 @@
 <!-- src/component/PageTransitions.svelte -->
 <script>
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import Logo from './Logo.svelte';
 
 	let styles;
@@ -30,7 +30,11 @@
 	</div>
 </header>
 
-<main class={`center center-w-4 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
+<main
+	class={`center center-w-4 center-g-1 ${styles}`}
+	in:fly={{ y: 50, duration: 250 }}
+	out:fade={{ duration: 100 }}
+>
 	<slot />
 </main>
 <slot name="pagination" />

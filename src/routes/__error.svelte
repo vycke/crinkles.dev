@@ -1,9 +1,10 @@
 <script context="module">
 	export async function load({ error, status, fetch }) {
 		const res = await fetch('/api/latestArticles.json');
-		return {
-			props: { status, error, articles: await res.json() }
-		};
+		if (res.ok)
+			return {
+				props: { status, error, articles: await res.json() }
+			};
 	}
 </script>
 
@@ -12,7 +13,7 @@
 	import Card from '$lib/components/Card.svelte';
 
 	export let status;
-	export let articles;
+	export let articles = [];
 </script>
 
 <svelte:head>

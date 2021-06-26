@@ -4,7 +4,7 @@
 
 		if (res.ok)
 			return {
-				props: { status, error }
+				props: { status, error, articles: await res.json() }
 			};
 
 		return { status: res.status };

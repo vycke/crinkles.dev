@@ -3,6 +3,7 @@
 *******/
 html,
 body {
+	visibility: visible !important; /* hack to avoid Flash Of Unstyled Content FOUC */
 	min-width: var(--size-1);
 	color: var(--color-gray-100);
 	font-family: var(--sans-serif);

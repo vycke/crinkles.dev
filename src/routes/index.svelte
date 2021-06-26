@@ -1,5 +1,5 @@
 <script context="module">
-	// export const prerender = true;
+	export const prerender = true;
 	import Crinkle from '$lib/components/Crinkle.svelte';
 
 	export async function load({ fetch }) {

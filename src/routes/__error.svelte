@@ -5,6 +5,8 @@
 			return {
 				props: { status, error, articles: await res.json() }
 			};
+
+		return { status: res.status };
 	}
 </script>
 

@@ -16,7 +16,7 @@
 	import Card from '$lib/components/Card.svelte';
 
 	export let status;
-	// export let articles;
+	export let articles = [];
 </script>
 
 <svelte:head>
@@ -32,7 +32,7 @@
 		The page you were looking for probably does not exist (anymore) or has moved. But feel free to
 		look at one of my latest articles!
 	</span>
-	<!-- <aside class="flow-y flow-g-0">
+	<aside class="flow-y flow-g-0">
 		{#each articles as article}
 			<Card>
 				<span class="text-000 text-gray-300 monospace uppercase">
@@ -43,7 +43,7 @@
 				</h2>
 			</Card>
 		{/each}
-	</aside> -->
+	</aside>
 	<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch>
 		View more articles →
 	</a>

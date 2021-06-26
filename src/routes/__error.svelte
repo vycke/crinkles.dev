@@ -1,4 +1,5 @@
 <script context="module">
+	export const prerender = true;
 	export async function load({ error, status, fetch }) {
 		const res = await fetch('/api/latestArticles.json');
 		if (res.ok)

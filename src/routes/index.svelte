@@ -1,9 +1,9 @@
 <script context="module">
-	// export const prerender = true;
+	export const prerender = true;
 	import Crinkle from '$lib/components/Crinkle.svelte';
 
 	export async function load({ fetch }) {
-		const res = await fetch('/api/home.json');
+		const res = await fetch('/api/latestArticles.json');
 		return { props: { articles: await res.json() } };
 	}
 </script>

@@ -3,7 +3,7 @@
 	import { fly } from 'svelte/transition';
 	import Logo from './Logo.svelte';
 
-	let styles;
+	let styles = '';
 	export { styles as class };
 	export let title = 'Kevin Pennekamp';
 	export let description =

@@ -3,6 +3,8 @@
 
 	export let error;
 	export let status;
+
+	console.log(status, error);
 </script>
 
 <svelte:head>

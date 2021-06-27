@@ -13,7 +13,7 @@ In complex applications, UI components consist of more building blocks than some
 
 Interfaces are a way to describe how we want others to use and interact with our work, our components. The UI is a good example of an interface. It describes what we want our users to see and what we allow for interaction.
 
-> "Interfaces are a way to describe how we want others to use and interact with our components"
+> Interfaces are a way to describe how we want others to use and interact with our components
 
 But what about the developers? The API of our components, better known as _props_ or _properties_ in most frameworks, is the interface for developers. There are some different API types we can define for other developers.
 
@@ -83,7 +83,9 @@ function MyComponent(props) {
 }
 ```
 
-_Note: the above component has some small flaws, as does two different state updates in one action. But, it fits its purpose._
+:::
+**Note**: the above component has some small flaws, as does two different state updates in one action. But, it fits its purpose.
+:::
 
 ## Lifecycle
 

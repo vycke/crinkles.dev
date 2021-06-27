@@ -6,10 +6,8 @@
 
 <Page class="flow-y flow-g-0 | mb-3 text-00" title="Meta | Crinkles" headerTitle="Meta.">
 	<blockquote>
-		<em>
-			"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
-			uniqueness."
-		</em>
+		A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
+		uniqueness.
 	</blockquote>
 
 	<p>

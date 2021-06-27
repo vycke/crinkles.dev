@@ -17,7 +17,7 @@ Agile gave us engineers many things. Its promise allowed engineers to start focu
 
 This works perfectly well in stable environments where the focus is on existing IT landscapes, with no big appetite for change. Change is scary and unpredictable. I mean, who could ever break a venture into uncharted territories ineffective user stories. Let alone actually doing such user stories in a two-week window? Agile's focus on delivery makes it difficult to tap into big changes.
 
-> _"It’s just important to realize agile is really about delivery.”_ <cite>Marty Cagan</cite>
+> It’s just important to realize agile is really about delivery. <cite>Marty Cagan</cite>
 
 But innovation regardless if it is for a potentially new or existing solution requires change. It is a _discovery_ journey to find something valuable, usable, feasible, and viable for a given problem. Sometimes we know the destination but not the path. But more often we just get a hunch of the direction. UX plays a big part in these ventures into the unknown. They can act as a business' navigator, showing us which paths to follow to find not a destination, but the correct destination.
 

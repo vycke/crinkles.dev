@@ -91,9 +91,9 @@ em {
 blockquote {
 	display: block;
 	padding: var(--spacing-0) var(--spacing-2);
-	color: var(--color-green);
+	color: var(--color-gray-300);
 	font-family: var(--serif);
-	font-size: var(--text-1);
+	font-size: var(--text-0);
 	text-align: center;
 	font-style: italic;
 
@@ -104,7 +104,7 @@ blockquote {
 		font-style: italic;
 		margin-top: var(--spacing-00);
 		text-align: right;
-		color: var(--color-gray-300);
+		color: var(--color-green);
 	}
 }
 

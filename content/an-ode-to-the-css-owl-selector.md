@@ -11,7 +11,7 @@ It is not a secret that I love CSS. A few years ago I fell in love with a very s
 
 I started with finding resources online, like [Smashing Magazine](https://smashingmagazine.com/). There I came across [Heydon Pickering](https://twitter.com/heydonworks) and later his ['lobotomized owl selector'](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/) of . This selector blew my mind. At the [CSS Day](https://cssday.nl/2019), he even showed another beauty, called the ['flexbox holy Albatros'](http://www.heydonworks.com/article/the-flexbox-holy-albatross) (you can watch it [here](https://www.youtube.com/watch?v=RUyNJaoJH_k)). These types of solutions showed me that CSS is a lot more powerful than I knew. Solving solutions in CSS can be easy or elegant. So, Heydon, this one is (partly) for you.
 
-> "Solving solutions in CSS can be easy or elegant."
+> Solving solutions in CSS can be easy or elegant.
 
 ## The lobotomized owl selector
 
@@ -37,7 +37,9 @@ You might wonder why I am so obsessed with this little CSS selector? In the web 
 
 The owl selector is a wonderful example showing how complex parsing CSS selectors can be. It shows the real power of CSS. Why? Because it works nested. In any programming language, this can become complex fast. The nested nature of the selector can is comparable to [recursion](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>). Before diving into the recursive solution, let's look at the pseudo-code for a flat list of elements.
 
-_Disclaimer: the code examples used do not work in any programming language, they are pseudo-code snippets._
+:::
+**Disclaimer**: the code examples used do not work in any programming language, they are pseudo-code snippets.
+:::
 
 ```js
 function owl(list, apply) {
@@ -87,7 +89,7 @@ You now know how to create something like our owl selector. It exists of a recur
 
 As I mentioned, during the CSS Days one of the reoccurring topics was "is CSS a programming language?". Almost everybody can apply simple CSS rules or styling rules. Solving more complex (or even easy) problems require more in-depth knowledge. Knowledge of computer science concepts becomes important, as they are the result of CSS rules.
 
-> "Knowledge of computer science concepts becomes important, as they are the result of CSS rules."
+> Knowledge of computer science concepts becomes important, as they are the result of CSS rules.
 > <cite>[Kevin Pennekamp](https://crinkles.io)</cite>
 
 A simple CSS selector can mean that you apply a recursive function. This is nothing else than using a function written by someone else. The mental model of the result remains the same. You are applying algorithms to create a UI. This is exactly the reason I love CSS. Something simple can become a powerful UI manipulation tool. Every time I find solutions in CSS that I deemed not possible. So I want to thank Heydon Pickering, Lara Schenck and all the others that showed me the real power of CSS.

@@ -13,7 +13,7 @@ As a front-end engineer, always take the reusability of your work into account. 
 
 This is where the concept of interfaces come into play. The ever so trustworthy [Wikipedia](<https://en.wikipedia.org/wiki/Interface_(computing)>) defines an interface as stated below.
 
-> "An interface is a shared boundary across which two or more separate components of a computer system exchange information"
+> An interface is a shared boundary across which two or more separate components of a computer system exchange information
 
 When looking at this definition with my front-end goggles, I directly see the word _component_. Two or more separate UI components that work together is exactly how we create most design systems. In [React](https://reactjs.org/docs/components-and-props.html) for instance, you provide data from a parent component to a child component through the _props_ of the child component. So is this the spot in front-end development where we design and develop interfaces? Yes, yes it is.
 
@@ -31,7 +31,7 @@ Your component can provide information to others through their APIs, and vice ve
 
 In the last case, it is our component that describes in its API how it can connect with other components. It describes what type of information it can receive, but also when it can provide information back (e.g. callback functions like `onClick`). We can often assume that other engineers are not aware of the internals of our UI components. So the interfaces become a way to describe how we want others to use and interact with our work. But how can we describe our interfaces to ensure others know of how they should interact with them?
 
-> "The interfaces become a way to describe how we want others to use and interact with our work"
+> The interfaces become a way to describe how we want others to use and interact with our work
 
 ## Describing interfaces
 

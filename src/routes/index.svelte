@@ -50,20 +50,20 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | mt-1">
-	<section class="split-left split-min-w-1 split-g-3 | my-1">
-		<div class="flow-y flow-g-0 pt-3">
-			<Logo class="self-start flow-next-1" />
+<main class="center center-w-5 center-g-1 | mt-2">
+	<section class="split-left split-min-w-1 split-g-3">
+		<div class="flow-y flow-g-0 mt-000">
+			<Logo class="self-start flow-next-2" />
 			<h1>Hi, I'm Kevin.</h1>
 			<span class="text-00 text-gray-300">
-				<Crinkle /> I'm a Software Engineer working at
-				<a href="https://finaps.nl" title="Website of Finaps B.V."> Finaps</a>, where I mostly do
-				front-end and lead a small team. I am a big <i>front-end</i> and <i>CSS</i> nerd, and love
-				to try new things on this personal playgroud. I occasionally
-				<a href="/writing">write</a> about my front-end journeys and opinions.
+				<Crinkle /> I'm a creative software engineer that loves <i>front-end</i> and <i>CSS</i>. I
+				research and dgive advise about scalable and maintainable user interfaces and (enterprise)
+				to others. I occasionally
+				<a href="/writing">write</a> about what I find, feel and think. Currently writing code at
+				<a href="https://finaps.nl" title="Website of Finaps B.V.">Finaps</a>.
 			</span>
 
-			<i class="rainbow | flow-self-3 | text-00 text-center">
+			<i class="rainbow | flow-self-2 | text-0 text-center px-3">
 				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 				uniqueness."
 			</i>
@@ -85,10 +85,10 @@
 			</a>
 		</aside>
 	</section>
-	<section class="tiles tiles-w-1 tiles-g-0 | mb-3">
+	<section class="tiles tiles-w-1 tiles-g-0 | mt-1 mb-3">
 		{#each projects as project}
 			<Card>
-				<span class="text-000 text-gray-300 monospace uppercase">{project.type}</span>
+				<span class="text-000 text-gray-300 monospace">{project.type}</span>
 				<h2 class="text-0 text-gray-100">
 					<a href={project.href} title="Link to {project.title}">
 						{project.title}
@@ -107,7 +107,6 @@
 	.rainbow {
 		background: var(--gradient);
 		align-self: center;
-		max-width: 30rem;
 		width: fit-content;
 		background-clip: text;
 		color: transparent;

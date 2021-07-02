@@ -144,22 +144,3 @@ ol {
 		padding: var(--spacing-0);
 	}
 }
-
-// Scroll bar
-::-webkit-scrollbar {
-	width: 0.8rem;
-}
-
-::-webkit-scrollbar-track {
-	background-color: var(--color-gray-400);
-	border-radius: 1rem;
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--color-gray-300);
-	border-radius: 1rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: var(--color-blue);
-}

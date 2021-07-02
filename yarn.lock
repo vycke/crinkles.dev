@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@crinkles/feo@^1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@crinkles/feo/-/feo-1.10.1.tgz#994ad4cdc10777146d7327d521b6bf5f6c972d57"
-  integrity sha512-/NGCQ1IFz7kEZOyuLF5+QMbSj0822t1Em3O+6PKO+Z1Y0hMD4vR+uhFJC5D5roFkvPSHS6vTqM2wPCFXo5CzbA==
+"@crinkles/feo@^1.12.4":
+  version "1.12.4"
+  resolved "https://registry.yarnpkg.com/@crinkles/feo/-/feo-1.12.4.tgz#312709e1a1f6fe38faed7a268e70f81c50817ea2"
+  integrity sha512-ger7KIN1hj78dW891OZtHovzgK1P9A/LnJa4zYk3TirkF/ALbrsR3Bhdfo9mZGC0OU3TOjCAv5KiS3H+vRIasQ==
 
 "@eslint/eslintrc@^0.4.2":
   version "0.4.2"

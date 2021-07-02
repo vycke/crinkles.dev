@@ -16,22 +16,22 @@
 
 	let projects = [
 		{
-			type: 'Project',
-			title: 'State machine editor',
-			href: 'https://fsm.crinkles.io',
-			description: 'Visual editor for finite state machines'
-		},
-		{
 			type: '(S)CSS',
-			title: 'Feo CSS',
+			title: 'Feo',
 			href: 'https://github.com/crinklesio/feo-css',
 			description: 'Layout and utility based CSS framework'
 		},
 		{
-			type: 'JavaScript',
-			title: 'DIGL',
-			href: 'https://github.com/crinklesio/digl',
-			description: 'Directed graph Layout algorithm'
+			type: 'SvelteKit project',
+			title: 'DocKit',
+			href: 'https://github.com/crinklesio/dockit',
+			description: 'Markdown based document website template'
+		},
+		{
+			type: 'React project',
+			title: 'State machine editor',
+			href: 'https://fsm.crinkles.io',
+			description: 'Visual editor for finite state machines'
 		}
 	];
 
@@ -51,7 +51,7 @@
 </svelte:head>
 
 <main class="center center-w-5 center-g-1 | mt-2">
-	<section class="split-left split-min-w-1 split-g-3">
+	<section class="panel-l panel-w-3 panel-g-3">
 		<div class="flow-y flow-g-0 mt-000">
 			<Logo class="self-start flow-next-2" />
 			<h1>Hi, I'm Kevin.</h1>
@@ -63,7 +63,7 @@
 				<a href="https://finaps.nl" title="Website of Finaps B.V.">Finaps</a>.
 			</span>
 
-			<i class="rainbow | flow-self-2 | text-0 text-center px-3">
+			<i class="rainbow | flow-self-2 | text-00 text-center px-3">
 				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 				uniqueness."
 			</i>
@@ -85,6 +85,8 @@
 			</a>
 		</aside>
 	</section>
+
+	<div class="self-end | no-decoration text-0 bold">Projects</div>
 	<section class="tiles tiles-w-1 tiles-g-0 | mt-1 mb-3">
 		{#each projects as project}
 			<Card>

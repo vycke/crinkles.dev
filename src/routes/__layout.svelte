@@ -33,6 +33,7 @@
 	<meta property="og:image" content={img} />
 	<meta name="twitter:image" content={img} />
 	<meta name="twitter:card" content="summary" />
+	<meta name="color-scheme" content="dark" />
 </svelte:head>
 
 <slot />

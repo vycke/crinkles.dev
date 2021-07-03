@@ -44,4 +44,10 @@
 		-webkit-backdrop-filter: blur(15px);
 		backdrop-filter: blur(15px);
 	}
+
+	@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+		header {
+			background-color: var(--color-gray-500);
+		}
+	}
 </style>

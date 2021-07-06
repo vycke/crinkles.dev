@@ -38,7 +38,7 @@
 
 <slot />
 
-<footer class="flex-col items-start | p-1 text-00 bg-gray-400">
+<footer class="flex-col items-start | p-1 text-00 bg-gray-300">
 	<div class="endline self-center mb-00" />
 	<div class="links | flow-x flow-g-00 | self-center">
 		<a href="/meta" sveltekit:prefetch class="flex-grow p-000">© crinkles</a>

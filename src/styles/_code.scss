@@ -18,7 +18,7 @@
 .token.comment,
 .token.keyword,
 .token.important {
-	color: var(--color-gray-300);
+	color: var(--color-gray-200);
 }
 
 .token.comment,
@@ -45,7 +45,7 @@ code {
 	font-size: 0.825em;
 	color: var(--color-green);
 	font-family: var(--monospace);
-	background-color: var(--color-gray-400);
+	background-color: var(--color-gray-300);
 	hyphens: none;
 }
 
@@ -86,7 +86,7 @@ pre[data-lang] > span {
 	font-size: var(--text-000);
 	font-family: var(--monospace);
 	color: var(--color-green);
-	background-color: var(--color-gray-500);
+	background-color: var(--color-gray-400);
 	text-transform: uppercase;
 	border-bottom-left-radius: var(--radius-000);
 	padding: 0 var(--spacing-00);

@@ -18,7 +18,7 @@
 		{
 			type: '(S)CSS',
 			title: 'Feo',
-			href: 'https://github.com/crinklesio/feo-css',
+			href: 'https://feo.crinkles.io',
 			description: 'Layout and utility based CSS framework'
 		},
 		{
@@ -55,7 +55,7 @@
 		<div class="flow-y flow-g-0 mt-000">
 			<Logo class="self-start flow-next-2" />
 			<h1>Hi, I'm Kevin.</h1>
-			<span class="text-00 text-gray-300">
+			<span class="text-00 text-gray-200">
 				<Crinkle /> I'm a creative software engineer that loves <i>front-end</i> and <i>CSS</i>. I
 				research and dgive advise about scalable and maintainable user interfaces and (enterprise)
 				to others. I occasionally
@@ -71,13 +71,13 @@
 		<aside class="flow-y flow-g-0">
 			{#each articles as article}
 				<Card>
-					<span class="text-000 text-gray-300 monospace uppercase">
+					<span class="text-000 text-gray-200 monospace uppercase">
 						{article.formattedDate}
 					</span>
 					<h2 class="text-0 text-gray-100">
 						<a href="/writing/{article.slug}">{article.title}</a>
 					</h2>
-					<!-- <span class="text-00 text-gray-300 mt-000">{article.description}</span> -->
+					<!-- <span class="text-00 text-gray-200 mt-000">{article.description}</span> -->
 				</Card>
 			{/each}
 			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch>
@@ -90,13 +90,13 @@
 	<section class="tiles tiles-w-1 tiles-g-0 | mt-1 mb-3">
 		{#each projects as project}
 			<Card>
-				<span class="text-000 text-gray-300 monospace">{project.type}</span>
+				<span class="text-000 text-gray-200 monospace">{project.type}</span>
 				<h2 class="text-0 text-gray-100">
 					<a href={project.href} title="Link to {project.title}">
 						{project.title}
 					</a>
 				</h2>
-				<span class="text-00 text-gray-300 mt-000">{project.description}</span>
+				<span class="text-00 text-gray-200 mt-000">{project.description}</span>
 			</Card>
 		{/each}
 	</section>
@@ -117,9 +117,9 @@
 	}
 
 	.rainbow::selection {
-		color: var(--color-gray-500);
+		color: var(--color-gray-400);
 		background-clip: none;
 		-webkit-background-clip: none;
-		-webkit-text-fill-color: var(--color-gray-500);
+		-webkit-text-fill-color: var(--color-gray-400);
 	}
 </style>

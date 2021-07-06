@@ -23,11 +23,11 @@
 		</div>
 		{#each group[1] as article}
 			<div class="flex-col | click-area">
-				<span class="text-000 text-gray-300 uppercase monospace">{article.formattedDate}</span>
+				<span class="text-000 text-gray-200 uppercase monospace">{article.formattedDate}</span>
 				<h2 class="text-0 text-gray-100">
 					<a href="/writing/{article.slug}">{article.title}</a>
 				</h2>
-				<span class="text-00 text-gray-300 mt-000">{article.description}</span>
+				<span class="text-00 text-gray-200 mt-000">{article.description}</span>
 			</div>
 		{/each}
 	{/each}
@@ -35,6 +35,6 @@
 
 <style lang="scss">
 	.year {
-		border-bottom: 2px solid var(--color-gray-300);
+		border-bottom: 2px solid var(--color-gray-200);
 	}
 </style>

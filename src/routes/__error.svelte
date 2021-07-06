@@ -28,14 +28,14 @@
 		<span role="img" aria-label="Sorry emoji" aria-labelledby=""> 🙈🙉🙊 </span>
 	</h1>
 	<h2 class="text-center">Something went wrong...</h2>
-	<span class="text-gray-300 mb-2 text-0 text-center">
+	<span class="text-gray-200 mb-2 text-0 text-center">
 		The page you were looking for probably does not exist (anymore) or has moved. But feel free to
 		look at one of my latest articles!
 	</span>
 	<aside class="flow-y flow-g-0">
 		{#each articles as article}
 			<Card>
-				<span class="text-000 text-gray-300 monospace uppercase">
+				<span class="text-000 text-gray-200 monospace uppercase">
 					{article.formattedDate}
 				</span>
 				<h2 class="text-0 text-gray-100">

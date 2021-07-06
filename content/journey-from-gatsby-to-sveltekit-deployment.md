@@ -39,7 +39,7 @@ This is driven by the files transferred on loading the page. The Gatsby version 
 
 But we can test more than the homepage. Other pages did not score that well for SvelteKit. One of the bigger issues found by web.dev is redirects. At the moment of building the website, SvelteKit has _no_ trailing slashes in URLs [by design](https://github.com/sveltejs/kit/issues/192). But, Netlify [normalizes](https://docs.netlify.com/routing/redirects/redirect-options/#trailing-slash) all URLs to a version with trailing slashes. It adds the below redirect headers to each page.
 
-```
+```bash
 /post-title /post-title/ 301!
 ```
 

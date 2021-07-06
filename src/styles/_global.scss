@@ -7,7 +7,7 @@ body {
 	min-width: var(--size-1);
 	color: var(--color-gray-100);
 	font-family: var(--sans-serif);
-	background-color: var(--color-gray-500);
+	background-color: var(--color-gray-400);
 }
 
 // HEADINGS
@@ -61,7 +61,7 @@ h3 a {
 }
 
 ::selection {
-	color: var(--color-gray-500) !important;
+	color: var(--color-gray-400) !important;
 	background: var(--color-gray-100) !important;
 }
 
@@ -79,8 +79,7 @@ em {
 .post aside {
 	display: block;
 	padding: var(--spacing-0) var(--spacing-2);
-	color: var(--color-gray-200);
-	background-color: var(--color-gray-400);
+	background-color: var(--color-gray-300);
 	border: 0.15rem solid;
 	border-image-slice: 1;
 	border-image-source: var(--gradient);
@@ -91,7 +90,7 @@ em {
 blockquote {
 	display: block;
 	padding: var(--spacing-0) var(--spacing-2);
-	color: var(--color-gray-300);
+	color: var(--color-gray-200);
 	font-family: var(--serif);
 	font-size: var(--text-0);
 	text-align: center;

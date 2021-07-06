@@ -6,12 +6,7 @@
 * Generate CSS custom properties
 *******/
 :root {
-	--gradient: -webkit-linear-gradient(
-		45deg,
-		var(--color-green),
-		var(--color-blay),
-		var(--color-blue)
-	);
+	--gradient: -webkit-linear-gradient(45deg, var(--color-green), var(--color-blue));
 }
 
 @import 'global';

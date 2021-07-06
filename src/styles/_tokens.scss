@@ -1,14 +1,17 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
+
+$h: 218;
+$s: 25%;
+
 $feo-colors: (
-	'gray-100': #fafafa,
-	'gray-200': #ebe9e3,
-	'gray-300': #a7b1bc,
-	'gray-400': #19232f,
-	'gray-500': #0e141e,
+	'gray-100': hsl($h, $s, 98%),
+	'gray-200': hsl($h, $s, 70%),
+	'gray-300': hsl($h, $s, 18%),
+	'gray-400': hsl($h, $s, 9%),
 	'blue': #5467ff,
-	'blay': #81a3c1,
-	'green': #7dc4a8
+	'purple': #9187ff,
+	'green': #00b891
 );
 
 // Typography system (golden ratio)

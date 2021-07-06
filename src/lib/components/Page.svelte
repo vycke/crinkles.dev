@@ -47,7 +47,7 @@
 
 	@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 		header {
-			background-color: var(--color-gray-500);
+			background-color: var(--color-gray-400);
 		}
 	}
 </style>

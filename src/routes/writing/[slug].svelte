@@ -34,7 +34,7 @@
 </svelte:head>
 
 <Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-	<span class="text-gray-300 uppercase flow-next-none monospace text-00">
+	<span class="text-gray-200 uppercase flow-next-none monospace text-00">
 		<time datetime={date}>{date}</time>
 		{` • ${num}`}
 	</span>
@@ -55,11 +55,11 @@
 	}
 
 	h1::selection {
-		color: var(--color-gray-500);
+		color: var(--color-gray-400);
 		background: none;
 		background-clip: none;
 		-webkit-background-clip: none;
-		-webkit-text-fill-color: var(--color-gray-500);
+		-webkit-text-fill-color: var(--color-gray-400);
 	}
 
 	:global(.post h2 + p) {

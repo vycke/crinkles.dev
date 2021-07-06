@@ -51,12 +51,12 @@
 	</svg>
 </a>
 
-<style lang="scss">
+<style>
 	.logo {
 		transition: background-color ease-in-out 200ms;
+	}
 
-		svg {
-			display: block;
-		}
+	.logo svg {
+		display: block;
 	}
 </style>

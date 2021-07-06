@@ -50,7 +50,7 @@
 	</div>
 </footer>
 
-<style lang="scss">
+<style>
 	footer {
 		position: relative;
 	}

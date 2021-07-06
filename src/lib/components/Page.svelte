@@ -35,7 +35,7 @@
 </main>
 <slot name="pagination" />
 
-<style lang="scss">
+<style>
 	header {
 		position: -webkit-sticky;
 		position: sticky;

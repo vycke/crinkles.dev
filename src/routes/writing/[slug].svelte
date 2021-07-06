@@ -45,7 +45,7 @@
 
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
-<style lang="scss">
+<style>
 	h1 {
 		background: var(--gradient);
 		background-clip: text;
@@ -73,10 +73,11 @@
 
 	:global(.post h2:hover a) {
 		text-decoration-line: underline;
-		&::after {
-			content: ' #';
-			color: var(--color-green);
-		}
+	}
+
+	:global(.post h2:hover a::after) {
+		content: ' #';
+		color: var(--color-green);
 	}
 
 	:global(.post img) {

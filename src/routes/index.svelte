@@ -50,20 +50,20 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | mt-2">
+<main class="center center-w-5 center-g-1 | my-2">
 	<section class="panel-l panel-w-3 panel-g-3">
-		<div class="flow-y flow-g-0 mt-000">
+		<div class="flow-y flow-g-1 mt-3">
 			<Logo class="self-start flow-next-2" />
 			<h1>Hi, I'm Kevin.</h1>
-			<span class="text-00 text-gray-200">
-				<Crinkle /> I'm a creative software engineer that loves <i>front-end</i> and <i>CSS</i>. I
-				research and dgive advise about scalable and maintainable user interfaces and (enterprise)
-				to others. I occasionally
-				<a href="/writing">write</a> about what I find, feel and think. Currently writing code at
-				<a href="https://finaps.nl" title="Website of Finaps B.V.">Finaps</a>.
+			<span class="text-0 text-gray-200">
+				<Crinkle /> I'm a creative software engineer and team lead. I love <i>front-end</i> and
+				<i>CSS</i>. But you could already tell that based on all the
+				<a href="/writing" sveltekit:prefetch>articles</a>
+				I write, right? Nah, you probably haven't read them... but you should! I am proud of them. This
+				website is all me and my thoughts. Nothing more, nothing less.
 			</span>
 
-			<i class="rainbow | flow-self-2 | text-00 text-center px-3">
+			<i class="rainbow | flow-self-3 | text-0 text-center">
 				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 				uniqueness."
 			</i>
@@ -77,16 +77,26 @@
 					<h2 class="text-0 text-gray-100">
 						<a href="/writing/{article.slug}">{article.title}</a>
 					</h2>
-					<!-- <span class="text-00 text-gray-200 mt-000">{article.description}</span> -->
+					<span class="text-00 text-gray-200 mt-000">{article.description}</span>
 				</Card>
 			{/each}
 			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch>
-				View more articles →
+				View more articles <Crinkle />
 			</a>
 		</aside>
 	</section>
 
-	<div class="self-end | no-decoration text-0 bold">Projects</div>
+	<h2 class="text-1 bold mb-000"><Crinkle /> Projects</h2>
+	<aside class="panel-l panel-w-3">
+		<p class="text-0 text-gray-200">
+			I have created many (small) things over the years in web-development country. But only since I
+			started this website, I started to put all my work online. These are some of my recent
+			projects I think are worth sharing.
+		</p>
+		<div />
+		<!-- Extra div to make the panel work -->
+	</aside>
+
 	<section class="tiles tiles-w-1 tiles-g-0 | mt-1 mb-3">
 		{#each projects as project}
 			<Card>
@@ -121,5 +131,9 @@
 		background-clip: none;
 		-webkit-background-clip: none;
 		-webkit-text-fill-color: var(--color-gray-400);
+	}
+
+	.max-text {
+		max-width: var(--size-2);
 	}
 </style>

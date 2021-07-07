@@ -11,33 +11,9 @@
 <script>
 	import Logo from '$lib/components/Logo.svelte';
 	import Card from '$lib/components/Card.svelte';
+	import { description, principles, projects, title } from '$lib/constants';
 
 	export let articles;
-
-	let projects = [
-		{
-			type: '(S)CSS',
-			title: 'Feo',
-			href: 'https://feo.crinkles.io',
-			description: 'Layout and utility based CSS framework'
-		},
-		{
-			type: 'SvelteKit project',
-			title: 'DocKit',
-			href: 'https://github.com/crinklesio/dockit',
-			description: 'Markdown based document website template'
-		},
-		{
-			type: 'React project',
-			title: 'State machine editor',
-			href: 'https://fsm.crinkles.io',
-			description: 'Visual editor for finite state machines'
-		}
-	];
-
-	let title = 'Kevin Pennekamp | Crinkles';
-	let description =
-		'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
 </script>
 
 <svelte:head>
@@ -50,25 +26,27 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | my-2">
+<main class="center center-w-5 center-g-1 | mt-2 mb-3">
 	<section class="panel-l panel-w-3 panel-g-3">
-		<div class="flow-y flow-g-1 mt-3">
+		<div class="flow-y flow-g-0 mt-1">
 			<Logo class="self-start flow-next-2" />
-			<h1>Hi, I'm Kevin.</h1>
+			<h1><Crinkle /> Hi, I'm Kevin.</h1>
 			<span class="text-0 text-gray-200">
-				<Crinkle /> I'm a creative software engineer and team lead. I love <i>front-end</i> and
-				<i>CSS</i>. But you could already tell that based on all the
-				<a href="/writing" sveltekit:prefetch>articles</a>
-				I write, right? Nah, you probably haven't read them... but you should! I am proud of them. This
-				website is all me and my thoughts. Nothing more, nothing less.
+				I'm a creative software engineer and team lead. I love <i>front-end</i> and
+				<i>CSS</i>, and <a href="/writing" sveltekit:prefetch>write</a> about them. As an engineer, I
+				live a some basic principles.
 			</span>
-
-			<i class="rainbow | flow-self-3 | text-0 text-center">
-				"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
-				uniqueness."
-			</i>
+			{#each principles as principle, index}
+				<div class="flex-row items-start">
+					<span class="italic serif text-0 text-green mr-0 bold">{index + 1}.</span>
+					<div class="flex-col">
+						<span class="rainbow text-0 italic serif text-left">{principle.title}</span>
+						<span class="text-gray-200 text-0">{principle.description}</span>
+					</div>
+				</div>
+			{/each}
 		</div>
-		<aside class="flow-y flow-g-0">
+		<aside class="flow-y flow-g-0 | mt-2">
 			{#each articles as article}
 				<Card>
 					<span class="text-000 text-gray-200 monospace uppercase">
@@ -80,22 +58,18 @@
 					<span class="text-00 text-gray-200 mt-000">{article.description}</span>
 				</Card>
 			{/each}
-			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch>
+			<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-1 bold" sveltekit:prefetch>
 				View more articles <Crinkle />
 			</a>
 		</aside>
 	</section>
 
-	<h2 class="text-1 bold mb-000"><Crinkle /> Projects</h2>
-	<aside class="panel-l panel-w-3">
-		<p class="text-0 text-gray-200">
-			I have created many (small) things over the years in web-development country. But only since I
-			started this website, I started to put all my work online. These are some of my recent
-			projects I think are worth sharing.
-		</p>
-		<div />
-		<!-- Extra div to make the panel work -->
-	</aside>
+	<div class="rainbow | serif italic text-2 text-center max-w-4 mb-3">
+		"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
+		uniqueness."
+	</div>
+
+	<h2 class="text-1 mb-000"><Crinkle /> Recent projects</h2>
 
 	<section class="tiles tiles-w-1 tiles-g-0 | mt-1 mb-3">
 		{#each projects as project}
@@ -118,7 +92,6 @@
 <style>
 	.rainbow {
 		background: var(--gradient);
-		align-self: center;
 		width: fit-content;
 		background-clip: text;
 		color: transparent;
@@ -133,7 +106,7 @@
 		-webkit-text-fill-color: var(--color-gray-400);
 	}
 
-	.max-text {
-		max-width: var(--size-2);
+	.max-w-4 {
+		max-width: var(--size-4);
 	}
 </style>

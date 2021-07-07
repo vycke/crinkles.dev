@@ -4,7 +4,7 @@
 	import Page from '$lib/components/Page.svelte';
 </script>
 
-<Page class="flow-y flow-g-0 | mb-3 text-00" title="Meta | Crinkles" headerTitle="Meta.">
+<Page class="flow-y flow-g-0 | mb-3 text-0" title="Meta | Crinkles" headerTitle="meta.">
 	<blockquote>
 		A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 		uniqueness.
@@ -40,8 +40,8 @@
 			SvelteKit
 		</a>
 		and my own
-		<a href="https://github.com/crinklesio/feo-css" title="Github link for CSS framework">
-			(S)CSS framework</a
+		<a href="https://feo.crinkles.io" title="Link to documentation website of Feo">
+			(S)CSS framework called Feo</a
 		>, based on
 		<a href="https://cube.fyi" title="Website for the CUBE CSS framework"> CUBE CSS</a>.
 	</p>

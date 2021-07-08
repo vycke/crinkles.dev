@@ -1,29 +1,10 @@
 <script>
-	import { spring } from 'svelte/motion';
-
-	let triggered = false;
-	let springyRotation = spring(0, { stiffness: 0.2, damping: 0.15 });
-	$: springyRotation.set(triggered ? -20 : 0);
-	$: style = `transform: rotate(${$springyRotation}deg)`;
-
-	$: if (triggered)
-		window.setTimeout(() => {
-			triggered = false;
-		}, 200);
-
-	function trigger() {
-		triggered = true;
-	}
-
 	let klass = undefined;
 	export { klass as class };
 	export let size = 32;
 </script>
 
 <a
-	on:mouseenter={trigger}
-	on:click={trigger}
-	{style}
 	href="/"
 	aria-label="Logo that redirects to the homepage"
 	class={`logo | no-decoration radius-3 hover:bg-gray-300 ${klass}`}
@@ -60,7 +41,11 @@
 
 <style>
 	.logo {
-		transition: background-color ease-in-out 200ms;
+		transition: transform 300ms ease-in-out;
+	}
+
+	.logo:hover {
+		transform: rotate(360deg);
 	}
 
 	.logo svg {

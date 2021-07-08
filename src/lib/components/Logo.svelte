@@ -51,7 +51,7 @@
 				gradientUnits="userSpaceOnUse"
 			>
 				<stop stop-color="var(--color-green)" />
-				<stop offset="0.5" stop-color="var(--color-purple)" />
+				<!-- <stop offset="0.5" stop-color="var(--color-purple)" /> -->
 				<stop offset="1" stop-color="var(--color-blue)" />
 			</linearGradient>
 		</defs>

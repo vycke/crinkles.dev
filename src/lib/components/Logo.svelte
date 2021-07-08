@@ -17,6 +17,7 @@
 
 	let klass = undefined;
 	export { klass as class };
+	export let size = 32;
 </script>
 
 <a
@@ -27,7 +28,13 @@
 	aria-label="Logo that redirects to the homepage"
 	class={`logo | no-decoration radius-3 hover:bg-gray-300 ${klass}`}
 >
-	<svg width="32" height="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg
+		width={size}
+		height={size}
+		viewBox="0 0 50 50"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
 		<path
 			fill-rule="evenodd"
 			clip-rule="evenodd"
@@ -44,7 +51,7 @@
 				gradientUnits="userSpaceOnUse"
 			>
 				<stop stop-color="var(--color-green)" />
-				<!-- <stop offset="0.5" stop-color="var(--color-purple)" /> -->
+				<stop offset="0.5" stop-color="var(--color-purple)" />
 				<stop offset="1" stop-color="var(--color-blue)" />
 			</linearGradient>
 		</defs>

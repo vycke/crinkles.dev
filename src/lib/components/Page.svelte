@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>{title} | Crinkles</title>
+	<title>{title} • Crinkles</title>
 	<meta name="twitter:title" content={title} />
 	<meta property="og:title" content={title} />
 
@@ -22,19 +22,22 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<header class="center center-w-4 center-g-000 | mt-2 mb-0">
-	<div class="flex-row items-center py-000 px-1">
-		<Logo />
-		{#if headerTitle}
-			<h1 class="text-0 bold ml-1 monospace">/ {headerTitle}</h1>
-		{/if}
-	</div>
-</header>
+<div class="pancake text-0 relative">
+	<header class="center center-w-4 center-g-000 | mt-2 mb-0">
+		<div class="flex-row items-center py-000 px-1">
+			<Logo />
+			{#if headerTitle}
+				<h1 class="text-0 bold ml-1 monospace">/ {headerTitle}</h1>
+			{/if}
+		</div>
+	</header>
 
-<main class={`center center-w-4 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
-	<slot />
-</main>
-<slot name="pagination" />
+	<main class={`center center-w-4 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
+		<slot />
+	</main>
+
+	<slot name="pagination" />
+</div>
 
 <style>
 	header {

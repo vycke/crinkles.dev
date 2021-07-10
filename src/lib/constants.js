@@ -1,4 +1,4 @@
-export const title = 'Kevin Pennekamp | Crinkles';
+export const title = 'Kevin Pennekamp';
 export const description =
 	'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
 

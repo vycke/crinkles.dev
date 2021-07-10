@@ -3,7 +3,7 @@
 	export async function load({ page, fetch }) {
 		const res = await fetch(`/api/${page.params.slug}.json`);
 		if (res.ok) {
-			const { post, next, prev } = await res.json();
+			const { post, next, prev, headers } = await res.json();
 			return { props: { post, next, prev } };
 		}
 
@@ -33,19 +33,42 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-	<span class="text-gray-200 uppercase flow-next-none monospace text-00">
-		<time datetime={date}>{date}</time>
-		{` • ${num}`}
-	</span>
-	<h1>{post.title}</h1>
+<div class="panel-r panel-s-1 panel-w-4">
+	<Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
+		<span class="text-gray-200 uppercase flow-next-none monospace text-00">
+			<time datetime={date}>{date}</time>
+			{` • ${num}`}
+		</span>
+		<h1>{post.title}</h1>
 
-	{@html post.html}
-</Page>
+		{@html post.html}
+	</Page>
+	<section class="flow-y flow-g-000 px-1 pt-3 self-start">
+		<span class="text-00 uppercase text-green">Table of contents</span>
+		{#each post.headers as header}
+			<a href="#{header.id}" class="text-00 no-decoration">{header.label}</a>
+		{/each}
+	</section>
+</div>
 
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
 <style>
+	section {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+	}
+
+	a,
+	a:visited {
+		color: var(--color-gray-200);
+	}
+
+	a:hover {
+		color: var(--color-green);
+	}
+
 	h1 {
 		background: var(--gradient);
 		background-clip: text;
@@ -60,6 +83,20 @@
 		background-clip: none;
 		-webkit-background-clip: none;
 		-webkit-text-fill-color: var(--color-gray-400);
+	}
+
+	/* :global(.post) {
+		position: relative;
+	} */
+
+	:global(.post aside) {
+		display: block;
+		padding: var(--spacing-0) var(--spacing-2);
+		background-color: var(--color-gray-300);
+		border: 0.15rem solid;
+		border-image-slice: 1;
+		border-image-source: var(--gradient);
+		font-size: var(--text-00);
 	}
 
 	:global(.post h2 + p) {

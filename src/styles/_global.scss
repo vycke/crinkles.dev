@@ -76,16 +76,6 @@ em {
 	color: var(--color-green);
 }
 
-.post aside {
-	display: block;
-	padding: var(--spacing-0) var(--spacing-2);
-	background-color: var(--color-gray-300);
-	border: 0.15rem solid;
-	border-image-slice: 1;
-	border-image-source: var(--gradient);
-	font-size: var(--text-00);
-}
-
 // QUOTES
 blockquote {
 	display: block;
@@ -105,6 +95,10 @@ blockquote {
 		text-align: right;
 		color: var(--color-green);
 	}
+}
+
+[id] {
+	scroll-margin-top: 5rem;
 }
 
 li {

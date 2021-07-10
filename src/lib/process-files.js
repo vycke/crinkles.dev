@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { promises as fs } from 'fs';
 import fm from 'front-matter';
 import { resolve } from 'path';
@@ -25,6 +24,27 @@ function format(iso) {
 	return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 }
 
+function getHeaders(html) {
+	const headers = [];
+	const elements = html.match(new RegExp('<h2(.*?)</h2>', 'g')) || [];
+
+	elements.forEach((e) => {
+		const tokens = e
+			.replace('</h2>', '')
+			.replace('<h2', '')
+			.replace('id="', '')
+			.replace('</a>', '')
+			.split('">');
+
+		const id = tokens[0].split('>')[0].replace('id=', '').trim();
+		const label = tokens[1].replace('<code>', '').replace('</code>', '').trim();
+
+		headers.push({ id, label });
+	});
+
+	return headers;
+}
+
 export async function getArticle(slug, html = true) {
 	const _path = resolve('content', slug + '.md');
 	const src = await fs.readFile(_path, 'utf8');
@@ -33,7 +53,9 @@ export async function getArticle(slug, html = true) {
 	const formattedDate = format(matter.attributes.date);
 
 	if (!html) return { slug, formattedDate, ...matter.attributes };
-	return { slug, html: renderer(body), formattedDate, ...matter.attributes };
+	const _html = renderer(body);
+	const headers = getHeaders(_html);
+	return { slug, html: _html, headers, formattedDate, ...matter.attributes };
 }
 
 export async function getArticles(length) {

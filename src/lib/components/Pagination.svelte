@@ -3,7 +3,7 @@
 	export let previous = undefined;
 </script>
 
-<section class="panel-l panel-w-3 panel-g-1 | p-1 my-3">
+<section class="panel-l panel-w-3 panel-g-1 | p-1 my-4">
 	{#if next}
 		<a class="flex-col items-start justify-center no-decoration" sveltekit:prefetch href={next.url}>
 			<span class="text-gray-200 text-00 uppercase monospace">← Next</span>

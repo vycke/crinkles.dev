@@ -3,36 +3,12 @@
 *******/
 html,
 body {
-	visibility: visible !important; /* hack to avoid Flash Of Unstyled Content FOUC */
-	min-width: var(--size-1);
 	color: var(--color-gray-100);
-	font-family: var(--sans-serif);
 	background-color: var(--color-gray-400);
 }
 
-// HEADINGS
-h1,
-h2,
-h3 {
-	width: 100%;
-	line-height: 1.4;
-	transition: all 200ms ease-in-out;
-}
-
-h1 {
-	font-size: var(--text-3);
-}
-
-h2 {
-	font-size: var(--text-2);
-}
-
-h3 {
-	font-size: var(--text-1);
-}
-
 main {
-	min-width: var(--size-1);
+	min-width: var(--bp-1);
 }
 
 // LINKS
@@ -41,17 +17,13 @@ a > *,
 a:link,
 a:visited,
 a:active {
-	touch-action: manipulation;
+	transition: all 200ms ease;
 	text-decoration-color: var(--color-green);
-	text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:hover > * {
 	color: var(--color-green);
-	transition: all 200ms ease-in-out;
-	text-decoration-color: var(--color-green);
-	text-decoration-thickness: 2px;
 }
 
 h1 a,
@@ -65,10 +37,6 @@ h3 a {
 	background: var(--color-gray-100) !important;
 }
 
-p {
-	hyphens: auto;
-}
-
 i,
 em {
 	font-style: italic;
@@ -79,19 +47,19 @@ em {
 // QUOTES
 blockquote {
 	display: block;
-	padding: var(--spacing-0) var(--spacing-2);
+	padding: var(--size-0) var(--size-2);
 	color: var(--color-gray-200);
 	font-family: var(--serif);
-	font-size: var(--text-0);
+	font-size: var(--size-0);
 	text-align: center;
 	font-style: italic;
 
 	cite {
 		display: block;
 		width: 100%;
-		font-size: var(--text-00);
+		font-size: var(--size-00);
 		font-style: italic;
-		margin-top: var(--spacing-00);
+		margin-top: var(--size-00);
 		text-align: right;
 		color: var(--color-green);
 	}
@@ -103,7 +71,7 @@ blockquote {
 
 li {
 	padding-left: 0;
-	margin-left: var(--spacing-2);
+	margin-left: var(--size-2);
 	line-height: 1.5;
 
 	&::marker {
@@ -114,17 +82,17 @@ li {
 // Styled unordered list
 ul {
 	list-style: outside;
-	padding-left: var(--spacing-2);
+	padding-left: var(--size-2);
 
 	> li::marker {
-		font-size: var(--text-1);
+		font-size: var(--size-1);
 	}
 }
 
 // Ordered list
 ol {
 	list-style: decimal outside;
-	padding-left: var(--spacing-2);
+	padding-left: var(--size-2);
 
 	> li::marker {
 		font-style: italic;
@@ -134,6 +102,6 @@ ol {
 
 @media (max-width: 50rem) {
 	blockquote {
-		padding: var(--spacing-0);
+		padding: var(--size-0);
 	}
 }

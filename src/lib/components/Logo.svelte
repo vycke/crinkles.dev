@@ -7,7 +7,7 @@
 <a
 	href="/"
 	aria-label="Logo that redirects to the homepage"
-	class={`logo | no-decoration radius-3 hover:bg-gray-300 ${klass}`}
+	class={`logo | transition-300 no-decoration radius-3 hover:bg-gray-300 ${klass}`}
 >
 	<svg
 		width={size}
@@ -40,10 +40,6 @@
 </a>
 
 <style>
-	.logo {
-		transition: transform 300ms ease-in-out;
-	}
-
 	.logo:hover {
 		transform: rotate(360deg);
 	}

@@ -4,7 +4,7 @@
 	import Page from '$lib/components/Page.svelte';
 </script>
 
-<Page class="flow-y flow-g-0 | mb-3 text-0" title="Meta | Crinkles" headerTitle="meta.">
+<Page class="flow-y flow-g-0 | mb-4 text-0" title="Meta | Crinkles" headerTitle="meta.">
 	<blockquote>
 		A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 		uniqueness.

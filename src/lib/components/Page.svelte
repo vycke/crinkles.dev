@@ -22,8 +22,8 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<div class="pancake text-0 relative">
-	<header class="center center-w-4 center-g-000 | mt-2 mb-0">
+<div class="flex-grow text-0 relative">
+	<header class="sticky post-0 center center-w-4 center-g-000 | mt-2 mb-0">
 		<div class="flex-row items-center py-000 px-1">
 			<Logo />
 			{#if headerTitle}
@@ -35,15 +35,16 @@
 	<main class={`center center-w-4 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
 		<slot />
 	</main>
-
-	<slot name="pagination" />
 </div>
 
 <style>
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
 	header {
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0;
 		z-index: 100;
 		-webkit-backdrop-filter: blur(15px);
 		backdrop-filter: blur(15px);

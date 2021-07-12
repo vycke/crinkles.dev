@@ -26,7 +26,7 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | mt-2 mb-3">
+<main class="center center-w-5 center-g-1 | mt-2 mb-4">
 	<section class="panel-l panel-w-3 panel-g-4 pt-1">
 		<div class="flow-y flow-g-0">
 			<Logo class="self-start flow-next-2" />
@@ -72,7 +72,7 @@
 
 	<h2 class="text-1 mb-0"><Crinkle /> Recent projects</h2>
 
-	<section class="tiles tiles-w-1 tiles-g-0 | mb-3">
+	<section class="tiles tiles-w-1 tiles-g-0 | mb-4">
 		{#each projects as project}
 			<Card>
 				<span class="text-000 text-gray-200 monospace">{project.type}</span>
@@ -86,9 +86,6 @@
 		{/each}
 	</section>
 </main>
-
-<!-- Hacker div for the pancake class -->
-<div />
 
 <style>
 	.rainbow {
@@ -108,6 +105,6 @@
 	}
 
 	.max-w-4 {
-		max-width: var(--size-4);
+		max-width: var(--bp-4);
 	}
 </style>

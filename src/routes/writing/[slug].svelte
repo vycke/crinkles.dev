@@ -43,7 +43,7 @@
 
 		{@html post.html}
 	</Page>
-	<section class="flow-y flow-g-000 px-1 pt-3 self-start">
+	<section class="sticky post-0 flow-y flow-g-000 px-1 pt-4 self-start">
 		<span class="text-00 uppercase text-green">Table of contents</span>
 		{#each post.headers as header}
 			<a href="#{header.id}" class="text-00 no-decoration">{header.label}</a>
@@ -54,12 +54,6 @@
 <Pagination next={pageNext} previous={pagePrevious} slot="pagination" />
 
 <style>
-	section {
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0;
-	}
-
 	a,
 	a:visited {
 		color: var(--color-gray-200);
@@ -85,22 +79,18 @@
 		-webkit-text-fill-color: var(--color-gray-400);
 	}
 
-	/* :global(.post) {
-		position: relative;
-	} */
-
 	:global(.post aside) {
 		display: block;
-		padding: var(--spacing-0) var(--spacing-2);
+		padding: var(--size-0) var(--size-2);
 		background-color: var(--color-gray-300);
 		border: 0.15rem solid;
 		border-image-slice: 1;
 		border-image-source: var(--gradient);
-		font-size: var(--text-00);
+		font-size: var(--size-00);
 	}
 
 	:global(.post h2 + p) {
-		margin-top: var(--spacing-00);
+		margin-top: var(--size-00);
 	}
 
 	:global(.post h2 a) {

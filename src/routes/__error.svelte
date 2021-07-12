@@ -23,7 +23,7 @@
 	<title>🙈🙉🙊</title>
 </svelte:head>
 
-<Page class="flow-y | mb-3 text-00" headerTitle={status}>
+<Page class="flow-y | mb-4 text-00" headerTitle={status}>
 	<h1 class="mb-00 text-center">
 		<span role="img" aria-label="Sorry emoji" aria-labelledby=""> 🙈🙉🙊 </span>
 	</h1>
@@ -44,7 +44,7 @@
 			</Card>
 		{/each}
 	</aside>
-	<a href="/writing" class="self-end | no-decoration mt-1 mb-3 text-0 bold" sveltekit:prefetch>
+	<a href="/writing" class="self-end | no-decoration mt-1 mb-4 text-0 bold" sveltekit:prefetch>
 		View more articles →
 	</a>
 </Page>

@@ -38,7 +38,7 @@
 
 <slot />
 
-<footer class="flex-col items-start | p-1 text-00 bg-gray-300">
+<footer class="relative flex-col items-start | p-1 text-00 bg-gray-300">
 	<div class="endline self-center mb-00" />
 	<div class="links | flow-x flow-g-00 | self-center">
 		<a href="/meta" sveltekit:prefetch class="flex-grow p-000">© crinkles</a>
@@ -51,17 +51,14 @@
 </footer>
 
 <style>
-	footer {
-		position: relative;
-	}
 	.endline {
 		position: absolute;
 		top: 0;
 		background: var(--gradient);
-		width: var(--size-0);
+		width: var(--bp-0);
 		height: 0.5rem;
 		margin-top: -0.25rem;
-		border-radius: var(--radius-3);
+		border-radius: var(--size-3);
 	}
 
 	.links {

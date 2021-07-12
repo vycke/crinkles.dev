@@ -1,15 +1,7 @@
 .scale {
-	transition: all 200ms ease-in-out;
+	transition: all 200ms ease;
 }
 
 .scale:hover {
-	box-shadow: 0 0 0 var(--spacing-000) var(--color-gray-300);
-}
-
-.normal {
-	font-weight: 400;
-}
-
-.relative {
-	position: relative;
+	box-shadow: 0 0 0 var(--size-000) var(--color-gray-300);
 }

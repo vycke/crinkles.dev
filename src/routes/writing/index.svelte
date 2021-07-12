@@ -1,5 +1,5 @@
 <script context="module">
-	export const prerender = true;
+	export const hydrate = false;
 	export async function load({ fetch }) {
 		const res = await fetch('/api/allArticles.json');
 		return { props: { articles: await res.json() } };

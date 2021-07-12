@@ -1,5 +1,5 @@
 <script context="module">
-	export const prerender = true;
+	export const hydrate = false;
 	export async function load({ page, fetch }) {
 		const res = await fetch(`/api/${page.params.slug}.json`);
 		if (res.ok) {

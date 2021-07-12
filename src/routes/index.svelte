@@ -54,7 +54,7 @@
 						{article.formattedDate}
 					</span>
 					<h2 class="text-0 text-gray-100">
-						<a href="/writing/{article.slug}">{article.title}</a>
+						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 					</h2>
 					<span class="text-00 text-gray-200 mt-000">{article.description}</span>
 				</Card>

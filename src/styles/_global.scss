@@ -8,7 +8,7 @@ body {
 }
 
 main {
-	min-width: var(--bp-1);
+	min-width: var(--bp-0);
 }
 
 // LINKS
@@ -72,7 +72,7 @@ blockquote {
 li {
 	padding-left: 0;
 	margin-left: var(--size-2);
-	line-height: 1.5;
+	line-height: var(--lh-00);
 
 	&::marker {
 		color: var(--color-blue);

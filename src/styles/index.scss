@@ -15,10 +15,18 @@
 @import 'code';
 
 // Utilities
-@import 'utils';
+.scale {
+	transition: all 200ms ease;
+}
+
+.scale:hover {
+	box-shadow: 0 0 0 var(--size-000) var(--color-gray-300);
+}
+
+.w-full {
+	width: 100%;
+}
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
 	min-height: 100vh;
 }

@@ -33,17 +33,17 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<div class="panel-r panel-s-1 panel-w-4">
+<div class="panel-r panel-f-0 panel-w-3">
 	<Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-		<span class="text-gray-200 uppercase flow-next-none monospace text-00">
+		<span class="text-gray-200 uppercase monospace text-00">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
-		<h1>{post.title}</h1>
+		<h1 class="flow-self-000">{post.title}</h1>
 
 		{@html post.html}
 	</Page>
-	<section class="sticky post-0 flow-y flow-g-000 px-1 pt-4 self-start">
+	<section class="sticky post-0 flow-y flow-g-000 px-1 pt-3 self-start">
 		<span class="text-00 uppercase text-green">Table of contents</span>
 		{#each post.headers as header}
 			<a href="#{header.id}" class="text-00 no-decoration">{header.label}</a>

@@ -23,7 +23,7 @@
 </svelte:head>
 
 <div class="flex-grow text-0 relative">
-	<header class="sticky post-0 center center-w-4 center-g-000 | mt-2 mb-0">
+	<header class="sticky post-0 center center-w-3 center-g-000 | mt-2 mb-0">
 		<div class="flex-row items-center py-000 px-1">
 			<Logo />
 			{#if headerTitle}
@@ -32,7 +32,7 @@
 		</div>
 	</header>
 
-	<main class={`center center-w-4 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
+	<main class={`center center-w-3 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
 		<slot />
 	</main>
 </div>

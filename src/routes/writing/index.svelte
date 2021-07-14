@@ -13,12 +13,12 @@
 	export let articles;
 </script>
 
-<Page class="flow-y flow-g-2 | mb-4" headerTitle="writing.">
+<Page class="flow-y flow-g-2 | mb-3" headerTitle="writing.">
 	{#each articles as group}
 		<div class="monospace">
 			<span class="text-0 text-green bold">{group[0]}</span>
 		</div>
-		<div class="tiles tiles-w-1 tiles-g-0">
+		<div class="tiles tiles-w-0 tiles-g-0">
 			{#each group[1] as article}
 				<Card>
 					<span class="text-000 text-gray-200 monospace uppercase">

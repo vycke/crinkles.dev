@@ -9,7 +9,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
-		"@crinkles/feo": "^2.1.0",
+		"@crinkles/feo": "^2.1.1",
 		"prismjs": "^1.24.1"
 	},
 	"devDependencies": {

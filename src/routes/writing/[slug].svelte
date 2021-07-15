@@ -39,7 +39,7 @@
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
-		<h1 class="flow-self-000">{post.title}</h1>
+		<h1 class="flow-self-none">{post.title}</h1>
 
 		{@html post.html}
 	</Page>

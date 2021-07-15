@@ -1,5 +1,5 @@
 // reset, settings & generic styles
-@import 'tokens';
+@import 'feo-config';
 @import '../../node_modules/@crinkles/feo/feo.scss';
 
 /*******
@@ -7,6 +7,8 @@
 *******/
 :root {
 	--gradient: -webkit-linear-gradient(45deg, var(--color-green), var(--color-blue));
+
+	--lh-0: calc(2px + 2ex + 2px);
 }
 
 @import 'global';
@@ -21,10 +23,6 @@
 
 .scale:hover {
 	box-shadow: 0 0 0 var(--size-000) var(--color-gray-300);
-}
-
-.w-full {
-	width: 100%;
 }
 
 .wrapper {

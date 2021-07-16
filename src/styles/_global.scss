@@ -26,6 +26,12 @@ a:hover > * {
 	color: var(--color-green);
 }
 
+h1,
+h2,
+h3 {
+	font-family: var(--serif);
+}
+
 h1 a,
 h2 a,
 h3 a {

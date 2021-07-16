@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Source Serif';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('/fonts/source-serif-regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Serif';
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('/fonts/source-serif-bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Serif';
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('/fonts/source-serif-italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Source Serif';
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('/fonts/source-serif-bold-italic.woff2') format('woff2');
+}

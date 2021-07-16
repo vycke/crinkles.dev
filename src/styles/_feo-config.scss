@@ -15,3 +15,10 @@ $feo-colors: (
 );
 
 $feo-fluid: true;
+
+$feo-font-families: (
+	monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
+	serif: "'Source Serif', ui-serif, Georgia, Cambria, serif",
+	sans-serif:
+		"system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+);

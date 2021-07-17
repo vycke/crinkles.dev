@@ -1,14 +1,14 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
 
-$h: 218;
-$s: 25%;
+$h: 215;
+$s: 35%;
 
 $feo-colors: (
 	'gray-100': hsl($h, $s, 98%),
 	'gray-200': hsl($h, $s, 70%),
-	'gray-300': hsl($h, $s, 18%),
-	'gray-400': hsl($h, $s, 9%),
+	'gray-300': hsl($h, $s, 20%),
+	'gray-400': hsl($h, $s, 5%),
 	'blue': #5467ff,
 	'purple': #9187ff,
 	'green': #00b891

@@ -38,9 +38,9 @@
 			</span>
 			{#each principles as principle, index}
 				<div class="flex-row items-start">
-					<span class="italic serif text-0 text-green mr-0 bold">{index + 1}.</span>
+					<span class="italic serif text-1 text-green mr-0 bold">{index + 1}.</span>
 					<div class="flex-col">
-						<span class="rainbow text-0 italic bold serif text-left">{principle.title}</span>
+						<span class="rainbow text-1 italic bold serif text-left">{principle.title}</span>
 						<span class="text-gray-200 text-0">{principle.description}</span>
 					</div>
 				</div>

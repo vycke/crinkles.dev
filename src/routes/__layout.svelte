@@ -34,6 +34,8 @@
 	<meta name="twitter:image" content={img} />
 	<meta name="twitter:card" content="summary" />
 	<meta name="color-scheme" content="dark" />
+
+	<meta name="theme-color" content="#0e141e" />
 </svelte:head>
 
 <slot />

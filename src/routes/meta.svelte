@@ -5,7 +5,7 @@
 </script>
 
 <Page class="flow-y flow-g-0 | mb-3 text-0" title="Meta | Crinkles" headerTitle="meta.">
-	<blockquote>
+	<blockquote class="rainbow text-1 bold">
 		A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 		uniqueness.
 	</blockquote>

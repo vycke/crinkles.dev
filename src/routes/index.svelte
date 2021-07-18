@@ -65,7 +65,7 @@
 		</aside>
 	</section>
 
-	<div class="rainbow | serif italic text-2 text-center maxw-3 py-3">
+	<div class="rainbow | serif bold italic text-2 text-center maxw-4 py-3">
 		"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
 		uniqueness."
 	</div>
@@ -88,22 +88,6 @@
 </main>
 
 <style>
-	.rainbow {
-		background: var(--gradient);
-		width: fit-content;
-		background-clip: text;
-		color: transparent;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-
-	.rainbow::selection {
-		color: var(--color-gray-400);
-		background-clip: none;
-		-webkit-background-clip: none;
-		-webkit-text-fill-color: var(--color-gray-400);
-	}
-
 	.articles {
 		--panel-gap: 6rem;
 	}

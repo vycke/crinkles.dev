@@ -10,12 +10,12 @@
 </script>
 
 <script>
+	import '../styles/index.scss';
+
 	let links = [
 		{ name: 'twitter', url: 'https://twitter.com/crinklesio', alt: 'Link to my Twitter page' },
 		{ name: 'github', url: 'https://github.com/crinklesio', alt: 'Link to my Github page' }
 	];
-
-	import '../styles/index.scss';
 
 	let twitter = '@crinklesio';
 	let keywords = 'CSS, front-end, web design, consulting, architecture';

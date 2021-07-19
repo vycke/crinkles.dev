@@ -11,7 +11,7 @@
 <script>
 	import Logo from '$lib/components/Logo.svelte';
 	import Card from '$lib/components/Card.svelte';
-	import { description, principles, projects, title } from '$lib/constants';
+	import { description, principles, projects, quote, title } from '$lib/constants';
 
 	export let articles;
 </script>
@@ -47,40 +47,37 @@
 			{/each}
 		</div>
 		<aside class="flow-y flow-g-0">
-			<h2 class="text-1"><Crinkle /> Recent articles</h2>
+			<h2 class="text-0 monospace regular uppercase text-green">Recent articles</h2>
 			{#each articles as article}
 				<Card>
 					<span class="text-00 text-gray-200 monospace uppercase">
 						{article.formattedDate}
 					</span>
-					<h2 class="text-0 text-gray-100">
+					<h3 class="text-gray-100">
 						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
-					</h2>
+					</h3>
 					<span class="text-00 text-gray-200 mt-000">{article.description}</span>
 				</Card>
 			{/each}
-			<a href="/writing" class="self-end | no-decoration text-0 bold" sveltekit:prefetch>
+			<a href="/writing" class="self-end | no-decoration text-0" sveltekit:prefetch>
 				View more articles <Crinkle />
 			</a>
 		</aside>
 	</section>
 
-	<div class="rainbow | serif bold italic text-2 text-center maxw-4 py-3">
-		"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
-		uniqueness."
-	</div>
+	<div class="rainbow | serif bold italic text-2 text-center maxw-4 py-3">{quote}</div>
 
-	<h2 class="text-1 my-0"><Crinkle /> Recent projects</h2>
+	<h2 class="text-0 monospace regular uppercase text-green my-0">Recent projects</h2>
 
 	<section class="tiles tiles-w-0 tiles-g-0 | mb-3">
 		{#each projects as project}
 			<Card>
 				<span class="text-00 text-gray-200 monospace">{project.type}</span>
-				<h2 class="text-1 text-gray-100">
+				<h3 class="text-gray-100">
 					<a href={project.href} title="Link to {project.title}">
 						{project.title}
 					</a>
-				</h2>
+				</h3>
 				<span class="text-00 text-gray-200 mt-000">{project.description}</span>
 			</Card>
 		{/each}

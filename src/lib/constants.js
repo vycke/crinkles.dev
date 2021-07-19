@@ -40,3 +40,6 @@ export const principles = [
 			'I seek to create accessible interfaces for all. That means that they have to be practical for all. Practical interfaces require practical solutions.'
 	}
 ];
+
+export const quote =
+	'"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and uniqueness."';

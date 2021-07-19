@@ -75,28 +75,24 @@ blockquote {
 	scroll-margin-top: 5rem;
 }
 
-li {
-	padding-left: 0;
-	margin-left: var(--size-2);
-	line-height: var(--lh-00);
-
-	&::marker {
-		color: var(--color-blue);
-	}
-}
-
 // Styled unordered list
-ul {
+ul:not([role]) {
 	list-style: outside;
 	padding-left: var(--size-2);
 
-	> li::marker {
-		font-size: var(--size-1);
+	li {
+		padding-left: 0;
+		margin-left: var(--size-2);
+		line-height: var(--lh-00);
+
+		&::marker {
+			color: var(--color-blue);
+		}
 	}
 }
 
 // Ordered list
-ol {
+ol:not([role]) {
 	list-style: decimal outside;
 	padding-left: var(--size-2);
 

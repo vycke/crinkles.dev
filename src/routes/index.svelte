@@ -47,7 +47,7 @@
 			{/each}
 		</div>
 		<aside class="flow-y flow-g-0">
-			<h2 class="text-0 monospace regular uppercase text-green">Recent articles</h2>
+			<h2 class="text-0 regular uppercase text-green">Recent articles</h2>
 			{#each articles as article}
 				<Card>
 					<span class="text-00 text-gray-200 monospace uppercase">
@@ -67,7 +67,7 @@
 
 	<div class="rainbow | serif bold italic text-2 text-center maxw-4 py-3">{quote}</div>
 
-	<h2 class="text-0 monospace regular uppercase text-green my-0">Recent projects</h2>
+	<h2 class="text-0 regular uppercase text-green my-0">Recent projects</h2>
 
 	<section class="tiles tiles-w-0 tiles-g-0 | mb-3">
 		{#each projects as project}

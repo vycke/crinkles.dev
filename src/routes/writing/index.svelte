@@ -13,7 +13,7 @@
 	export let articles;
 </script>
 
-<Page class="flow-y flow-g-2 | mb-3" headerTitle="writing.">
+<Page class="flow-y flow-g-2 | mb-3">
 	{#each articles as group}
 		<div class="monospace">
 			<span class="text-0 text-green bold">{group[0]}</span>

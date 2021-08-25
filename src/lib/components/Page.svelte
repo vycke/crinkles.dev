@@ -9,7 +9,6 @@
 	export { styles as class };
 	export let title = _title;
 	export let description = _desc;
-	export let headerTitle = undefined;
 </script>
 
 <svelte:head>
@@ -26,9 +25,6 @@
 	<header class="sticky post-0 center center-w-3 center-g-000 | mt-2 mb-0">
 		<div class="flex-row items-center py-000 px-1">
 			<Logo />
-			{#if headerTitle}
-				<h1 class="text-0 bold ml-1 monospace">/ {headerTitle}</h1>
-			{/if}
 		</div>
 	</header>
 

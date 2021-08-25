@@ -66,11 +66,11 @@
 		{@html post.html}
 	</Page>
 	<nav class="sticky post-0 flow-y flow-g-000 px-1 pt-3 self-start">
-		<span class="text-00 uppercase text-green">Table of contents</span>
+		<span class="text-00 uppercase sans-serif text-green">Table of contents</span>
 		<ul role="list">
 			{#each post.headers as header, i}
 				<li class="pb-000" data-active={i === 0}>
-					<a href="#{header.id}" class="text-00 no-decoration">{header.label}</a>
+					<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
 				</li>
 			{/each}
 		</ul>

@@ -83,7 +83,6 @@ ul:not([role]) {
 	li {
 		padding-left: 0;
 		margin-left: var(--size-2);
-		line-height: var(--lh-00);
 
 		&::marker {
 			color: var(--color-blue);

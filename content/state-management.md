@@ -13,7 +13,7 @@ Is state some weird data storage? Is it the data from a database? No. State is n
 - **Local**: state that is used by a single UI component.
 - **Shared**: state that is used by many UI components. It is often managed in a parent or wrapper component.
 - **Global**: a special kind of _shared_ state, as it lives on the highest level, accessible to all UI components (or even helper functions).
-- **Meta**: also known as 'state about state'. It tells you something about
+- **Meta**: also known as 'state about state'. A common example is a loading state around fetch requests.
 - **Route**: state stored in the current URL of the application (e.g. object IDs or pagination information).
 - **Remote**: a copy of the data coming from a server. The responses of fetch requests are stored as 1-on-1 copies in this state. It should not deviate from the server (except when applying [optimistic UI](https://www.smashingmagazine.com/2016/11/true-lies-of-optimistic-user-interfaces/)).
 

@@ -45,11 +45,6 @@ Event-driven state management is related to [state machines](https://statecharts
 ## Atomic pattern
 Many state management libraries force you to create one big state that lives on the highest level of the application. This came in a time where we put our 'remote' state in this store. But solutions like [React Query](https://react-query.tanstack.com/), [SWR](https://swr.vercel.app/) and [Apollo Client](https://www.apollographql.com/docs/react/) handle this for us now. Less and less data needs to get managed on a global level. The need to inject your store setup in your highest-level component wrapper also became redundant.  
 
-
-- Why have only one store, and wrap it in a high level component?
-- Remember, state are just values.
-- Atomic embraces this. 
-
 With an atomic pattern, we have many different global states of single values. Its approach really embraces the nature of JavaScript and the idea that state are just values. Each atom is a single value. In most cases, atoms also live on the global level in the JavaScript environment. However, you don't have to define all atoms in one place. If you modularize your application, you can have the code of different atoms live in different modules. You group atoms closely to where you use them. You [colocate](https://kentcdodds.com/blog/colocation) them. 
 
 This gives the pattern a _decoupled_ nature. You don't have to configure all atoms in a generic store. Also, they do not have to be directly injected into your UI component wrapper. Most frameworks allow you (e.g. via hooks) to interact with atoms in components directly. Lastly, atoms can be combined (in most implementations). This means you can use atoms in other atoms. When an underlying atom changes, the parent atom changes as well. You don't have to worry about re-render or listening, it is all managed for you.

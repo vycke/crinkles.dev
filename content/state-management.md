@@ -5,13 +5,10 @@ description: >-
   State management is one of the most complicated, and opinionated topics in modern and JavaScript-focused front-end development. Let's make it easier.
 ---
 
-State management is one of the most complicated, and opinionated topics in modern and JavaScript-focused front-end development. But before diving in, what is state? State, in all its different forms, is nothing more than values we use to determine what to show towards our users and what behavior we allow. That is it. A global or application state is nothing more than a (complex) JavaScript object accessible from our UI code. We can read from it and we can change it. When we change it, we see the change or effect from the change reflected on the screen.
+State management is one of the most complicated, and opinionated topics in modern and JavaScript-focused front-end development. But at its core, it is not that complicated. We just make it complicated. In this article I will try to demystify state and state management for you, and challenge your mental models around them. 
 
-## Types of states
-
-Let's discuss the different types first. Many say they manage their state on a global level, using packages like Redux. But, people often forget that they use different types of states as well, even when they don't know it.
-
-![Different types of state](/img/types-of-state.png 'Different types of state')
+## What are state and state management?
+Is state some weird data storage? Is it the data from a database? No. State is nothing more than a JavaScript value that lives within in scope. It can be a boolean, a string, but is in most cases a (complex) object. But it remains a value. In most cases, it is even an object living on the same level as the `window` object. It has become a global value in the JavaScript environment, the browser window. From our code (e.g. UI components), we can use this value to determine what to show or what interactions to allow. In complex applications there are a few different types of state we can have. But remember, they are nothing more than values.  
 
 - **Local**: state that is used by a single UI component.
 - **Shared**: state that is used by many UI components. It is often managed in a parent or wrapper component.
@@ -20,51 +17,48 @@ Let's discuss the different types first. Many say they manage their state on a g
 - **Route**: state stored in the current URL of the application (e.g. object IDs or pagination information).
 - **Remote**: a copy of the data coming from a server. The responses of fetch requests are stored as 1-on-1 copies in this state. It should not deviate from the server (except when applying [optimistic UI](https://www.smashingmagazine.com/2016/11/true-lies-of-optimistic-user-interfaces/)).
 
-:::
-The above image is coming from a [reference architecture](https://github.com/crinklesio/reference-architecture) from client-side applications. It is only used to visualize the different types.
-:::
+So what about state management? For many, state management feels like a black box. What is happening within Redux? Why does it feel so complicated. I look at it this way: state management is nothing more than patterns we use to make using and changing state, manageable. It is not black box magic, it is just patterns. Why not group all the mutations you can make on your state in one place? And how about giving these mutations simple, but understandable names? In complex applications, adopting these types of patterns makes our code more maintainable. Or so they say (it is true though). In the sections below, we go deeper into different kind of state management patterns. 
 
-You don't have to manage these types of states all by yourself, most of the time. Many packages can be used to help you around. When looking at the React eco-system, packages like Redux (global), [SWR](https://swr.vercel.app/) (remote), React Router (route, ), and [React-Query](https://react-query.tanstack.com/) (remote), are all good examples of packages that do a lot for you.
+## Event-driven pattern
 
-## Event-driven
-
-The best-known state management pattern is the flux pattern. It gained popularity with the 'Redux' package. It is a great example of an event-driven pattern. Let's take a closer look at its flow. The user, via the view, dispatches an action, via an action creator. The dispatched action is nothing more than a simple JavaScript object describing the type, and the payload. It is an _event_. Within the store, many different reducers act upon the dispatched _event_ and change the content of the store. The view queries the store to display the correct information to the user. When changes happen, the store notifies the view.
+The best-known pattern is the flux pattern. It gained popularity with the 'Redux' package. It is a great example of an event-driven pattern. Let's take a closer look at its flow. The user, via the view, dispatches an action, via an action creator. It might seem daunting or overly complex. But it is nothing more as I said before. It is a way to group all possible state mutations together, and allow us to use simple 'actions' with memorable names from our UI components.  
 
 ![Flux pattern](/img/flux-pattern.png)
 
-A core concept within this pattern is the _reducer_ pattern. A reducer is a function that takes a state object and action as input and returns a state object. Based on the action, it determines how to change the state for the output. This is often achieved by using a switch statement. But it can also be achieved using a _strategy_ pattern. A big benefit of the strategy pattern is that each 'case' is a separate function. Makes variable naming inside a complex reducer a lot easier.
+Such a pattern allows us to keep the code in our UI components small and clean. When hitting an issue where our state takes the wrong shape, we know where to look. That is why it is called state management. 
+
+A core concept that came with this pattern are *reducers*. Reducers are these big complex switch statements that hold all our state mutation logic. They can really feel like a black box sometimes. But don't get fooled. The concept is really simple. When removing the complexity of the switch statement your are left with something like the snippet below. A reducer is a simple function that gets a state and returns a state. Nothing more, nothing less. It uses additional input to mutate the state in between, or don't do anything at all.   
 
 ```js
-function action1(state, payload) { ... }
-function action2(state, payload) { ... }
-
-const strategies = {
-  EVENT_1: action1,
-  EVENT_2: action2,
-  __default__: (s) => s
-}
-
-function reducer(state, { type, payload }) {
-  const reduce = strategies[type] || strategies.__default__;
-  return action(state, payload);
+function reducer(state, { action, payload }) {
+  ...
+  return newState;
 }
 ```
 
-Event-driven state management is related to [state machines](https://statecharts.dev/). State machines allow us to model state more , in a way that can be visualized. Below is an example of a state machine for an animated toast message. This toast message should disappear after X seconds. Implementing something like this is easy when already using reducers. By adding if-statements, we can guard state changes: "You can do action X if we are in state Y".
+Redux relies heavily on reducers. When setting things up, you add all your reducers to your Redux store. Redux really takes event-driven from server-side patterns at heart. All reducers are allowed to act upon the dispatched actions. However, I cannot say I have seen this happen in production(-like) environment. 
+
+Event-driven state management is related to [state machines](https://statecharts.dev/). State machines allow us to clearly define the shape of the state, and when which mutation is allowed. Below is an example of a state machine for an animated toast message. This toast message should disappear after X seconds. The [Redux style guide](https://redux.js.org/style-guide/style-guide#treat-reducers-as-state-machines) shows you how to model reducers into state machines. If this feels complicated, you can get a long way by adding if-statements in your switch statements. "You can do action X if we are in state Y".
 
 ![State machine example](/img/state-machine.png)
 
-## Atomic
+## Atomic pattern
+Many state management libraries force you to create one big state that lives on the highest level of the application. This came in a time where we put our 'remote' state in this store. But solutions like [React Query](https://react-query.tanstack.com/), [SWR](https://swr.vercel.app/) and [Apollo Client](https://www.apollographql.com/docs/react/) handle this for us now. Less and less data needs to get managed on a global level. The need to inject your store setup in your highest-level component wrapper also became redundant.  
 
-Most event-driven solutions go for a single global store. The atom pattern does it differently. Instead of having a single global state, we have many different global states of single values. The popularity of this pattern rose with the introduction of Recoil from Facebook. This pattern is often seen as easier. Because everything is a single value, you don't have the overarching boilerplate of action creators, actions, events, etc. You just have a global value, and when you change it, your application re-renders.
 
-Another benefit is its _decoupled_ nature. When using a single store, you have to register the structure, default values, etc. in a single place. You cannot modularize your code. With atoms, you can define them where ever you want. Lastly, atoms can be combined (in most implementations). This means you can use atoms in other atoms. When an underlying atom changes, the parent atom changes as well. You don't have to worry about re-render or listening, it is all managed for you.
+- Why have only one store, and wrap it in a high level component?
+- Remember, state are just values.
+- Atomic embraces this. 
+
+With an atomic pattern, we have many different global states of single values. Its approach really embraces the nature of JavaScript and the idea that state are just values. Each atom is a single value. In most cases, atoms also live on the global level in the JavaScript environment. However, you don't have to define all atoms in one place. If you modularize your application, you can have the code of different atoms live in different modules. You group atoms closely to where you use them. You [colocate](https://kentcdodds.com/blog/colocation) them. 
+
+This gives the pattern a _decoupled_ nature. You don't have to configure all atoms in a generic store. Also, they do not have to be directly injected into your UI component wrapper. Most frameworks allow you (e.g. via hooks) to interact with atoms in components directly. Lastly, atoms can be combined (in most implementations). This means you can use atoms in other atoms. When an underlying atom changes, the parent atom changes as well. You don't have to worry about re-render or listening, it is all managed for you.
 
 It does have some downsides. When the number of atoms grows, managing them can become a hassle. You have to name them all, and you have to be aware that they exist. Also, managing a complex structure of dependencies between atoms can become quite a task for developers.
 
 ## Reactivity and proxies
 
-Many modern front-end frameworks are _reactive_. When a state changes, the framework knows that it should re-render. Or in other words, the state lets the framework knows it changed. This mental model is very like a _proxy_. A proxy is a wrapper object that is being called, instead of accessing the targeted object . This allows us to add custom behavior to various calls.
+Many modern front-end frameworks are _reactive_. When a state changes, the framework knows that it should re-render. Or in other words, the state lets the framework knows it changed. This mental model is very like a _proxy_. A proxy is a wrapper object that is being called, instead of accessing the targeted object. This allows us to add custom behavior to various calls.
 
 Proxies are ideal to create reactive and robust state management. The basic power lays in the fact that we can add listeners to state changes. Besides, the values of a proxy can directly be changed. You do not have to invoke the change via a function. If you want to create a more complex proxy, you could implement validators that validate changes before applying a state change. You could even add several layers of 'middleware' before each state change. You can go nuts.
 

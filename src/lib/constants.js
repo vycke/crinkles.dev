@@ -1,6 +1,6 @@
 export const title = 'Kevin Pennekamp';
 export const description =
-	'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
+	'UI development studio of Kevin Pennekamp, a Dutch front-end engineer. I love CSS, front-end architecture, engineering and writing about it!';
 
 export const projects = [
 	{

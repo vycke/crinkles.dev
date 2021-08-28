@@ -32,9 +32,8 @@
 			<Logo class="self-start flow-next-2" />
 			<h1>Hi, I'm Kevin.</h1>
 			<span class="text-0 text-gray-200">
-				I'm a creative front-end engineer and an engineering manager. I love <i>CSS</i> and
-				<a href="/writing" sveltekit:prefetch>writing</a>. As an engineer, I live a some basic
-				principles.
+				I'm a creative front-end engineer and <i>crinkles</i> is my UI development studio. I love
+				<i>CSS</i> and live by some basic engineering principles.
 			</span>
 			{#each principles as principle, index}
 				<div class="flex-row items-start">

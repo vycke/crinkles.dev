@@ -9,18 +9,20 @@
 	<blockquote class="rainbow text-1 bold">{quote}</blockquote>
 
 	<p>
-		<Crinkle /> Welcome to my playground! As a Front-end Engineer I love tinkering around. If you regularly
-		visit, you will see many small things change. I am always trying new things to improve this website.
-		I also take extra care to ensure this is <i>my</i> website, by adding some personal favorite
-		<i>crinkles</i>. Some of my favorite that currently can be found on this website are:
+		Crinkles is a digital UI development studio. But this website is also the personal playground of
+		Kevin Pennekamp. When you visit this website often, you will find changes almost every time. I
+		also take extra care to ensure this is <i>my</i> website, by adding some personal favorite
+		<i>crinkles</i>.
 	</p>
 	<ul>
-		<li>A vibrant color-scheme on top of a dark-mode only website applied in different ways.</li>
-		<li>Carefully selected typography around readability of text and code examples.</li>
 		<li>
-			Small personal touches throughout the website, like the <Crinkle />, or page transitions
+			A vibrant color-scheme based on <a
+				href="https://www.notion.so/revolverds/The-Dutch-DS-Two-FACE-319cac25871d467b9261610ff7fce76e"
+				alt="Article explaining two-face">Two-FACE</a
+			>
+			of <a href="https://twitter.com/Bliepjes" alt="Twitter page of Guus">Guus Hoeve</a>.
 		</li>
-		<li>Boxes to highlight extra information in my writing for those interested.</li>
+		<li>Carefully selected typography around readability of text and code examples.</li>
 		<li>
 			A <a sveltekit:prefetch href="/writing/fluid-interfaces-using-css">fluid</a> experience across
 			screen sizes, which you will only notice if you actively resize your screen.
@@ -40,7 +42,6 @@
 		and my own
 		<a href="https://feo.crinkles.io" title="Link to documentation website of Feo">
 			(S)CSS framework called Feo</a
-		>, based on
-		<a href="https://cube.fyi" title="Website for the CUBE CSS framework"> CUBE CSS</a>.
+		>.
 	</p>
 </Page>

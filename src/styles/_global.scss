@@ -18,12 +18,12 @@ a:link,
 a:visited,
 a:active {
 	transition: all 200ms ease;
-	text-decoration-color: var(--color-green);
+	text-decoration-color: var(--color-cyan);
 }
 
 a:hover,
 a:hover > * {
-	color: var(--color-green);
+	color: var(--color-cyan);
 }
 
 h1,
@@ -47,7 +47,7 @@ i,
 em {
 	font-style: italic;
 	font-family: var(--serif);
-	color: var(--color-green);
+	color: var(--color-cyan);
 }
 
 // QUOTES
@@ -67,7 +67,7 @@ blockquote {
 		font-style: italic;
 		margin-top: var(--size-00);
 		text-align: right;
-		color: var(--color-green);
+		color: var(--color-cyan);
 	}
 }
 
@@ -85,7 +85,7 @@ ul:not([role]) {
 		margin-left: var(--size-2);
 
 		&::marker {
-			color: var(--color-blue);
+			color: var(--color-magenta);
 		}
 	}
 }

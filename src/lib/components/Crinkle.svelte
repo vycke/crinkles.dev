@@ -1,7 +1,7 @@
 <script>
 	let max = 6;
 	let triggered = 0;
-	let colors = ['text-green', 'text-purple', 'text-blue'];
+	let colors = ['text-cyan', 'text-yellow', 'text-magenta'];
 
 	function trigger() {
 		triggered++;

@@ -32,8 +32,8 @@
 				y2="7.5"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="var(--color-green)" />
-				<stop offset="1" stop-color="var(--color-blue)" />
+				<stop stop-color="var(--color-cyan)" />
+				<stop offset="1" stop-color="var(--color-magenta)" />
 			</linearGradient>
 		</defs>
 	</svg>

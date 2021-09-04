@@ -16,11 +16,13 @@
 	</p>
 	<ul>
 		<li>
-			A vibrant color-scheme based on <a
+			A minimal & vibrant CMYK color-scheme based on <a
 				href="https://www.notion.so/revolverds/The-Dutch-DS-Two-FACE-319cac25871d467b9261610ff7fce76e"
 				alt="Article explaining two-face">Two-FACE</a
 			>
-			of <a href="https://twitter.com/Bliepjes" alt="Twitter page of Guus">Guus Hoeve</a>.
+			themed system by
+			<a href="https://twitter.com/Bliepjes" alt="Twitter page of Guus">Guus Hoeve</a>, called BACE
+			(very original, I know).
 		</li>
 		<li>Carefully selected typography around readability of text and code examples.</li>
 		<li>

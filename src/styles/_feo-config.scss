@@ -1,14 +1,16 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
 
-$gray-h: 206;
+$gray-h: 215;
 $gray-s: 35%;
 
 $feo-colors: (
 	'gray-100': hsl($gray-h, $gray-s, 98%),
-	'gray-200': hsl($gray-h, $gray-s, 70%),
-	'gray-300': hsl($gray-h, $gray-s, 20%),
-	'gray-400': hsl($gray-h, $gray-s, 5%),
+	'gray-200': hsl($gray-h, $gray-s, 90%),
+	'gray-300': hsl($gray-h, $gray-s, 70%),
+	'gray-400': hsl($gray-h, $gray-s, 40%),
+	'gray-500': hsl($gray-h, $gray-s, 20%),
+	'gray-600': hsl($gray-h, $gray-s, 5%),
 	//based on 1-BACE, analogue system +/- 20 hue, same saturation, same lightness
 	'o-bace': #117aaa,
 	'bace': #11bace,

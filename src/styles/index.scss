@@ -20,7 +20,7 @@
 }
 
 .scale:hover {
-	box-shadow: 0 0 0 var(--size-000) var(--color-gray-300);
+	box-shadow: 0 0 0 var(--size-000) var(--color-gray-500);
 }
 
 .wrapper {
@@ -37,8 +37,8 @@
 }
 
 .rainbow::selection {
-	color: var(--color-gray-400);
+	color: var(--color-gray-600);
 	background-clip: none;
 	-webkit-background-clip: none;
-	-webkit-text-fill-color: var(--color-gray-400);
+	-webkit-text-fill-color: var(--color-gray-600);
 }

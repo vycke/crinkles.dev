@@ -4,7 +4,7 @@
 html,
 body {
 	color: var(--color-gray-100);
-	background-color: var(--color-gray-400);
+	background-color: var(--color-gray-600);
 }
 
 main {
@@ -39,7 +39,7 @@ h3 a {
 }
 
 ::selection {
-	color: var(--color-gray-400) !important;
+	color: var(--color-gray-600) !important;
 	background: var(--color-gray-100) !important;
 }
 
@@ -54,7 +54,7 @@ em {
 blockquote {
 	display: block;
 	padding: var(--size-0) var(--size-2);
-	color: var(--color-gray-200);
+	color: var(--color-gray-300);
 	font-family: var(--serif);
 	font-size: var(--size-0);
 	text-align: center;

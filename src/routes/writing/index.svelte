@@ -21,13 +21,13 @@
 		<div class="tiles tiles-w-0 tiles-g-0">
 			{#each group[1] as article}
 				<Card>
-					<span class="text-00 text-gray-200 monospace uppercase">
+					<span class="text-00 text-gray-300 monospace uppercase">
 						{article.formattedDate}
 					</span>
 					<h2 class="text-0 text-gray-100">
 						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 					</h2>
-					<span class="text-00 text-gray-200 mt-000">{article.description}</span>
+					<span class="text-00 text-gray-300 mt-000">{article.description}</span>
 				</Card>
 			{/each}
 		</div>

@@ -31,7 +31,7 @@
 		<div class="flow-y flow-g-0">
 			<Logo class="self-start flow-next-2" />
 			<h1>Hi, I'm Kevin.</h1>
-			<span class="text-0 text-gray-200">
+			<span class="text-0 text-gray-300">
 				I'm a creative front-end engineer and <i>crinkles</i> is my UI development studio. I love
 				<i>CSS</i> and live by some basic engineering principles.
 			</span>
@@ -40,7 +40,7 @@
 					<span class="italic serif text-1 text-bace mr-0 bold">{index + 1}.</span>
 					<div class="flex-col">
 						<span class="rainbow text-1 italic bold serif text-left">{principle.title}</span>
-						<span class="text-gray-200 text-0">{principle.description}</span>
+						<span class="text-gray-300 text-0">{principle.description}</span>
 					</div>
 				</div>
 			{/each}
@@ -49,13 +49,13 @@
 			<h2 class="text-0 regular uppercase text-bace">Recent articles</h2>
 			{#each articles as article}
 				<Card>
-					<span class="text-00 text-gray-200 monospace uppercase">
+					<span class="text-00 text-gray-300 monospace uppercase">
 						{article.formattedDate}
 					</span>
 					<h3 class="text-gray-100">
 						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 					</h3>
-					<span class="text-00 text-gray-200 mt-000">{article.description}</span>
+					<span class="text-00 text-gray-300 mt-000">{article.description}</span>
 				</Card>
 			{/each}
 			<a href="/writing" class="self-end | no-decoration text-0" sveltekit:prefetch>
@@ -71,13 +71,13 @@
 	<section class="tiles tiles-w-0 tiles-g-0 | mb-3">
 		{#each projects as project}
 			<Card>
-				<span class="text-00 text-gray-200 monospace">{project.type}</span>
+				<span class="text-00 text-gray-300 monospace">{project.type}</span>
 				<h3 class="text-gray-100">
 					<a href={project.href} title="Link to {project.title}">
 						{project.title}
 					</a>
 				</h3>
-				<span class="text-00 text-gray-200 mt-000">{project.description}</span>
+				<span class="text-00 text-gray-300 mt-000">{project.description}</span>
 			</Card>
 		{/each}
 	</section>

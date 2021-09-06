@@ -57,7 +57,7 @@
 
 <div class="panel-r panel-f-0 panel-w-3">
 	<Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-		<span class="text-gray-200 uppercase monospace text-00">
+		<span class="text-gray-300 uppercase monospace text-00">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
@@ -82,7 +82,7 @@
 <style>
 	a,
 	a:visited {
-		color: var(--color-gray-200);
+		color: var(--color-gray-300);
 	}
 
 	a:hover {
@@ -98,17 +98,17 @@
 	}
 
 	h1::selection {
-		color: var(--color-gray-400);
+		color: var(--color-gray-600);
 		background: none;
 		background-clip: none;
 		-webkit-background-clip: none;
-		-webkit-text-fill-color: var(--color-gray-400);
+		-webkit-text-fill-color: var(--color-gray-600);
 	}
 
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-2);
-		background-color: var(--color-gray-300);
+		background-color: var(--color-gray-500);
 		border: 0.15rem solid;
 		border-image-slice: 1;
 		border-image-source: var(--gradient);

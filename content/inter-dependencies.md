@@ -2,7 +2,7 @@
 title: Interdependencies and code stability
 date: 2021-09-14T00:00:00.000Z
 description: >-
-  ...
+  As engineers, we have the tendency to over-engineer our solutions, make our code as reusable as possible. We make our code DRY. But in this quest, we often create unstable code. 
 ---
 
 As engineers, we have the tendency to over-engineer our solutions, make our code as reusable as possible. We make our code DRY (don't repeat yourself). Although these are good rules to go by in most cases, they can also lead to problematic maintenance issues. In our DRY-quest, we can create unstable, yet reusable code that is used in more than one place. Sometimes it is ok to write our code WET (write everything twice). Why? Because it creates more stable code around interdependencies. 

@@ -32,12 +32,15 @@
 }
 
 .token.function,
+.token.class-name {
+	color: var(--color-u-bace);
+}
+
 .token.selector,
 .token.tag,
 .token.attr-value,
 .token.string,
-.token.number,
-.token.class-name {
+.token.number {
 	color: var(--color-bace);
 }
 

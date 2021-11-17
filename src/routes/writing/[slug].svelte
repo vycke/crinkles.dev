@@ -108,15 +108,24 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-2);
-		background-color: var(--color-gray-500);
-		border: 0.15rem solid;
-		border-image-slice: 1;
-		border-image-source: var(--gradient);
+		background-color: var(--color-gray-400);
+		border-radius: var(--size-000);
+		border: 2px solid var(--color-gray-100);
 		font-size: var(--size-00);
 	}
 
+	:global(.post aside::before) {
+		content: 'Note';
+		font-weight: bold;
+		display: block;
+	}
+
+	:global(.post h2) {
+		margin-top: var(--size-3);
+	}
+
 	:global(.post h2 + p) {
-		margin-top: var(--size-00);
+		margin-top: var(--size-1);
 	}
 
 	:global(.post h2 a) {

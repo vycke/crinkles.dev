@@ -78,14 +78,13 @@ blockquote {
 // Styled unordered list
 ul:not([role]) {
 	list-style: outside;
-	padding-left: var(--size-2);
 
 	li {
 		padding-left: 0;
 		margin-left: var(--size-2);
 
 		&::marker {
-			color: var(--color-u-bace);
+			color: var(--color-bace);
 		}
 	}
 }
@@ -93,11 +92,17 @@ ul:not([role]) {
 // Ordered list
 ol:not([role]) {
 	list-style: decimal outside;
-	padding-left: var(--size-2);
 
-	> li::marker {
-		font-style: italic;
-		font-family: var(--serif);
+	li {
+		padding-left: 0;
+		margin-left: var(--size-2);
+
+		&::marker {
+			font-style: italic;
+			font-family: var(--serif);
+			font-weight: bold;
+			color: var(--color-bace);
+		}
 	}
 }
 

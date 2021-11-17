@@ -48,6 +48,10 @@ export default async function fetchOrRefresh(...args) {
 
 There are some blanks in this code example that need to be filled in. It relies on a queue that you can programmatically empty. The example also uses a simple object to store information, but a central application state that can be used is a better solution. Lastly, the refresh function itself is not filled in.
 
+:::
+An example implementation of a queue can be found [here](https://github.com/crinklesio/js-libs/blob/main/src/queue.js).
+:::
+
 When filling in these blanks for your project, you have a simple solution that can handle refreshing of tokens in a stable way. It can be as middleware for libraries as `axis` and `redux` with minor adjustments.
 
 ## Wrapping up

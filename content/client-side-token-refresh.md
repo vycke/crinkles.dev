@@ -29,7 +29,7 @@ const cache = { refreshing: null, expiresOn: '2021-11-01T00:00:00.000Z' };
 export default async function fetchOrRefresh(...args) {
 	try {
 		if (new Date() > new Date(cache.expiresOn)) {
-			if (!refreshPromise) cache.refreshing = refresh();
+			if (!cache.refreshing) cache.refreshing = refresh();
 			await cache.refreshing;
 			cache.refreshing = null;
 		}

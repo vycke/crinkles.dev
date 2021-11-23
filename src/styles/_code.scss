@@ -51,7 +51,9 @@ code {
 
 // INLINE CODE
 :not(pre) > code {
-	border-radius: var(--size-000);
+	border-radius: 6px;
+	padding: 6px;
+	line-height: var(--lh-000);
 }
 
 pre > code {

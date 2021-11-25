@@ -41,7 +41,6 @@
 <slot />
 
 <footer class="relative flex-col items-start | p-1 text-00 bg-gray-500">
-	<div class="endline | absolute post-0 w-00 radius-3 self-center mb-00" />
 	<div class="w-full flow-x flow-g-00 self-center">
 		<a href="/meta" sveltekit:prefetch class="flex-grow p-000 serif bold italic">© crinkles</a>
 		{#each links as link}
@@ -51,11 +50,3 @@
 		<a href="/rss.xml" title="RSS Feed" class="p-000">rss</a>
 	</div>
 </footer>
-
-<style>
-	.endline {
-		background: var(--gradient);
-		height: 0.5rem;
-		margin-top: -0.25rem;
-	}
-</style>

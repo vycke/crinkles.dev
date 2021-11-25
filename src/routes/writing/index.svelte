@@ -16,7 +16,7 @@
 <Page class="flow-y flow-g-2 | mb-3">
 	{#each articles as group}
 		<div class="monospace">
-			<span class="text-0 text-bace bold">{group[0]}</span>
+			<span class="text-0 text-bace-0 bold">{group[0]}</span>
 		</div>
 		<div class="tiles tiles-w-0 tiles-g-0">
 			{#each group[1] as article}

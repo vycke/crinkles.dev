@@ -6,7 +6,7 @@
 </script>
 
 <Page class="flow-y flow-g-0 | mb-3 text-0" title="Meta | Crinkles">
-	<blockquote class="rainbow text-1 bold">{quote}</blockquote>
+	<blockquote class="text-1 bold">{quote}</blockquote>
 
 	<p>
 		Crinkles is a digital UI development studio. But this website is also the personal playground of

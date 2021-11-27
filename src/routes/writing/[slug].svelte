@@ -86,15 +86,11 @@
 	}
 
 	a:hover {
-		color: var(--color-bace-0);
+		color: var(--color-bace-000);
 	}
 
 	h1 {
-		background: var(--gradient);
-		background-clip: text;
-		color: transparent;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		color: var(--color-bace-000);
 	}
 
 	h1::selection {
@@ -140,7 +136,7 @@
 
 	:global(.post h2:hover a::after) {
 		content: ' #';
-		color: var(--color-bace-0);
+		color: var(--color-bace-000);
 	}
 
 	:global(.post img) {

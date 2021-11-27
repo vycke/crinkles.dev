@@ -26,19 +26,3 @@
 .wrapper {
 	min-height: 100vh;
 }
-
-.rainbow {
-	background: var(--gradient);
-	width: fit-content;
-	background-clip: text;
-	color: transparent;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.rainbow::selection {
-	color: var(--color-gray-600);
-	background-clip: none;
-	-webkit-background-clip: none;
-	-webkit-text-fill-color: var(--color-gray-600);
-}

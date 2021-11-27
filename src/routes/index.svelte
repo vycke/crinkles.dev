@@ -39,7 +39,7 @@
 				<div class="flex-row items-start">
 					<span class="italic serif text-1 text-bace-0 mr-0 bold">{index + 1}.</span>
 					<div class="flex-col">
-						<span class="rainbow text-1 italic bold serif text-left">{principle.title}</span>
+						<span class="text-bace-000 text-1 italic bold serif text-left">{principle.title}</span>
 						<span class="text-gray-300 text-0">{principle.description}</span>
 					</div>
 				</div>

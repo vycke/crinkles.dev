@@ -37,16 +37,16 @@
 			</span>
 			{#each principles as principle, index}
 				<div class="flex-row items-start">
-					<span class="italic serif text-1 text-bace-0 mr-0 bold">{index + 1}.</span>
+					<span class="italic serif text-1 text-secondary-0 mr-0 bold">{index + 1}.</span>
 					<div class="flex-col">
-						<span class="text-bace-000 text-1 italic bold serif text-left">{principle.title}</span>
+						<span class="text-primary-0 text-1 italic bold serif text-left">{principle.title}</span>
 						<span class="text-gray-300 text-0">{principle.description}</span>
 					</div>
 				</div>
 			{/each}
 		</div>
 		<aside class="flow-y flow-g-0">
-			<h2 class="text-0 regular uppercase text-bace-000">Recent articles</h2>
+			<h2 class="text-0 regular uppercase text-primary-0">Recent articles</h2>
 			{#each articles as article}
 				<Card>
 					<span class="text-00 text-gray-300 monospace uppercase">
@@ -64,9 +64,9 @@
 		</aside>
 	</section>
 
-	<div class="text-bace-000 | serif bold italic text-2 text-center maxw-4 py-3">{quote}</div>
+	<div class="text-primary-0 | serif bold italic text-2 text-center maxw-4 py-3">{quote}</div>
 
-	<h2 class="text-0 regular uppercase text-bace-000 my-0">Recent projects</h2>
+	<h2 class="text-0 regular uppercase text-primary-0 my-0">Recent projects</h2>
 
 	<section class="tiles tiles-w-0 tiles-g-0 | mb-3">
 		{#each projects as project}

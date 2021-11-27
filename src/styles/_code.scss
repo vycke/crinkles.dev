@@ -33,7 +33,7 @@
 
 .token.function,
 .token.class-name {
-	color: var(--color-bace-00);
+	color: var(--color-tertiary-0);
 }
 
 .token.selector,
@@ -41,11 +41,11 @@
 .token.attr-value,
 .token.string,
 .token.number {
-	color: var(--color-bace-0);
+	color: var(--color-secondary-0);
 }
 
 code {
-	color: var(--color-bace-000);
+	color: var(--color-primary-0);
 	background-color: var(--color-gray-500);
 }
 
@@ -67,7 +67,7 @@ pre[data-lang] > span {
 	right: 2px;
 	font-size: var(--size-000);
 	font-family: var(--monospace);
-	color: var(--color-bace-0);
+	color: var(--color-secondary-0);
 	background-color: var(--color-gray-600);
 	text-transform: uppercase;
 	border-bottom-left-radius: var(--size-000);

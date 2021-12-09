@@ -93,21 +93,13 @@
 		color: var(--color-primary-0);
 	}
 
-	h1::selection {
-		color: var(--color-gray-600);
-		background: none;
-		background-clip: none;
-		-webkit-background-clip: none;
-		-webkit-text-fill-color: var(--color-gray-600);
-	}
-
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-2);
 		background-color: var(--color-primary-0);
 		color: var(--color-gray-500);
 		border-radius: var(--size-000);
-		border: 2px solid var(--color-gray-400);
+		border: 2px solid var(--color-gray-100);
 		font-size: var(--size-00);
 	}
 
@@ -115,6 +107,14 @@
 		content: 'Note';
 		font-weight: bold;
 		display: block;
+	}
+
+	:global(.post aside a) {
+		text-decoration-color: var(--color-gray-600);
+	}
+	:global(.post aside a:hover) {
+		color: var(--color-gray-400);
+		text-decoration-color: var(--color-gray-400);
 	}
 
 	:global(.post h2) {

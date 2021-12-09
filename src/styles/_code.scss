@@ -33,7 +33,7 @@
 
 .token.function,
 .token.class-name {
-	color: var(--color-tertiary-0);
+	color: var(--color-secondary-0);
 }
 
 .token.selector,
@@ -41,7 +41,7 @@
 .token.attr-value,
 .token.string,
 .token.number {
-	color: var(--color-secondary-0);
+	color: var(--color-tertiary-0);
 }
 
 code {

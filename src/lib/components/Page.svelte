@@ -22,7 +22,7 @@
 </svelte:head>
 
 <div class="flex-grow text-0 relative">
-	<header class="sticky post-0 center center-w-3 center-g-000 | mt-2 mb-0">
+	<header class="center center-w-3 center-g-000 | mt-2 mb-0">
 		<div class="flex-row items-center py-000 px-1">
 			<Logo />
 		</div>

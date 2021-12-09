@@ -64,7 +64,7 @@
 		</aside>
 	</section>
 
-	<div class="text-primary-0 | serif bold italic text-2 text-center maxw-4 py-3">{quote}</div>
+	<div class="text-gray-200 | serif bold italic text-1 text-center maxw-4 py-3">{quote}</div>
 
 	<h2 class="text-0 regular uppercase text-primary-0 my-0">Recent projects</h2>
 

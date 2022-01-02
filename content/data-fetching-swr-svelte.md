@@ -18,13 +18,13 @@ const cache = {};
 
 export function swr(url) {
 	const store = writable({ data: null, errors: null });
-	if (cache.url) store.set({ data: cache.url, errors: null });
+	if (cache[url]) store.set({ data: cache[url], errors: null });
 
 	async function fetch() {
 		try {
 			const response = await fetch(url);
 			const data = await response.json();
-			cache.url = data;
+			cache[url] = data;
 			store.update((s) => ({ ...s, data, errors: null }));
 		} catch (errors) {
 			store.update((s) => ({ ...s, errors, data: null }));
@@ -67,23 +67,17 @@ export const config = {
 ```
 
 :::
-I am using the [fsm](https://github.com/crinklesio/fsm) package definitions for the state machine. Similar configurations can be created for XState or other libraries.
+I am using the [fsm >v0.11.0](https://github.com/crinklesio/fsm) package definitions for the state machine. Similar configurations can be created for XState or other libraries.
 :::
 
 ## Enhancing the global cache
 
-Introducing a state machine is not enough to solve all the identified flaws. To solve the last flow, the state machines need to live in the global cache. The machines need to live on this level, to allow many data fetching attempts to synchronize. A default Svelte store allows us to subscribe to changes. But, we do not want to subscribe to the entire store. Only to the key corresponding to the URL.
+Introducing a state machine is not enough to solve all the identified flaws. To solve the last flow, the state machines need to live in the global cache. The machines need to live on this level, to allow many data fetching attempts to synchronize. A default Svelte store allows us to subscribe to changes. But, we do not want to subscribe to the entire store. There are two ways to tackle this problem:
 
-So we need a more sophisticated solution (as far as I know Svelte stores...). We need a solution that allows us:
+- Allow to add multiple listeners to a key on the cache, that are executed on change.
+- Allow to add multiple listeners to the state machine object in the cache. A key in the cache refers to a state machine object, so the object can change without touching the cache.
 
-- Add many listeners to a key of the cache, that provides us with the new value on changes.
-- Allow us to unsubscribe when the data-fetching is not needed anymore, to avoid memory leaks.
-
-With a global cache that upholds these criteria, we can solve all problems.
-
-:::
-In the rest of the article, I am using the `proxy` of my [pubble](https://github.com/crinklesio/pubble) library.
-:::
+In the remainer of this article, we will use the second method. However, the first method might require slight changes to the code around the subscription and the fetch function to trigger the changes at the correct time.
 
 ## Combining it together
 
@@ -91,27 +85,24 @@ To benefit the state machine, it is important to not store the data in the cache
 
 ```js
 import { fsm } from '@crinkles/fsm';
-import proxy from '@crinkles/pubble';
 import { writable } from 'svelte/store';
 import { config, context } from './fetchMachineConfig';
 
-const cache = proxy({});
+const cache = {};
 
 export function swr(url) {
 	if (!cache[url]) cache[url] = fsm('init', config, context);
 
-	function update(machine) {
-		const { errors, data } = machine.context;
-		set({ state: machine.current, data, errors });
-	}
+	const { subscribe, set } = writable({}, () => {
+		// The listener function
+		function update(state, { data, errors }) {
+			set({ state, data, errors });
+		}
 
-	function subscription() {
-		cache.on(url, update);
-		update(cache[url]);
-		return () => cache.off(url, update);
-	}
-
-	const { subscribe, set } = writable({}, subscription);
+		update(cache[url].current, cache[url].context);
+		const remove = cache[url].listen(update);
+		return () => remove();
+	});
 
 	async function refetch() { ... }
 	refetch();
@@ -123,24 +114,19 @@ By returning the `refetch` function, we programmatically refresh the data in cac
 
 ```js
 async function refetch() {
-	const _machine = cache[url];
-
 	try {
-		const success = _machine.send('STARTED');
+		const success = cache[url].send('STARTED');
 		if (!success) return;
-		cache[url] = _machine;
 		const response = await fetch(url);
 		const data = await response.json();
-		_machine.send('FINISHED', data);
+		cache[url].send('FINISHED', data);
 	} catch (e) {
-		_machine.send('FAILED', e);
-	} finally {
-		cache[url] = _machine;
+		cache[url].send('FAILED', e);
 	}
 }
 ```
 
-It looks very like the previous implementation, right? But now we have a few transitions in the state machine. When invoking a transition, we get back a boolean to see if the intended transition was a `success`. If it was not a success, we know the machine was not in the correct state, and we should not proceed. Between, we have to update the cache with the new state machine. Remember, when the cache updates, the internal store updates as well due to the `subscription` we have created.
+It looks very like the previous implementation, right? But now we have a few transitions in the state machine. When invoking a transition, we get back a boolean to see if the intended transition was a `success`. If it was not a success, we know the machine was not in the correct state, and we should not proceed. Remember, everytime the state machine object in the cache updates, the listener (i.e. the `update` function) is triggered, updating the internal value of this store.
 
 ## Adding mutations and invalidation
 
@@ -154,8 +140,7 @@ We now have an `invalid` state. When data in cache gets updated by a user action
 export function swr(url) {
 	function mutate(key, value, sync = false) {
 		const _machine = cache[url];
-		const success = _machine.send('MODIFIED', { key, value });
-		if (success) cache[url] = _machine;
+		const success = cache[url].send('MODIFIED', { key, value });
 		if (success && sync) refetch();
 	}
 

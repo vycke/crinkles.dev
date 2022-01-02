@@ -82,7 +82,7 @@ So we need a more sophisticated solution (as far as I know Svelte stores...). We
 With a global cache that upholds these criteria, we can solve all problems.
 
 :::
-In the rest of the article, I am using the `proxy` of my [pubbel](https://github.com/crinklesio/pubbel) library.
+In the rest of the article, I am using the `proxy` of my [pubble](https://github.com/crinklesio/pubble) library.
 :::
 
 ## Combining it together
@@ -91,7 +91,7 @@ To benefit the state machine, it is important to not store the data in the cache
 
 ```js
 import { fsm } from '@crinkles/fsm';
-import { proxy } from '@crinkles/pubbel';
+import proxy from '@crinkles/pubble';
 import { writable } from 'svelte/store';
 import { config, context } from './fetchMachineConfig';
 

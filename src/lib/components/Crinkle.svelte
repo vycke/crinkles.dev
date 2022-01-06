@@ -1,6 +1,8 @@
 <script>
 	let max = 6;
 	let triggered = 0;
+	let className = '';
+	export { className as class };
 	let colors = ['primary-0', 'secondary-0', 'tertiary-0'];
 
 	function trigger() {
@@ -15,7 +17,7 @@
 	$: if (triggered === max) triggered = 0;
 </script>
 
-<span on:mouseenter={trigger} class="bold">
+<span on:mouseenter={trigger} class={`bold ${className}`}>
 	<span class="transition-200 text-{colors[0]}">›</span><span
 		class="transition-200 text-{colors[1]}">›</span
 	><span class="transition-200 text-{colors[2]}">›</span>

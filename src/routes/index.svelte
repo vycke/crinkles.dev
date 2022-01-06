@@ -9,7 +9,6 @@
 </script>
 
 <script>
-	import Logo from '$lib/components/Logo.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import { description, principles, projects, quote, title } from '$lib/constants';
 
@@ -27,9 +26,8 @@
 </svelte:head>
 
 <main class="center center-w-5 center-g-1 | mt-2 mb-3">
-	<section class="articles | panel-l panel-w-2 my-3">
+	<section class="articles | panel-l panel-w-2 my-3 items-center">
 		<div class="flow-y flow-g-0">
-			<Logo class="self-start flow-next-2" />
 			<h1>Hi, I'm Kevin.</h1>
 			<span class="text-0 text-gray-300">
 				I'm a creative front-end engineer and <i>crinkles</i> is my UI development studio. I love
@@ -46,7 +44,8 @@
 			{/each}
 		</div>
 		<aside class="flow-y flow-g-0">
-			<h2 class="text-0 regular uppercase text-primary-0">Recent articles</h2>
+			<h2 class="text-0 regular uppercase text-primary-0 visually-hidden">Recent articles</h2>
+
 			{#each articles as article}
 				<Card>
 					<span class="text-00 text-gray-300 monospace uppercase">

@@ -19,7 +19,7 @@
 
 	let twitter = '@crinklesio';
 	let keywords = 'CSS, front-end, web design, consulting, architecture';
-	let img = 'https://crinkles.io/logo.png';
+	let img = 'https://crinkles.io/icon-512.png';
 </script>
 
 <svelte:head>

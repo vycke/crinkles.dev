@@ -87,7 +87,7 @@ When we follow the visualized state machine, we can restrict the behavior in our
 In a similar way, many other important interactions can be modelled in a state machine. Think of forms (e.g. touched state) or the visibility of modals. You might think that booleans would suffice in many cases. But when you have to use multiple booleans to determine the correct state, a state machine is more efficient and less error prone.
 
 :::
-[XState](https://xstate.js.org/) is a popular state machine library that you can use in various frameworks. Is it too big and complex for you, try my [fsm](https://github.com/crinklesio/fsm) package.
+[XState](https://xstate.js.org/) is a popular state machine library that you can use in various frameworks. Is it too big and complex for you, try my [cogwheel](https://github.com/crinklesio/cogwheel) package.
 :::
 
 ## Wrapping up

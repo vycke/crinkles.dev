@@ -67,7 +67,7 @@ export const config = {
 ```
 
 :::
-I am using the [fsm >v0.11.0](https://github.com/crinklesio/fsm) package definitions for the state machine. Similar configurations can be created for XState or other libraries.
+I am using the [cogwheel >v1.0.0](https://github.com/crinklesio/cogwheel) package definitions for the state machine. Similar configurations can be created for XState or other libraries.
 :::
 
 ## Enhancing the global cache
@@ -84,14 +84,14 @@ In the remainer of this article, we will use the second method. However, the fir
 To benefit the state machine, it is important to not store the data in the cache, but the complete state machine. This allows us to use the current state of the machine when starting up the enhanced `swr` function in a UI component.
 
 ```js
-import { fsm } from '@crinkles/fsm';
+import { machine } from 'cogwheel';
 import { writable } from 'svelte/store';
 import { config, context } from './fetchMachineConfig';
 
 const cache = {};
 
 export function swr(url) {
-	if (!cache[url]) cache[url] = fsm('init', config, context);
+	if (!cache[url]) cache[url] = machine('init', config, context);
 
 	const { subscribe, set } = writable({}, () => {
 		// The listener function

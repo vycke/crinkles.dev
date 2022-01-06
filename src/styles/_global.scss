@@ -13,16 +13,15 @@ main {
 
 // LINKS
 a,
-a > *,
 a:link,
 a:visited,
 a:active {
 	transition: all 200ms ease;
+	color: var(--color-gray-100);
 	text-decoration-color: var(--color-primary-0);
 }
 
-a:hover,
-a:hover > * {
+a:hover {
 	color: var(--color-primary-0);
 }
 

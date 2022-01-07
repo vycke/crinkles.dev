@@ -36,7 +36,7 @@
 				and always <i>learn</i>.
 			</span>
 
-			<div class="text-gray-200 | serif bold italic text-1 text-center maxw-4 py-3">{quote}</div>
+			<div class="text-gray-200 | serif bold italic text-1 text-center maxw-4 mt-3">{quote}</div>
 		</div>
 		<aside class="flow-y flow-g-0">
 			<h2 class="text-0 regular uppercase text-primary-0 visually-hidden">Recent articles</h2>

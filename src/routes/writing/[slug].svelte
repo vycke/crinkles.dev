@@ -57,7 +57,7 @@
 
 <div class="panel-r panel-f-0 panel-w-3">
 	<Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-		<span class="text-gray-300 uppercase monospace text-00">
+		<span class="text-gray-300 uppercase text-00">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
@@ -109,9 +109,12 @@
 		display: block;
 	}
 
-	:global(.post aside a) {
+	:global(.post aside a),
+	:global(.post aside a:visited) {
+		color: var(--color-gray-600);
 		text-decoration-color: var(--color-gray-600);
 	}
+
 	:global(.post aside a:hover) {
 		color: var(--color-gray-400);
 		text-decoration-color: var(--color-gray-400);

@@ -1,8 +1,7 @@
 <script context="module">
 	export const hydrate = false;
-	import Crinkle from '$lib/components/Crinkle.svelte';
 	import Page from '$lib/components/Page.svelte';
-	import { quote } from '$lib/constants';
+	import { principles, quote } from '$lib/constants';
 </script>
 
 <Page class="flow-y flow-g-0 | mb-3 text-0" title="Meta | Crinkles">
@@ -34,6 +33,7 @@
 			responsiveness of the website.
 		</li>
 	</ul>
+
 	<p>
 		The current version of this website is created using <a
 			href="https://kit.svelte.dev"

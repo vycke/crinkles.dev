@@ -10,6 +10,8 @@
 	color: var(--color-gray-100);
 }
 
+// .token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string
+
 .token.builtin,
 .token.variable,
 .token.operator,
@@ -41,12 +43,7 @@
 .token.attr-value,
 .token.string,
 .token.number {
-	color: var(--color-tertiary-0);
-}
-
-code {
 	color: var(--color-primary-0);
-	background-color: var(--color-gray-500);
 }
 
 // INLINE CODE
@@ -54,11 +51,15 @@ code {
 	border-radius: 6px;
 	padding: 6px;
 	line-height: var(--lh-000);
+	color: var(--color-primary-0);
+	background-color: var(--color-gray-500);
 }
 
 pre > code {
 	border-radius: var(--size-000);
 	border: 2px solid var(--color-gray-300);
+	color: var(--color-gray-100);
+	background-color: var(--color-gray-500);
 }
 
 pre[data-lang] > span {

@@ -31,24 +31,19 @@
 			<h1>Hi, I'm Kevin.</h1>
 			<span class="text-0 text-gray-300">
 				I'm a creative front-end engineer and <i>crinkles</i> is my UI development studio. I love
-				<i>CSS</i> and live by some basic engineering principles.
+				<i>CSS</i> and live by some basic engineering principles: be <i>artistic</i>, be
+				<i>pragmatic</i>
+				and always <i>learn</i>.
 			</span>
-			{#each principles as principle, index}
-				<div class="flex-row items-start">
-					<span class="italic serif text-1 text-secondary-0 mr-0 bold">{index + 1}.</span>
-					<div class="flex-col">
-						<span class="text-primary-0 text-1 italic bold serif text-left">{principle.title}</span>
-						<span class="text-gray-300 text-0">{principle.description}</span>
-					</div>
-				</div>
-			{/each}
+
+			<div class="text-gray-200 | serif bold italic text-1 text-center maxw-4 py-3">{quote}</div>
 		</div>
 		<aside class="flow-y flow-g-0">
 			<h2 class="text-0 regular uppercase text-primary-0 visually-hidden">Recent articles</h2>
 
 			{#each articles as article}
 				<Card>
-					<span class="text-00 text-gray-300 monospace uppercase">
+					<span class="text-00 text-gray-300 uppercase">
 						{article.formattedDate}
 					</span>
 					<h3 class="text-gray-100">
@@ -63,14 +58,12 @@
 		</aside>
 	</section>
 
-	<div class="text-gray-200 | serif bold italic text-1 text-center maxw-4 py-3">{quote}</div>
-
-	<h2 class="text-0 regular uppercase text-primary-0 my-0">Recent projects</h2>
+	<h2 class="text-0 sans-serif uppercase my-0">Recent projects</h2>
 
 	<section class="tiles tiles-w-0 tiles-g-0 | mb-3">
 		{#each projects as project}
 			<Card>
-				<span class="text-00 text-gray-300 monospace">{project.type}</span>
+				<span class="text-00 text-gray-300">{project.type}</span>
 				<h3 class="text-gray-100">
 					<a href={project.href} title="Link to {project.title}">
 						{project.title}

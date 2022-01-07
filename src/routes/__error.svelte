@@ -35,7 +35,7 @@
 	<aside class="flow-y flow-g-0">
 		{#each articles as article}
 			<Card>
-				<span class="text-00 text-gray-300 monospace uppercase">
+				<span class="text-00 text-gray-300 uppercase">
 					{article.formattedDate}
 				</span>
 				<h2 class="text-0 text-gray-100">

@@ -10,7 +10,7 @@
 
 <script>
 	import Card from '$lib/components/Card.svelte';
-	import { description, principles, projects, quote, title } from '$lib/constants';
+	import { description, projects, quote, title } from '$lib/constants';
 
 	export let articles;
 </script>
@@ -26,17 +26,19 @@
 </svelte:head>
 
 <main class="center center-w-5 center-g-1 | mt-2 mb-3">
-	<section class="articles | panel-l panel-w-2 my-3 items-center">
+	<section class="panel-l panel-w-2 panel-g-3 my-3 items-center">
 		<div class="flow-y flow-g-0">
 			<h1>Hi, I'm Kevin.</h1>
-			<span class="text-0 text-gray-300">
+			<span class="text-0 text-gray-300 maxw-2">
 				I'm a creative front-end engineer and <i>crinkles</i> is my UI development studio. I love
 				<i>CSS</i> and live by some basic engineering principles: be <i>artistic</i>, be
 				<i>pragmatic</i>
 				and always <i>learn</i>.
 			</span>
 
-			<div class="text-gray-200 | serif bold italic text-1 text-center maxw-4 mt-3">{quote}</div>
+			<div class="text-gray-200 | serif bold italic text-1 text-center pt-3 maxw-2">
+				{quote}
+			</div>
 		</div>
 		<aside class="flow-y flow-g-0">
 			<h2 class="text-0 regular uppercase text-primary-0 visually-hidden">Recent articles</h2>
@@ -58,7 +60,7 @@
 		</aside>
 	</section>
 
-	<h2 class="text-0 sans-serif uppercase my-0">Recent projects</h2>
+	<h2 class="text-0 sans-serif uppercase mb-0 mt-2">Recent projects</h2>
 
 	<section class="tiles tiles-w-0 tiles-g-0 | mb-3">
 		{#each projects as project}
@@ -74,9 +76,3 @@
 		{/each}
 	</section>
 </main>
-
-<style>
-	.articles {
-		--panel-gap: 6rem;
-	}
-</style>

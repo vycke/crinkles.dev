@@ -25,8 +25,8 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | mt-2 mb-3">
-	<section class="panel-l panel-w-2 panel-g-3 my-3 items-center">
+<main class="center center-w-5 center-g-1 | mb-3">
+	<section class="panel-l panel-w-2 panel-g-3 my-2 items-center">
 		<div class="flow-y flow-g-0">
 			<h1>Hi, I'm Kevin.</h1>
 			<span class="text-0 text-gray-300 maxw-2">

@@ -7,7 +7,7 @@
 * Generate CSS custom properties
 *******/
 :root {
-	--gradient: -webkit-linear-gradient(45deg, var(--color-secondary-0), var(--color-secondary-0));
+	--gradient: -webkit-linear-gradient(45deg, var(--color-primary-0), var(--color-primary-0));
 	--lh-0: calc(2px + 2ex + 2px);
 }
 
@@ -20,7 +20,7 @@
 }
 
 .scale:hover {
-	box-shadow: 0 0 0 4px var(--color-primary-0);
+	box-shadow: 0 0 0 0.5rem var(--color-gray-500);
 }
 
 .wrapper {

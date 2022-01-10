@@ -90,7 +90,7 @@
 	}
 
 	h1 {
-		color: var(--color-primary-0);
+		color: var(--color-gray-200);
 	}
 
 	:global(.post aside) {
@@ -99,7 +99,7 @@
 		background-color: var(--color-primary-0);
 		color: var(--color-gray-500);
 		border-radius: var(--size-000);
-		border: 2px solid var(--color-gray-100);
+		border: 2px solid var(--color-gray-300);
 		font-size: var(--size-00);
 	}
 

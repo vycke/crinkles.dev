@@ -41,7 +41,7 @@
 			</div>
 		</div>
 		<aside class="flow-y flow-g-0">
-			<h2 class="text-0 regular uppercase text-primary-0 visually-hidden">Recent articles</h2>
+			<h2 class="visually-hidden">Recent articles</h2>
 
 			{#each articles as article}
 				<Card>

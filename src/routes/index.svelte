@@ -1,6 +1,5 @@
 <script context="module">
 	export const hydrate = false;
-	import Crinkle from '$lib/components/Crinkle.svelte';
 
 	export async function load({ fetch }) {
 		const res = await fetch('/api/latestArticles.json');
@@ -10,6 +9,7 @@
 
 <script>
 	import Card from '$lib/components/Card.svelte';
+	import Logo from '$lib/components/Logo.svelte';
 	import { description, projects, quote, title } from '$lib/constants';
 
 	export let articles;
@@ -25,10 +25,12 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | mb-3">
+<main class="center center-w-5 center-g-1 | mt-1 mb-3">
 	<section class="panel-l panel-w-2 panel-g-3 my-2 items-center">
 		<div class="flow-y flow-g-0">
-			<h1>Hi, I'm Kevin.</h1>
+			<h1 class="flow-x items-center">
+				<Logo class="mr-2" />Hi, I'm Kevin.
+			</h1>
 			<span class="text-0 text-gray-300 maxw-2">
 				I'm a creative front-end engineer and <i>crinkles</i> is my UI development studio. I love
 				<i>CSS</i> and live by some basic engineering principles: be <i>artistic</i>, be
@@ -54,9 +56,7 @@
 					<span class="text-00 text-gray-300 mt-000">{article.description}</span>
 				</Card>
 			{/each}
-			<a href="/writing" class="self-end | no-decoration text-0" sveltekit:prefetch>
-				View more articles <Crinkle />
-			</a>
+			<a href="/writing" class="self-end | text-0" sveltekit:prefetch> View more articles </a>
 		</aside>
 	</section>
 

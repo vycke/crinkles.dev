@@ -7,7 +7,7 @@
 <a
 	href="/"
 	aria-label="Logo that redirects to the homepage"
-	class={`logo | transition-300 no-decoration radius-3 ${klass} flex-row items-center`}
+	class={`logo | transition-300 no-decoration ${klass}`}
 >
 	<svg
 		width={size}
@@ -16,6 +16,11 @@
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 	>
+		<path
+			opacity="0.4"
+			d="M25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50V0Z"
+			fill="url(#paint0_linear)"
+		/>
 		<path
 			fill-rule="evenodd"
 			clip-rule="evenodd"

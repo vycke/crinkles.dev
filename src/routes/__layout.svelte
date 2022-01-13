@@ -14,7 +14,7 @@
 
 	let links = [
 		{ name: 'twitter', url: 'https://twitter.com/kevtiq', alt: 'Link to my Twitter page' },
-		{ name: 'github', url: 'https://github.com/crinklesio', alt: 'Link to my Github page' }
+		{ name: 'github', url: 'https://github.com/kevtiq', alt: 'Link to my Github page' }
 	];
 
 	let twitter = '@kevtiq';

@@ -57,7 +57,7 @@ store.count++;
 The code snippet above shows an example proxy. As you can see, we add a `listener` function for when the value of `count` changes. Now when we change the value of `count`, the `listener` function is triggered. Do note that this particular implementation is not _immutable_. You can change the value directly. Many people prefer to have an immutable state, as it is less prone to development errors.
 
 :::
-The `proxy` function from the [Pubble](https://github.com/crinklesio/pubble) package is a flexible example of a proxy-based state management technique. It can be made immutable by choice, you can create (single-level) atoms, or you can converting it to be event-driven.
+The `proxy` function from the [Pubble](https://github.com/kevtiq/pubble) package is a flexible example of a proxy-based state management technique. It can be made immutable by choice, you can create (single-level) atoms, or you can converting it to be event-driven.
 :::
 
 ## State machines
@@ -87,7 +87,7 @@ When we follow the visualized state machine, we can restrict the behavior in our
 In a similar way, many other important interactions can be modelled in a state machine. Think of forms (e.g. touched state) or the visibility of modals. You might think that booleans would suffice in many cases. But when you have to use multiple booleans to determine the correct state, a state machine is more efficient and less error prone.
 
 :::
-[XState](https://xstate.js.org/) is a popular state machine library that you can use in various frameworks. Is it too big and complex for you, try my [cogwheel](https://github.com/crinklesio/cogwheel) package.
+[XState](https://xstate.js.org/) is a popular state machine library that you can use in various frameworks. Is it too big and complex for you, try my [cogwheel](https://github.com/kevtiq/cogwheel) package.
 :::
 
 ## Wrapping up

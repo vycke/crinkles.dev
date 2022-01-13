@@ -12,7 +12,7 @@ export const projects = [
 	{
 		type: 'SvelteKit project',
 		title: 'DocKit',
-		href: 'https://github.com/crinklesio/dockit',
+		href: 'https://github.com/kevtiq/dockit',
 		description: 'Markdown based document website template'
 	},
 	{

@@ -66,7 +66,7 @@
 		{@html post.html}
 	</Page>
 	<nav class="sticky post-0 flow-y flow-g-000 px-1 pt-3 self-start">
-		<span class="text-00 uppercase sans-serif text-primary-0">Table of contents</span>
+		<span class="text-00 uppercase sans-serif text-bace-0">Table of contents</span>
 		<ul role="list">
 			{#each post.headers as header, i}
 				<li class="pb-000" data-active={i === 0}>
@@ -86,7 +86,7 @@
 	}
 
 	a:hover {
-		color: var(--color-primary-0);
+		color: var(--color-bace-0);
 	}
 
 	h1 {
@@ -96,7 +96,7 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-2);
-		background-color: var(--color-primary-0);
+		background-color: var(--color-bace-0);
 		color: var(--color-gray-500);
 		border-radius: var(--size-000);
 		border: 2px solid var(--color-gray-300);
@@ -139,7 +139,7 @@
 
 	:global(.post h2:hover a::after) {
 		content: ' #';
-		color: var(--color-primary-0);
+		color: var(--color-bace-0);
 	}
 
 	:global(.post img) {
@@ -151,6 +151,6 @@
 	li[data-active='true'] a {
 		text-decoration: underline;
 		text-decoration-thickness: 2px;
-		text-decoration-color: var(--color-primary-0);
+		text-decoration-color: var(--color-bace-0);
 	}
 </style>

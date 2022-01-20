@@ -5,7 +5,7 @@ description: >-
   Horizontal centering is an ancient problem in CSS. With CSS Grid we are able enhance this layout pattern. But, this gives us other issues. Let's find a better solution.
 ---
 
-In a previous [article](/writing/css-layout-patterns) I wrote about modern CSS layout solutions. As horizontal centering is a common layout pattern, the grid-based solution was a prime candidate to convert into a generic class when creating [Feo CSS](https://github.com/kevtiq/feo-css). But I encountered an issue. When combining this solution with other CSS layout patterns (e.g. the [flow](https://github.com/kevtiq/feo-css#flow-x-and-flow-y) pattern) my layout would break. Both patterns are targeting the `display` property, but with different values. To allow both patterns to work together, I had to find a different solution.
+In a previous [article](/writing/css-layout-patterns) I wrote about modern CSS layout solutions. As horizontal centering is a common layout pattern, the grid-based solution was a prime candidate to convert into a generic class when creating [Bace CSS](https://bace.crinkles.io). But I encountered an issue. When combining this solution with other CSS layout patterns (e.g. the [stack](https://bace.crinkles.io/stack) pattern) my layout would break. Both patterns are targeting the `display` property, but with different values. To allow both patterns to work together, I had to find a different solution.
 
 ## The center layout pattern
 
@@ -18,7 +18,7 @@ The _center_ layout pattern allows you to horizontally center elements on the sc
 This solution creates a three-column grid. The outer columns act as the padding and overflow of the layout. By giving them a minimum width via `minmax(1rem, 1fr)`, you ensure small padding exists on small screens. The center column takes the space required for the content but is capped at the maximum width. You can achieve this with `minmax(auto, 60ch)`. This gives the combined implementation as displayed below.
 
 :::
-The used examples make use of CSS custom properties. This allows for adjustable layouts based on utility classes. Examples can be found in [Feo CSS](https://github.com/kevtiq/feo-css#center).
+The used examples make use of CSS custom properties. This allows for adjustable layouts based on utility classes. Examples can be found in [Bace CSS](https://bace.crinkles.io/center).
 :::
 
 ```css

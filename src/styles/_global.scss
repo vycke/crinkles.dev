@@ -3,8 +3,10 @@
 *******/
 html,
 body {
-	color: var(--color-gray-100);
-	background-color: var(--color-gray-600);
+	color: var(--color-gray-0);
+	background-color: var(--color-gray-5);
+	font-family: var(--sans-serif);
+	line-height: var(--lh-2);
 }
 
 main {
@@ -17,18 +19,20 @@ a:link,
 a:visited,
 a:active {
 	transition: all 200ms ease;
-	color: var(--color-gray-100);
-	text-decoration-color: var(--color-bace-0);
+	color: var(--color-gray-0);
+	text-decoration-color: var(--color-bace-1);
 }
 
 a:hover {
-	color: var(--color-bace-0);
+	color: var(--color-bace-1);
 }
 
 h1,
 h2,
 h3 {
 	font-family: var(--serif);
+	width: 100%;
+	line-height: var(--lh-1);
 }
 
 h1 a,
@@ -38,22 +42,22 @@ h3 a {
 }
 
 ::selection {
-	color: var(--color-gray-600) !important;
-	background: var(--color-gray-100) !important;
+	color: var(--color-gray-5) !important;
+	background: var(--color-gray-0) !important;
 }
 
 i,
 em {
 	font-style: italic;
 	font-family: var(--serif);
-	color: var(--color-bace-0);
+	color: var(--color-bace-1);
 }
 
 // QUOTES
 blockquote {
 	display: block;
 	padding: var(--size-0) var(--size-2);
-	color: var(--color-gray-300);
+	color: var(--color-gray-2);
 	font-family: var(--serif);
 	font-size: var(--size-0);
 	text-align: center;
@@ -66,7 +70,7 @@ blockquote {
 		font-style: italic;
 		margin-top: var(--size-00);
 		text-align: right;
-		color: var(--color-bace-0);
+		color: var(--color-bace-1);
 	}
 }
 
@@ -83,7 +87,7 @@ ul:not([role]) {
 		margin-left: var(--size-2);
 
 		&::marker {
-			color: var(--color-bace-0);
+			color: var(--color-bace-1);
 		}
 	}
 }
@@ -100,7 +104,7 @@ ol:not([role]) {
 			font-style: italic;
 			font-family: var(--serif);
 			font-weight: bold;
-			color: var(--color-bace-0);
+			color: var(--color-bace-1);
 		}
 	}
 }

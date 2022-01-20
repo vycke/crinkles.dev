@@ -5,8 +5,8 @@ export const description =
 export const projects = [
 	{
 		type: '(S)CSS',
-		title: 'Feo',
-		href: 'https://feo.crinkles.io',
+		title: 'Bace CSS',
+		href: 'https://bace.crinkles.io',
 		description: 'Layout and utility based CSS framework'
 	},
 	{

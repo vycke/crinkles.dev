@@ -28,7 +28,10 @@
 		</div>
 	</header>
 
-	<main class={`center center-w-3 center-g-1 ${styles}`} in:fly={{ y: 50, duration: 250 }}>
+	<main
+		class={`center center-w-3 center-stretch center-g-1 ${styles}`}
+		in:fly={{ y: 50, duration: 250 }}
+	>
 		<slot />
 	</main>
 </div>
@@ -48,7 +51,7 @@
 
 	@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 		header {
-			background-color: var(--color-gray-600);
+			background-color: var(--color-gray-5);
 		}
 	}
 </style>

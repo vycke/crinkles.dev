@@ -3,10 +3,10 @@
 	export let previous = undefined;
 </script>
 
-<section class="panel-l panel-w-3 panel-g-1 | p-1 my-3">
+<section class="sidebar-l sidebar-w-2 gap-1 | p-1 my-3">
 	{#if next}
 		<a class="flex-col items-start justify-center no-decoration" sveltekit:prefetch href={next.url}>
-			<span class="text-gray-300 text-00 uppercase">← Next</span>
+			<span class="text-gray-2 text-00 uppercase">← Next</span>
 			<h3>{next.subtitle}</h3>
 		</a>
 	{/if}
@@ -16,7 +16,7 @@
 			sveltekit:prefetch
 			href={previous.url}
 		>
-			<span class="text-gray-300 text-00 uppercase">Previous →</span>
+			<span class="text-gray-2 text-00 uppercase">Previous →</span>
 			<h3>{previous.subtitle}</h3>
 		</a>
 	{/if}

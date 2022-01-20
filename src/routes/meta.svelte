@@ -4,7 +4,7 @@
 	import { principles, quote } from '$lib/constants';
 </script>
 
-<Page class="flow-y flow-g-0 | mb-3 text-0" title="Meta | Crinkles">
+<Page class="stack stack-g-0 | mb-3 text-0" title="Meta | Crinkles">
 	<blockquote class="text-1 bold">{quote}</blockquote>
 
 	<p>
@@ -42,8 +42,8 @@
 			SvelteKit
 		</a>
 		and my own
-		<a href="https://feo.crinkles.io" title="Link to documentation website of Feo">
-			(S)CSS framework called Feo</a
+		<a href="https://bace.crinkles.io" title="Link to documentation website of Bace CSS">
+			(S)CSS framework called Bace CSS</a
 		>.
 	</p>
 </Page>

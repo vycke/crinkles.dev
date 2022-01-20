@@ -1,13 +1,13 @@
 // reset, settings & generic styles
 @import 'fonts';
-@import 'feo-config';
-@import '../../node_modules/@crinkles/feo/feo.scss';
+@import 'bace-config';
+@import '../../node_modules/bace-css/bace.scss';
 
 /*******
 * Generate CSS custom properties
 *******/
 :root {
-	--gradient: -webkit-linear-gradient(45deg, var(--color-bace-0), var(--color-bace-0));
+	--gradient: -webkit-linear-gradient(45deg, var(--color-bace-1), var(--color-bace-1));
 	--lh-0: calc(2px + 2ex + 2px);
 }
 
@@ -20,9 +20,5 @@
 }
 
 .scale:hover {
-	box-shadow: 0 0 0 0.5rem var(--color-gray-500);
-}
-
-.wrapper {
-	min-height: 100vh;
+	box-shadow: 0 0 0 0.5rem var(--color-gray-4);
 }

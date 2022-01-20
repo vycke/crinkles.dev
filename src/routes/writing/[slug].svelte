@@ -55,18 +55,18 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<div class="panel-r panel-f-0 panel-w-3">
-	<Page class="post | flow-y flow-g-2" title={post.title} description={post.description}>
-		<span class="text-gray-300 uppercase text-00">
+<div class="sidebar-r sidebar-w-0">
+	<Page class="post | stack stack-g-2" title={post.title} description={post.description}>
+		<span class="text-gray-2 uppercase text-00">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
-		<h1 class="flow-self-none">{post.title}</h1>
+		<h1 class="stack-g-none">{post.title}</h1>
 
 		{@html post.html}
 	</Page>
-	<nav class="sticky post-0 flow-y flow-g-000 px-1 pt-3 self-start">
-		<span class="text-00 uppercase sans-serif text-bace-0">Table of contents</span>
+	<nav class="sticky post-0 stack stack-g-000 px-1 pt-3 self-start">
+		<span class="text-00 uppercase sans-serif text-bace-1">Table of contents</span>
 		<ul role="list">
 			{#each post.headers as header, i}
 				<li class="pb-000" data-active={i === 0}>
@@ -82,24 +82,24 @@
 <style>
 	a,
 	a:visited {
-		color: var(--color-gray-300);
+		color: var(--color-gray-2);
 	}
 
 	a:hover {
-		color: var(--color-bace-0);
+		color: var(--color-bace-1);
 	}
 
 	h1 {
-		color: var(--color-gray-200);
+		color: var(--color-gray-1);
 	}
 
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-2);
-		background-color: var(--color-bace-0);
-		color: var(--color-gray-500);
+		background-color: var(--color-bace-1);
+		color: var(--color-gray-4);
 		border-radius: var(--size-000);
-		border: 2px solid var(--color-gray-300);
+		border: 2px solid var(--color-gray-2);
 		font-size: var(--size-00);
 	}
 
@@ -111,13 +111,13 @@
 
 	:global(.post aside a),
 	:global(.post aside a:visited) {
-		color: var(--color-gray-600);
-		text-decoration-color: var(--color-gray-600);
+		color: var(--color-gray-5);
+		text-decoration-color: var(--color-gray-5);
 	}
 
 	:global(.post aside a:hover) {
-		color: var(--color-gray-400);
-		text-decoration-color: var(--color-gray-400);
+		color: var(--color-gray-3);
+		text-decoration-color: var(--color-gray-3);
 	}
 
 	:global(.post h2) {
@@ -130,7 +130,7 @@
 
 	:global(.post h2 a) {
 		text-decoration-line: none;
-		color: var(--color-gray-100);
+		color: var(--color-gray-0);
 	}
 
 	:global(.post h2:hover a) {
@@ -139,7 +139,7 @@
 
 	:global(.post h2:hover a::after) {
 		content: ' #';
-		color: var(--color-bace-0);
+		color: var(--color-bace-1);
 	}
 
 	:global(.post img) {
@@ -151,6 +151,6 @@
 	li[data-active='true'] a {
 		text-decoration: underline;
 		text-decoration-thickness: 2px;
-		text-decoration-color: var(--color-bace-0);
+		text-decoration-color: var(--color-bace-1);
 	}
 </style>

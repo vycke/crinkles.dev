@@ -26,7 +26,7 @@
 </svelte:head>
 
 <main class="center center-w-5 center-g-1 | mt-1 mb-3">
-	<section class="sidebar-r sidebar-w-2 sidebar-c-40 gap-5 items-center">
+	<section class="switcher switcher-w-3 gap-5 items-center">
 		<div class="stack stack-g-0">
 			<h1 class="flex-row items-center">
 				<Logo class="mr-2" />Hi, I'm Kevin.

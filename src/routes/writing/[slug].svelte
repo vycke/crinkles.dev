@@ -1,15 +1,15 @@
 <script context="module">
-	export async function load({ page, fetch }) {
-		const res = await fetch(`/api/${page.params.slug}.json`);
+	export async function load({ params, fetch }) {
+		const res = await fetch(`/api/${params.slug}.json`);
 
 		if (res.ok) {
-			const { post, next, prev, headers } = await res.json();
+			const { post, next, prev } = await res.json();
 			return { props: { post, next, prev } };
 		}
 
 		return {
 			status: res.status,
-			error: new Error(`Could not find article '${page.params.slug}'`)
+			error: new Error(`Could not find article '${params.slug}'`)
 		};
 	}
 </script>

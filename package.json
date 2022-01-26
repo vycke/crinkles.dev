@@ -9,11 +9,12 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
-		"prismjs": "^1.24.1"
+		"frontmatter": "^0.0.3",
+		"prismjs": "^1.26.0"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^1.0.0-next.13",
-		"@sveltejs/kit": "^1.0.0-next.131",
+		"@sveltejs/adapter-static": "^1.0.0-next.24",
+		"@sveltejs/kit": "1.0.0-next.231",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"bace-css": "^1.1.0",
@@ -21,7 +22,7 @@
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-svelte3": "^3.1.0",
 		"front-matter": "^4.0.2",
-		"marked": "^2.1.1",
+		"marked": "^4.0.10",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"prism-svelte": "^0.4.7",
@@ -30,7 +31,7 @@
 		"svelte-preprocess": "^4.0.0",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0",
-		"vite": "^2.3.8"
+		"vite": "^2.7.13"
 	},
 	"type": "module"
 }

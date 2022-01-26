@@ -1,7 +1,7 @@
 <script context="module">
 	export const hydrate = false;
 	import Page from '$lib/components/Page.svelte';
-	import { principles, quote } from '$lib/constants';
+	import { quote } from '$lib/constants';
 </script>
 
 <Page class="stack stack-g-0 | mb-3 text-0" title="Meta | Crinkles">

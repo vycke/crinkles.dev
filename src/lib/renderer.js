@@ -1,4 +1,4 @@
-import marked from 'marked';
+import { marked } from 'marked';
 import prism from 'prismjs';
 import 'prism-svelte';
 import 'prismjs/components/prism-scss.js';
@@ -46,7 +46,7 @@ const infoblock = {
 			return {
 				type: 'infoBlock',
 				raw: match[0],
-				tokens: this.inlineTokens(
+				tokens: this.lexer.inlineTokens(
 					match[0]
 						.replace(/:{3,}\n/, '')
 						.replace(/\n:{3,}/, '')
@@ -56,7 +56,7 @@ const infoblock = {
 		}
 	},
 	renderer(token) {
-		return `<aside>${this.parseInline(token.tokens)}\n</aside>`;
+		return `<aside>${this.parser.parseInline(token.tokens)}\n</aside>`;
 	}
 };
 

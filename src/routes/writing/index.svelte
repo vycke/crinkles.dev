@@ -13,21 +13,21 @@
 	export let articles;
 </script>
 
-<Page class="stack stack-g-2 | mb-3">
+<Page class="stack stack-g-5 | mb-6">
 	{#each articles as group}
 		<div class="monospace">
-			<span class="text-0 text-primary bold">{group[0]}</span>
+			<span class="text-3 text-primary bold">{group[0]}</span>
 		</div>
-		<div class="tiles tiles-w-0 gap-0">
+		<div class="tiles tiles-w-3 gap-3">
 			{#each group[1] as article}
 				<Card>
-					<span class="text-00 text-grey-2 monospace uppercase">
+					<span class="text-1 text-grey-2 monospace uppercase">
 						{article.formattedDate}
 					</span>
-					<h2 class="text-0 text-grey-0">
+					<h2 class="text-3 text-grey-0">
 						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 					</h2>
-					<span class="text-00 text-grey-2 mt-000">{article.description}</span>
+					<span class="text-2 text-grey-2 mt-1">{article.description}</span>
 				</Card>
 			{/each}
 		</div>

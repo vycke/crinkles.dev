@@ -279,10 +279,10 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-bace-css@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/bace-css/-/bace-css-1.2.0.tgz#d63b7a769bff18750fa9d624ae9cd001e1752b87"
-  integrity sha512-6/XGFjioEXMcbVme1df/U2bxA/bOe2qkqvEZ0SCx6iLSFnvfCPZZXR05oPgpGCg0FE3BUIKSh2O6fzXyC4+UJg==
+bace-css@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/bace-css/-/bace-css-1.2.1.tgz#4648d8a11775638eb66ce9b07b56f696bfbb822c"
+  integrity sha512-G7JHthZRRXUZA1q0MC86ranteOENZ0eys26nn3gAKJu4QaMZGDfk2/V7xtK2dIlmhPKz4T90Nh+JATJ/EClCww==
 
 balanced-match@^1.0.0:
   version "1.0.2"

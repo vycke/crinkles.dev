@@ -25,11 +25,11 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-8 center-g-4 | mt-4 mb-6">
+<main class="center center-w-8 center-g-4 | flex-grow mt-4 mb-6">
 	<section class="switcher switcher-w-3 gap-8 items-center">
 		<div class="stack stack-g-3">
 			<h1 class="flex-row items-center">
-				<Logo class="mr-2" />Hi, I'm Kevin.
+				<Logo class="mr-4" />Hi, I'm Kevin.
 			</h1>
 			<span class="text-3 text-grey-2">
 				I'm a creative front-end engineer and <i>crinkles</i> is my UI development studio. I love
@@ -37,40 +37,40 @@
 				<i>pragmatic</i> always <i>learning</i>.
 			</span>
 
-			<span class="text-grey-1 | serif bold italic text-1 text-center pt-3">
+			<span class="text-grey-1 | serif bold italic text-4 text-center pt-6">
 				{quote}
 			</span>
 		</div>
-		<aside class="stack stack-g-0">
+		<aside class="stack stack-g-3">
 			<h2 class="visually-hidden">Recent articles</h2>
 
 			{#each articles as article}
 				<Card>
-					<span class="text-00 text-grey-2 uppercase">
+					<span class="text-2 text-grey-2 uppercase">
 						{article.formattedDate}
 					</span>
 					<h3 class="text-grey-0">
 						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 					</h3>
-					<span class="text-00 text-grey-2 mt-000">{article.description}</span>
+					<span class="text-2 text-grey-2 mt-1">{article.description}</span>
 				</Card>
 			{/each}
-			<a href="/writing" class="self-end | text-0" sveltekit:prefetch> View more articles </a>
+			<a href="/writing" class="self-end | text-3" sveltekit:prefetch> View more articles </a>
 		</aside>
 	</section>
 
-	<h2 class="text-0 sans-serif uppercase mb-0 mt-2">Recent projects</h2>
+	<h2 class="text-3 sans-serif uppercase mb-3 mt-5">Recent projects</h2>
 
-	<section class="switcher switcher-w-3 gap-0 | mb-3">
+	<section class="switcher switcher-w-6 gap-3 | mb-6">
 		{#each projects as project}
 			<Card>
-				<span class="text-00 text-grey-2">{project.type}</span>
+				<span class="text-2 text-grey-2">{project.type}</span>
 				<h3 class="text-grey-0">
 					<a href={project.href} title="Link to {project.title}">
 						{project.title}
 					</a>
 				</h3>
-				<span class="text-00 text-grey-2 mt-000">{project.description}</span>
+				<span class="text-2 text-grey-2 mt-1">{project.description}</span>
 			</Card>
 		{/each}
 	</section>

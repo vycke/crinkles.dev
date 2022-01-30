@@ -55,22 +55,22 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<div class="sidebar-r sidebar-w-0">
-	<Page class="post | stack stack-g-2" title={post.title} description={post.description}>
-		<span class="text-grey-2 uppercase text-00">
+<div class="sidebar-r sidebar-w-3">
+	<Page class="post | stack stack-g-5" title={post.title} description={post.description}>
+		<span class="text-grey-2 uppercase text-2">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
-		<h1 class="stack-g-none">{post.title}</h1>
+		<h1 class="stack-g-0">{post.title}</h1>
 
 		{@html post.html}
 	</Page>
-	<nav class="sticky post-0 stack stack-g-000 px-1 pt-3 self-start">
-		<span class="text-00 uppercase sans-serif text-primary">Table of contents</span>
+	<nav class="sticky post-0 stack stack-g-1 px-4 pt-6 self-start">
+		<span class="text-2 uppercase sans-serif text-primary">Table of contents</span>
 		<ul role="list">
 			{#each post.headers as header, i}
-				<li class="pb-000" data-active={i === 0}>
-					<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
+				<li class="pb-1" data-active={i === 0}>
+					<a href="#{header.id}" class="text-2 no-decoration sans-serif">{header.label}</a>
 				</li>
 			{/each}
 		</ul>
@@ -98,9 +98,9 @@
 		padding: var(--size-3) var(--size-5);
 		background-color: var(--color-primary);
 		color: var(--color-grey-4);
-		border-radius: var(--size-300);
-		border: 2px solid var(--color-grey-2);
-		font-size: var(--size-30);
+		border-radius: var(--size-3);
+		border: 2px solid var(--color-secondary);
+		font-size: var(--size-2);
 	}
 
 	:global(.post aside::before) {

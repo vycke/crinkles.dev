@@ -22,8 +22,8 @@
 </svelte:head>
 
 <div class="flex-grow text-3 relative">
-	<header class="center center-w-6 center-g-1 | mt-5 mb-3">
-		<div class="flex-row items-center py-1 px-1">
+	<header class="center center-w-6 center-g-4 | mt-5 mb-3">
+		<div class="flex-row items-center py-1 px-4">
 			<Logo />
 		</div>
 	</header>

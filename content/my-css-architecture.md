@@ -44,10 +44,9 @@ There are a few different types of design tokens existing within the framework.
 
 - **Color**-based tokens are the only tokens using the ‘category’ of the naming convention. This category indicates the function of the color. There are brand (primary, secondary & accent), functional (info, success, warning & danger), and grey-scale colors. The numbers in the naming convention represent the color’s *darkness*. 
 - **Size**-based tokens are used for spacing, break-points, line-height, text-sizes, etc. The sizes are defined using the factor 1.333 between two succeeding sizes. If `size-0 = 1rem`  then  `size-1 = 1.33rem`. 
-- **Absolute**-based tokens for properties like border-width (in px), or z-index (per 100). The number corresponds with the actual value. 
-- **Typography**-based tokens, like font-family. These tokens do not use the ‘number’ of the naming convention. 
+- **Absolute**-based tokens for properties like border-width (in px), or z-index (per 100). The number corresponds with the actual value.
 
-As the framework is *extensible*, you should be able to define your names for the variables, with your preferred names. By making custom properties the baseline, the framework will be usable across every device supporting CSS and does not rely on any other framework or language. SCSS can be used to define the custom properties more easily, but it is mainly used to generate utility classes. 
+As the framework is *extensible*, other tokens can be defined as well, such as font-families. To ensure scalability, *CSS custom properties* are used as the baseline, to allow the tokens to be used everywhere consistently. SCSS can be used to define the custom properties more easily, but it is mainly used to generate utility classes.
 
 ```scss
 $colors: (
@@ -70,23 +69,26 @@ $colors: (
 
 ## Components
 
-Components are CSS classes created to fill the gaps utility classes cannot fill. They group several CSS properties. Where possible the defined *CSS custom properties* based on the design tokens are used. Components can be more than CSS only, though. It can be a combination with actual UI components through a JavaScript framework (e.g. React). All components follow a simple functional pattern. 
+Components are CSS classes created to fill the gaps utility classes cannot fill. They group several CSS properties. Where possible the defined *CSS custom properties* based on the design tokens are used. Components can be more than CSS only, though. It can be a combination with actual UI components through a JavaScript framework (e.g. React). All (CSS) components follow a simple functional pattern.
 
-- **Category**: an optional layer that gathers a whole family of components. Examples are actions, forms, navigation, search.
-- **Component**:  the actual classes for components within a category. 
-- **Type**:  used to define different variants of a single component (e.g. input with an icon, or a primary button). Where possible use the `data-type` attribute is used, otherwise dedicated classes are created for the types. These should be used in conjunction with the base class of the component. 
-- **State**: when a component/type has different states (read-only, clicked, validated, etc.), often based on HTML events or pseudo-classes (e.g. `:hover`). If pseudo-classes cannot be created, use the `data-state` attribute. 
+- **Category**: an optional layer that gathers a whole family of components. Think of form components (input, switch, radio-buttons), actions (buttons, toolbars, toggle groups, or navigation (items, links, tabs). The categories are used to make your components scoped (e.g. separate a search input from a form input) and more maintainable.
+- **Component**:  the actual classes for components within a category.
+- **Type**:  used to define different variants of a single component (e.g. input with an icon, or a primary button). The `data-type` attribute is used, as shown in the example below. If the number of variations in this attribute becomes unmaintainable, use named `data-*` attribute instead of a single `data-type`.
+- **State**: when a component/type has different states (read-only, clicked, validated, etc.), often based on HTML events or pseudo-classes (e.g. `:hover`). If pseudo-classes cannot be created, use the `data-state` attribute in a similar manner as the `data-type` attribute described above. Similar to types, if the number of variations of state becomes too big for a single `data-state` attribute, use named `data-*` attributes.
 
-Where possible, components should be co-located with the actual UI components. Several frameworks support this directly, or CSS Modules can be used to achieve a similar effect as well. 
+Where possible, components should be co-located with the actual UI components. Several frameworks support this directly, or CSS Modules can be used to achieve a similar effect as well.
 
-A simple button example could look like the snippet below. 
+:::
+The below snippet shows advanced usage of `data-*` attributes. The `~=` allows CSS to check if the value (e.g. `primary`) exists in a space-separated list of strings when used. The `i` at the end ensures everything is evaluated without case-sensitivity. 
+:::
+
+A simple button example could look like the snippet below.
 
 ```scss
 .btn { ... }
-/* types */
-.btn[data-type="primary"] { ... }
-/* states */
-.btn[data-state="clicked"] { ... }
+/* case-insensitive, with value check in list of strings */
+.btn[data-type~="primary" i] { ... }
+.btn[data-state~="clicked" i] { ... }
 .btn:hover { ... }
 ```
 
@@ -104,7 +106,7 @@ components/
 import styles from './button.module.scss';
 
 export default function Button() {
-  return <button className={styles.button}>...</button>
+  return <button className={styles.btn}>...</button>
 }
 ```
 

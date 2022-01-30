@@ -3,14 +3,14 @@
 *******/
 html,
 body {
-	color: var(--color-gray-0);
-	background-color: var(--color-gray-5);
+	color: var(--color-grey-0);
+	background-color: var(--color-grey-5);
 	font-family: var(--sans-serif);
-	line-height: var(--lh-2);
+	line-height: var(--lh-5);
 }
 
 main {
-	min-width: var(--bp-0);
+	min-width: var(--bp-3);
 }
 
 // LINKS
@@ -19,12 +19,12 @@ a:link,
 a:visited,
 a:active {
 	transition: all 200ms ease;
-	color: var(--color-gray-0);
-	text-decoration-color: var(--color-bace-1);
+	color: var(--color-grey-0);
+	text-decoration-color: var(--color-primary);
 }
 
 a:hover {
-	color: var(--color-bace-1);
+	color: var(--color-primary);
 }
 
 h1,
@@ -32,7 +32,7 @@ h2,
 h3 {
 	font-family: var(--serif);
 	width: 100%;
-	line-height: var(--lh-1);
+	line-height: var(--lh-4);
 }
 
 h1 a,
@@ -42,35 +42,35 @@ h3 a {
 }
 
 ::selection {
-	color: var(--color-gray-5) !important;
-	background: var(--color-gray-0) !important;
+	color: var(--color-grey-5) !important;
+	background: var(--color-grey-0) !important;
 }
 
 i,
 em {
 	font-style: italic;
 	font-family: var(--serif);
-	color: var(--color-bace-1);
+	color: var(--color-primary);
 }
 
 // QUOTES
 blockquote {
 	display: block;
-	padding: var(--size-0) var(--size-2);
-	color: var(--color-gray-2);
+	padding: var(--size-3) var(--size-5);
+	color: var(--color-grey-2);
 	font-family: var(--serif);
-	font-size: var(--size-0);
+	font-size: var(--size-3);
 	text-align: center;
 	font-style: italic;
 
 	cite {
 		display: block;
 		width: 100%;
-		font-size: var(--size-00);
+		font-size: var(--size-30);
 		font-style: italic;
-		margin-top: var(--size-00);
+		margin-top: var(--size-30);
 		text-align: right;
-		color: var(--color-bace-1);
+		color: var(--color-primary);
 	}
 }
 
@@ -84,10 +84,10 @@ ul:not([role]) {
 
 	li {
 		padding-left: 0;
-		margin-left: var(--size-2);
+		margin-left: var(--size-5);
 
 		&::marker {
-			color: var(--color-bace-1);
+			color: var(--color-primary);
 		}
 	}
 }
@@ -98,19 +98,19 @@ ol:not([role]) {
 
 	li {
 		padding-left: 0;
-		margin-left: var(--size-2);
+		margin-left: var(--size-5);
 
 		&::marker {
 			font-style: italic;
 			font-family: var(--serif);
 			font-weight: bold;
-			color: var(--color-bace-1);
+			color: var(--color-primary);
 		}
 	}
 }
 
 @media (max-width: 50rem) {
 	blockquote {
-		padding: var(--size-0);
+		padding: var(--size-3);
 	}
 }

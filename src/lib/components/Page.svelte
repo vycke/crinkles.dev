@@ -21,15 +21,15 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<div class="flex-grow text-0 relative">
-	<header class="center center-w-3 center-g-000 | mt-2 mb-0">
-		<div class="flex-row items-center py-000 px-1">
+<div class="flex-grow text-3 relative">
+	<header class="center center-w-6 center-g-1 | mt-5 mb-3">
+		<div class="flex-row items-center py-1 px-1">
 			<Logo />
 		</div>
 	</header>
 
 	<main
-		class={`center center-w-3 center-stretch center-g-1 ${styles}`}
+		class={`center center-w-6 center-stretch center-g-4 ${styles}`}
 		in:fly={{ y: 50, duration: 250 }}
 	>
 		<slot />
@@ -51,7 +51,7 @@
 
 	@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 		header {
-			background-color: var(--color-gray-5);
+			background-color: var(--color-grey-5);
 		}
 	}
 </style>

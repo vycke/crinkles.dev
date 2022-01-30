@@ -17,7 +17,7 @@
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<svg width="42" height="50" viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<rect opacity="0.3" x="4" y="14" width="11" height="21" rx="4" fill="#11BACE" />
+			<rect opacity="0.3" x="4" y="14" width="11" height="21" rx="4" fill="url(#paint0_linear)" />
 			<rect
 				opacity="0.3"
 				x="11.4981"
@@ -55,8 +55,8 @@
 				y2="7.5"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="var(--color-bace-1)" />
-				<stop offset="1" stop-color="var(--color-bace-1)" />
+				<stop stop-color="var(--color-primary)" />
+				<stop offset="1" stop-color="var(--color-primary)" />
 			</linearGradient>
 		</defs>
 	</svg>

@@ -4,7 +4,7 @@
 	import { quote } from '$lib/constants';
 </script>
 
-<Page class="stack stack-g-0 | mb-3 text-0" title="Meta | Crinkles">
+<Page class="stack stack-g-3 | mb-6 text-3" title="Meta | Crinkles">
 	<blockquote class="text-1 bold">{quote}</blockquote>
 
 	<p>

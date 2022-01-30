@@ -40,7 +40,7 @@
 
 <slot />
 
-<footer class="relative flex-col items-start | p-1 text-00 bg-gray-4">
+<footer class="relative flex-col items-start | p-1 text-00 bg-grey-4">
 	<div class="w-full cluster gap-00 self-center">
 		<a href="/meta" sveltekit:prefetch class="flex-grow p-000 serif bold italic">© crinkles</a>
 		{#each links as link}

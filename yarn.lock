@@ -88,10 +88,10 @@
   dependencies:
     tiny-glob "^0.2.9"
 
-"@sveltejs/kit@1.0.0-next.231":
-  version "1.0.0-next.231"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.231.tgz#cf85574cff8bd3634d4c81b23872c1b7f6f442a7"
-  integrity sha512-utG2cfgweIIwFA1IcDDzDTa7cz+UiJX03ELG9cvpwkGIlHypzbGr0AnUzRAX60HUsBQLNhtjNCU2BUUy8IQLPw==
+"@sveltejs/kit@^1.0.0-next.231":
+  version "1.0.0-next.251"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.251.tgz#66e36c3187353acf0165cdd7437ff6732a759f52"
+  integrity sha512-7GtUrUHqOa7ISo86PlICcMKcfGodOZwP9p7hXnN4t1yMWIQD2eKZlJffvnwx1X+NMcJ8hLChgcjGYjc1xZABhQ==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^1.0.0-next.32"
     sade "^1.7.4"
@@ -279,10 +279,10 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-bace-css@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/bace-css/-/bace-css-1.1.0.tgz#2face7adfece193494ec6a5b6cb9c5f59de2a3ac"
-  integrity sha512-DzhpmqWr+IjV4VI/1ikjflzOvq27TOej/3cfS5aD23CevByPDJUxSWon+6oK/MwAJT7wMjsWDzfP9YRBwjT/YA==
+bace-css@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/bace-css/-/bace-css-1.2.0.tgz#d63b7a769bff18750fa9d624ae9cd001e1752b87"
+  integrity sha512-6/XGFjioEXMcbVme1df/U2bxA/bOe2qkqvEZ0SCx6iLSFnvfCPZZXR05oPgpGCg0FE3BUIKSh2O6fzXyC4+UJg==
 
 balanced-match@^1.0.0:
   version "1.0.2"

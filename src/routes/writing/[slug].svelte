@@ -89,7 +89,7 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-3) var(--size-5);
-		background-color: var(--color-grey-4);
+		background-color: var(--color-grey-5);
 		border-radius: var(--size-3);
 		border-left: 5px solid var(--color-primary);
 		border-right: 5px solid var(--color-primary);

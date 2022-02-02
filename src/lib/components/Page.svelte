@@ -35,23 +35,3 @@
 		<slot />
 	</main>
 </div>
-
-<style>
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	header {
-		z-index: 100;
-		-webkit-backdrop-filter: blur(15px);
-		backdrop-filter: blur(15px);
-	}
-
-	@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-		header {
-			background-color: var(--color-grey-5);
-		}
-	}
-</style>

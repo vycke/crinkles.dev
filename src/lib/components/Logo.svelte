@@ -16,9 +16,9 @@
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 	>
-			<rect opacity="0.3" x="4" y="14" width="11" height="21" rx="4" fill="url(#paint0_linear)" />
+			<rect opacity="0" x="4" y="14" width="11" height="21" rx="4" fill="url(#paint0_linear)" />
 			<rect
-				opacity="0.3"
+				opacity="0"
 				x="11.4981"
 				y="13.8613"
 				width="16.6324"
@@ -28,7 +28,7 @@
 				fill="url(#paint0_linear)"
 			/>
 			<rect
-				opacity="0.3"
+				opacity="0"
 				x="21.2232"
 				y="50.0959"
 				width="16.6324"

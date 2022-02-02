@@ -36,10 +36,7 @@
 		});
 	}
 
-	onMount(() => {
-		const readyState = document.readyState;
-		handler();
-	});
+	onMount(handler);
 	export let post;
 	export let next;
 	export let prev;
@@ -89,17 +86,13 @@
 		color: var(--color-primary);
 	}
 
-	h1 {
-		color: var(--color-grey-1);
-	}
-
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-3) var(--size-5);
-		background-color: var(--color-primary);
-		color: var(--color-grey-4);
+		background-color: var(--color-grey-4);
 		border-radius: var(--size-3);
-		border: 2px solid var(--color-secondary);
+		border-left: 5px solid var(--color-primary);
+		border-right: 5px solid var(--color-primary);
 		font-size: var(--size-2);
 	}
 

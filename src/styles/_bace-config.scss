@@ -1,5 +1,19 @@
 $bace-fluid: true;
 
+$bace-colors: (
+  // grey-scale
+  'grey-0': hsl(215, 35%, 98%),
+  'grey-1': hsl(215, 35%, 90%),
+  'grey-2': hsl(215, 35%, 70%),
+  'grey-3': hsl(215, 35%, 40%),
+  'grey-4': hsl(215, 35%, 15%),
+  'grey-5': hsl(215, 35%, 10%),
+  // BRAND COLORS
+  'primary': #a6e3c8,
+  'secondary': hsl(215, 35%, 15%),
+  'accent': #11bace,
+);
+
 $bace-font-families: (
 	monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
 	serif: "'Source Serif', ui-serif, Georgia, Cambria, serif",

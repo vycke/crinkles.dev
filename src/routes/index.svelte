@@ -37,7 +37,7 @@
 				<i>pragmatic</i> always <i>learning</i>.
 			</span>
 
-			<span class="text-grey-1 | serif bold italic text-4 text-center pt-6">
+			<span class="serif bold italic text-4 text-center pt-6">
 				{quote}
 			</span>
 		</div>

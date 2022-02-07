@@ -9,14 +9,14 @@ $bace-colors: (
   'grey-4': hsl(215, 35%, 15%),
   'grey-5': hsl(215, 35%, 10%),
   // BRAND COLORS
-  'primary': #a6e3c8,
+  'primary': #d9cbd8,
   'secondary': hsl(215, 35%, 15%),
-  'accent': #11bace,
+  'accent': #11bace
 );
 
 $bace-font-families: (
-	monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
-	serif: "'Source Serif', ui-serif, Georgia, Cambria, serif",
-	sans-serif:
-		"system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+  monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  serif: "'Source Serif', ui-serif, Georgia, Cambria, serif",
+  sans-serif:
+    "system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
 );

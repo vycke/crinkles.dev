@@ -45,7 +45,7 @@ a[data-type='section']:after {
 	display: inline-block;
 	padding: 3px;
 	position: absolute;
-	right: -12px;
+	right: -8px;
 	top: 0.675em;
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
@@ -53,7 +53,7 @@ a[data-type='section']:after {
 }
 
 [data-type='section']:hover:after {
-	right: -24px;
+	right: -18px;
 }
 
 h1,

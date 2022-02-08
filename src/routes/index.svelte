@@ -42,7 +42,7 @@
 			<h2 class="visually-hidden">Recent articles</h2>
 
 			{#each articles as article}
-			<Card>
+			<Card type="dark">
 				<span class="text-2 text-grey-2 uppercase"> {article.formattedDate} </span>
 				<h3 class="text-grey-0">
 					<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>

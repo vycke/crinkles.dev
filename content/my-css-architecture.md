@@ -71,7 +71,7 @@ $colors: (
 
 Components are CSS classes created to fill the gaps utility classes cannot fill. They group several CSS properties. Where possible the defined _CSS custom properties_ based on the design tokens are used. Components can be more than CSS only, though. It can be a combination with actual UI components through a JavaScript framework (e.g. React). All (CSS) components follow a simple functional pattern.
 
-- **Category**: an optional layer that gathers a whole family of components. Think of form components (input, switch, radio-buttons), actions (buttons, toolbars, toggle groups, or navigation (items, links, tabs). The categories are used to make your components scoped (e.g. separate a search input from a form input) and more maintainable.
+- **Category**: an optional layer that gathers a whole family of components. The categories are used to make your components scoped (e.g. separate a search input from a form input) and more maintainable.
 - **Component**: the actual classes for components within a category.
 - **Type**: used to define different variants of a single component (e.g. input with an icon, or a primary button). The `data-type` attribute is used, as shown in the example below. If the number of variations in this attribute becomes unmaintainable, use named `data-*` attribute instead of a single `data-type`.
 - **State**: when a component/type has different states (read-only, clicked, validated, etc.), often based on HTML events or pseudo-classes (e.g. `:hover`). If pseudo-classes cannot be created, use the `data-state` attribute in a similar manner as the `data-type` attribute described above. Similar to types, if the number of variations of state becomes too big for a single `data-state` attribute, use named `data-*` attributes.

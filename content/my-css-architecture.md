@@ -116,8 +116,6 @@ For both the type and state of components, I advise using `data-*` attributes, a
 .input:hover { ... }
 ```
 
-## Component categories
-
 ## Wrapping up
 
 The moment I read about CUBE CSS, I was a fan of the methodology. How could I not? It was describing how I felt about CSS and how I was using it. At the same time, I became a big fan of customer properties. So why not combine the two into a framework? Which is what I did. The current version of the framework is open on [GitHub](https://github.com/kevtiq/bace-css). It is small but used in several projects, including this website. It has several layouts and utility classes built in. For now, I intend to continue to improve and enrich the framework when I can. Let me know in the [GitHub issues](https://github.com/kevtiq/bace-css/issues) what you think should be added!

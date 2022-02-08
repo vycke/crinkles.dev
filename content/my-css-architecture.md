@@ -76,23 +76,18 @@ Components are CSS classes created to fill the gaps utility classes cannot fill.
 - **Type**: used to define different variants of a single component (e.g. input with an icon, or a primary button). The `data-type` attribute is used, as shown in the example below. If the number of variations in this attribute becomes unmaintainable, use named `data-*` attribute instead of a single `data-type`.
 - **State**: when a component/type has different states (read-only, clicked, validated, etc.), often based on HTML events or pseudo-classes (e.g. `:hover`). If pseudo-classes cannot be created, use the `data-state` attribute in a similar manner as the `data-type` attribute described above. Similar to types, if the number of variations of state becomes too big for a single `data-state` attribute, use named `data-*` attributes.
 
-Where possible, components should be co-located with the actual UI components. Several frameworks support this directly, or CSS Modules can be used to achieve a similar effect as well.
+Every system has these generic components that you see coming back. Buttons, input fields, tables, you name it. These components are called _foundational_ components. Foundational components exist in four different categories.
 
-:::
-The below snippet shows advanced usage of `data-*` attributes. The `~=` allows CSS to check if the value (e.g. `primary`) exists in a space-separated list of strings when used. The `i` at the end ensures everything is evaluated without case-sensitivity.
-:::
+- **Form**: input, buttons, checkboxes.
+- **Navigation**: link, tabs, breadcrumbs, pagination.
+- **Structure**: footer, accordion, table.
+- **Utilities**: toast, dialog, tooltip.
 
-A simple button example could look like the snippet below.
+Next to foundational components you have _application_ components. These are non-generic components. They cannot be shared between applications. They are often a combination of foundational components, or deviate from the foundational rules. No pre-defined categories exist for these components, but you can make them based on common sense.
 
-```scss
-.btn { ... }
-/* case-insensitive, with value check in list of strings */
-.btn[data-type~="primary" i] { ... }
-.btn[data-state~="clicked" i] { ... }
-.btn:hover { ... }
-```
+## Co-location and data-\* attributes
 
-This can be combined with CSS Modules, as shown in the React-specific example below.
+Where possible, components should be co-located with the actual UI components. Several frameworks support this directly (e.g. Svelte), or CSS Modules can be used to achieve a similar effect as well.
 
 ```
 components/
@@ -109,6 +104,19 @@ export default function Button() {
 	return <button className={styles.btn}>...</button>;
 }
 ```
+
+For both the type and state of components, I advise using `data-*` attributes, as mentioned. These allow a flexible and maintainable way to build your components. The `~=` used in the snippit below allows CSS to check if the value (e.g. `touched`) exists in a space-separated list of strings when used. With the snippit below, it possible to have `data-state="touched error"` on an input field, and have both style definitions applied. The `i` at the end ensures everything is evaluated without case-sensitivity. These attributes can also be combined with CSS Modules.
+
+```scss
+.input { ... }
+/* case-insensitive, with value check in list of strings */
+.input[data-state~="touched" i] { ... }
+.input[data-state~="error" i] { ... }
+.input[readonly] { ... }
+.input:hover { ... }
+```
+
+## Component categories
 
 ## Wrapping up
 

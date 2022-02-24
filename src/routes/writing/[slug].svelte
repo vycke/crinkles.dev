@@ -91,8 +91,8 @@
 		padding: var(--size-3) var(--size-5);
 		background-color: var(--color-grey-5);
 		border-radius: var(--size-3);
-		border-left: 5px solid var(--color-primary);
-		border-right: 5px solid var(--color-primary);
+		border: 2px solid var(--color-accent);
+		/*border-right: 5px solid var(--color-primary);*/
 		font-size: var(--size-2);
 	}
 
@@ -104,13 +104,13 @@
 
 	:global(.post aside a),
 	:global(.post aside a:visited) {
-		color: var(--color-grey-5);
-		text-decoration-color: var(--color-grey-5);
+		color: var(--color-grey-1);
+		text-decoration-color: var(--color-grey-1);
 	}
 
 	:global(.post aside a:hover) {
-		color: var(--color-grey-3);
-		text-decoration-color: var(--color-grey-3);
+		color: var(--color-accent);
+		text-decoration-color: var(--color-accent);
 	}
 
 	:global(.post h2) {

@@ -8,13 +8,11 @@
 
 <style>
 	.card {
-    	border-left: 5px solid transparent;
-    	border-right: 5px solid transparent;
+    border: 2px solid transparent;
 		background-color: var(--color-grey-4);
 	}
 	.card:hover {
-		border-left: 5px solid var(--color-primary);
-		border-right: 5px solid var(--color-primary);
+		border: 2px solid var(--color-primary);
 	}
 
 	.card[data-type="dark"] {

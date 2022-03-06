@@ -105,7 +105,7 @@ Yes the `*` selector is a ['slow'](https://csswizardry.com/2011/09/writing-effic
 
 For comparison, a `* *` has a theoretical complexity of `O(n^2)`. This is because browsers evaluate CSS *right-to-left*. For the selector `nav a` we see a navigation with link in it. The browser sees a link within a navigation. This nuance has a big impact on performance. This is the reason why lengthy selectors have a [bad performance](https://csswizardry.com/2012/05/keep-your-css-selectors-short/#:~:text=Keeping%20CSS%20selectors%20short%20helps,Increases%20portability) (and maintainability). And, the reason why `* *` has a complexity of `O(n^2)`. 
 
-Again, performance is not an issue for CSS. But, there are simple ways to increase the performance of the owl selector. You can scope it (e.g. `.post > * + *`) or make it target more specific elements (e.g. `p + p`). The quality of your product will benefit more from clean and maintainable and less code. This results in less bugs, and smaller files that have to transferred via the users' network. 
+Again, performance is not an issue for CSS. But, there are simple ways to increase the performance of the owl selector. You can scope it (e.g. `.post > * + *`) or make it target more specific elements (e.g. `p + p`). The quality of your product will benefit more from clean, maintainable and less code. This results in less bugs, and smaller files that have to transferred via the users' network. 
 
 ## Wrapping up
 

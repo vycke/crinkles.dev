@@ -36,21 +36,11 @@ These days most browsers also support logical operators, that are more considera
 
 ## Algorithms in UI
 
-The owl selector is a wonderful example showing how complex parsing CSS selectors can be. It shows the real power of CSS. Why? Because it works nested. In any programming language, this can become complex fast. The nested nature of the selector can is comparable to [recursion](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>). Before diving into the recursive solution, let's look at the pseudo-code for a flat list of elements.
+The owl selector is a wonderful example showing how complex parsing CSS selectors can be. It shows the real power of CSS. Why? Because it works nested. In any programming language, this can become complex fast. The nested nature of the selector can is comparable to [recursion](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>). Before diving into the recursive solution, let's look at the pseudo-code for a flat list of elements. Now instead of pseudo-implementing `* + *`, lets look at something like `img + p`. This means that in our implementation we need check the typing of the first and second element. 
 
 :::
 The below pseudo-code examples do *not* represent how browsers evaluate CSS selectors. They are just examples to show how the mental models apply in other languages. 
 :::
-
-```js
-function owl(list, apply) {
-	for (i = 1; i < list.length; i++) {
-		apply(list[i]);
-	}
-}
-```
-
-Our function gets a list of elements and an `apply` function as input. As you can see, we start at `1`. Not because arrays start at 1 (they do not), but because our CSS selector skips the first element by default. The function works like `* + *` on a non-nested list. The callback `apply` is used to any element in the list. But what if we want to have something like `p + p` or even `img + p`? We have to add checks to ensure the adjacent elements follow the definition.
 
 ```js
 function isFirst(item) { ... }
@@ -65,7 +55,7 @@ function owl(list, apply) {
 }
 ```
 
-With the function, we can work with lists of varying types of elements and check if adjacent elements fit our criteria. We are only lacking the nesting capabilities of our CSS selector. We could check if our element has any children. If so, we call the `owl` function again. Yet, in HTML any element can have children. This means that even our elements complying with our adjacent rule can have children. So instead of calling the `owl` function if our element has children, we first have to call the `apply` function. So it can happen that for a single element, both `apply` and `owl` are called.
+With the function, we can work with lists of varying types of elements and check if adjacent elements fit our criteria. We are only lacking the nesting capabilities of our CSS selector. In HTML any element can have children. This means that even our elements complying with our adjacent rule can have children. This means that we need to first execute `apply`, but afterwards call `owl` again, when the element has children. 
 
 ```js
 function isFirst(item) { ... }
@@ -74,19 +64,18 @@ function hasChildren(item) { ... }
 
 function owl(list, apply) {
   for (i = 1; i < list.length; i++) {
-    if (isFirst(list[i]) && isSecond(list[i - 1])) {
+    if (isFirst(list[i]) && isSecond(list[i - 1])) 
       apply(list[i]);
-    }
-    if (hasChildren(list[i])) {
+
+    if (hasChildren(list[i]))
       owl(list[i], apply);
-    }
   }
 }
 ```
 
-You now know how to create something like our owl selector. It exists of a recursive function with some extra functions to check the conditions. The above pseudo-code can become more complex if our CSS becomes more complex. Try to combine it with different pseudo-selectors, or change its specificity. By doing so, you will see how powerful CSS has become.
+The above pseudo-code can become more complex if our CSS becomes more complex. We've only implemented a mental model now for the owl selector, and some variations. Try to combine it with different pseudo-selectors, or change its specificity. By doing so, you will see how powerful CSS has become.
 
-## Owls v.s. flex-boxes
+## Owls vs flex-boxes
 
 When you don't care for the recursive power of the owl selector, you might wonder: why not use flex-boxes with `flex-gap`. Like setting a `flex-gap` on the parent, the owl-selector sets the default gap between elements. The owl-selector makes things just a lot more adaptable. The owl-selector is used on this page to put a gap between elements of the article you are reading. But as you can see, the gap is not equal between all elements. Between a header and paragraph, there is a much smaller gap!
 

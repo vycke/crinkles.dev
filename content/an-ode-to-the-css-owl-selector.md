@@ -8,7 +8,7 @@ description: >-
 ![The owl selector](/img/owl-selector.png 'The owl selector')
 
 :::
-In the beginning of 2022 I've updated this article with the section 'Owls v.s. flex-boxes'.
+In the beginning of 2022 I've updated this article with the sections 'Owls v.s. flex-boxes' and 'What about performance'.
 :::
 
 It is not a secret that I love CSS. A few years ago I fell in love with a very simple, but powerful CSS selector. Back then I was expanding my CSS to the next level. I knew about the specificity and the cascade. I had no issue using CSS from scratch or with a framework. But I came across [Heydon Pickering](https://twitter.com/heydonworks) and later his ['lobotomized owl selector'](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/). This selector blew my mind. At the [CSS Day](https://cssday.nl/2019), he even showed another beauty, called the ['flexbox holy Albatros'](http://www.heydonworks.com/article/the-flexbox-holy-albatross) (you can watch it [here](https://www.youtube.com/watch?v=RUyNJaoJH_k)). These types of solutions showed me that solving solutions in CSS can be easy or elegant. So, Heydon, this one is (partly) for you.
@@ -26,11 +26,9 @@ Heydon explains the selector better in his [article](https://alistapart.com/arti
 
 So why is this selector so powerful? I found the selector when searching for a spacing solution for a blogging website. I wanted to create enough space between paragraphs, but also to their parent element. Many solutions exist to solve this. You can give every element a `margin-bottom`. This has a side effect on the last element. To solve this, override the styles with the `:last-of-type` pseudo-selector. Another solution is to add both a `padding-top` and `padding-bottom` to each paragraph. This can create unwanted side-effects with paddings of the parent element. More in-depth description of this specific problem and solution can be found on [Every Layout](https://every-layout.dev/layouts/stack/), which is a brilliant website.
 
-The `* + *` seems to be an elegant solution when using `margin-top`. The `margin-top` is only applied between the elements. But you can also have images using `img` or `svg` elements which have different spacing. Then try something like `p + p`. You can make this structure as specific as you want, ensuring a simple and elegant solution. But you know what makes it powerful? In this setup, it works on nested elements!
+The `* + *` is an elegant solution when using `margin-top`. The `margin-top` is only applied between the elements.You know what makes it powerful? In this setup, it works on nested elements! As you can see below, the `margin-top` rule applies to every element in the list. On the right, the second element gets not only the styling rule, but it also has two child elements. Of those child elements, the second one also gets the margin.
 
 ![The owl selector applied](/img/owl-layout.png 'The owl selector applied')
-
-As you can see on the left, the `margin-top` rule applies to every element in the list. On the right, the second element gets not only the styling rule, but it also has two child elements. Of those child elements, the second one also gets the margin.
 
 :::
 These days most browsers also support logical operators, that are more considerate towards different users (e.g. left-to-right readers). Instead of using `margin-top`, you can use `margin-block-start` to be more inclusive. 
@@ -38,7 +36,11 @@ These days most browsers also support logical operators, that are more considera
 
 ## Algorithms in UI
 
-How complex is it for the browser to transform my CSS commands into something shown on the screen? The owl selector is a wonderful example showing how complex parsing CSS selectors can be. It shows the real power of CSS. Why? Because it works nested. In any programming language, this can become complex fast. The nested nature of the selector can is comparable to [recursion](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>). Before diving into the recursive solution, let's look at the pseudo-code for a flat list of elements.
+The owl selector is a wonderful example showing how complex parsing CSS selectors can be. It shows the real power of CSS. Why? Because it works nested. In any programming language, this can become complex fast. The nested nature of the selector can is comparable to [recursion](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>). Before diving into the recursive solution, let's look at the pseudo-code for a flat list of elements.
+
+:::
+The below pseudo-code examples do *not* represent how browsers evaluate CSS selectors. They are just examples to show how the mental models apply in other languages. 
+:::
 
 ```js
 function owl(list, apply) {
@@ -95,6 +97,15 @@ When you don't care for the recursive power of the owl selector, you might wonde
 ```
 
 By defining rules with a higher specificity compared to `* + *`, we can overwrite the default layout behavior we are seeing. The example above shows how the gap between a header and paragraph can be reduced. When trying to achieve the same effect with `flex-gap`, you have start working with (negative) margins on elements. You are now using two competing ways to determine relative positioning. This creates less stable code, more layout issues, and makes debugging layout issues a lot more difficult. 
+
+## What about performance
+Recursion sounds scary for most developers. The code looks efficient and small, but in reality it can cause a lot of performance issues. So what is the impact of a `* + *` selector on performance? And should I care? Well, the short answer is *no*. CSS is hardly the cause of performance issues. CSS animations [out perform](https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance) JavaScript animations. 
+
+Yes the `*` selector is a ['slow'](https://csswizardry.com/2011/09/writing-efficient-css-selectors/) CSS selector. If we look at the theoretical complexity, this would be a `O(n)`. But what about `* + *`. Well, as this selector just takes the next element, its theoretical complexity is `O(n)` as well! In reality, `* + *` is unnoticeable slower than a standalone `*`. So the owl selector performs almost equal to your CSS reset on the `box-sizing`. In most cases even better, as most reset `::after` and `::before` on `*` as well. 
+
+For comparison, a `* *` has a theoretical complexity of `O(n^2)`. This is because browsers evaluate CSS *right-to-left*. For the selector `nav a` we see a navigation with link in it. The browser sees a link within a navigation. This nuance has a big impact on performance. This is the reason why lengthy selectors have a [bad performance](https://csswizardry.com/2012/05/keep-your-css-selectors-short/#:~:text=Keeping%20CSS%20selectors%20short%20helps,Increases%20portability) (and maintainability). And, the reason why `* *` has a complexity of `O(n^2)`. 
+
+Again, performance is not an issue for CSS. But, there are simple ways to increase the performance of the owl selector. You can scope it (e.g. `.post > * + *`) or make it target more specific elements (e.g. `p + p`). The quality of your product will benefit more from clean and maintainable and less code. This results in less bugs, and smaller files that have to transferred via the users' network. 
 
 ## Wrapping up
 

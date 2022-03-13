@@ -16,9 +16,9 @@ export const projects = [
 		description: 'State machine library'
 	},
 	{
-		type: 'React',
-		title: 'State machine editor',
-		href: 'https://fsm.crinkles.io',
+		type: 'SvelteKit',
+		title: 'Cogwheel editor',
+		href: 'https://cogwheel-editor.vercel.app/',
 		description: 'Visual editor for finite state machines'
 	}
 ];

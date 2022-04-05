@@ -6,11 +6,11 @@ body {
 	color: var(--color-grey-0);
 	background-color: var(--color-grey-5);
 	font-family: var(--sans-serif);
-	line-height: var(--lh-5);
+	line-height: var(--lh-2);
 }
 
 main {
-	min-width: var(--bp-3);
+	min-width: var(--bp-0);
 }
 
 // LINKS
@@ -34,8 +34,8 @@ a[data-type='section']:active {
 	color: var(--color-primary);
 	font-weight: bold;
 	position: relative;
-	padding: 0 var(--size-1);
-	margin-right: var(--size-4);
+	padding: 0 var(--size-000);
+	margin-right: var(--size-1);
 }
 
 a[data-type='section']:after {
@@ -61,7 +61,7 @@ h2,
 h3 {
 	font-family: var(--serif);
 	width: 100%;
-	line-height: var(--lh-4);
+	line-height: var(--lh-1);
 }
 
 h1 a,
@@ -108,12 +108,12 @@ blockquote {
 }
 
 // Styled unordered list
-ul:not([role]) {
+ul:not([class]) {
 	list-style: outside;
 
 	li {
 		padding-left: 0;
-		margin-left: var(--size-5);
+		margin-left: var(--size-2);
 
 		&::marker {
 			color: var(--color-primary);
@@ -122,12 +122,12 @@ ul:not([role]) {
 }
 
 // Ordered list
-ol:not([role]) {
+ol:not([class]) {
 	list-style: decimal outside;
 
 	li {
 		padding-left: 0;
-		margin-left: var(--size-5);
+		margin-left: var(--size-2);
 
 		&::marker {
 			font-style: italic;
@@ -140,6 +140,6 @@ ol:not([role]) {
 
 @media (max-width: 50rem) {
 	blockquote {
-		padding: var(--size-3);
+		padding: var(--size-0);
 	}
 }

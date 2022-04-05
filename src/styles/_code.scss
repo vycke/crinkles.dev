@@ -55,26 +55,26 @@
 }
 
 pre > code {
-	border-radius: var(--size-2);
+	border-radius: var(--size-00);
 	border: 2px solid var(--color-grey-2);
 	color: var(--color-grey-0);
 	background-color: var(--color-grey-4);
-	padding: var(--size-4);
-	font-size: var(--size-2);
-	line-height: var(--lh-5);
+	padding: var(--size-1);
+	font-size: var(--size-00);
+	line-height: var(--lh-2);
 }
 
 pre[data-lang] > span {
 	position: absolute;
 	top: 2px;
 	right: 2px;
-	font-size: var(--size-1);
+	font-size: var(--size-000);
 	font-family: var(--monospace);
 	color: var(--color-grey-5);
 	background-color: var(--color-grey-2);
 	text-transform: uppercase;
-	border-bottom-left-radius: var(--size-1);
-	border-top-right-radius: var(--size-1);
-	padding: 2px var(--size-3);
-	line-height: var(--lh-4);
+	border-bottom-left-radius: var(--size-000);
+	border-top-right-radius: var(--size-000);
+	padding: 2px var(--size-0);
+	line-height: var(--lh-1);
 }

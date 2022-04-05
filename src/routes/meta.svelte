@@ -4,8 +4,8 @@
 	import { quote } from '$lib/constants';
 </script>
 
-<Page class="stack gap-3 | mb-6 text-3" title="Meta | Crinkles">
-	<blockquote class="text-4 bold">{quote}</blockquote>
+<Page class="stack stack-g-0 | mb-3 text-0" title="Meta | Crinkles">
+	<blockquote class="text-1 bold">{quote}</blockquote>
 
 	<p>
 		Crinkles is a digital UI development studio. But this website is also the personal playground of

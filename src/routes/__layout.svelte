@@ -42,11 +42,11 @@
 
 <slot />
 
-<footer class="relative flex-col items-start | p-2 text-2 bg-grey-5">
-	<div class="w-full cluster gap-2 self-center">
-		<a href="/meta" sveltekit:prefetch class="flex-grow p-1 serif bold italic">© crinkles</a>
+<footer class="relative flex-col items-start | p-00 text-00 bg-grey-5">
+	<div class="w-full cluster gap-00 self-center">
+		<a href="/meta" sveltekit:prefetch class="flex-grow p-000 serif bold italic">© crinkles</a>
 		{#each links as link}
-			<a href={link.url} title={link.alt} class="p-1">{link.name}</a>
+			<a href={link.url} title={link.alt} class="p-000">{link.name}</a>
 		{/each}
 	</div>
 </footer>

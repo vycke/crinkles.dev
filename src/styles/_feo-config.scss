@@ -1,6 +1,6 @@
-$bace-fluid: true;
+$feo-fluid: true;
 
-$bace-colors: (
+$feo-colors: (
   // grey-scale
   'grey-0': hsl(215, 35%, 98%),
   'grey-1': hsl(215, 35%, 90%),
@@ -14,7 +14,7 @@ $bace-colors: (
   'accent': #11bace
 );
 
-$bace-font-families: (
+$feo-font-families: (
   monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
   serif: "'Source Serif', ui-serif, Georgia, Cambria, serif",
   sans-serif:

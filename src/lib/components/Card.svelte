@@ -2,7 +2,7 @@
 	export let type;
 </script>
 
-<div data-type={type} class="card | flex-col | click-area | radius-1 transition-200 p-4">
+<div data-type={type} class="card | flex-col | click-area | radius-000 transition-200 p-1">
 	<slot />
 </div>
 

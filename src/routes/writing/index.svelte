@@ -12,18 +12,18 @@
 	export let articles;
 </script>
 
-<Page class="stack gap-3 | mb-6">
+<Page class="flex-col gap-0 | mb-3">
 	{#each articles as group}
 		<div class="monospace">
-			<span class="text-3 text-primary bold">{group[0]}</span>
+			<span class="text-0 text-primary bold">{group[0]}</span>
 		</div>
 		{#each group[1] as article}
-			<div class="stack click-area">
-				<h2 class="text-4 text-grey-0">
+			<div class="stack">
+				<span class="text-00 text-grey-2 monospace uppercase"> {article.formattedDate} </span>
+				<h2 class="text-1 text-grey-0">
 					<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 				</h2>
-				<span class="text-2 text-grey-2 monospace uppercase"> {article.formattedDate} </span>
-				<span class="text-2 text-grey-2">{article.description}</span>
+				<span class="text-00 text-grey-2">{article.description}</span>
 			</div>
 		{/each}
 	{/each}

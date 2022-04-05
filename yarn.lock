@@ -279,11 +279,6 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-bace-css@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/bace-css/-/bace-css-1.2.1.tgz#4648d8a11775638eb66ce9b07b56f696bfbb822c"
-  integrity sha512-G7JHthZRRXUZA1q0MC86ranteOENZ0eys26nn3gAKJu4QaMZGDfk2/V7xtK2dIlmhPKz4T90Nh+JATJ/EClCww==
-
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
@@ -723,6 +718,11 @@ fastq@^1.6.0:
   integrity sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==
   dependencies:
     reusify "^1.0.4"
+
+feo-css@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-2.0.0.tgz#64c0ee5d39fe811f9d77c754390a5d2f23ae756b"
+  integrity sha512-W+A41oRBdXa3I/HEQXBwh+strArhdLoWd+Yz+vA/zGQgUZd+uqrqwy6MnDcX7apF55NITMYLK/D8iMbRkbnMKA==
 
 file-entry-cache@^6.0.1:
   version "6.0.1"

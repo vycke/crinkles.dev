@@ -52,22 +52,22 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<div class="sidebar-r sidebar-w-3">
-	<Page class="post | stack gap-5" title={post.title} description={post.description}>
-		<span class="text-grey-2 uppercase text-2">
+<div class="sidebar-r sidebar-w-0">
+	<Page class="post | stack stack-g-2" title={post.title} description={post.description}>
+		<span class="text-grey-2 uppercase text-00">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
-		<h1 class="gap-0">{post.title}</h1>
+		<h1 class="stack-g-none">{post.title}</h1>
 
 		{@html post.html}
 	</Page>
-	<nav class="sticky post-0 stack gap-1 px-4 pt-6 self-start">
-		<span class="text-2 uppercase sans-serif text-primary">Table of contents</span>
-		<ul role="list">
+	<nav class="sticky post-0 stack stack-g-000 px-1 pt-3 self-start">
+		<span class="text-00 uppercase sans-serif text-primary">Table of contents</span>
+		<ul class="content-table">
 			{#each post.headers as header, i}
-				<li class="pb-1" data-active={i === 0}>
-					<a href="#{header.id}" class="text-2 no-decoration sans-serif">{header.label}</a>
+				<li class="pb-000" data-active={i === 0}>
+					<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
 				</li>
 			{/each}
 		</ul>
@@ -88,12 +88,11 @@
 
 	:global(.post aside) {
 		display: block;
-		padding: var(--size-3) var(--size-5);
+		padding: var(--size-0) var(--size-1);
 		background-color: var(--color-grey-4);
-		border-radius: var(--size-3);
+		border-radius: var(--size-0);
 		border: 2px solid var(--color-accent);
-		/*border-right: 5px solid var(--color-primary);*/
-		font-size: var(--size-2);
+		font-size: var(--size-00);
 	}
 
 	:global(.post aside::before) {
@@ -114,11 +113,11 @@
 	}
 
 	:global(.post h2) {
-		margin-top: var(--size-6);
+		margin-top: var(--size-3);
 	}
 
 	:global(.post h2 + p) {
-		margin-top: var(--size-4);
+		margin-top: var(--size-1);
 	}
 
 	:global(.post h2 a) {
@@ -135,10 +134,16 @@
 		color: var(--color-primary);
 	}
 
-	:global(.post img) {
-		max-width: min(100%, var(--center-width));
+	:global(.post img),
+	:global(.post aside),
+	:global(.post pre) {
+		--center-gutter: 0px;
+		--center-width: calc(var(--bp-3) + 2 * var(--size-1));
+	}
+
+	.content-table {
+		list-style: none;
 		padding-left: 0;
-		padding-right: 0;
 	}
 
 	li[data-active='true'] a {

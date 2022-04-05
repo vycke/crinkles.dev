@@ -14,7 +14,9 @@
 
 	let links = [
 		{ name: 'twitter', url: 'https://twitter.com/kevtiq', alt: 'Link to my Twitter page' },
-		{ name: 'github', url: 'https://github.com/kevtiq', alt: 'Link to my Github page' }
+		{ name: 'github', url: 'https://github.com/kevtiq', alt: 'Link to my Github page' },
+		{ name: 'codepen', url: 'https://codepen.io/kevtiq', alt: 'Link to my CodePen.io page' },
+		{ name: 'rss', url: '/rss.xml', alt: 'Link to my RSS page' }
 	];
 
 	let twitter = '@kevtiq';
@@ -40,13 +42,11 @@
 
 <slot />
 
-<footer class="relative flex-col items-start | p-2 text-2 bg-grey-4">
+<footer class="relative flex-col items-start | p-2 text-2 bg-grey-5">
 	<div class="w-full cluster gap-2 self-center">
 		<a href="/meta" sveltekit:prefetch class="flex-grow p-1 serif bold italic">© crinkles</a>
 		{#each links as link}
 			<a href={link.url} title={link.alt} class="p-1">{link.name}</a>
 		{/each}
-
-		<a href="/rss.xml" title="RSS Feed" class="p-1">rss</a>
 	</div>
 </footer>

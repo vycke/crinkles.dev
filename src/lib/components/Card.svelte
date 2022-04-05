@@ -8,14 +8,14 @@
 
 <style>
 	.card {
-    border: 2px solid transparent;
-		background-color: var(--color-grey-4);
+		border: 2px solid transparent;
+		background-color: var(--color-grey-5);
 	}
 	.card:hover {
 		border: 2px solid var(--color-primary);
 	}
 
-	.card[data-type="dark"] {
-		background-color: var(--color-grey-5);
+	.card[data-type='dark'] {
+		background-color: var(--color-grey-4);
 	}
 </style>

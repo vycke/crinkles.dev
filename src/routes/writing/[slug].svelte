@@ -53,16 +53,16 @@
 </svelte:head>
 
 <div class="sidebar-r sidebar-w-3">
-	<Page class="post | stack stack-g-5" title={post.title} description={post.description}>
+	<Page class="post | stack gap-5" title={post.title} description={post.description}>
 		<span class="text-grey-2 uppercase text-2">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>
-		<h1 class="stack-g-0">{post.title}</h1>
+		<h1 class="gap-0">{post.title}</h1>
 
 		{@html post.html}
 	</Page>
-	<nav class="sticky post-0 stack stack-g-1 px-4 pt-6 self-start">
+	<nav class="sticky post-0 stack gap-1 px-4 pt-6 self-start">
 		<span class="text-2 uppercase sans-serif text-primary">Table of contents</span>
 		<ul role="list">
 			{#each post.headers as header, i}
@@ -89,7 +89,7 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-3) var(--size-5);
-		background-color: var(--color-grey-5);
+		background-color: var(--color-grey-4);
 		border-radius: var(--size-3);
 		border: 2px solid var(--color-accent);
 		/*border-right: 5px solid var(--color-primary);*/

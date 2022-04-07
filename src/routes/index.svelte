@@ -37,7 +37,7 @@
 			</span>
 
 			<span class="serif bold italic text-1 text-center pt-3 text-grey-2"
-				>"A good developers experience is energising and motivating"
+				>"A good developer experience is energising and motivating"
 			</span>
 		</div>
 

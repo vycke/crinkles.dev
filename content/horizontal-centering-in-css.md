@@ -7,6 +7,8 @@ description: >-
 
 In a previous [article](/writing/css-layout-patterns) I wrote about modern CSS layout solutions. As horizontal centering is a common layout pattern, the grid-based solution was a prime candidate to convert into a generic class when creating [Bace CSS](https://bace.crinkles.io). But I encountered an issue. When combining this solution with other CSS layout patterns (e.g. the [stack](https://bace.crinkles.io/stack) pattern) my layout would break. Both patterns are targeting the `display` property, but with different values. To allow both patterns to work together, I had to find a different solution.
 
+> 04-2022: Based on some new insights, the proposed solution of this article has been updated.
+
 ## The center layout pattern
 
 The _center_ layout pattern allows you to horizontally center elements on the screen. But more importantly, it allows child elements to have a different width as the parent. These can be images that span the entire width of the screen in articles, regardless of the screen size. Or when we want selected elements to break away from the paddings on the side. On small screens, we want small padding around the text, and images span the entire width.
@@ -81,26 +83,21 @@ This is always a solid solution for horizontally centering solutions. But it has
 
 ## Out with the old, in with new
 
-By slightly adjusting the old school solution, we can create a class that allows for the same behavior as the shown grid-based solution. Instead of setting the properties on the parent, you should set the _same_ properties on the children by using the child combinator (`parent > child`). Similar to the grid-based solution, we can create a `.exception` class. When children are given this class, they are allowed to have a different width. They can flow outside of the parent's boundaries.
+By slightly adjusting the old school solution with newer properties, we can create a class that allows for the same behavior as the shown grid-based solution. Instead of setting the properties on the parent, you should set the _same_ properties on the children by using the child combinator (`parent > child`). Similar to the grid-based solution, we can create a `.exception` class. When children are given this class, they are allowed to have a different width. They can flow outside of the parent's boundaries.
 
 ```css
 .center > * {
-	...;
+  width: min(100% - 2 * var(--gap), var(--mw));
+  margin-inline: auto; 
 }
 
-.center > .exception-1 {
-	max-width: none;
-}
-
-/* a solution with a different max-width */
-.center > .exception-2 {
-	max-width: min(100%, 50rem);
-	padding-left: 0;
-	padding-right: 0;
+/* full-width exception */
+.center > .full-w-exc {
+	--mw: 100%;
 }
 ```
 
-Setting the `max-width` to none allows a child element to have no restrictions on its width. It can become `100%` while all the other elements are capped at a maximum of `50rem`. Similar to the grid-based solution, you can now create more dynamic layouts. The use of CSS custom properties even allows you to define utility classes that gave you more control over the layout.
+Setting the `--mw`  custom property to 100% allows a child element to become full-width of the parent, while all the other elements are capped at a maximum of `50rem`. You can also set it to `60rem`. This makes the child element it is applied to just a little wider compared to others, but is centered similarly. The use of CSS custom properties even allows you to define utility classes that gave you more control over the layout.
 
 ```css
 .center-g-sm > * {

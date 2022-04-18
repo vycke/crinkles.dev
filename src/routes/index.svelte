@@ -8,9 +8,7 @@
 </script>
 
 <script>
-	import Card from '$lib/components/Card.svelte';
-	import Logo from '$lib/components/Logo.svelte';
-	import { description, projects, quote, title } from '$lib/constants';
+	import { description, projects, title } from '$lib/constants';
 
 	export let articles;
 </script>
@@ -26,50 +24,99 @@
 </svelte:head>
 
 <main class="center center-w-5 center-g-1 | flex-grow mt-1 mb-3">
-	<section class="switcher switcher-w-3 gap-5 items-center">
-		<div class="stack">
-			<h1 class="flex-row items-center">Hi, I'm Kevin</h1>
-			<h2 class="text-primary text-1 mb-3">I'm a front-end engineer.</h2>
+	<section class="sidebar-r sidebar-w-2 sidebar-c-40 gap-5 items-center">
+		<div class="stack sticky post-0 items-start">
+			<span class="text-3 bold serif lh-0 flex-row items-center">Hi, I'm Kevin</span>
+			<span class="text-1 bold serif text-primary mb-3"
+				>Front-end developer & engineering manager.</span
+			>
 			<span class="text-0 text-grey-2">
-				I m a front-end engineer and engineering manager specialized in <i>CSS</i>, <i>Svelte</i>,
-				<i>React</i>, and
-				<i>TypeScript</i>. <i>Crinkles</i> focuses on building front-end developer experience and tooling.
+				I am a software engineer specialized in <i>CSS</i>,
+				<i>TypeScript</i>, <i>state machines</i> and
+				<i>developer experience</i>. My main focus with <i>crinkles</i> is to improve front-end developer
+				experience through writing, mentoring and creating tools.
 			</span>
 
-			<span class="serif bold italic text-1 text-center pt-3 text-grey-2"
+			<span class="serif bold italic text-1 text-center pt-3 text-grey-2 maxw-2 self-center"
 				>"A good developer experience is energising and motivating"
 			</span>
 		</div>
 
-		<aside class="stack gap-0">
-			<h2 class="visually-hidden">Recent articles</h2>
+		<aside class="card-group | stack gap-0">
+			<h2 class="text-1">Recent articles</h2>
 
 			{#each articles as article}
-				<Card type="dark">
-					<span class="text-00 text-grey-2 uppercase"> {article.formattedDate} </span>
+				<div class="card | flex-col | click-area | p-1">
+					<span class="text-000 bold uppercase"> {article.formattedDate} </span>
 					<h3 class="text-grey-0">
 						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 					</h3>
 					<span class="text-00 text-grey-2 mt-000">{article.description}</span>
-				</Card>
+				</div>
 			{/each}
-			<a href="/writing" class="self-end | text-0" data-type="section" sveltekit:prefetch>
+			<a href="/writing" class="view-more | self-end | text-0" sveltekit:prefetch>
 				View more articles
 			</a>
 		</aside>
 	</section>
 
-	<h2 class="text-3 text-center mb-0 mt-5">Recent projects</h2>
-
+	<h2 class="text-1 mb-0 mt-3">Recent projects</h2>
 	<aside class="switcher switcher-w-000 gap-0 | mb-3">
 		{#each projects as project}
-			<Card type="dark">
-				<span class="text-00 text-grey-2 uppercase">{project.type}</span>
+			<div class="card | flex-col | click-area | p-1">
+				<span class="text-000 bold uppercase">{project.type}</span>
 				<h3 class="text-grey-0">
 					<a href={project.href} title="Link to {project.title}"> {project.title} </a>
 				</h3>
 				<span class="text-00 text-grey-2 mt-000">{project.description}</span>
-			</Card>
+			</div>
 		{/each}
 	</aside>
 </main>
+
+<style>
+	.card-group:hover > .card:not(:hover) {
+		opacity: 0.6;
+	}
+
+	.card {
+		background-color: var(--color-grey-4);
+		transition: all 0.25s;
+	}
+	.card:hover {
+		transform: matrix(1.075, 0, 0, 1.075, 0, 0);
+	}
+
+	.view-more,
+	.view-more:active {
+		color: var(--color-grey-1);
+		transition: all 0.25s;
+		text-decoration-color: transparent;
+		position: relative;
+		padding: 0 var(--size-000);
+		margin-right: var(--size-1);
+	}
+
+	.view-more:hover {
+		color: var(--color-primary);
+	}
+
+	.view-more:after {
+		border: solid var(--color-grey-1);
+		border-width: 0 4px 4px 0;
+		content: '';
+		display: inline-block;
+		padding: 3px;
+		position: absolute;
+		right: -8px;
+		top: 0.675em;
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transition: all 0.25s;
+	}
+
+	.view-more:hover:after {
+		right: -18px;
+		border-color: var(--color-primary);
+	}
+</style>

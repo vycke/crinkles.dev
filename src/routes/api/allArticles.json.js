@@ -11,6 +11,6 @@ export async function get() {
 	});
 
 	return {
-		body: Object.entries(grouped).reverse()
+		body: articles
 	};
 }

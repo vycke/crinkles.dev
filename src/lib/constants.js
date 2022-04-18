@@ -5,21 +5,27 @@ export const description =
 export const projects = [
 	{
 		type: '(S)CSS',
-		title: 'Bace CSS',
-		href: 'https://bace.crinkles.io',
+		title: 'Feo',
+		href: 'https://feo.crinkles.io',
 		description: 'Layout and utility based CSS framework'
 	},
 	{
-		type: 'TypeScript',
+		type: 'TypeScript + SvelteKit',
 		title: 'Cogwheel',
-		href: 'https://github.com/kevtiq/cogwheel',
-		description: 'State machine library'
+		href: 'https://cogwheel-editor.vercel.app/',
+		description: 'State machine library + state machine visual editor'
 	},
 	{
-		type: 'SvelteKit',
-		title: 'Cogwheel editor',
-		href: 'https://cogwheel-editor.vercel.app/',
-		description: 'Visual editor for finite state machines'
+		type: 'TypeScript',
+		title: 'Digl',
+		href: 'https://github.com/kevtiq/digl',
+		description: 'Directed graph layout algorithm'
+	},
+	{
+		type: 'TypeScript',
+		title: 'Pubble',
+		href: 'https://github.com/kevtiq/pubble',
+		description: 'Small & immutable command-driven state machine library'
 	}
 ];
 

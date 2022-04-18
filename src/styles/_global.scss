@@ -27,35 +27,6 @@ a:hover {
 	color: var(--color-primary);
 }
 
-a[data-type='section'],
-a[data-type='section']:link,
-a[data-type='section']:active {
-	text-decoration-color: transparent;
-	color: var(--color-primary);
-	font-weight: bold;
-	position: relative;
-	padding: 0 var(--size-000);
-	margin-right: var(--size-1);
-}
-
-a[data-type='section']:after {
-	border: solid var(--color-primary);
-	border-width: 0 4px 4px 0;
-	content: '';
-	display: inline-block;
-	padding: 3px;
-	position: absolute;
-	right: -8px;
-	top: 0.675em;
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	transition: right 0.25s;
-}
-
-[data-type='section']:hover:after {
-	right: -18px;
-}
-
 h1,
 h2,
 h3 {
@@ -110,6 +81,7 @@ blockquote {
 // Styled unordered list
 ul:not([class]) {
 	list-style: outside;
+	padding-left: 0;
 
 	li {
 		padding-left: 0;
@@ -124,10 +96,11 @@ ul:not([class]) {
 // Ordered list
 ol:not([class]) {
 	list-style: decimal outside;
+	padding-left: 0;
 
 	li {
 		padding-left: 0;
-		margin-left: var(--size-2);
+		margin-left: var(--size-00);
 
 		&::marker {
 			font-style: italic;

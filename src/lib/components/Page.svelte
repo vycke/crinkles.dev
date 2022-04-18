@@ -1,9 +1,7 @@
 <!-- src/component/PageTransitions.svelte -->
 <script>
 	import { description as _desc, title as _title } from '$lib/constants';
-
 	import { fly } from 'svelte/transition';
-	import Logo from './Logo.svelte';
 
 	let styles = '';
 	export { styles as class };
@@ -22,9 +20,10 @@
 </svelte:head>
 
 <div class="flex-grow text-0 relative">
-	<header class="center center-w-3 center-g-1 | mt-2 mb-0">
-		<div class="flex-row items-center py-000">
-			<Logo />
+	<header class="center center-w-3 center-g-1 | mt-1 mb-0">
+		<div class="flex-row gap-0 items-center py-000">
+			<!-- <Logo /> -->
+			<a href="/" sveltekit:prefetch class="text-3 bold italic serif no-decoration">crinkles</a>
 		</div>
 	</header>
 

@@ -54,7 +54,7 @@
 
 <div class="sidebar-r sidebar-w-0">
 	<Page class="post | stack stack-g-2" title={post.title} description={post.description}>
-		<span class="text-grey-2 uppercase text-00">
+		<span class="bold uppercase text-00">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</span>

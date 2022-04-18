@@ -42,8 +42,8 @@
 			SvelteKit
 		</a>
 		and my own
-		<a href="https://bace.crinkles.io" title="Link to documentation website of Bace CSS">
-			(S)CSS framework called Bace CSS</a
+		<a href="https://feo.crinkles.io" title="Link to documentation website of Feo CSS">
+			(S)CSS framework called Feo CSS</a
 		>.
 	</p>
 </Page>

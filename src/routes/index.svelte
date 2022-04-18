@@ -25,7 +25,7 @@
 
 <main class="center center-w-5 center-g-1 | flex-grow mt-1 mb-3">
 	<section class="sidebar-r sidebar-w-2 sidebar-c-40 gap-5 items-center">
-		<div class="stack sticky post-0 items-start">
+		<div class="stack">
 			<span class="text-3 bold serif lh-0 flex-row items-center">Hi, I'm Kevin</span>
 			<span class="text-1 bold serif text-primary mb-3"
 				>Front-end developer & engineering manager.</span

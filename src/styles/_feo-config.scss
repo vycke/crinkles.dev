@@ -1,17 +1,20 @@
 $feo-fluid: true;
 
+$_h: 215;
+$_s: 20%;
+
 $feo-colors: (
   // grey-scale
-  'grey-0': hsl(215, 35%, 98%),
-  'grey-1': hsl(215, 35%, 90%),
-  'grey-2': hsl(215, 35%, 70%),
-  'grey-3': hsl(215, 35%, 40%),
-  'grey-4': hsl(215, 35%, 15%),
-  'grey-5': hsl(215, 35%, 10%),
+  'grey-0': hsl($_h, $_s, 98%),
+  'grey-1': hsl($_h, $_s, 90%),
+  'grey-2': hsl($_h, $_s, 70%),
+  'grey-3': hsl($_h, $_s, 40%),
+  'grey-4': hsl($_h, $_s, 20%),
+  'grey-5': hsl($_h, $_s, 10%),
   // BRAND COLORS
-  'primary': #7eb,
-  'secondary': hsl(215, 35%, 15%),
-  'accent': #11bace
+  'primary': #88C0C0,
+  'secondary': hsl($_h, $_s, 20%),
+  'accent': #9B9DBF
 );
 
 $feo-font-families: (

@@ -44,7 +44,7 @@
 
 <footer class="relative flex-col items-start | p-00 text-00 bg-grey-5">
 	<div class="cluster gap-00 self-center">
-		<a href="/meta" sveltekit:prefetch class="flex-grow p-000 serif bold italic">© crinkles</a>
+		<a href="/meta" sveltekit:prefetch class="p-000 serif bold italic">© crinkles</a>
 		{#each links as link}
 			<a href={link.url} title={link.alt} class="p-000">{link.name}</a>
 		{/each}

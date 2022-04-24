@@ -23,9 +23,9 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | flex-grow mt-1 mb-3">
+<main class="center center-w-5 center-g-1 | flex-grow mt-3 mb-0">
 	<section class="sidebar-r sidebar-w-2 sidebar-c-40 gap-5 items-center">
-		<div class="stack">
+		<div class="stack p-0">
 			<span class="text-3 bold serif lh-0 flex-row items-center">Hi, I'm Kevin</span>
 			<span class="text-1 bold serif text-primary mb-3"
 				>Front-end developer & engineering manager.</span
@@ -37,23 +37,24 @@
 				experience through writing, mentoring and creating tools.
 			</span>
 
-			<span class="serif bold italic text-1 text-center pt-3 text-grey-2 maxw-2 self-center"
-				>"A good developer experience is energising and motivating"
+			<span class="serif bold italic text-1 text-center pt-3 text-grey-2 maxw-2 self-center">
+				"A good developer experience is energising and motivating"
 			</span>
 		</div>
 
-		<aside class="card-group | stack gap-0">
+		<aside class="stack gap-0">
 			<h2 class="text-1">Recent articles</h2>
-
-			{#each articles as article}
-				<div class="card | flex-col | click-area | p-1">
-					<span class="text-000 bold uppercase"> {article.formattedDate} </span>
-					<h3 class="text-grey-0">
-						<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
-					</h3>
-					<span class="text-00 text-grey-2 mt-000">{article.description}</span>
-				</div>
-			{/each}
+			<div class="card-group | switcher switcher-w-00 switcher-a-3 gap-0">
+				{#each articles as article}
+					<div class="card | flex-col | click-area | p-1">
+						<span class="text-000 bold uppercase"> {article.formattedDate} </span>
+						<h3 class="text-grey-0">
+							<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
+						</h3>
+						<span class="text-00 text-grey-2 mt-000">{article.description}</span>
+					</div>
+				{/each}
+			</div>
 			<a href="/writing" class="view-more | self-end | text-0" sveltekit:prefetch>
 				View more articles
 			</a>
@@ -61,7 +62,7 @@
 	</section>
 
 	<h2 class="text-1 mb-0 mt-3">Recent projects</h2>
-	<aside class="switcher switcher-w-000 gap-0 | mb-3">
+	<aside class="card-group | tiles tiles-w-0 gap-0 | mb-3">
 		{#each projects as project}
 			<div class="card | flex-col | click-area | p-1">
 				<span class="text-000 bold uppercase">{project.type}</span>

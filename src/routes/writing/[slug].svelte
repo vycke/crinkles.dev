@@ -52,7 +52,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<div class="sidebar-r sidebar-w-0">
+<div class="sidebar-r sidebar-w-0 sidebar-c-70">
 	<Page class="post | stack stack-g-2" title={post.title} description={post.description}>
 		<span class="bold uppercase text-00">
 			<time datetime={date}>{date}</time>
@@ -90,14 +90,13 @@
 		display: block;
 		padding: var(--size-0) var(--size-1);
 		background-color: var(--color-grey-4);
-		border-radius: var(--size-0);
-		border: 2px solid var(--color-accent);
 		font-size: var(--size-00);
 	}
 
 	:global(.post aside::before) {
-		content: 'Note';
+		content: 'NOTE';
 		font-weight: bold;
+		color: var(--color-accent);
 		display: block;
 	}
 

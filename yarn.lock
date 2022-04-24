@@ -738,10 +738,10 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-feo-css@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-2.2.0.tgz#d8c9c0efb61f96f91f00f0e7723e879be6c96025"
-  integrity sha512-/HC1gW609yl2W6h1vsQXHbfUXsB73Nr15DT0HnSop9yhaHlfOdZ21i6bttxKF2UTJoo2UgAj0liGgKgj3lAItQ==
+feo-css@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-2.3.0.tgz#002c727ab508dacd9c565dd19d70321d7af7f321"
+  integrity sha512-tpeLA81J/0+en8Z1XbyQqGPsbSkarORnJsZ4uWhNMumkJLW+HIh6eedaWMk0LCdyHTTmrsccz2qMmHPLHAwIpw==
 
 file-entry-cache@^6.0.1:
   version "6.0.1"

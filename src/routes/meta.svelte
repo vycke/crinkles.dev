@@ -14,15 +14,7 @@
 		<i>crinkles</i>.
 	</p>
 	<ul>
-		<li>
-			A minimal & vibrant CMYK color-scheme based on <a
-				href="https://www.notion.so/revolverds/The-Dutch-DS-Two-FACE-319cac25871d467b9261610ff7fce76e"
-				alt="Article explaining two-face">Two-FACE</a
-			>
-			themed system by
-			<a href="https://twitter.com/Bliepjes" alt="Twitter page of Guus">Guus Hoeve</a>, called BACE
-			(very original, I know).
-		</li>
+		<li>A minimal theme inspired by <a href="https://nordtheme.com">Nord theme</a>.</li>
 		<li>Carefully selected typography around readability of text and code examples.</li>
 		<li>
 			A <a sveltekit:prefetch href="/writing/fluid-interfaces-using-css">fluid</a> experience across

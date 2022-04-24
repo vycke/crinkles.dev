@@ -1,9 +1,5 @@
 import { marked } from 'marked';
-import prism from 'prismjs';
-import 'prism-svelte';
-import 'prismjs/components/prism-scss.js';
-import 'prismjs/components/prism-jsx.js';
-import 'prismjs/components/prism-bash.js';
+import shiki from 'shiki';
 
 // Hack to ensure images are not wrapped in a paragraph tag
 marked.Renderer.prototype.paragraph = function (text) {
@@ -20,16 +16,6 @@ marked.Renderer.prototype.image = function (href, title, text) {
 marked.Renderer.prototype.heading = function (text, level, raw) {
 	const id = raw.toLowerCase().replace(/[^\w]+/g, '-');
 	return `<h${level} id=${id}><a href="#${id}" aria-label="${raw} permalink">${text}</a></h${level}>`;
-};
-
-// Hack to add lang as additional attribute so it can be displayed
-marked.Renderer.prototype.code = function (code, lang) {
-	try {
-		const formatted = prism.highlight(code, prism.languages[lang], lang);
-		return `<pre data-lang="${lang}"><span>${lang}</span><code class="language-${lang}">${formatted}</code></pre>`;
-	} catch (e) {
-		return `<pre><code class="language-${lang}">${code}</code></pre>`;
-	}
 };
 
 const infoblock = {
@@ -62,4 +48,11 @@ const infoblock = {
 
 marked.use({ extensions: [infoblock] });
 
-export default marked;
+// The main rendering function
+export async function renderer(md) {
+	const highlighter = await shiki.getHighlighter({ theme: 'nord' });
+	marked.Renderer.prototype.code = function (code, lang) {
+		return highlighter.codeToHtml(code, lang);
+	};
+	return marked.parse(md);
+}

@@ -8,13 +8,10 @@
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
-	"dependencies": {
-		"frontmatter": "^0.0.3",
-		"prismjs": "^1.26.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.24",
-		"@sveltejs/kit": "^1.0.0-next.231",
+		"@sveltejs/kit": "1.0.0-next.300",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"eslint": "^7.22.0",
@@ -22,11 +19,11 @@
 		"eslint-plugin-svelte3": "^3.1.0",
 		"feo-css": "^2.0.0",
 		"front-matter": "^4.0.2",
-		"marked": "^4.0.10",
+		"marked": "^4.0.14",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
-		"prism-svelte": "^0.4.7",
 		"sass": "^1.0.0",
+		"shiki": "^0.10.1",
 		"svelte": "^3.38.3",
 		"svelte-preprocess": "^4.0.0",
 		"tslib": "^2.0.0",

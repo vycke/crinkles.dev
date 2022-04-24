@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import fm from 'front-matter';
 import { resolve } from 'path';
-import renderer from '$lib/renderer';
+import { renderer } from '$lib/renderer';
 
 const months = [
 	'January',
@@ -53,7 +53,7 @@ export async function getArticle(slug, html = true) {
 	const formattedDate = format(matter.attributes.date);
 
 	if (!html) return { slug, formattedDate, ...matter.attributes };
-	const _html = renderer(body);
+	const _html = await renderer(body);
 	const headers = getHeaders(_html);
 	return { slug, html: _html, headers, formattedDate, ...matter.attributes };
 }

@@ -88,14 +88,15 @@
   dependencies:
     tiny-glob "^0.2.9"
 
-"@sveltejs/kit@1.0.0-next.300":
-  version "1.0.0-next.300"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.300.tgz#7d62a5aeb290a012a93658221e8c881d840bb9bf"
-  integrity sha512-axlYontLCV3lgUTBNLKwpjBfTI89BhC5MBmqUztpV6E89jywxWuXzhX2hB//7NVth2S/RSeymQ5e5mdHM4H85g==
+"@sveltejs/kit@1.0.0-next.319":
+  version "1.0.0-next.319"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.319.tgz#c25c4088873bb5956e0be0d42dbbacc962dbd413"
+  integrity sha512-X9Ugaao2gjRrYYGRptwvmz7I/tFVTXtvNvgLAL4fhdSSKRS34r94jfMtj5Ouk4iF0eh65FO3DK2/lMUTzbyY5Q==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^1.0.0-next.32"
+    chokidar "^3.5.3"
     sade "^1.7.4"
-    vite "^2.8.0"
+    vite "^2.9.0"
 
 "@sveltejs/vite-plugin-svelte@^1.0.0-next.32":
   version "1.0.0-next.41"
@@ -331,7 +332,7 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-"chokidar@>=3.0.0 <4.0.0":
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -1490,7 +1491,7 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
 
-vite@^2.7.13, vite@^2.8.0:
+vite@^2.7.13, vite@^2.9.0:
   version "2.9.5"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.5.tgz#08ef37ac7a6d879c96f328b791732c9a00ea25ea"
   integrity sha512-dvMN64X2YEQgSXF1lYabKXw3BbN6e+BL67+P3Vy4MacnY+UzT1AfkHiioFSi9+uiDUiaDy7Ax/LQqivk6orilg==

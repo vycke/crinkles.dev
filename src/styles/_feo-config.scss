@@ -14,7 +14,8 @@ $feo-colors: (
   // BRAND COLORS
   'primary': #88C0C0,
   'secondary': hsl($_h, $_s, 20%),
-  'accent': #9B9DBF
+  'accent': #9B9DBF,
+  'alt': #2C5353
 );
 
 $feo-font-families: (

@@ -89,15 +89,15 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-1);
-		background-color: var(--color-accent);
+		background-color: var(--color-alt);
 		font-size: var(--size-00);
-		color: var(--color-grey-4);
+		color: var(--color-grey-1);
 	}
 
 	:global(.post aside::before) {
 		content: 'NOTE';
 		font-weight: bold;
-		color: var(--color-grey-5);
+		color: var(--color-primary);
 		display: block;
 	}
 
@@ -108,8 +108,8 @@
 	}
 
 	:global(.post aside a:hover) {
-		color: var(--color-accent);
-		text-decoration-color: var(--color-accent);
+		color: var(--color-alt);
+		text-decoration-color: var(--color-alt);
 	}
 
 	:global(.post h2) {

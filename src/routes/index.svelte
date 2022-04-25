@@ -8,7 +8,8 @@
 </script>
 
 <script>
-	import { description, projects, title } from '$lib/constants';
+	import Logo from '$lib/components/Logo.svelte';
+	import { description, projects, quote, title } from '$lib/constants';
 
 	export let articles;
 </script>
@@ -25,20 +26,20 @@
 
 <main class="center center-w-5 center-g-1 | flex-grow mt-3 mb-0">
 	<section class="sidebar-r sidebar-w-2 sidebar-c-40 gap-5 items-center">
-		<div class="stack p-0">
+		<div class="stack mb-3">
+			<Logo class="self-start mb-3" />
 			<span class="text-3 bold serif lh-0 flex-row items-center">Hi, I'm Kevin</span>
-			<span class="text-1 bold serif text-primary mb-3"
-				>Front-end developer & engineering manager.</span
-			>
+			<span class="text-1 bold serif text-primary mb-2">
+				Front-end developer & engineering manager.
+			</span>
 			<span class="text-0 text-grey-2">
-				I am a software engineer specialized in <i>CSS</i>,
-				<i>TypeScript</i>, <i>state machines</i> and
-				<i>developer experience</i>. My main focus with <i>crinkles</i> is to improve front-end developer
-				experience through writing, mentoring and creating tools.
+				Crinkles studio is a <i>creative</i> agency specialized in improving front-end developer
+				experience through writing, mentoring and creating tools. I build solutions using
+				<i>CSS</i>, <i>TypeScript</i>, <i>Svelte</i>, and/or <i>React</i>.
 			</span>
 
-			<span class="serif bold italic text-1 text-center pt-3 text-grey-2 maxw-2 self-center">
-				"A good developer experience is energising and motivating"
+			<span class="serif bold italic text-1 text-center pt-3 text-primary maxw-2 self-center">
+				{quote}
 			</span>
 		</div>
 

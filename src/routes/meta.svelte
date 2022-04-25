@@ -8,10 +8,10 @@
 	<blockquote class="text-1 bold">{quote}</blockquote>
 
 	<p>
-		Crinkles is a digital UI development studio. But this website is also the personal playground of
-		Kevin Pennekamp. When you visit this website often, you will find changes almost every time. I
-		also take extra care to ensure this is <i>my</i> website, by adding some personal favorite
-		<i>crinkles</i>.
+		Crinkles studio (cs.) is a creative agency specialized in improving front-end developer
+		experience through writing, mentoring and creating tools. It also acts as the digital portfolio
+		and playground of its founder, Kevin Pennekamp. The creation of this website is currently build
+		using:
 	</p>
 	<ul>
 		<li>A minimal theme inspired by <a href="https://nordtheme.com">Nord theme</a>.</li>

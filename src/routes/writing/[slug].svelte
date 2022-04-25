@@ -89,14 +89,15 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-1);
-		background-color: var(--color-grey-4);
+		background-color: var(--color-accent);
 		font-size: var(--size-00);
+		color: var(--color-grey-4);
 	}
 
 	:global(.post aside::before) {
 		content: 'NOTE';
 		font-weight: bold;
-		color: var(--color-accent);
+		color: var(--color-grey-5);
 		display: block;
 	}
 

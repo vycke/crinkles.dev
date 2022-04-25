@@ -24,7 +24,7 @@
 	<header class="center center-w-3 center-g-1 | mt-1 mb-0">
 		<div class="flex-row gap-0 items-center py-000">
 			<Logo />
-			<!-- <a href="/" sveltekit:prefetch class="text-3 bold italic serif no-decoration">crinkles</a> -->
+			<!-- <a href="/" sveltekit:prefetch class="text-3 bold italic serif no-decoration">cs.</a> -->
 		</div>
 	</header>
 

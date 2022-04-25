@@ -1,8 +1,7 @@
 
 // INLINE CODE
 :not(pre) > code {
-	border-radius: 6px;
-	padding: 4px 6px;
+	padding: 3px 6px;
 	color: var(--color-primary);
 	background-color: var(--color-grey-4);
 }

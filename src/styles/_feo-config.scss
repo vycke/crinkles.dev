@@ -12,10 +12,10 @@ $feo-colors: (
   'grey-4': hsl($_h, $_s, 20%),
   'grey-5': hsl($_h, $_s, 10%),
   // BRAND COLORS
-  'primary': #88C0C0,
-  'secondary': hsl($_h, $_s, 20%),
-  'accent': #9B9DBF,
-  'alt': #2C5353
+  'brand-1': #88C0C0,
+  'brand-2': #4F9696,
+  'brand-3': #356464,
+  'brand-4': #9B9DBF,
 );
 
 $feo-font-families: (
@@ -23,4 +23,25 @@ $feo-font-families: (
   serif: "'Source Serif', ui-serif, Georgia, Cambria, serif",
   sans-serif:
     "system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+);
+
+$feo-themes: (
+  'dark': (
+    'bg-0': 'grey-5',
+    'bg-1': 'grey-4',
+    'fg-0': 'grey-0',
+    'fg-1': 'grey-2',
+    'primary': 'brand-1',
+    'secondary': 'brand-3',
+    'accent': 'brand-4'
+  ),
+  'light': (
+    'bg-0': 'grey-0',
+    'bg-1': 'grey-1',
+    'fg-0': 'grey-5',
+    'fg-1': 'grey-3',
+    'primary': 'brand-2',
+    'secondary': 'brand-1',
+    'accent': 'brand-4'
+  )
 );

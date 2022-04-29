@@ -79,7 +79,7 @@
 <style>
 	a,
 	a:visited {
-		color: var(--color-grey-2);
+		color: var(--color-fg-1);
 	}
 
 	a:hover {
@@ -89,30 +89,31 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-1);
-		background-color: var(--color-alt);
+		background-color: var(--color-accent);
 		font-size: var(--size-00);
-		color: var(--color-grey-1);
+		color: var(--color-grey-4);
 	}
 
 	:global(.post aside::before) {
 		content: 'NOTE';
 		font-weight: bold;
-		color: var(--color-primary);
+		color: var(--color-grey-5);
 		display: block;
 	}
 
 	:global(.post aside a),
 	:global(.post aside a:visited) {
-		color: var(--color-grey-1);
-		text-decoration-color: var(--color-grey-1);
+		color: var(--color-grey-5);
+		text-decoration-color: var(--color-grey-5);
 	}
 
 	:global(.post aside a:hover) {
-		color: var(--color-alt);
-		text-decoration-color: var(--color-alt);
+		color: var(--color-secondary);
+		text-decoration-color: var(--color-secondary);
 	}
 
 	:global(.post h2) {
+		transition: all 0.25s;
 		margin-top: var(--size-3);
 	}
 
@@ -122,7 +123,7 @@
 
 	:global(.post h2 a) {
 		text-decoration-line: none;
-		color: var(--color-grey-0);
+		color: var(--color-fg-0);
 	}
 
 	:global(.post h2:hover a) {

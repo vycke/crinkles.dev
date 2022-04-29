@@ -3,8 +3,6 @@
 *******/
 html,
 body {
-	color: var(--color-grey-0);
-	background-color: var(--color-grey-5);
 	font-family: var(--sans-serif);
 	line-height: var(--lh-2);
 }
@@ -19,7 +17,7 @@ a:link,
 a:visited,
 a:active {
 	transition: all 200ms ease;
-	color: var(--color-grey-0);
+	color: var(--color-fg-0);
 	text-decoration-color: var(--color-primary);
 }
 
@@ -30,10 +28,14 @@ a:hover {
 h1,
 h2,
 h3 {
-	font-family: var(--serif);
+	font-family: var(--sans-serif);
 	width: 100%;
 	line-height: 1.1;
 }
+
+// p {
+// 	font-family: var(--serif);
+// }
 
 h1 a,
 h2 a,
@@ -42,8 +44,8 @@ h3 a {
 }
 
 ::selection {
-	color: var(--color-grey-5) !important;
-	background: var(--color-grey-0) !important;
+	color: var(--color-bg-0) !important;
+	background: var(--color-fg-0) !important;
 }
 
 i,
@@ -57,7 +59,7 @@ em {
 blockquote {
 	display: block;
 	padding: var(--size-3) var(--size-5);
-	color: var(--color-grey-2);
+	color: var(--color-fg-1);
 	font-family: var(--serif);
 	font-size: var(--size-3);
 	text-align: center;

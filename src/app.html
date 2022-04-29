@@ -6,10 +6,10 @@
 		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/site.webmanifest" />
-		<meta name="msapplication-TileColor" content="#131820" />
-		<meta name="theme-color" content="#131820" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="monetization" content="$ilp.uphold.com/dDdhAM4apdQJ" />
+		<meta name="color-scheme" content="light dark" />
 
 		%svelte.head%
 
@@ -21,6 +21,12 @@
 		</style>
 	</head>
 	<body>
-		<div id="svelte" class="flex-col h-full">%svelte.body%</div>
+		<script>
+			const prefDark = window.matchMedia('(prefers-color-scheme: dark)');
+			const theme = prefDark.matches ? 'dark' : 'light';
+			document.body.dataset.theme = theme;
+			document.querySelector('meta[name="color-scheme"]').setAttribute('content', theme);
+		</script>
+		%svelte.body%
 	</body>
 </html>

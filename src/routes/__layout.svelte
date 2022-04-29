@@ -35,18 +35,20 @@
 	<meta property="og:image" content={img} />
 	<meta name="twitter:image" content={img} />
 	<meta name="twitter:card" content="summary" />
-	<meta name="color-scheme" content="dark" />
 
 	<meta name="theme-color" content="#0e141e" />
+	<meta name="msapplication-TileColor" content="#0e141e" />
 </svelte:head>
 
-<slot />
+<div class="flex-col h-full text-fg-0 bg-bg-0">
+	<slot />
 
-<footer class="relative flex-col items-start | p-00 text-00 bg-grey-5">
-	<div class="cluster gap-00 self-center">
-		<a href="/meta" sveltekit:prefetch class="p-000 serif bold italic">© crinkles studio</a>
-		{#each links as link}
-			<a href={link.url} title={link.alt} class="p-000">{link.name}</a>
-		{/each}
-	</div>
-</footer>
+	<footer class="relative flex-col items-start | p-00 text-00">
+		<div class="cluster gap-00 self-center">
+			<a href="/meta" sveltekit:prefetch class="p-000 serif bold italic">© crinkles studio</a>
+			{#each links as link}
+				<a href={link.url} title={link.alt} class="p-000">{link.name}</a>
+			{/each}
+		</div>
+	</footer>
+</div>

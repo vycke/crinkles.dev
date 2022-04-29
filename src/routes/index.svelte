@@ -24,15 +24,15 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-w-5 center-g-1 | flex-grow mt-3 mb-0">
+<main class="center center-w-5 center-g-1 | flex-grow mt-3">
 	<section class="sidebar-r sidebar-w-2 sidebar-c-40 gap-5 items-center">
 		<div class="stack mb-3">
 			<Logo class="self-start mb-3" />
-			<span class="text-3 bold serif lh-0 flex-row items-center">Hi, I'm Kevin</span>
-			<span class="text-1 bold serif text-primary mb-2">
+			<span class="text-4 bold lh-0 flex-row items-center">Hi, I'm Kevin</span>
+			<span class="text-1 italic bold serif text-primary mb-2">
 				Front-end developer & engineering manager.
 			</span>
-			<span class="text-0 text-grey-2">
+			<span class="text-0 text-fg-1">
 				Crinkles studio is a <i>creative</i> agency specialized in improving front-end developer
 				experience through writing, mentoring and creating tools. I build solutions using
 				<i>CSS</i>, <i>TypeScript</i>, <i>Svelte</i>, and/or <i>React</i>.
@@ -49,10 +49,10 @@
 				{#each articles as article}
 					<div class="card | flex-col | click-area | p-1">
 						<span class="text-000 bold uppercase"> {article.formattedDate} </span>
-						<h3 class="text-grey-0">
+						<h3>
 							<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 						</h3>
-						<span class="text-00 text-grey-2 mt-000">{article.description}</span>
+						<span class="text-00 text-fg-1 mt-000">{article.description}</span>
 					</div>
 				{/each}
 			</div>
@@ -67,10 +67,10 @@
 		{#each projects as project}
 			<div class="card | flex-col | click-area | p-1">
 				<span class="text-000 bold uppercase">{project.type}</span>
-				<h3 class="text-grey-0">
+				<h3>
 					<a href={project.href} title="Link to {project.title}"> {project.title} </a>
 				</h3>
-				<span class="text-00 text-grey-2 mt-000">{project.description}</span>
+				<span class="text-00 text-fg-1 mt-000">{project.description}</span>
 			</div>
 		{/each}
 	</aside>
@@ -82,7 +82,7 @@
 	}
 
 	.card {
-		background-color: var(--color-grey-4);
+		background-color: var(--color-bg-1);
 		transition: all 0.25s;
 	}
 	.card:hover {
@@ -91,7 +91,7 @@
 
 	.view-more,
 	.view-more:active {
-		color: var(--color-grey-1);
+		color: var(--color-fg-1);
 		transition: all 0.25s;
 		text-decoration-color: transparent;
 		position: relative;
@@ -104,7 +104,7 @@
 	}
 
 	.view-more:after {
-		border: solid var(--color-grey-1);
+		border: solid var(--color-fg-1);
 		border-width: 0 4px 4px 0;
 		content: '';
 		display: inline-block;

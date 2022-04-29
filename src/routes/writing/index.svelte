@@ -17,10 +17,10 @@
 	{#each articles as article}
 		<div class="stack click-area">
 			<span class="text-000 bold uppercase"> {article.formattedDate} </span>
-			<h2 class="text-1 text-grey-0">
+			<h2 class="text-1 text-fg-0">
 				<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 			</h2>
-			<span class="text-00 text-grey-2">{article.description}</span>
+			<span class="text-00 text-fg-1">{article.description}</span>
 		</div>
 	{/each}
 </Page>

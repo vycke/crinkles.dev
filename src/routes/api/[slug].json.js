@@ -1,4 +1,4 @@
-import { getArticle, getSiblingArticles } from '$lib/process-files';
+import { getArticle, getSiblingArticles } from '$lib/features/process-files';
 
 export async function get({ params }) {
 	const post = await getArticle(params.slug);

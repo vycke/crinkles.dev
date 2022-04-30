@@ -8,7 +8,7 @@
 </script>
 
 <script>
-	import Logo from '$lib/components/Logo.svelte';
+	import Logo from '$lib/components/structure/Logo.svelte';
 	import { description, projects, quote, title } from '$lib/constants';
 
 	export let articles;
@@ -25,7 +25,7 @@
 </svelte:head>
 
 <main class="center center-w-5 center-g-1 | flex-grow mt-3">
-	<section class="sidebar-r sidebar-w-2 sidebar-c-40 gap-5 items-center">
+	<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center">
 		<div class="stack mb-3">
 			<Logo class="self-start mb-3" />
 			<span class="text-4 bold lh-0 flex-row items-center">Hi, I'm Kevin</span>

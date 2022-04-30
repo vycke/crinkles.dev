@@ -7,7 +7,7 @@
 </script>
 
 <script>
-	import Page from '$lib/components/Page.svelte';
+	import Page from '$lib/components/structure/Page.svelte';
 
 	export let articles;
 </script>

@@ -15,8 +15,8 @@
 </script>
 
 <script>
-	import Pagination from '$lib/components/Pagination.svelte';
-	import Page from '$lib/components/Page.svelte';
+	import Pagination from '$lib/components/navigation/Pagination.svelte';
+	import Page from '$lib/components/structure/Page.svelte';
 	import { onMount } from 'svelte';
 
 	function handler() {
@@ -108,8 +108,8 @@
 	}
 
 	:global(.post aside a:hover) {
-		color: var(--color-secondary);
-		text-decoration-color: var(--color-secondary);
+		color: var(--color-grey-3);
+		text-decoration-color: var(--color-grey-3);
 	}
 
 	:global(.post h2) {

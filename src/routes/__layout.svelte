@@ -35,9 +35,6 @@
 	<meta property="og:image" content={img} />
 	<meta name="twitter:image" content={img} />
 	<meta name="twitter:card" content="summary" />
-
-	<meta name="theme-color" content="#0e141e" />
-	<meta name="msapplication-TileColor" content="#0e141e" />
 </svelte:head>
 
 <div class="flex-col h-full text-fg-0 bg-bg-0">

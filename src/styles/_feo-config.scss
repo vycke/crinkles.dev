@@ -4,7 +4,7 @@ $_h: 215;
 $_s: 20%;
 
 $feo-colors: (
-  // grey-scale
+  // GREY-COLORS
   'grey-0': hsl($_h, $_s, 98%),
   'grey-1': hsl($_h, $_s, 90%),
   'grey-2': hsl($_h, $_s, 70%),
@@ -12,8 +12,13 @@ $feo-colors: (
   'grey-4': hsl($_h, $_s, 20%),
   'grey-5': hsl($_h, $_s, 10%),
   // BRAND COLORS
-  'brand-1': #1395ae,
-  'brand-2': #8C90CE
+  'brand-1': #3B999B,
+  'brand-2': #8C90CE,
+  // FUNCTIONAL COLORS
+	'info': #3C8CDD,
+	'success': #59C08C,
+	'warning': #EBCB8B,
+	'danger': #EE5873
 );
 
 $feo-font-families: (

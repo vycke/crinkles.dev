@@ -5,7 +5,7 @@ description: >-
   Features that seem simple can become unmaintainable due to unforeseen state management issues. State machines help avoid this.
 ---
 
-Recently I had to implement a very simple feature in a web application. Within the product, we want to be able to show a dialog with release notes for its users. This dialog had very simple requirements that needed to be fulfilled.
+Recently I had to implement a very simple feature for the [HR application Humaps](https://humaps.nl). Within the product, we want to be able to show a dialog with release notes for its users. This dialog had very simple requirements that needed to be fulfilled.
 
 - The user should always be able to view and hide this dialog with the release notes.
 - When there is a new major version number since the last visit, the release notes are automatically shown.

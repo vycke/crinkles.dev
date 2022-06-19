@@ -30,4 +30,4 @@ export const projects = [
 ];
 
 export const quote =
-	'"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights uniqueness."';
+	'"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on an interface. It highlights uniqueness."';

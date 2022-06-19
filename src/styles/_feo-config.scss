@@ -5,20 +5,21 @@ $_s: 20%;
 
 $feo-colors: (
   // GREY-COLORS
-  'grey-0': hsl($_h, $_s, 98%),
+  'grey-0': hsl($_h, $_s, 99%),
   'grey-1': hsl($_h, $_s, 90%),
   'grey-2': hsl($_h, $_s, 70%),
   'grey-3': hsl($_h, $_s, 40%),
   'grey-4': hsl($_h, $_s, 20%),
   'grey-5': hsl($_h, $_s, 10%),
   // BRAND COLORS
-  'brand-1': #3D428F,
-  'brand-2': #8C90CE,
+  'brand-1': #078080,
+  'brand-2': #f45d48,
+  'brand-3': #F8F5F2,
   // FUNCTIONAL COLORS
-	'info': #3C8CDD,
-	'success': #59C08C,
-	'warning': #EBCB8B,
-	'danger': #EE5873
+	'info': #3c8cdd,
+	'success': #59c08c,
+	'warning': #ebcb8b,
+	'danger': #ee5873
 );
 
 $feo-font-families: (
@@ -34,8 +35,7 @@ $feo-themes: (
     'bg-1': 'grey-4',
     'fg-0': 'grey-0',
     'fg-1': 'grey-2',
-    'primary': 'brand-2',
-    'accent': 'brand-2'
+    'primary': 'brand-3',
   ),
   'light': (
     'bg-0': 'grey-0',
@@ -43,6 +43,5 @@ $feo-themes: (
     'fg-0': 'grey-5',
     'fg-1': 'grey-3',
     'primary': 'brand-1',
-    'accent': 'brand-2'
   )
 );

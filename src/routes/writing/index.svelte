@@ -7,20 +7,25 @@
 </script>
 
 <script>
+	import Header from '$lib/components/structure/Header.svelte';
+	import Main from '$lib/components/structure/Main.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 
 	export let articles;
 </script>
 
-<Page class="flex-col gap-2 | mb-3" title="Articles">
-	<h1>Articles</h1>
-	{#each articles as article}
-		<div class="stack click-area">
-			<span class="text-000 bold uppercase"> {article.formattedDate} </span>
-			<h2 class="text-1 text-fg-0">
+<Page title="Articles">
+	<Header class="center center-w-3 center-g-1 mb-3"
+		><h1 class="text-1 ml-1 normal">Writing</h1></Header
+	>
+	<Main class="flex-grow flex-col gap-00 | mb-3">
+		{#each articles as article}
+			<div class="sidebar-l sidebar-w-000 clickarea items-center">
+				<span class="text-00 uppercase text-fg-1"> {article.formattedDate} </span>
 				<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
-			</h2>
-			<span class="text-00 text-fg-1">{article.description}</span>
-		</div>
-	{/each}
+			</div>
+		{/each}
+	</Main>
 </Page>
+
+<style></style>

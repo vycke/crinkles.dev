@@ -16,6 +16,8 @@
 
 <script>
 	import Pagination from '$lib/components/navigation/Pagination.svelte';
+	import Header from '$lib/components/structure/Header.svelte';
+	import Main from '$lib/components/structure/Main.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 	import { onMount } from 'svelte';
 
@@ -52,29 +54,33 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<div class="sidebar-r sidebar-w-0 sidebar-c-70">
-	<Page class="post | stack stack-g-2" title={post.title} description={post.description}>
-		<span class="bold uppercase text-00">
-			<time datetime={date}>{date}</time>
-			{` • ${num}`}
-		</span>
-		<h1 class="stack-g-none">{post.title}</h1>
+<Page title={post.title} description={post.description}>
+	<div class="switcher switcher-w-4">
+		<div class="minw-000 px-2" />
+		<Main class="post | stack stack-g-2">
+			<Header />
+			<span class="bold uppercase text-00">
+				<time datetime={date}>{date}</time>
+				{` • ${num}`}
+			</span>
+			<h1 class="stack-g-none">{post.title}</h1>
 
-		{@html post.html}
-	</Page>
-	<nav class="sticky post-0 stack stack-g-000 px-1 pt-3 self-start">
-		<span class="text-00 uppercase sans-serif text-primary">Table of contents</span>
-		<ul class="content-table">
-			{#each post.headers as header, i}
-				<li class="pb-000" data-active={i === 0}>
-					<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
-				</li>
-			{/each}
-		</ul>
-	</nav>
-</div>
+			{@html post.html}
+		</Main>
 
-<Pagination next={pageNext} previous={pagePrevious} />
+		<nav class="sticky post-0 stack stack-g-000 px-1 pt-3 self-start minw-000">
+			<span class="text-00 uppercase sans-serif text-primary">Table of contents</span>
+			<ul class="content-table">
+				{#each post.headers as header, i}
+					<li class="pb-000" data-active={i === 0}>
+						<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+	</div>
+	<Pagination next={pageNext} previous={pagePrevious} />
+</Page>
 
 <style>
 	a,
@@ -84,6 +90,10 @@
 
 	a:hover {
 		color: var(--color-primary);
+	}
+
+	:global(.post) {
+		flex-grow: 5;
 	}
 
 	:global(.post aside) {
@@ -149,7 +159,7 @@
 
 	li[data-active='true'] a {
 		text-decoration: underline;
-		text-decoration-thickness: 2px;
+		text-decoration-thickness: 1px;
 		text-decoration-color: var(--color-primary);
 	}
 </style>

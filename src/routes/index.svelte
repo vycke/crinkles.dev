@@ -25,10 +25,11 @@
 				<span class="text-1 italic bold serif text-primary mb-2">
 					Crafting interfaces & engineering manager.
 				</span>
-				<span class="text-0 text-fg-1">
-					Building polished solutions using <i>CSS</i>, <i>TypeScript</i>, <i>Svelte</i>, and/or
-					<i>React</i>. Occasionally share my thoughs on building, user-interfaces, developer
-					experience, and engineering management.
+				<span class="text-0">
+					Crafting polished interfaces for users and developers. Occasionally share my thoughs on
+					building, user-interfaces, developer experience, and engineering management. Build stuff
+					using <i>CSS</i>, <i>TypeScript</i>, <i>Svelte</i>, and/or
+					<i>React</i>.
 				</span>
 
 				<span class="serif bold italic text-1 text-center pt-3 text-primary maxw-2 self-center">
@@ -41,7 +42,7 @@
 				<div class="card-group | switcher switcher-w-00 switcher-a-3 gap-0">
 					{#each articles as article}
 						<div class="card | flex-col | click-area | p-1">
-							<span class="text-000 bold uppercase"> {article.formattedDate} </span>
+							<span class="text-000 bold uppercase text-primary"> {article.formattedDate} </span>
 							<h3>
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 							</h3>
@@ -59,7 +60,7 @@
 		<aside class="card-group | tiles tiles-w-0 gap-0 | mb-3">
 			{#each projects as project}
 				<div class="card | flex-col | click-area | p-1">
-					<span class="text-000 bold uppercase">{project.type}</span>
+					<span class="text-000 bold uppercase text-primary">{project.type}</span>
 					<h3>
 						<a href={project.href} title="Link to {project.title}"> {project.title} </a>
 					</h3>

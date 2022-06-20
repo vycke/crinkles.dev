@@ -19,7 +19,6 @@ a:active {
 	transition: all 200ms ease;
 	color: var(--color-fg-0);
 	text-decoration-color: var(--color-primary);
-	text-decoration-thickness: 1px;
 }
 
 a:hover {
@@ -92,7 +91,7 @@ blockquote {
 }
 
 // Styled unordered list
-ul:not([class]) {
+ul:not([role="list"]) {
 	list-style: outside;
 	padding-left: 0;
 
@@ -107,13 +106,13 @@ ul:not([class]) {
 }
 
 // Ordered list
-ol:not([class]) {
+ol:not([role="list"]) {
 	list-style: decimal outside;
 	padding-left: 0;
 
 	li {
 		padding-left: 0;
-		margin-left: var(--size-00);
+		margin-left: var(--size-2);
 
 		&::marker {
 			font-style: italic;
@@ -122,6 +121,26 @@ ol:not([class]) {
 			color: var(--color-primary);
 		}
 	}
+}
+
+// Code
+pre,
+// added specificity
+pre:not([data-lang]),
+pre[data-lang] {
+  position: relative;
+  padding: 0;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+pre > code {
+  display: block;
+  overflow-x: auto;
+  // fix for increased font-size safari iOS
+  -webkit-text-size-adjust: none;
 }
 
 @media (max-width: 50rem) {

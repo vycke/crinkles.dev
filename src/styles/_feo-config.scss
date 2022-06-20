@@ -13,8 +13,7 @@ $feo-colors: (
   'grey-5': hsl($_h, $_s, 10%),
   // BRAND COLORS
   'brand-1': #078080,
-  'brand-2': #f45d48,
-  'brand-3': #F8F5F2,
+  'brand-2': #fbdd74,
   // FUNCTIONAL COLORS
 	'info': #3c8cdd,
 	'success': #59c08c,
@@ -35,7 +34,7 @@ $feo-themes: (
     'bg-1': 'grey-4',
     'fg-0': 'grey-0',
     'fg-1': 'grey-2',
-    'primary': 'brand-3',
+    'primary': 'brand-2',
   ),
   'light': (
     'bg-0': 'grey-0',

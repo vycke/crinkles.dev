@@ -70,7 +70,7 @@
 
 		<nav class="sticky post-0 stack stack-g-000 px-1 pt-3 self-start minw-000">
 			<span class="text-00 uppercase sans-serif text-primary">Table of contents</span>
-			<ul class="content-table">
+			<ul class="content-table" role="list">
 				{#each post.headers as header, i}
 					<li class="pb-000" data-active={i === 0}>
 						<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
@@ -99,7 +99,7 @@
 	:global(.post aside) {
 		display: block;
 		padding: var(--size-0) var(--size-1);
-		background-color: var(--color-accent);
+		background-color: var(--color-bg-1);
 		font-size: var(--size-00);
 		color: var(--color-grey-4);
 	}

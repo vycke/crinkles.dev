@@ -7,7 +7,7 @@
 </script>
 
 <Page title="Meta | Crinkles">
-	<Header class="center center-w-3 center-g-1"><h1 class="text-1 ml-1">About</h1></Header>
+	<Header class="center center-w-3 center-g-1"><h1 class="text-1 ml-1 serif">About</h1></Header>
 	<Main class="flex-grow stack stack-g-0 | mb-3 text-0">
 		<blockquote class="text-1 bold">{quote}</blockquote>
 

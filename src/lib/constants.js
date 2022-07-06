@@ -5,19 +5,19 @@ export const description =
 export const projects = [
 	{
 		type: '(S)CSS',
-		title: 'Feo',
+		title: 'Feo CSS',
 		href: 'https://feo.crinkles.io',
 		description: 'Layout and utility based CSS framework'
 	},
 	{
 		type: 'TypeScript + SvelteKit',
-		title: 'Cogwheel',
+		title: 'Cogwheel (+ editor)',
 		href: 'https://cogwheel-editor.vercel.app/',
-		description: 'State machine library + state machine visual editor'
+		description: 'Simple lightweight state machine library + a visual editor and developer tool'
 	},
 	{
 		type: 'TypeScript',
-		title: 'Digl',
+		title: 'DIGL',
 		href: 'https://github.com/kevtiq/digl',
 		description: 'Directed graph layout algorithm'
 	},

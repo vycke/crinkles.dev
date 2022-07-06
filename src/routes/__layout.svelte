@@ -10,6 +10,7 @@
 </script>
 
 <script>
+	import ListGroup from '$lib/components/structure/ListGroup.svelte';
 	import '../styles/index.scss';
 
 	let links = [
@@ -41,11 +42,13 @@
 	<slot />
 
 	<footer class="relative flex-col items-start | p-00 text-00">
-		<div class="cluster gap-00 self-center">
+		<ListGroup class="cluster gap-00 self-center">
 			<a href="/meta" sveltekit:prefetch class="p-000 serif bold italic">© crinkles studio</a>
+			<a href="/writing" sveltekit:prefetch class="p-000">writing</a>
+			<a href="/projects" sveltekit:prefetch class="p-000">projects</a>
 			{#each links as link}
 				<a href={link.url} title={link.alt} class="p-000">{link.name}</a>
 			{/each}
-		</div>
+		</ListGroup>
 	</footer>
 </div>

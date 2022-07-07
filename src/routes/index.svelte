@@ -8,6 +8,7 @@
 </script>
 
 <script>
+	import Header from '$lib/components/structure/Header.svelte';
 	import ListGroup from '$lib/components/structure/ListGroup.svelte';
 	import Main from '$lib/components/structure/Main.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
@@ -17,18 +18,16 @@
 </script>
 
 <Page>
-	<Main width={5} class="flex-grow mt-3">
-		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center">
+	<Main width={5} class="flex-grow flex-col">
+		<Header />
+		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-2">
 			<div class="stack">
-				<span class="text-3 bold lh-0 flex-row items-center">Hi, I'm Kevin</span>
-				<span class="italic bold serif text-primary mb-2">
-					Crafting interfaces & engineering manager.
-				</span>
+				<span class="text-3 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
 				<span class="text-0">
-					Crafting interfaces for users and developers. Occasionally share my thoughs on front-end
-					development, developer experience, and engineering management. Build stuff using <i>CSS</i
-					>, <i>TypeScript</i>, <i>Svelte</i>, and/or
-					<i>React</i>.
+					Crafting interfaces for users and developers, using <i>CSS</i>, <i>TypeScript</i>,
+					<i>Svelte</i>, and/or
+					<i>React</i>. Occasionally sharing my thoughs on front-end development, developer
+					experience, and engineering management.
 				</span>
 
 				<span class="serif bold italic text-1 text-center pt-3 text-primary maxw-2 self-center">
@@ -36,7 +35,7 @@
 				</span>
 			</div>
 
-			<aside class="stack gap-0 mt-3">
+			<aside class="stack gap-0">
 				<ListGroup class="switcher switcher-w-00 switcher-a-3 gap-0">
 					{#each articles as article}
 						<div class="card | flex-col | click-area | p-1">
@@ -49,7 +48,7 @@
 					{/each}
 				</ListGroup>
 				<a href="/writing" class="view-more | self-end | text-0" sveltekit:prefetch>
-					View more articles
+					See all articles
 				</a>
 			</aside>
 		</section>
@@ -82,8 +81,8 @@
 		display: inline-block;
 		padding: 3px;
 		position: absolute;
-		right: -8px;
-		top: 0.675em;
+		right: -6px;
+		top: 0.6em;
 		transform: rotate(-45deg);
 		-webkit-transform: rotate(-45deg);
 		transition: all 0.25s;

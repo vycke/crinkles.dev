@@ -9,7 +9,7 @@
 
 <Page title="Articles">
 	<Header class="center center-w-3 center-g-1 mb-3">
-		<h1 class="text-1 ml-1 serif">Projects</h1>
+		<h1 class="text-1 ml-1 serif italic">Projects</h1>
 	</Header>
 	<Main>
 		<ListGroup class="flex-col gap-2 | mb-3">

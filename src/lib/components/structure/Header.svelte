@@ -2,6 +2,7 @@
 	let klass = '';
 	export { klass as class };
 	let size = 38;
+	export let title = 'Crinkles studio';
 </script>
 
 <header class={`text-left mt-1 mb-0 | ${klass}`}>
@@ -22,7 +23,10 @@
 				/>
 			</svg>
 		</a>
-		<slot />
+		<div class="flex-col ml-1 items-start">
+			<h1 class="text-1 bold text-nowrap lh-0">{title}</h1>
+			<span class="serif bold italic text-primary lh-0">Crafting interfaces</span>
+		</div>
 	</div>
 </header>
 

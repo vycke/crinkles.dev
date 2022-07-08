@@ -104,24 +104,24 @@ export function swr(url) {
 		return () => remove();
 	});
 
-	async function refetch() { ... }
-	refetch();
+	async function fetch() { ... }
+	fetch();
 	return { subscribe, fetch };
 }
 ```
 
-By returning the `refetch` function, we programmatically refresh the data in cache by fetching it again. This `refetch` function is where most of the magic happens. Up until now, it is the configuration and setup of the cache and internal store. Below is the code of the `refetch` function.
+By returning the `fetch` function, we programmatically refresh the data in cache by fetching it again. This `fetch` function is where most of the magic happens. Up until now, it is the configuration and setup of the cache and internal store. Below is the code of the `fetch` function.
 
 ```js
-async function refetch() {
+async function fetch() {
 	try {
-		const success = cache[url].send('STARTED');
+		const success = cache[url].send({ type: 'STARTED' });
 		if (!success) return;
 		const response = await fetch(url);
 		const data = await response.json();
-		cache[url].send('FINISHED', data);
-	} catch (e) {
-		cache[url].send('FAILED', e);
+		cache[url].send({ type: 'FINISHED', data });
+	} catch (errors) {
+		cache[url].send({ type: 'FAILED', errors });
 	}
 }
 ```
@@ -140,12 +140,12 @@ We now have an `invalid` state. When data in cache gets updated by a user action
 export function swr(url) {
 	function mutate(key, value, sync = false) {
 		const _machine = cache[url];
-		const success = cache[url].send('MODIFIED', { key, value });
-		if (success && sync) refetch();
+		const success = cache[url].send({ type: 'MODIFIED', key, value });
+		if (success && sync) fetch();
 	}
 
-	if (cache[url].current !== 'invalid') refetch();
-	return { subscribe, refetch, mutate };
+	if (cache[url].current !== 'invalid') fetch();
+	return { subscribe, fetch, mutate };
 }
 ```
 

@@ -1,14 +1,15 @@
 <script>
 	let klass = '';
 	export { klass as class };
+	export let fade = false;
 </script>
 
-<div class="list-group {klass}" role="list">
+<div class="list-group {klass}" class:fade role="list">
 	<slot />
 </div>
 
 <style global>
-	.list-group:hover > *:not(:hover) {
+	.list-group:hover.fade > *:not(:hover) {
 		opacity: 0.4;
 	}
 

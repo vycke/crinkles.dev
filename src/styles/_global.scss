@@ -86,8 +86,12 @@ blockquote {
 	}
 }
 
-[id] {
+h2[id] {
 	scroll-margin-top: 1rem;
+}
+
+img {
+	background-color: var(--color-grey-0);	
 }
 
 // Styled unordered list

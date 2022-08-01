@@ -34,8 +34,8 @@ When the `<input />` element is the first child of the `<body>`, we can target a
 
 /* dark theme */
 #theme-toggle:checked ~ * {
-  --background: var(--white);
-  --foreground: var(--black);
+  --background: var(--black);
+  --foreground: var(--white);
 }
 ```
 

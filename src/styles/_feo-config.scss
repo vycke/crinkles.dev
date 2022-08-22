@@ -13,7 +13,8 @@ $feo-colors: (
   'grey-5': hsl($_h, $_s, 10%),
   // BRAND COLORS
   'brand-1': #078080,
-  'brand-2': #A3BE8C,
+  'brand-2': #73E1BE,
+  'brand-3': #F8E9B2,
   // FUNCTIONAL COLORS
 	'info': #3c8cdd,
 	'success': #59c08c,
@@ -34,6 +35,7 @@ $feo-dark-theme: (
   'fg-0': 'grey-0',
   'fg-1': 'grey-2',
   'primary': 'brand-2',
+  'accent': 'brand-3',
 );
 
 $feo-light-theme: (
@@ -42,4 +44,5 @@ $feo-light-theme: (
   'fg-0': 'grey-5',
   'fg-1': 'grey-3',
   'primary': 'brand-1',
+  'accent': 'brand-1',
 )

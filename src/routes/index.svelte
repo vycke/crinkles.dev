@@ -39,7 +39,7 @@
 				<ListGroup class="switcher switcher-w-00 switcher-a-3 gap-0" fade={true}>
 					{#each articles as article}
 						<div class="card | flex-col | click-area | p-1">
-							<span class="text-000 bold uppercase text-primary"> {article.formattedDate} </span>
+							<span class="text-000 bold uppercase text-accent"> {article.formattedDate} </span>
 							<h3>
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 							</h3>

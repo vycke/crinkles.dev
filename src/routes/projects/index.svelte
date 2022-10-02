@@ -14,7 +14,7 @@
 	<Main>
 		<ListGroup class="flex-col gap-2 | mb-3">
 			{#each projects as project}
-				<div class="flex-col click-area transition-300">
+				<div class="flex-col click-area transition-300" role="listitem">
 					<div class="flex-row items-center">
 						<a href={project.href} class="bold no-decoration">{project.title}</a>
 						<Dotted class="flex-grow" />

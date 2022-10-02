@@ -40,9 +40,9 @@
 					{#each articles as article}
 						<div class="card | flex-col | click-area | p-1">
 							<span class="text-000 bold uppercase text-accent"> {article.formattedDate} </span>
-							<h3>
+							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
-							</h3>
+							</h2>
 							<span class="text-00 text-fg-1 mt-000">{article.description}</span>
 						</div>
 					{/each}

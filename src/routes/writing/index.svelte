@@ -23,7 +23,7 @@
 	<Main class="flex-grow">
 		<ListGroup class="flex-col gap-2 | mb-3">
 			{#each articles as article}
-				<div class="flex-col click-area">
+				<div class="flex-col click-area" role="listitem">
 					<div class="flex-row items-center">
 						<a href="/writing/{article.slug}" sveltekit:prefetch class="bold no-decoration"
 							>{article.title}</a

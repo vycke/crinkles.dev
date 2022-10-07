@@ -18,19 +18,19 @@
 </script>
 
 <Page>
-	<Main width={5} class="flex-grow flex-col">
+	<Main width={4} class="flex-grow flex-col">
 		<Header />
 		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-2">
 			<div class="stack">
-				<span class="text-3 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
+				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
 				<span class="text-0">
-					Crafting interfaces for users and developers, using <i>CSS</i>, <i>TypeScript</i>,
-					<i>Svelte</i>, and/or
-					<i>React</i>. Occasionally sharing my thoughs on front-end development, developer
-					experience, and engineering management.
+					Crafting interfaces for users and developers. Occasionally sharing my
+					<a href="/writing" sveltekit:prefetch>thoughts</a> on front-end development, and developer
+					workflows. Sometimes, just sometimes, also sharing a small
+					<a href="/projects" sveltekit:prefetch>project</a>.
 				</span>
 
-				<span class="serif bold italic text-1 text-center pt-3 text-primary maxw-2 self-center">
+				<span class="serif bold italic text-0 text-center pt-3 text-primary maxw-2 self-center">
 					{quote}
 				</span>
 			</div>
@@ -39,7 +39,7 @@
 				<ListGroup class="switcher switcher-w-00 switcher-a-3 gap-0" fade={true}>
 					{#each articles as article}
 						<div class="card | flex-col | click-area | p-1" role="listitem">
-							<span class="text-000 bold uppercase text-accent"> {article.formattedDate} </span>
+							<span class="text-000 bold uppercase"> {article.formattedDate} </span>
 							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 							</h2>

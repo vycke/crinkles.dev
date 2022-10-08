@@ -1,14 +1,12 @@
 <script>
 	let klass = '';
 	export { klass as class };
-	let size = 38;
-	export let title = 'Crinkles studio';
 </script>
 
 <header class={`text-left mt-1 mb-0 | ${klass}`}>
 	<div class="flex-row items-center">
 		<a href="/" aria-label="Logo that redirects to the homepage" class="no-decoration">
-			<svg height={size} viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg height={38} viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					fill-rule="evenodd"
 					clip-rule="evenodd"
@@ -18,8 +16,8 @@
 			</svg>
 		</a>
 		<div class="flex-col ml-1 items-start">
-			<h1 class="text-1 bold text-nowrap lh-0">{title}</h1>
-			<span class="serif bold italic text-primary lh-0">Crafting interfaces</span>
+			<h1 class="text-1 bold text-nowrap lh-0">Kevin Pennekamp</h1>
+			<span class="serif bold italic text-fg-1 lh-0">Crinkles studio</span>
 		</div>
 	</div>
 </header>

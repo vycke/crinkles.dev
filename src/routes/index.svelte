@@ -64,7 +64,6 @@
 	.view-more:active {
 		color: var(--color-fg-1);
 		transition: all 0.25s;
-		text-decoration-color: transparent;
 		position: relative;
 		padding: 0 var(--size-000);
 		margin-right: var(--size-1);

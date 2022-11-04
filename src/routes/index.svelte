@@ -8,18 +8,15 @@
 </script>
 
 <script>
-	import Header from '$lib/components/structure/Header.svelte';
 	import ListGroup from '$lib/components/structure/ListGroup.svelte';
 	import Main from '$lib/components/structure/Main.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
-	import { quote } from '$lib/constants';
-
+	import Wave from '$lib/components/utilities/Wave.svelte';
 	export let articles;
 </script>
 
 <Page>
 	<Main width={4} class="flex-grow flex-col mt-5">
-		<!-- <Header /> -->
 		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-2">
 			<div class="stack">
 				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
@@ -30,9 +27,7 @@
 					<a href="/projects" sveltekit:prefetch>projects</a>.
 				</span>
 
-				<span class="serif bold italic text-0 text-center pt-3 text-primary maxw-2 self-center">
-					{quote}
-				</span>
+				<Wave class="my-3 maxw-0 self-center" />
 			</div>
 
 			<aside class="stack gap-0">
@@ -85,5 +80,26 @@
 	.view-more:hover:after {
 		right: -18px;
 		font-weight: 600;
+	}
+
+	.wave {
+		background: var(--color-primary);
+		min-height: 50px;
+		--mask: radial-gradient(
+					50.28px at 50% calc(100% + 33.25px),
+					#0000 calc(99% - 4px),
+					#000 calc(101% - 4px) 99%,
+					#0000 101%
+				)
+				calc(50% - 70px) calc(50% - 19.5px + 0.5px) / 140px 39px repeat-x,
+			radial-gradient(
+					50.28px at 50% -33.25px,
+					#0000 calc(99% - 4px),
+					#000 calc(101% - 4px) 99%,
+					#0000 101%
+				)
+				50% calc(50% + 19.5px) / 140px 39px repeat-x;
+		-webkit-mask: var(--mask);
+		mask: var(--mask);
 	}
 </style>

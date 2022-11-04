@@ -1,4 +1,6 @@
 <script>
+	import Wave from '../utilities/Wave.svelte';
+
 	let klass = '';
 	export { klass as class };
 </script>
@@ -15,9 +17,8 @@
 				/>
 			</svg>
 		</a>
-		<div class="flex-col ml-1 items-start">
-			<h1 class="text-1 bold text-nowrap lh-0">Kevin Pennekamp</h1>
-			<span class="serif bold italic text-fg-1 lh-0">Crinkles studio</span>
+		<div class="flex-col ml-1 items-start flex-grow">
+			<Wave scale={0.6} class="maxw-0" />
 		</div>
 	</div>
 </header>

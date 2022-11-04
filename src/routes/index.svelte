@@ -81,25 +81,4 @@
 		right: -18px;
 		font-weight: 600;
 	}
-
-	.wave {
-		background: var(--color-primary);
-		min-height: 50px;
-		--mask: radial-gradient(
-					50.28px at 50% calc(100% + 33.25px),
-					#0000 calc(99% - 4px),
-					#000 calc(101% - 4px) 99%,
-					#0000 101%
-				)
-				calc(50% - 70px) calc(50% - 19.5px + 0.5px) / 140px 39px repeat-x,
-			radial-gradient(
-					50.28px at 50% -33.25px,
-					#0000 calc(99% - 4px),
-					#000 calc(101% - 4px) 99%,
-					#0000 101%
-				)
-				50% calc(50% + 19.5px) / 140px 39px repeat-x;
-		-webkit-mask: var(--mask);
-		mask: var(--mask);
-	}
 </style>

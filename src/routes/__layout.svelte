@@ -43,9 +43,10 @@
 
 	<footer class="relative flex-col items-start | p-00 text-00">
 		<ListGroup class="cluster gap-00 self-center" fade={true}>
-			<a href="/meta" sveltekit:prefetch class="p-000 serif bold italic" role="listitem">
+			<a href="/about" sveltekit:prefetch class="p-000 serif bold italic" role="listitem">
 				© crinkles studio
 			</a>
+			<a href="/meta" sveltekit:prefetch class="p-000" role="listitem">meta</a>
 			<a href="/writing" sveltekit:prefetch class="p-000" role="listitem">writing</a>
 			<a href="/projects" sveltekit:prefetch class="p-000" role="listitem">projects</a>
 			{#each links as link}

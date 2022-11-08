@@ -27,7 +27,7 @@
 					<a href="/projects" sveltekit:prefetch>projects</a>.
 				</span>
 
-				<Wave class="my-3 maxw-0 self-center" />
+				<Wave class="mt-4 maxw-0 self-center" />
 			</div>
 
 			<aside class="stack gap-0">

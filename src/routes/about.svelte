@@ -3,7 +3,6 @@
 	import Header from '$lib/components/structure/Header.svelte';
 	import Main from '$lib/components/structure/Main.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
-	import Wave from '$lib/components/utilities/Wave.svelte';
 </script>
 
 <Page title="About | Crinkles">
@@ -16,10 +15,9 @@
 			greather strength to normal straight walls. They use less bricks than multi-layer walls to
 			gain the same strength.
 		</p>
-		<Wave class="maxw-2 my-3" />
 		<p>
 			Crinkles Studio creates UI solutions for users and developers with this same <i
-				>anti-fragline</i
+				>anti-fragile</i
 			>
 			mindset. Software solutions should be of high quality, but implemented with effective patterns
 			and methods.

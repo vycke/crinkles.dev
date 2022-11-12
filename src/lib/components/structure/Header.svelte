@@ -18,7 +18,7 @@
 			</svg>
 		</a>
 		<div class="flex-col ml-1 items-start flex-grow">
-			<Wave scale={0.6} class="maxw-0" />
+			<Wave height={20} />
 		</div>
 	</div>
 </header>

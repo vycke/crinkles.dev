@@ -16,7 +16,7 @@
 </script>
 
 <Page>
-	<Main width={4} class="flex-grow flex-col mt-5">
+	<Main width={5} class="flex-grow flex-col mt-5">
 		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-2">
 			<div class="stack">
 				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
@@ -31,9 +31,12 @@
 			</div>
 
 			<aside class="stack gap-0">
-				<ListGroup class="switcher switcher-w-00 switcher-a-3 gap-0" fade={true}>
+				<ListGroup class="tiles tiles-w-00 gap-0" fade={true}>
 					{#each articles as article}
-						<div class="card | flex-col | click-area | p-1" role="listitem">
+						<div
+							class="bg-bg-1 radius-000 border-fg-1 hover:border-primary | flex-col | click-area | p-1"
+							role="listitem"
+						>
 							<span class="text-000 bold uppercase"> {article.formattedDate} </span>
 							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
@@ -51,10 +54,6 @@
 </Page>
 
 <style>
-	.card {
-		background-color: var(--color-bg-1);
-	}
-
 	.view-more,
 	.view-more:active {
 		color: var(--color-fg-1);

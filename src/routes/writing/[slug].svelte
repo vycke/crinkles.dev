@@ -100,15 +100,26 @@
 		display: block;
 		padding: var(--size-0) var(--size-1);
 		background-color: var(--color-bg-1);
+		border: 3px solid var(--color-primary);
+		border-radius: var(--size-00);
 		font-size: var(--size-00);
 		color: var(--color-fg-1);
+		position: relative;
 	}
 
 	:global(.post aside::before) {
-		content: 'NOTE';
-		font-weight: bold;
-		color: var(--color-fg-0);
+		content: 'Note 🧐';
+		position: absolute;
 		display: block;
+		top: -16px;
+		left: 20px;
+		height: 32px;
+		font-size: 16px;
+		line-height: 32px;
+		color: var(--color-bg-0);
+		background-color: var(--color-primary);
+		border-radius: var(--size-000);
+		padding: 0 var(--size-000);
 	}
 
 	:global(.post aside a),

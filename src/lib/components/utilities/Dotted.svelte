@@ -7,6 +7,6 @@
 
 <style>
 	.dotted {
-		border-bottom: 1px dotted var(--color-fg-1);
+		border-bottom: 1px dashed var(--color-fg-1);
 	}
 </style>

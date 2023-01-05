@@ -57,7 +57,7 @@
 <Page title={post.title} description={post.description}>
 	<div class="switcher switcher-w-4">
 		<div class="minw-000 px-2" />
-		<Main class="post | stack stack-g-2">
+		<Main class="post | text-0 stack stack-g-2">
 			<Header />
 			<span class="bold uppercase text-00">
 				<time datetime={date}>{date}</time>
@@ -72,7 +72,7 @@
 			<span class="text-00 uppercase sans-serif text-primary">Table of contents</span>
 			<ul class="content-table" role="list">
 				{#each post.headers as header, i}
-					<li class="pb-000" data-active={i === 0}>
+					<li class="pb-00 lh-0" data-active={i === 0}>
 						<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
 					</li>
 				{/each}
@@ -100,10 +100,9 @@
 		display: block;
 		padding: var(--size-0) var(--size-1);
 		background-color: var(--color-bg-1);
-		border: 3px solid var(--color-primary);
+		border: 2px solid var(--color-primary);
 		border-radius: var(--size-00);
 		font-size: var(--size-00);
-		color: var(--color-fg-1);
 		position: relative;
 	}
 
@@ -129,8 +128,8 @@
 	}
 
 	:global(.post aside a:hover) {
-		color: var(--color-grey-3);
-		text-decoration-color: var(--color-grey-3);
+		color: var(--color-primary);
+		text-decoration-color: var(--color-primary);
 	}
 
 	:global(.post h2) {

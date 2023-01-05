@@ -125,7 +125,6 @@ ol:not([role="list"]) {
 		&::marker {
 			font-style: italic;
 			font-family: var(--serif);
-			font-weight: bold;
 			color: var(--color-primary);
 		}
 	}

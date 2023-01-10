@@ -34,14 +34,14 @@
 				<ListGroup class="tiles tiles-w-00 gap-0" fade={true}>
 					{#each articles as article}
 						<div
-							class="bg-bg-1 radius-000 border-fg-1 hover:border-primary | flex-col | click-area | p-1"
+							class="bg-accent radius-000 border-bg-1 hover:border-primary | flex-col | click-area | p-1"
 							role="listitem"
 						>
 							<span class="text-000 bold uppercase"> {article.formattedDate} </span>
 							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 							</h2>
-							<span class="text-00 text-fg-1 mt-000">{article.description}</span>
+							<span class="text-00 mt-000">{article.description}</span>
 						</div>
 					{/each}
 				</ListGroup>

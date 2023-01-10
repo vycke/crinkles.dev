@@ -100,7 +100,7 @@
 		display: block;
 		padding: var(--size-0) var(--size-1);
 		background-color: var(--color-bg-1);
-		border: 2px solid var(--color-primary);
+		border: 3px solid var(--color-primary);
 		border-radius: var(--size-00);
 		font-size: var(--size-00);
 		position: relative;
@@ -110,7 +110,7 @@
 		content: 'Note 🧐';
 		position: absolute;
 		display: block;
-		top: -16px;
+		top: -18px;
 		left: 20px;
 		height: 32px;
 		font-size: 16px;

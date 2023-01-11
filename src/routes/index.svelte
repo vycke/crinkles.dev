@@ -34,7 +34,7 @@
 				<ListGroup class="tiles tiles-w-00 gap-0" fade={true}>
 					{#each articles as article}
 						<div
-							class="bg-accent radius-000 border-bg-1 hover:border-primary | flex-col | click-area | p-1"
+							class="bg-bg-1 radius-000 border-bg-1 hover:border-primary | flex-col | click-area | p-1"
 							role="listitem"
 						>
 							<span class="text-000 bold uppercase"> {article.formattedDate} </span>

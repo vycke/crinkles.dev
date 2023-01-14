@@ -15,8 +15,8 @@
 
 	let links = [
 		{ name: 'twitter', url: 'https://twitter.com/kevtiq', alt: 'Link to my Twitter page' },
+		{ name: 'mastodon', url: 'https://mastodon.world/@kevtiq', alt: 'Link to my Mastodon page' },
 		{ name: 'github', url: 'https://github.com/kevtiq', alt: 'Link to my Github page' },
-		{ name: 'codepen', url: 'https://codepen.io/kevtiq', alt: 'Link to my CodePen.io page' },
 		{ name: 'rss', url: '/rss.xml', alt: 'Link to my RSS page' }
 	];
 
@@ -46,11 +46,10 @@
 			<a href="/about" sveltekit:prefetch class="p-000 serif bold italic" role="listitem">
 				© crinkles studio
 			</a>
-			<a href="/meta" sveltekit:prefetch class="p-000" role="listitem">meta</a>
 			<a href="/writing" sveltekit:prefetch class="p-000" role="listitem">writing</a>
 			<a href="/projects" sveltekit:prefetch class="p-000" role="listitem">projects</a>
 			{#each links as link}
-				<a href={link.url} title={link.alt} class="p-000" role="listitem">{link.name}</a>
+				<a rel="me" href={link.url} title={link.alt} class="p-000" role="listitem">{link.name}</a>
 			{/each}
 		</ListGroup>
 	</footer>

@@ -50,7 +50,7 @@ marked.use({ extensions: [infoblock] });
 
 // The main rendering function
 export async function renderer(md) {
-	const highlighter = await shiki.getHighlighter({ theme: 'monokai' });
+	const highlighter = await shiki.getHighlighter({ theme: 'poimandres' });
 	marked.Renderer.prototype.code = function (code, lang) {
 		return highlighter.codeToHtml(code, lang);
 	};

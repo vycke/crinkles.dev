@@ -52,11 +52,27 @@ The original library required you to identify the source node of the graph yours
 nodes.filter(n => !edges.find((e) => e.target === n.id))
 ```
 
-This works well for most cases. But, whenever a graph is a big loop, it is possible that not a single node is *not* a target. To avoid no graph being defined at all, the first node found is selected as the source node. 
+This works well for most cases. But, as pointed out to a user from the library in [this issue](https://github.com/kevtiq/digl/issues/21), it has some flaws. Whenever even one graph is a full loop, i.e. each node is a target once or more, it will not produce a correct result. In the issue, there were two graphs, one simple graphs with a clear source. And a graph that was a big loop. With the above method all nodes from the big loop were left out of the final result. This means a different solution has to be found. 
 
-From here, it is possible to determine the initial rank per found source node. First, you determine all possible paths from each source node. After that, you determine the initial ranking for each of the nodes. This gives you a set of rankings, instead of a single ranking.
+1. Start looking for all definitive sources with the above snippet.
+2. Get all possible paths per source. This can be used to create the initial ranking per source, as described earlier. 
+3. Based on all the found paths, determine which nodes are *not* yet visited with one of the paths (see code snippet below). If no unvisited nodes are found, skip step 4.
+4. Flag the first node as a source and find all paths. Redo step 3. 
+5. For each source, determine the initial ranking based on all possible paths. 
 
-## Multiple start nodes
+```ts
+function diff<T>(a: T[], b: T[]): T[] {
+  const setA = new Set([...a]);
+  const setB = new Set([...b]);
+  const diff = new Set([...setA].filter((x) => !setB.has(x)));
+  return Array.from(diff);
+}
+```
+
+With these steps, we ensure all nodes are now part of the result. Because all nodes are part of the result, we know all edges are covered. The difference now is that instead of a single *ranking*, we have an array of *rankings*. One ranking for each found source node
+
+
+## Multiple source nodes for a single graph
 Having multiple rankings, one for each source node, with the above method works when we know they are independent. But when two rankings share a node, we will hit issues. When visualizing the output, nodes will be duplicated, confusing users. State machines can have multiple source nodes for a single graph, for example. This means we need an additional step after finding the ranking for each source node. 
 
 Merging rankings when they intersect can be achieved by iterating over all combinations of source nodes and their possible paths. Take a look at this example. If `I` and `J` intersect, and `J` and `K`, all three need to be combined. But, using a double `for-`loop will not find `I` and `K`. A recursive function is used. 

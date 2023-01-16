@@ -17,7 +17,7 @@
 				/>
 			</svg>
 		</a>
-		<span class="ml-1 flex-grow lh-0 bold"> Crinkles. </span>
+		<span class="ml-1 flex-grow lh-0 bold"> Crinkles<span class="text-primary">.</span> </span>
 		<ListGroup class="cluster gap-0 self-center" fade={true} scale={false}>
 			<a href="/writing" sveltekit:prefetch role="listitem">writing</a>
 			<a href="/projects" sveltekit:prefetch role="listitem">my work</a>

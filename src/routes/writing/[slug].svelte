@@ -70,11 +70,13 @@
 			</article>
 			{#if post.headers.length > 0}
 				<nav class="sticky stack stack-g-000 self-start minw-000 px-1">
-					<span class="text-00 uppercase sans-serif text-fg-1 bold">On this page</span>
+					<span class="text-00 uppercase sans-serif bold">On this page</span>
 					<ul class="content-table" role="list">
 						{#each post.headers as header, i}
 							<li class="pb-00 lh-0" data-active={i === 0}>
-								<a href="#{header.id}" class="text-00 no-decoration sans-serif">{header.label}</a>
+								<a href="#{header.id}" class="text-00 no-decoration sans-serif text-fg-0"
+									>{header.label}</a
+								>
 							</li>
 						{/each}
 					</ul>
@@ -89,7 +91,7 @@
 <style>
 	a,
 	a:visited {
-		color: var(--color-fg-1);
+		color: var(--color-fg-0);
 	}
 
 	a:hover {
@@ -177,7 +179,7 @@
 
 	li[data-active='true'] a {
 		text-decoration: underline;
-		text-decoration-thickness: 1px;
+		text-decoration-thickness: 2px;
 		text-decoration-color: var(--color-primary);
 	}
 </style>

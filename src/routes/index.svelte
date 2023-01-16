@@ -8,6 +8,7 @@
 </script>
 
 <script>
+	import Redirect from '$lib/components/navigation/Redirect.svelte';
 	import Header from '$lib/components/structure/Header.svelte';
 
 	import ListGroup from '$lib/components/structure/ListGroup.svelte';
@@ -47,39 +48,8 @@
 						</div>
 					{/each}
 				</ListGroup>
-				<a href="/writing" class="view-more | self-end | text-0" sveltekit:prefetch>
-					See all articles
-				</a>
+				<Redirect href="/writing" class="text-0 self-end">See all articles</Redirect>
 			</aside>
 		</section>
 	</Main>
 </Page>
-
-<style>
-	.view-more,
-	.view-more:active {
-		color: var(--color-fg-1);
-		transition: all 0.25s;
-		position: relative;
-		padding: 0 var(--size-000);
-		margin-right: var(--size-1);
-	}
-
-	.view-more:hover {
-		color: var(--color-primary);
-	}
-
-	.view-more:after {
-		content: '>';
-		display: inline-block;
-		position: absolute;
-		right: -6px;
-		top: 0.1em;
-		transition: all 0.25s;
-	}
-
-	.view-more:hover:after {
-		right: -18px;
-		font-weight: 600;
-	}
-</style>

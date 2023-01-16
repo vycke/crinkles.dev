@@ -20,7 +20,7 @@
 <Page>
 	<Main width={5} class="flex-grow flex-col">
 		<Header />
-		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-5">
+		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-5 mb-2">
 			<div class="stack">
 				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
 				<span class="text-0">

@@ -1,12 +1,11 @@
 <script>
-	import Wave from '../utilities/Wave.svelte';
 	import ListGroup from './ListGroup.svelte';
 
 	let klass = '';
 	export { klass as class };
 </script>
 
-<header class={`text-left mt-1 mb-0 | ${klass}`}>
+<header class={`text-left mt-1 mb-0 | flex-col ${klass}`}>
 	<div class="flex-row items-center">
 		<a href="/" aria-label="Logo that redirects to the homepage" class="no-decoration">
 			<svg height={26} viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,6 +24,7 @@
 			<a href="/about" sveltekit:prefetch role="listitem">about</a>
 		</ListGroup>
 	</div>
+	<slot />
 </header>
 
 <style>

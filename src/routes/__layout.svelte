@@ -43,7 +43,7 @@
 	<footer
 		class="w-full | flex-row content-center gap-0 | bg-grey-4 border-t-primary border-w-2 | p-00 text-00 text-grey-0"
 	>
-		<span class="serif italic flex-grow" role="listitem"> © crinkles. </span>
+		<span class="serif italic flex-grow"> © crinkles. </span>
 		<ListGroup class="cluster gap-0" fade={true} scale={false}>
 			{#each links as link}
 				<a rel="me" href={link.url} title={link.alt} role="listitem">{link.name}</a>

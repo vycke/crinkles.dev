@@ -17,7 +17,6 @@
 <script>
 	import Pagination from '$lib/components/navigation/Pagination.svelte';
 	import Header from '$lib/components/structure/Header.svelte';
-	import Main from '$lib/components/structure/Main.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 	import Wave from '$lib/components/utilities/Wave.svelte';
 	import { onMount } from 'svelte';
@@ -56,20 +55,21 @@
 </svelte:head>
 
 <Page title={post.title} description={post.description}>
-	<Main width={4}>
-		<Header />
+	<Header class="center center-w-4 center-g-1">
 		<div class="bold uppercase text-00 mt-4">
 			<time datetime={date}>{date}</time>
 			{` • ${num}`}
 		</div>
 		<h1 class="stack-g-00">{post.title}</h1>
-		<div class="relative sidebar-r sidebar-w-00 sidebar-c-70 gap-2 mt-2">
-			<article class="post | text-0 stack stack-g-2">
+	</Header>
+	<div class="center center-w-4">
+		<main class="relative sidebar-r sidebar-w-00 sidebar-c-70 mt-2">
+			<article class="post | center center-w-3 center-g-1 | stack stack-g-2 | text-0">
 				{@html post.html}
 				<Wave height={30} class="mt-3" />
 			</article>
 			{#if post.headers.length > 0}
-				<nav class="sticky stack stack-g-000 self-start minw-000">
+				<nav class="sticky stack stack-g-000 self-start minw-000 px-1">
 					<span class="text-00 uppercase sans-serif text-primary">On this page</span>
 					<ul class="content-table" role="list">
 						{#each post.headers as header, i}
@@ -80,8 +80,8 @@
 					</ul>
 				</nav>
 			{/if}
-		</div>
-	</Main>
+		</main>
+	</div>
 
 	<Pagination next={pageNext} previous={pagePrevious} />
 </Page>
@@ -96,11 +96,11 @@
 		color: var(--color-primary);
 	}
 
-	:global(.post) {
-		flex-grow: 5;
+	main {
+		--center-width: calc(var(--bp-4) + 2 * var(--size-1));
 	}
 
-	:global(.post aside) {
+	:global(article aside) {
 		display: block;
 		padding: var(--size-0) var(--size-1);
 		background-color: var(--color-bg-1);
@@ -110,7 +110,7 @@
 		position: relative;
 	}
 
-	:global(.post aside::before) {
+	:global(article aside::before) {
 		content: 'Note 🧐';
 		position: absolute;
 		display: block;
@@ -125,43 +125,43 @@
 		padding: 0 var(--size-000);
 	}
 
-	:global(.post aside a),
-	:global(.post aside a:visited) {
+	:global(article aside a),
+	:global(article aside a:visited) {
 		color: var(--color-fg-0);
 		text-decoration-color: var(--color-fg-0);
 	}
 
-	:global(.post aside a:hover) {
+	:global(article aside a:hover) {
 		color: var(--color-primary);
 		text-decoration-color: var(--color-primary);
 	}
 
-	:global(.post h2) {
+	:global(article h2) {
 		transition: all 0.25s;
 		margin-top: var(--size-3);
 	}
 
-	:global(.post h2 + p) {
+	:global(article h2 + p) {
 		margin-top: var(--size-1);
 	}
 
-	:global(.post h2 a) {
+	:global(article h2 a) {
 		text-decoration-line: none;
 		color: var(--color-fg-0);
 	}
 
-	:global(.post h2:hover a) {
+	:global(article h2:hover a) {
 		text-decoration-line: underline;
 	}
 
-	:global(.post h2:hover a::after) {
+	:global(article h2:hover a::after) {
 		content: ' #';
 		color: var(--color-primary);
 	}
 
-	:global(.post img),
-	:global(.post aside),
-	:global(.post pre) {
+	:global(article.post img),
+	:global(article.post aside),
+	:global(article.post pre) {
 		--center-gutter: 0px;
 		--center-width: calc(var(--bp-3) + 2 * var(--size-1));
 	}

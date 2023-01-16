@@ -37,7 +37,7 @@
 	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
-<div class="flex-col h-full text-fg-0 bg-bg-0">
+<div class="flex-col h-full text-fg-0 bg-bg-0 text-0">
 	<slot />
 
 	<footer

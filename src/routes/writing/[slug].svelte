@@ -70,7 +70,7 @@
 			</article>
 			{#if post.headers.length > 0}
 				<nav class="sticky stack stack-g-000 self-start minw-000 px-1">
-					<span class="text-00 uppercase sans-serif text-primary">On this page</span>
+					<span class="text-00 uppercase sans-serif text-fg-1 bold">On this page</span>
 					<ul class="content-table" role="list">
 						{#each post.headers as header, i}
 							<li class="pb-00 lh-0" data-active={i === 0}>

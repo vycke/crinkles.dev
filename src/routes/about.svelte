@@ -16,9 +16,7 @@
 			gain the same strength.
 		</p>
 		<p>
-			Crinkles Studio creates UI solutions for users and developers with this same <i
-				>anti-fragile</i
-			>
+			Crinkles. creates UI solutions for users and developers with this same <i>anti-fragile</i>
 			mindset. Software solutions should be of high quality, but implemented with effective patterns
 			and methods.
 		</p>

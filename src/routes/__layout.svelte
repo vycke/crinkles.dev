@@ -14,7 +14,6 @@
 	import '../styles/index.scss';
 
 	let links = [
-		{ name: 'twitter', url: 'https://twitter.com/kevtiq', alt: 'Link to my Twitter page' },
 		{ name: 'mastodon', url: 'https://mastodon.world/@kevtiq', alt: 'Link to my Mastodon page' },
 		{ name: 'github', url: 'https://github.com/kevtiq', alt: 'Link to my Github page' },
 		{ name: 'rss', url: '/rss.xml', alt: 'Link to my RSS page' }
@@ -41,16 +40,26 @@
 <div class="flex-col h-full text-fg-0 bg-bg-0">
 	<slot />
 
-	<footer class="relative flex-col items-start | p-00 text-00">
-		<ListGroup class="cluster gap-00 self-center" fade={true}>
-			<a href="/about" sveltekit:prefetch class="p-000 serif bold italic" role="listitem">
-				© crinkles studio
-			</a>
-			<a href="/writing" sveltekit:prefetch class="p-000" role="listitem">writing</a>
-			<a href="/projects" sveltekit:prefetch class="p-000" role="listitem">projects</a>
+	<footer
+		class="w-full | flex-row content-center gap-0 | bg-grey-4 border-t-primary border-w-2 | p-00 text-00 text-grey-0"
+	>
+		<span class="serif italic flex-grow" role="listitem"> © crinkles. </span>
+		<ListGroup class="cluster gap-0" fade={true} scale={false}>
 			{#each links as link}
-				<a rel="me" href={link.url} title={link.alt} class="p-000" role="listitem">{link.name}</a>
+				<a rel="me" href={link.url} title={link.alt} role="listitem">{link.name}</a>
 			{/each}
 		</ListGroup>
 	</footer>
 </div>
+
+<style>
+	footer a {
+		color: var(--color-grey-0);
+		text-decoration-color: var(--color-grey-2);
+	}
+
+	footer a:hover {
+		color: var(--color-brand-2);
+		text-decoration-color: var(--color-brand-2);
+	}
+</style>

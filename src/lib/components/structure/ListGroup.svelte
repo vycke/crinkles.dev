@@ -2,9 +2,10 @@
 	let klass = '';
 	export { klass as class };
 	export let fade = false;
+	export let scale = true;
 </script>
 
-<div class="list-group {klass}" class:fade role="list">
+<div class="list-group {klass}" class:fade class:scale role="list">
 	<slot />
 </div>
 
@@ -17,7 +18,7 @@
 		transition: all 0.25s;
 	}
 
-	.list-group > *:hover {
+	.list-group.scale > *:hover {
 		transform: matrix(1.075, 0, 0, 1.075, 0, 0);
 	}
 </style>

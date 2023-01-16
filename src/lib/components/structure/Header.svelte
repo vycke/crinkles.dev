@@ -1,5 +1,6 @@
 <script>
 	import Wave from '../utilities/Wave.svelte';
+	import ListGroup from './ListGroup.svelte';
 
 	let klass = '';
 	export { klass as class };
@@ -8,7 +9,7 @@
 <header class={`text-left mt-1 mb-0 | ${klass}`}>
 	<div class="flex-row items-center">
 		<a href="/" aria-label="Logo that redirects to the homepage" class="no-decoration">
-			<svg height={38} viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg height={26} viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					fill-rule="evenodd"
 					clip-rule="evenodd"
@@ -17,9 +18,12 @@
 				/>
 			</svg>
 		</a>
-		<div class="flex-col ml-1 items-start flex-grow">
-			<Wave height={20} />
-		</div>
+		<span class="ml-1 flex-grow lh-0 bold"> Crinkles. </span>
+		<ListGroup class="cluster gap-0 self-center" fade={true} scale={false}>
+			<a href="/writing" sveltekit:prefetch role="listitem">writing</a>
+			<a href="/projects" sveltekit:prefetch role="listitem">my work</a>
+			<a href="/about" sveltekit:prefetch role="listitem">about</a>
+		</ListGroup>
 	</div>
 </header>
 

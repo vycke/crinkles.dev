@@ -8,6 +8,8 @@
 </script>
 
 <script>
+	import Header from '$lib/components/structure/Header.svelte';
+
 	import ListGroup from '$lib/components/structure/ListGroup.svelte';
 	import Main from '$lib/components/structure/Main.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
@@ -16,15 +18,15 @@
 </script>
 
 <Page>
-	<Main width={5} class="flex-grow flex-col mt-5">
-		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-2">
+	<Main width={5} class="flex-grow flex-col">
+		<Header />
+		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-5">
 			<div class="stack">
 				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
 				<span class="text-0">
-					Crafting polished interfaces and tools. Occasionally sharing my
-					<a href="/writing" sveltekit:prefetch>thoughts</a> on front-end development, and sometimes
-					share small
-					<a href="/projects" sveltekit:prefetch>projects</a>.
+					Crinkles is the after-hours digital playground from Kevin Pennekamp — my corner of the
+					internet to publish my <a href="/writing" sveltekit:prefetch>thoughts</a>, work on
+					freelance projects and <a href="/projects" sveltekit:prefetch>tinker</a> around.
 				</span>
 
 				<Wave class="mt-4 maxw-0 self-center" />

@@ -51,11 +51,12 @@ export async function getArticle(slug, html = true) {
 	const { body, ...matter } = fm(src);
 
 	const formattedDate = format(matter.attributes.date);
+	const tags = matter.attributes.tags?.split(',').map((t) => t.trim());
 
-	if (!html) return { slug, formattedDate, ...matter.attributes };
+	if (!html) return { slug, formattedDate, ...matter.attributes, tags };
 	const _html = await renderer(body);
 	const headers = getHeaders(_html);
-	return { slug, html: _html, headers, formattedDate, ...matter.attributes };
+	return { slug, html: _html, headers, formattedDate, ...matter.attributes, tags };
 }
 
 export async function getArticles(length) {

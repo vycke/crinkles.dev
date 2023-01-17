@@ -1,6 +1,7 @@
 ---
 title: Horizontal centering in CSS
 date: 2021-06-20T00:00:00.000Z
+tags: css, layout
 description: >-
   Horizontal centering is an ancient problem in CSS. With CSS Grid we are able enhance this layout pattern. But, this gives us other issues. Let's find a better solution.
 ---
@@ -87,8 +88,8 @@ By slightly adjusting the old school solution with newer properties, we can crea
 
 ```css
 .center > * {
-  width: min(100% - 2 * var(--gap), var(--mw));
-  margin-inline: auto; 
+	width: min(100% - 2 * var(--gap), var(--mw));
+	margin-inline: auto;
 }
 
 /* full-width exception */
@@ -97,7 +98,7 @@ By slightly adjusting the old school solution with newer properties, we can crea
 }
 ```
 
-Setting the `--mw`  custom property to 100% allows a child element to become full-width of the parent, while all the other elements are capped at a maximum of `50rem`. You can also set it to `60rem`. This makes the child element it is applied to just a little wider compared to others, but is centered similarly. The use of CSS custom properties even allows you to define utility classes that gave you more control over the layout.
+Setting the `--mw` custom property to 100% allows a child element to become full-width of the parent, while all the other elements are capped at a maximum of `50rem`. You can also set it to `60rem`. This makes the child element it is applied to just a little wider compared to others, but is centered similarly. The use of CSS custom properties even allows you to define utility classes that gave you more control over the layout.
 
 ```css
 .center-g-sm > * {

@@ -28,6 +28,3 @@ export const projects = [
 		description: 'Small & immutable command-driven state machine library'
 	}
 ];
-
-export const quote =
-	'"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on an interface. It highlights uniqueness."';

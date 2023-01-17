@@ -1,6 +1,7 @@
 ---
 title: State machines and state management
 date: 2021-12-08T00:00:00.000Z
+tags: state-management, state-machines
 description: >-
   State management is one of the most complicated, and opinionated topics in modern and JavaScript-focused front-end development. Let's make it easier.
 ---

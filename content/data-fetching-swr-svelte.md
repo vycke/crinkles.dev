@@ -1,6 +1,7 @@
 ---
 title: SWR-like data fetching in Svelte
 date: 2021-12-10T00:00:00.000Z
+tags: state-management, svelte
 description: >-
   I am a big fan of the [SWR](https://swr.vercel.app/) package of Vercel. Let's see how to implement something similar in Svelte.
 ---

@@ -40,7 +40,13 @@
 							class="bg-bg-1 radius-000 border-bg-1 hover:border-primary | flex-col | click-area | p-1"
 							role="listitem"
 						>
-							<span class="text-000 bold uppercase"> {article.formattedDate} </span>
+							<span class="text-00">
+								<span class="text-fg-1">// </span>
+								<time datetime={article.formattedDate}>
+									{article.formattedDate}
+								</time>
+							</span>
+
 							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 							</h2>

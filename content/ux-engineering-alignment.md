@@ -1,6 +1,7 @@
 ---
 title: Engineering, UX design and agile
 date: 2021-06-16T00:00:00.000Z
+tags: quality, ux
 description: >-
   In agile we focus on the delivery of solutions. As this is the playing field of engineers, UX designers get left behind. However, we should seek more alignment with them.
 ---

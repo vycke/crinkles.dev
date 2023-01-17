@@ -1,6 +1,7 @@
 ---
 title: Scalable CSS architecture
 date: 2022-01-29T00:00:00.000Z
+tags: css, architecture
 description: >-
   In the last two years, I found that my CSS architecture was becoming too complex. But, utility-first frameworks were not doing it for me either. I needed a mix, I needed utility-enabled. Then came CUBE CSS and it all clicked.
 ---

@@ -1,6 +1,7 @@
 ---
 title: Binding CSS and JavaScript with HTML data-attributes
 date: 2021-04-22T00:00:00.000Z
+tags: css, architecture
 description: >-
   HTML data-attributes allow you to bind CSS and JavaScript more closely to each other. By utilizing this type of attribute, you can reduce the amount of JavaScript required for styling, and move this responsibility back to CSS.
 ---

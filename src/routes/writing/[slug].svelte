@@ -66,7 +66,7 @@
 		<main class="relative sidebar-r sidebar-w-00 sidebar-c-70 mt-2">
 			<article class="post | center center-w-3 center-g-1 | stack stack-g-2 | text-0">
 				{@html post.html}
-				<Wave height={30} class="mt-3" />
+				<Wave height={30} class="my-3" />
 			</article>
 			{#if post.headers.length > 0}
 				<nav class="sticky stack stack-g-000 self-start minw-000 px-1">

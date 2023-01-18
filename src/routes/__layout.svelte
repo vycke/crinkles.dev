@@ -37,20 +37,18 @@
 	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
-<div class="flex-col h-full text-fg-0 bg-bg-0 text-0">
-	<slot />
+<slot />
 
-	<footer
-		class="w-full | flex-row content-center gap-0 | bg-grey-4 border-t-brand-2 border-w-4 | p-00 text-00 text-grey-0"
-	>
-		<span class="serif italic flex-grow"> © crinkles<span class="text-brand-2">.</span> </span>
-		<ListGroup class="cluster gap-0" fade={true} scale={false}>
-			{#each links as link}
-				<a rel="me" href={link.url} title={link.alt} role="listitem">{link.name}</a>
-			{/each}
-		</ListGroup>
-	</footer>
-</div>
+<footer
+	class="w-full | flex-row content-center gap-0 | bg-grey-4 border-t-brand-2 border-w-4 | p-00 text-00 text-grey-0"
+>
+	<span class="serif italic flex-grow"> © crinkles<span class="text-brand-2">.</span> </span>
+	<ListGroup class="cluster gap-0" fade={true} scale={false}>
+		{#each links as link}
+			<a rel="me" href={link.url} title={link.alt} role="listitem">{link.name}</a>
+		{/each}
+	</ListGroup>
+</footer>
 
 <style>
 	footer a {

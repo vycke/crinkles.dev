@@ -33,3 +33,12 @@
 	unicode-range: U+000-5FF; /* Download only latin glyphs */
 	src: url('/fonts/iAWriterQuattroS-Regular.woff2') format('woff2');
 }
+
+@font-face {
+	font-family: 'iAWriter Mono';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap; /* Read next point */
+	unicode-range: U+000-5FF; /* Download only latin glyphs */
+	src: url('/fonts/iAWriterMonoS-Regular.woff2') format('woff2');
+}

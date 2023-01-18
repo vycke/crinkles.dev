@@ -17,6 +17,7 @@
 <script>
 	import Pagination from '$lib/components/navigation/Pagination.svelte';
 	import Header from '$lib/components/structure/Header.svelte';
+	import MetaData from '$lib/components/structure/MetaData.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 	import Wave from '$lib/components/utilities/Wave.svelte';
 	import { onMount } from 'svelte';
@@ -48,7 +49,7 @@
 
 	$: date = post.formattedDate;
 	$: tags = post.tags;
-	$: num = `${Math.ceil(post.html.split(' ').length / 200)} min read`;
+	$: readTime = `${Math.ceil(post.html.split(' ').length / 200)} min read`;
 </script>
 
 <svelte:head>
@@ -58,17 +59,18 @@
 <Page title={post.title} description={post.description}>
 	<Header class="center center-w-4 center-g-1">
 		<h1 class="stack-g-00 mt-4">{post.title}</h1>
-		<div class="stack mt-0 text-00">
-			<span><span class="text-fg-1">// </span><time datetime={date}>{date}</time></span>
-			<span><span class="text-fg-1">// </span>{num}</span>
-			{#if tags}<span
-					><span class="text-fg-1">// </span>
+		<div class="stack mt-0 text-00 text-fg-1">
+			<MetaData><time datetime={date}>{date}</time></MetaData>
+			<MetaData>{readTime}</MetaData>
+			{#if tags}
+				<MetaData>
 					{#each tags as tag, i}
-						<span class="text-fg-1">#</span>{tag}{#if i !== tags.length - 1},&nbsp;{/if}
+						<span class="text-primary">#</span>{tag}{#if i !== tags.length - 1},&nbsp;{/if}
 					{/each}
-				</span>{/if}
-		</div></Header
-	>
+				</MetaData>
+			{/if}
+		</div>
+	</Header>
 	<div class="center center-w-4">
 		<main class="relative sidebar-r sidebar-w-00 sidebar-c-70 mt-2">
 			<article class="post | center center-w-3 center-g-1 | stack stack-g-2 | text-0">

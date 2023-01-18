@@ -6,7 +6,7 @@ export const projects = [
 	{
 		type: '(S)CSS',
 		title: 'Feo CSS',
-		href: 'https://feo.crinkles.io',
+		href: 'https://feo.crinkles.dev',
 		description: 'Layout and utility based CSS framework'
 	},
 	{

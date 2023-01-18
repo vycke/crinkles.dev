@@ -9,7 +9,7 @@
 	<slot />
 </div>
 
-<style>
+<style global>
 	.list-group:hover.fade > *:not(:hover) {
 		opacity: 0.4;
 	}

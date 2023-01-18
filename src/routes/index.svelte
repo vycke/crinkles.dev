@@ -53,7 +53,7 @@
 							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>
 							</h2>
-							<span class="text-00 mt-000">{article.description}</span>
+							<span class="text-00 text-fg-1 mt-000">{article.description}</span>
 						</div>
 					{/each}
 				</ListGroup>

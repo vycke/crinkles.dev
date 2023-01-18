@@ -4,7 +4,7 @@
 	export { klass as class };
 </script>
 
-<a {href} class="redirect | {klass}" sveltekit:prefetch><slot /></a>
+<a {href} class="redirect | {klass}" sveltekit:prefetch><slot /><span class="arrow">→</span></a>
 
 <style>
 	.redirect,
@@ -20,17 +20,16 @@
 		color: var(--color-primary);
 	}
 
-	.redirect:after {
-		content: '→';
+	.arrow {
 		display: inline-block;
 		position: absolute;
-		right: -18px;
-		top: 0.1em;
+		right: -20px;
+		top: 0.05em;
 		transition: all 0.25s;
 	}
 
-	.redirect:hover:after {
-		right: -30px;
+	.redirect:hover .arrow {
+		right: -28px;
 		font-weight: 600;
 	}
 </style>

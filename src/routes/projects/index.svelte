@@ -26,14 +26,16 @@
 			{#each groupedProjects as [tech, projects], i}
 				<div
 					class="sidebar-l sidebar-w-000 sidebar-c-80 gap-0 mb-1"
-					class:border-b-bg-1={i < groupedProjects.length - 1}
+					class:border-b-fg-1={i < groupedProjects.length - 1}
 				>
 					<span class="text-primary">{tech}</span>
 					<ListGroup class="flex-col gap-2 mb-1">
 						{#each projects as project}
 							<div class="flex-col click-area" role="listitem">
 								<Meta>{project.type}</Meta>
-								<a href={project.href} class="bold no-decoration">{project.title}</a>
+								<h2 class="text-1 lh-1">
+									<a href={project.href} class="bold no-decoration">{project.title}</a>
+								</h2>
 								<span class="text-fg-1">{project.description}</span>
 							</div>
 						{/each}

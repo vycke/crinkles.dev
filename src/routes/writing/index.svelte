@@ -28,7 +28,7 @@
 			{#each groupedByYear as [year, articles], i}
 				<div
 					class="sidebar-l sidebar-w-000 sidebar-c-80 gap-0 mb-1"
-					class:border-b-bg-1={i < groupedByYear.length - 1}
+					class:border-b-fg-1={i < groupedByYear.length - 1}
 				>
 					<span class="text-primary">{year}</span>
 					<ListGroup class="flex-col gap-2 mb-1">
@@ -37,9 +37,11 @@
 								<Meta>
 									<time date={article.formattedDate}>{article.formattedDate}</time>
 								</Meta>
-								<a href="/writing/{article.slug}" sveltekit:prefetch class="bold no-decoration">
-									{article.title}
-								</a>
+								<h2 class="text-1 lh-1">
+									<a href="/writing/{article.slug}" sveltekit:prefetch class="bold no-decoration">
+										{article.title}
+									</a>
+								</h2>
 								<span class="text-fg-1">{article.description}</span>
 							</div>
 						{/each}

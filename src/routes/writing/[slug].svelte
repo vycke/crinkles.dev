@@ -17,7 +17,7 @@
 <script>
 	import Pagination from '$lib/components/navigation/Pagination.svelte';
 	import Header from '$lib/components/structure/Header.svelte';
-	import MetaData from '$lib/components/structure/MetaData.svelte';
+	import Meta from '$lib/components/structure/Meta.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 	import Wave from '$lib/components/utilities/Wave.svelte';
 	import { onMount } from 'svelte';
@@ -60,14 +60,14 @@
 	<Header class="center center-w-4 center-g-1">
 		<h1 class="stack-g-00 mt-4">{post.title}</h1>
 		<div class="stack mt-0 text-00 text-fg-1">
-			<MetaData><time datetime={date}>{date}</time></MetaData>
-			<MetaData>{readTime}</MetaData>
+			<Meta><time datetime={date}>{date}</time></Meta>
+			<Meta>{readTime}</Meta>
 			{#if tags}
-				<MetaData>
+				<Meta>
 					{#each tags as tag, i}
 						<span class="text-primary">#</span>{tag}{#if i !== tags.length - 1},&nbsp;{/if}
 					{/each}
-				</MetaData>
+				</Meta>
 			{/if}
 		</div>
 	</Header>

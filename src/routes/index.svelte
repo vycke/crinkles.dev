@@ -13,7 +13,7 @@
 
 	import ListGroup from '$lib/components/structure/ListGroup.svelte';
 	import Main from '$lib/components/structure/Main.svelte';
-	import MetaData from '$lib/components/structure/MetaData.svelte';
+	import Meta from '$lib/components/structure/Meta.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 	import Wave from '$lib/components/utilities/Wave.svelte';
 	export let articles;
@@ -26,26 +26,29 @@
 			<div class="stack">
 				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
 				<span class="text-0">
-					Crinkles is the after-hours digital playground from Kevin Pennekamp — my corner of the
-					internet to publish my <a href="/writing" sveltekit:prefetch>thoughts</a>, work on
-					freelance projects and <a href="/projects" sveltekit:prefetch>tinker</a> around.
+					I'm a front-end developer, engineering manager and a big CSS lover. Crinkles is my
+					after-hours digital playground — my corner of the internet to publish my <a
+						href="/writing"
+						sveltekit:prefetch>thoughts</a
+					>, work on freelance projects and
+					<a href="/projects" sveltekit:prefetch>tinker</a> around.
 				</span>
 
 				<Wave class="mt-4 maxw-0 self-center" />
 			</div>
 
 			<aside class="stack gap-0">
-				<ListGroup class="tiles tiles-w-00 gap-0" fade={true}>
+				<ListGroup class="tiles tiles-w-00 gap-0" scale={true}>
 					{#each articles as article}
 						<div
 							class="bg-bg-1 radius-000 border-bg-1 hover:border-primary | flex-col | click-area | p-1"
 							role="listitem"
 						>
-							<MetaData>
+							<Meta>
 								<time datetime={article.formattedDate}>
 									{article.formattedDate}
 								</time>
-							</MetaData>
+							</Meta>
 
 							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>

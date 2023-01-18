@@ -11,7 +11,7 @@
 	import Header from '$lib/components/structure/Header.svelte';
 	import ListGroup from '$lib/components/structure/ListGroup.svelte';
 	import Main from '$lib/components/structure/Main.svelte';
-	import MetaData from '$lib/components/structure/MetaData.svelte';
+	import Meta from '$lib/components/structure/Meta.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 
 	// export let articles;
@@ -19,23 +19,24 @@
 </script>
 
 <Page title="Writing">
-	<main class="center center-w-4 center-g-1">
-		<Header>
-			<h1>Writing</h1>
-		</Header>
-	</main>
+	<Header class="center center-w-4 center-g-1">
+		<h1>Writing</h1>
+	</Header>
 
 	<Main class="flex-grow mt-1" width={4}>
-		<ListGroup fade={true} scale={false}>
-			{#each groupedByYear as [year, articles]}
-				<div class="sidebar-l sidebar-w-000 sidebar-c-80 gap-0 border-b-bg-1 mb-1">
+		<ListGroup>
+			{#each groupedByYear as [year, articles], i}
+				<div
+					class="sidebar-l sidebar-w-000 sidebar-c-80 gap-0 mb-1"
+					class:border-b-bg-1={i < groupedByYear.length - 1}
+				>
 					<span class="text-primary">{year}</span>
-					<ListGroup fade={true} scale={false} class="flex-col gap-2 mb-1">
+					<ListGroup class="flex-col gap-2 mb-1">
 						{#each articles as article}
 							<div class="flex-col click-area" role="listitem">
-								<MetaData>
+								<Meta>
 									<time date={article.formattedDate}>{article.formattedDate}</time>
-								</MetaData>
+								</Meta>
 								<a href="/writing/{article.slug}" sveltekit:prefetch class="bold no-decoration">
 									{article.title}
 								</a>

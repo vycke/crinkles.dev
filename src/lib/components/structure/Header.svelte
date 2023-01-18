@@ -18,7 +18,7 @@
 			</svg>
 		</a>
 		<nav>
-			<ListGroup class="cluster gap-0 self-center" fade={true} scale={false}>
+			<ListGroup class="cluster gap-2 self-center">
 				<a href="/writing" sveltekit:prefetch role="listitem">writing</a>
 				<a href="/projects" sveltekit:prefetch role="listitem">my work</a>
 				<a href="/about" sveltekit:prefetch role="listitem">about</a>

@@ -4,33 +4,33 @@
 	export { klass as class };
 </script>
 
-<a {href} class="view-more | {klass}" sveltekit:prefetch><slot /></a>
+<a {href} class="redirect | {klass}" sveltekit:prefetch><slot /></a>
 
 <style>
-	.view-more,
-	.view-more:active {
+	.redirect,
+	.redirect:active {
 		color: var(--color-fg-0);
 		transition: all 0.25s;
 		position: relative;
-		padding: 0 var(--size-000);
+		padding: 0;
 		margin-right: var(--size-1);
 	}
 
-	.view-more:hover {
+	.redirect:hover {
 		color: var(--color-primary);
 	}
 
-	.view-more:after {
+	.redirect:after {
 		content: '→';
 		display: inline-block;
 		position: absolute;
-		right: -12px;
+		right: -18px;
 		top: 0.1em;
 		transition: all 0.25s;
 	}
 
-	.view-more:hover:after {
-		right: -24px;
+	.redirect:hover:after {
+		right: -30px;
 		font-weight: 600;
 	}
 </style>

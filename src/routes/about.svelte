@@ -6,9 +6,8 @@
 </script>
 
 <Page title="About | Crinkles">
-	<Header class="center center-w-3 center-g-1" />
-	<Main class="flex-grow stack stack-g-0 | my-3 text-0">
-		<h1>About</h1>
+	<Header class="center center-w-3 center-g-1"><h1>About</h1></Header>
+	<Main class="flex-grow stack stack-g-0 | mb-3 text-0">
 		<p>
 			A crinkle crankle wall is an unusual type of structural or garden wall built in a serpentine
 			shape with alternating curves. Its structure helps to resist lateral forces, leading to

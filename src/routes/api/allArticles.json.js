@@ -3,14 +3,14 @@ import { getArticles } from '$lib/features/process-files';
 export async function get() {
 	const articles = await getArticles();
 
-	let grouped = {};
+	const groupedByYear = {};
 	articles.forEach((a) => {
 		const year = a.date.toISOString().slice(0, 4);
-		if (grouped[year]) grouped[year].push(a);
-		else grouped[year] = [a];
+		if (groupedByYear[year]) groupedByYear[year].push(a);
+		else groupedByYear[year] = [a];
 	});
 
 	return {
-		body: articles
+		body: { articles, groupedByYear: Object.entries(groupedByYear).sort((a, b) => b[0] - a[0]) }
 	};
 }

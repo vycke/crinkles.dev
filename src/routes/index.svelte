@@ -13,6 +13,7 @@
 
 	import ListGroup from '$lib/components/structure/ListGroup.svelte';
 	import Main from '$lib/components/structure/Main.svelte';
+	import MetaData from '$lib/components/structure/MetaData.svelte';
 	import Page from '$lib/components/structure/Page.svelte';
 	import Wave from '$lib/components/utilities/Wave.svelte';
 	export let articles;
@@ -21,7 +22,7 @@
 <Page>
 	<Main width={5} class="flex-grow flex-col">
 		<Header />
-		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mt-5 mb-2">
+		<section class="switcher switcher-w-1 switcher-a-2 gap-5 items-center mb-2">
 			<div class="stack">
 				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
 				<span class="text-0">
@@ -40,12 +41,11 @@
 							class="bg-bg-1 radius-000 border-bg-1 hover:border-primary | flex-col | click-area | p-1"
 							role="listitem"
 						>
-							<span class="text-00">
-								<span class="text-fg-1">// </span>
+							<MetaData>
 								<time datetime={article.formattedDate}>
 									{article.formattedDate}
 								</time>
-							</span>
+							</MetaData>
 
 							<h2 class="text-0">
 								<a href="/writing/{article.slug}" sveltekit:prefetch>{article.title}</a>

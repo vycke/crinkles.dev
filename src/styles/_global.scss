@@ -9,6 +9,14 @@ body {
 	scroll-behavior: smooth;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	color: var(--color-fg-0);
+	background-color: var(--color-bg-0);
+	font-size: var(--size-0);
+}
+
 main {
 	min-width: var(--bp-0);
 }
@@ -48,7 +56,6 @@ h2 {
 
 h3 {
 	font-size: var(--size-0);
-	// font-weight: bold;	
 }
 
 h1 a,
@@ -92,7 +99,7 @@ img {
 }
 
 // Styled unordered list
-ul:not([role="list"]) {
+ul:not([role="list"]), ol:not([role="list"]) {
 	list-style: outside;
 	padding-left: 0;
 
@@ -106,21 +113,17 @@ ul:not([role="list"]) {
 	}
 }
 
+ul:not([role="list"]) li {
+	list-style-type: '-  ';
+
+	&::marker {
+		font-weight: 600;
+	}
+}
+
 // Ordered list
 ol:not([role="list"]) {
 	list-style: decimal outside;
-	padding-left: 0;
-
-	li {
-		padding-left: 0;
-		margin-left: var(--size-2);
-
-		&::marker {
-			font-style: italic;
-			font-family: var(--serif);
-			color: var(--color-primary);
-		}
-	}
 }
 
 // Code

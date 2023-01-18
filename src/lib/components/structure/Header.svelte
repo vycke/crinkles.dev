@@ -6,7 +6,7 @@
 </script>
 
 <header class={`text-left mt-1 mb-0 | flex-col ${klass}`}>
-	<div class="flex-row items-center justify-between">
+	<div class="flex-row items-center justify-between mb-4">
 		<a href="/" aria-label="Logo that redirects to the homepage" class="no-decoration">
 			<svg height={38} viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path

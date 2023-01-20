@@ -26,12 +26,16 @@
 			<div class="stack">
 				<span class="text-4 bold lh-0 flex-row items-center mb-1">Hi, I'm Kevin.</span>
 				<span class="text-0">
-					I'm a front-end developer, engineering manager and a big CSS lover. Crinkles is my
-					after-hours digital playground — my corner of the internet to publish my <a
+					Crinkles is my after-hours digital playground — my corner of the internet to publish my <a
 						href="/writing"
 						sveltekit:prefetch>thoughts</a
 					>, work on freelance projects and
 					<a href="/projects" sveltekit:prefetch>tinker</a> around.
+				</span>
+				<span class="text-00 text-fg-1 mt-0">
+					Currently working as an engineering manager and principle front-end engineer at <a
+						href="https://finaps.nl">Finaps</a
+					>.
 				</span>
 
 				<Wave class="mt-4 maxw-0 self-center" />

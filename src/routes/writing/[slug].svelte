@@ -58,7 +58,7 @@
 
 <Page title={post.title} description={post.description}>
 	<Header class="center center-w-4 center-g-1">
-		<h1 class="stack-g-00 mt-4">{post.title}</h1>
+		<h1 class="stack-g-00">{post.title}</h1>
 		<div class="stack mt-0 text-00 text-fg-1">
 			<Meta><time datetime={date}>{date}</time></Meta>
 			<Meta>{readTime}</Meta>
@@ -73,7 +73,7 @@
 	</Header>
 	<div class="center center-w-4">
 		<main class="relative sidebar-r sidebar-w-00 sidebar-c-70 mt-2">
-			<article class="post | center center-w-3 center-g-1 | stack stack-g-2 | text-0">
+			<article class="post | center center-w-3 center-g-1 | stack stack-g-2">
 				{@html post.html}
 				<Wave height={30} class="my-3" />
 			</article>
@@ -122,7 +122,7 @@
 	}
 
 	:global(article aside::before) {
-		content: 'Note 🧐';
+		content: 'Did you know 🧐?';
 		position: absolute;
 		display: block;
 		top: -18px;
@@ -175,6 +175,7 @@
 	:global(article.post pre) {
 		--center-gutter: 0px;
 		--center-width: calc(var(--bp-3) + 2 * var(--size-1));
+		box-shadow: var(--shadow);
 	}
 
 	.content-table {

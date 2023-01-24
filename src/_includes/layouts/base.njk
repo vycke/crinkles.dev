@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="msapplication-TileColor" content="#F9FAFB" />
+		<meta name="theme-color" content="#F9FAFB" />
+    <!-- assets -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="{{ '/styles/index.css' | url }}" />
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <!-- page data -->
+    <title>{{ title or metadata.title }} • Crinkles</title>
+    <meta name="description" content="{{ description or metadata.description }}" />
+    <meta name="keywords" content="{{ metadata.keywords }}" />
+	  <meta name="content" content="{{ metadata.keywords }}" />
+	  <meta name="property" content="{{ metadata.keywords }}" />
+    <!-- twitter -->
+    <meta name="twitter:creator" content="{{ metadata.social.twitter}}" />
+	  <meta name="twitter:site" content="{{ metadata.social.twitter}}" />
+    <meta name="twitter:title" content="{{ title or metadata.title }}" />
+    <meta name="twitter:description" content="{{ description or metadata.description }}" />
+    <meta name="twitter:image" content="{{ metadata.social.img }}" />
+	  <meta name="twitter:card" content="summary" />
+	  <!-- OG -->
+    <meta property="og:title" content="{{ title or metadata.title }}" />
+    <meta property="og:description" content="{{ description or metadata.description }}" />
+    <meta property="og:image" content="{{ metadata.social.img }}" />
+    <script>
+      const prefDark = window.matchMedia("(prefers-color-scheme: dark)");
+      document
+        .querySelector('meta[name="theme-color"]')
+        .setAttribute("content", prefDark ? "#131820" : "#F9FAFB");
+      document
+        .querySelector('meta[name="msapplication-TileColor"]')
+        .setAttribute("content", prefDark ? "#131820" : "#F9FAFB");
+    </script>	
+  </head>
+  
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>

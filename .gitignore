@@ -1,8 +1,14 @@
+# Misc
+*.log
+npm-debug.*
 .DS_Store
+Thumbs.db
+.sass-cache
+.env
+.cache
+
+# Node modules and output
 node_modules
-/.svelte
-/.svelte-kit
-/build
-/functions
+_site
 yarn-error.log
-/.idea
+yarn.lock

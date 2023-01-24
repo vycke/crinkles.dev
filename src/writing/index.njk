@@ -1,0 +1,26 @@
+---
+title: Writing
+layout: layouts/page.njk
+eleventyExcludeFromCollections: true
+---
+
+<main class="list-group | center center-w-4 center-g-none | mt-3 flex-grow">
+  {% for year, yearPosts in collections.writing | groupByYear | reverse %}
+    <div class="sidebar-l sidebar-w-000 sidebar-c-70 | gap-0 mb-1 pb-1 border-b-fg-1">
+      <span class="text-primary">{{ year }}</span>
+      <div class="list-group | stack">
+        {% for post in yearPosts | reverse %}
+          <div class="flex-col click-area" role="listitem">
+              <time date="{{ post.data.date | readableDate }}" class="slash | text-00 text-fg-1">{{ post.data.date | readableDate }}</time>
+            <h2 class="text-1 lh-1">
+              <a href="{{ post.page.url }}" class="bold no-decoration">
+                {{ post.data.title }}
+              </a>
+            </h2>
+            <span class="text-fg-1">{{ post.data.description }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</main>

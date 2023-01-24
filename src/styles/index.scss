@@ -1,20 +1,20 @@
 // reset, settings & generic styles
-@import 'fonts';
-@import 'feo-config';
+@import 'blocks/fonts';
+@import 'tokens';
 @import '../../node_modules/feo-css/feo.scss';
+
+@import 'global';
+
+@import 'utils/slash';
+@import 'utils/list-group';
+@import 'utils/redirect';
+
+@import 'blocks/footer';
+@import 'blocks/header';
+@import 'blocks/article';
 
 :root {
   --shadow: 0 4px 4px hsl(0deg 0% 0% / 0.075),
   0 8px 8px hsl(0deg 0% 0% / 0.075),
   0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
-
-/*******
-* global
-*******/
-@import 'global';
-
-/*******
-* blocks
-*******/
-@import 'blocks/code';

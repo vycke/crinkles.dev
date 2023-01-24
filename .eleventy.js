@@ -1,5 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventySass = require("eleventy-sass");
+const purgeCssPlugin = require("eleventy-plugin-purgecss");
 
 // Own helpers
 const readableDate = require("./11ty/readableDate");
@@ -17,6 +18,7 @@ module.exports = (config) => {
   // Conversion SCSS
   config.addPlugin(eleventySass);
   config.addPlugin(pluginRss);
+  config.addPlugin(purgeCssPlugin);
   // Custom filters
   config.addFilter("readableDate", readableDate);
   config.addFilter("readtime", readTime);

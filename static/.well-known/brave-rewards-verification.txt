@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: crinkles.io
-Token: 7c667d907490e26cb5635650d2626a4bf6987f7e3bda3812d23be7ec15f270dc

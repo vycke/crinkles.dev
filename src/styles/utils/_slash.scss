@@ -1,0 +1,10 @@
+.slash {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75ch;
+}
+
+.slash::before {
+  content: "//";
+  color: var(--color-primary);
+}

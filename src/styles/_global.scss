@@ -23,16 +23,14 @@ main {
 
 // LINKS
 a,
-a:link,
-a:visited,
-a:active {
+a:visited {
 	transition: all 200ms ease;
 	color: var(--color-fg-0);
 	text-decoration-color: var(--color-fg-1);
 	text-decoration-thickness: 2px;
 }
 
-a:hover {
+a:focus, a:active, a:hover {
 	color: var(--color-primary);
 	text-decoration-color: var(--color-primary);
 }
@@ -90,21 +88,13 @@ blockquote {
 	}
 }
 
-h2[id] {
-	scroll-margin-top: 1rem;
-}
-
-img {
-	background-color: var(--color-grey-0);	
-}
-
 // Styled unordered list
 ul:not([role="list"]), ol:not([role="list"]) {
 	list-style: outside;
 	padding-left: 0;
 
 	li {
-		padding-left: 0;
+		padding-left: 0; 
 		margin-left: var(--size-2);
 
 		&::marker {
@@ -124,30 +114,6 @@ ul:not([role="list"]) li {
 // Ordered list
 ol:not([role="list"]) {
 	list-style: decimal outside;
-}
-
-code {
-	font-size: 1em;
-}
-
-// Code
-pre,
-// added specificity
-pre:not([data-lang]),
-pre[data-lang] {
-  position: relative;
-  padding: 0;
-  white-space: pre;
-  word-wrap: normal;
-  word-break: normal;
-  word-spacing: normal;
-}
-
-pre > code {
-  display: block;
-  overflow-x: auto;
-  // fix for increased font-size safari iOS
-  -webkit-text-size-adjust: none;
 }
 
 @media (max-width: 50rem) {

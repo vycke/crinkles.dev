@@ -1,0 +1,78 @@
+{% extends "layouts/base.njk" %} 
+{% block content %}
+
+<div class="center center-w-4 center-g-1 | flex-grow | stack stack-g-0 | mb-3">
+  {% include "components/header.njk" %}
+  <h1>{{ title }}</h1>
+  <div class="stack stack-g-none | mt-0 | text-00 text-fg-1">
+    <time datetime="{{ page.date | readableDate }}" class="slash">{{ page.date | readableDate }}</time>
+    <span class="slash">{{ content | readtime }}</span>
+    <span class="slash">
+      {% for tag in tags %}
+      <span><span class="text-primary">#</span>{{ tag }}</span>
+      {% endfor %}
+    </span>
+  </div>
+</div>
+<main class="relative | sidebar-r sidebar-w-00 sidebar-c-70">
+  <article class="post | center center-w-3 center-g-1 | stack stack-g-2">
+    {{ content | safe }}
+    {% include "components/wave.njk" %}
+  </article>
+
+  <nav class="toc | sticky | stack stack-g-000 self-start | minw-000 px-1">
+    <span class="text-00 uppercase sans-serif bold">On this page</span>
+    <ul class="content-table" role="list">
+      {% for header in content | headers %}
+      <li class="pb-00 lh-0" data-active="true">
+        <a href="#{{ header.id }}" class="text-00 no-decoration sans-serif text-fg-0">
+          {{ header.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</main>
+
+{% set nextPost = collections.writing | getNextCollectionItem(page) %}
+{% set previousPost = collections.writing | getPreviousCollectionItem(page) %}
+
+<section class="sidebar-l sidebar-w-1 gap-1 | p-1 mt-3 mb-0">
+	{% if nextPost %}
+		<a
+			class="flex-col items-start justify-center | no-decoration"
+			href="{{ nextPost.url | url }}"
+		>
+			<span class="text-fg-1 text-00 uppercase">← Next</span>
+			<h3>{{ nextPost.data.title }}</h3>
+		</a>
+	{% endif %}
+	{% if previousPost %}
+		<a
+			class="flex-col items-end justify-center | text-right no-decoration"
+			href="{{ previousPost.url | url }}"
+		>
+			<span class="text-fg-1 text-00 uppercase">Previous →</span>
+			<h3>{{ previousPost.data.title }}</h3>
+		</a>
+	{% endif %}
+</section>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const id = entry.target.getAttribute('id');
+    const el = document.querySelector(`nav li a[href="#${id}"]`);
+    if (!el) return;
+    if (entry.intersectionRatio > 0) el.parentElement.dataset.active = true;
+    else el.parentElement.dataset.active = false;
+  });
+});
+// Track all sections that have an `id` applied
+document.querySelectorAll('h2[id]').forEach((header) => {
+  observer.observe(header);
+});
+</script>
+
+{% include "components/footer.njk" %}
+{% endblock %}

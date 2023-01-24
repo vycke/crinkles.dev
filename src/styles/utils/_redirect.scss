@@ -1,0 +1,26 @@
+.redirect,
+.redirect:active {
+  color: var(--color-fg-0);
+  transition: all 0.25s;
+  position: relative;
+  padding: 0;
+  margin-right: var(--size-1);
+}
+
+.redirect:hover {
+  color: var(--color-primary);
+}
+
+.redirect::after {
+  content: "→";
+  display: inline-block;
+  transition: all 0.25s;
+  position: absolute;
+  right: -20px;
+  top: 0.05em
+}
+
+.redirect:hover::after {
+  right: -28px;
+  font-weight: 600;
+}

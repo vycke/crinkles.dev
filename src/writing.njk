@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
       <div class="list-group | stack" role="list">
         {% for post in yearPosts | reverse %}
           <div class="flex-col click-area" role="listitem">
-              <time date="{{ post.data.date | readableDate }}" class="slash | text-00 text-fg-1">{{ post.data.date | readableDate }}</time>
+            <time date="{{ post.data.date | readableDate }}" class="slash | text-00 text-fg-1">{{ post.data.date | readableDate }}</time>
             <h2 class="text-1 lh-1">
               <a href="{{ post.page.url }}" class="bold no-decoration">
                 {{ post.data.title }}

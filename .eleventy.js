@@ -25,6 +25,10 @@ module.exports = (config) => {
   config.addFilter("head", getHeadOfList);
   config.addFilter("headers", getPostHeaders);
   config.addFilter(
+    "groupByTech",
+    groupBy((project) => project.tech)
+  );
+  config.addFilter(
     "groupByYear",
     groupBy((post) => post.data.date.getFullYear())
   );

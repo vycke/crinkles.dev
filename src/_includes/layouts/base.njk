@@ -34,6 +34,7 @@
     <meta property="og:image" content="{{ metadata.social.img }}" />
     <script>
       const prefDark = window.matchMedia("(prefers-color-scheme: dark)");
+      console.log(prefDark);
       document
         .querySelector('meta[name="theme-color"]')
         .setAttribute("content", prefDark ? "#131820" : "#F9FAFB");

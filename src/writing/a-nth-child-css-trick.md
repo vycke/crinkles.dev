@@ -9,15 +9,15 @@ description: >-
   A little CSS trick that allows you to use nth-child values in the CSS calc() function.
 ---
 
-Sometimes you figure out a cool trick that just feels so powerful. It opens you up to a range of new possibilities. That you, quite frankly, almost never use. But still, it is a cool trick. For me, the latest of these tricks is setting a CSS custom property value, corresponding with the `:nth-child` value. Why? Because now we can use the `--nth-child` custom property inside `calc()` functions. 
+Sometimes you figure out a cool trick that just feels so powerful. It opens you up to a range of new possibilities. That you, quite frankly, rarely use. But still, it is a cool trick. For me, the latest of these tricks is setting a CSS custom property value, corresponding with the `:nth-child` value. Why? Because now we can use the `--nth-child` custom property inside `calc()` functions. 
 
 ## But why not use X?
-Sure, in most, if not all, of my projects I use SCSS instead of CSS. But CSS is getting more and more features, making SCSS redundant for me. Looking at you [CSS nesting](https://www.w3.org/TR/css-nesting-1/). With each trick or implementation you can remove another dependency on SCSS, and go back to plain CSS. Using `@for-`loops makes it easy to achieve the same result. But you will generate roughly the same CSS selector several times.   
+Sure, in most, if not all, of my projects I use SCSS instead of CSS. But CSS is getting more and more features, making SCSS redundant for me. Looking at you [CSS nesting](https://www.w3.org/TR/css-nesting-1/). With each trick or implementation, you can remove another dependency on SCSS, and go back to plain CSS. Using `@for-`loops makes it easy to achieve the same result. But you will generate roughly the same CSS selector several times.   
 
 You might also think using `:nth-child(n)` would allow you to achieve the same, without all the custom properties. Unfortunately, the `n` is not useable in the `calc()` function. So, we use custom properties.
 
 ## How to set it up
-On the highest level of your CSS you define a list like the one below. This results in all elements having access to a `--nth-child` custom property. At least as long as you don’t exceed the length of your list.
+On the highest level of your CSS, you define a list like the one below. This results in all elements having access to a `--nth-child` custom property. At least as long as you don’t exceed the length of your list.
 
 ```css
 :nth-child(1) { --nth-child: 1 }
@@ -28,13 +28,13 @@ On the highest level of your CSS you define a list like the one below. This resu
 ```
 
 ## What can we do with this trick?
-Glad you asked! In the last few years I came across two use cases. Two, whole, use cases. In the latest use case, I wanted to automatically generate a color palette. Not to match a branding of a company. But to automatically populate different series of data in chart. With this trick, we can do that with a single line.
+Glad you asked! In the last few years, I came across two use cases. Two, whole, use cases. In the latest use case, I wanted to automatically generate a color palette. Not to match a branding of a company. But to automatically populate different series of data in a chart. With this trick, we can do that with a single line.
 
 ```css
 background-color: hsl(calc(100 * var(--nth-child)) 100% 40%);
 ```
 
-In an earlier use case I replicated the UI implementation of toasts from [Vercel](https://vercel.com/design/toast). On the link you see that a list of toast messages stack with a little bit of perspective. I originally used a SCSS implementation, looking like the snippet below. Note it uses `:nth-last-of-type`, given the reversed order and bottom orientation. But the general idea remains the same. 
+In an earlier use case, I replicated the UI implementation of toasts from [Vercel](https://vercel.com/design/toast). On the link, you see a list of toast messages stacked with a little bit of perspective. I originally used an SCSS implementation, looking like the snippet below. Note it uses `:nth-last-of-type`, given the reversed order and bottom orientation. But the general idea remains the same. 
 
 ```scss
 @for $i from 1 through 20 {
@@ -47,7 +47,7 @@ In an earlier use case I replicated the UI implementation of toasts from [Vercel
 }
 ```
 
-This would create actually twenty different CSS selectors, all with a different value for `$i`. But using this little trick, we can reduce the code, and make it more maintainable in the process.
+This would create twenty different CSS selectors, all with a different value for `$i`. But using this little trick, we can reduce the code, and make it more maintainable in the process.
 
 ```css
 .class {

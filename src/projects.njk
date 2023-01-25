@@ -4,7 +4,7 @@ layout: layouts/page.njk
 eleventyExcludeFromCollections: true
 ---
 
-<main class="list-group | center center-w-4 center-g-none | mt-3 flex-grow">
+<main class="list-group | mt-3 flex-grow">
   {% for tech, techProjects in projects | groupByTech %}
     <div class="sidebar-l sidebar-w-000 sidebar-c-70 | gap-0 mb-1 pb-1 separator">
       <span class="text-primary">{{ tech }}</span>

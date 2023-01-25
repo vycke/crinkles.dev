@@ -18,7 +18,7 @@ width: 5
     <div class="list-group list-group--scale tiles tiles-w-00 gap-0">
       {% for post in collections.writing | reverse | head(4) %}
         <div class="bg-bg-1 border-bg-1 hover:border-primary | flex-col | click-area | p-1">
-          <time class="text-00 slash" datetime="{{ post.data.date | readableDate }}">
+          <time class="text-00 slash" datetime="{{ post.data.date }}">
             {{ post.data.date | readableDate }}
           </time>
           <h2 class="text-0">

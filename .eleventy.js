@@ -9,6 +9,7 @@ const getPostHeaders = require("./11ty/getPostHeaders");
 const markdownRenderer = require("./11ty/markdownRenderer");
 const groupBy = require("./11ty/groupBy");
 const getHeadOfList = require("./11ty/getHeadOfList");
+const getLength = require("./11ty/getLength");
 
 const TEMPLATE_ENGINE = "njk";
 
@@ -24,6 +25,7 @@ module.exports = (config) => {
   config.addFilter("readtime", readTime);
   config.addFilter("head", getHeadOfList);
   config.addFilter("headers", getPostHeaders);
+  config.addFilter("length", getLength);
   config.addFilter(
     "groupByTech",
     groupBy((project) => project.tech)

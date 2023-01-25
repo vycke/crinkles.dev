@@ -52,7 +52,6 @@ article .dyk {
   padding: var(--size-0) var(--size-1);
 	background-color: var(--color-bg-1);
 	border: 3px solid var(--color-primary);
-	border-radius: var(--size-00);
 	font-size: var(--size-00);
 	position: relative;
 }
@@ -68,7 +67,6 @@ article .dyk::before {
   line-height: 32px;
   color: var(--color-bg-0);
   background-color: var(--color-primary);
-  border-radius: var(--size-000);
   padding: 0 var(--size-000);
 }
 // Table of contents

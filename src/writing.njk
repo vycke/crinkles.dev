@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 
 <main class="list-group | center center-w-4 center-g-none | mt-3 flex-grow">
   {% for year, yearPosts in collections.writing | groupByYear | reverse %}
-    <div class="sidebar-l sidebar-w-000 sidebar-c-70 | gap-0 mb-1 pb-1 border-b-fg-1">
+    <div class="sidebar-l sidebar-w-000 sidebar-c-70 | gap-0 mb-1 pb-1 separator">
       <span class="text-primary">{{ year }}</span>
       <div class="list-group | stack" role="list">
         {% for post in yearPosts | reverse %}

@@ -70,24 +70,29 @@ h3 a {
 // QUOTES
 blockquote {
 	display: block;
-	padding: var(--size-3) var(--size-5);
+	position: relative;
+	padding-left: var(--size-1);
 	color: var(--color-fg-1);
-	font-family: var(--serif);
-	font-size: var(--size-3);
-	text-align: center;
 	font-style: italic;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		height: 100%;
+		border-left: 5px solid var(--color-primary);
+	}
 
 	cite {
 		display: block;
 		width: 100%;
-		font-size: var(--size-3);
+		font-size: var(--size-00);
 		font-style: italic;
-		margin-top: var(--size-3);
-		text-align: right;
+		margin-top: var(--size-0);
 		color: var(--color-primary);
 	}
 }
-
 // Styled unordered list
 ul:not([role="list"]), ol:not([role="list"]) {
 	list-style: outside;

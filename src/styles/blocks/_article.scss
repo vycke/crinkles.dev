@@ -1,5 +1,5 @@
 main:has(article) {
-  max-width: calc(var(--bp-4) + 2 * var(--size-1));
+  max-width: min(100%, calc(var(--bp-4) + 2 * var(--size-1)));
   margin-left: auto;
   margin-right: auto;
 }

@@ -16,6 +16,8 @@ Sure, in most, if not all, of my projects I use SCSS instead of CSS. But CSS is 
 
 You might also think using `:nth-child(n)` would allow you to achieve the same, without all the custom properties. Unfortunately, the `n` is not useable in the `calc()` function. So, we use custom properties.
 
+Lastly, there is also the `counter()` function, as pointed out by [Šime Vidas](https://elk.zone/mastodon.world/@simevidas@mastodon.social/109752614707368503). This is a powerful function that has a lot of other attributes that can be set, like a reset of the counter. However, this one is also not available in the `calc()` function. 
+
 ## How to set it up
 On the highest level of your CSS, you define a list like the one below. This results in all elements having access to a `--nth-child` custom property. At least as long as you don’t exceed the length of your list.
 

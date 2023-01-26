@@ -54,7 +54,7 @@ This would create twenty different CSS selectors, all with a different value for
 ```css
 .class {
 	/* We want to start counting at 0 */
-	--v: var(--nth-last-child) - 1;
+	--v: var(--nth-child) - 1;
 	opacity: 1 - calc(var(--v) * 0.15);
 	transform:
 		translate3d(

@@ -1,0 +1,10 @@
+.--gap-none { --layout-gap: none; }
+.--gap-auto { --layout-gap: auto; }
+.--gap-000 { --layout-gap: var(--size-000); }
+.--gap-00 { --layout-gap: var(--size-00); }
+.--gap-0 { --layout-gap: var(--size-0); }
+.--gap-1 { --layout-gap: var(--size-1); }
+.--gap-2 { --layout-gap: var(--size-2); }
+.--gap-3 { --layout-gap: var(--size-3); }
+.--gap-4 { --layout-gap: var(--size-4); }
+.--gap-5 { --layout-gap: var(--size-5); }

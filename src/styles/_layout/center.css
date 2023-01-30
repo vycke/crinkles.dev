@@ -1,0 +1,13 @@
+/* Exceptions can be made via
+{ 
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: X;
+} */
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: min(100%, var(--layout-width));
+}

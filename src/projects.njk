@@ -4,23 +4,23 @@ layout: layouts/page.njk
 eleventyExcludeFromCollections: true
 ---
 
-<main class="list-group | mt-3 flex-grow">
+<div class="list-group | mt-3 flex-grow | fade-in">
   {% for tech, techProjects in projects | groupByTech %}
-    <div class="sidebar-l sidebar-w-000 sidebar-c-70 | gap-0 mb-1 pb-1 separator">
-      <span class="text-primary">{{ tech }}</span>
-      <div class="list-group | stack" role="list">
+    <div class="sidebar-left --width-000 --gap-0 | mb-1 pb-1 separator">
+      <span class="text-color-accent">{{ tech }}</span>
+      <div class="list-group | flex-col --gap-0" role="list">
         {% for project in techProjects %}
-          <div class="flex-col click-area" role="listitem">
-            <span class="slash | text-00 text-fg-1">{{ project.type }}</span>
-            <h2 class="text-1 lh-1">
+          <div class="stack --gap-none click-area" role="listitem">
+            <span class="slash | size-00 text-color-1">{{ project.type }}</span>
+            <h2 class="size-1">
               <a href="{{ project.href }}" class="bold no-decoration">
                 {{ project.title }}
               </a>
             </h2>
-            <span class="text-fg-1">{{ project.description }}</span>
+            <span class="text-color-1">{{ project.description }}</span>
           </div>
         {% endfor %}
       </div>
     </div>
   {% endfor %}
-</main>
+</div>

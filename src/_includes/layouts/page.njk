@@ -1,9 +1,7 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-  <main class="center center-w-{{ width or 4 }} center-g-1 | flex-grow | stack stack-g-0 | mb-3">
-    {% include "components/header.njk" %}
+  <main class="center --width-{{ width or 4 }} pl-1 pr-1 | flex-col --gap-0 flex-grow | mb-3">
     {% if title %}<h1 class="slash">{{ title }}</h1>{% endif %}
     {{ content | safe }}
   </main>
-  {% include "components/footer.njk" %}
 {% endblock %}

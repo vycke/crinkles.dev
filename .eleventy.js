@@ -1,7 +1,4 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const eleventySass = require("eleventy-sass");
-const purgeCssPlugin = require("eleventy-plugin-purgecss");
-
 // Own helpers
 const readableDate = require("./11ty/readableDate");
 const readTime = require("./11ty/readTime");
@@ -16,10 +13,8 @@ const TEMPLATE_ENGINE = "njk";
 module.exports = (config) => {
   // Handling assets (images, fonts, etc.)
   config.addPassthroughCopy({ "./public/": "/" });
-  // Conversion SCSS
-  config.addPlugin(eleventySass);
+  // *SS
   config.addPlugin(pluginRss);
-  config.addPlugin(purgeCssPlugin);
   // Custom filters
   config.addFilter("readableDate", readableDate);
   config.addFilter("readtime", readTime);

@@ -1,51 +1,52 @@
 {% extends "layouts/base.njk" %} 
 {% block content %}
 
-<div class="center center-w-4 center-g-1 | flex-grow | stack | mb-3">
-  {% include "components/header.njk" %}
-  <time datetime="{{ page.date }}" class="text-00 text-fg-1 slash">{{ page.date | readableDate }}</time>
+<main class="center --width-4 pl-1 pr-1 | flex-grow | stack | mb-3">
+  <time datetime="{{ page.date }}" class="size-00 text-color-1 slash">{{ page.date | readableDate }}</time>
   <h1>{{ title }}</h1>
-  <div class="cluster gap-000 text-00 text-fg-1 | border-b-fg-1 pb-3 mt-00">
+  <div class="cluster --gap-000 size-00 text-color-1 | pb-3 mt-00 | separator">
     {% for tag in tags %}
-      <span><span class="text-primary">#</span>{{ tag }}</span>
+      <span><span class="text-color-accent">#</span>{{ tag }}</span>
     {% endfor %}
   </div>
-</div>
-<main class="relative | sidebar-r sidebar-w-00 sidebar-c-70">
-  <article class="post | center center-w-3 center-g-1 | stack stack-g-2 mb-3">
-    {{ content | safe }}
-  </article>
+  
+  <div class="relative | sidebar-right --width-00 --gap-3 | fade-in">
+    <article class="post | center --width-3 | stack --gap-2 mb-3">
+      {{ content | safe }}
+    </article>
 
-  {% set toc = content | headers %}
-  {% if toc | length %}
-  <nav class="toc | sticky | stack stack-g-000 self-start | minw-000 px-1">
-    <span class="text-00 uppercase sans-serif bold">Table of contents</span>
-    <ul class="content-table" role="list">
-      {% for header in toc %}
-      <li class="pb-00 lh-0" data-active="true">
-        <a href="#{{ header.id }}" class="text-00 no-decoration sans-serif text-fg-0">
-          {{ header.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  {% endif %}
+    {% set toc = content | headers %}
+    {% if toc | length %}
+    <nav class="toc | sticky | stack --gap-000 self-start">
+      <span class="size-00 uppercase sans-serif bold">Table of contents</span>
+      <ul class="content-table" role="list">
+        {% for header in toc %}
+        <li class="pb-00 lh-0" data-active="true">
+          <a href="#{{ header.id }}" class="size-00 no-decoration text-color-0">
+            {{ header.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
 </main>
+
 
 {% set nextPost = collections.writing | getNextCollectionItem(page) %}
 {% set previousPost = collections.writing | getPreviousCollectionItem(page) %}
 
-<section class="sidebar-l sidebar-w-1 gap-1 | p-1 mt-3 mb-0">
+<section class="switcher --width-3 --gap-1 | p-1 mt-3 mb-0">
 	{% if previousPost %}
-		<a class="flex-col items-start justify-center | no-decoration" href="{{ previousPost.url | url }}">
-			<span class="text-fg-1 text-00 uppercase">← Previous</span>
+		<a class="flex-col --gap-none items-start justify-center | no-decoration" href="{{ previousPost.url | url }}">
+			<span class="text-color-1 size-00 uppercase">← Previous</span>
 			<h3>{{ previousPost.data.title }}</h3>
 		</a>
 	{% endif %}
   {% if nextPost %}
-		<a class="flex-col items-end justify-center | text-right no-decoration" href="{{ nextPost.url | url }}">
-			<span class="text-fg-1 text-00 uppercase">Next →</span>
+		<a class="flex-col --gap-none items-end justify-center | text-right no-decoration" href="{{ nextPost.url | url }}">
+			<span class="text-color-1 size-00 uppercase">Next →</span>
 			<h3>{{ nextPost.data.title }}</h3>
 		</a>
 	{% endif %}
@@ -67,5 +68,4 @@
   });
 </script>
 
-{% include "components/footer.njk" %}
 {% endblock %}

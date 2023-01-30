@@ -1,0 +1,14 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* ensure it is non-recursive, by using > selector */
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--layout-gap, 0);
+}

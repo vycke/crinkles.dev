@@ -1,6 +1,6 @@
 .redirect,
 .redirect:active {
-  color: var(--color-fg-0);
+  color: var(--color-text-0);
   transition: all 0.25s;
   position: relative;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 
 .redirect:hover {
-  color: var(--color-primary);
+  color: var(--color-text-accent);
 }
 
 .redirect::after {

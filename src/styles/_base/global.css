@@ -4,16 +4,16 @@
 html,
 body {
 	font-family: var(--sans-serif);
-	line-height: var(--lh-2);
-	background-color: var(--color-bg-0);
+	line-height: 1.78;
+	background-color: var(--color-surface-0);
 	scroll-behavior: smooth;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
-	color: var(--color-fg-0);
-	background-color: var(--color-bg-0);
+	color: var(--color-text-0);
+	background-color: var(--color-surface-0);
 	font-size: var(--size-0);
 }
 
@@ -21,18 +21,18 @@ main {
 	min-width: var(--bp-0);
 }
 
-// LINKS
+/* LINKS */
 a,
 a:visited {
 	transition: all 200ms ease;
-	color: var(--color-fg-0);
-	text-decoration-color: var(--color-fg-1);
+	color: var(--color-text-0);
+	text-decoration-color: var(--color-text-1);
 	text-decoration-thickness: 2px;
 }
 
 a:focus, a:active, a:hover {
-	color: var(--color-primary);
-	text-decoration-color: var(--color-primary);
+	color: var(--color-text-accent);
+	text-decoration-color: var(--color-text-accent);
 }
 
 h1,
@@ -41,7 +41,6 @@ h3 {
 	font-family: var(--sans-serif);
 	width: 100%;
 	line-height: 1.2;
-	// font-weight: 400;
 }
 
 h1 {
@@ -63,60 +62,58 @@ h3 a {
 }
 
 ::selection {
-	color: var(--color-bg-0) !important;
-	background: var(--color-fg-0) !important;
+	color: var(--color-surface-0) !important;
+	background: var(--color-text-0) !important;
 }
 
-// QUOTES
+/* QUOTES */
 blockquote {
 	display: block;
 	position: relative;
 	padding-left: var(--size-1);
-	color: var(--color-fg-1);
+	color: var(--color-text-1);
 	font-style: italic;
-
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0;
-		height: 100%;
-		border-left: 5px solid var(--color-primary);
-	}
-
-	cite {
-		display: block;
-		width: 100%;
-		font-size: var(--size-00);
-		font-style: italic;
-		margin-top: var(--size-0);
-		color: var(--color-primary);
-	}
 }
-// Styled unordered list
+
+blockquote::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	height: 100%;
+	border-left: 5px solid var(--color-text-accent);
+}
+
+blockquote cite {
+	display: block;
+	width: 100%;
+	font-size: var(--size-00);
+	font-style: italic;
+	margin-top: var(--size-0);
+	color: var(--color-text-accent);
+}
+
+/* Styled unordered list */
 ul:not([role="list"]), ol:not([role="list"]) {
 	list-style: outside;
 	padding-left: 0;
-
-	li {
-		padding-left: 0; 
-		margin-left: var(--size-2);
-
-		&::marker {
-			color: var(--color-primary);
-		}
-	}
 }
 
 ul:not([role="list"]) li {
 	list-style-type: '-  ';
-
-	&::marker {
-		font-weight: 600;
-	}
+	padding-left: 0; 
+	margin-left: var(--size-2);
 }
 
-// Ordered list
+ul:not([role="list"]) li::marker {
+	color: var(--color-text-accent);
+}
+
+ul:not([role="list"]) li::marker {
+	font-weight: 600;
+}
+
+/* Ordered list */
 ol:not([role="list"]) {
 	list-style: decimal outside;
 }

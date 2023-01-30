@@ -1,0 +1,13 @@
+/* NOTE: Can be combined with flex based utilities (e.g. .gap-00)
+Layout pattern that allows all to move from horizontal to vertical at a
+specific breakpoint */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-gap);
+}
+
+.switcher > * {
+  flex-basis: calc((var(--layout-width, 0) * var(--layout-amount, 1) - 100%) * 999);
+  flex-grow: 1;
+}

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="Eleventy" />
     <meta name="color-scheme" content="light dark" />
     <meta name="msapplication-TileColor" content="#F9FAFB" />
 		<meta name="theme-color" content="#F9FAFB" />
@@ -45,6 +46,8 @@
   </head>
   
   <body>
+    {% include "components/header.njk" %}
     {% block content %}{% endblock %}
+    {% include "components/footer.njk" %}
   </body>
 </html>

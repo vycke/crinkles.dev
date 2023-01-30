@@ -1,12 +1,15 @@
 {
   "name": "crinkles.dev",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
+    "css:dir": "mkdir -p _site/styles",
+    "css:build": "yarn css:dir && lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/styles/index.css -o _site/styles/index.css",
+    "css:watch": "yarn css:dir && onchange 'src/**/*.css' -- yarn css:build",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "start": "eleventy --serve & yarn css:watch",
+    "build": "npx @11ty/eleventy && yarn css:build"
   },
   "keywords": [],
   "author": "Kevin Pennekamp<github@crinkles.dev>",
@@ -14,12 +17,14 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0-beta.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "eleventy-plugin-purgecss": "^0.3.0",
-    "eleventy-sass": "^2.1.7",
-    "feo-css": "^3.0.1",
+    "lightningcss-cli": "^1.18.0",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-container": "^3.0.0",
-    "markdown-it-shiki": "^0.7.2"
-  }
+    "markdown-it-shiki": "^0.7.2",
+    "onchange": "^7.1.0"
+  },
+  "browserslist": [
+    "> 0.25%",
+    "not IE 11"
+  ]
 }

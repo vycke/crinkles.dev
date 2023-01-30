@@ -6,7 +6,7 @@
   <h1>{{ title }}</h1>
   <div class="cluster --gap-000 size-00 text-color-1 | pb-3 mt-00 | separator">
     {% for tag in tags %}
-      <span><span class="text-color-accent">#</span>{{ tag }}</span>
+      <span><span class="text-color-primary">#</span>{{ tag }}</span>
     {% endfor %}
   </div>
   
@@ -39,16 +39,16 @@
 
 <section class="switcher --width-3 --gap-1 | p-1 mt-3 mb-0">
 	{% if previousPost %}
-		<a class="flex-col --gap-none items-start justify-center | no-decoration" href="{{ previousPost.url | url }}">
-			<span class="text-color-1 size-00 uppercase">← Previous</span>
-			<h3>{{ previousPost.data.title }}</h3>
-		</a>
+    <div class="flex-col --gap-none items-start justify-center">
+      <span class="text-color-1 size-00 uppercase no-decoration">← Previous</span>
+      <h3><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></h3>
+    </div>
 	{% endif %}
   {% if nextPost %}
-		<a class="flex-col --gap-none items-end justify-center | text-right no-decoration" href="{{ nextPost.url | url }}">
-			<span class="text-color-1 size-00 uppercase">Next →</span>
-			<h3>{{ nextPost.data.title }}</h3>
-		</a>
+    <div class="flex-col --gap-none items-end justify-center | text-right">
+      <span class="text-color-1 size-00 uppercase no-decoration">Next →</span>
+      <h3><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></h3>
+    </div>
 	{% endif %}
 </section>
 

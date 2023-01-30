@@ -7,13 +7,13 @@ eleventyExcludeFromCollections: true
 <div class="list-group | mt-3 flex-grow | fade-in">
   {% for year, yearPosts in collections.writing | groupByYear | reverse %}
     <div class="sidebar-left --width-000 --gap-0 | mb-1 pb-1 separator">
-      <span class="text-color-accent">{{ year }}</span>
+      <span class="text-color-primary">{{ year }}</span>
       <div class="list-group | flex-col --gap-0" role="list">
         {% for post in yearPosts | reverse %}
           <div class="flex-col --gap-none click-area" role="listitem">
             <time date="{{ post.data.date }}" class="slash | size-00 text-color-1">{{ post.data.date | readableDate }}</time>
             <h2 class="size-1">
-              <a href="{{ post.page.url }}" class="bold no-decoration">
+              <a href="{{ post.page.url }}" class="bold">
                 {{ post.data.title }}
               </a>
             </h2>

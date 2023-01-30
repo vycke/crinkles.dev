@@ -6,5 +6,5 @@
 
 .slash::before {
   content: "//";
-  color: var(--color-text-accent);
+  color: var(--color-primary);
 }

@@ -8,7 +8,7 @@
 }
 
 .redirect:hover {
-  color: var(--color-text-accent);
+  color: var(--color-primary);
 }
 
 .redirect::after {

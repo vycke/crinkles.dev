@@ -85,7 +85,7 @@ function MyComponent(props) {
 }
 ```
 
-::: dyk
+::: aside
 The above component has some small flaws, as does two different state updates in one action. But, it fits its purpose.
 :::
 

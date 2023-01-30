@@ -20,7 +20,7 @@ Is state some weird data storage? Is it the data from a database? No. State is n
 - **URL**: information stored in the URL, like object IDs or filter information, that can be used to determine what to render, or what information to retrieve from the cache/server on (initial) rendering of the page.
 - **Meta**: also known as 'state about state'. A common example is a loading state around fetch requests.
 
-::: dyk
+::: aside
 Different types of state require different solutions. There is no single state management solution that works best for all. [Redux](https://redux.js.org/) was popular once the golden state management library. However, [SWR](https://swr.vercel.app/) and [React-Query](https://react-query.tanstack.com/) took its place for remote state as per writing of this article.  
 :::
 
@@ -60,7 +60,7 @@ store.count++;
 
 The code snippet above shows an example proxy. As you can see, we add a `listener` function for when the value of `count` changes. Now when we change the value of `count`, the `listener` function is triggered. Do note that this particular implementation is not _immutable_. You can change the value directly. Many people prefer to have an immutable state, as it is less prone to development errors.
 
-::: dyk
+::: aside
 The `proxy` function from the [Pubble](https://github.com/kevtiq/pubble) package is a flexible example of a proxy-based state management technique. It can be made immutable by choice, you can create (single-level) atoms, or you can converting it to be event-driven.
 :::
 
@@ -90,7 +90,7 @@ When we follow the visualized state machine, we can restrict the behavior in our
 
 In a similar way, many other important interactions can be modelled in a state machine. Think of forms (e.g. touched state) or the visibility of modals. You might think that booleans would suffice in many cases. But when you have to use multiple booleans to determine the correct state, a state machine is more efficient and less error prone.
 
-::: dyk
+::: aside
 [XState](https://xstate.js.org/) is a popular state machine library that you can use in various frameworks. Is it too big and complex for you, try my [cogwheel](https://github.com/kevtiq/cogwheel) package.
 :::
 

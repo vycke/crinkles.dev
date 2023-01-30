@@ -7,13 +7,13 @@ eleventyExcludeFromCollections: true
 <div class="list-group | mt-3 flex-grow | fade-in">
   {% for tech, techProjects in projects | groupByTech %}
     <div class="sidebar-left --width-000 --gap-0 | mb-1 pb-1 separator">
-      <span class="text-color-accent">{{ tech }}</span>
+      <span class="text-color-primary">{{ tech }}</span>
       <div class="list-group | flex-col --gap-0" role="list">
         {% for project in techProjects %}
           <div class="stack --gap-none click-area" role="listitem">
             <span class="slash | size-00 text-color-1">{{ project.type }}</span>
             <h2 class="size-1">
-              <a href="{{ project.href }}" class="bold no-decoration">
+              <a href="{{ project.href }}" class="bold">
                 {{ project.title }}
               </a>
             </h2>

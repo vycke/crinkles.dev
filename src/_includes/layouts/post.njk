@@ -11,7 +11,7 @@
   </div>
   
   <div class="relative | sidebar-right --width-00 --gap-3 | fade-in">
-    <article class="post | center --width-3 | stack --gap-2 mb-3">
+    <article class="post | center --width-3 | stack --gap-2 | separator pb-3">
       {{ content | safe }}
     </article>
 
@@ -37,7 +37,7 @@
 {% set nextPost = collections.writing | getNextCollectionItem(page) %}
 {% set previousPost = collections.writing | getPreviousCollectionItem(page) %}
 
-<section class="switcher --width-3 --gap-1 | p-1 mt-3 mb-0">
+<section class="switcher --width-3 --gap-1 | p-1 mb-0">
 	{% if previousPost %}
     <div class="flex-col --gap-none items-start justify-center">
       <span class="text-color-1 size-00 uppercase no-decoration">← Previous</span>

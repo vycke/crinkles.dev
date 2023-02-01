@@ -4,7 +4,7 @@ main:has(article) {
 
 article.post pre, 
 article.post p:has(img), 
-article.post .aside {
+article.post .info {
 	box-shadow: var(--shadow);
   border-radius: 0.25rem;
 }
@@ -57,7 +57,7 @@ article h2:hover a {
 }
 
 /* aside */
-article .aside {
+article .info {
   padding: var(--size-0) var(--size-1);
 	background-color: var(--color-surface-1);
 	border: 3px solid var(--color-primary);
@@ -65,7 +65,7 @@ article .aside {
 	position: relative;
 }
 
-article .aside::before {
+article .info::before {
   content: '<aside />';
   position: absolute;
   display: block;

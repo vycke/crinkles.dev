@@ -4,7 +4,7 @@ const container = require("markdown-it-container");
 
 module.exports = (md) =>
   md
-    .use(container, "aside")
+    .use(container, "info")
     .use(anchor, {
       permalink: anchor.permalink.ariaHidden({ symbol: "#" }),
     })

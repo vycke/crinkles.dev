@@ -1,0 +1,20 @@
+---
+layout: layouts/page.njk
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - writing
+permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+---
+
+{% set tags = collections.writing | getAllTags %}
+{% set selected = tag %}
+{% include "components/tag-list.njk" %}
+{% set posts = collections[ tag ] or [] %}
+{% include "components/post-list.njk" %}

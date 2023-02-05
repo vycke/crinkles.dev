@@ -4,7 +4,6 @@ date: 2023-01-22T00:00:00.000Z
 tags:
   - css
   - html
-  - tutorial
 layout: layouts/post.njk
 description: How to make an interactive stacked bar chart using only CSS and HTML
 ---

@@ -3,7 +3,6 @@ title: Interfacing your UI components
 date: 2019-07-19T00:00:00.000Z
 tags:
   - quality
-  - react
   - architecture
 description: >-
   Interfaces are everywhere, for users and developers, so why not use them?
@@ -60,7 +59,8 @@ const Button = ({ onClick, variant, children, override, className, type }) => {
       onClick={onClick}
       type={type}
       className={`${override.defaultClassName} ${className}`}
-      data-variant={variant}>
+      data-variant={variant}
+    >
       {children}
     </button>
   );

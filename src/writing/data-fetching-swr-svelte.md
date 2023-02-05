@@ -2,7 +2,7 @@
 title: SWR-like data fetching in Svelte
 date: 2021-12-10T00:00:00.000Z
 tags:
-  - state-management
+  - state
   - svelte
 layout: layouts/post.njk
 description: >-

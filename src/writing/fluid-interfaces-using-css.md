@@ -3,7 +3,6 @@ title: Fluid interfaces using CSS
 date: 2020-06-27T00:00:00.000Z
 tags:
   - css
-  - layout
 layout: layouts/post.njk
 description: >-
   Fluid interfaces allow you scale elements of your website based on on the available space, without using media-queries

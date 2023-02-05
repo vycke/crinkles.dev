@@ -1,11 +1,9 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
   <main class="center --width-{{ width or 4 }} pl-1 pr-1 | flex-col --gap-0 flex-grow | mb-3">
-    {% if title %}<h1 class="slash">{{ title }}</h1>{% endif %}
+    {% if title %}<h1 class="overline">{{ title }}</h1>{% endif %}
     {{ content | safe }}
   </main>
-{% endblock %}
-{% block prefooter %}
   {% if pagination %}
     <section class="switcher --width-3 --gap-1 | p-1 mb-0">
       {% if pagination.href.previous %}

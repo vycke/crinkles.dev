@@ -2,8 +2,8 @@
 title: State machines and state management
 date: 2021-12-08T00:00:00.000Z
 tags:
-  - state-management
-  - state-machines
+  - state
+  - architecture
 layout: layouts/post.njk
 description: >-
   State management is one of the most complicated, and opinionated topics in modern and JavaScript-focused front-end development. Let's make it easier.
@@ -21,7 +21,7 @@ Is state some weird data storage? Is it the data from a database? No. State is n
 - **Meta**: also known as 'state about state'. A common example is a loading state around fetch requests.
 
 ::: info
-Different types of state require different solutions. There is no single state management solution that works best for all. [Redux](https://redux.js.org/) was popular once the golden state management library. However, [SWR](https://swr.vercel.app/) and [React-Query](https://react-query.tanstack.com/) took its place for remote state as per writing of this article.  
+Different types of state require different solutions. There is no single state management solution that works best for all. [Redux](https://redux.js.org/) was popular once the golden state management library. However, [SWR](https://swr.vercel.app/) and [React-Query](https://react-query.tanstack.com/) took its place for remote state as per writing of this article.
 :::
 
 ## State management

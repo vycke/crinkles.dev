@@ -42,13 +42,12 @@
       document
         .querySelector('meta[name="msapplication-TileColor"]')
         .setAttribute("content", prefDark ? "#131820" : "#F9FAFB");
-    </script>	
+    </script>
   </head>
-  
+
   <body>
     {% include "components/header.njk" %}
     {% block content %}{% endblock %}
-    {% block prefooter %}{% endblock %}
     {% include "components/footer.njk" %}
   </body>
 </html>

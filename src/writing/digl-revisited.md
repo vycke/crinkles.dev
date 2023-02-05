@@ -3,8 +3,7 @@ title: Updating my graph layout algorithm
 date: 2023-01-05T00:00:00.000Z
 tags:
   - graph
-  - layout
-  - digl
+  - typescript
 layout: layouts/post.njk
 description: >-
   Updating my graph layout algorithm based on new requirements and requests from the community

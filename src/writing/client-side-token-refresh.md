@@ -2,8 +2,8 @@
 title: Authentication token management
 date: 2021-11-17T00:00:00.000Z
 tags:
-  - auth
-  - state-management
+  - architecture
+  - state
 layout: layouts/post.njk
 description: Complex client-side applications require sophisticated solutions around authentication management and background refreshing.
 ---

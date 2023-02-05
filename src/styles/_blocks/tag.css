@@ -1,0 +1,21 @@
+.tag {
+  background-color: var(--color-surface-1);
+  padding: 0 var(--size-000);
+  color: var(--color-text-1);
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.tag::before {
+  content: "#";
+  color: var(--color-primary);
+}
+
+.tag[data-selected="true"] {
+  background-color: var(--color-primary);
+  color: var(--color-surface-0);
+}
+
+.tag[data-selected="true"]::before {
+  color: var(--color-text-0);
+}

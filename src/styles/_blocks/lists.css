@@ -3,11 +3,15 @@
 }
 
 @media (hover: hover) {
-  .list-group:hover> *:not(:hover) {
+  .list-group:hover > *:not(:hover) {
     opacity: 0.4;
   }
 
   .list-group.list-group--scale > *:hover {
     transform: matrix(1.075, 0, 0, 1.075, 0, 0);
   }
+}
+
+.multi-column {
+  column-count: 3;
 }

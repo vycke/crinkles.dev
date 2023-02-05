@@ -1,5 +1,6 @@
+{% set _tags = tags | filterTags %}
 <div class="list-group list-group--scale | cluster --gap-00">
-  {% for tag in tags %}
+  {% for tag in _tags %}
     <a href="/tags/{{ tag }}/" class="tag size-00" data-selected="{{ selected === tag }}">{{ tag }}</a>
   {% endfor %}
 </div>

@@ -7,7 +7,7 @@ const markdownRenderer = require("./11ty/markdownRenderer");
 const groupBy = require("./11ty/groupBy");
 const getHeadOfList = require("./11ty/getHeadOfList");
 const getLength = require("./11ty/getLength");
-const getAllTags = require("./11ty/getAllTags");
+const { getAllTags, getAllTagsWithCount, filterTags } = require("./11ty/tags");
 
 const TEMPLATE_ENGINE = "njk";
 
@@ -23,6 +23,8 @@ module.exports = (config) => {
   config.addFilter("headers", getPostHeaders);
   config.addFilter("length", getLength);
   config.addFilter("getAllTags", getAllTags);
+  config.addFilter("getAllTagsWithCount", getAllTagsWithCount);
+  config.addFilter("filterTags", filterTags);
   config.addFilter(
     "groupByTech",
     groupBy((project) => project.tech)

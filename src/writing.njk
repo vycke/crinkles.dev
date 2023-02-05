@@ -9,6 +9,9 @@ pagination:
   reverse: true
 ---
 
-{% set tags = collections.writing | getAllTags %}
-{% include "components/tag-list.njk" %}
+{% set tags = collections.writing | getAllTags | head(5) %}
+<div class="cluster --gap-0 items-center">
+  {% include "components/tag-list.njk" %}
+  <a href="/tag-list" class="size-00 redirect">all topics</a>
+</div>
 {% include "components/post-list.njk" %}

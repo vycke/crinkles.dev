@@ -4,6 +4,11 @@
   color: var(--color-text-1);
   border-radius: 0.25rem;
   text-decoration: none;
+  transition: all 300ms;
+}
+
+.tag:hover {
+  color: var(--color-primary);
 }
 
 .tag::before {

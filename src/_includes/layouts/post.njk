@@ -1,11 +1,12 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
 
-<main class="center --width-4 pl-1 pr-1 | flex-grow | stack | mb-3">
+<main class="center --width-4 pl-1 pr-1 | flex-grow | flex-col --gap-000 | mb-3">
+
+  <h1 class="overline">{{ title }}</h1>
   <time datetime="{{ page.date }}" class="size-00 text-color-1 slash">{{ page.date | readableDate }}</time>
-  <h1>{{ title }}</h1>
   {% include "components/tag-list.njk" %}
-  <div class="pb-3 | separator"></div>
+  <div class="pb-2 mb-2 | separator"></div>
 
   <div class="relative | sidebar-right --width-00 --gap-3 | fade-in">
     <article class="post | center --width-3 | stack --gap-2 | separator pb-3">

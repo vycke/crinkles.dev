@@ -2,7 +2,7 @@
 title: The case for state machines in client-side applications
 date: 2022-06-02T00:00:00.000Z
 tags:
-  - state
+  - state-machine
   - architecture
 layout: layouts/post.njk
 description: >-

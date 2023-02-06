@@ -4,6 +4,8 @@ date: 2021-12-10T00:00:00.000Z
 tags:
   - state
   - svelte
+  - state-machine
+  - api
 layout: layouts/post.njk
 description: >-
   I am a big fan of the [SWR](https://swr.vercel.app/) package of Vercel. Let's see how to implement something similar in Svelte.

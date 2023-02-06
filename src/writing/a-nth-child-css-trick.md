@@ -3,6 +3,7 @@ title: A nth-child CSS trick
 date: 2023-01-25T00:00:00.000Z
 tags:
   - css
+  - trick
 layout: layouts/post.njk
 description: >-
   A little CSS trick that allows you to use nth-child values in the CSS calc() function.

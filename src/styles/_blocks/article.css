@@ -2,27 +2,41 @@ main:has(article) {
   width: min(100%, var(--bp-4) + 2 * var(--size-1));
 }
 
-article.post pre, 
-article.post p:has(img), 
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+article > * {
+  margin-block: 0;
+}
+
+article > * + * {
+  margin-block-start: var(--layout-gap, 0);
+}
+
+article * + h2 {
+  margin-block-start: var(--size-3);
+}
+
+article h2 + p {
+  margin-block-start: var(--size-00);
+}
+
+article.post pre,
+article.post p:has(img),
 article.post .info {
-	box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
   border-radius: 0.25rem;
 }
 
 article h2[id] {
-	scroll-margin-top: 1rem;
+  scroll-margin-top: 1rem;
 }
 
 article img {
-	background-color: var(--color-surface-0);	
-}
-
-article * + h2 {
-  margin-top: var(--size-3);
-}
- 
-article h2 + p {
-  margin-top: var(--size-00);
+  background-color: var(--color-surface-0);
 }
 
 article h2 {
@@ -49,7 +63,7 @@ article h2 a::after {
   right: 0;
   bottom: 0;
   left: 0;
-  content: '';
+  content: "";
 }
 
 article h2:hover a {
@@ -59,14 +73,14 @@ article h2:hover a {
 /* aside */
 article .info {
   padding: var(--size-0) var(--size-1);
-	background-color: var(--color-surface-1);
-	border: 3px solid var(--color-primary);
-	font-size: var(--size-00);
-	position: relative;
+  background-color: var(--color-surface-1);
+  border: 3px solid var(--color-primary);
+  font-size: var(--size-00);
+  position: relative;
 }
 
 article .info::before {
-  content: '<aside />';
+  content: "<aside />";
   position: absolute;
   display: block;
   top: -15px;
@@ -84,10 +98,10 @@ article .info::before {
 
 .toc ul {
   list-style: none;
-	padding-left: 0;
+  padding-left: 0;
 }
 
-.toc ul li { 
+.toc ul li {
   line-height: 1;
 }
 
@@ -95,7 +109,7 @@ article .info::before {
   color: var(--color-primary);
 }
 
-li[data-active='true'] a {
+li[data-active="true"] a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--color-primary);

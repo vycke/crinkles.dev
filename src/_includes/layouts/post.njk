@@ -2,12 +2,9 @@
 {% block content %}
 
 <main class="center --width-4 pl-1 pr-1 | flex-grow | flex-col --gap-000 | mb-3">
-
   <h1 class="overline">{{ title }}</h1>
-  <time datetime="{{ page.date }}" class="size-00 text-color-1 slash">{{ page.date | readableDate }}</time>
   {% include "components/tag-list.njk" %}
-  <div class="pb-2 mb-2 | separator"></div>
-
+  <time datetime="{{ page.date }}" class="size-00 text-color-1 slash | separator pb-2 mb-2">{{ page.date | readableDate }}</time>
   <div class="relative | sidebar-right --width-00 --gap-3 | fade-in">
     <article class="post | center --width-3 | stack --gap-2 | separator pb-3">
       {{ content | safe }}
@@ -16,7 +13,7 @@
     {% set toc = content | headers %}
     {% if toc | length %}
     <nav class="toc | sticky | stack --gap-000 self-start">
-      <span class="size-00 uppercase sans-serif bold">Table of contents</span>
+    <span class="size-00 uppercase sans-serif bold">Table of contents</span>
       <ul class="content-table" role="list">
         {% for header in toc %}
         <li class="pb-00 lh-0" data-active="true">

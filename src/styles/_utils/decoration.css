@@ -25,3 +25,7 @@
   content: "//";
   color: var(--color-primary);
 }
+
+.radius {
+  border-radius: var(--radius);
+}

@@ -4,7 +4,7 @@ NOTE: Can be combined with flex based utilities (e.g. .--gap-00) */
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   gap: var(--layout-gap);
 }

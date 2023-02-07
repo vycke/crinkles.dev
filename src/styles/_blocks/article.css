@@ -28,7 +28,7 @@ article.post pre,
 article.post p:has(img),
 article.post .info {
   box-shadow: var(--shadow);
-  border-radius: 0.25rem;
+  border-radius: var(--radius);
 }
 
 article h2[id] {
@@ -87,7 +87,7 @@ article .info::before {
   font-size: var(--size-00);
   color: var(--color-surface-0);
   background-color: var(--color-primary);
-  border-radius: 0.25rem;
+  border-radius: var(--radius);
   padding: 0px 6px;
 }
 

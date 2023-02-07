@@ -6,17 +6,17 @@ width: 5
 <section class="switcher --width-1 --amount-2 --gap-5 items-center | mb-2">
   <div class="flex-col --gap-1">
     <h1 class="size-4"><i class="serif text-color-primary">Hi!</i> I'm Kevin.</h1>
-    <p>I am an engineer and <a href="/writing">writer</a> specializing in CSS architecture & software quality. Crinkles is my after-hours digital playground — my corner of the internet to <a href="/projects">tinker</a> around.</p>
-    <span class="size-00 text-color-1">
-        Currently working as an engineering manager and principle front-end engineer at <a
-          href="https://finaps.nl">Finaps</a
-        >.
+    <p>I am a front-end engineer and <a href="/writing">writer</a> specializing in CSS architecture & software quality. Crinkles is my after-hours digital playground — my <a href="/projects">corner</a> of the internet.</p>
+    <span class="text-color-1">
+        <b>Currently working on:</b> <i>sustainable web-development</i> research
       </span>
   </div>
   <section class="flex-col --gap-0">
+    {% set tags = collections.posts | getAllTags | head(3) %}
+    <div class="cluster --gap-00 items-center self-end | size-00 text-color-1">Popular topics: {% include "components/tag-list.njk" %}</div>
     <div class="list-group list-group--scale | tiles --width-00 --gap-0">
       {% for post in collections.posts | reverse | head(4) %}
-        <div class="bg-surface-1 | flex-col --gap-none | click-area | p-1">
+        <div class="bg-surface-1 radius | flex-col --gap-none | click-area | p-1">
           <time class="size-00 slash" datetime="{{ post.data.date }}">
             {{ post.data.date | readableDate }}
           </time>

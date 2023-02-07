@@ -9,7 +9,7 @@
   --color-grey-3: hsl(var(--hue), var(--saturation), 40%);
   --color-grey-4: hsl(var(--hue), var(--saturation), 20%);
   --color-grey-5: hsl(var(--hue), var(--saturation), 8%);
-  --color-brand-0: #75f;
+  --color-brand-0: #53f;
   --color-brand-1: #2b7;
 
   /* Create CSS variables around breakpoints */
@@ -45,7 +45,8 @@
   --sans-serif: "iAWriter Quattro", system-ui, -apple-system, blinkmacsystemfont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-  /* Shadow */
+  /* Utilties */
+  --radius: 0.25rem;
   --shadow: 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075),
     0 16px 16px hsl(0deg 0% 0% / 0.075);
 }

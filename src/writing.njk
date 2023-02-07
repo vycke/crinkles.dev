@@ -3,12 +3,12 @@ title: Writing
 layout: layouts/paginated.njk
 eleventyExcludeFromCollections: true
 pagination:
-  data: collections.writing
+  data: collections.posts
   size: 6
   alias: posts
   reverse: true
 ---
 
-{% set tags = collections.writing | getAllTags | head(5) %}
+{% set tags = collections.posts | getAllTags | head(5) %}
 {% include "components/tag-list.njk" %}
 {% include "components/post-list.njk" %}

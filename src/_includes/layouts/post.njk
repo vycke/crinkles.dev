@@ -32,8 +32,8 @@
 </main>
 
 
-{% set nextPost = collections.writing | getNextCollectionItem(page) %}
-{% set previousPost = collections.writing | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
+{% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 
 <section class="switcher --width-3 --gap-1 | p-1 mb-0">
 	{% if previousPost %}

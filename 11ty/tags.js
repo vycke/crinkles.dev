@@ -22,8 +22,4 @@ function getAllTags(collections) {
     .map((tag) => tag[0]);
 }
 
-function filterTags(tags) {
-  return tags.filter((tag) => !["writing", "all"].includes(tag));
-}
-
-module.exports = { getAllTags, getAllTagsWithCount, filterTags };
+module.exports = { getAllTags, getAllTagsWithCount };

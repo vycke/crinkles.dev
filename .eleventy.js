@@ -6,9 +6,11 @@ const getPostHeaders = require("./11ty/getPostHeaders");
 const markdownRenderer = require("./11ty/markdownRenderer");
 const groupBy = require("./11ty/groupBy");
 const { head } = require("./11ty/lists");
-const { getAllTags, getAllTagsWithCount, filterTags } = require("./11ty/tags");
+const { getAllTags, getAllTagsWithCount } = require("./11ty/tags");
 
+const IS_PRODUCTION = process.env.ELEVENTY_ENV === "production";
 const TEMPLATE_ENGINE = "njk";
+const POSTS_PATH = "src/writing/**/*.md";
 
 module.exports = (config) => {
   // Handling assets (images, fonts, etc.)
@@ -22,17 +24,19 @@ module.exports = (config) => {
   config.addFilter("headers", getPostHeaders);
   config.addFilter("getAllTags", getAllTags);
   config.addFilter("getAllTagsWithCount", getAllTagsWithCount);
-  config.addFilter("filterTags", filterTags);
-  config.addFilter(
-    "groupByTech",
-    groupBy((project) => project.tech)
-  );
   config.addFilter(
     "groupByYear",
     groupBy((post) => post.data.date.getFullYear())
   );
   // Amend markdown renderer
   config.amendLibrary("md", markdownRenderer);
+
+  // Add new collection
+  config.addCollection("posts", function (collection) {
+    return collection
+      .getFilteredByGlob(POSTS_PATH)
+      .filter((post) => !(post.data.draft && IS_PRODUCTION));
+  });
 
   return {
     markdownTemplateEngine: TEMPLATE_ENGINE,

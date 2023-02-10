@@ -4,8 +4,8 @@ body {
 	min-width: var(--bp-0);
 	font-size: var(--size-0);
 	font-family: var(--sans-serif);
-	background-color: var(--color-surface-0);
-	color: var(--color-text-0);
+	background-color: var(--color-bg-0);
+	color: var(--color-fg-0);
 }
 
 /* anchor */
@@ -13,14 +13,16 @@ a,
 a:visited {
 	transition: all 200ms ease;
 	touch-action: manipulation;
-	color: var(--color-text-0);
-	text-decoration-color: var(--color-text-1);
+	color: var(--color-fg-0);
+	text-decoration-color: var(--color-fg-1);
 	text-decoration-thickness: 2px;
 	text-decoration-skip-ink: auto;
-  text-underline-offset: 2px;
+	text-underline-offset: 2px;
 }
 
-a:focus, a:active, a:hover {
+a:focus,
+a:active,
+a:hover {
 	color: var(--color-pimary);
 	text-decoration-color: var(--color-primary);
 	text-underline-offset: 4px;
@@ -33,14 +35,20 @@ a:focus, a:active, a:hover {
 	line-height: 1.2;
 }
 
-h1 { font-size: var(--size-2); }
-h2 { font-size: var(--size-1); }
-h3 { font-size: var(--size-0); }
+h1 {
+	font-size: var(--size-2);
+}
+h2 {
+	font-size: var(--size-1);
+}
+h3 {
+	font-size: var(--size-0);
+}
 
 /* text */
 ::selection {
-	color: var(--color-surface-0) !important;
-	background: var(--color-text-0) !important;
+	color: var(--color-bg-0) !important;
+	background: var(--color-fg-0) !important;
 }
 
 /* blockquotes */
@@ -48,7 +56,7 @@ blockquote {
 	display: block;
 	position: relative;
 	padding-left: var(--size-1);
-	color: var(--color-text-1);
+	color: var(--color-fg-1);
 	font-style: italic;
 	border-left: 5px solid var(--color-primary);
 }
@@ -78,9 +86,8 @@ blockquote cite {
 }
 
 ul:not([role="list"]) li {
-	list-style-type: '-  ';
-	padding-left: 0; 
-	
+	list-style-type: "-  ";
+	padding-left: 0;
 }
 
 ol:not([role="list"]) {
@@ -99,22 +106,22 @@ code {
 
 /* code block */
 pre {
-  background-color: var(--color-grey-4) !important;
+	background-color: var(--color-grey-4) !important;
 	color: var(--color-grey-0);
-  position: relative;
-  padding: 0;
-  white-space: pre;
-  word-wrap: normal;
-  word-break: normal;
-  word-spacing: normal;
+	position: relative;
+	padding: 0;
+	white-space: pre;
+	word-wrap: normal;
+	word-break: normal;
+	word-spacing: normal;
 }
 
 pre > code {
 	padding: var(--size-0);
 	font-size: var(--size-00);
-  display: block;
-  overflow-x: auto;
-  tab-size: 2;
-  /* fix for increased font-size safari iOS */
-  -webkit-text-size-adjust: none;
+	display: block;
+	overflow-x: auto;
+	tab-size: 2;
+	/* fix for increased font-size safari iOS */
+	-webkit-text-size-adjust: none;
 }

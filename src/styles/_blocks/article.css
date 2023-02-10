@@ -36,7 +36,7 @@ article h2[id] {
 }
 
 article img {
-  background-color: var(--color-surface-0);
+  background-color: var(--color-bg-0);
 }
 
 article h2 {
@@ -73,7 +73,7 @@ article h2:hover a {
 /* aside */
 article .info {
   padding: var(--size-0) var(--size-1);
-  background-color: var(--color-surface-1);
+  background-color: var(--color-bg-1);
   border: 3px solid var(--color-primary);
   font-size: var(--size-00);
   position: relative;
@@ -85,7 +85,7 @@ article .info::before {
   display: block;
   top: -15px;
   font-size: var(--size-00);
-  color: var(--color-surface-0);
+  color: var(--color-bg-0);
   background-color: var(--color-primary);
   border-radius: var(--radius);
   padding: 0px 6px;

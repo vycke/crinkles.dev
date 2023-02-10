@@ -1,7 +1,7 @@
 .tag {
-  background-color: var(--color-surface-1);
+  background-color: var(--color-bg-1);
   padding: 0 var(--size-000);
-  color: var(--color-text-1);
+  color: var(--color-fg-1);
   border-radius: var(--radius);
   text-decoration: none;
   transition: all 300ms;
@@ -18,9 +18,9 @@
 
 .tag[data-selected="true"] {
   background-color: var(--color-primary);
-  color: var(--color-surface-0);
+  color: var(--color-bg-0);
 }
 
 .tag[data-selected="true"]::before {
-  color: var(--color-text-0);
+  color: var(--color-fg-0);
 }

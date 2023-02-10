@@ -72,10 +72,10 @@
 @media (prefers-color-scheme: light) {
   :root {
     color-scheme: light;
-    --color-text-0: var(--color-grey-5);
-    --color-text-1: var(--color-grey-4);
-    --color-surface-0: var(--color-grey-0);
-    --color-surface-1: var(--color-grey-1);
+    --color-fg-0: var(--color-grey-5);
+    --color-fg-1: var(--color-grey-4);
+    --color-bg-0: var(--color-grey-0);
+    --color-bg-1: var(--color-grey-1);
     --color-primary: var(--color-brand-0);
   }
 }
@@ -83,10 +83,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --color-text-0: var(--color-grey-0);
-    --color-text-1: var(--color-grey-2);
-    --color-surface-0: var(--color-grey-5);
-    --color-surface-1: var(--color-grey-4);
+    --color-fg-0: var(--color-grey-0);
+    --color-fg-1: var(--color-grey-2);
+    --color-bg-0: var(--color-grey-5);
+    --color-bg-1: var(--color-grey-4);
     --color-primary: var(--color-brand-1);
   }
 }

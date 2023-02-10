@@ -16,7 +16,7 @@ width: 5
     <div class="cluster --gap-00 items-center self-end | size-00 text-color-1">Popular topics: {% include "components/tag-list.njk" %}</div>
     <div class="list-group list-group--scale | tiles --width-00 --gap-0">
       {% for post in collections.posts | reverse | head(4) %}
-        <div class="bg-surface-1 radius | flex-col --gap-none | click-area | p-1">
+        <div class="bg-color-1 radius | flex-col --gap-none | click-area | p-1">
           <time class="size-00 slash" datetime="{{ post.data.date }}">
             {{ post.data.date | readableDate }}
           </time>

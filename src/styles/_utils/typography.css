@@ -1,27 +1,74 @@
 /* Font-size */
-.size-000 { font-size: var(--size-000); }
-.size-00 { font-size: var(--size-00); }
-.size-0 { font-size: var(--size-0); }
-.size-1 { font-size: var(--size-1); }
-.size-2 { font-size: var(--size-2); }
-.size-3 { font-size: var(--size-3); }
-.size-4 { font-size: var(--size-4); }
-.size-5 { font-size: var(--size-5); }
+.size-000 {
+  font-size: var(--size-000);
+}
+.size-00 {
+  font-size: var(--size-00);
+}
+.size-0 {
+  font-size: var(--size-0);
+}
+.size-1 {
+  font-size: var(--size-1);
+}
+.size-2 {
+  font-size: var(--size-2);
+}
+.size-3 {
+  font-size: var(--size-3);
+}
+.size-4 {
+  font-size: var(--size-4);
+}
+.size-5 {
+  font-size: var(--size-5);
+}
 /* Color */
-.text-color-0, .hover\:text-color-0:hover { color: var(--color-text-0); }
-.text-color-1, .hover\:text-color-1:hover { color: var(--color-text-1); }
-.text-color-primary, .hover\:text-color-primary:hover { color: var(--color-primary); }
+.text-color-0,
+.hover\:text-color-0:hover {
+  color: var(--color-fg-0);
+}
+.text-color-1,
+.hover\:text-color-1:hover {
+  color: var(--color-fg-1);
+}
+.text-color-primary,
+.hover\:text-color-primary:hover {
+  color: var(--color-primary);
+}
 
-.monospace { font-family: var(--monospace); }
-.serif { font-family: var(--serif); }
-.sans-serif { font-family: var(--sans-serif); }
+.monospace {
+  font-family: var(--monospace);
+}
+.serif {
+  font-family: var(--serif);
+}
+.sans-serif {
+  font-family: var(--sans-serif);
+}
 
-.bold { font-weight: 600; }
-.regular { font-weight: 400; }
-.italic { font-style: italic; }
-.uppercase { text-transform: uppercase; }
-.no-decoration { text-decoration: none; }
+.bold {
+  font-weight: 600;
+}
+.regular {
+  font-weight: 400;
+}
+.italic {
+  font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.no-decoration {
+  text-decoration: none;
+}
 
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-.text-center { text-align: center; }
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}

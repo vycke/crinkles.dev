@@ -1,3 +1,12 @@
-.bg-surface-0, .hover\:bg-surface-0:hover { background-color: var(--color-surface-0); }
-.bg-surface-1, .hover\:bg-surface-1:hover { background-color: var(--color-surface-1); }
-.bg-primary, .hover\:bg-primary:hover { background-color: var(--color-primary); }
+.bg-color-0,
+.hover\:bg-color-0:hover {
+  background-color: var(--color-bg-0);
+}
+.bg-color-1,
+.hover\:bg-color-1:hover {
+  background-color: var(--color-bg-1);
+}
+.bg-primary,
+.hover\:bg-primary:hover {
+  background-color: var(--color-primary);
+}

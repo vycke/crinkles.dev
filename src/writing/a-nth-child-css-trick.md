@@ -45,7 +45,7 @@ On the highest level of your CSS, you define a list like the one below. This res
 
 Glad you asked! In the last few years, I came across two use cases. Two, whole, use cases. In the latest use case, I wanted to automatically generate a color palette. Not to match a branding of a company. But to automatically populate different series of data in a chart. With this trick, we can do that with a single line.
 
-```css
+```scss
 background-color: hsl(calc(100 * var(--nth-child)) 100% 40%);
 ```
 

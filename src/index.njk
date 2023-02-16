@@ -3,28 +3,36 @@ layout: layouts/page.njk
 width: 5
 ---
 
-<section class="switcher --width-1 --amount-2 --gap-5 items-center | mb-2">
-  <div class="flex-col --gap-1">
-    <h1 class="size-4"><i class="serif text-color-primary">Hi!</i> I'm Kevin.</h1>
-    <p>I am a front-end engineer and <a href="/writing">writer</a> specializing in CSS architecture & software quality. Crinkles is my after-hours digital playground — my <a href="/projects">corner</a> of the internet.</p>
+<div class="switcher --width-1 --amount-2 --gap-5 items-center | mb-2">
+  <section class="flex-col --gap-1">
+    <h1 class="size-4">
+      <i class="serif text-color-primary">Hi!</i> I'm Kevin.
+    </h1>
+    <p>
+      I am a front-end engineer and <a href="/writing">writer</a> specializing
+      in CSS architecture & software quality. Crinkles is my after-hours digital
+      playground — my <a href="/projects">corner</a> of the internet.
+    </p>
     <span class="text-color-1">
-        <b>Currently working on:</b> <i>sustainable web-development</i> research
-      </span>
-  </div>
+      <b>Currently working on:</b> <i>sustainable web-development</i> research
+    </span>
+  </section>
   <section class="flex-col --gap-0">
     {% set tags = collections.posts | getAllTags | head(3) %}
-    <div class="cluster --gap-00 items-center self-end | size-00 text-color-1">Popular topics: {% include "components/tag-list.njk" %}</div>
+    <div class="cluster --gap-00 items-center self-end | size-00 text-color-1">
+      Popular topics: {% include "components/tag-list.njk" %}
+    </div>
     <div class="list-group list-group--scale | tiles --width-00 --gap-0">
       {% for post in collections.posts | reverse | head(4) %}
-        <div class="bg-color-1 radius | flex-col --gap-none | click-area | p-1">
-          <time class="size-00 slash" datetime="{{ post.data.date }}">
-            {{ post.data.date | readableDate }}
-          </time>
-          <h2 class="size-0">
-            <a href="{{ post.page.url }}">{{ post.data.title }}</a>
-          </h2>
-          <span class="size-00 mt-000">{{ post.data.description }}</span>
-        </div>
+      <div class="bg-surface-1 radius | flex-col --gap-none | click-area | p-1">
+        <time class="size-00 slash" datetime="{{ post.data.date }}">
+          {{ post.data.date | readableDate }}
+        </time>
+        <h2 class="size-0">
+          <a href="{{ post.page.url }}">{{ post.data.title }}</a>
+        </h2>
+        <span class="size-00 mt-000">{{ post.data.description }}</span>
+      </div>
       {% endfor %}
     </div>
     <a href="/writing" class="redirect size-0 self-end">See all articles</a>

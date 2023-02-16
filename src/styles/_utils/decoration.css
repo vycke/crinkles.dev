@@ -1,5 +1,5 @@
 .separator:not(:last-child) {
-  border-bottom: 1px solid var(--color-fg-1);
+  border-bottom: 1px solid var(--color-border-0);
 }
 
 .overline {
@@ -27,5 +27,5 @@
 }
 
 .radius {
-  border-radius: var(--radius);
+  border-radius: var(--token-radius-0);
 }

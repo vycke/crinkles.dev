@@ -1,0 +1,23 @@
+:root {
+  color-scheme: light;
+  --color-foreground-0: var(--token-color-grey-5);
+  --color-foreground-1: var(--token-color-grey-3);
+  --color-surface-0: var(--token-color-grey-0);
+  --color-surface-1: var(--token-color-grey-1);
+  --color-border-0: var(--token-color-grey-3);
+  --color-primary: var(--token-color-brand-0);
+  --color-accent: var(--token-color-brand-3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-foreground-0: var(--token-color-grey-0);
+    --color-foreground-1: var(--token-color-grey-2);
+    --color-surface-0: var(--token-color-grey-5);
+    --color-surface-1: var(--token-color-grey-4);
+    --color-border-0: var(--token-color-grey-2);
+    --color-primary: var(--token-color-brand-1);
+    --color-accent: var(--token-color-brand-2);
+  }
+}

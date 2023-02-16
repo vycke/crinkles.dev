@@ -5,13 +5,13 @@
     {{ content | safe }}
   </main>
   {% if pagination %}
-    <section class="switcher --width-3 --gap-1 | p-1 mb-0">
+    <aside class="switcher --width-3 --gap-1 | p-1 mb-0">
       {% if pagination.href.previous %}
         <h3><a href="{{ pagination.href.previous | url }}">← Previous</a></h3>
       {% endif %}
       {% if pagination.href.next %}
         <h3 class="text-right"><a href="{{ pagination.href.next | url }}" >Next →</a></h3>
       {% endif %}
-    </section>
+    </aside>
   {% endif %}
 {% endblock %}

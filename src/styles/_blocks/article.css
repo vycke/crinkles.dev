@@ -1,5 +1,5 @@
 main:has(article) {
-  width: min(100%, var(--bp-4) + 2 * var(--size-1));
+  width: min(100%, var(--token-bp-4) + 2 * var(--token-size-1));
 }
 
 article {
@@ -17,26 +17,27 @@ article > * + * {
 }
 
 article * + h2 {
-  margin-block-start: var(--size-3);
+  margin-block-start: var(--token-size-3);
 }
 
 article h2 + p {
-  margin-block-start: var(--size-00);
+  margin-block-start: var(--token-size-00);
 }
 
 article.post pre,
 article.post p:has(img),
 article.post .info {
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
+  border-radius: var(--token-radius-0);
+}
+
+article.post pre,
+article.post .info {
+  box-shadow: var(--token-elevation-0);
+  border-radius: var(--token-radius-0);
 }
 
 article h2[id] {
   scroll-margin-top: 1rem;
-}
-
-article img {
-  background-color: var(--color-bg-0);
 }
 
 article h2 {
@@ -72,10 +73,10 @@ article h2:hover a {
 
 /* aside */
 article .info {
-  padding: var(--size-0) var(--size-1);
-  background-color: var(--color-bg-1);
+  padding: var(--token-size-0) var(--token-size-1);
+  background-color: var(--color-surface-1);
   border: 3px solid var(--color-primary);
-  font-size: var(--size-00);
+  font-size: var(--token-size-00);
   position: relative;
 }
 
@@ -84,16 +85,16 @@ article .info::before {
   position: absolute;
   display: block;
   top: -15px;
-  font-size: var(--size-00);
-  color: var(--color-bg-0);
+  font-size: var(--token-size-00);
+  color: var(--color-surface-0);
   background-color: var(--color-primary);
-  border-radius: var(--radius);
+  border-radius: var(--token-radius-0);
   padding: 0px 6px;
 }
 
 /* table of contents */
 .toc {
-  top: var(--size-2);
+  top: var(--token-size-2);
 }
 
 .toc ul {

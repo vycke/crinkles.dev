@@ -1,7 +1,7 @@
 {% set _tags = tags | head(5) %}
-<div class="list-group list-group--scale | cluster --gap-00">
+<ul role="list" class="list-group list-group--scale | cluster items-center --gap-00">
   {% for tag in _tags %}
-    <a href="/tags/{{ tag }}/" class="tag size-00" data-selected="{{ selected === tag }}">{{ tag }}</a>
+    <li class="tag | click-area | size-00" data-selected="{{ selected === tag }}"><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
   {% endfor %}
-  {% if tags | length > 4 %}<a href="/tag-list" class="size-00 redirect">all topics</a>{% endif %}
-</div>
+  {% if tags | length > 4 %}<li><a href="/tag-list" class="size-00 redirect">all topics</a></li>{% endif %}
+</ul>

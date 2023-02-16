@@ -1,10 +1,10 @@
 .redirect,
 .redirect:active {
-  color: var(--color-fg-0);
+  color: var(--color-foreground-0);
   transition: all 0.25s;
   position: relative;
   padding: 0;
-  margin-right: var(--size-1);
+  margin-right: var(--token-size-1);
 }
 
 .redirect:hover {

@@ -8,4 +8,4 @@ module.exports = (md) =>
     .use(anchor, {
       permalink: anchor.permalink.ariaHidden({ symbol: "#" }),
     })
-    .use(shiki, { theme: "poimandres" });
+    .use(shiki, { theme: "dracula" });

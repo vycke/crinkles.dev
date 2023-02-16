@@ -3,40 +3,44 @@
   --hue: 215;
   --saturation: 40%;
 
-  --color-grey-0: hsl(var(--hue), var(--saturation), 99%);
-  --color-grey-1: hsl(var(--hue), var(--saturation), 90%);
-  --color-grey-2: hsl(var(--hue), var(--saturation), 70%);
-  --color-grey-3: hsl(var(--hue), var(--saturation), 40%);
-  --color-grey-4: hsl(var(--hue), var(--saturation), 20%);
-  --color-grey-5: hsl(var(--hue), var(--saturation), 8%);
-  --color-brand-0: #53f;
-  --color-brand-1: #2b7;
+  --token-color-grey-0: hsl(var(--hue), var(--saturation), 99%);
+  --token-color-grey-1: hsl(var(--hue), var(--saturation), 85%);
+  --token-color-grey-2: hsl(var(--hue), var(--saturation), 70%);
+  --token-color-grey-3: hsl(var(--hue), var(--saturation), 40%);
+  --token-color-grey-4: hsl(var(--hue), var(--saturation), 25%);
+  --token-color-grey-5: hsl(var(--hue), var(--saturation), 8%);
+  --token-color-brand-0: #9856f6;
+  --token-color-brand-1: #bd93f9;
+  --token-color-brand-2: #fa9580;
+  --token-color-brand-3: #28a47f;
 
   /* Create CSS variables around breakpoints */
-  --bp-0: 20rem;
-  --bp-000: calc(var(--bp-00) / 1.33);
-  --bp-00: calc(var(--bp-0) / 1.33);
-  --bp-1: calc(var(--bp-0) * 1.33);
-  --bp-2: calc(var(--bp-1) * 1.33);
-  --bp-3: calc(var(--bp-2) * 1.33);
-  --bp-4: calc(var(--bp-3) * 1.33);
-  --bp-5: calc(var(--bp-4) * 1.33);
+  --token-bp-0: 20rem;
+  --token-bp-000: calc(var(--token-bp-00) / 1.33);
+  --token-bp-00: calc(var(--token-bp-0) / 1.33);
+  --token-bp-1: calc(var(--token-bp-0) * 1.33);
+  --token-bp-2: calc(var(--token-bp-1) * 1.33);
+  --token-bp-3: calc(var(--token-bp-2) * 1.33);
+  --token-bp-4: calc(var(--token-bp-3) * 1.33);
+  --token-bp-5: calc(var(--token-bp-4) * 1.33);
 
   /* Text scaling */
   /* Adds up to max (--scale) times the size, on larger screens */
-  --ratio: calc(3.2 * (min(100vw, var(--bp-5)) - var(--bp-0)) / 960);
+  --ratio: calc(
+    3.2 * (min(100vw, var(--token-bp-5)) - var(--token-bp-0)) / 960
+  );
 
   /* Create CSS variables around spacing, font-sizes etc. */
   /* Scale of 1.333 */
-  --size-none: 0;
-  --size-000: calc(0.56rem + 0.56 * var(--ratio, 0));
-  --size-00: calc(0.75rem + 0.75 * var(--ratio, 0));
-  --size-0: calc(1rem + 1 * var(--ratio, 0));
-  --size-1: calc(1.33rem + 1.33 * var(--ratio, 0));
-  --size-2: calc(1.78rem + 1.78 * var(--ratio, 0));
-  --size-3: calc(2.37rem + 2.37 * var(--ratio, 0));
-  --size-4: calc(3.16rem + 3.16 * var(--ratio, 0));
-  --size-5: calc(4.21rem + 4.21 * var(--ratio, 0));
+  --token-size-none: 0;
+  --token-size-000: calc(0.56rem + 0.56 * var(--ratio, 0));
+  --token-size-00: calc(0.75rem + 0.75 * var(--ratio, 0));
+  --token-size-0: calc(1rem + 1 * var(--ratio, 0));
+  --token-size-1: calc(1.33rem + 1.33 * var(--ratio, 0));
+  --token-size-2: calc(1.78rem + 1.78 * var(--ratio, 0));
+  --token-size-3: calc(2.37rem + 2.37 * var(--ratio, 0));
+  --token-size-4: calc(3.16rem + 3.16 * var(--ratio, 0));
+  --token-size-5: calc(4.21rem + 4.21 * var(--ratio, 0));
 
   /* Font families */
   --monospace: "iAWriter Mono", Inconsolata, Menlo, Monaco, Consolas,
@@ -46,51 +50,7 @@
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Utilties */
-  --radius: 0.25rem;
-  --shadow: 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075),
-    0 16px 16px hsl(0deg 0% 0% / 0.075);
-}
-
-/* You will thank me for this when you want to use it.  */
-:nth-child(1) {
-  --nth-child: 1;
-}
-:nth-child(2) {
-  --nth-child: 2;
-}
-:nth-child(3) {
-  --nth-child: 3;
-}
-:nth-child(4) {
-  --nth-child: 4;
-}
-:nth-child(5) {
-  --nth-child: 5;
-}
-
-/* Light theme */
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-    --color-fg-0: var(--color-grey-5);
-    --color-fg-1: var(--color-grey-4);
-    --color-bg-0: var(--color-grey-0);
-    --color-bg-1: var(--color-grey-1);
-    --color-primary: var(--color-brand-0);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --color-fg-0: var(--color-grey-0);
-    --color-fg-1: var(--color-grey-2);
-    --color-bg-0: var(--color-grey-5);
-    --color-bg-1: var(--color-grey-4);
-    --color-primary: var(--color-brand-1);
-  }
-}
-
-.class {
-  width: var(--ratio);
+  --token-radius-0: 0.25rem;
+  --token-elevation-0: 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
 }

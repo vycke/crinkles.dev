@@ -1,4 +1,5 @@
-@import 'fonts.css';
-@import 'tokens.css';
-@import 'reset.css';
-@import 'global.css';
+@import "fonts.css";
+@import "tokens.css";
+@import "theme.css";
+@import "reset.css";
+@import "global.css";

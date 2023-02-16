@@ -8,7 +8,8 @@ width: 3
 <ul>
   {% for tag in collections.posts | getAllTagsWithCount %}
   <li>
-    <a href="/tags/{{ tag[0] }}/">{{ tag [0]}}</a><span class="size-00"> ({{ tag[1] }} articles)</span>
+    <a href="/tags/{{ tag[0] }}/">{{ tag [0]}}</a
+    ><span class="size-00"> ({{ tag[1] }} articles)</span>
   </li>
   {% endfor %}
 </ul>

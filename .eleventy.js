@@ -1,41 +1,27 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-// Own helpers
-const readableDate = require("./11ty/readableDate");
-const readTime = require("./11ty/readTime");
-const getPostHeaders = require("./11ty/getPostHeaders");
-const markdownRenderer = require("./11ty/markdownRenderer");
-const groupBy = require("./11ty/groupBy");
-const { head } = require("./11ty/lists");
-const { getAllTags, getAllTagsWithCount } = require("./11ty/tags");
-
-const IS_PRODUCTION = process.env.ELEVENTY_ENV === "production";
-const TEMPLATE_ENGINE = "njk";
-const POSTS_PATH = "src/writing/**/*.md";
+// Own configuration
+const { TEMPLATE_ENGINE } = require("./config/constants.js");
+const filters = require("./config/filters.js");
+const collections = require("./config/collections.js");
+const libraries = require("./config/libraries");
 
 module.exports = (config) => {
   // Handling assets (images, fonts, etc.)
   config.addPassthroughCopy({ "./public/": "/" });
-  // *SS
   config.addPlugin(pluginRss);
-  // Custom filters
-  config.addFilter("readableDate", readableDate);
-  config.addFilter("readtime", readTime);
-  config.addFilter("head", head);
-  config.addFilter("headers", getPostHeaders);
-  config.addFilter("getAllTags", getAllTags);
-  config.addFilter("getAllTagsWithCount", getAllTagsWithCount);
-  config.addFilter(
-    "groupByYear",
-    groupBy((post) => post.data.date.getFullYear())
-  );
-  // Amend markdown renderer
-  config.amendLibrary("md", markdownRenderer);
+  // filters
+  Object.keys(filters).forEach((name) => {
+    config.addFilter(name, filters[name]);
+  });
 
-  // Add new collection
-  config.addCollection("posts", function (collection) {
-    return collection
-      .getFilteredByGlob(POSTS_PATH)
-      .filter((post) => !(post.data.draft && IS_PRODUCTION));
+  // collections
+  Object.keys(collections).forEach((name) => {
+    config.addCollection(name, collections[name]);
+  });
+
+  // amending libraries
+  Object.keys(libraries).forEach((name) => {
+    config.amendLibrary(name, libraries[name]);
   });
 
   return {

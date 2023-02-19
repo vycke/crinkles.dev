@@ -5,51 +5,59 @@ tags:
   - workflow
 layout: layouts/post.njk
 description: >-
-  ...
+  Understanding how to make better technology, framework, and library decisions in front-end development
 ---
 
-It has always been a pleasure for many of us to complain about frameworks, tooling fatigue, over-engineering and whatsoever. The biggest argument is always that these choices focus on the developer and often disregard the user. While I agree with this sentiment *most of the times*, I feel we forget something when voicing it. We forget to look at why and when technology decisions are made. In addition, we do not teach about the impact of our decisions. Not only on our users, but on ourselves in the longrun. 
+It has always been a pleasure for many of us to complain about frameworks, tooling fatigue, over-engineering, and whatsoever. The biggest argument is always that these choices focus on the developer and often disregard the user. While I agree with this sentiment *most of the time*, I feel we forget something when voicing it. We forget to look at why and when technology decisions are made. In addition, we do not teach about the impact of our decisions. Not only on our users but on ourselves in the long run. 
 
 ## What is the value stream
-One concept that is often overlooked is the *value stream*. It dictates a set of high-level actions required to deliver value to our users. It is a simple concept that provides insights into decision making and the impact of these decisions. The high-level web value stream is shown below. 
+One concept that is often overlooked is the *value stream*. It dictates a set of high-level actions required to deliver value to our users. It is a simple concept that provides insights into decision-making and the impact of these decisions. The high-level web value stream is shown below. 
 
 ![The web development value stream](/img/value-stream.png)
 
 1. **Concept**: the formalization of an idea or business objective combined, incl. the value we want to deliver.
 2. **Design**: converting a work item into an implementable design accepted by developers.
 3. **Develop**: the implementation step of the static designs into an interactive result.
-4. **Test**: validation and verification through automated tests, user acceptance test, etc.
-5. **Deploy & operate**: build, deploy and operate the system to ensure it keeps delivering value.
+4. **Test**: validation and verification through automated tests, user acceptance tests, etc.
+5. **Deploy & operate**: build, deploy, and operate the system to ensure it keeps delivering value.
 
-The value stream lives on macro and micro level. Entire systems or even the smallest feature or change follow the same steps to deliver value.  The idea is that you *optimize* your work for the next action or step. With users at the end. Reverse engineer this and you optimize your result for the users. 
+The value stream lives on macro- and micro-level. Entire systems or even the smallest feature or change follow the same steps to deliver value.  The idea is that you *optimize* your work for the next action or step. With users at the end. Reverse engineer this and you optimize your result for the users. 
 
 ## Value is economics
-I believe people make technology or framework decisions based on personal preference. We choose that what we like and what makes us feel productive. What allows us to deliver features *fast*. This is a clear ‘project-like’ mindset. We optimize for the initial implementation cost. This fits projects perfectly. In all cases we are constrained to budget and timelines. 
+I believe people make technology or framework decisions based on personal preference. We choose what we like and what makes us feel productive. What allows us to deliver features *fast*. This is a clear ‘project-like’ mindset. We optimize for the initial implementation cost. This fits projects perfectly. In all cases, we are constrained by budget and timelines. 
 
 > The value stream optimizes for value over time
 
 But, the value stream of users optimizes for value over time. It looks beyond just the features that we deliver. It looks at the running costs, maintenance costs, availability for our users, speed, etc. These are two different equations. Both need to be balanced. 
 
-By fixing our technology decision, we impact all steps in the value chain. A modern JavaScript framework requires a compiler, bundler, CSS compiler, linters, postCSS, etc. We need this in both local development, but also in our build pipelines. A lot of setup and configurations, just to get a project started and deployed. While a simple HTML file is accessible straight away. 
+By fixing our technology decision, we impact all steps in the value chain. A modern JavaScript framework requires a compiler, bundler, CSS compiler, linters, postCSS, etc. We need this locally and in our build pipelines. A lot of setup and configurations, just to get a project started and deployed. While a simple HTML file is accessible straight away. 
 
-## When and how to make technology decisions
-The technology decision should be made as part of the *design* step, near the end. Enough short-term and long-term constraints are known at this stage. Examples are deployment limitations (e.g. self-hosted), metrics important to users (e.g. time-to-interactivity), or limitations in skills of the developers. But also budget constraints. Because a suboptimal application is better than no application at all. 
+## Making technology decisions
+Technology or framework decisions should be part of the *design* step. Making the decisions earlier limit your possibilities within the design step. Choosing a single-page application (SPA) right from the start impacts how you build your system design. For instance, a SPA has a heavy client-server communication load. This might not fit the requirements from the *concept* phase, at all. It is important to postpone this decision until you know *just enough* to make good decision decisions. 
 
 ![The web development value stream with highlight of the design step](/img/value-stream-part-2.png)
 
-Before you start saying “but we do not always know what your users want”. It is part of the concept step to (partly) figure it out. In addition, not everybody is part of a startup and know fully well what users want. 
+And do not start saying “but we do not always know what your users want”. It is part of the *concept* phase that you figure out *just enough*. More importantly, technology choices are hardly ever driven by functional requirements. Non-functional requirements, known as [quality attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes), have a much bigger impact on the decisions we have to make. They are a great way to understand *value over time*. Some general rules I believe you can use to make decisions:
+
+- *Compatibility* & *interoperability* : the web platform has an amazing track record for backward compatibility. Stay close to native web technologies and reduce abstractions.
+- *Evolvability*: frameworks often provide new features. But once these features become web-native, frameworks fail to adjust. 
+- *Stability*: reduce the number of dependencies in production code and (build-)tooling. Staying close to native web technologies is one way to achieve this. It is not the only way. 
+- *Responsiveness*: focus on web performance metrics, never go for a SPA framework. 
+
+The decisions we make should not only be driven by (non-)functional requirements. Most development work that we do are limited to (business) constraints we need to work with. Budgets and timelines are of course our worst enemies. When you have a team of React developers you cannot easily introduce native web components. And let’s not forget that someone has to maintain the build infrastructure. This can be painful in a big corporation. 
+
+Only when combining functional requirements, non-functional requirements, and constraints, you are able to make better technology decisions. 
 
 ## How decisions impact value over time
-One recent example crosses my mind. Out of nowhere a the build pipeline of a big project broke. After looking at the logs I saw the SASS compiler broke. This did make sense. The SASS code was not touched in weeks, and several builds happened in between. Locally the build was running fine. 
+I hear you thinking: “but modern frameworks and their ecosystems are big and stable”. They are not. When running long-term products, there is a fair chance you will hit issues you never thought of. Issues outside of your comfort zone. Things have nothing to do with building features and values for your customers. Let me outline an issue I encountered around 9 months ago. 
 
-So what was the issue? One of the peer dependencies of my build setup had a minor update. The build pipeline uses the newest version of that dependency. Locally I was using the version installed in my `node_modules`. After cleaning my `node_modules` and `package-lock.json` file, I hit the same issues locally. 
+Out of nowhere the build pipeline of a big project broke (>1.5 years). After looking at the logs I saw the SASS compiler broke. This did not make any sense. The code was not touched in weeks, and the builds were running fine in the meantime. So what was the issue? One of the peer dependencies in our build setup received a minor update. Our build is an abstraction on top of different compiler steps. The peer dependency itself was not broken with the new version, but our abstraction was. One problem though, our abstraction is an open-source maintained package. 
 
-Issue found, but no solution. As the issue is in the production build, a solution needs to found, otherwise new value cannot be delivered. The tool we use has a slow cycle time. It could be months before it fixes this issue with the peer dependencies (disclaimer: now, after 9 months it is not updated properly). 
-
-In the end I could mitigate the issues in two steps. After searching for a long time, I found a temporary solution in my compile configurations. This was temporary, as it was bound to break again. A permanent fix is required. The only option is to replace the compile step all together with other dependencies. A dreadful exercise, with big impact across the value stream. Our automated tests cannot help us verify, as they do not use the same build tool. Everything in the application had to be tested manually. Dreadful. 
+As this issue impacts our ability to push updates to production, a solution needs to be found. But, in the build abstraction package, we use h as a slow cycle time. It could be months before a fix would be pushed. (disclaimer: now, after 9 months it is not updated properly, and is flagged as not maintained anymore). A temporary fix was found with limited impact. The permanent fix was to replace the entire abstraction, including all underlying dependencies. This required manual verification of develop, test and production builds to ensure they were still working. It took the entire team weeks to verify everything. 
 
 ::: info
-If you wonder what the relation of this example is to the value stream, that is easy. The above example happens more than we would like on long running projects. The decisions of the tools and dependencies have real implications our ability to deliver value.
+Unit tests use only a part of the build setup, if at all. End-to-end tests hardly cover 100% of all functionalities. To ensure that such a crucial step as code compilation does not break anything, manual verification is your only option.  
 :::
 
 ## Wrapping up
+Even when “choice X” is more focused on developers than users, does not mean you should never choose to use it. Technology decisions should be made on so much more. It is a numbers gain. You should choose technology, frameworks, and/or libraries based on their value of time. It is a balance between different non-functional requirements, given different constraints. In the end, a “suboptimal solution is better than no solution at all”. 

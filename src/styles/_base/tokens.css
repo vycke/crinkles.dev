@@ -33,8 +33,8 @@
   /* Create CSS variables around spacing, font-sizes etc. */
   /* Scale of 1.333 */
   --token-size-none: 0;
-  --token-size-000: calc(0.56rem + 0.56 * var(--ratio, 0));
-  --token-size-00: calc(0.75rem + 0.75 * var(--ratio, 0));
+  --token-size-000: calc(0.65rem + 0.65 * var(--ratio, 0));
+  --token-size-00: calc(0.8125rem + 0.8125 * var(--ratio, 0));
   --token-size-0: calc(1rem + 1 * var(--ratio, 0));
   --token-size-1: calc(1.33rem + 1.33 * var(--ratio, 0));
   --token-size-2: calc(1.78rem + 1.78 * var(--ratio, 0));

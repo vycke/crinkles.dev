@@ -42,10 +42,10 @@ Technology or framework decisions should be part of the _design_ step. Making th
 
 And do not start saying “but we do not always know what your users want”. It is part of the _concept_ phase that you figure out _just enough_. More importantly, technology choices are hardly ever driven by functional requirements. Non-functional requirements, known as [quality attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes), have a much bigger impact on the decisions we have to make. They are a great way to understand _value over time_. Some general rules I believe you can use to make decisions:
 
-- _Compatibility_ & _interoperability_ : the web platform has an amazing track record for backward compatibility. Stay close to native web technologies and reduce abstractions.
-- _Evolvability_: frameworks often provide new features. But once these features become web-native, frameworks fail to adjust.
+- _Compatibility_: frameworks evolve fast, but so does the web platform. Frameworks gave us components, but once the web gave us web-components, some frameworks failed to adopt it (looking at you [React](https://custom-elements-everywhere.com/libraries/react/results/results.html)). The web platforms is backward compatible, frameworks are not. 
 - _Stability_: reduce the number of dependencies in production code and (build-)tooling. Staying close to native web technologies is one way to achieve this. It is not the only way.
-- _Responsiveness_: focus on web performance metrics, never go for a SPA framework.
+- _Portability_: good software design reduces the *cost of change*. Want the ability to switch between tools or even frameworks? Stay close to the web platform. 
+- _Performance efficiency_: focus on web performance metrics, never go for a SPA framework.
 
 The decisions we make should not only be driven by (non-)functional requirements. Most development work that we do are limited to (business) constraints we need to work with. Budgets and timelines are of course our worst enemies. When you have a team of React developers you cannot easily introduce native web components. And let’s not forget that someone has to maintain the build infrastructure. This can be painful in a big corporation.
 

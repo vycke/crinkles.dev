@@ -7,7 +7,23 @@ specific breakpoint */
   gap: var(--layout-gap);
 }
 
+/* default assumes 2 elements */
 .switcher > * {
-  flex-basis: calc((var(--layout-width, 0) * var(--layout-amount, 1) - 100%) * 999);
+  flex-basis: calc(
+    (var(--layout-width, 0) * var(--layout-amount, 2) - 100%) * 999
+  );
   flex-grow: 1;
+}
+
+/* uses the :has selector to set the number of children */
+.switcher:has(> *:nth-child(2)) {
+  --layout-amount: 2;
+}
+
+.switcher:has(> *:nth-child(3)) {
+  --layout-amount: 3;
+}
+
+.switcher:has(> *:nth-child(4)) {
+  --layout-amount: 4;
 }

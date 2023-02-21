@@ -9,7 +9,7 @@ description: >-
   A little CSS trick that allows you to use nth-child values in the CSS calc() function.
 ---
 
-Sometimes you figure out a cool trick that just feels so powerful. It opens you up to a range of new possibilities. That you, quite frankly, rarely use. But still, it is a cool trick. For me, the latest of these tricks is setting a CSS custom property value, corresponding with the `:nth-child` value. Why? Because now we can use the `--nth-child` custom property inside `calc()` functions.
+Sometimes you figure out a cool trick that just feels so powerful. It opens you up to a range of new possibilities. That you, quite frankly, rarely use. But still, it is a cool trick. For me, the latest of these tricks is setting a CSS custom property value, corresponding with the `:nth-child` value. Why? Because now we can use the `--index` custom property inside `calc()` functions.
 
 ## But why not use X?
 
@@ -21,23 +21,23 @@ Lastly, there is also the `counter()` function, as pointed out by [Šime Vidas](
 
 ## How to set it up
 
-On the highest level of your CSS, you define a list like the one below. This results in all elements having access to a `--nth-child` custom property. At least as long as you don’t exceed the length of your list.
+On the highest level of your CSS, you define a list like the one below. This results in all elements having access to a `--index` custom property. At least as long as you don’t exceed the length of your list.
 
 ```css
 :nth-child(1) {
-	--nth-child: 1;
+	--index: 1;
 }
 :nth-child(2) {
-	--nth-child: 2;
+	--index: 2;
 }
-:nth-child(3) {
-	--nth-child: 3;
+
+... 
+
+:nth-last-child(1) {
+	--rev-index: 1;
 }
-:nth-child(4) {
-	--nth-child: 4;
-}
-:nth-child(5) {
-	--nth-child: 5;
+:nth-last-child(2) {
+	--rev-index: 2;
 }
 ```
 
@@ -46,7 +46,7 @@ On the highest level of your CSS, you define a list like the one below. This res
 Glad you asked! In the last few years, I came across two use cases. Two, whole, use cases. In the latest use case, I wanted to automatically generate a color palette. Not to match a branding of a company. But to automatically populate different series of data in a chart. With this trick, we can do that with a single line.
 
 ```scss
-background-color: hsl(calc(100 * var(--nth-child)) 100% 40%);
+background-color: hsl(calc(100 * var(--index)) 100% 40%);
 ```
 
 In an earlier use case, I replicated the UI implementation of toasts from [Vercel](https://vercel.com/design/toast). On the link, you see a list of toast messages stacked with a little bit of perspective. I originally used an SCSS implementation, looking like the snippet below. Note it uses `:nth-last-of-type`, given the reversed order and bottom orientation. But the general idea remains the same.
@@ -66,7 +66,7 @@ This would create twenty different CSS selectors, all with a different value for
 ```css
 .class {
 	/* We want to start counting at 0 */
-	--v: var(--nth-child) - 1;
+	--v: var(--rev-index) - 1;
 	opacity: 1 - calc(var(--v) * 0.15);
 	transform:
 		translate3d(

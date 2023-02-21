@@ -51,6 +51,8 @@ background-color: hsl(calc(100 * var(--index)) 100% 40%);
 
 In an earlier use case, I replicated the UI implementation of toasts from [Vercel](https://vercel.com/design/toast). On the link, you see a list of toast messages stacked with a little bit of perspective. I originally used an SCSS implementation, looking like the snippet below. Note it uses `:nth-last-of-type`, given the reversed order and bottom orientation. But the general idea remains the same.
 
+![stacked example of Vercer](/img/stacked-nth-child.png)
+
 ```scss
 @for $i from 1 through 20 {
 	&:nth-of-type(#{$i}) {

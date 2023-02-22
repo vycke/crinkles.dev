@@ -2,7 +2,7 @@
   {% for post in posts %}
     <li class="flex-col --gap-none click-area" role="listitem">
       <time date="{{ post.data.date }}" class="slash | size-00 text-color-1">{{ post.data.date | readableDate }}</time>
-      <h2 class="size-2">
+      <h2>
         <a href="{{ post.page.url }}" class="bold">
           {{ post.data.title }}
         </a>

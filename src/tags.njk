@@ -13,11 +13,13 @@ eleventyComputed:
   title: Tagged “{{ tag }}”
 ---
 
-{% set tags = collections.posts | getAllTags | head(6) %}
 {% set selected = tag[0] %}
-<div class="cluster items-center --gap-00">
-  {% include "components/tag-list.njk" %}
-  <a href="/tag-list" class="size-00 redirect">all topics</a>
+<div class="flex-col items-start">
+  <aside class="flex-col --gap-000 mb-2">
+    {% set tags = collections.posts | getAllTags | head(5) %}
+    {% include "components/tag-list.njk" %}
+    <a href="/tag-list" class="size-00 redirect self-start text-color-1">all topics</a>
+  </aside>
+  {% set posts = collections[ tag ] or [] %}
+  {% include "components/post-list.njk" %}
 </div>
-{% set posts = collections[ tag ] or [] %}
-{% include "components/post-list.njk" %}

@@ -1,20 +1,13 @@
-<ul role="list" class="list-group | mt-3 flex-grow | fade-in">
-  {% for year, yearPosts in posts | groupByYear | reverse %}
-    <li class="sidebar-left --width-000 --gap-0 | mb-1 pb-1 separator">
-      <span class="text-color-primary">{{ year }}</span>
-      <ul role="list" class="list-group | flex-col --gap-0" role="list">
-        {% for post in yearPosts %}
-          <li class="flex-col --gap-none click-area" role="listitem">
-            <time date="{{ post.data.date }}" class="slash | size-00 text-color-1">{{ post.data.date | readableDate }}</time>
-            <h2 class="size-1">
-              <a href="{{ post.page.url }}" class="bold">
-                {{ post.data.title }}
-              </a>
-            </h2>
-            <span class="text-color-1">{{ post.data.description }}</span>
-          </li>
-        {% endfor %}
-      </ul>
+<ul role="list" class="list-group | flex-col --gap-2" role="list">
+  {% for post in posts %}
+    <li class="flex-col --gap-none click-area" role="listitem">
+      <time date="{{ post.data.date }}" class="slash | size-00 text-color-1">{{ post.data.date | readableDate }}</time>
+      <h2 class="size-2">
+        <a href="{{ post.page.url }}" class="bold">
+          {{ post.data.title }}
+        </a>
+      </h2>
+      <span class="text-color-1">{{ post.data.description }}</span>
     </li>
   {% endfor %}
 </ul>

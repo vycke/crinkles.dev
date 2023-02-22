@@ -36,14 +36,14 @@
 <aside class="switcher --width-3 --gap-1 | p-1 mb-0">
 	{% if previousPost %}
     <div class="flex-col --gap-none items-start justify-center">
-      <span class="text-color-1 size-00 uppercase no-decoration">← Previous</span>
-      <h3><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></h3>
+      <span class="text-color-1 uppercase no-decoration">← Previous</span>
+      <h3 class="size-1"><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></h3>
     </div>
 	{% endif %}
   {% if nextPost %}
     <div class="flex-col --gap-none items-end justify-center | text-right">
-      <span class="text-color-1 size-00 uppercase no-decoration">Next →</span>
-      <h3><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></h3>
+      <span class="text-color-1 uppercase no-decoration">Next →</span>
+      <h3 class="size-1"><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></h3>
     </div>
 	{% endif %}
 </aside>

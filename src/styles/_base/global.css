@@ -71,26 +71,26 @@ blockquote cite {
 }
 
 /* Basic lists */
-:where(ul, ol):not([role="list"]) {
+:where(ul, ol):not([class]) {
 	list-style: outside;
 	padding-left: 0;
 }
 
-:where(ul, ol):not([role="list"]) li {
+:where(ul, ol):not([class]) li {
 	margin-left: var(--token-size-2);
 }
 
-:where(ul, ol):not([role="list"]) li::marker {
+:where(ul, ol):not([class]) li::marker {
 	color: var(--color-primary);
 	font-weight: 600;
 }
 
-ul:not([role="list"]) li {
+ul:not([class]) li {
 	list-style-type: "-  ";
 	padding-left: 0;
 }
 
-ol:not([role="list"]) {
+ol:not([class]) {
 	list-style: decimal outside;
 }
 

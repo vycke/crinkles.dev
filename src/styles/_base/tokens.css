@@ -43,8 +43,7 @@
   --token-size-5: calc(4.21rem + 4.21 * var(--ratio, 0));
 
   /* Font families */
-  --monospace: "iAWriter Mono", Inconsolata, Menlo, Monaco, Consolas,
-    "Courier New", monospace;
+  --monospace: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
   --serif: ui-serif, Georgia, Cambria, serif;
   --sans-serif: "iAWriter Quattro", system-ui, -apple-system, blinkmacsystemfont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

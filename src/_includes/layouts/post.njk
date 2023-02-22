@@ -33,7 +33,7 @@
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 
-<aside class="switcher --width-3 --gap-1 | p-1 mb-0">
+<aside class="switcher --width-1 --gap-1 | p-1 mb-0">
 	{% if previousPost %}
     <div class="flex-col --gap-none items-start justify-center">
       <span class="text-color-1 uppercase no-decoration">← Previous</span>

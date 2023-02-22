@@ -1,10 +1,10 @@
 /* Utilities */
-@import "_utils/amount.css";
 @import "_utils/gap.css";
 @import "_utils/width.css";
 /* Patterns */
 @import "center.css";
 @import "cluster.css";
+@import "cover.css";
 @import "flexbox.css";
 @import "grid.css";
 @import "sidebar.css";

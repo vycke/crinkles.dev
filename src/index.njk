@@ -3,18 +3,16 @@ layout: layouts/page.njk
 width: 5
 ---
 
-<div class="center --width-3 text-center">
-  <h1 class="size-4">
-    <i class="serif text-color-primary">Hi!</i> I'm Kevin.
+<div class="center --width-3 | flex-col --gap-3 | text-center | mb-5">
+  <h1 class="size-4 serif italic text-color-primary">
+    Hi there!
   </h1>
   <p>
-    I am a front-end engineer and <a href="/writing">writer</a> specializing
-    in CSS architecture & software quality. Crinkles is my after-hours digital
-    playground — my <a href="/projects">corner</a> of the internet.
+   <strong>I am Kevin Pennekamp, a front-end developer and writer</strong> specializing
+    in CSS, web-standards & software quality. This is my digital
+    playground & corner of the internet.
   </p>
-  <div class="mt-4 mb-4">
-    {% include "components/wave.njk" %}
-  </div>
+  {% include "components/wave.njk" %}
 </div>
 <div class="flex-col --gap-0 | mb-2">
   <div class="sidebar-left --width-0 --gap-5 items-start">

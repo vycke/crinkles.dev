@@ -9,7 +9,7 @@ description: >-
   A little CSS trick to get a count of child elements on your parent selector.
 ---
 
-Recently I shared a nice [CSS trick](/writing/a-nth-child-css-trick) allowing you to use a CSS custom property indicating the index of an element. Now I want to share with you a trick for doing the reverse. A trick that allows you to use the child-element count on your parent selector. Let’s dive in!
+Recently I shared a nice [CSS trick](/writing/a-nth-child-css-trick/) allowing you to use a CSS custom property indicating the index of an element. Now I want to share with you a trick for doing the reverse. A trick that allows you to use the child-element count on your parent selector. Let’s dive in!
 
 ::: info
 This trick uses the new `:has` selector in CSS. The majority of browsers support this selector at the time of writing. Except for Firefox and Samsung browsers. In Firefox, this CSS feature is behind a feature flag in the advanced settings. 

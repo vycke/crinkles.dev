@@ -1,28 +1,26 @@
 .tag {
+  --tag-color: var(--color-primary);
+
   background-color: var(--color-surface-1);
   padding: 0.1rem var(--token-size-000);
-  color: var(--color-foreground-0);
   border-radius: var(--token-radius-0);
   transition: all 300ms;
 }
 
 .tag a {
   text-decoration: none;
+  color: var(--color-foreground-0);
 }
 
-.tag:hover {
-  color: var(--color-primary);
+.tag:hover a {
+  color: var(--tag-color);
 }
 
 .tag::before {
   content: "#";
-  color: var(--color-primary);
+  color: var(--tag-color);
 }
 
 .tag:nth-child(even) {
-  color: var(--color-accent);
-}
-
-.tag:nth-child(even):before {
-  color: var(--color-accent);
+  --tag-color: var(--color-accent);
 }

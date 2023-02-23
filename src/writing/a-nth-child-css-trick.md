@@ -45,8 +45,10 @@ On the highest level of your CSS, you define a list like the one below. This res
 
 Glad you asked! In the last few years, I came across two use cases. Two, whole, use cases. In the latest use case, I wanted to automatically generate a color palette. Not to match a branding of a company. But to automatically populate different series of data in a chart. With this trick, we can do that with a single line.
 
-```scss
-background-color: hsl(calc(100 * var(--index)) 100% 40%);
+```css
+.my-class {
+	background-color: hsl(calc(100 * var(--index)) 100% 40%);
+}
 ```
 
 In an earlier use case, I replicated the UI implementation of toasts from [Vercel](https://vercel.com/design/toast). On the link, you see a list of toast messages stacked with a little bit of perspective. I originally used an SCSS implementation, looking like the snippet below. Note it uses `:nth-last-of-type`, given the reversed order and bottom orientation. But the general idea remains the same.
@@ -80,3 +82,7 @@ This would create twenty different CSS selectors, all with a different value for
 ```
 
 That was it. That was my latest CSS trick.
+
+::: info
+Check also my latest trick [Use the child-element count in CSS](/writting/use-the-child-element-count-in-css/).
+:::

@@ -5,7 +5,7 @@
     {{ content | safe }}
   </main>
   {% if pagination %}
-    <aside class="switcher --width-3 --gap-1 | p-1 mb-0">
+    <aside class="switcher --width-1 --amount-2 --gap-1 | pl-0 pr-0 pt-2 pb-2">
       {% if pagination.href.previous %}
         <h3 class="size-1"><a href="{{ pagination.href.previous | url }}">← Previous</a></h3>
       {% endif %}

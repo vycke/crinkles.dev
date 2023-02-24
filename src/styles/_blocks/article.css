@@ -75,7 +75,7 @@ article h2:hover a {
 article .info {
   padding: var(--token-size-0) var(--token-size-1);
   background-color: var(--color-surface-1);
-  border: 3px solid var(--color-primary);
+  border: 3px solid var(--color-accent);
   font-size: var(--token-size-00);
   position: relative;
 }
@@ -87,7 +87,7 @@ article .info::before {
   top: -15px;
   font-size: var(--token-size-00);
   color: var(--color-surface-0);
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   border-radius: var(--token-radius-0);
   padding: 0px 6px;
 }

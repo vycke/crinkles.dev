@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 
 <ul role="list" class="list-group | mt-3 flex-grow | fade-in">
   {% for tech, projects in projects | groupby("tech") %}
-  <li class="sidebar-left --width-000 --gap-0 | mb-1 pb-1 separator">
+  <li class="sidebar-left --width-000 --gap-0 | mb-1 pb-1">
     <span class="text-color-primary">{{ tech }}</span>
     <ul role="list" class="list-group | flex-col --gap-0" role="list">
       {% for project in projects %}

@@ -3,18 +3,19 @@ layout: layouts/page.njk
 width: 5
 ---
 
-<div class="sidebar-left --width-0 --gap-5 | items-stretch | mb-5">
-  <h1 class ="bg-accent | bold italic size-3 text-color-rev-0 | p-1">I make optimized web solutions.</h1>
+<div class="sidebar-right --width-0 --gap-5 items-center | mb-5">
   <div class="flex-col --gap-3 | pt-1">
-    <h2 class="italic bold text-color-primary size-4">Hi there!</h2>
-    <div class="flex-col maxw-3">
-      <p class="text-left">
-       <strong>I am Kevin Pennekamp, a front-end developer and writer</strong> specializing
-        in CSS, web-standards & software quality. This is my digital
-        playground & corner of the internet.
-      </p>
-      {% include "components/wave.njk" %}
-    </div>
+    <h1 data-cover="true" class="italic bold text-color-primary size-4 text-center">Hi there!</h1>
+    <p class="text-center pl-2 pr-2">
+     <strong>I am Kevin Pennekamp, a front-end developer and writer</strong> specializing
+      in CSS, web-standards & software quality. This is my digital
+      playground & corner of the internet.
+    </p>
+    {% include "components/wave.njk" %}
+  </div>
+  <div class="self-stretch | flex-col items-center justify-center --gap-none | p-1 bg-primary radius">
+      <span class="bold italic text-center text-color-rev-0">Currently working on:</span>
+      <span class="text-center text-color-rev-0">CSS trickery & sustainable web development</span>
   </div>
 </div>
 <div class="flex-col --gap-0 | mb-2">

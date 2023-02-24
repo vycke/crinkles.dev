@@ -8,14 +8,14 @@
   margin-block: var(--layout-gap, 0);
 }
 
-.cover > :first-child:not(.cover-child) {
+.cover > :first-child:not([data-cover="true"]) {
   margin-block-start: 0;
 }
 
-.cover > :last-child:not(.cover-child) {
+.cover > :last-child:not([data-cover="true"]) {
   margin-block-end: 0;
 }
 
-.cover > .cover-child {
+.cover > [data-cover="true"] {
   margin-block: auto;
 }

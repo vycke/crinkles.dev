@@ -6,6 +6,7 @@ body {
 	font-family: var(--sans-serif);
 	background-color: var(--color-surface-0);
 	color: var(--color-foreground-0);
+	border-top: 0.5rem solid var(--color-surface-1);
 }
 
 /* anchor */

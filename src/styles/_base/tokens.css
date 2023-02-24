@@ -11,7 +11,7 @@
   --token-color-grey-5: hsl(var(--hue), var(--saturation), 8%);
   --token-color-brand-0: #9856f6;
   --token-color-brand-1: #bd93f9;
-  --token-color-brand-2: #fa9580;
+  --token-color-brand-2: #fecb66;
   --token-color-brand-3: #28a47f;
 
   /* Create CSS variables around breakpoints */

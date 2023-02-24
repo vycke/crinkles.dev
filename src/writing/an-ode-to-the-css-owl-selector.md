@@ -1,7 +1,9 @@
 ---
 title: An ode to the CSS owl selector
 date: 2022-03-05T00:00:00.000Z
-tags: css
+tags: 
+  - css
+  - trick
 layout: layouts/post.njk
 description: One off the most beautiful CSS selectors is the Lobotomized Owl Selector of Heydon Pickering
 ---

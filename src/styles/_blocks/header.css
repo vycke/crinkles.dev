@@ -1,10 +1,3 @@
-header {
-  width: min(100%, calc(var(--token-bp-5) - 2 * var(--token-size-1)));
-  margin-left: auto;
-  margin-right: auto;
-  padding: var(--token-size-1);
-}
-
 header a {
   display: block;
 }

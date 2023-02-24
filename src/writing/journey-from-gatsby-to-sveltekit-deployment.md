@@ -3,8 +3,6 @@ title: Deploying my newly created SvelteKit website
 date: 2021-04-07T01:00:00.000Z
 tags: 
   - svelte
-  - gatsby
-  - react
 layout: layouts/post.njk
 description: >-
   After the local transition of Gatsby to SvelteKit was finished, it was time to get the website live! But did I manage to get it there?

@@ -3,7 +3,6 @@ title: How to create a scalable and maintainable front-end architecture
 date: 2019-11-11T00:00:00.000Z
 tags:
     - architecture
-    - javascript
 layout: layouts/post.njk
 description: >-
     A modern architecture for digital enterprises build on existing ideas, but let you scale quickly

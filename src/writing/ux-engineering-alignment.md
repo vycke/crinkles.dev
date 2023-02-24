@@ -2,7 +2,6 @@
 title: Engineering, UX design and agile
 date: 2021-06-16T00:00:00.000Z
 tags:
-  - ux
   - workflow
 layout: layouts/post.njk
 description: >-

@@ -63,3 +63,8 @@ As said, this is a very specific trick, that has a few gotchas.
 - when you set a gap on the wrapper, you will have an unwanted side effect once the content wraps to new lines. Although the side content is not visible, it is part of the DOM. This means that a vertical gap will be applied. Creating a kind of margin-bottom effect.
 
 Although the use case is limited and the gotchas add more limitations, it does have some usage.
+
+::: info
+*Update 28-02-2023*
+This trick also works if we want to reverse horizontal and vertical. If there is no `width` on the horizontal orientation, the content gets hidden. In vertical orientation, it can fill the available space, or have a fixed `height`. 
+:::

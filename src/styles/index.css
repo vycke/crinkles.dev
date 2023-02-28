@@ -4,10 +4,3 @@
 @import "_layout/_layout.css" layer(layout);
 @import "_utils/_utils.css" layer(utilities);
 @import "_blocks/_blocks.css" layer(blocks);
-
-.circle {
-  position: absolute;
-  top: -200px;
-  right: -150px;
-  z-index: -1;
-}

@@ -1,0 +1,17 @@
+.canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.canvas .circle {
+  --size: max(700px, 60%);
+  position: absolute;
+  width: var(--size);
+  top: calc(-0.35 * var(--size));
+  right: calc(-0.25 * var(--size));
+}

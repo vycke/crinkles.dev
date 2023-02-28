@@ -1,5 +1,7 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
+  {% include "components/circle.svg" %}
+
   <main class="center --width-{{ width or 4 }} pl-1 pr-1 | flex-col --gap-0 flex-grow | mb-3">
     {% if title %}<h1 class="overline">{{ title }}</h1>{% endif %}
     {{ content | safe }}

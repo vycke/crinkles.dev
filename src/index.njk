@@ -3,23 +3,28 @@ layout: layouts/page.njk
 width: 5
 ---
 
-<div class="sidebar-right --width-0 --gap-5 items-center | mb-5">
-  <div class="flex-col --gap-3 | pt-1">
-    <h1 data-cover="true" class="italic bold text-color-primary size-4 text-center">Hi there!</h1>
-    <p class="text-center pl-2 pr-2">
-     <strong>I am Kevin Pennekamp, a front-end developer and writer</strong> specializing
-      in CSS, web-standards & software quality. This is my digital
+<div class="sidebar --right --width-1 --gap-5 items-center | mb-4">
+  <div class="flex-col --gap-none | pt-1">
+    <span class="text-color-primary bold size-1">Welcome! I am</span>
+    <h1 data-cover="true" class="bold size-3">Kevin Pennekamp.</h1>
+    <span class="size-1 mb-2">UI architect and writer</span>
+    <p class="text-color-1 maxw-2">
+     Specialized in CSS, web-standards & software quality. This is my digital
       playground & corner of the internet.
     </p>
-    {% include "components/wave.njk" %}
   </div>
-  <div class="self-stretch | flex-col items-center justify-center --gap-none | p-1 bg-primary radius">
-      <span class="bold italic text-center text-color-rev-0">Currently working on:</span>
-      <span class="text-center text-color-rev-0">CSS trickery & sustainable web development</span>
+  <div class="flex-col justify-center --gap-none">
+      <span class="bold overline">Currently working on</span>
+      <ul>
+        <li>CSS Trickery</li>
+        <li>Sustainable web development</li>
+        <li>Tinkering</li>
+      </ul>
   </div>
 </div>
-<div class="flex-col --gap-0 | mb-2">
-  <div class="sidebar-left --width-0 --gap-5 items-start">
+{% include "components/wave.njk" %}
+<div class="flex-col --gap-0 | mb-2 mt-4">
+  <div class="sidebar --left --width-0 --gap-5 items-start">
     <aside class="flex-col --gap-000">
       <span class="text-color-1">Search by topic..</span>
       {% set tags = collections.posts | getAllTags | head(5) %}

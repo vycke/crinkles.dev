@@ -5,9 +5,9 @@
   {% if Pdraft %} <span class="bg-primary text-color-0 size-2 pl-0 pr-0">DRAFT</span> {% endif %}
   <h1 class="overline">{{ title }}</h1>
   {% include "components/tag-list.njk" %}
-  <time datetime="{{ page.date }}" class="size-00 text-color-1 slash | border-bottom pb-2 mb-2">{{ page.date | readableDate }}</time>
-  <div class="relative | sidebar-right --width-00 --gap-3 | fade-in">
-    <article class="post | center --width-3 | stack --gap-2 | border-bottom pb-3">
+  <time datetime="{{ page.date }}" class="size-00 text-color-1 slash | separator pb-2 mb-2">{{ page.date | readableDate }}</time>
+  <div class="relative | sidebar --right --width-00 --gap-3 | fade-in">
+    <article class="post | center --width-3 | stack --gap-2 | separator pb-3">
       {{ content | safe }}
     </article>
 

@@ -6,6 +6,7 @@ body {
 	font-family: var(--sans-serif);
 	background-color: var(--color-surface-0);
 	color: var(--color-foreground-0);
+	overflow-x: hidden;
 }
 
 /* anchor */

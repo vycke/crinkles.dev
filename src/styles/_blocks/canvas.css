@@ -9,7 +9,7 @@
 }
 
 .canvas .circle {
-  --size: max(700px, 60%);
+  --size: max(700px, 60vw);
   position: absolute;
   width: var(--size);
   top: calc(-0.35 * var(--size));

@@ -20,6 +20,6 @@ eleventyComputed:
     {% include "components/tag-list.njk" %}
     <a href="/tag-list" class="size-00 redirect self-start text-color-1">all topics</a>
   </aside>
-  {% set posts = collections[ tag ] or [] %}
+  {% set posts = collections[ tag ] | reverse or [] %}
   {% include "components/post-list.njk" %}
 </div>

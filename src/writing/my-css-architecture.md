@@ -23,7 +23,7 @@ The framework tries to achieve _simplicity_ for developers. To achieve this, eve
 
 A simple three-layered architecture that can be used as only your CSS architecture, but can be extended towards a design system (by combining it with front-end frameworks like React in the ‘components’ layer). It heavily focuses on layout patterns above anything.
 
-- **Layout**: classes that look at the macro-level of an application. They provide flexible and responsive layout solutions that are common across an application. The patterns can be used on the macro and micro levels. Some good examples can be found [here](https://bace.crinkles.dev) or [here](https://every-layout.dev/).
+- **Layout**: classes that look at the macro-level of an application. They provide flexible and responsive layout solutions that are common across an application. The patterns can be used on the macro and micro levels. Some good examples can be found [here](https://feo.crinkles.dev) or [here](https://every-layout.dev/).
 - **Utilities**: classes that do one job and do one job well. This is often a class that alters a single property. But utilities like the [`.click-area` class](https://github.com/kevtiq/bace-css/blob/main/src/utilities/_click-area.scss) cover more than a single property but still do only one thing.
 - **Components**: correspond to UI components. That what cannot be solved with layout and/or utility classes alone can be solved in blocks. You can choose to cover all styles of a component in a block, or you can only put those styles not covered by other classes in a block.
 

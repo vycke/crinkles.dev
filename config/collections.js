@@ -4,6 +4,7 @@ const { POSTS_PATH, IS_PRODUCTION } = require("./constants");
 function posts(collection) {
   return collection
     .getFilteredByGlob(POSTS_PATH)
+    .filter((post) => !post.data.archived)
     .filter((post) => !(post.data.draft && IS_PRODUCTION));
 }
 

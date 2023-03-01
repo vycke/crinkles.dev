@@ -1,6 +1,7 @@
 ---
 title: Fluid interfaces using CSS
 date: 2020-06-27T00:00:00.000Z
+archived: true
 tags:
   - css
   - layout
@@ -8,6 +9,11 @@ layout: layouts/post.njk
 description: >-
   Fluid interfaces allow you scale elements of your website based on on the available space, without using media-queries
 ---
+
+::: info
+*Update 02-03-2023*\
+This article is archived and replaced by a [newer article](writing/a-different-approach-to-fluid-typography-and-layouts/).
+:::
 
 Responsiveness should be a core feature of any website. Screen-sizes are both growing and shrinking. This makes that responsiveness now goes beyond composition and layout. We need to adjust the sizes of text and elements and the surrounding spacing. Most achieve this by adding media-queries. But with various pages, elements, and breakpoints, adding media-queries become unmaintainable.
 

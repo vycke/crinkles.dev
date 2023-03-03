@@ -9,10 +9,10 @@
   --token-color-grey-3: hsl(var(--hue), var(--saturation), 40%);
   --token-color-grey-4: hsl(var(--hue), var(--saturation), 25%);
   --token-color-grey-5: hsl(var(--hue), var(--saturation), 8%);
-  --token-color-brand-0: #9856f6;
   --token-color-brand-1: #bd93f9;
   --token-color-brand-2: #fecb66;
   --token-color-brand-3: #28a47f;
+  --token-color-brand-4: #77b6ff;
 
   /* Create CSS variables around breakpoints */
   --token-bp-0: 20rem;
@@ -25,22 +25,19 @@
   --token-bp-5: calc(var(--token-bp-4) * 1.33);
 
   /* Text scaling */
-  /* Adds up to max (--scale) times the size, on larger screens */
-  --ratio: calc(
-    3.2 * (min(100vw, var(--token-bp-5)) - var(--token-bp-0)) / 960
-  );
+  --ratio: calc(3.2 * (min(100vw, 1240px) - 320px) / 920);
 
   /* Create CSS variables around spacing, font-sizes etc. */
   /* Scale of 1.333 */
   --token-size-none: 0;
-  --token-size-000: calc(0.65rem + 0.65 * var(--ratio, 0));
-  --token-size-00: calc(0.8125rem + 0.8125 * var(--ratio, 0));
-  --token-size-0: calc(1rem + 1 * var(--ratio, 0));
-  --token-size-1: calc(1.33rem + 1.33 * var(--ratio, 0));
-  --token-size-2: calc(1.78rem + 1.78 * var(--ratio, 0));
-  --token-size-3: calc(2.37rem + 2.37 * var(--ratio, 0));
-  --token-size-4: calc(3.16rem + 3.16 * var(--ratio, 0));
-  --token-size-5: calc(4.21rem + 4.21 * var(--ratio, 0));
+  --token-size-000: calc(0.65rem + 0.65 * var(--ratio));
+  --token-size-00: calc(0.8125rem + 0.8125 * var(--ratio));
+  --token-size-0: calc(1rem + 1 * var(--ratio));
+  --token-size-1: calc(1.33rem + 1.33 * var(--ratio));
+  --token-size-2: calc(1.78rem + 1.78 * var(--ratio));
+  --token-size-3: calc(2.37rem + 2.37 * var(--ratio));
+  --token-size-4: calc(3.16rem + 3.16 * var(--ratio));
+  --token-size-5: calc(4.21rem + 4.21 * var(--ratio));
 
   /* Font families */
   --monospace: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;

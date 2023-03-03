@@ -1,7 +1,7 @@
 ---
 title: Journey from Gatsby to SvelteKit
 date: 2021-04-07T00:00:00.000Z
-tags: 
+tags:
   - svelte
 layout: layouts/post.njk
 description: >-
@@ -24,7 +24,7 @@ For the last few weeks or months, I was getting restless about everything: my wo
 
 ## Working with (S)CSS in SvelteKit
 
-I am a big fan of CSS and have a strong [opinion](https://bace.crinkles.dev) on how it should be applied to websites/projects. My setup allows me to extract general layout patterns and combine them with general utility-first CSS. When I read about the 'scoped' styles of Svelte I got a bit anxious. Would my way of working deviate too much from Svelte(Kit)?
+I am a big fan of CSS and have a strong [opinion](https://feo.crinkles.dev) on how it should be applied to websites/projects. My setup allows me to extract general layout patterns and combine them with general utility-first CSS. When I read about the 'scoped' styles of Svelte I got a bit anxious. Would my way of working deviate too much from Svelte(Kit)?
 
 But quickly it hit me. The combination could work perfectly. It could allow me to create global `layout` and `utility` CSS, and use the 'scoped' CSS of Svelte to add styles specific to components or pages. The styles defined in the Svelte component could replace the entire `block` directory of my framework. This means that components would look something like shown below. On the `div` instead of the `header` tag, you see various utility classes applied, but also the defined `.inner` class.
 

@@ -47,6 +47,12 @@ function getAllTags(collection, count = false) {
     .map((tag) => (count ? tag : tag[0]));
 }
 
+// get the tags
+function getTagIndex(collection, tag) {
+  const tags = getAllTags(collection);
+  return tags.indexOf(tag);
+}
+
 // Group by year as the njk groupby is insufficient
 function groupByYear(collection) {
   const grouped = {};
@@ -64,5 +70,6 @@ module.exports = {
   head,
   getPostHeaders,
   getAllTags,
+  getTagIndex,
   groupByYear,
 };

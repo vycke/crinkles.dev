@@ -5,8 +5,8 @@
   --color-surface-0: var(--token-color-grey-0);
   --color-surface-1: var(--token-color-grey-1);
   --color-border-0: var(--token-color-grey-3);
-  --color-primary: var(--token-color-brand-0);
-  --color-accent: var(--token-color-brand-3);
+  --color-primary: var(--token-color-brand-3);
+  --color-accent: var(--token-color-brand-4);
 }
 
 @media (prefers-color-scheme: dark) {

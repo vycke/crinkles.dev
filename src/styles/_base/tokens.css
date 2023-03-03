@@ -42,8 +42,7 @@
   /* Font families */
   --monospace: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
   --serif: ui-serif, Georgia, Cambria, serif;
-  --sans-serif: "iAWriter Quattro", system-ui, -apple-system, blinkmacsystemfont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --sans-serif: "iAWriter Quattro", var(--monospace);
 
   /* Utilties */
   --token-radius-0: 0.25rem;

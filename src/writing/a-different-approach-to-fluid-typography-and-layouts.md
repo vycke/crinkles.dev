@@ -30,20 +30,24 @@ The screen sizes for scaling are managed in the second `clamp()` property. What 
 Note: Utopia produces comments showing all settings for the generated code that you can put into your own code. This makes it more maintainable. 
 :::
 
-## A different approach you can use today
+## A different mathematical approach
 
 ```
-         min(100vw, <max>) - <min>
-ratio = ---------------------------
-             <max> - <min>
+         min(screen, max) - min
+ratio = ------------------------
+              max - min
 ```
 
 
 ```
-size = <base> + (<b-max> - <base>) × <ratio>
+size = min + (max - min) × ratio
 ```
 
-You can make everything scale the same, by replacing `(<b-max> - <base>)` with `<base> × <scale>`, where `<scale> = 0.2` for instance. 
+If you want to scale everything the same, e.g. scale it maximum of 20%, you can do:
+
+```
+size = min + 1.2 × min × ratio
+```
 
 ## The actual CSS implementation
 
@@ -53,6 +57,7 @@ Few points of attention about `calc()`:
 - It requires one of the half of a multiply to be unit-less
 - It returns in `px`. 
 
+First define the parameters
 
 ```css
 :root {
@@ -60,6 +65,12 @@ Few points of attention about `calc()`:
 	--scale: 3.2; /* unitless */
 	--min: 320; /* unitless */
 	--max: 1240; /* unitless */
+}
+```
+
+Calculate the ratio
+```css
+:root {
 	--ratio: calc(
 		var(--scale) *
 		(min(100vw, var(--max) * 1px) - var(--min) * 1px) /
@@ -78,9 +89,8 @@ With this, we can generate fluid typography and layout sizes.
 }
 ```
 
-::: info
-`calc()` requires the bottom half of a divide to be unit-less. This means that in this calculation `<max> - <min>` should be unit-less.
-:::
+## Downsides to this approach
+- The scaling is in PX not in REM.
 
 ## Wrapping up
 Both have up- and downsides. 

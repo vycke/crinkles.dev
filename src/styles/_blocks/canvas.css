@@ -1,8 +1,13 @@
 .circle {
-  --size: max(700px, 60vw);
   position: absolute;
-  width: var(--size);
-  top: calc(-0.35 * var(--size));
-  right: calc(-0.25 * var(--size));
+  width: 60vw;
+  top: calc(-0.35 * 60vw);
+  right: calc(-0.25 * 60vw);
   z-index: -1;
+}
+
+@media (max-width: 640px) {
+  .circle {
+    display: none;
+  }
 }

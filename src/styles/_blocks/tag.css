@@ -21,7 +21,7 @@
 
 .tag::before {
   content: "#";
-  transition: none;
+  transition: color 300ms;
   color: var(--color);
 }
 

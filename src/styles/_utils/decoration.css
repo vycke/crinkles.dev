@@ -2,22 +2,6 @@
   border-bottom: 1px solid var(--color-border-0);
 }
 
-.border-l {
-  border-left: 3px solid var(--color-primary);
-}
-
-.border-t {
-  border-top: 3px solid var(--color-primary);
-}
-
-.border-r {
-  border-right: 3px solid var(--color-primary);
-}
-
-.border-b {
-  border-bottom: 3px solid var(--color-primary);
-}
-
 .overline {
   position: relative;
 }
@@ -39,13 +23,5 @@
 
 .slash::before {
   content: "//";
-  color: var(--color-accent);
-}
-
-.radius-0 {
-  border-radius: var(--token-radius-0);
-}
-
-.radius-1 {
-  border-radius: var(--token-radius-1);
+  color: var(--color-primary);
 }

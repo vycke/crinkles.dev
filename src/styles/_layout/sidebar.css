@@ -24,3 +24,7 @@ NOTE: can be combined with the .gap- class. */
   /* wraps when content becomes less than 50% */
   min-inline-size: var(--sidebar-content, 50%);
 }
+
+.--content-wide {
+  --sidebar-content: 65%;
+}

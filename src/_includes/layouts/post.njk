@@ -6,7 +6,7 @@
   <h1 class="overline">{{ title }}</h1>
   {% include "components/tag-list.njk" %}
   <time datetime="{{ page.date }}" class="size-00 text-color-1 slash | separator pb-2 mb-2">{{ page.date | readableDate }}</time>
-  <div class="relative | sidebar --right --width-00 --content-wide --gap-3 | fade-in">
+  <div class="relative | sidebar --right --width-00 --gap-3 | fade-in">
     <article class="post | center --width-3 | stack --gap-2 | separator pb-3">
       {{ content | safe }}
     </article>

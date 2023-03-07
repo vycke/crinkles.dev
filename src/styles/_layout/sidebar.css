@@ -2,15 +2,13 @@
 Allows you to set one of the two columns to a controllable size (-left, -right)
 and horizontal/vertical gap.
 NOTE: can be combined with the .gap- class. */
-.sidebar.--left,
-.sidebar.--right {
+.sidebar {
   display: flex;
   flex-wrap: wrap;
   gap: var(--layout-gap);
 }
 
-.sidebar.--left > *,
-.sidebar.--right > * {
+.sidebar > * {
   flex-basis: var(--layout-width, 0);
   flex-grow: 1;
   min-width: min(100%, var(--layout-width));
@@ -21,10 +19,6 @@ NOTE: can be combined with the .gap- class. */
   flex-basis: 0;
   flex-grow: 999;
 
-  /* wraps when content becomes less than 50% */
-  min-inline-size: var(--sidebar-content, 50%);
-}
-
-.--content-wide {
-  --sidebar-content: 65%;
+  /* wraps when content becomes less than 60% */
+  min-inline-size: var(--content, 60%);
 }

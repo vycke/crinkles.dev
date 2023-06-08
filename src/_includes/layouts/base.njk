@@ -7,7 +7,7 @@
     <meta name="generator" content="Eleventy" />
     <meta name="color-scheme" content="light dark" />
     <meta name="msapplication-TileColor" content="#F9FAFB" />
-		<meta name="theme-color" content="#F9FAFB" />
+	<meta name="theme-color" content="#F9FAFB" />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -18,22 +18,20 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
     <link rel="preload" href="/fonts/iAWriterQuattroS-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/iAWriterQuattroS-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    {# <link rel="preload" href="/fonts/iAWriterQuattroS-Italic.woff2" as="font" type="font/woff2" crossorigin> #}
-    {# <link rel="preload" href="/fonts/iAWriterQuattroS-BoldItalic.woff2" as="font" type="font/woff2" crossorigin> #}
     <!-- page data -->
     <title>{{ title or metadata.title }} • Crinkles</title>
     <meta name="description" content="{{ description or metadata.description }}" />
     <meta name="keywords" content="{{ metadata.keywords }}" />
-	  <meta name="content" content="{{ metadata.keywords }}" />
-	  <meta name="property" content="{{ metadata.keywords }}" />
+	<meta name="content" content="{{ metadata.keywords }}" />
+	<meta name="property" content="{{ metadata.keywords }}" />
     <!-- twitter -->
     <meta name="twitter:creator" content="{{ metadata.social.twitter}}" />
-	  <meta name="twitter:site" content="{{ metadata.social.twitter}}" />
+	<meta name="twitter:site" content="{{ metadata.social.twitter}}" />
     <meta name="twitter:title" content="{{ title or metadata.title }}" />
     <meta name="twitter:description" content="{{ description or metadata.description }}" />
     <meta name="twitter:image" content="{{ metadata.social.img }}" />
-	  <meta name="twitter:card" content="summary" />
-	  <!-- OG -->
+	<meta name="twitter:card" content="summary" />
+	<!-- OG -->
     <meta property="og:title" content="{{ title or metadata.title }}" />
     <meta property="og:description" content="{{ description or metadata.description }}" />
     <meta property="og:image" content="{{ metadata.social.img }}" />

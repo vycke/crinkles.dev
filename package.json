@@ -15,7 +15,7 @@
   "author": "Kevin Pennekamp<github@crinkles.dev>",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.3",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "lightningcss-cli": "^1.18.0",
     "markdown-it-anchor": "^8.6.6",

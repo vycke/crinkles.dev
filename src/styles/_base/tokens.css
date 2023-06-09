@@ -42,8 +42,8 @@
 
   /* Font families */
   --monospace: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
-  --serif: ui-serif, Georgia, Cambria, serif;
-  --sans-serif: "iAWriter Quattro", var(--monospace);
+  --serif: Georgia, Cambria, serif;
+  --sans-serif: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   /* Utilties */
   --token-radius-0: 0.25rem;

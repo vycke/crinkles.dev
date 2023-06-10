@@ -1,3 +1,10 @@
+.canvas {
+    overflow-x: hidden;
+    width: 100vw;
+    position: absolute;
+    height: 100%;
+}
+
 .circle {
   position: absolute;
   width: 60vw;

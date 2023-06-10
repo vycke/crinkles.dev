@@ -4,7 +4,7 @@
   --saturation: 12%;
 
   --token-color-grey-0: hsl(var(--hue), var(--saturation), 99%);
-  --token-color-grey-1: hsl(var(--hue), var(--saturation), 92%);
+  --token-color-grey-1: hsl(var(--hue), var(--saturation), 90%);
   --token-color-grey-2: hsl(var(--hue), var(--saturation), 70%);
   --token-color-grey-3: hsl(var(--hue), var(--saturation), 40%);
   --token-color-grey-4: hsl(var(--hue), var(--saturation), 20%);

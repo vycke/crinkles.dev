@@ -1,0 +1,29 @@
+/*  NOTE: Can be combined with flex based utilities (e.g. .gap-00)
+    Layout pattern that allows all to move from horizontal to vertical at a
+    specific breakpoint */
+
+/*  NOTE: :has is not supported by default in Firefox, it is adviced to use
+    the --amount-x helper classes as a method to support older browsers still */
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-gap, 0);
+}
+
+/* default assumes 2 elements */
+.switcher > * {
+  flex-basis: calc(
+    (var(--layout-width, 0) * var(--layout-amount, 2) - 100%) * 999
+  );
+  flex-grow: 1;
+}
+
+/* uses the :has selector to set the number of children */
+.switcher:has(> *:nth-child(3)) {
+  --layout-amount: 3;
+}
+
+.switcher:has(> *:nth-child(4)) {
+  --layout-amount: 4;
+}

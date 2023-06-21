@@ -5,10 +5,12 @@
   {% if Pdraft %} <span class="bg-primary text-color-0 size-2 pl-0 pr-0">DRAFT</span> {% endif %}
   <h1 class="overline">{{ title }}</h1>
   {% include "components/tag-list.njk" %}
-  <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash | separator pb-2 mb-2">{{ page.date | readableDate }}</time>
+  <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash | mb-2">{{ page.date | readableDate }}</time>
+
   <div class="relative | sidebar --right --width-00 --gap-3 | fade-in">
-    <article class="post | center --width-3 | stack --gap-2 | separator pb-3">
+    <article class="post | center --width-3 | stack --gap-2 | pb-3">
       {{ content | safe }}
+      {% include "components/separator.svg" %}
     </article>
 
     {% set toc = content | getPostHeaders %}
@@ -58,7 +60,6 @@
       else el.parentElement.dataset.active = false;
     });
   });
-  // Track all sections that have an `id` applied
   document.querySelectorAll('h2[id]').forEach((header) => {
     observer.observe(header);
   });

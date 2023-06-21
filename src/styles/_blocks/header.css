@@ -1,9 +1,0 @@
-header a {
-  display: block;
-}
-header svg {
-  transition: all 450ms;
-}
-header svg:hover {
-  transform: rotate(360deg);
-}

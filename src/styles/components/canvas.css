@@ -1,0 +1,21 @@
+.canvas {
+  overflow-x: hidden;
+  width: 100vw;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  width: 60vw;
+  top: calc(-0.35 * 60vw);
+  right: calc(-0.25 * 60vw);
+  z-index: -1;
+}
+
+@media (max-width: 640px) {
+  .circle {
+    display: none;
+  }
+}

@@ -1,0 +1,51 @@
+.tag {
+  --tag-color: var(--color-primary);
+  --tag-bg: var(--color-surface-1);
+  --tag-hash-color: var(--tag-color);
+
+  background-color: var(--tag-bg);
+  padding: 0.1rem var(--token-size-000);
+  border-radius: var(--token-radius-0);
+  transition: all 300ms;
+  font-family: var(--monospace);
+}
+
+.tag a {
+  text-decoration: none;
+  color: var(--color-foreground-0);
+}
+
+.tag:hover {
+  --tag-bg: var(--tag-color);
+  --tag-hash-color: var(--color-foreground-0);
+}
+
+.tag::before {
+  content: "#";
+  transition: color 300ms;
+  color: var(--tag-hash-color);
+}
+
+.tag[data-index="0"],
+.tag[data-index="4"],
+.tag[data-index="8"] {
+  --tag-color: var(--token-color-brand-1);
+}
+
+.tag[data-index="1"],
+.tag[data-index="5"],
+.tag[data-index="9"] {
+  --tag-color: var(--token-color-brand-2);
+}
+
+.tag[data-index="2"],
+.tag[data-index="6"],
+.tag[data-index="10"] {
+  --tag-color: var(--token-color-brand-3);
+}
+
+.tag[data-index="3"],
+.tag[data-index="7"],
+.tag[data-index="11"] {
+  --tag-color: var(--token-color-brand-4);
+}

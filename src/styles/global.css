@@ -22,7 +22,7 @@ a:visited {
   text-decoration-color: var(--color-foreground-1);
 }
 
-a:hover {
+a:where(:hover, :focus) {
   color: var(--color-primary);
   text-decoration-color: var(--color-primary);
 }

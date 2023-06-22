@@ -15,7 +15,7 @@
 
     {% set toc = content | getPostHeaders %}
     {% if toc | length %}
-    <nav class="toc | sticky | stack --gap-000 self-start">
+    <nav class="toc | sticky | stack --gap-000 self-start" aria-label="Table of contents">
     <span class="size-00 uppercase sans-serif bold">Table of contents</span>
       <ul class="content-table" role="list">
         {% for header in toc %}

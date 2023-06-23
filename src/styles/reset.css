@@ -60,10 +60,10 @@ ol[class] {
   font: inherit;
 }
 
-/* Removes outlines for mouse users
+/* Removes outlines for mouse users */
 :focus:not(:focus-visible) {
   outline: none;
-} */
+}
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

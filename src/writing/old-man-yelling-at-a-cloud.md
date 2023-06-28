@@ -20,6 +20,10 @@ Yesterday it was brought to [my attention](https://fediverse.zachleat.com/@zachl
 
 This all feels really conflicting. New features that are interconnected with ‘not-yet-finished’ features are the reason for canary releases. But if NextJS depends on one of these features, it means it depends on ‘not-yet-finished’ features. Otherwise, the feature NextJS is using is not interconnected, and just could be released to the stable version of React. This is just a dangerous move when you don’t have documentation, and you know most users don’t want this.  
 
+:::
+The last stable release of React, version 18.2, was released in June 2022. A year ago since this article. In the meantime, NextJS 13 and recently 13.4 have been released. 
+:::
+
 ## Unfair competition?
 I cannot help but feel two main things about this situation. This feels like unfair competition for React framework builders. NextJS can use undocumented canary features. Without close collaboration, others are not able to use these as long as the documentation is not updated. It does not help that NextJS is one of the few frameworks officially [pushed](https://react.dev/learn/start-a-new-react-project) by React itself. 
 

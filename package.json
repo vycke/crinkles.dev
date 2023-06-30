@@ -10,7 +10,7 @@
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "start": "eleventy --serve & yarn css:watch",
     "build": "npx @11ty/eleventy && yarn css:build",
-    "audit": "npx @sandworm/audit@latest",
+    "audit": "npx @sandworm/audit@latest --fail-on='[\"*.critical\", \"*.high\"]'",
     "format": "npx prettier --write --ignore-unknown"
   },
   "keywords": [],

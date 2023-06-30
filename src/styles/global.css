@@ -22,7 +22,8 @@ a:visited {
   text-decoration-color: var(--color-foreground-1);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--color-primary);
   text-decoration-color: var(--color-primary);
 }

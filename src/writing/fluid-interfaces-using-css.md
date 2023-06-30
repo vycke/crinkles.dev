@@ -11,7 +11,7 @@ description: >-
 ---
 
 ::: info
-*Update 02-03-2023*\
+_Update 02-03-2023_\
 This article is archived and replaced by a [newer article](writing/a-different-approach-to-fluid-typography-and-layouts/).
 :::
 

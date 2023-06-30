@@ -31,8 +31,6 @@ On the highest level of your CSS, you define a list like the one below. This res
 	--index: 2;
 }
 
-... 
-
 :nth-last-child(1) {
 	--rev-index: 1;
 }

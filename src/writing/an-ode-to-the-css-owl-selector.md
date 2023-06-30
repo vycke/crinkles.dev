@@ -1,7 +1,7 @@
 ---
 title: An ode to the CSS owl selector
 date: 2022-03-05T00:00:00.000Z
-tags: 
+tags:
   - css
   - trick
 layout: layouts/post.njk

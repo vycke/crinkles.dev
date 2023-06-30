@@ -1,0 +1,14 @@
+{
+  "audit": {
+    "includeDev": false,
+    "maxDepth": 10,
+    "minDisplayedSeverity": "high",
+    "licensePolicy": {
+      "high": ["cat:Network Protective", "cat:Strongly Protective"],
+      "moderate": ["cat:Weakly Protective"]
+    },
+    "loadDataFrom": "registry",
+    "outputPath": "sandworm",
+    "failOn": ["*.critical", "*.high"]
+  }
+}

@@ -17,9 +17,9 @@ The generated code is hard to read and manage. At least, I find it hard to read.
 
 ```css
 :root {
-	--step--1: clamp(0.75rem, calc(0.7rem + 0.26vw), 0.9rem);
-	--step-0: clamp(1rem, calc(0.93rem + 0.35vw), 1.2rem);
-	--step-1: clamp(1.33rem, calc(1.24rem + 0.46vw), 1.6rem);
+  --step--1: clamp(0.75rem, calc(0.7rem + 0.26vw), 0.9rem);
+  --step-0: clamp(1rem, calc(0.93rem + 0.35vw), 1.2rem);
+  --step-1: clamp(1.33rem, calc(1.24rem + 0.46vw), 1.6rem);
 }
 ```
 
@@ -43,7 +43,7 @@ f = b + a * s
 
 ```css
 root: {
-	--step-0: clamp(f1, calc(b + a * s), f2);
+  --step-0: clamp(f1, calc(b + a * s), f2);
 }
 ```
 
@@ -83,15 +83,15 @@ Note that in the above function, we still assume the unit-less `f1` and `f2` in 
 
 ```css
 root: {
-	--f1: 16;
-	--f2: 20;
-	--s1: 320;
-	--s2: 1240;
+  --f1: 16;
+  --f2: 20;
+  --s1: 320;
+  --s2: 1240;
 
-	--a: calc((var(--f2) - var(--f1)) / (var(--s2) - var(--s1)));
-	--b: calc(var(--f1) - var(--a) * var(--s1));
+  --a: calc((var(--f2) - var(--f1)) / (var(--s2) - var(--s1)));
+  --b: calc(var(--f1) - var(--a) * var(--s1));
 
-	--step-0: clamp(1rem, calc(var(--b) + var(--a) * 100vw), 1.25rem);
+  --step-0: clamp(1rem, calc(var(--b) + var(--a) * 100vw), 1.25rem);
 }
 ```
 
@@ -119,10 +119,10 @@ When we use the same basic parameters as before, we can calculate the `ratio` va
 
 ```css
 root: {
-	--s1: 320;
-	--s2: 1240;
+  --s1: 320;
+  --s2: 1240;
 
-	--ratio: calc((min(100vw, 1240px) - 320px) / (1240 - 320));
+  --ratio: calc((min(100vw, 1240px) - 320px) / (1240 - 320));
 }
 ```
 
@@ -130,10 +130,10 @@ You can see that we multiply the parameters with `1px` on the left-hand side. Th
 
 ```css
 :root {
-	--f1: 16;
-	--f2: 20;
+  --f1: 16;
+  --f2: 20;
 
-	--step-0: calc(1rem + 4 * var(--ratio));
+  --step-0: calc(1rem + 4 * var(--ratio));
 }
 ```
 

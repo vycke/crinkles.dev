@@ -9,7 +9,9 @@
     "css:watch": "yarn css:build && onchange 'src/**/*.css' -- yarn css:build",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "start": "eleventy --serve & yarn css:watch",
-    "build": "npx @11ty/eleventy && yarn css:build"
+    "build": "npx @11ty/eleventy && yarn css:build",
+    "audit": "npx @sandworm/audit@latest",
+    "format": "npx prettier --write --ignore-unknown"
   },
   "keywords": [],
   "author": "Kevin Pennekamp<github@crinkles.dev>",
@@ -17,7 +19,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "husky": "^8.0.3",
     "lightningcss-cli": "^1.18.0",
+    "lint-staged": "^13.2.3",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-container": "^3.0.0",
     "markdown-it-shiki": "^0.7.2",
@@ -26,5 +30,13 @@
   "browserslist": [
     "> 0.25%",
     "not IE 11"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --allow-empty"
+    }
+  },
+  "lint-staged": {
+    "**/*": ["yarn format", "yarn audit"]
+  }
 }

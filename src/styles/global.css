@@ -37,12 +37,15 @@ a:focus {
 
 h1 {
   font-size: var(--token-size-2);
+  font-family: var(--serif);
 }
 h2 {
   font-size: var(--token-size-1);
+  font-family: var(--serif);
 }
 h3 {
   font-size: var(--token-size-0);
+  font-family: var(--serif);
 }
 
 /* text */

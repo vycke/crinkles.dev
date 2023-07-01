@@ -1,6 +1,7 @@
 @layer reset, tokens, global, layout, utilities, components;
 
 @import "reset.css" layer(reset);
+@import "fonts.css" layer(tokens);
 @import "tokens.css" layer(tokens);
 @import "global.css" layer(global);
 @import "layout/_layout.css" layer(layout);

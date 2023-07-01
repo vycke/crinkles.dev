@@ -1,0 +1,20 @@
+<header class="center --width-5 | cluster justify-between | p-1 mb-0">
+  <a href="/" aria-label="Logo that redirects to the homepage" class="no-decoration">
+    <svg height="36" viewBox="0 0 76 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M43 0.573593L53.6066 11.1802L43 21.7868L53.6066 32.3934L64.2132 21.7868L74.8198 32.3934L64.2132 43L74.8198 53.6066L64.2132 64.2132L53.6066 53.6066L43 64.2132L53.6066 74.8198L43 85.4264L0.573547 43L43 0.573593ZM21.7868 43L32.3934 53.6066L43 43L32.3934 32.3934L21.7868 43Z"
+            fill="var(--color-foreground-0)"
+        />
+    </svg>
+  </a>
+
+  <nav aria-label="Main site navigation">
+    <ul class="list-group cluster --gap-1">
+      <li><a href="/writing">writing</a></li>
+      <li><a href="/projects">my work</a></li>
+      <li><a href="/about">about</a></li>
+    </ul>
+  </nav>
+</header>

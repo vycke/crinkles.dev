@@ -42,7 +42,7 @@
 
   /* Font families */
   --monospace: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
-  --serif: Georgia, Cambria, serif;
+  --serif: "PT Serif", Georgia, Cambria, serif;
   --sans-serif: "PT Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 

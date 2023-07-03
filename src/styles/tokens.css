@@ -25,8 +25,8 @@
   --token-bp-5: calc(var(--token-bp-4) * 1.33);
 
   /* Text scaling */
-  /*  Value between 0px and 5px, equal to 20% increase of 1rem*/
-  --ratio: calc(4 * (min(100vw, 1240px) - 320px) / 960);
+  /* Value between 0px and 5px, equal to 20% increase of 1rem */
+  --ratio: calc(4 * (min(100vw, 1240px) - 320px) / 920);
 
   /* Create CSS variables around spacing, font-sizes etc. */
   /* Scale of 1.333 */

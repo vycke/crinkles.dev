@@ -40,7 +40,7 @@ You can see this approach in its full glory in my SCSS framework [Feo CSS](https
 :::
 
 ## Migrating back to CSS
-I came to realize that I was using SCSS-specific features less and less. Of course, I still use it to generate classes. But, in most projects, the design tokens remain stable rather quickly from the start. In addition, there are only so many utility classes I need. Although my [approach]() is utility focused, it is not utility-first. I write bespoke CSS more often. In addition, there are only so many token-based utility functions I use.  
+I came to realize that I was using SCSS-specific features less and less. Of course, I still use it to generate classes. But, in most projects, the design tokens remain stable rather quickly from the start. In addition, there are only so many utility classes I need. Although my [approach](/writing/my-css-architecture/) is utility focused, it is not utility-first. I write bespoke CSS more often. In addition, there are only so many token-based utility functions I use.  
 
 Migrating to CSS would require a *one-off* investment. All tokens need to be converted to CSS custom properties instead of SCSS variables. In addition, all token-based utility functions need to be written one by one. Or more specifically, a lot of copy-pasting. This sounds like a tedious job, and it is. 
 
@@ -116,5 +116,5 @@ Would I recommend this move to everybody? No. It is highly dependent on your way
 I enjoyed the entire migration and tend to stick with it. CSS has become powerful enough to not require different tools or languages anymore. The resulting code is maintainable and risk-free of breaking tools.
 
 ::: info
-If you are curious about the actual changes, compare [Feo CSS](https://github.com/kevtiq/feo-css) and the [`styles`](https://github.com/kevtiq/crinkles.dev/tree/main/src/styles) directory of this website. The previous version of this website used Feo CSS before the migration.  
+If you are curious about the actual changes, compare [Feo CSS](https://github.com/kevtiq/feo-css) and the [/styles](https://github.com/kevtiq/crinkles.dev/tree/main/src/styles) directory of this website. The previous version of this website used Feo CSS before the migration.  
 :::

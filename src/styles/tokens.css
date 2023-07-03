@@ -26,7 +26,7 @@
 
   /* Text scaling */
   /*  Value between 0px and 5px, equal to 20% increase of 1rem*/
-  --ratio: calc(5 * (min(100vw, 1240px) - 320px) / 960);
+  --ratio: calc(4 * (min(100vw, 1240px) - 320px) / 960);
 
   /* Create CSS variables around spacing, font-sizes etc. */
   /* Scale of 1.333 */

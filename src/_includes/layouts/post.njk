@@ -4,10 +4,10 @@
 <main class="center --width-4 pl-1 pr-1 relative | flex-grow | flex-col --gap-000 | mb-3">
   {% if Pdraft %} <span class="bg-primary text-color-0 size-2 pl-0 pr-0">DRAFT</span> {% endif %}
   <h1 class="overline">{{ title }}</h1>
+  <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash">{{ page.date | readableDate }}</time>
   {% include "components/tag-list.njk" %}
-  <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash | mb-2">{{ page.date | readableDate }}</time>
 
-  <div class="relative | sidebar --right --width-00 --gap-3 | fade-in">
+  <div class="relative | sidebar --right --width-00 --gap-3 | fade-in mt-0">
     <article class="post | center --width-3 | stack --gap-2 | pb-3">
       {{ content | safe }}
       {% include "components/separator.svg" %}

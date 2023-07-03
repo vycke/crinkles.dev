@@ -39,13 +39,13 @@
 	{% if previousPost %}
     <div class="flex-col --gap-none items-start">
       <span class="text-color-1 uppercase no-decoration">← Previous</span>
-      <h3 class="size-1"><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></h3>
+      <h3 class="size-1 sans-serif"><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></h3>
     </div>
 	{% endif %}
   {% if nextPost %}
     <div class="flex-col --gap-none items-end justify-center | text-right">
       <span class="text-color-1 uppercase no-decoration">Next →</span>
-      <h3 class="size-1"><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></h3>
+      <h3 class="size-1 sans-serif"><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></h3>
     </div>
 	{% endif %}
 </aside>

@@ -41,10 +41,9 @@
   --token-size-5: calc(4.21rem + 4.21 * var(--ratio));
 
   /* Font families */
-  --monospace: Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace;
-  --serif: "PT Serif", Georgia, Cambria, serif;
-  --sans-serif: "PT Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --monospace: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  --sans-serif: "PT Sans", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   /* Utilties */
   --token-radius-0: 0.25rem;

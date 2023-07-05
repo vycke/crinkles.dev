@@ -32,6 +32,7 @@ a:focus {
 :where(h1, h2, h3) {
   font-family: var(--sans-serif);
   width: 100%;
+  font-weight: 600;
   line-height: 1.2;
 }
 

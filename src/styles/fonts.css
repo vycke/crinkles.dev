@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'PT Serif';
-    font-weight: 700;
-    font-display: swap;
-    src: url("/fonts/pt-serif-v11-latin-700.woff2") format('woff2');
-}
-
-@font-face {
     font-family: 'PT Sans';
     font-weight: 400;
     font-syle: normal;

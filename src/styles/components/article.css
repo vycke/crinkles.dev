@@ -13,7 +13,7 @@ article > * {
 }
 
 article > * + * {
-  margin-block-start: var(--layout-gap, 0);
+  margin-block-start: var(--token-size-2);
 }
 
 article * + h2 {
@@ -93,20 +93,20 @@ article .info::before {
 }
 
 /* table of contents */
-.toc {
+.table-of-contents {
   top: var(--token-size-2);
 }
 
-.toc ul {
+.table-of-contents ul {
   list-style: none;
   padding-left: 0;
 }
 
-.toc ul li {
+.table-of-contents ul li {
   line-height: 1;
 }
 
-.toc a:hover {
+.table-of-contents a:hover {
   color: var(--color-primary);
 }
 

@@ -8,18 +8,18 @@
   {% include "components/tag-list.njk" %}
 
   <div class="relative | sidebar --right --width-00 --gap-3 | fade-in mt-0">
-    <article class="post | center --width-3 | stack --gap-2 | pb-3">
+    <article class="post | center --width-3 | pb-3">
       {{ content | safe }}
       {% include "components/separator.svg" %}
     </article>
 
     {% set toc = content | getPostHeaders %}
     {% if toc | length %}
-    <nav class="toc | sticky | stack --gap-000 self-start" aria-label="Table of contents">
-    <span class="size-00 uppercase sans-serif bold">Table of contents</span>
-      <ul class="content-table" role="list">
+    <nav class="table-of-contents | sticky | flex-col --gap-000 self-start" aria-label="Table of contents">
+      <span class="size-00 uppercase sans-serif bold">Table of contents</span>
+      <ul class="flex-col --gap-00" role="list">
         {% for header in toc %}
-        <li class="pb-00 lh-0" data-active="true">
+        <li data-active="true">
           <a href="#{{ header.id }}" class="size-00 no-decoration text-color-0">
             {{ header.title }}
           </a>
@@ -30,7 +30,6 @@
     {% endif %}
   </div>
 </main>
-
 
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}

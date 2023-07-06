@@ -1,11 +1,13 @@
 ---
-title: Oops! Not Found
+
 permalink: 404.html
 layout: layouts/page.njk
 width: 3
 ---
-
-<p
-  >This is where you should tell the user how to find their content. Maybe on
-  the <a href="/">home page?</a></p
->
+<div class="mb-3 flex">
+    <h1 class="size-5 text-center mb-1">🙈🙊🙊</h1>
+    <p class="mb-3">It seems we can't find the page you are looking for. Maybe go back to <a href="/">the homepage</a>, or start reading one of these articles.</p>
+    {% include "components/separator.svg" %}
+</div>
+{% set posts =  collections.posts | reverse | head(5) %}
+{% include "components/post-list.njk" %}

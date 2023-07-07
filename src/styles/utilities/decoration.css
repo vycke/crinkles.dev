@@ -28,3 +28,7 @@
   content: "//";
   color: var(--color-primary);
 }
+
+.shadow {
+  box-shadow: var(--token-elevation-0);
+}

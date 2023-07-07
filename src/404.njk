@@ -6,8 +6,23 @@ width: 3
 ---
 <div class="mb-3 flex">
     <h1 class="size-5 text-center mb-1">🙈🙊🙊</h1>
-    <p class="mb-3">It seems we can't find the page you are looking for. Maybe go back to <a href="/">the homepage</a>, or start reading one of these articles.</p>
+    <p class="mb-3">It seems we can't find the page you are looking for. Maybe go back to the <a href="/">homepage</a>.</p>
     {% include "components/separator.svg" %}
 </div>
-{% set posts =  collections.posts | reverse | head(5) %}
-{% include "components/post-list.njk" %}
+
+{% set tags = collections.posts | getAllTags | head(5) %}
+{% include "components/tag-list.njk" %}
+
+{% set posts =  collections.posts | reverse | head(3) %}
+
+<ul role="list" class="list-group | flex-col --gap-2">
+    {% for post in posts %}
+        <li role="listitem" class="bg-surface-1 p-0 shadow flex-col --gap-none click-area">
+            <time date="{{ post.data.date }}" class="meta-info">{{ post.data.date | readableDate }}</time>
+            <h2>
+                <a href="{{ post.page.url }}">{{ post.data.title }}</a>
+            </h2>
+            <span class="text-color-1 size-0">{{ post.data.description }}</span>
+        </li>
+    {% endfor %}
+</ul>

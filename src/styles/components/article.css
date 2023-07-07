@@ -32,7 +32,7 @@ article.post .info {
 
 article.post pre,
 article.post .info {
-  box-shadow: var(--token-elevation-0);
+  box-shadow: var(--token-elevation-1);
   border-radius: var(--token-radius-0);
 }
 

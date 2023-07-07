@@ -1,4 +1,4 @@
-<ul role="list" class="list-group | flex-col --gap-2" role="list">
+<ul role="list" class="list-group | flex-col --gap-2">
   {% for post in posts %}
     <li class="flex-col --gap-none click-area" role="listitem">
       <time date="{{ post.data.date }}" class="meta-info">{{ post.data.date | readableDate }}</time>

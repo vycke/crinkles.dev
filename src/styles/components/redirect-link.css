@@ -1,3 +1,10 @@
+/**
+ * REDIRECT LINKS
+ *
+ * Links with a clear intention to move users to a different page (e.g.
+ * overview page).
+ */
+
 .redirect,
 .redirect:active {
   color: var(--color-foreground-0);
@@ -16,11 +23,11 @@
   display: inline-block;
   transition: all 0.25s;
   position: absolute;
-  right: -20px;
+  right: -1.25em;
   top: 0.05em;
 }
 
 .redirect:hover::after {
-  right: -28px;
+  right: -1.625em;
   font-weight: 600;
 }

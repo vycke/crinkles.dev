@@ -109,7 +109,7 @@ export default function Button() {
 }
 ```
 
-For both the type and state of components, I advise using `data-*` attributes, as mentioned. These allow a flexible and maintainable way to build your components. The `~=` used in the snippit below allows CSS to check if the value (e.g. `touched`) exists in a space-separated list of strings when used. With the snippit below, it possible to have `data-state="touched error"` on an input field, and have both style definitions applied. The `i` at the end ensures everything is evaluated without case-sensitivity. These attributes can also be combined with CSS Modules.
+For both the type and state of components, I advise using `data-*` attributes, as mentioned. These allow a flexible and maintainable way to build your components. The `~=` used in the snippet below allows CSS to check if the value (e.g. `touched`) exists in a space-separated list of strings when used. With the snippet below, it possible to have `data-state="touched error"` on an input field, and have both style definitions applied. The `i` at the end ensures everything is evaluated without case-sensitivity. These attributes can also be combined with CSS Modules.
 
 ```scss
 .input { ... }

@@ -1,3 +1,4 @@
+/** fade-in animation on load */
 .fade-in {
   animation: fade-in, slide-in-up;
   animation-timing-function: cubic-bezier(0.5, -0.9, 0.1, 1.5);
@@ -16,5 +17,29 @@
 @keyframes slide-in-up {
   from {
     transform: translateY(50px);
+  }
+}
+
+/** Wiggle animation on hover */
+.wiggle:hover {
+  animation: wiggle 0.4s;
+  animation-iteration-count: 1;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(60deg);
+  }
+  60% {
+    transform: rotate(-45deg);
+  }
+  80% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

@@ -1,0 +1,27 @@
+/**
+ * INFO BOX
+ *
+ * General style of the info-box primarily used in articles
+ */
+
+.info {
+  box-shadow: var(--token-elevation-1);
+  border-radius: var(--token-radius-0);
+  padding: var(--token-size-0) var(--token-size-1);
+  background-color: var(--color-surface-1);
+  border: 3px solid var(--color-primary);
+  font-size: var(--token-size-00);
+  position: relative;
+}
+
+.info::before {
+  content: "<aside />";
+  position: absolute;
+  display: block;
+  top: -15px;
+  font-size: var(--token-size-00);
+  color: var(--color-surface-0);
+  background-color: var(--color-primary);
+  border-radius: var(--token-radius-0);
+  padding: 0px 6px;
+}

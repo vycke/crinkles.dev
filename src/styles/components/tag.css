@@ -1,3 +1,11 @@
+/**
+ * TAG
+ *
+ * --tag-color: text color and hover background color
+ * --tag-bg: background color in inactive state
+ * --tag-hash-color: color of the # char
+ */
+
 .tag {
   --tag-color: var(--color-primary);
   --tag-bg: var(--color-surface-1);

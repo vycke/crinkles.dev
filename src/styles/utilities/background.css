@@ -10,7 +10,3 @@
 .hover\:bg-primary:hover {
   background-color: var(--color-primary);
 }
-.bg-accent,
-.hover\:bg-accent:hover {
-  background-color: var(--color-accent);
-}

@@ -20,7 +20,7 @@ width: 5
       <span class="text-color-1">Search by topic..</span>
       {% set tags = collections.posts | getAllTags | head(5) %}
       {% include "components/tag-list.njk" %}
-      <a href="/tag-list" class="size-00 redirect self-start text-color-1 transition-200">all topics</a>
+      <a href="/tag-list" class="size-00 redirect self-start text-color-1">all topics</a>
     </aside>
 
     <section class="flex-col --gap-5">

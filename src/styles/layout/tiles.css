@@ -1,12 +1,18 @@
-/* Class that creates a tile-based system that fills the space based on gap-size
-and min-width for each individual tile. Each tile in the cluster is of the
-same size.
-NOTE: can be combined with the .gap- classes (e.g. .gap-00) */
+/**
+ * tile-based sytem that determines the amount of columns based on a min-width
+ * for each tile. The wrapper fills the entire available horizonal space
+ *
+ * --layout-width: sets the minimum width of each tile
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
+ */
 .tiles {
+  --layout-width: ;
+  --layout-gap: 0;
+
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--layout-width, 0), 100%), 1fr)
+    minmax(min(var(--layout-width), 100%), 1fr)
   );
-  gap: var(--layout-gap, 0);
+  gap: var(--layout-gap);
 }

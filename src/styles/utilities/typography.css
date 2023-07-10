@@ -32,21 +32,9 @@
 .hover\:text-color-1:hover {
   color: var(--color-foreground-1);
 }
-.text-color-rev-0,
-.hover\:text-color-rev-0:hover {
-  color: var(--color-surface-0);
-}
-.text-color-rev-1,
-.hover\:text-color-rev-1:hover {
-  color: var(--color-surface-1);
-}
 .text-color-primary,
 .hover\:text-color-primary:hover {
   color: var(--color-primary);
-}
-.text-color-accent,
-.hover\:text-color-accent:hover {
-  color: var(--color-accent);
 }
 
 .monospace {

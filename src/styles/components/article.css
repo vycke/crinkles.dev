@@ -8,10 +8,9 @@ article {
   justify-content: flex-start;
 }
 
-article > * {
-  margin-block: 0;
-}
-
+/**
+* TEXT FLOW
+*/
 article > * + * {
   margin-block-start: var(--token-size-2);
 }
@@ -24,22 +23,9 @@ article h2 + p {
   margin-block-start: var(--token-size-00);
 }
 
-article.post pre,
-article.post p:has(img),
-article.post .info {
-  border-radius: var(--token-radius-0);
-}
-
-article.post pre,
-article.post .info {
-  box-shadow: var(--token-elevation-1);
-  border-radius: var(--token-radius-0);
-}
-
-article h2[id] {
-  scroll-margin-top: 1rem;
-}
-
+/**
+* HEADERS
+*/
 article h2 {
   position: relative;
   transition: color 300ms;
@@ -71,47 +57,94 @@ article h2:hover a {
   opacity: 1;
 }
 
-/* aside */
-article .info {
-  padding: var(--token-size-0) var(--token-size-1);
-  background-color: var(--color-surface-1);
-  border: 3px solid var(--color-primary);
-  font-size: var(--token-size-00);
-  position: relative;
-}
-
-article .info::before {
-  content: "<aside />";
-  position: absolute;
-  display: block;
-  top: -15px;
-  font-size: var(--token-size-00);
-  color: var(--color-surface-0);
-  background-color: var(--color-primary);
+/**
+* GENERAL STYLING OF ELEMENTS
+*/
+article :where(img, pre) {
+  box-shadow: var(--token-elevation-1);
   border-radius: var(--token-radius-0);
-  padding: 0px 6px;
 }
 
-/* table of contents */
-.table-of-contents {
-  top: var(--token-size-2);
+/**
+ * CODE BLOCKS
+ */
+article pre {
+  background-color: var(--token-color-grey-4) !important;
+  color: var(--token-color-grey-0);
+  position: relative;
+  padding: 0;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
 }
 
-.table-of-contents ul {
-  list-style: none;
-  padding-left: 0;
+article pre > code {
+  padding: var(--token-size-0);
+  font-size: var(--token-size-00);
+  display: block;
+  overflow-x: auto;
+  tab-size: 2;
+  /* fix for increased font-size safari iOS */
+  -webkit-text-size-adjust: none;
 }
 
-.table-of-contents ul li {
-  line-height: 1;
+/**
+ * BLOCK QUOTES
+ */
+article blockquote {
+  display: block;
+  position: relative;
+  padding-left: var(--token-size-1);
+  color: var(--color-foreground-1);
+  font-style: italic;
+  border-left: 5px solid var(--color-primary);
 }
 
-.table-of-contents a:hover {
+article blockquote cite {
+  display: block;
+  width: 100%;
+  font-size: var(--token-size-00);
+  font-style: italic;
+  margin-top: var(--token-size-0);
   color: var(--color-primary);
 }
 
-li[data-active="true"] a {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--color-primary);
+/**
+ * INLINE CODE
+ */
+article code {
+  font-family: var(--monospace);
+  font-size: 0.85em;
+  hyphens: none;
+}
+
+article :not(pre) > code {
+  color: var(--color-primary);
+}
+
+/**
+ * LISTS
+ */
+article :where(ul, ol):not([class]) {
+  list-style: outside;
+  padding-left: 0;
+}
+
+article :where(ul, ol):not([class]) li {
+  margin-left: var(--token-size-2);
+}
+
+article :where(ul, ol):not([class]) li::marker {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+article ul:not([class]) li {
+  list-style-type: "-  ";
+  padding-left: 0;
+}
+
+article ol:not([class]) {
+  list-style: decimal outside;
 }

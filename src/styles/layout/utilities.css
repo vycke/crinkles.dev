@@ -1,5 +1,7 @@
-/*  Layout utility classes controlling the API of various
-    layout implementations */
+/**
+ *  Utility classes to control the shared --layout-X properties amongst the
+ *  layout classes
+ */
 
 /* Control the amount API */
 .--amount-1 {

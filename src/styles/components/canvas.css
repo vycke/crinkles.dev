@@ -1,3 +1,8 @@
+/**
+ * CANVAS
+ *
+ * Background canvas for the whole page. Removed on smaller screen sizes
+ */
 .canvas {
   overflow-x: hidden;
   width: 100vw;

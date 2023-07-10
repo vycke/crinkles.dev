@@ -1,5 +1,35 @@
+/**
+ * importing the local fonts as swappeable
+ */
+@font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-syle: normal;
+    font-display: swap;
+    src: url('/fonts/pt-sans-v12-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/pt-sans-v12-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src: url('/fonts/pt-sans-v12-latin-italic.woff2') format('woff2');
+}
+
+
 :root {
-  /* Create CSS variables around colors */
+  /**
+   * COLORS
+   */
   --hue: 215;
   --saturation: 20%;
 
@@ -14,7 +44,9 @@
   --token-color-brand-3: #77b6ff;
   --token-color-brand-4: #ffaa1a;
 
-  /* Create CSS variables around breakpoints */
+  /**
+   * BREAK POINTS
+   */
   --token-bp-0: 20rem;
   --token-bp-000: calc(var(--token-bp-00) / 1.33);
   --token-bp-00: calc(var(--token-bp-0) / 1.33);
@@ -24,11 +56,13 @@
   --token-bp-4: calc(var(--token-bp-3) * 1.33);
   --token-bp-5: calc(var(--token-bp-4) * 1.33);
 
-  /* Text scaling */
+  /**
+   * SPACING & SIZING
+   */
+
   /* Value between 0px and 5px, equal to 20% increase of 1rem */
   --ratio: calc(4 * (min(100vw, 1240px) - 320px) / 920);
 
-  /* Create CSS variables around spacing, font-sizes etc. */
   /* Scale of 1.333 */
   --token-size-none: 0;
   --token-size-000: calc(0.65rem + 0.65 * var(--ratio));
@@ -40,12 +74,16 @@
   --token-size-4: calc(3.16rem + 3.16 * var(--ratio));
   --token-size-5: calc(4.21rem + 4.21 * var(--ratio));
 
-  /* Font families */
+  /**
+   * FONT FAMILY
+   */
   --monospace: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   --serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   --sans-serif: "PT Sans", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  /* Utilties */
+  /**
+   * RADIUS & ELEVATION
+   */
   --token-radius-0: 0.25rem;
   --token-radius-1: 0.75rem;
   --token-elevation-0: 0 1px 1px hsl(0deg 0% 0% / 0.075),
@@ -54,8 +92,12 @@
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
+/**
+ * LIGHT THEME
+ */
 :root {
   color-scheme: light;
+  accent-color: var(--token-color-brand-1);
   --color-foreground-0: var(--token-color-grey-5);
   --color-foreground-1: var(--token-color-grey-3);
   --color-surface-0: var(--token-color-grey-0);
@@ -64,9 +106,13 @@
   --color-primary: var(--token-color-brand-1);
 }
 
+/**
+ * DARK THEME
+ */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+    accent-color: var(--token-color-brand-1);
     --color-foreground-0: var(--token-color-grey-0);
     --color-foreground-1: var(--token-color-grey-2);
     --color-surface-0: var(--token-color-grey-5);

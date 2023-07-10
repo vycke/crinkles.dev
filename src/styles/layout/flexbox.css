@@ -1,13 +1,21 @@
-/* Initiate the flexbox */
+/**
+ * Default flexbox utility classes to control layout
+ *
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
+ */
 .flex-col {
+  --layout-gap: 0;
+
   display: flex;
   flex-direction: column;
-  gap: var(--layout-gap, 0);
+  gap: var(--layout-gap);
 }
 .flex-row {
+  --layout-gap: 0;
+
   display: flex;
   flex-direction: row;
-  gap: var(--layout-gap, 0);
+  gap: var(--layout-gap);
 }
 .flex-col-reverse {
   display: flex;

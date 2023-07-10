@@ -65,6 +65,16 @@ body {
   outline: none;
 }
 
+/* Makes focus through keyboard better */
+:focus-visible {
+  --outline-size: max(1.5px, 0.1em);
+
+  border-radius: 0.1em;
+  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)
+    var(--outline-color, currentColor);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
 /* Scroll padding allowance below focused elements
   to ensure they are clearly in view */
 :focus {

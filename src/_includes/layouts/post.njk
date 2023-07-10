@@ -50,18 +50,38 @@
 </aside>
 
 <script>
+  const headers = document.querySelectorAll('h2[id]');
+
+  function getPreviousHeader(el) {
+    let sibling = el.previousElementSibling;
+    while (sibling) {
+      if (sibling.matches('h2')) return sibling;
+      sibling = sibling.previousElementSibling;
+    }
+  };
+
+  function setAriaLabel(el) {
+    if (!el) return;
+    headers.forEach((header) => {
+      const id = header.getAttribute('id');
+      const toc = document.querySelector(`nav li a[href="#${id}"]`);
+      if (header === el)
+        toc.parentElement.setAttribute('aria-current', 'location');
+      else toc.parentElement.removeAttribute('aria-current');
+    });
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const id = entry.target.getAttribute('id');
-      const el = document.querySelector(`nav li a[href="#${id}"]`);
-      if (!el) return;
-      if (entry.intersectionRatio > 0)
-        el.parentElement.setAttribute('aria-current', 'location');
-      else el.parentElement.removeAttribute('aria-current')
+      if (!entry.isIntersecting) return;
+      let header;
+      if (entry.target.matches('h2')) header = entry.target;
+      else header = getPreviousHeader(entry.target);
+      setAriaLabel(header);
     });
   });
-  document.querySelectorAll('h2[id]').forEach((header) => {
-    observer.observe(header);
+  document.querySelectorAll('article > *').forEach((child) => {
+    observer.observe(child);
   });
 </script>
 

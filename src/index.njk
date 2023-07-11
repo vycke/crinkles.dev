@@ -18,7 +18,7 @@ width: 5
   <div class="sidebar --left --width-0 --gap-5 items-start">
     <aside class="flex-col --gap-000" aria-label="Top tags on the site">
       <span class="text-color-1">Search by topic..</span>
-      {% set tags = collections.posts | getAllTags | head(5) %}
+      {% set tags = collections.posts | getAllTags | head(7) %}
       {% include "components/tag-list.njk" %}
       <a href="/tag-list" class="size-00 redirect self-start">all topics</a>
     </aside>

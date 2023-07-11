@@ -15,19 +15,7 @@
   top: -10px;
 }
 
-.meta-info {
-  font-family: var(--monospace);
-  display: flex;
-  flex-direction: row;
-  gap: 0.75ch;
-  color: var(--color-foreground-1);
-  font-size: var(--token-size-00);
-}
 
-.meta-info::before {
-  content: "//";
-  color: var(--color-primary);
-}
 
 .shadow {
   box-shadow: var(--token-elevation-0);

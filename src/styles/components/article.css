@@ -1,9 +1,6 @@
-main:has(article) {
-  width: min(100%, var(--token-bp-4) + 2 * var(--token-size-1));
-}
-
 article {
   display: flex;
+  width: min(100%, 72ch);
   flex-direction: column;
   justify-content: flex-start;
 }

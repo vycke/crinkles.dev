@@ -21,9 +21,11 @@
 }
 
 /** Wiggle animation on hover */
-.wiggle:hover {
-  animation: wiggle 0.4s;
-  animation-iteration-count: 1;
+@media (hover: hover) {
+  .wiggle:hover {
+    animation: wiggle 0.6s;
+    animation-iteration-count: 1;
+  }
 }
 
 @keyframes wiggle {

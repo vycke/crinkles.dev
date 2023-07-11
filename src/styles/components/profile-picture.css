@@ -1,0 +1,6 @@
+.profile-picture {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 25px;
+    box-shadow: var(--token-elevation-0);
+}

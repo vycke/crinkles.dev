@@ -28,13 +28,6 @@
     "description": "A visual editor/developer tool for the cogwheel package"
   },
   {
-    "tech": "Markdown",
-    "type": "docs",
-    "title": "SPA reference architecture",
-    "href": "https://github.com/kevtiq/reference-architecture",
-    "description": "Description of scalable front-end architecture"
-  },
-  {
     "tech": "TypeScript",
     "type": "package",
     "title": "Pubble",

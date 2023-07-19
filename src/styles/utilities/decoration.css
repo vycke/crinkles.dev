@@ -15,8 +15,10 @@
   top: -10px;
 }
 
-
-
 .shadow {
   box-shadow: var(--token-elevation-0);
+}
+
+.border-t {
+  border: 1px solid var(--color-surface-1);
 }

@@ -25,7 +25,8 @@
 
 .tag:hover, .tag:focus {
   --tag-bg: var(--tag-color);
-  --tag-hash-color: var(--color-foreground-0);
+  --tag-hash-color: var(--token-color-dark-0);
+  color: var(--token-color-dark-0);
 }
 
 .tag::before {
@@ -37,23 +38,23 @@
 .tag[data-index="0"],
 .tag[data-index="4"],
 .tag[data-index="8"] {
-  --tag-color: var(--token-color-brand-1);
+  --tag-color: var(--token-color-error);
 }
 
 .tag[data-index="1"],
 .tag[data-index="5"],
 .tag[data-index="9"] {
-  --tag-color: var(--token-color-brand-2);
+  --tag-color: var(--token-color-warning);
 }
 
 .tag[data-index="2"],
 .tag[data-index="6"],
 .tag[data-index="10"] {
-  --tag-color: var(--token-color-brand-3);
+  --tag-color: var(--token-color-success);
 }
 
 .tag[data-index="3"],
 .tag[data-index="7"],
 .tag[data-index="11"] {
-  --tag-color: var(--token-color-brand-4);
+  --tag-color: var(--token-color-info);
 }

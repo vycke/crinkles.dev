@@ -1,6 +1,11 @@
+/** will break on FireFox, but that is OK */
+main:has( article) {
+  --layout-width: calc(72ch + var(--token-bp-00));
+}
+
 article {
   display: flex;
-  width: min(100%, 72ch);
+/*  width: min(100%, 80ch);*/
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -66,8 +71,8 @@ article :where(img, pre) {
  * CODE BLOCKS
  */
 article pre {
-  background-color: var(--token-color-grey-4) !important;
-  color: var(--token-color-grey-0);
+  background-color: var(--token-color-dark-1) !important;
+  color: var(--token-color-light-0);
   position: relative;
   padding: 0;
   white-space: pre;

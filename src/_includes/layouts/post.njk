@@ -10,7 +10,6 @@
   <div class="relative | sidebar --right --width-00 --gap-3 | fade-in mt-0">
     <article class="post | center --width-3 | pb-3">
       {{ content | safe }}
-      {% include "components/separator.svg" %}
     </article>
 
     {% set toc = content | getPostHeaders %}

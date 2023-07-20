@@ -4,21 +4,21 @@
    */
   --hue: 215;
   /** Dark colors */
-  --token-color-dark-0: hsl(var(--hue), 18%, 18%);
-  --token-color-dark-1: hsl(var(--hue), 18%, 28%);
-  --token-color-dark-2: hsl(var(--hue), 18%, 40%);
+  --token-color-dark-0: hsl(var(--hue), 22%, 15%);
+  --token-color-dark-1: hsl(var(--hue), 22%, 28%);
+  --token-color-dark-2: hsl(var(--hue), 22%, 40%);
   /** Light colors */
   --token-color-light-0: hsl(var(--hue), 24%, 98%);
   --token-color-light-1: hsl(var(--hue), 24%, 92%);
   --token-color-light-2: hsl(var(--hue), 24%, 78%);
   /** System colors */
-  --token-color-error: #BF616A;
+  --token-color-error: #D6707A;
   --token-color-warning: #EBCB8B;
   --token-color-success: #A3BE8C;
   --token-color-info: #81A1C1;
   /** brand colors */
-  --token-color-brand-1: #56908E;
-  --token-color-brand-2: #8FBCBB;
+  --token-color-brand-1: #089174;
+  --token-color-brand-2: #0AC8A0;
 
   /**
    * BREAK POINTS

@@ -1,7 +1,7 @@
 <ul role="list" class="list-group | flex-col --gap-2">
   {% for post in posts %}
     <li class="flex-col --gap-none click-area" role="listitem">
-      <time date="{{ post.data.date }}" class="meta-info">{{ post.data.date | readableDate }}</time>
+      <time class="meta-info" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
       <h2 class="bold">
         <a href="{{ post.page.url }}">
           {{ post.data.title }}

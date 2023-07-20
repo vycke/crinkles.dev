@@ -1,6 +1,6 @@
 /** will break on FireFox, but that is OK */
 main:has( article) {
-  --layout-width: calc(72ch + var(--token-bp-00));
+  --layout-width: calc(68ch + var(--token-bp-00));
 }
 
 article {

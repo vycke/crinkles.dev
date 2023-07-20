@@ -11,16 +11,10 @@
   z-index: -1;
 }
 
-.circle {
+.drawing {
   position: absolute;
   width: 60vw;
-  top: calc(-0.35 * 60vw);
+  top: calc(-0.25 * 60vw);
   right: calc(-0.25 * 60vw);
   z-index: -1;
-}
-
-@media (max-width: 640px) {
-  .circle {
-    display: none;
-  }
 }

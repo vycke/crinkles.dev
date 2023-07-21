@@ -5,13 +5,13 @@ eleventyExcludeFromCollections: true
 ---
 
 <ul role="list" class="list-group | mt-3 flex-grow | fade-in">
-  {% for tech, projects in projects | groupby("tech") %}
+  {% for type, projects in projects | groupby("type") %}
   <li class="sidebar --left --width-000 --gap-0 | mb-1 pb-1">
-    <span class="text-color-primary">{{ tech }}</span>
+    <span class="text-color-primary">{{ type }}</span>
     <ul role="list" class="list-group | flex-col --gap-0" role="list">
       {% for project in projects %}
       <li class="flex-col --gap-none click-area" role="listitem">
-        <span class="slash | size-00 text-color-1">{{ project.type }}</span>
+        <span class="slash | size-00 text-color-1">{{ project.tech }}</span>
         <h2 class="size-1">
           <a href="{{ project.href }}" class="bold"> {{ project.title }} </a>
         </h2>

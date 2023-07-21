@@ -1,7 +1,7 @@
 [
   {
     "tech": "(S)CSS",
-    "type": "package",
+    "type": "demo",
     "title": "Feo CSS",
     "href": "https://feo.crinkles.dev",
     "description": "Layout and utility based CSS framework"
@@ -22,7 +22,7 @@
   },
   {
     "tech": "SvelteKit",
-    "type": "app",
+    "type": "demo",
     "title": "Cogwheel visual editor",
     "href": "https://cogwheel-editor.vercel.app/",
     "description": "A visual editor/developer tool for the cogwheel package"
@@ -30,9 +30,16 @@
   {
     "tech": "TypeScript",
     "type": "package",
-    "title": "Pubble",
-    "href": "https://github.com/kevtiq/pubble",
+    "title": "Chifferobe",
+    "href": "https://github.com/kevtiq/chifferobe",
     "description": "Small & immutable command-driven state machine library"
+  },
+  {
+    "tech": "JavaScript",
+    "type": "package",
+    "title": "Proxyfetch",
+    "href": "https://github.com/kevtiq/proxyfetch",
+    "description": "Small library wrapper to create a service around fetch, using JavaScript proxies"
   },
   {
     "tech": "TypeScript",
@@ -40,13 +47,6 @@
     "title": "Opzet",
     "href": "https://github.com/kevtiq/opzet",
     "description": "Small validation library"
-  },
-  {
-    "tech": "JavaScript",
-    "type": "demo",
-    "title": "Proxyfetch",
-    "href": "https://github.com/kevtiq/proxyfetch",
-    "description": "Small library wrapper to create a service around fetch, using JavaScript proxies"
   },
   {
     "tech": "(S)CSS",

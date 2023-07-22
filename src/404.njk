@@ -16,7 +16,7 @@ width: 3
 
 <ul role="list" class="list-group | flex-col --gap-2">
     {% for post in posts %}
-        <li role="listitem" class="bg-surface-1 p-0 shadow flex-col --gap-none click-area">
+        <li role="listitem" class="bg-surface-1 p-0 elevation-0 flex-col --gap-none click-area">
             <time date="{{ post.data.date }}" class="meta-info">{{ post.data.date | readableDate }}</time>
             <h2>
                 <a href="{{ post.page.url }}">{{ post.data.title }}</a>

@@ -1,6 +1,6 @@
 <ul role="list" aria-label="List of all tags" class="list-group list-group--scale | cluster items-center --gap-00">
   {% for tag in tags %}
     {% set index = collections.posts | getTagIndex(tag) %}
-    <li><a href="/tags/{{ tag }}/" class="tag no-decoration | size-00 | shadow" data-selected="{{ selected === tag }}" data-index="{{ index }}">{{ tag }}</a></li>
+    <li><a href="/tags/{{ tag }}/" class="tag no-decoration | size-00 | elevation-0" data-selected="{{ selected === tag }}" data-index="{{ index }}">{{ tag }}</a></li>
   {% endfor %}
 </ul>

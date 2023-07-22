@@ -7,14 +7,14 @@
     "description": "Layout and utility based CSS framework"
   },
   {
-    "tech": "TypeScript",
+    "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "Cogwheel",
     "href": "https://github.com/kevtiq/cogwheel",
     "description": "Simple lightweight state machine library"
   },
   {
-    "tech": "TypeScript",
+    "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "DIGL",
     "href": "https://github.com/kevtiq/digl",
@@ -28,7 +28,7 @@
     "description": "A visual editor/developer tool for the cogwheel package"
   },
   {
-    "tech": "TypeScript",
+    "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "Chifferobe",
     "href": "https://github.com/kevtiq/chifferobe",
@@ -42,14 +42,14 @@
     "description": "Small library wrapper to create a service around fetch, using JavaScript proxies"
   },
   {
-    "tech": "TypeScript",
+    "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "Opzet",
     "href": "https://github.com/kevtiq/opzet",
     "description": "Small validation library"
   },
   {
-    "tech": "(S)CSS",
+    "tech": "CSS",
     "type": "demo",
     "title": "Responsive stacked barchart",
     "href": "https://codepen.io/kevtiq/pen/QWaQVMb",

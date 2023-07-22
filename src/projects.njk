@@ -10,12 +10,12 @@ eleventyExcludeFromCollections: true
     <h2 class="text-color-primary uppercase mb-0">{{ type }}</h2>
     <ul role="list" class="tiles --width-00 --gap-0 | list-group | flex-col --gap-0" role="list">
       {% for project in projects %}
-      <li class="card shadow | flex-col --gap-none | click-area" role="listitem">
-        <span class="slash | size-00 text-color-1">{{ project.tech }}</span>
+      <li class="card | flex-col --gap-000 elevation-0 | click-area" role="listitem">
         <h3 class="size-0">
           <a href="{{ project.href }}" class="bold"> {{ project.title }} </a>
         </h3>
-        <span class="text-color-1 size-00">{{ project.description }}</span>
+        <p class="size-00 flex-grow">{{ project.description }}</p>
+        <span class="self-start text-color-1 size-00"><span class="text-color-primary">#</span>{{ project.tech }}</span>
       </li>
       {% endfor %}
     </ul>

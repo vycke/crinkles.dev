@@ -58,8 +58,8 @@
   {
     "tech": "SvelteKit",
     "type": "demo",
-    "title": "DockIt",
-    "href": "https://github.com/kevtiq/dockit",
-    "description": "Small demo around SvelteKit to build a static markdown driven document site"
+    "title": "Vitamins dashboard",
+    "href": "https://vitamins-svelte.vercel.app/",
+    "description": "Demo for a application health monitoring system"
   }
 ]

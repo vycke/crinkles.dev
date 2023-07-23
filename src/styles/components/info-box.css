@@ -6,7 +6,7 @@
 
 .info {
   box-shadow: var(--token-elevation-1);
-  border-radius: var(--token-radius-0);
+  border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
   background-color: var(--color-surface-1);
   border: 3px solid var(--color-primary);

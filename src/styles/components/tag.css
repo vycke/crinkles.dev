@@ -15,7 +15,7 @@
   padding: 0.4em var(--token-size-000);
   border-radius: var(--token-radius-0);
   transition: all 300ms;
-/*  font-family: var(--monospace);*/
+  font-family: var(--monospace);
 }
 
 .tag {

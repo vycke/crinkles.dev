@@ -1,11 +1,9 @@
-/** will break on FireFox, but that is OK */
-main:has( article) {
-  --layout-width: calc(68ch + var(--token-bp-00));
-}
-
 article {
+  --layout-width: 49rem;
+
+  container-type: inline-size;
+  container-name: post;
   display: flex;
-/*  width: min(100%, 80ch);*/
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -63,8 +61,18 @@ article h2:hover a {
 * GENERAL STYLING OF ELEMENTS
 */
 article :where(img, pre) {
-  box-shadow: var(--token-elevation-1);
-  border-radius: var(--token-radius-0);
+  border-radius: var(--token-radius-1);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: calc(var(--layout-width) + 2 * var(--token-size-1));
+}
+
+/** discard rounded corners on full width */
+@container post (inline-size < 784px) {
+  article :where(img, pre, .info, blockquote) {
+    border-radius: 0;
+  }
 }
 
 /**
@@ -82,7 +90,7 @@ article pre {
 }
 
 article pre > code {
-  padding: var(--token-size-0);
+  padding: var(--token-size-0) var(--token-size-1);
   font-size: var(--token-size-00);
   display: block;
   overflow-x: auto;
@@ -97,7 +105,7 @@ article pre > code {
 article blockquote {
   display: block;
   position: relative;
-  padding-left: var(--token-size-1);
+  padding: 0 var(--token-size-1);
   color: var(--color-foreground-1);
   font-style: italic;
   border-left: 5px solid var(--color-primary);
@@ -134,7 +142,7 @@ article :where(ul, ol):not([class]) {
 }
 
 article :where(ul, ol):not([class]) li {
-  margin-left: var(--token-size-2);
+  margin-left: var(--token-size-0);
 }
 
 article :where(ul, ol):not([class]) li::marker {

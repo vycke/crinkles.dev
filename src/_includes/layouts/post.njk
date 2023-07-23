@@ -1,86 +1,33 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-<main class="center --width-4 pl-1 pr-1 | flex-grow | flex-col --gap-000 | mb-3">
-  {% if Pdraft %} <span class="bg-primary text-color-0 size-2 pl-0 pr-0">DRAFT</span> {% endif %}
-  <h1 class="overline">{{ title }}</h1>
-  <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash">{{ page.date | readableDate }}</time>
-  {% include "components/tag-list.njk" %}
-
-  <div class="relative | sidebar --right --width-00 --gap-3 | fade-in mt-0">
-    <article class="post | center --width-3 | pb-3">
-      {{ content | safe }}
+<main class="post | pl-1 pr-1 | flex-col --gap-0 flex-grow | mb-3">
+    <article class="center">
+        {% if Pdraft %} <span class="bg-primary text-color-0 size-2 pl-0 pr-0">DRAFT</span> {% endif %}
+        <header class="flex-col overline">
+            <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash">
+                {{ page.date | readableDate }}
+            </time>
+            <h1 class="mb-000">{{ title }}</h1>
+            {% include "components/tag-list.njk" %}
+        </header>
+        {{ content | safe }}
     </article>
-
-    {% set toc = content | getPostHeaders %}
-    {% if toc | length %}
-    <nav class="table-of-contents | flex-col --gap-00" aria-label="Table of contents">
-      <span class="size-00 uppercase sans-serif bold">Table of contents</span>
-      <ul>
-        {% for header in toc %}
-        <li>
-          <a href="#{{ header.id }}" class="size-00 no-decoration text-color-0 hover:text-color-primary">
-            {{ header.title }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    {% endif %}
-  </div>
 </main>
 
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-
 <aside class="switcher --width-1 --gap-1 | p-1 mb-0">
-	{% if previousPost %}
+    {% if previousPost %}
     <div class="flex-col --gap-none items-start">
       <span class="text-color-1 uppercase no-decoration">← Previous</span>
       <h3 class="size-1 sans-serif"><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></h3>
     </div>
-	{% endif %}
+    {% endif %}
   {% if nextPost %}
     <div class="flex-col --gap-none items-end justify-center | text-right">
       <span class="text-color-1 uppercase no-decoration">Next →</span>
       <h3 class="size-1 sans-serif"><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></h3>
     </div>
-	{% endif %}
+    {% endif %}
 </aside>
-
-<script>
-  const headers = document.querySelectorAll('h2[id]');
-
-  function getPreviousHeader(el) {
-    let sibling = el.previousElementSibling;
-    while (sibling) {
-      if (sibling.matches('h2')) return sibling;
-      sibling = sibling.previousElementSibling;
-    }
-  };
-
-  function setAriaLabel(el) {
-    if (!el) return;
-    headers.forEach((header) => {
-      const id = header.getAttribute('id');
-      const toc = document.querySelector(`nav li a[href="#${id}"]`);
-      if (header === el)
-        toc.parentElement.setAttribute('aria-current', 'location');
-      else toc.parentElement.removeAttribute('aria-current');
-    });
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      let header;
-      if (entry.target.matches('h2')) header = entry.target;
-      else header = getPreviousHeader(entry.target);
-      setAriaLabel(header);
-    });
-  });
-  document.querySelectorAll('article > *').forEach((child) => {
-    observer.observe(child);
-  });
-</script>
-
 {% endblock %}

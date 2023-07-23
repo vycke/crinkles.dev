@@ -3,7 +3,7 @@
 <main class="post | pl-1 pr-1 | flex-col --gap-0 flex-grow | mb-3">
     <article class="center">
         {% if Pdraft %} <span class="bg-primary text-color-0 size-2 pl-0 pr-0">DRAFT</span> {% endif %}
-        <header class="flex-col overline">
+        <header class="flex-col">
             <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash">
                 {{ page.date | readableDate }}
             </time>

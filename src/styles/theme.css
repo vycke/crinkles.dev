@@ -4,21 +4,21 @@
    */
   --hue: 215;
   /** Dark colors */
-  --token-color-dark-0: hsl(var(--hue), 22%, 15%);
-  --token-color-dark-1: hsl(var(--hue), 22%, 28%);
-  --token-color-dark-2: hsl(var(--hue), 22%, 40%);
+  --token-color-dark-0: hsl(var(--hue), 30%, 13%);
+  --token-color-dark-1: hsl(var(--hue), 30%, 28%);
+  --token-color-dark-2: hsl(var(--hue), 30%, 40%);
   /** Light colors */
-  --token-color-light-0: hsl(var(--hue), 24%, 98%);
-  --token-color-light-1: hsl(var(--hue), 24%, 92%);
-  --token-color-light-2: hsl(var(--hue), 24%, 78%);
+  --token-color-light-0: hsl(var(--hue), 36%, 98%);
+  --token-color-light-1: hsl(var(--hue), 36%, 92%);
+  --token-color-light-2: hsl(var(--hue), 36%, 78%);
   /** System colors */
-  --token-color-error: #D6707A;
-  --token-color-warning: #EBCB8B;
-  --token-color-success: #A3BE8C;
-  --token-color-info: #81A1C1;
+  --token-color-error: #EE5875;
+  --token-color-warning: #FFD459;
+  --token-color-success: #0AC8A0;
+  --token-color-info: #5697D8;
   /** brand colors */
-  --token-color-brand-1: #089174;
-  --token-color-brand-2: #0AC8A0;
+  --token-color-brand-0: #18958C;
+  --token-color-brand-1: #7bd3c3;
 
   /**
    * BREAK POINTS
@@ -73,12 +73,13 @@
  */
 :root {
   color-scheme: light;
-  accent-color: var(--token-color-brand-1);
   --color-foreground-0: var(--token-color-dark-0);
   --color-foreground-1: var(--token-color-dark-2);
   --color-surface-0: var(--token-color-light-0);
   --color-surface-1: var(--token-color-light-1);
-  --color-primary: var(--token-color-brand-1);
+  --color-primary: var(--token-color-brand-0);
+
+  accent-color: var(--token-color-primary);
 }
 
 /**
@@ -87,11 +88,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    accent-color: var(--token-color-brand-2);
     --color-foreground-0: var(--token-color-light-0);
     --color-foreground-1: var(--token-color-light-2);
     --color-surface-0: var(--token-color-dark-0);
     --color-surface-1: var(--token-color-dark-1);
-    --color-primary: var(--token-color-brand-2);
+    --color-primary: var(--token-color-brand-1);
   }
 }

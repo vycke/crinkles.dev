@@ -76,10 +76,18 @@ article :where(img, pre) {
 }
 
 /**
+ * IMAGES
+ */
+article img {
+  box-shadow: var(--token-elevation-0);
+}
+
+/**
  * CODE BLOCKS
  */
 article pre {
   background-color: var(--token-color-dark-1) !important;
+  box-shadow: var(--token-elevation-1);
   color: var(--token-color-light-0);
   position: relative;
   padding: 0;
@@ -108,7 +116,17 @@ article blockquote {
   padding: 0 var(--token-size-1);
   color: var(--color-foreground-1);
   font-style: italic;
-  border-left: 5px solid var(--color-primary);
+}
+
+article blockquote::before {
+    background: linear-gradient(-1deg, var(--token-color-error), var(--token-color-warning), var(--token-color-success), var(--token-color-info));
+    box-shadow: var(--token-elevation-0);
+    content: "";
+    height: calc(100% + 1px);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 5px;
 }
 
 article blockquote cite {
@@ -142,17 +160,19 @@ article :where(ul, ol):not([class]) {
 }
 
 article :where(ul, ol):not([class]) li {
-  margin-left: var(--token-size-0);
+  margin-left: var(--token-size-1);
+  padding-left: 0.5em;
 }
 
 article :where(ul, ol):not([class]) li::marker {
   color: var(--color-primary);
+  font-size: 0.825em;
   font-weight: 600;
 }
 
 article ul:not([class]) li {
-  list-style-type: "-  ";
-  padding-left: 0;
+  list-style-type: "✦  ";
+  padding-left: 0.5em;
 }
 
 article ol:not([class]) {

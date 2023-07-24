@@ -14,7 +14,7 @@
 .drawing {
   position: absolute;
   width: 60vw;
-  top: calc(-0.25 * 60vw);
-  right: calc(-0.25 * 60vw);
+  top: -15vw;
+  right: -5vw;
   z-index: -1;
 }

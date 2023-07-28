@@ -11,6 +11,10 @@ description: >-
 
 For years I have seen services workers as this magical concept for making progressive web apps. Or, you would use them to run very heavy operations parallel. Both cases I don't need. Not in my personal life, not in my professional life. **I was wrong**. 
 
+::: info
+For those wondering, you don't use service workers for heavy operations. Web workers are for heavy background operations. My perception on service workers was wrong here as well, all along. 
+:::
+
 ## A leaner web
 Months back I decided I want to focus on a leaner and greener web. I started on the [Lean Web Club](https://leanwebclub.com/) from [Chris Ferdinandi](https://gomakethings.com). One of the topics he briefly teaches is *service workers*. It was the topic I saved for last. For an unknown reason, I had a mental barrier in starting to look into the topic. 
 
@@ -62,4 +66,4 @@ This is of course a very simple implementation. There are many things to conside
 - Should entries be removable based on user actions?
 
 ## Wrapping up
-I was wrong about service workers. They are not just for progressive web apps or heavy operations. They can just as easily be used for better caching of data in big single-page applications. It helps in point-specific performance optimization. This might even be a better use case for them in general. I know it is for me. 
+I was wrong about service workers. They are not just for progressive web apps. They can just as easily be used for better caching of data in big single-page applications. It helps in point-specific performance optimization. This might even be a better use case for them in general. I know it is for me. 

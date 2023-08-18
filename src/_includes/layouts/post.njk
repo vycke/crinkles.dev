@@ -2,10 +2,15 @@
 {% block content %}
 <main class="post | pl-1 pr-1 | flex-col --gap-0 flex-grow | mb-3">
     <article class="center">
-        {% if Pdraft %} <span class="bg-primary text-color-0 size-2 pl-0 pr-0">DRAFT</span> {% endif %}
+        {% if archived %}
+        <div class="archived">
+            This post is out-of-date, or I do not agree 100% with its content anymore. It will not be updated, but remains to exist to not break links.
+        </div>
+        {% endif %}
         <header class="flex-col">
-            <time datetime="{{ page.date }}" class="meta-info size-00 text-color-1 slash">
-                {{ page.date | readableDate }}
+            <time class="meta-info" date="{{ post.data.date }}">
+                {{ date | readableDate }}
+                {% if update %} <span class="italic">(Updated on: {{ update | readableDate }})</span> {%  endif %}
             </time>
             <h1 class="mb-000">{{ title }}</h1>
             {% include "components/tag-list.njk" %}
@@ -13,6 +18,7 @@
         {{ content | safe }}
     </article>
 </main>
+
 
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}

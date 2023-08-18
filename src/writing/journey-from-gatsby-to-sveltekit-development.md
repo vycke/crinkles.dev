@@ -1,6 +1,7 @@
 ---
 title: Journey from Gatsby to SvelteKit
 date: 2021-04-07T00:00:00.000Z
+archived: true
 tags:
   - svelte
 layout: layouts/post.njk

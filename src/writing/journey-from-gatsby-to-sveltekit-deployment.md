@@ -1,6 +1,7 @@
 ---
 title: Deploying my newly created SvelteKit website
 date: 2021-04-07T01:00:00.000Z
+archived: true
 tags:
   - svelte
 layout: layouts/post.njk

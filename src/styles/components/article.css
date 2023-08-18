@@ -23,16 +23,20 @@ article h2 + p {
   margin-block-start: var(--token-size-00);
 }
 
+article h3 + p {
+  margin-block-start: var(--token-size-000);
+}
+
 /**
 * HEADERS
 */
-article h2 {
+article :where(h2, h3) {
   position: relative;
   transition: color 300ms;
   outline: none;
 }
 
-article h2 a {
+article :where(h2 a, h3 a) {
   transition: all 300ms;
   cursor: pointer;
   font-weight: 400;

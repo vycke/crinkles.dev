@@ -1,8 +1,12 @@
 <ul role="list" class="list-group | flex-col --gap-2">
   {% for post in posts %}
     <li class="flex-col --gap-none click-area" role="listitem">
-      <time class="meta-info" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
+      <span class="flex-row items-center gap-0">
+        <time class="meta-info" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
+
+      </span>
       <h2 class="bold">
+        {% if post.data.update %} <span class="highlight">✨ updated!</span> {%  endif %}
         <a href="{{ post.page.url }}">
           {{ post.data.title }}
         </a>

@@ -4,6 +4,7 @@ date: 2019-11-11T00:00:00.000Z
 tags:
   - architecture
 layout: layouts/post.njk
+archived: true
 description: >-
   A modern architecture for digital enterprises build on existing ideas, but let you scale quickly
 ---

@@ -58,3 +58,12 @@
 .tag[data-index="11"] {
   --tag-color: var(--token-color-info);
 }
+
+.highlight {
+  padding: 0.4em var(--token-size-000);
+  border-radius: var(--token-radius-0);
+  transition: all 300ms;
+  font-size: var(--token-size-00);
+  background-color: var(--color-primary);
+  color: var(--token-color-dark-0);
+}

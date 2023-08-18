@@ -8,4 +8,12 @@ function posts(collection) {
     .filter((post) => !(post.data.draft && IS_PRODUCTION));
 }
 
-module.exports = { posts };
+// collection for all posts, incl. drafts option
+function archived(collection) {
+  return collection
+    .getFilteredByGlob(POSTS_PATH)
+    .filter((post) => post.data.archived);
+}
+
+
+module.exports = { posts, archived };

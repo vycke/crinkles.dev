@@ -1,5 +1,6 @@
 ---
 title: Engineering, UX design and agile
+archived: true
 date: 2021-06-16T00:00:00.000Z
 tags:
   - workflow

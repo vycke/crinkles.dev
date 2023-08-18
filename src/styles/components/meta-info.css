@@ -2,7 +2,6 @@
  * META INFO
  */
 .meta-info {
-/*  font-family: var(--monospace);*/
   display: flex;
   flex-direction: row;
   gap: 0.75ch;

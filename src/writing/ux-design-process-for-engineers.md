@@ -1,5 +1,6 @@
 ---
 title: The UX design process for engineers
+archived: true
 date: 2019-07-05T00:00:00.000Z
 tags:
   - workflow

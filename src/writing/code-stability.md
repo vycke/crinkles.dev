@@ -1,6 +1,7 @@
 ---
 title: Interdependencies and code stability
 date: 2021-09-14T00:00:00.000Z
+update: 2023-08-20T00:00:00.000Z
 tags: architecture
 layout: layouts/post.njk
 description: As engineers, we have the tendency to over-engineer our solutions, make our code as reusable as possible. We make our code DRY. But in this quest, we often create unstable code.
@@ -14,34 +15,26 @@ The stability rule is very simple. In this rule, stability means the _likeliness
 
 > Every function, module, or UI component we write, is as stable as the lowest stability of its dependencies
 
-But how do you determine the stability of dependencies? This is, unfortunately, no exact science. It depends heavily on the type of dependency as well. We can set third-party packages to fixed version numbers, making them very stable. We can assume browsers API will, [most likely](https://www.techradar.com/news/google-reverses-embarrassing-website-breaking-chrome-update), not change. But the code we write ourselves can change. You can measure how many times a function/module changes, or you can make a guess how likely it will change. In both cases, you can give a function or module a _score_ of its stability. With this score, you can create a _dependency graph_ of your codebase, like the one below.
+But how do you determine the stability of dependencies? This is, unfortunately, no exact science. It depends heavily on the type of dependency as well. We can set third-party packages to fixed version numbers, making them very stable. We can assume browsers API will, [most likely](https://www.techradar.com/news/google-reverses-embarrassing-website-breaking-chrome-update), not change. But the code we write ourselves can and will change. 
 
-![Dependency graph](/img/dependency-graph.png)
+Most of our time spent during development is around unstable code. We focus on implementing UI and features that are each unique and add a different value to a user or business. This makes the code by default less reusable. But by using systems, architecture, and patterns as underlying decisions, we can stabilise the foundations. Thus increasing the stability of the code written. Some examples are design systems, validation libraries or state management libraries. 
 
-In the above graph, we see that 'Function B' is dependent on 'Function A' and 'Package A'. Function B uses Function A and Package A. All elements also got a score attached. The higher the score, the more stable the element. The ones with a keen eye will see the above dependency graph is actually wrong. It does not comply with the stability rule. The score of 'Component A' cannot be 7, as they depend on a function with lower stability. We have either have to update the graph or change our code.
+## Dependency graphs
 
-## Splitting code
+A good way to understand the stability of your code, is to look at the _dependency graph_. This is a visual representation of how various components and functions are connected. Lets look an an example. In this example we are looking at an "activities" page that has a few small things going on. First of all we see that it shows a table with the available data. Next there is also a possible to search. And lastly we can create a new activity.
 
-Based on mismatching stability scores, we can find possible improvements. It allows us to reorder code to improve its stability. But, it also allows for conscious decisions to not change anything at all. In our example, it is highly likely that 'Function B' is only unstable because it has some code only used for 'Component B'. At this point we have three options:
+::: info
+Everything *black* is an UI component, *purple* are actions (e.g. API calls), and *green* are model-related (e.g. validation/transformation).
+:::
 
-- Split 'Function B' into two functions. One function contains stable code used by both components. Another function contains code used by 'Component B'.
-- Migrate the unstable part of 'Function B' to 'Component B'. This makes 'Function B' smaller, but more stable.
-- Don't change anything.
+![Initial example of a simple dependency graph](/img/dependency-graph-1.png)
 
-We find ourselves with these examples more often than we would like to admit. How many times have you thought: "if I add this option to the function, I can use it here as well". This is the moment where we need to look at the dependencies and their stabilities. Only then will we achieve stable code.
+One potential *unstable* example in this graph is the `getList()` action. It is highly likely that such an action is used elsewhere. But is the output in the correct format for our table? What if we want it grouped on users in this view, but not in other views? Instead of building different *views* on the data in the `getList()` function, we should actually apply *code splitting*. 
 
-## Systems, architecture, and patterns
+![Initial example of a simple dependency graph](/img/dependency-graph-2.png)
 
-Most of our time spent during development is around unstable code. We focus on implementing UI and features that are each unique and add a different value to a user or business. This makes the code by default less reusable. But, these features are built upon systems, architectural decisions, and patterns. These dependencies allow us to stabilize a certain core of the application. Some examples:
-
-- A design system or UI library provides stable low-level UI components that can be used in many different UI components. Think of input fields, buttons, tables, or even cards.
-- In React you can create generic hooks abstracting low-level logic (e.g. fetching data, including loading state).
-- Standardized object validation logic through libraries as [Yup](https://github.com/jquense/yup) or [schematiq](https://github.com/kevtiq/schematiq#object-validation).
-- Standardize fetch requests and state management around basic CRUD operations.
-- Adopt an architecture or design patterns (e.g. [client-side reference architecture](https://github.com/kevtiq/reference-architecture)) that help you determine which parts should be stable. Patterns and consistent architecture help to create imaginary boundaries between functions and modules as well.
-
-And many more ways can be found to stabilize parts of your codebase. Everybody following a recent tutorial knows packages like `lodash`. These packages or ideas, regardless if you build them yourself, or download them, help you create maintainable code.
+In a similar way we can determine other areas that might get unstable as well. Such as *"who is responsible to handle the actual pagination of data?"*. The answer can depend on many things. Does pagination exists similar everywhere? Does it happen consistently based on "page and page size" or do some use "limit and offset"? 
 
 ## Wrapping up
 
-Determining the correct interdependencies on code stability is no exact science. You can measure how often code changes. But, when determining interdependencies, you have to look into the future. You have to determine how _likely_ code is to change in the future. This is not something you do every day. You are not going to create a dependency graph for each change. But having a sense of stability on various levels helps a lot. You will see the _quality_ of your code increase and become more _maintainable_.
+By asking these type of questions based on a dependency graph, one can spot areas of improvements. In the end, parts of your code will remain unstable. But, you can create highly stable and independent parts of you code that just work. You will see the _quality_ of your code increase and become more _maintainable_. 

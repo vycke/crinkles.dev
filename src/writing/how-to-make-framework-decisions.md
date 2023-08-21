@@ -1,7 +1,7 @@
 ---
 title: Engineering, UX design and the value stream
 date: 2023-02-20T00:00:00.000Z
-update: 2023-08-17T00:00:00.000Z
+update: 2023-06-22T00:00:00.000Z
 tags:
   - workflow
 layout: layouts/post.njk
@@ -10,7 +10,7 @@ description: >-
 ---
 
 ::: info
-*Update August 2023*: When archiving older articles, like [this](/writing/ux-engineering-alignment), I have decided to combine some findings from that article into this one.
+_Update August 2023_: When archiving older articles, like [this](/writing/ux-engineering-alignment), I have decided to combine some findings from that article into this one.
 :::
 
 It has always been a pleasure for many of us to complain about frameworks, tooling fatigue, over-engineering, and whatsoever. The biggest argument is always that these choices focus on the developer and often disregard the user. While I agree with this sentiment _most of the time_, I feel we forget something when voicing it. We forget to look at why and when technology decisions are made. In addition, we do not teach about the impact of our decisions. Not only on our users but on ourselves in the long run.

@@ -6,7 +6,8 @@
 
       </span>
       <h2 class="bold">
-        {% if post.data.update %} <span class="highlight">✨ updated!</span> {%  endif %}
+        {% if loop.index === 1 and showNew %} <span class="tag highlight | size-00">✨ NEW!</span> {% endif %}
+        {% if post.data.update %} <span class="tag | size-00">✨ updated!</span> {%  endif %}
         <a href="{{ post.page.url }}">
           {{ post.data.title }}
         </a>

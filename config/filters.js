@@ -7,6 +7,23 @@ function readableDate(date) {
   });
 }
 
+// determines how many days old a date is
+function daysOld(date) {
+  const now = new Date().getTime();
+  const time = new Date(date).getTime();
+
+  return (now - time) / (1000 * 3600 * 24);
+}
+
+// Get a different type of list
+function getFeed(list) {
+  const updates = list
+    .filter((item) => item.data.update)
+    .sort((a, b) => (a.update > b.update ? 1 : -1));
+
+  return updates;
+}
+
 // head of the list
 function head(list, n) {
   return list.slice(0, n);
@@ -53,23 +70,12 @@ function getTagIndex(collection, tag) {
   return tags.indexOf(tag);
 }
 
-// Group by year as the njk groupby is insufficient
-function groupByYear(collection) {
-  const grouped = {};
-  collection.forEach((item) => {
-    const _key = item.data.date.getFullYear();
-    if (grouped[_key]) grouped[_key].push(item);
-    else grouped[_key] = [item];
-  });
-
-  return Object.entries(grouped);
-}
-
 module.exports = {
   readableDate,
   head,
   getPostHeaders,
   getAllTags,
   getTagIndex,
-  groupByYear,
+  daysOld,
+  getFeed,
 };

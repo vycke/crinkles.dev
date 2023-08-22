@@ -2,16 +2,16 @@
 <ul role="list" class="list-group | flex-col --gap-2">
   {% for post in posts %}
     <li class="flex-col --gap-none click-area" role="listitem">
-      <span class="flex-row items-center gap-0">
-        <time class="meta-info" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
 
+        <time class="meta-info" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
       </span>
       <h2 class="bold">
-        {% if latest.data.title === post.data.title %} <span class="tag highlight | size-00">✨ NEW!</span> {% endif %}
-        {% if post.data.update %} <span class="tag | size-00">✨ updated!</span> {%  endif %}
         <a href="{{ post.page.url }}">
           {{ post.data.title }}
         </a>
+        {% if latest.data.title === post.data.title %} <span class="tag highlight | size-00 ml-00">🤯 NEW!</span> {% endif %}
+      {% if post.data.update %} <span class="tag | size-00 self-start ml-00">updated!</span> {%  endif %}
+      <span class="flex-row items-center gap-0">
       </h2>
       <span class="text-color-1">{{ post.data.description }}</span>
     </li>

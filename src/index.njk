@@ -21,7 +21,6 @@ width: 5
 
     <section class="flex-col --gap-5">
       {% set posts =  collections.posts | head(5) %}
-      {% set showNew = true %}
       {% include "components/post-list.njk" %}
       <a href="/writing" class="redirect self-end">See all articles</a>
     </section>

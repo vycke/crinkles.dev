@@ -29,6 +29,10 @@ function head(list, n) {
   return list.slice(0, n);
 }
 
+function index(list, n = 1) {
+  return list[n];
+}
+
 // Regex like function to get all H2 headers in posts
 function getPostHeaders(str) {
   const headers = [];
@@ -77,5 +81,6 @@ module.exports = {
   getAllTags,
   getTagIndex,
   daysOld,
+  index,
   getFeed,
 };

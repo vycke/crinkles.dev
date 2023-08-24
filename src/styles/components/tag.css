@@ -63,5 +63,5 @@
 .tag.highlight {
   --tag-bg: var(--color-primary);
 
-  color: var(--token-color-dark-0);
+  color: var(--color-surface-0);
 }

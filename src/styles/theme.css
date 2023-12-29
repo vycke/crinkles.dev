@@ -4,8 +4,8 @@
    */
   --hue: 215;
   /** Dark colors */
-  --token-color-dark-0: hsl(var(--hue), 30%, 13%);
-  --token-color-dark-1: hsl(var(--hue), 30%, 28%);
+  --token-color-dark-0: hsl(var(--hue), 30%, 8%);
+  --token-color-dark-1: hsl(var(--hue), 30%, 24%);
   --token-color-dark-2: hsl(var(--hue), 30%, 40%);
   /** Light colors */
   --token-color-light-0: hsl(var(--hue), 36%, 98%);
@@ -17,8 +17,8 @@
   --token-color-success: #6cbf43;
   --token-color-info: #389ee6;
   /** brand colors */
-  --token-color-brand-0: #0b6e4f;
-  --token-color-brand-1: #cbef8a;
+  --token-color-brand-0: #6246ea;
+  --token-color-brand-1: #a6ff00;
 
   /**
    * BREAK POINTS
@@ -81,8 +81,9 @@
   --color-surface-0: var(--token-color-light-0);
   --color-surface-1: var(--token-color-light-1);
   --color-primary: var(--token-color-brand-0);
+  --color-logo: var(--token-color-light-0);
 
-  accent-color: var(--token-color-primary);
+  accent-color: var(--color-primary);
 }
 
 /**
@@ -96,5 +97,6 @@
     --color-surface-0: var(--token-color-dark-0);
     --color-surface-1: var(--token-color-dark-1);
     --color-primary: var(--token-color-brand-1);
+    --color-logo: var(--color-primary);
   }
 }

@@ -83,7 +83,7 @@
   --color-primary: var(--token-color-brand-0);
   --color-logo: var(--token-color-light-0);
 
-  accent-color: var(--color-primary);
+  accent-color: var(--token-color-primary);
 }
 
 /**

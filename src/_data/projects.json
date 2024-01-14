@@ -10,14 +10,14 @@
     "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "Cogwheel",
-    "href": "https://github.com/kevtiq/cogwheel",
+    "href": "https://github.com/vycke/cogwheel",
     "description": "Simple lightweight state machine library"
   },
   {
     "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "DIGL",
-    "href": "https://github.com/kevtiq/digl",
+    "href": "https://github.com/vycke/digl",
     "description": "Directed graph layout algorithm"
   },
   {
@@ -31,28 +31,28 @@
     "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "Chifferobe",
-    "href": "https://github.com/kevtiq/chifferobe",
+    "href": "https://github.com/vycke/chifferobe",
     "description": "Small & immutable command-driven state machine library"
   },
   {
     "tech": "JavaScript",
     "type": "package",
     "title": "Proxyfetch",
-    "href": "https://github.com/kevtiq/proxyfetch",
+    "href": "https://github.com/vycke/proxyfetch",
     "description": "Small library wrapper to create a service around fetch, using JavaScript proxies"
   },
   {
     "tech": "TypeScript/JavaScript",
     "type": "package",
     "title": "Opzet",
-    "href": "https://github.com/kevtiq/opzet",
+    "href": "https://github.com/vycke/opzet",
     "description": "Small validation library"
   },
   {
     "tech": "CSS",
     "type": "demo",
     "title": "Responsive stacked barchart",
-    "href": "https://codepen.io/kevtiq/pen/QWaQVMb",
+    "href": "https://codepen.io/vycke/pen/QWaQVMb",
     "description": "Small demo for CSS-only stacked barchart"
   },
   {

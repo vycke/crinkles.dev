@@ -14,7 +14,7 @@
     "format": "npx prettier --write --ignore-unknown"
   },
   "keywords": [],
-  "author": "Kevin Pennekamp<github@crinkles.dev>",
+  "author": "Kevin Pennekamp<github@vyckes.dev>",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -27,10 +27,7 @@
     "markdown-it-shiki": "^0.7.2",
     "onchange": "^7.1.0"
   },
-  "browserslist": [
-    "> 0.25%",
-    "not IE 11"
-  ],
+  "browserslist": ["> 0.25%", "not IE 11"],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged --allow-empty"

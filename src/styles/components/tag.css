@@ -8,6 +8,7 @@
 .tag {
   --tag-bg: var(--color-surface-1);
 
+  display: inline-block;
   background-color: var(--tag-bg);
   padding: 0.4em var(--token-size-000);
   border-radius: var(--token-radius-0);

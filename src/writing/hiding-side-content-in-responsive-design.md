@@ -3,7 +3,7 @@ title: Hiding side content in responsive design
 date: 2023-02-24T00:00:00.000Z
 tags:
   - css
-  - trick
+  - layout
 layout: layouts/post.njk
 description: >-
   A trick to hide content in specific responsive layout patterns without the need for media queries. But with a few gotchas.

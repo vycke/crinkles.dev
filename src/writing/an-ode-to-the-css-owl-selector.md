@@ -4,6 +4,7 @@ date: 2022-03-05T00:00:00.000Z
 tags:
   - css
   - trick
+  - layout
 layout: layouts/post.njk
 description: One off the most beautiful CSS selectors is the Lobotomized Owl Selector of Heydon Pickering
 ---

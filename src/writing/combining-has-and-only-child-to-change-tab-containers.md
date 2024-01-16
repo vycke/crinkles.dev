@@ -20,7 +20,7 @@ Most of us have seen them, and have implemented them: tab-containers with rounde
 
 ![Example of a styled tab container with multiple tabs](/img/tab-example-1.png)
 
-You created this reusable component in your framework of choice and sprinkled some CSS on it. And now it works everywhere, right? But then reality hits you. The pages this component is being implemented on have a dynamic number of tabs, for various reasons. Maybe certain roles should not see certain tabs? Who knows. But you will encounter it. Now your generic UI component looks something like this...
+You created this reusable component in your framework of choice and sprinkled some CSS on it. And now it works everywhere, right? But then reality hits you. The pages this component is being implemented on have a dynamic number of tabs. Meaning that at runtime JavaScript is determining the number of tabs that need to be displayed, for various reasons. Maybe certain roles should not see certain tabs? Who knows. But you will encounter it. Now your generic UI component looks something like this...
 
 ![Example of a styled tab container with only one tab](/img/tab-example-2.png)
 
@@ -71,4 +71,4 @@ But that is not exactly what we want to achieve. For the intended effect, we wan
 In the first part of the above snippet, we effectively say: "Look for a `.tabs` that has a `li` element that is the *only* child of its parent". Now instead of styling a `li` element, we can style `.tabs` under this specific condition. Because `li` can also be part of `.content` we make it a little bit more specific by stating `nav ul li:only-child`. But the effect remains the same.
 
 ## Wrapping up
-This was just another showcase on how powerful CSS has become as a language. With each new UI challenge, there is a bigger chance you can solve it with CSS, instead of implementing jumping class lists on HTML elements.
+The beauty of this approach is that is generic, and simple. If users are using an older browser, things will *not* break. They will just see styling that is a little bit off, but is still functional. A nice case of progressive enhancement if you ask me.

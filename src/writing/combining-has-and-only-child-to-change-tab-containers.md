@@ -24,7 +24,7 @@ You created this reusable component in your framework of choice and sprinkled so
 
 ![Example of a styled tab container with only one tab](/img/tab-example-2.png)
 
-But that was not what we intended. Showing a tab container (including the button) if there is only one 'tab' available is redundant. Let alone confusing and probably inconsistent with pages that only have a single 'content' by default. Well damn...
+But that was not what we intended. Showing a tab container (including the button) if there is only one 'tab' available is redundant. Let alone confusing and probably inconsistent with pages that only have a single 'content' by default. Well damn... we just want a 'card' in this case.
 
 ## Why not use X?
 When you use one of the modern front-end frameworks, you should have little trouble implementing a fix. You can add custom logic to count the amount of tabs the container will have. Based on that exercise, you can remove certain elements from the screens (e.g. the tab buttons) and add different classes to the content.

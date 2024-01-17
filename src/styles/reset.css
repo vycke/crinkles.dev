@@ -14,6 +14,7 @@
 html {
   height: 100%;
   /* avoid scaling on mobile */
+  -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   /* iOS webkit fix */
@@ -36,9 +37,20 @@ body {
 
 /* Remove list styles on ul, ol elements with a list role,
   which suggests default styling will be removed */
-:where(ul, ol) {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
   padding-left: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+:where(h1, h2, h3, button, input, label) {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+:where(h1, h2, h3) {
+  text-wrap: balance;
 }
 
 /* Baseline for default links */
@@ -60,6 +72,11 @@ body {
   font: inherit;
 }
 
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
 /* Removes outlines for mouse users */
 :focus:not(:focus-visible) {
   outline: none;
@@ -73,17 +90,6 @@ body {
   outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)
     var(--outline-color, currentColor);
   outline-offset: var(--outline-offset, var(--outline-size));
-}
-
-/* Scroll padding allowance below focused elements
-  to ensure they are clearly in view */
-:focus {
-  scroll-padding-block-end: 8vh;
-}
-
-/* Scroll padding allowance above anchor links */
-:target {
-  scroll-padding-block-start: 2rem;
 }
 
 /* Remove all animations and transitions for

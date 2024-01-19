@@ -19,7 +19,7 @@ module.exports = (config) => {
     config.addCollection(name, collections[name]);
   });
 
-  // amending librardes
+  // amending libraries
   Object.keys(libraries).forEach((name) => {
     config.amendLibrary(name, libraries[name]);
   });

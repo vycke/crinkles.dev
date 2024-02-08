@@ -1,6 +1,6 @@
 ---
 title: Different approaches to fluid typography and layouts
-date: 2023-03-07T00:00:00.000Z
+date: 2023-03-07
 tags:
   - css
   - layout

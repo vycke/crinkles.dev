@@ -1,6 +1,6 @@
 ---
 title: Creating a stacked bar chart using only CSS
-date: 2023-01-22T00:00:00.000Z
+date: 2023-01-22
 tags:
   - css
 layout: layouts/post.njk

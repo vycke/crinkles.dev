@@ -1,7 +1,7 @@
 ---
 title: Engineering, UX design and the value stream
-date: 2023-02-20T00:00:00.000Z
-update: 2023-06-22T00:00:00.000Z
+date: 2023-02-20
+update: 2023-06-22
 tags:
   - workflow
 layout: layouts/post.njk

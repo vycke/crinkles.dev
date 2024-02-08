@@ -1,6 +1,6 @@
 ---
 title: Deploying my newly created SvelteKit website
-date: 2021-04-07T01:00:00.000Z
+date: 2021-04-07
 archived: true
 tags:
   - svelte

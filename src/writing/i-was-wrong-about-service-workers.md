@@ -1,7 +1,7 @@
 ---
 title: I was wrong about service workers
 pinned: true
-date: 2023-07-28T00:00:00.000Z
+date: 2023-07-28
 tags:
   - javascript
   - opinion
@@ -38,14 +38,14 @@ Let's first make the base of the service worker. In the below snippet, the `even
 
 ```js
 self.addEventListener("install", function (event) {
-	event.skipWaiting();
+  event.skipWaiting();
 });
 
 self.addEventListener("fetch", function (event) {
-	const request = event.request;
-	if (!request.method === "GET" || !request.url.includes("/api")) return;
+  const request = event.request;
+  if (!request.method === "GET" || !request.url.includes("/api")) return;
 
-	event.respondWith(offlineFirstStrategy(request));
+  event.respondWith(offlineFirstStrategy(request));
 });
 ```
 
@@ -53,13 +53,13 @@ Now let's implement a simple `offlineFirstStrategy` function, so we can make use
 
 ```js
 async function offlineFirstStrategy(request) {
-	let response = await caches.match(request);
-	if (response) return;
+  let response = await caches.match(request);
+  if (response) return;
 
-	response = await fetch(request);
-	const cache = await caches.open("api");
-	await cache.put(request, response);
-	return response;
+  response = await fetch(request);
+  const cache = await caches.open("api");
+  await cache.put(request, response);
+  return response;
 }
 ```
 

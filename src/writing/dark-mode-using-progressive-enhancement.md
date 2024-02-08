@@ -1,6 +1,6 @@
 ---
 title: Dark mode using progressive enhancement
-date: 2022-07-30T00:00:00.000Z
+date: 2022-07-30
 tags:
   - css
 layout: layouts/post.njk

@@ -1,6 +1,6 @@
 ---
 title: Use the child-element count in CSS
-date: 2023-02-21T00:00:00.000Z
+date: 2023-02-21
 tags:
   - css
   - trick

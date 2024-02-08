@@ -1,6 +1,6 @@
 ---
 title: A nth-child CSS trick
-date: 2023-01-25T00:00:00.000Z
+date: 2023-01-25
 tags:
   - css
   - trick
@@ -25,17 +25,17 @@ On the highest level of your CSS, you define a list like the one below. This res
 
 ```css
 :nth-child(1) {
-	--index: 1;
+  --index: 1;
 }
 :nth-child(2) {
-	--index: 2;
+  --index: 2;
 }
 
 :nth-last-child(1) {
-	--rev-index: 1;
+  --rev-index: 1;
 }
 :nth-last-child(2) {
-	--rev-index: 2;
+  --rev-index: 2;
 }
 ```
 
@@ -45,7 +45,7 @@ Glad you asked! In the last few years, I came across two use cases. Two, whole, 
 
 ```css
 .my-class {
-	background-color: hsl(calc(100 * var(--index)) 100% 40%);
+  background-color: hsl(calc(100 * var(--index)) 100% 40%);
 }
 ```
 
@@ -55,11 +55,11 @@ In an earlier use case, I replicated the UI implementation of toasts from [Verce
 
 ```scss
 @for $i from 1 through 20 {
-	&:nth-of-type(#{$i}) {
-		opacity: 1 - 0.15 * ($i - 1);
-		transform: translate3d(50%, 0 - (5 * ($i - 1)) + px, -1 * $i + px)
-			scale(1 - (0.05 * ($i - 1)));
-	}
+  &:nth-of-type(#{$i}) {
+    opacity: 1 - 0.15 * ($i - 1);
+    transform: translate3d(50%, 0 - (5 * ($i - 1)) + px, -1 * $i + px)
+      scale(1 - (0.05 * ($i - 1)));
+  }
 }
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Binding CSS and JavaScript with HTML data-attributes
-date: 2021-04-22T00:00:00.000Z
+date: 2021-04-22
 tags:
   - css
   - architecture

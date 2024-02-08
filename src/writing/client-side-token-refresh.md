@@ -1,6 +1,6 @@
 ---
 title: Authentication token management
-date: 2021-11-17T00:00:00.000Z
+date: 2021-11-17
 tags:
   - architecture
 layout: layouts/post.njk

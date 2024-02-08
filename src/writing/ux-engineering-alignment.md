@@ -1,7 +1,7 @@
 ---
 title: Engineering, UX design and agile
 archived: true
-date: 2021-06-16T00:00:00.000Z
+date: 2021-06-16
 tags:
   - workflow
 layout: layouts/post.njk

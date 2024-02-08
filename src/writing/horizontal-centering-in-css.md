@@ -1,6 +1,6 @@
 ---
 title: Horizontal centering in CSS
-date: 2021-06-20T00:00:00.000Z
+date: 2021-06-20
 tags:
   - css
   - layout

@@ -10,10 +10,6 @@
     "path": "/feed/feed.xml",
     "id": "https://vyckes.dev/"
   },
-  "jsonfeed": {
-    "path": "/feed/feed.json",
-    "url": "https://vyckes.dev/feed/feed.json"
-  },
   "author": {
     "name": "Kevin Pennekamp",
     "email": "hello@vyckes.dev",

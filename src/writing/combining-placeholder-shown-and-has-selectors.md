@@ -1,6 +1,6 @@
 ---
 title: Combining :placeholder-shown and :has
-date: 2023-08-19T00:00:00.000Z
+date: 2023-08-19
 tags:
   - css
   - trick

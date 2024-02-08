@@ -1,6 +1,6 @@
 ---
 title: Old man yelling at a cloud
-date: 2023-06-28T00:00:00.000Z
+date: 2023-06-28
 tags:
   - opinion
 layout: layouts/post.njk

@@ -1,6 +1,6 @@
 ---
 title: Demystifying the component architecture
-date: 2020-01-12T00:00:00.000Z
+date: 2020-01-12
 tags:
   - architecture
   - layout

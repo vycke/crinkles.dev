@@ -1,6 +1,6 @@
 ---
 title: Journey from Gatsby to SvelteKit
-date: 2021-04-07T00:00:00.000Z
+date: 2021-04-07
 archived: true
 tags:
   - svelte

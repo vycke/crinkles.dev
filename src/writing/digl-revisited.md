@@ -1,6 +1,6 @@
 ---
 title: Updating my graph layout algorithm
-date: 2023-01-05T00:00:00.000Z
+date: 2023-01-05
 tags:
   - graph
   - javascript

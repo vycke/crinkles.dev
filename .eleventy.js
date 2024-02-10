@@ -4,6 +4,7 @@ const { TEMPLATE_ENGINE } = require("./config/constants.js");
 const filters = require("./config/filters.js");
 const collections = require("./config/collections.js");
 const libraries = require("./config/libraries");
+const shortcodes = require("./config/shortcodes");
 
 module.exports = (config) => {
   // Handling assets (images, fonts, etc.)
@@ -22,6 +23,11 @@ module.exports = (config) => {
   // amending libraries
   Object.keys(libraries).forEach((name) => {
     config.amendLibrary(name, libraries[name]);
+  });
+
+  // shortcodes
+  Object.keys(shortcodes).forEach((name) => {
+    config.addShortcode(name, shortcodes[name]);
   });
 
   return {

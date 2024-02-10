@@ -120,3 +120,7 @@ There you have it! A background color that becomes darker the deeper you go.
 I actually don’t know. Sure you can create a bull’s eye effect with it, or have fonts decrease in size the deeper you go. But the question remains this nested HTML + tricky CSS is really worth it? Is it maintainable in the long run? 
 
 But it is still cool to explore the edges of CSS. Who knows? One small addition to the language could open up a whole new set of tricks (`:has` certainly did). Only by exploring the edges, you will find them.
+
+::: info
+If you are limited to two styles, it is possible to solve this problem with `@container style(...)`. However, this is not supported in FireFox and Safari at the moment this article is published. 
+:::

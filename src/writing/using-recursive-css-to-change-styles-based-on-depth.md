@@ -41,6 +41,8 @@ Instead of the bull's eye, let's try to make something like the visual element b
 
 ![Visualization of a horizontal bar, where segments get darker the more they go into the center](/img/recursive-example.png)
 
+To see a live example, check this [codepen](https://codepen.io/vyckes/pen/YzgJqVE).
+
 ## The starting point in HTML
 
 So how do you implement such a recursive solution? Let's first look at the HTML corresponding to the example shown in this article. It looks exactly like this.

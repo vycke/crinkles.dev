@@ -48,6 +48,15 @@ article h2:has(a):hover {
   color: var(--color-primary);
 }
 
+article h2::before {
+  background: var(--color-foreground-1);
+  content: "";
+  display: block;
+  height: 4px;
+  margin-bottom: 0.5rem;
+  width: 5rem;
+}
+
 article h2 a::after {
   position: absolute;
   top: 0;
@@ -123,14 +132,20 @@ article blockquote {
 }
 
 article blockquote::before {
-    background: linear-gradient(-1deg, var(--token-color-error), var(--token-color-warning), var(--token-color-success), var(--token-color-info));
-    box-shadow: var(--token-elevation-0);
-    content: "";
-    height: calc(100% + 1px);
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 5px;
+  background: linear-gradient(
+    -1deg,
+    var(--token-color-error),
+    var(--token-color-warning),
+    var(--token-color-success),
+    var(--token-color-info)
+  );
+  box-shadow: var(--token-elevation-0);
+  content: "";
+  height: calc(100% + 1px);
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 5px;
 }
 
 article blockquote cite {

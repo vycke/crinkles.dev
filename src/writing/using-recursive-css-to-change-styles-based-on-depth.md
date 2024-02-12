@@ -105,7 +105,9 @@ We now have our depth, compared to a parent, stored in a custom property. We can
 }
 ```
 
-There you have it! A background color that becomes darker the deeper you go, just like the image at the start of the article. If you don't believe it, just look at [this codepen](https://codepen.io/vyckes/pen/YzgJqVE) for the results (when you apply a little more CSS, you know height and width etc.).
+There you have it! A background color that becomes darker the deeper you go, just like the image at the start of the article (or posted again below). If you don't believe it, just look at [this codepen](https://codepen.io/vyckes/pen/YzgJqVE) for the results (when you apply a little more CSS, you know height and width etc.).
+
+![Visualization of a horizontal bar, where segments get darker the more they go into the center](/img/recursive-example.png)
 
 ## Why would you want this?
 

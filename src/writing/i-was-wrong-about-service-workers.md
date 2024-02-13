@@ -54,11 +54,11 @@ Now let's implement a simple `offlineFirstStrategy` function, so we can make use
 ```js
 async function offlineFirstStrategy(request) {
   let response = await caches.match(request);
-  if (response) return;
-
-  response = await fetch(request);
-  const cache = await caches.open("api");
-  await cache.put(request, response);
+  if (!response) {
+    response = await fetch(request);
+    const cache = await caches.open("api");
+    await cache.put(request, response);
+  }
   return response;
 }
 ```

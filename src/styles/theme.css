@@ -96,8 +96,8 @@
     --color-foreground-1: var(--token-color-neutral-3);
     --color-surface-0: var(--token-color-neutral-0);
     --color-surface-1: var(--token-color-neutral-1);
-    --color-primary: var(--token-color-brand-1);
-    --color-secondary: var(--token-color-brand-0);
+    --color-primary: var(--token-color-brand-0);
+    --color-secondary: var(--token-color-brand-1);
     accent-color: var(--color-primary);
   }
 }

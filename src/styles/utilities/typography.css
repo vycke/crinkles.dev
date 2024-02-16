@@ -36,6 +36,10 @@
 .hover\:text-color-primary:hover {
   color: var(--color-primary);
 }
+.text-color-secondary,
+.hover\:text-color-secondary:hover {
+  color: var(--color-secondary);
+}
 
 .monospace {
   font-family: var(--monospace);

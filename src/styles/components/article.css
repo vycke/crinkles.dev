@@ -49,12 +49,13 @@ article h2:has(a):hover {
 }
 
 article h2::before {
-  background: var(--color-foreground-1);
+  background: var(--color-secondary);
   content: "";
+  top: -10px;
   display: block;
   height: 4px;
   margin-bottom: 0.5rem;
-  width: 5rem;
+  width: 90px;
 }
 
 article h2 a::after {
@@ -73,7 +74,7 @@ article h2:hover a {
 /**
 * GENERAL STYLING OF ELEMENTS
 */
-article :where(img, pre) {
+article :where(img, pre, .info) {
   border-radius: var(--token-radius-1);
   margin-left: 50%;
   transform: translateX(-50%);
@@ -99,9 +100,9 @@ article img {
  * CODE BLOCKS
  */
 article pre {
-  background-color: var(--token-color-dark-1) !important;
+  background-color: var(--token-color-neutral-1) !important;
   box-shadow: var(--token-elevation-1);
-  color: var(--token-color-light-0);
+  color: var(--token-color-neutral-5);
   position: relative;
   padding: 0;
   white-space: pre;

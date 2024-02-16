@@ -11,5 +11,5 @@
 
 .meta-info::before {
   content: "//";
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }

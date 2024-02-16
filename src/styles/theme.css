@@ -3,22 +3,21 @@
    * COLORS
    */
   --hue: 215;
-  /** Dark colors */
-  --token-color-dark-0: hsl(var(--hue), 30%, 8%);
-  --token-color-dark-1: hsl(var(--hue), 30%, 24%);
-  --token-color-dark-2: hsl(var(--hue), 30%, 40%);
-  /** Light colors */
-  --token-color-light-0: hsl(var(--hue), 36%, 98%);
-  --token-color-light-1: hsl(var(--hue), 36%, 92%);
-  --token-color-light-2: hsl(var(--hue), 36%, 78%);
-  /** System colors */
-  --token-color-error: #ee959f;
-  --token-color-warning: #eedd95;
-  --token-color-success: #9fee95;
-  --token-color-info: #959fee;
+  /** NEUTRALS */
+  --token-color-neutral-0: hsl(var(--hue), 30%, 8%);
+  --token-color-neutral-1: hsl(var(--hue), 30%, 24%);
+  --token-color-neutral-2: hsl(var(--hue), 30%, 40%);
+  --token-color-neutral-3: hsl(var(--hue), 36%, 78%);
+  --token-color-neutral-4: hsl(var(--hue), 36%, 92%);
+  --token-color-neutral-5: hsl(var(--hue), 36%, 98%);
+  /** SYSTEM */
+  --token-color-error: #f98a96;
+  --token-color-warning: #f9e48a;
+  --token-color-success: #96f98a;
+  --token-color-info: #95cafa;
   /** brand colors */
-  --token-color-brand-0: #536fe3;
-  --token-color-brand-1: #95a6ee;
+  --token-color-primary: #98a0fa;
+  --token-color-secondary: #5eddac;
 
   /**
    * BREAK POINTS
@@ -75,28 +74,11 @@
  * LIGHT THEME
  */
 :root {
-  color-scheme: light;
-  --color-foreground-0: var(--token-color-dark-0);
-  --color-foreground-1: var(--token-color-dark-2);
-  --color-surface-0: var(--token-color-light-0);
-  --color-surface-1: var(--token-color-light-1);
-  --color-primary: var(--token-color-brand-0);
-  --color-logo: var(--token-color-light-0);
-
-  accent-color: var(--token-color-primary);
-}
-
-/**
- * DARK THEME
- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --color-foreground-0: var(--token-color-light-0);
-    --color-foreground-1: var(--token-color-light-2);
-    --color-surface-0: var(--token-color-dark-0);
-    --color-surface-1: var(--token-color-dark-1);
-    --color-primary: var(--token-color-brand-1);
-    --color-logo: var(--color-primary);
-  }
+  color-scheme: dark;
+  --color-foreground-0: var(--token-color-neutral-5);
+  --color-foreground-1: var(--token-color-neutral-3);
+  --color-surface-0: var(--token-color-neutral-0);
+  --color-surface-1: var(--token-color-neutral-1);
+  --color-primary: var(--token-color-primary);
+  --color-secondary: var(--token-color-secondary);
 }

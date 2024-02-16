@@ -4,7 +4,8 @@
  * General style of the info-box primarily used in articles
  */
 
-.info, .archived {
+.info,
+.archived {
   box-shadow: var(--token-elevation-1);
   border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
@@ -21,7 +22,8 @@
   border: 3px solid var(--token-color-error);
 }
 
-.info::before, .archived::before {
+.info::before,
+.archived::before {
   position: absolute;
   display: block;
   top: -15px;
@@ -39,5 +41,5 @@
 .archived::before {
   content: "<archive />";
   background-color: var(--token-color-error);
-  color: var(--token-color-dark-0);
+  color: var(--token-color-neutral-0);
 }

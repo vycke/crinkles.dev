@@ -4,7 +4,7 @@
    */
   --hue: 215;
   /** NEUTRALS */
-  --token-color-neutral-0: hsl(var(--hue), 30%, 8%);
+  --token-color-neutral-0: hsl(var(--hue), 30%, 10%);
   --token-color-neutral-1: hsl(var(--hue), 30%, 24%);
   --token-color-neutral-2: hsl(var(--hue), 30%, 40%);
   --token-color-neutral-3: hsl(var(--hue), 36%, 78%);
@@ -16,8 +16,10 @@
   --token-color-success: #96f98a;
   --token-color-info: #95cafa;
   /** brand colors */
-  --token-color-primary: #98a0fa;
-  --token-color-secondary: #5eddac;
+  --token-color-brand-0: #98a0fa;
+  --token-color-brand-1: #5eddac;
+  --token-color-brand-2: #536fe3;
+  --token-color-brand-3: #078080;
 
   /**
    * BREAK POINTS
@@ -74,11 +76,28 @@
  * LIGHT THEME
  */
 :root {
-  color-scheme: dark;
-  --color-foreground-0: var(--token-color-neutral-5);
-  --color-foreground-1: var(--token-color-neutral-3);
-  --color-surface-0: var(--token-color-neutral-0);
-  --color-surface-1: var(--token-color-neutral-1);
-  --color-primary: var(--token-color-primary);
-  --color-secondary: var(--token-color-secondary);
+  color-scheme: light;
+  --color-foreground-0: var(--token-color-neutral-0);
+  --color-foreground-1: var(--token-color-neutral-2);
+  --color-surface-0: var(--token-color-neutral-5);
+  --color-surface-1: var(--token-color-neutral-4);
+  --color-primary: var(--token-color-brand-3);
+  --color-secondary: var(--token-color-brand-2);
+  accent-color: var(--color-primary);
+}
+
+/**
+  * DARK THEME
+  */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-foreground-0: var(--token-color-neutral-5);
+    --color-foreground-1: var(--token-color-neutral-3);
+    --color-surface-0: var(--token-color-neutral-0);
+    --color-surface-1: var(--token-color-neutral-1);
+    --color-primary: var(--token-color-brand-1);
+    --color-secondary: var(--token-color-brand-0);
+    accent-color: var(--color-primary);
+  }
 }

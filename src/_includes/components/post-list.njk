@@ -4,7 +4,7 @@
     <li class="flex-col --gap-none click-area" role="listitem">
         <span class="flex-row items-center">
         <time class="meta-info | mr-00" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
-        {% if latest.data.title === post.data.title %} <span class="tag | size-000 bold">NEW! 🤯</span> {% endif %}
+        {% if latest.data.title === post.data.title %} <span class="tag | size-000 bold">new! 🤯</span> {% endif %}
         {% if post.data.update %} <span class="tag | size-000 bold">updated!</span> {%  endif %}
         </span>
       </span>

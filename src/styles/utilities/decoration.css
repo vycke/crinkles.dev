@@ -10,15 +10,3 @@
   left: 0;
   top: -10px;
 }
-
-.elevation-0 {
-  box-shadow: var(--token-elevation-0);
-}
-
-.border-t {
-  border-top: 1px solid var(--surface-1);
-}
-
-.radius-0 {
-  border-radius: var(--token-radius-0);
-}

@@ -14,14 +14,14 @@ width: 3
 
 {% set posts =  collections.posts | reverse | head(3) %}
 
-<ul role="list" class="list-group | flex-col --gap-2">
+<ul role="list" class="hover-group | flex-col --gap-2">
     {% for post in posts %}
         <li role="listitem" class="bg-surface-1 p-0 elevation-0 flex-col --gap-none click-area">
             <time date="{{ post.data.date }}" class="meta-info">{{ post.data.date | readableDate }}</time>
             <h2>
                 <a href="{{ post.page.url }}">{{ post.data.title }}</a>
             </h2>
-            <span class="text-color-1 size-0">{{ post.data.description }}</span>
+            <span class="text-1 size-0">{{ post.data.description }}</span>
         </li>
     {% endfor %}
 </ul>

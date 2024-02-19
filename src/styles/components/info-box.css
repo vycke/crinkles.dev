@@ -9,17 +9,17 @@
   box-shadow: var(--token-elevation-1);
   border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
-  background-color: var(--color-surface-1);
+  background-color: var(--surface-1);
   font-size: var(--token-size-00);
   position: relative;
 }
 
 .info {
-  border: 3px solid var(--color-primary);
+  border: 3px solid var(--primary);
 }
 
 .archived {
-  border: 3px solid var(--token-color-error);
+  border: 3px solid var(--token-error);
 }
 
 .info::before,
@@ -34,12 +34,12 @@
 
 .info::before {
   content: "<aside />";
-  background-color: var(--color-primary);
-  color: var(--color-surface-0);
+  background-color: var(--primary);
+  color: var(--surface-0);
 }
 
 .archived::before {
   content: "<archive />";
-  background-color: var(--token-color-error);
-  color: var(--token-color-neutral-0);
+  background-color: var(--token-error);
+  color: var(--token-neutral-0);
 }

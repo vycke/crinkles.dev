@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 // Own configuration
 const { TEMPLATE_ENGINE } = require("./config/constants.js");
 const filters = require("./config/filters.js");
@@ -10,6 +11,7 @@ module.exports = (config) => {
   // Handling assets (images, fonts, etc.)
   config.addPassthroughCopy({ "./public/": "/" });
   config.addPlugin(pluginRss);
+  config.addPlugin(syntaxHighlight);
   // filters
   Object.keys(filters).forEach((name) => {
     config.addFilter(name, filters[name]);

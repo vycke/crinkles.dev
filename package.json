@@ -19,21 +19,27 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "husky": "^8.0.3",
     "lightningcss-cli": "^1.18.0",
     "lint-staged": "^13.2.3",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-container": "^3.0.0",
-    "markdown-it-shiki": "^0.7.2",
     "onchange": "^7.1.0"
   },
-  "browserslist": ["> 0.25%", "not IE 11"],
+  "browserslist": [
+    "> 0.25%",
+    "not IE 11"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged --allow-empty"
     }
   },
   "lint-staged": {
-    "**/*": ["yarn format", "yarn audit"]
+    "**/*": [
+      "yarn format",
+      "yarn audit"
+    ]
   }
 }

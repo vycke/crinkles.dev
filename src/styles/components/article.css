@@ -45,11 +45,11 @@ article :where(h2 a, h3 a) {
 }
 
 article h2:has(a):hover {
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 article h2::before {
-  background: var(--color-secondary);
+  background: var(--secondary);
   content: "";
   top: -10px;
   display: block;
@@ -97,48 +97,23 @@ article img {
 }
 
 /**
- * CODE BLOCKS
- */
-article pre {
-  background-color: var(--token-color-neutral-1) !important;
-  box-shadow: var(--token-elevation-1);
-  color: var(--token-color-neutral-5);
-  position: relative;
-  padding: 0;
-  white-space: pre;
-  word-wrap: normal;
-  word-break: normal;
-  word-spacing: normal;
-}
-
-article pre > code {
-  padding: var(--token-size-0) var(--token-size-1);
-  font-size: var(--token-size-00);
-  display: block;
-  overflow-x: auto;
-  tab-size: 2;
-  /* fix for increased font-size safari iOS */
-  -webkit-text-size-adjust: none;
-}
-
-/**
  * BLOCK QUOTES
  */
 article blockquote {
   display: block;
   position: relative;
   padding: 0 var(--token-size-1);
-  color: var(--color-foreground-1);
+  color: var(--text-2);
   font-style: italic;
 }
 
 article blockquote::before {
   background: linear-gradient(
     -1deg,
-    var(--token-color-error),
-    var(--token-color-warning),
-    var(--token-color-success),
-    var(--token-color-info)
+    var(--token-error),
+    var(--token-warning),
+    var(--token-success),
+    var(--token-info)
   );
   box-shadow: var(--token-elevation-0);
   content: "";
@@ -155,20 +130,12 @@ article blockquote cite {
   font-size: var(--token-size-00);
   font-style: italic;
   margin-top: var(--token-size-0);
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
-/**
- * INLINE CODE
- */
-article code {
-  font-family: var(--monospace);
-  font-size: 0.85em;
-  hyphens: none;
-}
-
+/** INLINE CODE */
 article :not(pre) > code {
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 /**
@@ -185,7 +152,7 @@ article :where(ul, ol):not([class]) li {
 }
 
 article :where(ul, ol):not([class]) li::marker {
-  color: var(--color-primary);
+  color: var(--primary);
   font-size: 0.825em;
   font-weight: 600;
 }

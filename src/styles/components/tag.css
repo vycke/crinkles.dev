@@ -5,9 +5,10 @@
  * --tag-bg: background color in inactive state
  * --tag-hash-color: color of the # char
  */
-.tag {
-  --tag-bg: var(--color-surface-1);
-  --tag-color: var(--color-primary);
+
+.tag-link {
+  --tag-bg: var(--surface-1);
+  --tag-color: var(--primary);
   --tag-hash-color: var(--tag-color);
 
   display: inline-block;
@@ -19,48 +20,45 @@
   color: var(--color-foreground-0);
 }
 
-.tag:hover,
-.tag:focus {
+.tag-link:hover,
+.tag-link:focus {
   --tag-bg: var(--tag-color);
-  --tag-hash-color: var(--token-color-neutral-0);
-  color: var(--token-color-neutral-0);
+  --tag-hash-color: var(--token-neutral-0);
+  color: var(--token-neutral-0);
 }
 
-.tag::before {
+.tag-link::before {
   content: "#";
   transition: color 300ms;
   color: var(--tag-hash-color);
 }
 
-.tag[data-index="0"],
-.tag[data-index="4"],
-.tag[data-index="8"] {
-  --tag-color: var(--token-color-error);
+.tag-link[data-index="0"],
+.tag-link[data-index="4"],
+.tag-link[data-index="8"] {
+  --tag-color: var(--token-error);
 }
 
-.tag[data-index="1"],
-.tag[data-index="5"],
-.tag[data-index="9"] {
-  --tag-color: var(--token-color-warning);
+.tag-link[data-index="1"],
+.tag-link[data-index="5"],
+.tag-link[data-index="9"] {
+  --tag-color: var(--token-warning);
 }
 
-.tag[data-index="2"],
-.tag[data-index="6"],
-.tag[data-index="10"] {
-  --tag-color: var(--token-color-success);
+.tag-link[data-index="2"],
+.tag-link[data-index="6"],
+.tag-link[data-index="10"] {
+  --tag-color: var(--token-success);
 }
 
-.tag[data-index="3"],
-.tag[data-index="7"],
-.tag[data-index="11"] {
-  --tag-color: var(--token-color-info);
+.tag-link[data-index="3"],
+.tag-link[data-index="7"],
+.tag-link[data-index="11"] {
+  --tag-color: var(--token-info);
 }
 
-.tag.highlight {
-  --tag-bg: var(--color-primary);
-  color: var(--color-surface-0);
-}
-
-.tag.highlight::before {
-  content: "";
+@media (hover: hover) {
+  .taglist > *:hover {
+    transform: matrix(1.075, 0, 0, 1.075, 0, 0);
+  }
 }

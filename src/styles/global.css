@@ -1,34 +1,16 @@
-html {
-  overflow-x: hidden;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: var(--token-bp-0);
-  max-width: 100vw;
-  font-size: var(--token-size-0);
-  font-family: var(--sans-serif);
-  background-color: var(--color-surface-0);
-  color: var(--color-foreground-0);
-  position: relative;
-}
-
 /**
  * LINKS
  */
 a,
 a:visited {
-  transition: all 200ms ease;
-  color: var(--color-foreground-0);
-  text-decoration-color: var(--color-foreground-1);
+  text-decoration-color: var(--text-2);
 }
 
 a:hover,
 a:visited:hover,
 a:focus {
-  color: var(--color-primary);
-  text-decoration-color: var(--color-primary);
+  color: var(--primary);
+  text-decoration-color: var(--primary);
 }
 
 /**
@@ -36,10 +18,7 @@ a:focus {
  */
 :where(h1, h2, h3) {
   font-family: var(--sans-serif);
-  width: 100%;
-  font-weight: 600;
 }
-
 h1 {
   font-size: var(--token-size-2);
 }
@@ -48,12 +27,4 @@ h2 {
 }
 h3 {
   font-size: var(--token-size-0);
-}
-
-/**
- * TEXT SELECTION
- */
-::selection {
-  color: var(--color-surface-0) !important;
-  background: var(--color-foreground-0) !important;
 }

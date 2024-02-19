@@ -4,6 +4,8 @@
   padding: 0.2em var(--token-size-000);
   border-radius: var(--token-radius-0);
   color: var(--text-0);
+  font-weight: 600;
+  font-size: var(--token-size-000);
 }
 
 .flag::before {

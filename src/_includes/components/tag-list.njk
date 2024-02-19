@@ -1,13 +1,13 @@
 <ul
   role="list"
   aria-label="List of all tags"
-  class="hover-group taglist | cluster --gap-00 items-center"
+  class="hover-group taglist | cluster --gap-00"
 >
   {% for tag in tags %} {% set index = collections.posts | getTagIndex(tag) %}
   <li>
     <a
       href="/tags/{{ tag }}/"
-      class="tag-link clickable no-decoration | size-00 | elevation-0"
+      class="tag-link"
       data-selected="{{ selected === tag }}"
       data-index="{{ index }}"
       >{{ tag }}</a

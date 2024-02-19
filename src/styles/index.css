@@ -1,6 +1,21 @@
-@layer global, layout, utilities, components;
+@layer global, layout, utilities, blocks;
 
-@import "theme.css" layer(global);
+@import "tokens.css" layer(global);
 @import "global.css" layer(global);
-@import "utilities/_utilities.css" layer(utilities);
-@import "components/_components.css" layer(components);
+
+/** utilities */
+@import "utilities/animate.css" layer(utilities);
+@import "utilities/colors.css" layer(utilities);
+@import "utilities/decoration.css" layer(utilities);
+
+/** blocks */
+@import "blocks/article.css" layer(blocks);
+@import "blocks/canvas.css" layer(blocks);
+@import "blocks/card.css" layer(blocks);
+@import "blocks/codeblock.css" layer(blocks);
+@import "blocks/flag.css" layer(blocks);
+@import "blocks/info-box.css" layer(blocks);
+@import "blocks/meta-info.css" layer(blocks);
+@import "blocks/profile-picture.css" layer(blocks);
+@import "blocks/redirect-link.css" layer(blocks);
+@import "blocks/tag.css" layer(blocks);

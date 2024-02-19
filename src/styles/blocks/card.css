@@ -3,6 +3,7 @@
   padding: var(--token-size-0);
   border: 1px solid var(--surface-1);
   border-radius: var(--token-radius-0);
+  box-shadow: var(--token-elevation-0);
 }
 
 .card:hover {

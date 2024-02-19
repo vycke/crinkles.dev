@@ -4,7 +4,7 @@ layout: layouts/page.njk
 eleventyExcludeFromCollections: true
 ---
 
-<ul role="list" class="flex-col --gap-3 | hover-group | flex-grow | fade-in">
+<ul role="list" class="flex-col --gap-3 | hover-group | flex-grow">
   {% for type, projects in projects | groupby("type") %}
   <li>
     <h2 class="text-primary uppercase mb-0">{{ type }}</h2>
@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: true
           <a href="{{ project.href }}" class="bold"> {{ project.title }} </a>
         </h3>
         <p class="size-00 flex-grow">{{ project.description }}</p>
-        <span class="self-start text-1 size-00"><span class="text-secondary">#</span>{{ project.tech }}</span>
+        <span class="self-start text-2 size-00"><span class="text-secondary">#</span>{{ project.tech }}</span>
       </li>
       {% endfor %}
     </ul>

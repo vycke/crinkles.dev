@@ -18,6 +18,8 @@
   transition: all 300ms;
   text-decoration: none;
   color: var(--color-foreground-0);
+  font-size: var(--token-size-00);
+  box-shadow: var(--token-elevation-0);
 }
 
 .tag-link:hover,

@@ -1,39 +1,18 @@
 /**
- * BACKGROUND COLORS
- */
-.bg-surface-0,
-.hover\:bg-surface-0:hover {
-  background-color: var(--surface-0);
-}
-.bg-surface-1,
-.hover\:bg-surface-1:hover {
-  background-color: var(--surface-1);
-}
-.bg-primary,
-.hover\:bg-primary:hover {
-  background-color: var(--primary);
-}
-.bg-secondary,
-.hover\:bg-secondary:hover {
-  background-color: var(--secondary);
-}
-
-/**
  * TEXT COLORS
  */
-.text-0,
-.hover\:text-0:hover {
-  color: var(--color-foreground-0);
+.text-0 {
+  color: var(--text-0);
 }
-.text-1,
-.hover\:text-1:hover {
+.text-1 {
+  color: var(--text-1);
+}
+.text-2 {
   color: var(--text-2);
 }
-.text-primary,
-.hover\:text-primary:hover {
+.text-primary {
   color: var(--primary);
 }
-.text-secondary,
-.hover\:text-secondary:hover {
+.text-secondary {
   color: var(--secondary);
 }

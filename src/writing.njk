@@ -13,7 +13,7 @@ pagination:
   <aside class="flex-col --gap-000 mb-2">
     {% set tags = collections.posts | getAllTags | head(5) %}
     {% include "components/tag-list.njk" %}
-    <a href="/tag-list" class="size-00 redirect self-start text-1">all topics</a>
+    <a href="/tag-list" class="redirect | size-00 self-start">all topics</a>
   </aside>
   {% include "components/post-list.njk" %}
 </div>

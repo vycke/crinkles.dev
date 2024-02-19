@@ -1,0 +1,42 @@
+pre {
+  border: none;
+  box-shadow: var(--token-elevation-1);
+  background-color: var(--token-neutral-1);
+  color: var(--token-neutral-5);
+}
+
+pre code {
+  padding: var(--token-size-0) var(--token-size-1);
+}
+
+:not(pre) > code {
+  color: var(--primary);
+}
+
+/** SYNTAX */
+.token.attr-name,
+.token.selector,
+.token.string,
+.token.number {
+  color: var(--token-brand-0);
+}
+
+.token.tag,
+.token.function {
+  color: var(--token-brand-1);
+}
+
+.token.punctuation,
+.token.comment,
+.token.operator {
+  color: var(--token-neutral-3);
+}
+
+.token.function,
+.token.comment {
+  font-style: italic;
+}
+
+.token.keyword {
+  color: var(--token-error);
+}

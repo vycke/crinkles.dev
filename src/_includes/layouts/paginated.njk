@@ -5,12 +5,12 @@
     {{ content | safe }}
   </main>
   {% if pagination %}
-    <aside class="switcher --width-3 --gap-1 justify-stretch | pl-0 pr-0 pt-2 pb-2">
+    <aside class="pagination | repel --gap-1">
       {% if pagination.href.previous %}
-        <h3 class="size-1 sans-serif"><a href="{{ pagination.href.previous | url }}">← Previous</a></h3>
+        <span class="size-1 bold"><a href="{{ pagination.href.previous | url }}">← Newer</a></span>
       {% endif %}
       {% if pagination.href.next %}
-        <h3 class="size-1 text-right sans-serif"><a href="{{ pagination.href.next | url }}" >Next →</a></h3>
+        <span class="size-1 bold text-right"><a href="{{ pagination.href.next | url }}" >Older →</a></span>
       {% endif %}
     </aside>
   {% endif %}

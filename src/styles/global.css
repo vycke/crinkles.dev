@@ -32,9 +32,14 @@ h3 {
 /**
  * GLOBAL STRUCTURAL COMPONENTS
  */
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-size-2);
+}
+
 header {
   padding: var(--token-size-1);
-  margin-bottom: var(--token-size-0);
 }
 
 header .logo:hover {
@@ -48,7 +53,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--token-size-0);
-  margin-bottom: var(--token-size-3);
   /* see 'utilities/animate.css' */
   animation: fade-in, slide-in-up;
   animation-timing-function: cubic-bezier(0.5, -0.9, 0.1, 1.5);

@@ -16,6 +16,7 @@
 @import "blocks/flag.css" layer(blocks);
 @import "blocks/info-box.css" layer(blocks);
 @import "blocks/meta-info.css" layer(blocks);
+@import "blocks/pagination.css" layer(blocks);
 @import "blocks/profile-picture.css" layer(blocks);
 @import "blocks/redirect-link.css" layer(blocks);
 @import "blocks/tag.css" layer(blocks);

@@ -4,7 +4,6 @@
 @import "global.css" layer(global);
 
 /** utilities */
-@import "utilities/animate.css" layer(utilities);
 @import "utilities/colors.css" layer(utilities);
 @import "utilities/decoration.css" layer(utilities);
 

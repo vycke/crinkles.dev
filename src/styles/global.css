@@ -1,4 +1,39 @@
 /**
+ * GLOBAL STRUCTURAL COMPONENTS
+ */
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-size-2);
+}
+
+header {
+  padding: var(--token-size-1);
+}
+
+header .logo:hover {
+  animation: wiggle 0.6s;
+  animation-iteration-count: 1;
+}
+
+main {
+  padding: 0 var(--token-size-1);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-size-0);
+  animation: fade-in, slide-up-2;
+  animation-timing-function: cubic-bezier(0.5, -0.9, 0.1, 1.5);
+  animation-duration: 0.75s;
+}
+
+footer {
+  padding: var(--token-size-00) var(--token-size-1);
+  border-top: 1px solid var(--surface-1);
+  font-size: var(--token-size-00);
+}
+
+/**
  * LINKS
  */
 a,
@@ -27,40 +62,4 @@ h2 {
 }
 h3 {
   font-size: var(--token-size-0);
-}
-
-/**
- * GLOBAL STRUCTURAL COMPONENTS
- */
-body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--token-size-2);
-}
-
-header {
-  padding: var(--token-size-1);
-}
-
-header .logo:hover {
-  animation: wiggle 0.6s;
-  animation-iteration-count: 1;
-}
-
-main {
-  padding: 0 var(--token-size-1);
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--token-size-0);
-  /* see 'utilities/animate.css' */
-  animation: fade-in, slide-in-up;
-  animation-timing-function: cubic-bezier(0.5, -0.9, 0.1, 1.5);
-  animation-duration: 0.75s;
-}
-
-footer {
-  padding: var(--token-size-00) var(--token-size-1);
-  border-top: 1px solid var(--surface-1);
-  font-size: var(--token-size-00);
 }

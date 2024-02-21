@@ -14,6 +14,18 @@ pre code {
 }
 
 /** SYNTAX */
+.token.punctuation,
+.token.comment,
+.token.operator,
+.token.tag {
+  color: var(--token-neutral-3);
+}
+
+/** To overwrite the above colors */
+.token.attr-value {
+  color: var(--token-neutral-5);
+}
+
 .token.attr-name,
 .token.selector,
 .token.string,
@@ -21,22 +33,15 @@ pre code {
   color: var(--token-brand-0);
 }
 
-.token.tag,
 .token.function {
   color: var(--token-brand-1);
 }
 
-.token.punctuation,
-.token.comment,
-.token.operator {
-  color: var(--token-neutral-3);
+.token.keyword {
+  color: var(--token-error);
 }
 
 .token.function,
 .token.comment {
   font-style: italic;
-}
-
-.token.keyword {
-  color: var(--token-error);
 }

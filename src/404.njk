@@ -1,16 +1,16 @@
 ---
-
+title: 🙈🙊🙊 404 🙈🙊🙊
 permalink: 404.html
 layout: layouts/page.njk
 width: 3
 ---
-<div class="mb-3 flex">
-    <h1 class="size-5 text-center mb-1">🙈🙊🙊</h1>
-    <p class="mb-3">It seems we can't find the page you are looking for. Maybe go back to the <a href="/">homepage</a>.</p>
+<p class="size-1">It seems we can't find the page you are looking for. Maybe go back to the <a href="/">homepage</a>, or take a look at any of the recent posts.</p>
+<div class="flex-col items-start">
+  <aside class="flex-col --gap-000 mb-2">
+    {% set tags = collections.posts | getAllTags | head(5) %}
+    {% include "components/tag-list.njk" %}
+    <a href="/tag-list" class="redirect | size-00 self-start">all topics</a>
+  </aside>
+  {% set posts =  collections.posts | head(3) %}
+  {% include "components/post-list.njk" %}
 </div>
-
-{% set tags = collections.posts | getAllTags | head(5) %}
-{% include "components/tag-list.njk" %}
-
-{% set posts =  collections.posts | head(3) %}
-{% include "components/post-list.njk" %}

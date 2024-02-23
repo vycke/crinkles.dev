@@ -2,31 +2,29 @@
  * TAG
  *
  * --tag-color: text color and hover background color
- * --tag-bg: background color in inactive state
  * --tag-hash-color: color of the # char
  */
 
 a.tag {
-  --tag-bg: var(--surface-1);
   --tag-color: var(--primary);
   --tag-hash-color: var(--tag-color);
 
   display: inline-block;
-  background-color: var(--tag-bg);
-  padding: 0.2em var(--token-size-000);
-  border-radius: var(--token-radius-0);
+  background-color: transparent;
+  padding: 0.1em 0.4em;
+  border-radius: var(--token-radius-1);
+  border: 1px solid var(--tag-color);
   transition: all 300ms;
   text-decoration: none;
   color: var(--color-foreground-0);
   font-size: var(--token-size-00);
-  box-shadow: var(--token-elevation-0);
 }
 
 a.tag:hover,
 a.tag:focus {
-  --tag-bg: var(--tag-color);
   --tag-hash-color: var(--token-neutral-0);
   color: var(--token-neutral-0);
+  background-color: var(--tag-color);
 }
 
 a.tag::before {
@@ -38,29 +36,29 @@ a.tag::before {
 a.tag[data-index="0"],
 a.tag[data-index="4"],
 a.tag[data-index="8"] {
-  --tag-color: var(--token-error);
+  --tag-color: var(--error);
 }
 
 a.tag[data-index="1"],
 a.tag[data-index="5"],
 a.tag[data-index="9"] {
-  --tag-color: var(--token-warning);
+  --tag-color: var(--warning);
 }
 
 a.tag[data-index="2"],
 a.tag[data-index="6"],
 a.tag[data-index="10"] {
-  --tag-color: var(--token-success);
+  --tag-color: var(--success);
 }
 
 a.tag[data-index="3"],
 a.tag[data-index="7"],
 a.tag[data-index="11"] {
-  --tag-color: var(--token-info);
+  --tag-color: var(--info);
 }
 
 @media (hover: hover) {
   .taglist > *:hover {
-    transform: matrix(1.075, 0, 0, 1.075, 0, 0);
+    transform: matrix(1.175, 0, 0, 1.175, 0, 0);
   }
 }

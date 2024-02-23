@@ -10,3 +10,7 @@
   left: 0;
   top: -10px;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}

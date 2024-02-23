@@ -3,10 +3,18 @@
    * COLORS
    */
   /** SYSTEM */
-  --token-error: #f98a96;
-  --token-warning: #f9e48a;
-  --token-success: #96f98a;
-  --token-info: #95cafa;
+  --token-error-00: #e5152c;
+  --token-error-0: #f98a96;
+  --token-error-1: #f3c7cb;
+  --token-warning-00: #b6991c;
+  --token-warning-0: #f9e48a;
+  --token-warning-1: #faf1ca;
+  --token-success-00: #1eac0c;
+  --token-success-0: #96f98a;
+  --token-success-1: #d5fbca;
+  --token-info-00: #498dcd;
+  --token-info-0: #95cafa;
+  --token-info-1: #cfe4fb;
   /** brand colors */
   --token-brand-0: #98a0fa;
   --token-brand-1: #5eddac;
@@ -38,6 +46,10 @@
   color-scheme: light;
   --primary: var(--token-brand-3);
   --secondary: var(--token-brand-2);
+  --error: var(--token-error-00);
+  --success: var(--token-success-00);
+  --info: var(--token-info-00);
+  --warning: var(--token-warning-00);
   accent-color: var(--primary);
 }
 
@@ -47,7 +59,17 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+    --text-0: var(--token-neutral-5);
+    --text-1: var(--token-neutral-4);
+    --text-2: var(--token-neutral-3);
+    --surface-0: var(--token-neutral-0);
+    --surface-1: var(--token-neutral-1);
+    --surface-2: var(--token-neutral-2);
     --primary: var(--token-brand-0);
     --secondary: var(--token-brand-1);
+    --error: var(--token-error-0);
+    --success: var(--token-success-0);
+    --info: var(--token-info-0);
+    --warning: var(--token-warning-0);
   }
 }

@@ -1,7 +1,7 @@
 {% set latest = collections.posts | index(0) %}
 <ul role="list" class="hover-group | flex-col --gap-2">
   {% for post in posts %}
-    <li class="flex-col --gap-none click-area" role="listitem">
+    <li class="flex-col --gap-none | click-area" role="listitem">
         <span class="flex-row items-center">
         <time class="meta-info | mr-00" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
         {% if latest.data.title === post.data.title %} <span class="flag">new! 🤯</span> {% endif %}

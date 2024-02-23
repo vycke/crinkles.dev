@@ -23,17 +23,17 @@
 {% set newer = collections.posts | getPreviousCollectionItem(page) %}
 
 <aside class="pagination | repel switcher --width-3 --gap-1 items-center">
-    {% if newer %}
-    <div class="items-start">
-      <span class="text-2 uppercase">← Newer</span>
-      <h3 class="size-1"><a href="{{ newer.url | url }}">{{ newer.data.title }}</a></h3>
-    </div>
-    {% endif %}
+  {% if newer %}
+  <div class="items-start">
+    <span class="subtitle">← Newer</span>
+    <a href="{{ newer.url | url }}">{{ newer.data.title }}</a>
+  </div>
+  {% endif %}
   {% if older %}
-    <div class="items-end text-right">
-      <span class="text-2 uppercase">Older →</span>
-      <h3 class="size-1"><a href="{{ older.url | url }}">{{ older.data.title }}</a></h3>
-    </div>
-    {% endif %}
+  <div class="items-end">
+    <span class="subtitle">Older →</span>
+    <a href="{{ older.url | url }}">{{ older.data.title }}</a>
+  </div>
+  {% endif %}
 </aside>
 {% endblock %}

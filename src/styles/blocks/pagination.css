@@ -13,3 +13,12 @@
 .pagination > *:last-child {
   text-align: right;
 }
+
+.pagination a {
+  font-size: var(--token-size-1);
+  font-weight: bold;
+}
+.pagination .subtitle {
+  text-transform: uppercase;
+  color: var(--text-2);
+}

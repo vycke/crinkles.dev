@@ -1,5 +1,9 @@
 @layer global, layout, utilities, blocks;
 
+/** Import feo-css */
+@import "../../node_modules/feo-css/feo.css";
+
+/** Global styles to extend or overwrite feo.css */
 @import "tokens.css" layer(global);
 @import "global.css" layer(global);
 

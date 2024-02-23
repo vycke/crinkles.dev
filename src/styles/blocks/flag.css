@@ -1,6 +1,5 @@
 .flag {
   display: inline-block;
-  background-color: var(--surface-1);
   padding: 0.2em var(--token-size-000);
   border-radius: var(--token-radius-0);
   color: var(--text-0);

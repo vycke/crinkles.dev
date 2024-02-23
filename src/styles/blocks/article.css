@@ -85,7 +85,7 @@ article :where(img, pre, .info) {
 /** discard rounded corners on full width */
 @container post (inline-size < 784px) {
   article :where(img, pre, .info, blockquote) {
-    border-radius: 0;
+    border-radius: 0 !important; /* overwrite specificity */
   }
 }
 

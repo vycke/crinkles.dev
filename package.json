@@ -41,5 +41,8 @@
       "yarn format",
       "yarn audit"
     ]
+  },
+  "dependencies": {
+    "feo-css": "^4.6.4"
   }
 }

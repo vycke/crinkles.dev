@@ -7,10 +7,10 @@
   {% if pagination %}
     <aside class="pagination | repel --gap-1">
       {% if pagination.href.previous %}
-        <span class="size-1 bold"><a href="{{ pagination.href.previous | url }}">← Newer</a></span>
+      <a href="{{ pagination.href.previous | url }}">← Newer</a>
       {% endif %}
       {% if pagination.href.next %}
-        <span class="size-1 bold text-right"><a href="{{ pagination.href.next | url }}" >Older →</a></span>
+      <a href="{{ pagination.href.next | url }}" >Older →</a>
       {% endif %}
     </aside>
   {% endif %}

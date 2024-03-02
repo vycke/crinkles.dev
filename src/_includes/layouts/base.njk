@@ -2,8 +2,10 @@
 <html lang="{{ metadata.language }}">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{ title or metadata.title }} • Vyckes</title>
+        <link rel="stylesheet" href="{{ '/styles/index.css' | url }}">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <meta name="generator" content="Eleventy" />
         <meta name="color-scheme" content="light dark" />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F9FB">
@@ -17,11 +19,8 @@
         <link rel="manifest" href="/site.webmanifest">
         <link rel="canonical" href="{{ metadata.url }}">
         <link rel="me" href="https://indieweb.social/@crinkles">
-        <!-- Own stylesheet -->
-        <link rel="stylesheet" href="{{ '/styles/index.css' | url }}">
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
         <!-- page data -->
-        <title>{{ title or metadata.title }} • Vyckes</title>
         <meta name="description" content="{{ description or metadata.description }}">
         <meta name="keywords" content="{{ metadata.keywords }}">
         <meta name="content" content="{{ metadata.keywords }}">

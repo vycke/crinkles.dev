@@ -48,16 +48,6 @@ article h2:has(a):hover {
   color: var(--primary);
 }
 
-article h2::before {
-  background: var(--secondary);
-  content: "";
-  top: -10px;
-  display: block;
-  height: 4px;
-  margin-bottom: 0.5rem;
-  width: 90px;
-}
-
 article h2 a::after {
   position: absolute;
   top: 0;
@@ -164,4 +154,10 @@ article ul:not([class]) li {
 
 article ol:not([class]) {
   list-style: decimal outside;
+}
+
+.separator .line {
+  height: 5px;
+  flex-grow: 1;
+  background-color: var(--primary);
 }

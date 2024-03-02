@@ -1,6 +1,6 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-<main class="post">
+<main class="post | mb-2">
     <article class="center">
         {% if archived %}
         <div class="archive">
@@ -16,7 +16,13 @@
             {% include "components/tag-list.njk" %}
         </div>
         {{ content | safe }}
+        <div class="separator | repel items-center --gap-3">
+          <div class="line"></div>
+          {% include "components/code.svg" %}
+          <div class="line"></div>
+        </div>
     </article>
+    
 </main>
 
 {% set older = collections.posts | getNextCollectionItem(page) %}

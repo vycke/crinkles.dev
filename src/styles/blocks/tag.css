@@ -18,6 +18,7 @@ a.tag {
   text-decoration: none;
   color: var(--color-foreground-0);
   font-size: var(--token-size-00);
+  line-height: 1.4;
 }
 
 a.tag:hover,

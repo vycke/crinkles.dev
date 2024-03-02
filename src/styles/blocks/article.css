@@ -74,7 +74,7 @@ article h2:hover a {
 /**
 * GENERAL STYLING OF ELEMENTS
 */
-article :where(img, pre, .info) {
+article :where(img, pre, .info, .archive) {
   border-radius: var(--token-radius-1);
   margin-left: 50%;
   transform: translateX(-50%);

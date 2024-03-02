@@ -36,7 +36,7 @@ footer {
 /**
  * LINKS
  */
-:where(a, a:visited):not([class]) {
+a:not([class]) {
   transition: all 200ms;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--text-2);

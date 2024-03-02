@@ -5,7 +5,7 @@
  */
 
 .info,
-.archived {
+.archive {
   box-shadow: var(--token-elevation-1);
   border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
@@ -18,12 +18,12 @@
   border: 3px solid var(--primary);
 }
 
-.archived {
-  border: 3px solid var(--token-error);
+.archive {
+  border: 3px solid var(--error);
 }
 
 .info::before,
-.archived::before {
+.archive::before {
   position: absolute;
   display: block;
   top: -15px;
@@ -38,8 +38,8 @@
   color: var(--surface-0);
 }
 
-.archived::before {
+.archive::before {
   content: "<archive />";
-  background-color: var(--token-error);
-  color: var(--token-neutral-0);
+  background-color: var(--error);
+  color: var(--surface-0);
 }

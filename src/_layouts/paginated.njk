@@ -8,6 +8,6 @@ layout: base
   {{ content | safe }}
 </main>
 
-{% set older = pagination.href.next | objectify %}
-{% set newer = pagination.href.previous | objectify %}
+{% set older = pagination.href.next | objectify("url") %}
+{% set newer = pagination.href.previous | objectify("url") %}
 {% include 'components/pagination.njk' %}

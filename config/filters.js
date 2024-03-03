@@ -32,9 +32,9 @@ function getAllTags(collection, count = false) {
     .map((tag) => (count ? tag : tag[0]));
 }
 
-function objectify(url) {
-  if (!url) return null;
-  return { url };
+function objectify(str, key) {
+  if (!str) return null;
+  return { [key]: str };
 }
 
 module.exports = {

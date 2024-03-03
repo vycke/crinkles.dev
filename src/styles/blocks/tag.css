@@ -5,7 +5,7 @@
  * --tag-hash-color: color of the # char
  */
 
-.tag {
+li.tag {
   --tag-color: var(--primary);
   --tag-hash-color: var(--tag-color);
 
@@ -21,30 +21,30 @@
   line-height: 1.4;
 }
 
-.tag a {
+li.tag a {
   text-decoration: none;
 }
 
-.tag:hover,
-.tag:focus {
+li.tag:hover,
+li.tag:focus {
   --tag-hash-color: var(--surface-0);
   background-color: var(--tag-color);
 }
 
-.tag:hover a,
-.tag:focus a {
+li.tag:hover a,
+li.tag:focus a {
   color: var(--tag-hash-color);
 }
 
-.tag::before {
+li.tag::before {
   content: "#";
   transition: color 300ms;
   color: var(--tag-hash-color);
 }
-.tag:nth-of-type(even) {
+li.tag:nth-of-type(even) {
   --tag-color: var(--primary);
 }
-.tag:nth-of-type(odd) {
+li.tag:nth-of-type(odd) {
   --tag-color: var(--secondary);
 }
 

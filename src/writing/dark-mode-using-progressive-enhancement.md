@@ -1,9 +1,10 @@
 ---
 title: Dark mode using progressive enhancement
 date: 2022-07-30
+archived: true
 tags:
   - css
-layout: layouts/post.njk
+layout: post
 description: >-
   Is it possible to create a light-dark switcher without JavaScript, that takes into account system preferences? Let’s find out.
 ---

@@ -1,8 +1,8 @@
 pre {
   border: none;
   box-shadow: var(--token-elevation-1);
-  background-color: var(--token-neutral-1);
-  color: var(--token-neutral-5);
+  background-color: var(--surface-1);
+  color: var(--text-0);
 }
 
 pre code {
@@ -18,23 +18,23 @@ pre code {
 .token.comment,
 .token.operator,
 .token.tag {
-  color: var(--token-neutral-3);
+  color: var(--text-2);
 }
 
 /** To overwrite the above colors */
 .token.attr-value {
-  color: var(--token-neutral-5);
+  color: var(--text-0);
 }
 
 .token.attr-name,
 .token.selector,
 .token.string,
 .token.number {
-  color: var(--token-brand-0);
+  color: var(--primary);
 }
 
 .token.function {
-  color: var(--token-brand-1);
+  color: var(--secondary);
 }
 
 .token.keyword {

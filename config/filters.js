@@ -7,23 +7,6 @@ function readableDate(date) {
   });
 }
 
-// determines how many days old a date is
-function daysOld(date) {
-  const now = new Date().getTime();
-  const time = new Date(date).getTime();
-
-  return (now - time) / (1000 * 3600 * 24);
-}
-
-// Get a different type of list
-function getFeed(list) {
-  const updates = list
-    .filter((item) => item.data.update)
-    .sort((a, b) => (a.update > b.update ? 1 : -1));
-
-  return updates;
-}
-
 // head of the list
 function head(list, n) {
   return list.slice(0, n);
@@ -31,25 +14,6 @@ function head(list, n) {
 
 function index(list, n = 1) {
   return list[n];
-}
-
-// Regex like function to get all H2 headers in posts
-function getPostHeaders(str) {
-  const headers = [];
-
-  function strip(text, start, end) {
-    return text.split(start)[1].split(end)[0].trim();
-  }
-
-  (str.match(new RegExp("<h2(.*?)</h2>", "g")) || []).forEach((e) => {
-    const id = strip(e, 'id="', '"');
-    const title = strip(e, ">", "<a")
-      .replace("<code>", "")
-      .replace("</code>", "");
-
-    headers.push({ id, title });
-  });
-  return headers;
 }
 
 // Get all tags, optionally with counts
@@ -68,12 +32,6 @@ function getAllTags(collection, count = false) {
     .map((tag) => (count ? tag : tag[0]));
 }
 
-// get the tags
-function getTagIndex(collection, tag) {
-  const tags = getAllTags(collection);
-  return tags.indexOf(tag);
-}
-
 function objectify(url) {
   if (!url) return null;
   return { url };
@@ -83,10 +41,6 @@ module.exports = {
   readableDate,
   head,
   objectify,
-  getPostHeaders,
   getAllTags,
-  getTagIndex,
-  daysOld,
   index,
-  getFeed,
 };

@@ -34,10 +34,10 @@
     </head>
 
     <body>
-        {% include "components/header.njk" %}
-        {% include "components/canvas.njk" %}
+        {% include "partials/header.njk" %}
+        {% include "partials/canvas.njk" %}
         {% block content %}{% endblock %}
-        {% include "components/footer.njk" %}
+        {% include "partials/footer.njk" %}
     </body>
     {# <script defer data-domain="vyckes.dev" src="/js/script.js"></script> #}
 </html>

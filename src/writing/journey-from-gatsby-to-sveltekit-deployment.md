@@ -4,7 +4,7 @@ date: 2021-04-07
 archived: true
 tags:
   - svelte
-layout: layouts/post.njk
+layout: post
 description: >-
   After the local transition of Gatsby to SvelteKit was finished, it was time to get the website live! But did I manage to get it there?
 ---

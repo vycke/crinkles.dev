@@ -4,7 +4,7 @@ date: 2023-02-20
 update: 2023-06-22
 tags:
   - workflow
-layout: layouts/post.njk
+layout: post
 description: >-
   Understanding how to make better technology, framework, and library decisions in front-end development
 ---

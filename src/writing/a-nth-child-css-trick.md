@@ -4,7 +4,7 @@ date: 2023-01-25
 tags:
   - css
   - trick
-layout: layouts/post.njk
+layout: post
 description: >-
   A little CSS trick that allows you to use nth-child values in the CSS calc() function.
 ---

@@ -3,7 +3,7 @@ title: Creating a stacked bar chart using only CSS
 date: 2023-01-22
 tags:
   - css
-layout: layouts/post.njk
+layout: post
 description: How to make an interactive stacked bar chart using only CSS and HTML
 ---
 

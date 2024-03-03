@@ -5,7 +5,7 @@ tags:
   - state
   - svelte
   - javascript
-layout: layouts/post.njk
+layout: post
 description: >-
   I am a big fan of the [SWR](https://swr.vercel.app/) package of Vercel. Let's see how to implement something similar in Svelte.
 ---

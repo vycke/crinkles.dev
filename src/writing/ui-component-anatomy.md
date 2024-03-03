@@ -5,7 +5,7 @@ tags:
   - architecture
   - layout
   - react
-layout: layouts/post.njk
+layout: post
 description: >-
   Our little UI components do more for us than we give them credits for. Their internals are more complex than we know.
 ---

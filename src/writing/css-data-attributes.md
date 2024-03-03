@@ -4,7 +4,7 @@ date: 2021-04-22
 tags:
   - css
   - architecture
-layout: layouts/post.njk
+layout: post
 description: >-
   HTML data-attributes allow you to bind CSS and JavaScript more closely to each other. By utilizing this type of attribute, you can reduce the amount of JavaScript required for styling, and move this responsibility back to CSS.
 ---

@@ -4,7 +4,7 @@ date: 2021-06-20
 tags:
   - css
   - layout
-layout: layouts/post.njk
+layout: post
 description: >-
   Horizontal centering is an ancient problem in CSS. With CSS Grid we are able enhance this layout pattern. But, this gives us other issues. Let's find a better solution.
 ---

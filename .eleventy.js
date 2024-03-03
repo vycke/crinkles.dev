@@ -38,6 +38,7 @@ module.exports = (config) => {
     htmlTemplateEngine: TEMPLATE_ENGINE,
     dir: {
       input: "src",
+      layouts: "_layouts",
       output: "_site",
     },
   };

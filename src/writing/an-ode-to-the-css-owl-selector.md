@@ -5,7 +5,7 @@ tags:
   - css
   - trick
   - layout
-layout: layouts/post.njk
+layout: post
 description: One off the most beautiful CSS selectors is the Lobotomized Owl Selector of Heydon Pickering
 ---
 

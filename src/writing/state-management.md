@@ -5,7 +5,7 @@ update: 2023-06-20
 tags:
   - state
   - architecture
-layout: layouts/post.njk
+layout: post
 description: >-
   State management is one of the most complicated, and opinionated topics in modern and JavaScript-focused front-end development. Let's make it easier.
 ---

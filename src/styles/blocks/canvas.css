@@ -11,7 +11,7 @@
   z-index: -1;
 }
 
-.drawing {
+.canvas svg {
   position: absolute;
   width: 60vw;
   top: -15vw;

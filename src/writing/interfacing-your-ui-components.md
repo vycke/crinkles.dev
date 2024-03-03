@@ -2,7 +2,7 @@
 title: Interfacing your UI components
 date: 2019-07-19
 archived: true
-layout: layouts/post.njk
+layout: post
 tags:
   - architecture
 description: >-

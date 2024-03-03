@@ -1,4 +1,7 @@
-{% extends "layouts/base.njk" %}
+---
+layout: base
+---
+
 {% block content %}
 <main class="post | mb-2">
     <article class="center">
@@ -18,7 +21,7 @@
         {{ content | safe }}
         <div class="separator | repel items-center --gap-3">
           <div class="line"></div>
-          {% include "components/code.svg" %}
+          {% include "svg/code.svg" %}
           <div class="line"></div>
         </div>
     </article>

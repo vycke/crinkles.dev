@@ -4,7 +4,7 @@ date: 2022-06-02
 tags:
   - state
   - architecture
-layout: layouts/post.njk
+layout: post
 description: >-
   Features that seem simple can become unmaintainable due to unforeseen state management issues. State machines help avoid this.
 ---

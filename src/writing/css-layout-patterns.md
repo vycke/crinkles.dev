@@ -4,7 +4,7 @@ date: 2020-07-06
 tags:
   - css
   - layout
-layout: layouts/post.njk
+layout: post
 description: >-
   Responsive layouts are one of the more complicated problems in CSS. With the addition of CSS grids, we are now able to solve complex problems.
 ---

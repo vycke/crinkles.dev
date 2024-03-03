@@ -4,7 +4,7 @@ date: 2024-02-11
 tags:
   - css
   - trick
-layout: layouts/post.njk
+layout: post
 description: >-
   Can CSS be used recursively to change styles based on the depth of an element in a container? Well it can, but it is a little tricky.
 ---

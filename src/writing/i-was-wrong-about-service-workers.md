@@ -5,7 +5,7 @@ date: 2023-07-28
 tags:
   - javascript
   - opinion
-layout: layouts/post.njk
+layout: post
 description: >-
   I was wrong about service workers. I wrongly assumed certain use cases for them. But I was missing out on them.
 ---

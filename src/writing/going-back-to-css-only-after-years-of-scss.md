@@ -3,7 +3,7 @@ title: Going back to CSS-only after years of SCSS
 date: 2023-07-03
 tags:
   - css
-layout: layouts/post.njk
+layout: post
 description: >-
   When migrating my website to Eleventy, it ditched SCSS and went old school. I went removed a complexity layer to see if CSS-only is a viable option these days.
 ---

@@ -4,7 +4,7 @@ archived: true
 date: 2021-06-16
 tags:
   - workflow
-layout: layouts/post.njk
+layout: post
 description: >-
   In agile we focus on the delivery of solutions. As this is the playing field of engineers, UX designers get left behind. However, we should seek more alignment with them.
 ---

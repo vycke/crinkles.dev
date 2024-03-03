@@ -4,7 +4,7 @@ archived: true
 date: 2019-07-05
 tags:
   - workflow
-layout: layouts/post.njk
+layout: post
 description: >-
   How can we work together with UX designers? Their process has more in common with ours than we know
 ---

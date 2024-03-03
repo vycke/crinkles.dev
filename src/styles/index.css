@@ -23,3 +23,4 @@
 @import "blocks/profile-picture.css" layer(blocks);
 @import "blocks/redirect-link.css" layer(blocks);
 @import "blocks/tag.css" layer(blocks);
+@import "blocks/separator.css" layer(blocks);

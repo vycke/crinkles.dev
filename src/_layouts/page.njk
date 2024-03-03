@@ -1,10 +1,7 @@
 ---
 layout: base
 ---
-
-{% block content %}
-  <main class="center --width-{{ width or 4 }}">
-    {% if title %}<h1 class="overline">{{ title }}</h1>{% endif %}
-    {{ content | safe }}
-  </main>
-{% endblock %}
+<main class="center --width-{{ width or 4 }}">
+  {% if title %}<h1 class="overline">{{ title }}</h1>{% endif %}
+  {{ content | safe }}
+</main>

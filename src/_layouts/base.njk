@@ -36,8 +36,7 @@
     <body>
         {% include "partials/header.njk" %}
         {% include "partials/canvas.njk" %}
-        {% block content %}{% endblock %}
+        {{ content | safe }}
         {% include "partials/footer.njk" %}
     </body>
-    {# <script defer data-domain="vyckes.dev" src="/js/script.js"></script> #}
 </html>

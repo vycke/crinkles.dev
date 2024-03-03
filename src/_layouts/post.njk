@@ -2,7 +2,7 @@
 layout: base
 ---
 
-{% block content %}
+
 <main class="post | mb-2">
     <article class="center">
         {% if archived %}
@@ -19,30 +19,11 @@ layout: base
             {% include "components/tag-list.njk" %}
         </div>
         {{ content | safe }}
-        <div class="separator | repel items-center --gap-3">
-          <div class="line"></div>
-          {% include "svg/code.svg" %}
-          <div class="line"></div>
-        </div>
-    </article>
-    
+        {% include "partials/separator.njk" %}
+    </article> 
 </main>
 
 {% set older = collections.posts | getNextCollectionItem(page) %}
 {% set newer = collections.posts | getPreviousCollectionItem(page) %}
 
-<aside class="pagination | repel switcher --width-3 --gap-1 items-center">
-  {% if newer %}
-  <div class="items-start">
-    <span class="subtitle">← Newer</span>
-    <a href="{{ newer.url | url }}">{{ newer.data.title }}</a>
-  </div>
-  {% endif %}
-  {% if older %}
-  <div class="items-end">
-    <span class="subtitle">Older →</span>
-    <a href="{{ older.url | url }}">{{ older.data.title }}</a>
-  </div>
-  {% endif %}
-</aside>
-{% endblock %}
+{% include "components/pagination.njk" %}

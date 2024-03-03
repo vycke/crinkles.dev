@@ -2,19 +2,12 @@
 layout: base
 ---
 
-{% block content %}
-  <main class="center --width-{{ width or 4 }}">
-    {% if title %}<h1 class="overline">{{ title }}</h1>{% endif %}
-    {{ content | safe }}
-  </main>
-  {% if pagination %}
-    <aside class="pagination | repel --gap-1">
-      {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous | url }}">← Newer</a>
-      {% endif %}
-      {% if pagination.href.next %}
-      <a href="{{ pagination.href.next | url }}" >Older →</a>
-      {% endif %}
-    </aside>
-  {% endif %}
-{% endblock %}
+
+<main class="center --width-{{ width or 4 }}">
+  {% if title %}<h1 class="overline">{{ title }}</h1>{% endif %}
+  {{ content | safe }}
+</main>
+
+{% set older = pagination.href.next | objectify %}
+{% set newer = pagination.href.previous | objectify %}
+{% include 'components/pagination.njk' %}

@@ -155,9 +155,3 @@ article ul:not([class]) li {
 article ol:not([class]) {
   list-style: decimal outside;
 }
-
-.separator .line {
-  height: 5px;
-  flex-grow: 1;
-  background-color: var(--primary);
-}

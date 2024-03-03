@@ -74,9 +74,15 @@ function getTagIndex(collection, tag) {
   return tags.indexOf(tag);
 }
 
+function objectify(url) {
+  if (!url) return null;
+  return { url };
+}
+
 module.exports = {
   readableDate,
   head,
+  objectify,
   getPostHeaders,
   getAllTags,
   getTagIndex,

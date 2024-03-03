@@ -4,7 +4,7 @@
   class="hover-group taglist | cluster --gap-000"
 >
   {% for tag in tags %} {% set index = collections.posts | getTagIndex(tag) %}
-  <li class="tag">
+  <li class="tag | click-area">
     <a
       href="/tags/{{ tag }}/"
       data-selected="{{ selected === tag }}"

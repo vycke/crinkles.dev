@@ -1,19 +1,19 @@
 {% set latest = collections.posts | index(0) %}
-<ul role="list" class="hover-group | flex-col --gap-2">
+<ul role="list" class="post-list | hover-group | flex-col --gap-3">
   {% for post in posts %}
     <li class="flex-col --gap-none | click-area" role="listitem">
-        <span class="flex-row items-center">
+      <span class="flex-row items-center">
         <time class="meta-info | mr-00" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
         {% if latest.data.title === post.data.title %} <span class="flag">new! 🤯</span> {% endif %}
         {% if post.data.update %} <span class="flag">updated!</span> {%  endif %}
         </span>
       </span>
-      <h2>
+      <span class="bold | mb-000">
         <a href="{{ post.page.url }}">
           {{ post.data.title }}
         </a>
-      </h2>
-      <span class="text-2">{{ post.data.description }}</span>
+      </span>
+      <span class="text-2 size-00">{{ post.data.description }}</span>
     </li>
   {% endfor %}
 </ul>

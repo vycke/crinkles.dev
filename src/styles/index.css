@@ -14,7 +14,6 @@
 
 /** blocks */
 @import "blocks/article.css" layer(blocks);
-@import "blocks/canvas.css" layer(blocks);
 @import "blocks/card.css" layer(blocks);
 @import "blocks/codeblock.css" layer(blocks);
 @import "blocks/flag.css" layer(blocks);
@@ -25,3 +24,4 @@
 @import "blocks/redirect-link.css" layer(blocks);
 @import "blocks/tag.css" layer(blocks);
 @import "blocks/separator.css" layer(blocks);
+@import "blocks/post-list.css" layer(blocks);

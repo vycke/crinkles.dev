@@ -1,13 +1,13 @@
 <ul
   role="list"
   aria-label="List of all tags"
-  class="hover-group taglist | cluster --gap-000"
+  class="hover-group taglist | cluster --gap-00"
 >
   {% for tag in tags %}
   <li class="tag | click-area">
     <a
       href="/tags/{{ tag }}/"
-      data-selected="{{ selected === tag }}"
+      class="tag"
       >{{ tag }}</a
     >
   </li>

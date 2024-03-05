@@ -3,24 +3,31 @@ layout: page
 width: 5
 ---
 
-<div class="flex-col --gap-none | maxw-3 mb-3">
-  <p class="size-1 | text-primary">Kevin Pennekamp</p>
-  <h1>Web tinkerer</h1>
-  <p class="mt-000">I am a software engineer, CSS lover, and <a href="/writing">writer</a>. This is my digital playground & corner of the internet.</p>
-</div>
-<div class="flex-col --gap-0">
-  <div class="sidebar --left --width-0 --gap-5 items-start">
+<div class="flex-col --gap-5">
+  <div class="sidebar --left --width-000 --gap-3">
+    <div class="flex-col items-center">
+      {% include "svg/profile.svg" %}
+    </div>
+    <aside class="flex-col flex-grow --gap-none">
+      <p class="size-1 | text-primary italic">Kevin Pennekamp</p>
+      <h1 class="italic">Web tinkerer</h1>
+      <p class="mt-000 maxw-2">I am a software engineer, CSS lover, and <a href="/writing">writer</a>. This is my digital playground & corner of the internet.</p> 
+    </aside>
+  </div>
+  
+  {% include "partials/separator.njk" %}
+
+  <div class="sidebar --right --width-0 --gap-5 | items-start | mb-5">
+    <div class="flex-col --gap-1">
+      <h2>My recent posts</h2>
+      {% set posts =  collections.posts | head(5) %}
+      {% include "components/post-list.njk" %}
+    </div>
     <aside class="flex-col --gap-000" aria-label="Top tags on the site">
       <span class="text-2">Search by topic..</span>
       {% set tags = collections.posts | getAllTags | head(5) %}
       {% include "components/tag-list.njk" %}
       <a href="/tag-list" class="size-00 redirect self-start">all topics</a>
     </aside>
-
-    <section class="flex-col --gap-5">
-      {% set posts =  collections.posts | head(5) %}
-      {% include "components/post-list.njk" %}
-      <a href="/writing" class="redirect self-end">See all articles</a>
-    </section>
   </div>
 </div>

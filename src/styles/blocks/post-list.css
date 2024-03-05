@@ -1,0 +1,3 @@
+.post-list a:not(:hover):not(:focus) {
+  text-decoration-color: transparent;
+}

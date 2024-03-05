@@ -65,3 +65,7 @@ h2 {
 h3 {
   font-size: var(--token-size-0);
 }
+
+:where(h1, h2, h3) a:not([class]):not(:hover):not(:focus) {
+  text-decoration-color: transparent;
+}

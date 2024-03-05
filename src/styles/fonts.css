@@ -1,0 +1,28 @@
+/**
+ * UNUSED
+ *
+ * importing the local fonts as swappeable
+ */
+@font-face {
+  font-family: "iA Writer Quattro";
+  font-weight: 400;
+  font-syle: normal;
+  font-display: swap;
+  src: url("/fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "iA Writer Quattro";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/iAWriterQuattroS-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "iA Writer Quattro";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/fonts/iAWriterQuattroS-Italic.woff2") format("woff2");
+}

@@ -41,12 +41,6 @@ li.tag::before {
   transition: color 300ms;
   color: var(--tag-hash-color);
 }
-li.tag:nth-of-type(even) {
-  --tag-color: var(--primary);
-}
-li.tag:nth-of-type(odd) {
-  --tag-color: var(--secondary);
-}
 
 @media (hover: hover) {
   .taglist > *:hover {

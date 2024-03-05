@@ -3,23 +3,21 @@
    * COLORS
    */
   /** SYSTEM */
-  --token-error-00: #c43d4c;
-  --token-error-0: #f98a96;
+  --token-error-00: #b5474f;
+  --token-error-0: #cc878e;
   --token-error-1: #f3c7cb;
-  --token-warning-00: #b6991c;
-  --token-warning-0: #f9e48a;
+  --token-warning-00: #b19a3a;
+  --token-warning-0: #d5c98b;
   --token-warning-1: #faf1ca;
-  --token-success-00: #1eac0c;
-  --token-success-0: #96f98a;
+  --token-success-00: #52a933;
+  --token-success-0: #9ed68c;
   --token-success-1: #d5fbca;
-  --token-info-00: #498dcd;
-  --token-info-0: #95cafa;
+  --token-info-00: #5a8bc8;
+  --token-info-0: #8caed4;
   --token-info-1: #cfe4fb;
   /** brand colors */
-  --token-brand-0: #98a0fa;
-  --token-brand-1: #5eddac;
-  --token-brand-2: #536fe3;
-  --token-brand-3: #078080;
+  --token-brand-0: #95c8a5;
+  --token-brand-1: #536fe3;
 
   /**
    * FONT FAMILY
@@ -44,8 +42,7 @@
  */
 :root {
   color-scheme: light;
-  --primary: var(--token-brand-3);
-  --secondary: var(--token-brand-2);
+  --primary: var(--token-brand-1);
   --error: var(--token-error-00);
   --success: var(--token-success-00);
   --info: var(--token-info-00);
@@ -66,7 +63,6 @@
     --surface-1: var(--token-neutral-1);
     --surface-2: var(--token-neutral-2);
     --primary: var(--token-brand-0);
-    --secondary: var(--token-brand-1);
     --error: var(--token-error-0);
     --success: var(--token-success-0);
     --info: var(--token-info-0);

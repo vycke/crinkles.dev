@@ -30,15 +30,15 @@ pre code {
 .token.selector,
 .token.string,
 .token.number {
-  color: var(--primary);
+  color: var(--info);
 }
 
 .token.function {
-  color: var(--secondary);
+  color: var(--success);
 }
 
 .token.keyword {
-  color: var(--token-error);
+  color: var(--error);
 }
 
 .token.function,

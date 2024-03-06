@@ -2,7 +2,6 @@
 layout: base
 ---
 
-
 <main class="post | mb-2">
     <article class="center">
         {% if archived %}
@@ -11,12 +10,13 @@ layout: base
         </div>
         {% endif %}
         <div class="flex-col">
-            <time class="meta-info" date="{{ post.data.date }}">
-                {{ date | readableDate }}
-                {% if update %} <span class="italic">(Updated on: {{ update | readableDate }})</span> {%  endif %}
-            </time>
+            
             <h1 class="mb-000">{{ title }}</h1>
-            {% include "components/tag-list.njk" %}
+            <time class="size-00 | flex-row --gap-1" date="{{ post.data.date }}">
+                <span class=" text-2 italic">{{ date | readableDate }}</span>
+                {% if update %} <span class=" text-2 italic">(Updated on: {{ update | readableDate }})</span> {%  endif %}
+                {% include "components/tag-list.njk" %}
+            </time>
         </div>
         {{ content | safe }}
         {% include "partials/separator.njk" %}

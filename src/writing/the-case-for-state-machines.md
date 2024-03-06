@@ -2,7 +2,6 @@
 title: The case for state machines in client-side applications
 date: 2022-06-02
 tags:
-  - state
   - architecture
 layout: post
 description: >-

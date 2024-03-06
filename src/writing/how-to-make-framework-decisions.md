@@ -3,7 +3,7 @@ title: Engineering, UX design and the value stream
 date: 2023-02-20
 update: 2023-06-22
 tags:
-  - workflow
+  - engineering
 layout: post
 description: >-
   Understanding how to make better technology, framework, and library decisions in front-end development

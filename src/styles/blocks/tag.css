@@ -19,6 +19,10 @@ a.tag {
   line-height: 1.4;
 }
 
+a.tag[data-selected="true"] {
+  font-weight: bold;
+}
+
 a.tag::before {
   content: "#";
   transition: color 300ms;

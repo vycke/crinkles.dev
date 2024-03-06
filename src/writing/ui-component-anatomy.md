@@ -3,8 +3,7 @@ title: Demystifying the component architecture
 date: 2020-01-12
 tags:
   - architecture
-  - layout
-  - react
+  - webdev
 layout: post
 description: >-
   Our little UI components do more for us than we give them credits for. Their internals are more complex than we know.

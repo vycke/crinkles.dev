@@ -3,7 +3,6 @@ title: State machines and state management
 date: 2021-12-08
 update: 2023-06-20
 tags:
-  - state
   - architecture
 layout: post
 description: >-

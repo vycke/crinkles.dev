@@ -3,7 +3,7 @@ title: Journey from Gatsby to SvelteKit
 date: 2021-04-07
 archived: true
 tags:
-  - svelte
+  - webdev
 layout: post
 description: >-
   Recently I rebuild my website in SvelteKit, coming from Gatsby. Not only did I had to learn a new framework/format, I also jumped the gun and moved from a stable environment to a public beta!

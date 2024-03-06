@@ -3,7 +3,7 @@ title: Combining :placeholder-shown and :has
 date: 2023-08-19
 tags:
   - css
-  - trick
+  - webdev
 layout: post
 description: >-
   Yesterday my wife told me about this :placeholder-shown selector. I had visual question marks above my head because I never heard of it before. But it sparked curiosity about what it could give me.

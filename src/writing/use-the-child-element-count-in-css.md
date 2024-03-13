@@ -79,7 +79,7 @@ But, the trick shines when working with complex layouts. My favorite use case is
 }
 
 .switcher > * {
-  flex-basis: calc(var(--layout-width) - 100%) * 999);
+  flex-basis: calc(var(--layout-threshold) - 100%) * 999);
   flex-grow: 1;
 }
 ```

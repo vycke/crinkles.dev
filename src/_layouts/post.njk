@@ -9,10 +9,10 @@ layout: base
             This post is out-of-date, or I do not agree 100% with its content anymore. It will not be updated, but remains to exist to not break links.
         </div>
         {% endif %}
-        <div class="flex-col">
+        <div class="flex --column">
             
             <h1 class="mb-000">{{ title }}</h1>
-            <time class="size-00 | flex-row --gap-1" date="{{ post.data.date }}">
+            <time class="size-00 | flex --row --gap-1" date="{{ post.data.date }}">
                 <span class=" text-2 italic">{{ date | readableDate }}</span>
                 {% if update %} <span class=" text-2 italic">(Updated on: {{ update | readableDate }})</span> {%  endif %}
                 {% include "components/tag-list.njk" %}

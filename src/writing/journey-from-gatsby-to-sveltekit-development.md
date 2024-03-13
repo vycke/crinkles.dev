@@ -31,7 +31,7 @@ But quickly it hit me. The combination could work perfectly. It could allow me t
 
 ```html
 <header>
-  <div class="inner | flex-row items-center mb-0">
+  <div class="inner | flex --row items-center mb-0">
     <Logo />
   </div>
 </header>

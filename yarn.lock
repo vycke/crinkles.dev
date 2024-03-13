@@ -665,10 +665,10 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-feo-css@^4.7.3:
-  version "4.7.3"
-  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-4.7.3.tgz#d53ab46d4d19562dc9becaafc99f9342caa40b43"
-  integrity sha512-ch+tAJruKPmQAKtjiDMhLEp6cQbtYxVD6pg+3fXsQzSnfntcbV501OWOVg5qglvtdabIxL+7HxZMBOutxEbsrA==
+feo-css@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-5.0.0.tgz#7a92769e79ab7e0103dc8eb23d72722f16baf8c7"
+  integrity sha512-vBFfv0NqnK9LZqJIHNdCovZGemoBIXmNq7p9beUvK7cVpY7XJ6h09PGj6YO/EJYzj6LjTJy/URI/QpiSPBgUCw==
 
 filelist@^1.0.1:
   version "1.0.4"

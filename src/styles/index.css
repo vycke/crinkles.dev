@@ -13,13 +13,13 @@
 @import "utilities/decoration.css" layer(utilities);
 
 /** blocks */
-@import "blocks/article.css" layer(blocks);
 @import "blocks/codeblock.css" layer(blocks);
 @import "blocks/flag.css" layer(blocks);
+@import "blocks/banner.css" layer(blocks);
 @import "blocks/info-box.css" layer(blocks);
+@import "blocks/article.css" layer(blocks);
 @import "blocks/pagination.css" layer(blocks);
 @import "blocks/profile-picture.css" layer(blocks);
 @import "blocks/redirect-link.css" layer(blocks);
 @import "blocks/tag.css" layer(blocks);
-@import "blocks/separator.css" layer(blocks);
 @import "blocks/post-list.css" layer(blocks);

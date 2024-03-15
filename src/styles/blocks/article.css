@@ -1,5 +1,5 @@
 article {
-  --layout-threshold: 68ch;
+  --layout-threshold: 47rem;
 
   container-type: inline-size;
   container-name: post;
@@ -74,9 +74,15 @@ article :where(img, pre, .info, .archive) {
 }
 
 /** discard rounded corners on full width */
-@container post (inline-size < 784px) {
-  article :where(img, pre, .info, blockquote) {
+@container post (inline-size < 47rem) {
+  article :where(img, pre, .info, .archive, blockquote) {
     border-radius: 0 !important; /* overwrite specificity */
+  }
+
+  article .info,
+  article .archive {
+    border-width: 0px;
+    outline: 3px solid var(--border-color);
   }
 }
 

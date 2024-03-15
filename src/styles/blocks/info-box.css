@@ -12,21 +12,22 @@
   background-color: var(--surface-1);
   font-size: var(--token-size-00);
   position: relative;
+  border: 3px solid var(--border-color);
 }
 
 .info {
-  border: 3px solid var(--primary);
+  --border-color: var(--primary);
 }
 
 .archive {
-  border: 3px solid var(--error);
+  --border-color: var(--error);
 }
 
 .info::before,
 .archive::before {
   position: absolute;
   display: block;
-  top: -15px;
+  top: -13px;
   font-size: var(--token-size-00);
   border-radius: var(--token-radius-0);
   padding: 0px 6px;
@@ -34,12 +35,12 @@
 
 .info::before {
   content: "<aside />";
-  background-color: var(--primary);
+  background-color: var(--border-color);
   color: var(--surface-0);
 }
 
 .archive::before {
   content: "<archive />";
-  background-color: var(--error);
+  background-color: var(--border-color);
   color: var(--surface-0);
 }

@@ -28,8 +28,9 @@ main {
 }
 
 footer {
-  padding: var(--token-size-00) var(--token-size-2);
-  border-top: 1px solid var(--surface-1);
+  padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
+  background-color: var(--surface-1);
+  border-top: 1px solid var(--surface-2);
   font-size: var(--token-size-00);
 }
 

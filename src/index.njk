@@ -1,25 +1,23 @@
 ---
-layout: page
-width: 5
+layout: base
 ---
 
-<div class="flex --column --gap-5">
-  <div class="sidebar --left --threshold-000 --gap-3">
+<section class="banner">
+  <div class="fifty --threshold-0 --gap-3">
+    <aside class="flex --column flex-grow --gap-none">
+      <p class="size-1 | text-primary">Kevin Pennekamp</p>
+      <h1 class="italic">&lt;web-tinkerer /&gt;</h1>
+      <p class="mt-000 maxw-3">I am a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.  I enjoy <a href="/writing">writing</a> about all the exciting new stuff I encounter about the web and software development. This is my digital playground & corner of the internet.</p> 
+    </aside>
     <div class="flex --column items-center">
       {% include "svg/profile.svg" %}
     </div>
-    <aside class="flex --column flex-grow --gap-none">
-      <p class="size-1 | text-primary italic">Kevin Pennekamp</p>
-      <h1 class="italic">Web tinkerer</h1>
-      <p class="mt-000 maxw-3">I am a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.  In enjoy <a href="/writing">writing</a> about all the exciting new stuff I encounter about the web and software development. This is my digital playground & corner of the internet.</p> 
-    </aside>
   </div>
-
-  {% include "partials/separator.njk" %}
-
+</section>
+<main class="center --threshold-5">
   <div class="sidebar --right --threshold-0 --gap-5 | items-start | mb-5">
     <div class="flex --column --gap-1">
-      <h2 class="size-2 text-2 italic">My recent posts</h2>
+      <h2 class="size-0 text-2 uppercase">Here's my most recent posts</h2>
       {% set posts =  collections.posts | head(5) %}
       {% include "components/post-list.njk" %}
     </div>
@@ -29,4 +27,4 @@ width: 5
       {% include "components/tag-list.njk" %}
     </aside>
   </div>
-</div>
+</main>

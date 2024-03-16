@@ -14,9 +14,9 @@ layout: base
     </div>
   </div>
 </section>
-<main class="center --threshold-5">
+<main class="center --threshold-5 | mt-4">
   <div class="sidebar --right --threshold-0 --gap-5 | items-start | mb-5">
-    <div class="flex --column --gap-1">
+    <div class="flex --column --gap-00">
       <h2 class="size-0 text-2 uppercase">Here's my most recent posts</h2>
       {% set posts =  collections.posts | head(5) %}
       {% include "components/post-list.njk" %}

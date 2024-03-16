@@ -1,5 +1,5 @@
 .pagination {
-  padding: 0 var(--token-size-1);
+  padding: var(--token-size-2);
   width: 100%;
 }
 

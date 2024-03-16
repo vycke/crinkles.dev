@@ -12,7 +12,7 @@
   --token-success-00: #52a933;
   --token-success-0: #9ed68c;
   --token-success-1: #d5fbca;
-  --token-info-00: #5a8bc8;
+  --token-info-00: #4a7bb8;
   --token-info-0: #8caed4;
   --token-info-1: #cfe4fb;
   /** brand colors */
@@ -22,8 +22,8 @@
   /**
    * FONT FAMILY
    */
-  --sans-serif: "iA Writer Quattro", system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  --sans-serif: "iA Writer Quattro", monospace, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   /**
    * RADIUS & ELEVATION

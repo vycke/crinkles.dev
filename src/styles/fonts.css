@@ -8,7 +8,7 @@
   font-family: "iA Writer Quattro";
   font-weight: 400;
   font-style: italic;
-  font-display: block;
+  font-display: optional;
   src: url("/fonts/iAWriterQuattroS-Italic.woff2") format("woff2");
 }
 
@@ -16,7 +16,7 @@
   font-family: "iA Writer Quattro";
   font-weight: 700;
   font-style: italic;
-  font-display: block;
+  font-display: optional;
   src: url("/fonts/iAWriterQuattroS-BoldItalic.woff2") format("woff2");
 }
 
@@ -24,7 +24,7 @@
   font-family: "iA Writer Quattro";
   font-weight: 700;
   font-style: normal;
-  font-display: block;
+  font-display: optional;
   src: url("/fonts/iAWriterQuattroS-Bold.woff2") format("woff2");
 }
 
@@ -32,6 +32,6 @@
   font-family: "iA Writer Quattro";
   font-weight: 400;
   font-syle: normal;
-  font-display: block;
+  font-display: optional;
   src: url("/fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
 }

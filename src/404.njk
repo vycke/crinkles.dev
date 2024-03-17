@@ -5,7 +5,7 @@ layout: page
 width: 3
 ---
 <p class="size-1">It seems we can't find the page you are looking for. Maybe go back to the <a href="/">homepage</a>, or take a look at any of the recent posts.</p>
-<div class="flex --column items-start">
+<div class="flex --column --cross-start">
   {% set posts =  collections.posts | head(3) %}
   {% include "components/post-list.njk" %}
 </div>

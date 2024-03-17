@@ -43,6 +43,6 @@
     ]
   },
   "dependencies": {
-    "feo-css": "^5.1.0"
+    "feo-css": "^5.1.2"
   }
 }

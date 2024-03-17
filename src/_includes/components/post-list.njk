@@ -7,7 +7,7 @@
           {{ post.data.title }}
         </a>
       </span>
-      <span class="italic text-2 size-00 | flex --row items-center | mb-000">
+      <span class="italic text-2 size-00 | flex --row | mb-000">
         <time class="mr-00" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
         {# {% if latest.data.title === post.data.title %} <span class="flag">new! 🤯</span> {% endif %} #}
         {% if post.data.update %} <span class="flag size-00">updated!</span> {%  endif %}

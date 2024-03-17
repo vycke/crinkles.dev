@@ -1,7 +1,7 @@
 {% set latest = collections.posts | index(0) %}
 <ul role="list" class="post-list | hover-group | flex --column --gap-3">
   {% for post in posts %}
-    <li class="flex --column --gap-none | click-area" role="listitem">
+    <li class="flex --column --gap-none --start | click-area" role="listitem">
       <span class="size-1 bold">
         <a href="{{ post.page.url }}">
           {{ post.data.title }}

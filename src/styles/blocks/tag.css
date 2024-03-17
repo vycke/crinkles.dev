@@ -5,6 +5,10 @@
  * --tag-hash-color: color of the # char
  */
 
+.taglist {
+  justify-content: center;
+}
+
 a.tag {
   --tag-color: var(--primary);
   --tag-hash-color: var(--tag-color);

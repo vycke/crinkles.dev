@@ -1,0 +1,9 @@
+.linklist {
+  justify-content: center;
+}
+
+@media (hover: hover) {
+  .linklist > *:hover {
+    transform: matrix(1.175, 0, 0, 1.175, 0, 0);
+  }
+}

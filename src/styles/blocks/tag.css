@@ -5,10 +5,6 @@
  * --tag-hash-color: color of the # char
  */
 
-.taglist {
-  justify-content: center;
-}
-
 a.tag {
   --tag-color: var(--primary);
   --tag-hash-color: var(--tag-color);
@@ -31,10 +27,4 @@ a.tag::before {
   content: "#";
   transition: color 300ms;
   color: var(--tag-hash-color);
-}
-
-@media (hover: hover) {
-  .taglist > *:hover {
-    transform: matrix(1.175, 0, 0, 1.175, 0, 0);
-  }
 }

@@ -23,3 +23,4 @@
 @import "blocks/redirect-link.css" layer(blocks);
 @import "blocks/tag.css" layer(blocks);
 @import "blocks/post-list.css" layer(blocks);
+@import "blocks/linklist.css" layer(blocks);

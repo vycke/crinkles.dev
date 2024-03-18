@@ -3,6 +3,7 @@ title: How to create a scalable and maintainable front-end architecture
 date: 2019-11-11
 tags:
   - architecture
+  - javascript
 layout: post
 archived: true
 description: >-

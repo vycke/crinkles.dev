@@ -22,7 +22,7 @@ layout: base
       {% include "components/post-list.njk" %}
     </div>
     <aside class="flex --column --gap-000" aria-label="Top tags on the site">
-      <span class="text-2">Search by tag..</span>
+      <span class="text-2">Filter by tag..</span>
       {% set tags = collections.posts | getAllTags %}
       {% include "components/tag-list.njk" %}
     </aside>

@@ -2,7 +2,7 @@
 title: Updating my graph layout algorithm
 date: 2023-01-05
 tags:
-  - webdev
+  - javascript
 layout: post
 description: >-
   Updating my graph layout algorithm based on new requirements and requests from the community

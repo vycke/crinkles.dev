@@ -3,6 +3,7 @@ title: Modern CSS grid solutions to common layout problems
 date: 2020-07-06
 tags:
   - css
+  - layout
 layout: post
 description: >-
   Responsive layouts are one of the more complicated problems in CSS. With the addition of CSS grids, we are now able to solve complex problems.

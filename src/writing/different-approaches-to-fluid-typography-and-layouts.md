@@ -3,6 +3,7 @@ title: Different approaches to fluid typography and layouts
 date: 2023-03-07
 tags:
   - css
+  - layout
 layout: post
 description: >-
   Fluid web page design can be more user-friendly, because it adjusts to the user's set up. There are several approaches to achieving this.

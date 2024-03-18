@@ -3,6 +3,7 @@ title: Hiding side content in responsive design
 date: 2023-02-24
 tags:
   - css
+  - layout
 layout: post
 description: >-
   A trick to hide content in specific responsive layout patterns without the need for media queries. But with a few gotchas.

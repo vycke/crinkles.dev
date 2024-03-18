@@ -3,7 +3,7 @@ title: I was wrong about service workers
 pinned: true
 date: 2023-07-28
 tags:
-  - webdev
+  - javascript
 layout: post
 description: >-
   I was wrong about service workers. I wrongly assumed certain use cases for them. But I was missing out on them.

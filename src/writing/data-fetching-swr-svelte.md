@@ -3,7 +3,7 @@ title: SWR-like data fetching in Svelte
 date: 2021-12-10
 tags:
   - architecture
-  - webdev
+  - svelte
 layout: post
 description: >-
   I am a big fan of the [SWR](https://swr.vercel.app/) package of Vercel. Let's see how to implement something similar in Svelte.

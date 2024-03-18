@@ -5,6 +5,7 @@ archived: true
 layout: post
 tags:
   - architecture
+  - react
 description: >-
   Interfaces are everywhere, for users and developers, so why not use them?
 ---

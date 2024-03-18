@@ -2,7 +2,9 @@
 title: Interdependencies and code stability
 date: 2021-09-14
 update: 2023-08-18
-tags: architecture
+tags:
+  - architecture
+  - engineering
 layout: post
 description: As engineers, we have the tendency to over-engineer our solutions, make our code as reusable as possible. We make our code DRY. But in this quest, we often create unstable code.
 ---

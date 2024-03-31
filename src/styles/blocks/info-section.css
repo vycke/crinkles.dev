@@ -1,6 +1,4 @@
 .info-section {
-  --layout-threshold: 5rem;
-  --layout-inline-size: var(--token-bp-1);
-
-  width: 100%;
+  --layout-threshold: 5.5rem;
+  --layout-inline-size: var(--token-bp-0);
 }

@@ -2,12 +2,11 @@
   background-color: var(--surface-1);
   border-top: 1px solid var(--surface-2);
   border-bottom: 1px solid var(--surface-2);
-  /* color: var(--token-neutral-0); */
   padding: var(--token-size-4) 0;
+  margin-bottom: var(--token-size-4);
 }
 
 .banner > * {
   margin-inline: auto;
-  max-width: var(--token-bp-5);
   padding: 0 var(--token-size-2);
 }

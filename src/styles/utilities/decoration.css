@@ -15,6 +15,10 @@
   text-transform: uppercase;
 }
 
+.lowercase {
+  text-transform: lowercase;
+}
+
 .text-center {
   text-align: center;
 }

@@ -1,7 +1,12 @@
 ---
 layout: base
 ---
-<main class="center --threshold-{{ width or 4 }}">
-  {% if title %}<h1 class="text-2 uppercase size-0  mb-00">{{ title }}</h1>{% endif %}
+{% if title %}
+  <section class="banner">
+    <h1 class="italic lowercase maxw-{{ width or 4 }}">&lt;{{ title }} /&gt;</h1>
+  </section>
+{% endif %}
+
+<main class="center --threshold-{{ width or 4 }} | mb-4">
   {{ content | safe }}
 </main>

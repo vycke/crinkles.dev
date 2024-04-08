@@ -105,13 +105,7 @@ article blockquote {
 }
 
 article blockquote::before {
-  background: linear-gradient(
-    -1deg,
-    var(--token-error),
-    var(--token-warning),
-    var(--token-success),
-    var(--token-info)
-  );
+  background: var(--primary);
   box-shadow: var(--token-elevation-0);
   content: "";
   height: calc(100% + 1px);

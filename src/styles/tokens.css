@@ -2,22 +2,8 @@
   /**
    * COLORS
    */
-  /** SYSTEM */
-  --token-error-00: #b5474f;
-  --token-error-0: #cc878e;
-  --token-error-1: #f3c7cb;
-  --token-warning-00: #b19a3a;
-  --token-warning-0: #d5c98b;
-  --token-warning-1: #faf1ca;
-  --token-success-00: #52a933;
-  --token-success-0: #9ed68c;
-  --token-success-1: #d5fbca;
-  --token-info-00: #4a7bb8;
-  --token-info-0: #8caed4;
-  --token-info-1: #cfe4fb;
-  /** brand colors */
-  --token-brand-0: #9adcc4;
-  --token-brand-1: #477968;
+  --token-brand-0: #b8ed40;
+  --token-brand-1: #116751;
 
   /**
    * FONT FAMILY
@@ -41,12 +27,8 @@
  */
 :root {
   color-scheme: light;
-  --primary: var(--token-brand-1);
-  --error: var(--token-error-00);
-  --success: var(--token-success-00);
-  --info: var(--token-info-00);
-  --warning: var(--token-warning-00);
   accent-color: var(--primary);
+  --primary: var(--token-brand-1);
 }
 
 /**
@@ -62,9 +44,5 @@
     --surface-1: var(--token-neutral-1);
     --surface-2: var(--token-neutral-2);
     --primary: var(--token-brand-0);
-    --error: var(--token-error-0);
-    --success: var(--token-success-0);
-    --info: var(--token-info-0);
-    --warning: var(--token-warning-0);
   }
 }

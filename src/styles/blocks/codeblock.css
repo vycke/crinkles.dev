@@ -17,7 +17,8 @@ pre code {
 .token.punctuation,
 .token.comment,
 .token.operator,
-.token.tag {
+.token.tag,
+.token.keyword {
   color: var(--text-2);
 }
 
@@ -30,18 +31,19 @@ pre code {
 .token.selector,
 .token.string,
 .token.number {
-  color: var(--info);
+  color: var(--accent);
 }
 
 .token.function {
-  color: var(--success);
+  color: var(--primary);
 }
 
 .token.keyword {
-  color: var(--error);
+  color: var(--text-2);
 }
 
 .token.function,
-.token.comment {
+.token.comment,
+.token.keyword {
   font-style: italic;
 }

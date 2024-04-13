@@ -4,6 +4,8 @@
    */
   --token-brand-0: #b8ed40;
   --token-brand-1: #116751;
+  --token-brand-2: #9adcc4;
+  --token-brand-3: #052f35;
 
   /**
    * FONT FAMILY
@@ -29,6 +31,7 @@
   color-scheme: light;
   accent-color: var(--primary);
   --primary: var(--token-brand-1);
+  --accent: var(--token-brand-3);
 }
 
 /**
@@ -44,5 +47,6 @@
     --surface-1: var(--token-neutral-1);
     --surface-2: var(--token-neutral-2);
     --primary: var(--token-brand-0);
+    --accent: var(--token-brand-2);
   }
 }

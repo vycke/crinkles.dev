@@ -31,11 +31,11 @@ pre code {
 .token.selector,
 .token.string,
 .token.number {
-  color: var(--accent);
+  color: var(--code-primary);
 }
 
 .token.function {
-  color: var(--primary);
+  color: var(--code-secondary);
 }
 
 .token.keyword {

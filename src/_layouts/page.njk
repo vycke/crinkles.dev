@@ -2,8 +2,11 @@
 layout: base
 ---
 {% if title %}
-  <section class="banner">
-    <h1 class="italic lowercase maxw-{{ width or 4 }}">&lt;{{ title }} /&gt;</h1>
+  <section class="banner"> 
+    <div class="center --threshold-{{ width }}">
+      <span class="size-1 bold text-primary italic lowercase">&lt;{{ description }} /&gt;</span>
+      <h1>{{ title }}</h1>
+    </div>
   </section>
 {% endif %}
 

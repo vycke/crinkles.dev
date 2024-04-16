@@ -1,0 +1,26 @@
+.line-left,
+.line-right {
+  position: absolute;
+  width: 400px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.line-left {
+  top: 400px;
+  left: 0;
+  z-index: 1;
+}
+
+.line-right {
+  right: 0;
+  top: 0;
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 867px) {
+  .line-left,
+  .line-right {
+    display: none;
+  }
+}

@@ -16,17 +16,3 @@
   border-top: 1px solid var(--surface-2);
   border-bottom: 1px solid var(--surface-2);
 }
-
-.banner .line {
-  position: absolute;
-  left: -30px;
-  bottom: var(--token-size-2);
-  height: 100%;
-  max-width: 413px;
-}
-
-@media screen and (max-width: 867px) {
-  .line {
-    display: none;
-  }
-}

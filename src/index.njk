@@ -14,11 +14,32 @@ layout: base
     </div>
   </div>
 </section>
+
+<section class="banner" data-variant="colored">
+  {% include "svg/line.svg" %}
+  <div class="maxw-5 sidebar --left --threshold-0">
+    <div></div>
+    <div class="flex --column --gap-1 --stretch">
+      <section class="info-section | sidebar --left --gap-000">
+        <span class="bold text-primary">What.</span>
+        <div class="flex --column --gap-000 --start">
+          <p>I specialize in development and consultancy on CSS, HTML, and sustainable web development. I mostly do this by using tools like Eleventy and Svelte. You can also ask me to help with mentoring and code-reviewing, if you are a (junior) indepedent developers.</p>
+          <p>In the mean time, i I build my own stuff like <a href="https://feo.crinkles.dev" alt="FEO.css site">Feo.css</a>, and I <a href="/writing">write</a> (sometimes).</p>
+        </div>
+      </section> 
+      <section class="info-section | sidebar --left --gap-000">
+        <span class="bold text-primary">Work.</span>
+        <p>I work for Finaps a (small-ish) software agency based in Amsterdam, the Nethelands. Here I lead a team of ~15 software engineers.</p>
+      </section>
+    </div>
+  </div>
+</section>
+
 <main class="center --threshold-5 | mb-4">
   <div class="sidebar --right --threshold-0 --gap-5 | --start">
     <div class="flex --column --gap-00">
       <h2 class="size-0 text-2 uppercase">Here's my most recent posts</h2>
-      {% set posts =  collections.posts | head(5) %}
+      {% set posts =  collections.posts | head(3) %}
       {% include "components/post-list.njk" %}
     </div>
     <aside class="flex --column --gap-000" aria-label="Top tags on the site">

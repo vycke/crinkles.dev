@@ -1,12 +1,32 @@
 .banner {
-  background-color: var(--surface-1);
-  border-top: 1px solid var(--surface-2);
-  border-bottom: 1px solid var(--surface-2);
-  padding: var(--token-size-4) 0;
+  padding: var(--token-size-0) 0;
   margin-bottom: var(--token-size-4);
+  position: relative;
 }
 
 .banner > * {
   margin-inline: auto;
   padding: 0 var(--token-size-2);
+  position: relative;
+}
+
+.banner[data-variant="colored"] {
+  padding: var(--token-size-4) 0;
+  background-color: var(--surface-1);
+  border-top: 1px solid var(--surface-2);
+  border-bottom: 1px solid var(--surface-2);
+}
+
+.banner .line {
+  position: absolute;
+  left: -30px;
+  bottom: var(--token-size-2);
+  height: 100%;
+  max-width: 413px;
+}
+
+@media screen and (max-width: 867px) {
+  .line {
+    display: none;
+  }
 }

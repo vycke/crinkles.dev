@@ -14,7 +14,6 @@
 }
 
 .line-right {
-  right: -60px;
   top: 0px;
   transform: scaleX(-1);
 }

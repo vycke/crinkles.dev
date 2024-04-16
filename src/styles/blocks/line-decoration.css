@@ -3,24 +3,26 @@
   position: absolute;
   width: 400px;
   pointer-events: none;
+  opacity: 0.7;
   z-index: -1;
 }
 
 .line-left {
-  top: 400px;
-  left: 0;
+  top: 340px;
+  left: -60px;
   z-index: 1;
 }
 
 .line-right {
-  right: 0;
-  top: 0;
+  right: -60px;
+  top: 0px;
   transform: scaleX(-1);
 }
 
 @media screen and (max-width: 867px) {
   .line-left,
   .line-right {
-    display: none;
+    width: min(60%, 400px);
+    opacity: 0.4;
   }
 }

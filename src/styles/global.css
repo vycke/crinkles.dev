@@ -25,10 +25,12 @@ body {
   margin-top: -200px;
   grid-column: 1;
   grid-row: 1;
-  background-image: url("../pattern.svg");
-  background-size: 16px;
+  background-color: var(--primary);
+  opacity: 0.2;
+  mask-image: url("../pattern.svg");
+  mask-size: 16px;
+  mask-repeat: repeat;
   transform: rotate(16deg);
-  background-repeat: repeat;
   z-index: -2;
 }
 

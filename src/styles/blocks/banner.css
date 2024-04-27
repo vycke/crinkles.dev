@@ -1,5 +1,5 @@
 .banner {
-  padding: 0 var(--token-size-2);
+  padding: var(--token-size-4) 0;
   margin-bottom: var(--token-size-4);
   position: relative;
   border-bottom: 3px solid var(--text-2);
@@ -7,6 +7,6 @@
 
 .banner > * {
   margin-inline: auto;
-  padding: var(--token-size-4) var(--token-size-2);
+  padding: 0 var(--token-size-2);
   position: relative;
 }

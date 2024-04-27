@@ -25,3 +25,5 @@
 @import "blocks/post-list.css" layer(blocks);
 @import "blocks/linklist.css" layer(blocks);
 @import "blocks/info-section.css" layer(blocks);
+@import "blocks/canvas.css" layer(blocks);
+@import "blocks/title-section.css" layer(blocks);

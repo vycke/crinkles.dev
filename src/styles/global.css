@@ -7,51 +7,6 @@ body {
   position: relative;
 }
 
-.canvas {
-  position: absolute;
-  display: grid;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 650px;
-  overflow: hidden;
-}
-
-.pattern {
-  width: 200%;
-  height: 200%;
-  margin-left: -200px;
-  margin-top: -200px;
-  grid-column: 1;
-  grid-row: 1;
-  background-color: var(--primary);
-  opacity: 0.2;
-  mask-image: url("../pattern.svg");
-  mask-size: 16px;
-  mask-repeat: repeat;
-  transform: rotate(16deg);
-  z-index: -2;
-}
-
-.pattern rect {
-  fill: var(--primary);
-}
-
-.gradient {
-  width: 100%;
-  height: 100%;
-  grid-column: 1;
-  grid-row: 1;
-  z-index: -1;
-  background: linear-gradient(
-    var(--surface-0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    var(--surface-0)
-  );
-}
-
 header {
   padding: var(--token-size-2);
 }

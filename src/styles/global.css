@@ -4,6 +4,50 @@
 body {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.canvas {
+  position: absolute;
+  display: grid;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 650px;
+  overflow: hidden;
+}
+
+.pattern {
+  width: 200%;
+  height: 200%;
+  margin-left: -200px;
+  margin-top: -200px;
+  grid-column: 1;
+  grid-row: 1;
+  background-image: url("../pattern.svg");
+  background-size: 16px;
+  transform: rotate(16deg);
+  background-repeat: repeat;
+  z-index: -2;
+}
+
+.pattern rect {
+  fill: var(--primary);
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: -1;
+  background: linear-gradient(
+    var(--surface-0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    var(--surface-0)
+  );
 }
 
 header {
@@ -28,7 +72,7 @@ main {
 footer {
   padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
   background-color: var(--surface-1);
-  border-top: 1px solid var(--surface-2);
+  border-top: 3px solid var(--text-2);
   font-size: var(--token-size-00);
 }
 

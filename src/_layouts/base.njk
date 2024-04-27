@@ -34,7 +34,10 @@
     </head>
 
     <body>
-        {% include "svg/line-right.svg" %}
+        <div class="canvas">
+            <div class="gradient"></div>
+            <div class="pattern"></div>
+        </div>
         {% include "partials/header.njk" %}
         {{ content | safe }}
         {% include "partials/footer.njk" %}

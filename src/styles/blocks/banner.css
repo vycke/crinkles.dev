@@ -1,18 +1,12 @@
 .banner {
-  padding: var(--token-size-0) 0;
+  padding: 0 var(--token-size-2);
   margin-bottom: var(--token-size-4);
   position: relative;
+  border-bottom: 3px solid var(--text-2);
 }
 
 .banner > * {
   margin-inline: auto;
-  padding: 0 var(--token-size-2);
+  padding: var(--token-size-4) var(--token-size-2);
   position: relative;
-}
-
-.banner[data-variant="colored"] {
-  padding: var(--token-size-4) 0;
-  background-color: var(--surface-1);
-  border-top: 1px solid var(--surface-2);
-  border-bottom: 1px solid var(--surface-2);
 }

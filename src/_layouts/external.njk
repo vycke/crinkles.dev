@@ -1,0 +1,23 @@
+---
+layout: base
+---
+
+<main class="post | mb-2">
+    <article class="center">
+        <div class="flex --column">
+            <h1 class="text-center">{{ title }}</h1>
+            <time class="size-00 | flex --row --gap-1" date="{{ date }}">
+                <span class=" text-2 italic">{{ date | readableDate }}</span>
+                {% if update %} <span class=" text-2 italic">(Updated on: {{ update | readableDate }})</span> {%  endif %}
+                {% include "components/tag-list.njk" %}
+            </time>
+        </div>
+        {{ content | safe }}
+        <a href="{{ link }}" alt="{{ alt }}" target="_blank" class="external">Check it out</a>
+    </article> 
+</main>
+
+{% set older = collections.posts | getNextCollectionItem(page) %}
+{% set newer = collections.posts | getPreviousCollectionItem(page) %}
+
+{% include "components/pagination.njk" %}

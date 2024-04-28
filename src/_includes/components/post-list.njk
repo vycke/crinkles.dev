@@ -11,6 +11,7 @@
         <time class="mr-00" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
         {# {% if latest.data.title === post.data.title %} <span class="flag">new! 🤯</span> {% endif %} #}
         {% if post.data.update %} <span class="flag size-00">updated!</span> {%  endif %}
+        {% if post.data.link %} <span class="flag size-00">external</span> {%  endif %}
         </span>
       </span>
       <span class="text-1">{{ post.data.description }}</span>

@@ -156,3 +156,16 @@ article ul:not([class]) li {
 article ol:not([class]) {
   list-style: decimal outside;
 }
+
+article .external {
+  background-color: var(--surface-1);
+  padding: var(--token-size-000);
+  align-self: flex-start;
+  border: 3px solid var(--text-0);
+  text-decoration: none;
+  transition: all 200ms;
+}
+
+article .external:hover {
+  background-color: var(--surface-2);
+}

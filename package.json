@@ -1,5 +1,5 @@
 {
-  "name": "crinckles.dev",
+  "name": "crinkles.dev",
   "version": "4.0.0",
   "description": "",
   "main": ".eleventy.js",
@@ -14,7 +14,7 @@
     "format": "npx prettier --write --ignore-unknown"
   },
   "keywords": [],
-  "author": "Kevin Pennekamp<github@crinckles.dev>",
+  "author": "Kevin Pennekamp<github@crinkles.dev>",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

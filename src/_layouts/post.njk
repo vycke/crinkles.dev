@@ -12,11 +12,11 @@ layout: base
         <div class="flex --column">
             
             <h1 class="text-center">{{ title }}</h1>
-            <time class="size-00 | flex --row --gap-1" date="{{ post.data.date }}">
-                <span class=" text-2 italic">{{ date | readableDate }}</span>
-                {% if update %} <span class=" text-2 italic">(Updated on: {{ update | readableDate }})</span> {%  endif %}
+            <div class="flex --row --gap-1 | size-00">
+                <time class=" text-2 italic">{{ date | readableDate }}</time>
+                {% if update %} <time class=" text-2 italic">(Updated on: {{ update | readableDate }})</time> {%  endif %}
                 {% include "components/tag-list.njk" %}
-            </time>
+            </div>
         </div>
         {{ content | safe }}
     </article> 

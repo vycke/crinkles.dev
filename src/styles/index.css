@@ -27,3 +27,4 @@
 @import "blocks/info-section.css" layer(blocks);
 @import "blocks/canvas.css" layer(blocks);
 @import "blocks/title-section.css" layer(blocks);
+@import "blocks/button.css" layer(blocks);

@@ -34,6 +34,7 @@ layout: base
       <h2 class="size-0 text-2 uppercase">Here's my most recent posts</h2>
       {% set posts =  collections.posts | head(3) %}
       {% include "components/post-list.njk" %}
+      <a href="/writing" class="button-shape | mt-1 self-end">Read more</a>
     </div>
     <aside class="flex --column --gap-000" aria-label="Top tags on the site">
       <span class="text-2">Filter by tag..</span>

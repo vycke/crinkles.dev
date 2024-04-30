@@ -90,7 +90,7 @@ article :where(img, pre, .info, .archive) {
  * IMAGES
  */
 article img {
-  box-shadow: var(--token-elevation-0);
+  box-shadow: var(--token-shadow);
 }
 
 /**
@@ -106,7 +106,6 @@ article blockquote {
 
 article blockquote::before {
   background: var(--primary);
-  box-shadow: var(--token-elevation-0);
   content: "";
   height: calc(100% + 1px);
   left: 0;

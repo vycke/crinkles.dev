@@ -6,13 +6,14 @@
 
 .info,
 .archive {
-  box-shadow: var(--token-elevation-1);
+  box-shadow: var(--token-elevation);
   border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
-  background-color: var(--surface-1);
+  background-color: var(--primary);
+  color: var(--surface-0);
   font-size: var(--token-size-00);
   position: relative;
-  border: 3px solid var(--border-color);
+  border: 3px solid var(--text-0);
 }
 
 .info {
@@ -27,16 +28,16 @@
 .archive::before {
   position: absolute;
   display: block;
-  top: -13px;
+  top: -15px;
   font-size: var(--token-size-00);
   border-radius: var(--token-radius-0);
+  background-color: var(--text-0);
+  color: var(--surface-0);
   padding: 0px 6px;
 }
 
 .info::before {
   content: "<aside />";
-  background-color: var(--border-color);
-  color: var(--surface-0);
 }
 
 .archive::before {

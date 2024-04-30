@@ -16,6 +16,7 @@
   border-bottom: 3px solid var(--border-color);
   border-top: 3px solid var(--border-color);
   background-color: var(--surface-1);
+  box-shadow: var(--token-elevation);
 }
 
 .banner > .content {
@@ -25,8 +26,9 @@
   border-bottom: 3px solid var(--border-color);
   border-right: 3px solid var(--border-color);
   background-color: var(--surface-1);
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-top-right-radius: var(--token-radius-1);
+  border-bottom-right-radius: var(--token-radius-1);
+  box-shadow: var(--token-elevation);
 }
 
 @media screen and (max-width: 751px) {
@@ -40,5 +42,6 @@
     border-right: none;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    box-shadow: none;
   }
 }

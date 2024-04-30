@@ -1,6 +1,6 @@
 pre {
   border: none;
-  box-shadow: var(--token-elevation-1);
+  box-shadow: var(--token-elevation);
   background-color: var(--surface-1);
   color: var(--text-0);
   border: 3px solid var(--text-0);

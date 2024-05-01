@@ -14,6 +14,5 @@
 
 .button-shape:hover {
   background-color: var(--surface-2);
-  box-shadow: none;
   transform: translate(3px, 4px);
 }

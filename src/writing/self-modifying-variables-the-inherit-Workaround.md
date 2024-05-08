@@ -1,5 +1,5 @@
 ---
-title: "Self-Modifying Variables the inherit() Workaround"
+title: "Self-modifying variables: the inherit() workaround"
 date: 2024-05-08
 tags:
   - css

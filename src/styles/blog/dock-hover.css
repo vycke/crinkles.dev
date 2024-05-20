@@ -1,0 +1,45 @@
+.dock-hover,
+.dock-hover--general,
+.dock-hover--adjacent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.dock-hover > *,
+.dock-hover--general > *,
+.dock-hover--adjacent > * {
+  flex-grow: 1;
+  height: 75px;
+  border-radius: 4px;
+  background-color: var(--primary);
+  transition: transform 400ms;
+}
+
+.dock-hover > *:hover,
+.dock-hover--adjacent > *:hover {
+  transform: scaleY(1.5);
+}
+
+.dock-hover > *:hover + *,
+.dock-hover--adjacent > *:hover + * {
+  transform: scaleY(1.35);
+}
+
+.dock-hover > *:hover + * + *,
+.dock-hover--adjacent > *:hover + * + * {
+  transform: scaleY(1.2);
+}
+
+.dock-hover--general > *:hover ~ * {
+  transform: scaleY(1.5);
+}
+
+.dock-hover > *:has(+ *:hover) {
+  transform: scaleY(1.35);
+}
+
+.dock-hover > *:has(+ * + *:hover) {
+  transform: scaleY(1.2);
+}

@@ -1,19 +1,20 @@
 .button-shape {
   --color: var(--text-0);
 
-  color: var(--color);
-  background-color: var(--surface-1);
+  color: var(--surface-0);
+  background-color: var(--primary);
   padding: 0.5rem var(--token-size-000);
   align-self: flex-start;
-  border-radius: var(--token-radius-1);
-  border: 3px solid var(--color);
+  border-radius: 5px;
+  border: 2px solid var(--color);
   box-shadow: var(--token-elevation);
   text-decoration: none;
-  transition: background-color 0.15s, transform 0.15s, box-shadow 0.075s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .button-shape:hover {
-  background-color: var(--surface-2);
   box-shadow: 0px 0px 0px var(--text-0);
-  transform: translate(2px, 3px);
+  transform: matrix(1, 0, 0, 1, 4, 4);
 }

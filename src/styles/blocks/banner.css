@@ -13,8 +13,8 @@
 
 .banner > .side {
   grid-column: 1 / 2;
-  border-bottom: 3px solid var(--border-color);
-  border-top: 3px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
   background-color: var(--surface-1);
   box-shadow: var(--token-elevation);
 }
@@ -22,9 +22,9 @@
 .banner > .content {
   width: 100%;
   padding: var(--token-size-4) 0;
-  border-top: 3px solid var(--border-color);
-  border-bottom: 3px solid var(--border-color);
-  border-right: 3px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
   background-color: var(--surface-1);
   border-top-right-radius: var(--token-radius-1);
   border-bottom-right-radius: var(--token-radius-1);

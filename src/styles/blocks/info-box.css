@@ -13,7 +13,7 @@
   color: var(--surface-0);
   font-size: var(--token-size-00);
   position: relative;
-  border: 3px solid var(--text-0);
+  border: 2px solid var(--text-0);
 }
 
 .info {
@@ -28,7 +28,7 @@
 .archive::before {
   position: absolute;
   display: block;
-  top: -15px;
+  top: -0.9em;
   font-size: var(--token-size-00);
   border-radius: var(--token-radius-0);
   background-color: var(--text-0);

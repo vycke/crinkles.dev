@@ -3,7 +3,7 @@ pre {
   box-shadow: var(--token-elevation);
   background-color: var(--surface-1);
   color: var(--text-0);
-  border: 3px solid var(--text-0);
+  border: 2px solid var(--text-0);
 }
 
 pre code {
@@ -37,10 +37,6 @@ pre code {
 
 .token.function {
   color: var(--code-secondary);
-}
-
-.token.keyword {
-  color: var(--text-2);
 }
 
 .token.function,

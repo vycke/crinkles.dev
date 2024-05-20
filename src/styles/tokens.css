@@ -2,10 +2,10 @@
   /**
    * COLORS
    */
-  --token-brand-0: #b8ed40;
+  --token-brand-0: #b3d7ca;
   --token-brand-1: #14765d;
-  --token-brand-2: #9adcc4;
-  --token-brand-3: #052f35;
+  --token-brand-2: #d8c882;
+  --token-brand-3: #10699b;
 
   /**
    * FONT FAMILY
@@ -21,7 +21,7 @@
 
   --token-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075);
-  --token-elevation: 2px 3px 0px var(--text-0);
+  --token-elevation: 4px 4px 0px 0px var(--text-0);
 }
 
 /**

@@ -2,10 +2,10 @@
   /**
    * COLORS
    */
-  --token-brand-0: #b3d7ca;
-  --token-brand-1: #14765d;
-  --token-brand-2: #d8c882;
-  --token-brand-3: #10699b;
+  --token-brand-0: #dcbd87;
+  --token-brand-1: #b3d7ca;
+  --token-brand-2: #14765d;
+  --token-brand-3: #1e7f91;
 
   /**
    * FONT FAMILY
@@ -30,10 +30,9 @@
 :root {
   color-scheme: light;
   accent-color: var(--primary);
-  --primary: var(--token-brand-1);
-  --accent: var(--token-brand-2);
 
-  --code-primary: var(--token-brand-1);
+  --primary: var(--token-brand-2);
+  --code-primary: var(--token-brand-2);
   --code-secondary: var(--token-brand-3);
 }
 
@@ -49,9 +48,9 @@
     --surface-0: var(--token-neutral-0);
     --surface-1: var(--token-neutral-1);
     --surface-2: var(--token-neutral-2);
-    --primary: var(--token-brand-2);
 
-    --code-primary: var(--token-brand-2);
-    --code-secondary: var(--token-brand-0);
+    --primary: var(--token-brand-0);
+    --code-primary: var(--token-brand-0);
+    --code-secondary: var(--token-brand-1);
   }
 }

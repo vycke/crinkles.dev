@@ -2,7 +2,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  height: 650px;
+  height: 100vh;
   background: linear-gradient(
     var(--surface-0),
     var(--primary),

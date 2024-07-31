@@ -34,7 +34,7 @@ A simple machine with only four states. The `visible` and `invisible` states spe
 
 You could argue that it would be enough to create a callback after the user is loaded. In this callback, we determine which event to trigger on the state machine, either `HIDE` or `SHOW`. In a simple state machine this would be proper implementation.
 
-But in the diagram, we see a `user_loaded` state. That is because the implementation I used allows for [actions](https://github.com/vyckes/cogwheel/blob/main/docs/actions.md). These are callbacks that can be triggered for instance when we "enter" a state. It now looks something like the code below:
+But in the diagram, we see a `user_loaded` state. That is because the implementation I used allows for [actions](https://github.com/vycke/cogwheel/blob/main/docs/actions.md). These are callbacks that can be triggered for instance when we "enter" a state. It now looks something like the code below:
 
 ```js
 import { send } from "cogwheel";

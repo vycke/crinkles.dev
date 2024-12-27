@@ -1,7 +1,9 @@
 .flag {
   display: inline-block;
   border-radius: var(--token-radius-0);
-  color: var(--text-0);
+  color: lch(
+    from var(--contrast-bg, var(--surface-0)) calc((49.44 - l) * infinity) 0 0
+  );
   font-weight: 600;
 }
 

@@ -1,47 +1,17 @@
 .banner {
-  --border-color: var(--text-0);
-  --mw: calc(var(--token-bp-5) - 2 * var(--token-size-2));
+  --contrast-bg: var(--surface-1);
 
-  display: grid;
-  grid-template-columns:
-    minmax(var(--token-size-2), 1fr)
-    minmax(auto, var(--mw))
-    minmax(var(--token-size-2), 1fr);
-  padding: 0;
-  margin-bottom: var(--token-size-4);
-}
-
-.banner > .side {
-  grid-column: 1 / 2;
-  border-bottom: 2px solid var(--border-color);
-  border-top: 2px solid var(--border-color);
-  background-color: var(--surface-1);
-  box-shadow: var(--token-elevation);
-}
-
-.banner > .content {
-  width: 100%;
   padding: var(--token-size-4) 0;
-  border-top: 2px solid var(--border-color);
-  border-bottom: 2px solid var(--border-color);
-  border-right: 2px solid var(--border-color);
-  background-color: var(--surface-1);
-  border-top-right-radius: var(--token-radius-1);
-  border-bottom-right-radius: var(--token-radius-1);
-  box-shadow: var(--token-elevation);
+  border-top: 3px solid var(--text-0);
+  border-bottom: 3px solid var(--text-0);
+}
+
+.banner .content {
+  padding: 0 var(--token-size-2);
 }
 
 @media screen and (max-width: 751px) {
-  .banner > .side {
-    display: none;
-  }
-
-  .banner > .content {
+  .banner {
     padding: var(--token-size-4) var(--token-size-2);
-    grid-column: 1 / 4;
-    border-right: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: none;
   }
 }

@@ -2,15 +2,14 @@
 layout: base
 ---
 
-<section class="banner"> 
-  <div class="side"></div>
-  <div class="content | center --threshold-{{ width }}">
+<section class="banner | contrast | center | mb-4">
+  <div class="content | center maxw-{{ width or 5 }}">
     <span class="size-1 bold text-primary italic lowercase">&lt;{{ description }} /&gt;</span>
     <h1>{{ title }}</h1>
   </div>
 </section>
 
 
-<main class="center --threshold-{{ width or 4 }} | mb-4">
+<main class="center --threshold-{{ width or 5 }} | mb-4">
   {{ content | safe }}
 </main>

@@ -9,7 +9,7 @@
     var(--primary),
     var(--surface-0)
   );
-  opacity: 0.09;
+  opacity: 0.08;
   mask-image: url("../pattern.svg");
   mask-size: 16px;
   mask-repeat: repeat;

@@ -4,6 +4,7 @@ pre {
   background-color: var(--surface-1);
   color: var(--text-0);
   border: 2px solid var(--text-0);
+  font-weight: 400;
 }
 
 pre code {

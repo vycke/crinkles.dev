@@ -13,3 +13,7 @@
 .text-primary {
   color: var(--primary);
 }
+
+.text-accent {
+  color: var(--accent);
+}

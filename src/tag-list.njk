@@ -5,7 +5,7 @@ layout: page
 eleventyExcludeFromCollections: true
 ---
 
-<ul>
+<ul role="list">
   {% for tag, count in collections.posts | getAllTags(true) %}
   <li>
     <a href="/tags/{{ tag }}/">{{ tag }}</a>

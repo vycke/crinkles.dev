@@ -6,14 +6,19 @@
 
 .info,
 .archive {
+  --contrast-bg: var(--primary);
+  --contrast-color: lch(
+    from var(--contrast-bg) calc((49.44 - l) * infinity) 0 0
+  );
+
   box-shadow: var(--token-elevation);
   border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
-  background-color: var(--primary);
-  color: var(--surface-0);
+  background-color: var(--contrast-bg);
   font-size: var(--token-size-00);
   position: relative;
   border: 2px solid var(--text-0);
+  color: var(--contrast-color);
 }
 
 .info {

@@ -134,27 +134,27 @@ article :not(pre) > code {
 /**
  * LISTS
  */
-article :where(ul, ol):not([class]) {
+:where(ul, ol):not([class]) {
   list-style: outside;
   padding-left: 0;
 }
 
-article :where(ul, ol):not([class]) li {
+:where(ul, ol):not([class]) li {
   margin-left: var(--token-size-1);
   padding-left: 0.5em;
 }
 
-article :where(ul, ol):not([class]) li::marker {
+:where(ul, ol):not([class]) li::marker {
   color: var(--primary);
   font-size: 0.825em;
   font-weight: 600;
 }
 
-article ul:not([class]) li {
+ul:not([class]) li {
   list-style-type: "✦  ";
   padding-left: 0.5em;
 }
 
-article ol:not([class]) {
+ol:not([class]) {
   list-style: decimal outside;
 }

@@ -121,6 +121,7 @@ article blockquote cite {
   width: 100%;
   font-size: var(--token-size-00);
   font-style: italic;
+  text-align: right;
   margin-top: var(--token-size-0);
   color: var(--primary);
 }

@@ -16,6 +16,7 @@
 .redirect::after {
   content: "→";
   display: inline-block;
+  font-weight: 400;
   transition: all 0.25s;
   position: absolute;
   right: -1.25em;
@@ -24,5 +25,4 @@
 
 .redirect:hover::after {
   right: -1.625em;
-  font-weight: 600;
 }

@@ -6,7 +6,7 @@
 
 .info,
 .archive {
-  --contrast-bg: var(--primary);
+  --contrast-bg: var(--token-brand-2);
   --contrast-color: lch(
     from var(--contrast-bg) calc((49.44 - l) * infinity) 0 0
   );

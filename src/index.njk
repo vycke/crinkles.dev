@@ -2,14 +2,19 @@
 layout: base
 ---
 
+<section class="title-section | center --threshold-5 | mb-3">
+  <span class="size-1 bold text-primary italic lowercase">&lt;web-tinkerer /&gt;</span>
+  <h1>Kevin Pennekamp</h1>
+</section>
+
 <section class="banner | contrast | center | mb-4">
   <div class="content | center | fifty --threshold-0 --gap-3 maxw-5">
     <div class="flex --column - --stretch maxw-3 --gap-2">
-      <span class="size-1 bold text-primary italic lowercase">&lt;web-tinkerer /&gt;</span>
+
       <section class="info-section | sidebar --left --gap-000">
         <span class="bold text-primary">Who.</span>
         <div class="flex --column --gap-000 --start">
-          <p>Hi! I am <b>Kevin Pennekamp,</b> a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.
+          <p>I am a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.
            I enjoy <a href="/writing">writing</a> and working on <a href="https://feo.crinkles.dev">Feo.css</a>.
            This is my digital playground & corner of the internet.</p>
         </div>
@@ -27,11 +32,10 @@ layout: base
 
 <main class="center --threshold-5 | mb-4">
   <div class="sidebar --right --threshold-0 --gap-5 | --start">
-    <div class="flex --column --gap-00">
-      <h2 class="size-0 text-2 uppercase">Here's my most recent posts</h2>
+    <div class="flex --column --stretch --gap-00">
+      <h2 class="text-1"><a href="/writing" class="redirect">Posts</a></h2>
       {% set posts =  collections.posts | head(3) %}
       {% include "components/post-list.njk" %}
-      <a href="/writing" class="button-shape | mt-1 self-end">Read more</a>
     </div>
     <aside class="flex --column --gap-000" aria-label="Top tags on the site">
       <span class="text-2">Filter by tag..</span>

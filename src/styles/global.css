@@ -11,7 +11,7 @@ header {
   padding: var(--token-size-2);
 }
 
-header .logo:hover {
+.logo:hover {
   animation: wiggle 0.6s;
   animation-iteration-count: 1;
 }

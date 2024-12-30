@@ -7,7 +7,7 @@
   {% endif %}
   {% if older %}
   <div class="--end">
-    {% if older.data.title %}<span class="subtitle">Older →</span>{% endif %}
+    {% if older.data.title %}<span class="subtitle">Older</span>{% endif %}
     <a href="{{ older.url | url }}">{{ older.data.title or "Older →"}}</a>
   </div>
   {% endif %}

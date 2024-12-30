@@ -43,7 +43,7 @@ a:not([class]) {
   background-position-y: 100%;
   background-position-x: 0%;
   background-repeat: no-repeat;
-  transition: background-size 0.2s ease-in-out;
+  transition: background-size 0.15s ease-in-out;
   text-decoration: 1px solid var(--surface-2);
 }
 

@@ -10,7 +10,7 @@ layout: base
         </div>
         {% endif %}
         <div class="flex --column">
-            
+
             <h1 class="text-center">{{ title }}</h1>
             <div class="flex --row --gap-1 | size-00">
                 <time class=" text-2 italic">{{ date | readableDate }}</time>
@@ -19,7 +19,7 @@ layout: base
             </div>
         </div>
         {{ content | safe }}
-    </article> 
+    </article>
 </main>
 
 {% set older = collections.posts | getNextCollectionItem(page) %}

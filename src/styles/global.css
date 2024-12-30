@@ -29,24 +29,31 @@ main {
 footer {
   padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
   background-color: var(--surface-1);
-  border-top: 3px solid var(--text-0);
+  border-top: 2px solid var(--text-0);
   font-size: var(--token-size-00);
 }
 
 /**
  * LINKS
  */
+
 a:not([class]) {
-  transition: all 200ms;
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--text-2);
+  background-image: linear-gradient(var(--primary), var(--primary));
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+  text-decoration: 1px solid var(--surface-2);
 }
 
-a:hover,
-a:visited:hover,
-a:focus {
+a:not([class]):hover {
+  background-size: 100% 0.1em;
+}
+
+p a,
+p a:visited {
   color: var(--primary);
-  text-decoration-color: var(--primary);
 }
 
 /**

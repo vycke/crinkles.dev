@@ -2,8 +2,8 @@
   --contrast-bg: var(--surface-1);
 
   padding: var(--token-size-4) 0;
-  border-top: 3px solid var(--text-0);
-  border-bottom: 3px solid var(--text-0);
+  border-top: 2px solid var(--text-0);
+  border-bottom: 2px solid var(--text-0);
 }
 
 .banner .content {

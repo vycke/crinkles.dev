@@ -10,6 +10,9 @@
 .text-2 {
   color: var(--text-2);
 }
+.surface-2 {
+  color: var(--surface-2);
+}
 .text-primary {
   color: var(--primary);
 }

@@ -26,3 +26,7 @@
 .relative {
   position: relative;
 }
+
+.normal {
+  font-weight: 400;
+}

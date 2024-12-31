@@ -10,15 +10,20 @@
   gap: none;
 }
 
-.pagination > *:last-child {
+.pagination > * a {
+  align-self: flex-start;
+}
+
+.pagination > *:last-child a {
+  align-self: flex-end;
   text-align: right;
 }
 
-.pagination a {
-  font-size: var(--token-size-1);
-  font-weight: bold;
+.pagination > *:last-child .subtitle {
+  align-self: flex-end;
 }
+
 .pagination .subtitle {
-  text-transform: uppercase;
+  margin: 0 var(--token-size-0);
   color: var(--text-2);
 }

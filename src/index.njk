@@ -27,23 +27,19 @@ layout: base
         <p>I work for Finaps a (small-ish) software agency based in Amsterdam, the Netherlands. Here I lead a team of ~15 software engineers.</p>
       </section>
     </div>
-    <div class="flex --column">
+    <aside class="flex --column">
       {% include "svg/profile.svg" %}
-    </div>
+    </aside>
   </div>
 </section>
 
 <main class="center --threshold-5 | mb-4">
   <div class="sidebar --right --threshold-0 --gap-5 | --start">
-    <div class="flex --column --stretch --gap-00">
-      <h2 class="text-1"><a href="/writing" class="redirect">Posts</a></h2>
+    <div class="flex --column --stretch --gap-00 | maxw-3">
+      <h2 class="text-2">Here's my most recent posts</h2>
       {% set posts =  collections.posts | head(3) %}
       {% include "components/post-list.njk" %}
+      <a href="/writing" class="redirect | self-end">Read more</a>
     </div>
-    <aside class="flex --column --gap-000" aria-label="Top tags on the site">
-      <span class="text-2">Filter by tag..</span>
-      {% set tags = collections.posts | getAllTags %}
-      {% include "components/tag-list.njk" %}
-    </aside>
   </div>
 </main>

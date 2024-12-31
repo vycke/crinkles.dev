@@ -26,6 +26,8 @@
 .archive a,
 .archive a:visited {
   color: var(--contrast-color);
+  text-decoration: underline;
+  text-decoration-color: var(--contrast-color);
 }
 
 .info {

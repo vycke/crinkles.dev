@@ -8,14 +8,16 @@
 .redirect,
 .redirect:active {
   transition: all 0.25s;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25em;
   padding: 0;
-  margin-right: var(--token-size-1);
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .redirect::after {
-  height: 0.7em;
+  height: 1em;
   aspect-ratio: 4 / 5;
   display: inline-block;
 
@@ -27,11 +29,24 @@
   mask-size: cover;
 
   transition: all 0.25s;
-  position: absolute;
-  right: -0.95em;
-  top: 0.275em;
+}
+
+.redirect:hover {
+  color: var(--primary);
 }
 
 .redirect:hover::after {
-  right: -1.25em;
+  margin-left: 0.5em;
+}
+
+.redirect.reverse {
+  flex-direction: row-reverse;
+}
+
+.redirect.reverse::after {
+  transform: rotate(180deg);
+}
+.redirect.reverse:hover::after {
+  margin-right: 0.5rem;
+  margin-left: 0;
 }

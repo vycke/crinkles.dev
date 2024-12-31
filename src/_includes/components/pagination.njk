@@ -1,14 +1,14 @@
 <aside class="pagination | repel switcher --threshold-3 --gap-1">
   {% if newer %}
   <div class="--start">
-    {% if newer.data.title %}<span class="subtitle">← Newer</span>{% endif %}
-    <a href="{{ newer.url | url }}">{{ newer.data.title or "← Newer" }}</a>
+    {% if newer.data.title %}<span class="subtitle">Newer</span>{% endif %}
+    <a href="{{ newer.url | url }}" class="redirect reverse">{{ newer.data.title or "Newer" }}</a>
   </div>
   {% endif %}
   {% if older %}
   <div class="--end">
-    {% if older.data.title %}<span class="subtitle">Older</span>{% endif %}
-    <a href="{{ older.url | url }}">{{ older.data.title or "Older →"}}</a>
-  </div>
+      {% if older.data.title %}<span class="subtitle">Older</span>{% endif %}
+      <a href="{{ older.url | url }}" class="redirect">{{ older.data.title or "Older" }}</a>
+    </div>
   {% endif %}
 </aside>

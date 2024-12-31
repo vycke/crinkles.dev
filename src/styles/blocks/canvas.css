@@ -5,12 +5,18 @@
   height: 100vh;
   background: linear-gradient(
     var(--surface-0),
-    #90817d,
-    #90817d,
+    var(--surface-2),
+    var(--surface-2),
     var(--surface-0)
   );
-  opacity: 0.1;
+  opacity: 0.15;
   mask-image: url("../pattern.svg");
   mask-size: 16px;
   mask-repeat: repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+  .canvas {
+    opacity: 0.25;
+  }
 }

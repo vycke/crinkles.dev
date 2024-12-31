@@ -6,7 +6,7 @@
 
 .info,
 .archive {
-  --contrast-bg: var(--token-brand-2);
+  --contrast-bg: var(--surface-1);
   --contrast-color: lch(
     from var(--contrast-bg) calc((49.44 - l) * infinity) 0 0
   );
@@ -17,7 +17,7 @@
   background-color: var(--contrast-bg);
   font-size: var(--token-size-00);
   position: relative;
-  border: 1px solid var(--text-0);
+  border: 1px solid var(--primary);
   color: var(--contrast-color);
 }
 
@@ -28,10 +28,6 @@
   color: var(--contrast-color);
   text-decoration: underline;
   text-decoration-color: var(--contrast-color);
-}
-
-.info {
-  --border-color: var(--primary);
 }
 
 .archive {
@@ -45,7 +41,7 @@
   top: -0.85em;
   font-size: var(--token-size-00);
   border-radius: var(--token-radius-0);
-  background-color: var(--text-0);
+  background-color: var(--primary);
   color: var(--surface-0);
   padding: 0px 6px;
 }

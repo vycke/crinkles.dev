@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<section class="title-section | center --threshold-5 | mb-3">
+<section class="banner | center">
   <h1 class="flex --column --start">
     <span class="size-0 text-primary normal italic">&lt;web-tinkerer&gt;</span>
     <span class="ml-1">Kevin Pennekamp</span>
@@ -13,9 +13,9 @@ layout: base
 <section class="banner | center --threshold-5 | mb-4">
   <div class="sidebar --threshold-0 --right --gap-3">
 
-    <div class="card | flex --column - --stretch --gap-2">
+    <div class="flex --column - --stretch --gap-2">
       <section class="info-section | sidebar --left --gap-000 | maxw-3">
-        <span class="bold text-primary">Who.</span>
+        <span class="text-primary">Who.</span>
         <div class="flex --column --gap-000 --start">
           <p>I am a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.
            I enjoy <a href="/writing">writing</a> and working on <a href="https://feo.crinkles.dev">Feo.css</a>.
@@ -23,7 +23,7 @@ layout: base
         </div>
       </section>
       <section class="info-section | sidebar --left --gap-000 | maxw-3">
-        <span class="bold text-primary">Work.</span>
+        <span class="text-primary">Work.</span>
         <p>I work for Finaps a (small-ish) software agency based in Amsterdam, the Netherlands. Here I lead a team of ~15 software engineers.</p>
       </section>
     </div>
@@ -34,12 +34,10 @@ layout: base
 </section>
 
 <main class="center --threshold-5 | mb-4">
-  <div class="sidebar --right --threshold-0 --gap-5 | --start">
-    <div class="flex --column --stretch --gap-00 | maxw-3">
-      <h2 class="text-2">Here's my most recent posts</h2>
-      {% set posts =  collections.posts | head(3) %}
-      {% include "components/post-list.njk" %}
-      <a href="/writing" class="redirect | self-end">Read more</a>
-    </div>
+  <div class="flex --column --stretch --gap-00 | maxw-3">
+    <h2 class="text-2">Here's my most recent posts</h2>
+    {% set posts =  collections.posts | head(3) %}
+    {% include "components/post-list.njk" %}
+    <a href="/writing" class="redirect | self-end">Read more</a>
   </div>
 </main>

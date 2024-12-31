@@ -2,11 +2,11 @@
 layout: base
 ---
 
-<section class="banner | contrast | center | mb-4">
-  <div class="card | center maxw-{{ width or 5 }} flex --column --start">
-    <span class="size-0 text-primary normal italic lowercase">&lt;{{ description }}&gt;</span>
+<section class="banner | center --threshold-{{ width or 5 }}">
+  <div class="flex --column --start">
+    <span class="size-0 text-primary italic normal lowercase">&lt;{{ description }}&gt;</span>
     <h1 class="ml-1">{{ title }}</h1>
-    <span class="size-0 text-primary normal italic lowercase">&lt;/{{ description }}&gt;</span>
+    <span class="size-0 text-primary italic normal lowercase">&lt;/{{ description }}&gt;</span>
   </div>
 </section>
 

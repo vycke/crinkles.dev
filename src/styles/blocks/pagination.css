@@ -24,6 +24,6 @@
 }
 
 .pagination .subtitle {
-  margin: 0 var(--token-size-0);
+  margin: 0 calc(var(--token-size-0) + 0.25em);
   color: var(--text-2);
 }

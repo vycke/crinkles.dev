@@ -2,13 +2,13 @@
   {% if newer %}
   <div class="--start">
     {% if newer.data.title %}<span class="subtitle">Newer</span>{% endif %}
-    <a href="{{ newer.url | url }}" class="redirect reverse">{{ newer.data.title or "Newer" }}</a>
+    <a href="{{ newer.url | url }}" class="redirect reverse">{{ newer.data.title or "Newer posts" }}</a>
   </div>
   {% endif %}
   {% if older %}
   <div class="--end">
       {% if older.data.title %}<span class="subtitle">Older</span>{% endif %}
-      <a href="{{ older.url | url }}" class="redirect">{{ older.data.title or "Older" }}</a>
+      <a href="{{ older.url | url }}" class="redirect">{{ older.data.title or "Older posts" }}</a>
     </div>
   {% endif %}
 </aside>

@@ -17,7 +17,7 @@
   background-color: var(--contrast-bg);
   font-size: var(--token-size-00);
   position: relative;
-  border: 2px solid var(--text-0);
+  border: 1px solid var(--text-0);
   color: var(--contrast-color);
 }
 
@@ -33,7 +33,7 @@
 .archive::before {
   position: absolute;
   display: block;
-  top: -0.9em;
+  top: -0.85em;
   font-size: var(--token-size-00);
   border-radius: var(--token-radius-0);
   background-color: var(--text-0);

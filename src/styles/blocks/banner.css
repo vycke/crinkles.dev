@@ -1,17 +1,25 @@
 .banner {
-  --contrast-bg: var(--surface-1);
-
-  padding: var(--token-size-3) 0;
-  border-top: 2px solid var(--text-0);
-  border-bottom: 2px solid var(--text-0);
-}
-
-.banner .content {
   padding: 0 var(--token-size-2);
 }
 
-@media screen and (max-width: 751px) {
+.banner .content {
+  background-color: var(--surface-1);
+  padding: var(--token-size-2);
+  border-radius: var(--token-radius-1);
+  border: 1px solid var(--text-0);
+  box-shadow: var(--token-elevation);
+}
+
+@media only screen and (max-width: 780px) {
   .banner {
-    padding: var(--token-size-4) var(--token-size-2);
+    padding: 0;
+  }
+
+  .banner .content {
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    border-top: 1px solid var(--text-0);
+    border-bottom: 1px solid var(--text-0);
   }
 }

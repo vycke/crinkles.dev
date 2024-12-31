@@ -21,6 +21,13 @@
   color: var(--contrast-color);
 }
 
+.info a,
+.info a:visited,
+.archive a,
+.archive a:visited {
+  color: var(--contrast-color);
+}
+
 .info {
   --border-color: var(--primary);
 }

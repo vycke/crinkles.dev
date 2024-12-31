@@ -28,6 +28,7 @@
 @import "blocks/canvas.css" layer(blocks);
 @import "blocks/title-section.css" layer(blocks);
 @import "blocks/button.css" layer(blocks);
+@import "blocks/card.css" layer(blocks);
 
 /** Blog specific CSS for examples */
 @import "blog/dock-hover.css" layer(blog);

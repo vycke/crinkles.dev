@@ -1,10 +1,6 @@
-.banner {
-  padding: 0 var(--token-size-2);
-}
-
-.banner .content {
+.card {
   background-color: var(--surface-1);
-  padding: var(--token-size-2);
+  padding: var(--token-size-1);
   border-radius: var(--token-radius-1);
   border: 1px solid var(--text-0);
   box-shadow: var(--token-elevation);

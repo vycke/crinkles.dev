@@ -17,7 +17,8 @@
   background-color: var(--contrast-bg);
   font-size: var(--token-size-00);
   position: relative;
-  border: 1px solid var(--primary);
+  border-left: 1px solid var(--primary);
+  border-top: 1px solid var(--primary);
   color: var(--contrast-color);
 }
 

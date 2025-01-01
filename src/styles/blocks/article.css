@@ -75,16 +75,18 @@ article :where(img, pre, .info, .archive) {
 
 /** discard rounded corners on full width */
 @container post (inline-size < 47rem) {
-  article :where(img, pre, .info, .archive, blockquote) {
+  article :where(img, pre, blockquote) {
     border-radius: 0 !important; /* overwrite specificity */
   }
 
-  article pre,
-  article .info,
-  article .archive {
+  article pre {
     border-left: 0px;
     border-right: 0px;
     box-shadow: none;
+  }
+
+  article :where(.info, .archive) {
+    width: 100%;
   }
 }
 
@@ -129,6 +131,7 @@ article blockquote cite {
 /** INLINE CODE */
 article :not(pre) > code {
   color: var(--primary);
+  padding-left: var(--token-size-0);
 }
 
 /**
@@ -162,5 +165,11 @@ ol:not([class]) {
 @media only screen and (max-width: 670px) {
   article {
     font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  article {
+    padding-top: var(--token-size-0);
   }
 }

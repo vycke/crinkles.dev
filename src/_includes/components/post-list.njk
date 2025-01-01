@@ -2,11 +2,11 @@
 <ul role="list" class="post-list | hover-group | flex --column --gap-3 --start">
   {% for post in posts %}
     <li class="flex --column --gap-none --start | click-area" role="listitem">
-      <span class="size-0 bold serif">
+      <h3 class="size-1 bold text-primary">
         <a href="{{ post.page.url }}">
           {{ post.data.title }}
         </a>
-      </span>
+      </h3>
       <span class="italic text-2 size-00 | flex --row | mb-000">
         <time class="mr-00" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
         {# {% if latest.data.title === post.data.title %} <span class="flag">new! 🤯</span> {% endif %} #}

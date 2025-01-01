@@ -20,7 +20,7 @@
   --token-radius-1: 0.5rem;
 
   --token-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075);
+    0 3px 3px hsl(0deg 0% 0% / 0.075), 0 6px 6px hsl(0deg 0% 0% / 0.075);
   --token-elevation: 4px 4px 0px 0px var(--text-0);
 }
 

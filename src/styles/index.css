@@ -15,7 +15,6 @@
 /** blocks */
 @import "blocks/codeblock.css" layer(blocks);
 @import "blocks/flag.css" layer(blocks);
-@import "blocks/banner.css" layer(blocks);
 @import "blocks/info-box.css" layer(blocks);
 @import "blocks/article.css" layer(blocks);
 @import "blocks/pagination.css" layer(blocks);
@@ -26,8 +25,8 @@
 @import "blocks/linklist.css" layer(blocks);
 @import "blocks/info-section.css" layer(blocks);
 @import "blocks/canvas.css" layer(blocks);
-@import "blocks/button.css" layer(blocks);
 @import "blocks/card.css" layer(blocks);
+@import "blocks/page-section.css" layer(blocks);
 
 /** Blog specific CSS for examples */
 @import "blog/dock-hover.css" layer(blog);

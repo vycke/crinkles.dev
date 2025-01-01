@@ -47,7 +47,8 @@ a:not([class]) {
   text-decoration: 1px solid var(--surface-2);
 }
 
-a:not([class]):hover {
+a:not([class]):hover,
+a[aria-current="page"] {
   background-size: 100% 0.1em;
 }
 
@@ -62,6 +63,7 @@ p a:visited {
 :where(h1, h2, h3) {
   font-family: var(--sans-serif);
   line-height: 1.25;
+  text-wrap: revert;
 }
 h1 {
   font-size: var(--token-size-2);

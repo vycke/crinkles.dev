@@ -13,8 +13,8 @@ layout: base
             </div>
         </div>
         {{ content | safe }}
-        <a href="{{ link }}" alt="{{ alt }}" target="_blank" class="button-shape">Check it out</a>
-    </article> 
+        <a href="{{ link }}" alt="{{ alt }}" target="_blank" class="redirect">Check it out</a>
+    </article>
 </main>
 
 {% set older = collections.posts | getNextCollectionItem(page) %}

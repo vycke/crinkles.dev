@@ -1,13 +1,13 @@
-<header class="center --threshold-5 | repel">
+<header class="page-section | repel">
   <a href="/" aria-label="Logo that redirects to the homepage" class="logo-link">
     {% include "svg/logo.svg" %}
   </a>
 
   <nav aria-label="Main site navigation">
     <ul class="linklist | hover-group | cluster --gap-1" role="list">
-      <li><a href="/writing">blog</a></li>
-      <li><a href="/work">work</a></li>
-      <li><a href="/about">about</a></li>
+      <li><a href="/" {% if page.url == '/' %} aria-current="page"{% endif %}>home</a></li>
+      <li><a href="/writing" {% if page.url.includes('/writing/') %}aria-current="page"{% endif %}>blog</a></li>
+      <li><a href="/about" {% if page.url == '/about/' %}aria-current="page"{% endif %}>about</a></li>
     </ul>
   </nav>
 </header>

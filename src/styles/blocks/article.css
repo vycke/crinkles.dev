@@ -158,3 +158,9 @@ ul:not([class]) li {
 ol:not([class]) {
   list-style: decimal outside;
 }
+
+@media only screen and (max-width: 670px) {
+  article {
+    font-size: 1.1em;
+  }
+}

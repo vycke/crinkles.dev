@@ -2,15 +2,13 @@
 layout: base
 ---
 
-<section class="banner | center">
-  <div class="flex --column --start">
-      <span class="size-0 text-primary normal italic lowercase">&lt;{{ description }}&gt;</span>
-      <h1 class="ml-1">{{ title }}</h1>
-      <span class="size-0 text-primary normal italic lowercase">&lt;/{{ description }}&gt;</span>
-  </div>
+<section class="page-section | flex --column --start">
+    <span class="size-0 text-primary normal italic lowercase">&lt;{{ description }}&gt;</span>
+    <h1 class="ml-1">{{ title }}</h1>
+    <span class="size-0 text-primary normal italic lowercase">&lt;/{{ description }}&gt;</span>
 </section>
 
-<main class="center --threshold-{{ width or 5 }}">
+<main class="page-section">
   {{ content | safe }}
 </main>
 

@@ -1,0 +1,23 @@
+header {
+  padding: var(--token-size-2);
+}
+
+.logo:hover {
+  animation: wiggle 0.6s;
+  animation-iteration-count: 1;
+}
+
+header nav a {
+  background-image: linear-gradient(var(--primary), var(--primary));
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.15s ease-in-out;
+  text-decoration: 1px solid var(--surface-2);
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+  background-size: 100% 0.1em;
+}

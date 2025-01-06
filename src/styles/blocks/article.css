@@ -131,7 +131,6 @@ article blockquote cite {
 /** INLINE CODE */
 article :not(pre) > code {
   color: var(--primary);
-  padding-left: var(--token-size-0);
 }
 
 /**

@@ -14,6 +14,7 @@
   height: 75px;
   border-radius: 4px;
   background-color: var(--primary);
+  box-shadow: var(--token-elevation);
   transition: transform 400ms;
 }
 

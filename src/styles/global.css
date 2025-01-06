@@ -7,15 +7,6 @@ body {
   position: relative;
 }
 
-header {
-  padding: var(--token-size-2);
-}
-
-.logo:hover {
-  animation: wiggle 0.6s;
-  animation-iteration-count: 1;
-}
-
 main {
   padding: 0 var(--token-size-2);
   flex-grow: 1;
@@ -36,25 +27,16 @@ footer {
 /**
  * LINKS
  */
-
-a:not([class]) {
-  background-image: linear-gradient(var(--primary), var(--primary));
-  background-size: 0% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 0%;
-  background-repeat: no-repeat;
-  transition: background-size 0.15s ease-in-out;
-  text-decoration: 1px solid var(--surface-2);
+a,
+a:visited {
+  text-decoration-color: var(--primary);
+  transition: all 200ms;
 }
 
-a:not([class]):hover,
-a[aria-current="page"] {
-  background-size: 100% 0.1em;
-}
-
-p a,
-p a:visited {
-  color: var(--primary);
+a:hover,
+a:visited:hover {
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
 }
 
 /**
@@ -73,8 +55,4 @@ h2 {
 }
 h3 {
   font-size: var(--token-size-0);
-}
-
-:where(h1, h2, h3) a:not([class]):not(:hover):not(:focus) {
-  text-decoration-color: transparent;
 }

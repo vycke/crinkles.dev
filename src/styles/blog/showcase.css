@@ -1,0 +1,78 @@
+.showcase,
+.showcase--mobile {
+  display: grid;
+  width: 100%;
+  height: 200px;
+  gap: 0.5rem;
+  grid-template-areas: "a";
+}
+
+.showcase--mobile {
+  grid-template-areas:
+    "a a"
+    "b c";
+}
+
+.showcase > *,
+.showcase--mobile > * {
+  background: var(--primary);
+  box-shadow: var(--token-elevation);
+  border-radius: var(--token-radius-0);
+  width: 100%;
+  height: 100%;
+}
+
+/* assigning the named template areas */
+.showcase__box:nth-child(1) {
+  grid-area: a;
+}
+
+.showcase__box:nth-child(2) {
+  grid-area: b;
+}
+
+.showcase__box:nth-child(3) {
+  grid-area: c;
+}
+
+.showcase__box:nth-child(4) {
+  grid-area: d;
+}
+
+.showcase__box:nth-child(5) {
+  grid-area: e;
+}
+
+/* Hiding overflow of items */
+.showcase__box:nth-child(n + 6) {
+  display: none;
+}
+
+.showcase--mobile > .showcase__box:nth-child(n + 4) {
+  display: none;
+}
+
+/* Handle 2 descendants */
+.showcase:has(> *:nth-child(n + 2)) {
+  grid-template-areas: "a b";
+}
+
+/* Handle 3 */
+.showcase:has(> *:nth-child(n + 3)) {
+  grid-template-areas:
+    "a a b"
+    "a a c";
+}
+
+/* Handle 4 or more */
+.showcase:has(> *:nth-child(n + 4)) {
+  grid-template-areas:
+    "a a b d"
+    "a a c e";
+}
+
+@media only screen and (max-width: 500px) {
+  .showcase {
+    height: 120px;
+  }
+}

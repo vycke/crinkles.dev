@@ -1,10 +1,8 @@
-const anchor = require("markdown-it-anchor");
-const container = require("markdown-it-container");
+import anchor from "markdown-it-anchor";
+import container from "markdown-it-container";
 
-function md(mdit) {
+export function md(mdit) {
   mdit.use(container, "info").use(anchor, {
     permalink: anchor.permalink.ariaHidden({ symbol: "#" }),
   });
 }
-
-module.exports = { md };

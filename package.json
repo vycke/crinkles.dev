@@ -1,6 +1,7 @@
 {
   "name": "crinkles.dev",
-  "version": "4.0.0",
+  "version": "4.1.0",
+  "type": "module",
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
@@ -17,8 +18,8 @@
   "author": "Kevin Pennekamp<github@crinkles.dev>",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "husky": "^8.0.3",
     "lightningcss-cli": "^1.18.0",

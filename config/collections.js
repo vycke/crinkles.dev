@@ -1,7 +1,7 @@
-const { POSTS_PATH } = require("./constants");
+import { POSTS_PATH } from "./constants.js";
 
 // collection for all posts, incl. drafts option
-function posts(collection) {
+export function posts(collection) {
   return collection
     .getFilteredByGlob(POSTS_PATH)
     .filter((post) => !post.data.archived)
@@ -12,5 +12,3 @@ function posts(collection) {
       return Adate < Bdate ? 1 : -1;
     });
 }
-
-module.exports = { posts };

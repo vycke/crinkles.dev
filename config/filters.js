@@ -1,5 +1,5 @@
 // transforms a data string to a human readable format
-function readableDate(date) {
+export function readableDate(date) {
   return new Date(date).toLocaleDateString("en-us", {
     year: "numeric",
     month: "long",
@@ -8,16 +8,16 @@ function readableDate(date) {
 }
 
 // head of the list
-function head(list, n) {
+export function head(list, n) {
   return list.slice(0, n);
 }
 
-function index(list, n = 1) {
+export function index(list, n = 1) {
   return list[n];
 }
 
 // Get all tags, optionally with counts
-function getAllTags(collection, count = false) {
+export function getAllTags(collection, count = false) {
   let tags = {};
   for (let item of collection) {
     (item.data.tags || []).forEach((tag) => {
@@ -32,15 +32,7 @@ function getAllTags(collection, count = false) {
     .map((tag) => (count ? tag : tag[0]));
 }
 
-function objectify(str, key) {
+export function objectify(str, key) {
   if (!str) return null;
   return { [key]: str };
 }
-
-module.exports = {
-  readableDate,
-  head,
-  objectify,
-  getAllTags,
-  index,
-};

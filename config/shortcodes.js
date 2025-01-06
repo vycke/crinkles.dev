@@ -1,5 +1,3 @@
-function year() {
+export function year() {
   return `${new Date().getFullYear()}`;
 }
-
-module.exports = { year };

@@ -1,13 +1,13 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 // Own configuration
-const { TEMPLATE_ENGINE } = require("./config/constants.js");
-const filters = require("./config/filters.js");
-const collections = require("./config/collections.js");
-const libraries = require("./config/libraries");
-const shortcodes = require("./config/shortcodes");
+import * as filters from "./config/filters.js";
+import * as collections from "./config/collections.js";
+import * as libraries from "./config/libraries.js";
+import * as shortcodes from "./config/shortcodes.js";
+import { TEMPLATE_ENGINE } from "./config/constants.js";
 
-module.exports = (config) => {
+export default async function (config) {
   // Handling assets (images, fonts, etc.)
   config.addPassthroughCopy({ "./public/": "/" });
   config.addPlugin(pluginRss);
@@ -42,4 +42,4 @@ module.exports = (config) => {
       output: "_site",
     },
   };
-};
+}

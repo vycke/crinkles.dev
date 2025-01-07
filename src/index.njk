@@ -30,7 +30,7 @@ layout: base
 
 <main class="page-section">
   <div class="flex --column --center --gap-00 | maxw-3 center">
-    <h2>Here's my most recent posts</h2>
+    <h2 class="uppercase">Here's my most recent posts</h2>
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
     <a href="/writing" class="size-00 | redirect | self-end">Read more</a>

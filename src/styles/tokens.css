@@ -50,7 +50,7 @@
     --surface-2: var(--token-neutral-2);
 
     --primary: var(--token-brand-0);
-    --accent: var(--token-brand-2);
+    --accent: var(--token-brand-1);
     --code-primary: var(--token-brand-0);
     --code-secondary: var(--token-brand-1);
   }

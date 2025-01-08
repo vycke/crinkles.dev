@@ -1,0 +1,5 @@
+.stripe {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  height: 5px;
+  width: 100%;
+}

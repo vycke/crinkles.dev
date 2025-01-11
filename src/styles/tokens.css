@@ -17,6 +17,7 @@
    */
   --token-radius-0: 0.25rem;
   --token-radius-1: 0.5rem;
+  --token-radius-2: 0.75rem;
 
   --token-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 3px 3px hsl(0deg 0% 0% / 0.075), 0 6px 6px hsl(0deg 0% 0% / 0.075);

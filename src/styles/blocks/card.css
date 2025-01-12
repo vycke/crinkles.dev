@@ -8,7 +8,7 @@
 
 .card::after {
   --bgPosition: calc(var(--bgSize) / 0.68);
-  --offset: var(--token-size-000);
+  --offset: 10px;
   content: "";
 
   position: absolute;
@@ -22,11 +22,14 @@
   z-index: -1;
   border-radius: 1rem;
 
-  background: repeating-linear-gradient(
+  /* striped background */
+  /* background: repeating-linear-gradient(
     -45deg,
     var(--accent),
     var(--accent) 6px,
     var(--surface-0) 6px,
     var(--surface-0) 12px
-  );
+  ); */
+  /* gradient background */
+  background: linear-gradient(45deg, var(--primary), var(--accent));
 }

@@ -48,7 +48,7 @@ a:visited:hover {
   text-wrap: revert;
 }
 h1 {
-  font-size: var(--token-size-2);
+  font-size: var(--token-size-3);
 }
 h2 {
   font-size: var(--token-size-1);

@@ -1,11 +1,11 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 // Own configuration
-import * as filters from "./config/filters.js";
-import * as collections from "./config/collections.js";
-import * as libraries from "./config/libraries.js";
-import * as shortcodes from "./config/shortcodes.js";
-import { TEMPLATE_ENGINE } from "./config/constants.js";
+import * as filters from "./src/_config/filters.js";
+import * as collections from "./src/_config/collections.js";
+import * as libraries from "./src/_config/libraries.js";
+import * as shortcodes from "./src/_config/shortcodes.js";
+import { TEMPLATE_ENGINE } from "./src/_config/constants.js";
 
 export default async function (config) {
   // Handling assets (images, fonts, etc.)

@@ -3,16 +3,16 @@ layout: base
 ---
 
 <section class="page-section">
-    <span class="size-0 text-primary italic normal lowercase">&lt;web-tinkerer&gt;&lt;/web-tinkerer&gt;</span>
-    <h1>Kevin Pennekamp</h1>
+    <h1>Hello, I'm Kevin Pennekamp</h1>
+    <span class="size-0 text-primary">A software engineer specialised in the web platform.</span>
 </section>
 
 <section class="page-section | sidebar --threshold-0 --right --gap-3">
-    <div class="card box | flex --column - --stretch --gap-2">
+  <div class="card box | flex --column - --stretch --gap-2">
       <section class="info-section | sidebar --left --gap-000 | maxw-3">
         <span class="text-primary">Who.</span>
         <div class="flex --column --gap-000 --start">
-          <p>I am a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.
+          <p>A Dutch software engineer, specialised in the web platform. In particular <span class="flag">CSS</span>.
            I enjoy <a href="/writing">writing</a> and working on <a href="https://feo.crinkles.dev">Feo.css</a>.
            This is my digital playground & corner of the internet.</p>
         </div>
@@ -27,11 +27,11 @@ layout: base
     </aside>
 </section>
 
-<main class="page-section">
-  <div class="flex --column --center --gap-00 | maxw-3 center">
-    <h2 class="uppercase">Here's my most recent posts</h2>
+<section class="page-section | sidebar --threshold-0 --left --gap-3 | mt-3">
+  <h2 class="size-3 text-center">Recent posts</h2>
+  <div class="flex --column --center --gap-00">
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
     <a href="/writing" class="size-00 | redirect | self-end">Read more</a>
   </div>
-</main>
+</section>

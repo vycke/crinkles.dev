@@ -14,9 +14,6 @@ a.tag {
   border-radius: var(--token-radius-1);
   transition: all 300ms;
   text-decoration-color: var(--primary);
-  color: lch(
-    from var(--contrast-bg, var(--surface-0)) calc((49.44 - l) * infinity) 0 0
-  );
   font-size: var(--token-size-00);
   line-height: 1.4;
 }

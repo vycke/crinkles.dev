@@ -6,29 +6,22 @@
 
 .info,
 .archive {
-  --contrast-bg: var(--surface-1);
-  --contrast-color: lch(
-    from var(--contrast-bg) calc((49.44 - l) * infinity) 0 0
-  );
-
   box-shadow: var(--token-elevation);
   border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
-  background-color: var(--contrast-bg);
+  background-color: var(--surface-1);
   font-size: var(--token-size-00);
   position: relative;
   border-left: 1px solid var(--primary);
   border-top: 1px solid var(--primary);
-  color: var(--contrast-color);
 }
 
 .info a,
 .info a:visited,
 .archive a,
 .archive a:visited {
-  color: var(--contrast-color);
   text-decoration: underline;
-  text-decoration-color: var(--contrast-color);
+  text-decoration-color: var(--text-0);
 }
 
 .archive {

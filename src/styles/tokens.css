@@ -9,8 +9,9 @@
   /**
    * FONT FAMILY
    */
-  --sans-serif: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-    source-sans-pro, sans-serif;
+  --sans-serif:
+    Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro,
+    sans-serif;
 
   /**
    * RADIUS & ELEVATION
@@ -19,8 +20,9 @@
   --token-radius-1: 0.5rem;
   --token-radius-2: 0.75rem;
 
-  --token-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 3px 3px hsl(0deg 0% 0% / 0.075), 0 6px 6px hsl(0deg 0% 0% / 0.075);
+  --token-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075), 0 3px 3px hsl(0deg 0% 0% / 0.075),
+    0 6px 6px hsl(0deg 0% 0% / 0.075);
   --token-elevation: 4px 4px 0px 0px var(--text-0);
 }
 

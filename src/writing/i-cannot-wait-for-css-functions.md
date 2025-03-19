@@ -7,7 +7,7 @@ tags:
   - csswg
 layout: post
 description: >-
-   In my quest to apply as much cool CSS tricks as possible, I encountered an issue that navigated me towards a new and exciting CSSWG draft.
+  In my quest to apply as much cool CSS tricks as possible, I encountered an issue that navigated me towards a new and exciting CSSWG draft.
 ---
 
 Some of you know by now that I am a sucker for nice CSS tricks. A few weeks back I came across another [beauty](https://bsky.app/profile/devongovett.bsky.social/post/3lcedcdj4qk2y) (or [another](https://lea.verou.me/blog/2024/contrast-color/)). In short, the snippet below automatically determines if `color` needs to be black, or white, based on the background color (set with `--contrast-bg`). I liked this trick so much, that I added the _utility class_ below to [Feo.css](https://feo.crinkles.dev/utilities/contrast/).
@@ -22,10 +22,6 @@ Some of you know by now that I am a sucker for nice CSS tricks. A few weeks back
 ## Downside of a utility class
 
 With this new trick in my toolkit, I started to clean up some of the CSS for this very site. There were a few small places where I wanted to use this new trick. One of them is the “info boxes” I place in articles. Like the one below.
-
-::: info
-Like this!
-:::
 
 But this block is automatically generated in my setup ([11ty](https://www.11ty.dev) and [markdown-it](https://github.com/markdown-it/markdown-it)). I cannot add a utility class, or any other CSS class really, to it. It only gets a `.info` class in the build-step. So the only solution is to apply the trick directly in this class. But let’s be honest, the snippet below is not an easy one to remember.
 

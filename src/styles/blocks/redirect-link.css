@@ -7,46 +7,23 @@
 
 .redirect,
 .redirect:active {
-  transition: all 0.25s;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.4em;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-.redirect::after {
-  height: 1em;
-  aspect-ratio: 4 / 5;
-  display: inline-block;
-
-  content: "";
-  background-color: var(--primary);
-  -webkit-mask: url("/ornament.svg") no-repeat 50% 50%;
-  mask: url("/ornament.svg") no-repeat 50% 50%;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-
-  transition: all 0.25s;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: var(--surface-0);
+  background: var(--primary);
+  padding: 0.5em var(--token-size-000);
+  border: 1px solid var(--text-0);
+  border-radius: var(--token-radius-1);
+  transition: 0.3s;
+  box-shadow: 4px 4px 0 0 var(--text-0);
 }
 
 .redirect:hover {
-  color: var(--primary);
-}
-
-.redirect:hover::after {
-  margin-left: 0.5em;
-}
-
-.redirect.reverse {
-  flex-direction: row-reverse;
-}
-
-.redirect.reverse::after {
-  transform: rotate(180deg);
-}
-.redirect.reverse:hover::after {
-  margin-right: 0.5rem;
-  margin-left: 0;
+  box-shadow: 0 0 0 0 var(--text-0);
+  top: 4px;
+  left: 4px;
+  color: var(--surface-0);
+  opacity: 0.8;
 }

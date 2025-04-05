@@ -27,9 +27,9 @@ layout: base
     </aside>
 </section>
 
-<section class="page-section | sidebar --threshold-0 --left --gap-3 | mt-3">
-  <h2 class="size-3 text-center">Recent posts</h2>
-  <div class="flex --column --center --gap-00">
+<section class="page-section | flex --column --gap-3 --start | mt-3">
+  <h2 class="size-3">Recent posts</h2>
+  <div class="maxw-3 flex --column --gap-00">
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
     <a href="/writing" class="size-00 | redirect | self-end">Read more</a>

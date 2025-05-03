@@ -1,5 +1,5 @@
 {% set latest = collections.posts | index(0) %}
-<ul role="list" class="post-list | hover-group | flex --column --gap-3 --start">
+<ul role="list" class="post-list | hover-group | flex --column --gap-3 --start | maxw-3">
   {% for post in posts %}
     <li class="flex --column --gap-none --start | click-area" role="listitem">
       <h3 class="size-1 bold">

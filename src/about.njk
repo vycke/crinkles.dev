@@ -4,13 +4,24 @@ width: 5
 description: about
 title: Some quick things about me
 ---
-
-<section class="sidebar --threshold-0 --right --gap-3">
+<section class="sidebar --threshold-0 --right --gap-3 | mb-3">
     <div class="card | flex --column - --stretch --gap-2">
       <section class="info-section | sidebar --left --gap-000">
           <span class="text-primary">Who.</span>
-          <p>I am a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.  I enjoy <a href="/writing">writing</a> about all the exciting new stuff I encounter about the web and software development. This is my digital playground & corner of the internet.</p>
+          <p>I am a Dutch software engineer, specialised in the web platform as a whole. In particular <span class="flag">CSS</span>.  I enjoy <a href="/writing">writing</a> about all the exciting new stuff I encounter about the web and software development.</p>
         </section>
+        <section class="info-section | sidebar --left --gap-000">
+          <span class="text-primary">Life.</span>
+          <p>Like many, I drink a lot of coffee to get throughout the day. Those two small kids of mine certainly won't help cut down on the caffeine intake. But whenever I have time and energy, and I am not working <span class="flag">Crinkles</span>, I do love to play some videogames. It is no secret that Pokemon is my favorite franchise.</p>
+        </section>
+    </div>
+    <aside class="flex --column">
+      {% include "svg/profile-coffee.svg" %}
+    </aside>
+</section>
+
+<section class="sidebar --threshold-0 --right --gap-3 | mb-3">
+    <div class="card | flex --column - --stretch --gap-2">
         <section class="info-section | sidebar --left --gap-000">
           <span class="text-primary">What.</span>
           <div class="flex --column --gap-000 --start">
@@ -27,6 +38,11 @@ title: Some quick things about me
             <li><span class="bold">Application frameworks</span>: Eleventy & SvelteKit</li>
           </ul>
         </section>
+    </div>
+</section>
+
+<section class="sidebar --threshold-0 --right --gap-3">
+    <div class="card | flex --column - --stretch --gap-2">
         <section class="info-section | sidebar --left --gap-000">
           <span class="text-primary">Where.</span>
           <p>I live in the Netherlands with my family.</p>
@@ -36,7 +52,4 @@ title: Some quick things about me
           <p>I work for Finaps a (small-ish) software agency based in Amsterdam, the Nethelands. Here I lead a team of ~15 software engineers.</p>
         </section>
     </div>
-    <aside class="flex --column">
-      {% include "svg/profile.svg" %}
-    </aside>
 </section>

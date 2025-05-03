@@ -10,8 +10,7 @@ pagination:
     - writing
 permalink: /tags/{{ tag | slugify }}/
 eleventyComputed:
-  description: tagged
-  title: “{{ tag }}”
+  title: Tagged “{{ tag }}”
 ---
 
 {% set selected = tag %}
@@ -19,7 +18,7 @@ eleventyComputed:
 <div class="sidebar --right --threshold-0 --gap-5 | --start | mb-5">
   {% set posts = collections[ tag ] | reverse or [] %}
   {% include "components/post-list.njk" %}
-  <aside class="flex --column --gap-000" aria-label="Top tags on the site">
+  <aside class="card | flex --column --gap-000" data-size="small" aria-label="Top tags on the site">
     <span class="text-2">Filter by tag..</span>
     {% set tags = collections.posts | getAllTags %}
     {% include "components/tag-list.njk" %}

@@ -1,24 +1,25 @@
 .card {
+  --border-width: 2px;
+
   background-color: var(--surface-1);
   padding: var(--token-size-1);
   position: relative;
-  border: 2px solid var(--text-0);
+  border: var(--border-width) solid var(--text-0);
   border-radius: 1rem;
   max-width: var(--token-bp-3);
 }
 
 .card::after {
-  --bgPosition: calc(var(--bgSize) / 0.68);
-  --offset: 10px;
+  --offset: 8px;
   content: "";
 
   position: absolute;
-  top: var(--offset);
-  left: var(--offset);
-  right: calc(var(--offset) * -1);
-  bottom: calc(var(--offset) * -1);
+  top: calc(var(--offset) - var(--border-width));
+  left: calc(var(--offset) - var(--border-width));
+  right: calc(var(--offset) * -1 - var(--border-width));
+  bottom: calc(var(--offset) * -1 - var(--border-width));
 
-  border: 2px solid var(--text-0);
+  border: var(--border-width) solid var(--text-0);
   background-color: var(--surface-2);
   z-index: -1;
   border-radius: 1rem;
@@ -33,4 +34,8 @@
   ); */
   /* gradient background */
   background: linear-gradient(45deg, var(--primary), var(--accent));
+}
+
+.card[data-size="small"] {
+  padding: var(--token-size-0);
 }

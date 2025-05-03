@@ -1,14 +1,10 @@
-<aside class="page-section | pagination | repel switcher --threshold-3 --gap-1">
-  {% if newer %}
-  <div class="--start">
-    {% if newer.data.title %}<span class="subtitle">Newer</span>{% endif %}
-    <a href="{{ newer.url | url }}" class="redirect reverse">{{ newer.data.title or "Newer posts" }}</a>
+<aside class="pagination">
+  <div class="newer --start click-area" data-exists="{{'true' if newer else 'false'}}">
+    {% if newer and newer.data.title %}<span class="subtitle">← Up next</span>{% endif %}
+    {% if newer %}<a href="{{ newer.url | url }}" class="bold">{{ newer.data.title or "← Newer posts" }}</a>{% endif %}
   </div>
-  {% endif %}
-  {% if older %}
-  <div class="--end">
-      {% if older.data.title %}<span class="subtitle">Older</span>{% endif %}
-      <a href="{{ older.url | url }}" class="redirect">{{ older.data.title or "Older posts" }}</a>
+  <div class="older --end click-area" data-exists="{{'true' if older else 'false'}}">
+      {% if older and older.data.title %}<span class="subtitle">The one before →</span>{% endif %}
+      {% if older %}<a href="{{ older.url | url }}" class="bold">{{ older.data.title or "Older posts →" }}</a>{% endif %}
     </div>
-  {% endif %}
 </aside>

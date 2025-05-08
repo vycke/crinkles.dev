@@ -1,5 +1,6 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import prettier from "prettier";
 // Own configuration
 import * as filters from "./src/_config/filters.js";
 import * as collections from "./src/_config/collections.js";
@@ -30,6 +31,22 @@ export default async function (config) {
   // shortcodes
   Object.keys(shortcodes).forEach((name) => {
     config.addShortcode(name, shortcodes[name]);
+  });
+
+  // Add prettier to 11ty
+  config.addTransform("prettier", function (content) {
+    if ((this.page.outputPath || "").endsWith(".html")) {
+      let prettified = prettier.format(content, {
+        bracketSameLine: true,
+        printWidth: 512,
+        parser: "html",
+        tabWidth: 2,
+      });
+      return prettified;
+    }
+
+    // If not an HTML output, return content as-is
+    return content;
   });
 
   return {

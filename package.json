@@ -5,14 +5,11 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "css:dir": "mkdir -p _site/styles",
-    "css:build": "yarn css:dir && lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/styles/index.css -o _site/styles/index.css",
-    "css:watch": "yarn css:build && onchange 'src/**/*.css' -- yarn css:build",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "start": "eleventy --serve & yarn css:watch",
-    "build": "npx @11ty/eleventy && yarn css:build",
+    "start": "eleventy --serve",
+    "build": "npx @11ty/eleventy",
     "audit": "npx @sandworm/audit@latest --fail-on='[\"*.critical\", \"*.high\"]'",
-    "format": "npx prettier --write --ignore-unknown"
+    "favicons": "node ./src/_setup/generate-favicons.js"
   },
   "keywords": [],
   "author": "Kevin Pennekamp<github@crinkles.dev>",
@@ -21,13 +18,15 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "browserslist": "^4.24.5",
     "husky": "^8.0.3",
-    "lightningcss-cli": "^1.18.0",
+    "lightningcss": "^1.29.3",
     "lint-staged": "^13.2.3",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-container": "^3.0.0",
-    "onchange": "^7.1.0",
-    "prettier": "3.5.3"
+    "prettier": "3.5.3",
+    "sharp": "^0.34.1",
+    "sharp-ico": "^0.1.5"
   },
   "browserslist": [
     "> 0.25%",

@@ -10,7 +10,7 @@
     var(--surface-0)
   );
   opacity: 0.15;
-  mask-image: url("../pattern.svg");
+  mask-image: url("../site/pattern.svg");
   mask-size: 16px;
   mask-repeat: repeat;
 }

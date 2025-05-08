@@ -2,36 +2,22 @@
 layout: base
 ---
 
-<section class="page-section">
-    <h1>Hello, I'm Kevin Pennekamp</h1>
+<section class="title-section page-section">
+
+  <div class="card">
+    <h1>Hi, I'm Kevin!</h1>
     <span class="size-0 text-primary">A software engineer specialised in the web platform.</span>
+    <p class="mt-1 | maxw-3">I enjoy in particular <span class="flag">CSS</span>, <a href="/writing">writing</a> and working on <a href="https://feo.crinkles.dev">Feo.css</a>. This is my digital playground & corner of the internet.</p>
+  </div>
+
+  <img loading="lazy" src="/site/sticker-laptop.svg" alt="Digital illustration of myself, Kevin, sitting behind a laptop.">
 </section>
 
-<section class="page-section | sidebar --threshold-0 --right --gap-3">
-  <div class="card | flex --column - --stretch --gap-2">
-      <section class="info-section | sidebar --left --gap-000 | maxw-3">
-        <span class="text-primary">Who.</span>
-        <div class="flex --column --gap-000 --start">
-          <p>A Dutch software engineer, specialised in the web platform. In particular <span class="flag">CSS</span>.
-           I enjoy <a href="/writing">writing</a> and working on <a href="https://feo.crinkles.dev">Feo.css</a>.
-           This is my digital playground & corner of the internet.</p>
-        </div>
-      </section>
-      <section class="info-section | sidebar --left --gap-000 | maxw-3">
-        <span class="text-primary">Work.</span>
-        <p>I work for Finaps a (small-ish) software agency based in Amsterdam, the Netherlands. Here I lead a team of ~15 software engineers.</p>
-      </section>
-    </div>
-    <aside class="flex --column">
-      {% include "svg/profile-laptop.svg" %}
-    </aside>
-</section>
-
-<section class="page-section | flex --column --gap-3 --start | mt-3">
+<main class="page-section | flex --column --gap-3 --start | mt-3">
   <h2 class="size-3">Recent posts</h2>
   <div class="maxw-3 flex --column --gap-00">
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
     <a href="/writing" class="size-00 | redirect | self-end">Read more</a>
   </div>
-</section>
+</main>

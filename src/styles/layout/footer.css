@@ -1,0 +1,13 @@
+footer {
+  padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
+  background-color: var(--surface-1);
+  border-top: 2px solid var(--text-0);
+  font-size: var(--token-size-00);
+}
+
+footer li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}

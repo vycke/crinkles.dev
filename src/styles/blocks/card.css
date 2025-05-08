@@ -6,7 +6,7 @@
   position: relative;
   border: var(--border-width) solid var(--text-0);
   border-radius: 1rem;
-  max-width: var(--token-bp-3);
+  max-width: var(--card-width, var(--token-bp-3));
 }
 
 .card::after {

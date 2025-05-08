@@ -1,4 +1,0 @@
-.info-section {
-  --layout-threshold: 6rem;
-  --layout-inline-size: calc(var(--token-bp-0) - 2 * var(--token-size-2));
-}

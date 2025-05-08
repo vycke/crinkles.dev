@@ -1,6 +1,7 @@
 ---
-description: Blog
-title: Stuff I write about
+title: Blog
+description: Stuff I write about
+picture: sticker-book
 layout: paginated
 width: 5
 eleventyExcludeFromCollections: true
@@ -13,8 +14,8 @@ pagination:
 <div class="sidebar --right --threshold-0 --gap-3 | --start | mb-5">
   {% include "components/post-list.njk" %}
   <aside class="flex --column --gap-1" data-size="small" aria-label="Top tags on the site">
-    {% include "svg/profile-book.svg" %}
-    <div class="card">
+    <div class="card | flex --column --gap-0">
+      <h2>Categories</h2>
       {% set tags = collections.posts | getAllTags %}
       {% include "components/tag-list.njk" %}
     </div>

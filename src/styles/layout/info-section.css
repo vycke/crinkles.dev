@@ -1,0 +1,13 @@
+.info-section {
+  width: 100%;
+  max-width: var(--token-bp-3);
+}
+
+.info-section > dd + dt {
+  margin-top: var(--token-size-2);
+}
+
+.info-section > dt {
+  font-weight: bold;
+  color: var(--primary);
+}

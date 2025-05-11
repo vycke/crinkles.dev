@@ -1,5 +1,6 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import fontAwesomePlugin from "@11ty/font-awesome";
 // Own configuration
 import * as filters from "./src/_config/filters.js";
 import * as collections from "./src/_config/collections.js";
@@ -14,6 +15,7 @@ export default async function (config) {
   config.addPassthroughCopy({ "./public/": "/" });
   config.addPlugin(pluginRss);
   config.addPlugin(syntaxHighlight);
+  config.addPlugin(fontAwesomePlugin);
 
   // filters
   Object.keys(filters).forEach((name) => {

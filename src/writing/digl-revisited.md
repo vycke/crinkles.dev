@@ -8,7 +8,7 @@ description: >-
   Updating my graph layout algorithm based on new requirements and requests from the community
 ---
 
-In July 2021 I wrote an article about an [auto-layout algorithm](/writing/auto-graph-layout-algorithm) I needed for the visual state machine editor. I published the implementation as a package called [DIGL](https://github.com/crinklesdevs/digl). I never expected it to have any success. In reality, it became my first package that got some community interaction. But with community interaction, come new use cases on how to use the package. Some examples:
+In July 2021 I wrote an article about an [auto-layout algorithm](/writing/auto-graph-layout-algorithm) I needed for the visual state machine editor. I published the implementation as a package called [DIGL](https://github.com/crinklesdev/digl). I never expected it to have any success. In reality, it became my first package that got some community interaction. But with community interaction, come new use cases on how to use the package. Some examples:
 
 - Improve the performance of complex graphs
 - Make it work for multiple disconnected graphs

@@ -64,4 +64,4 @@ Because of these actions, I am now able to put the logic of determining the corr
 
 ## Wrapping up
 
-Once again, state machines saved the day for me. Features that seem simple can become unmaintainable due to unforeseen state management issues. Whenever this happens, it often becomes a smart idea to move towards a state machine implementation. An implementation like [XState](https://xstate.js.org) or [Cogwheel](https://github.com/crinklesdevs/cogwheel) might seem daunting at first. But, you will find soon enough it helps you avoid issues in the future.
+Once again, state machines saved the day for me. Features that seem simple can become unmaintainable due to unforeseen state management issues. Whenever this happens, it often becomes a smart idea to move towards a state machine implementation. An implementation like [XState](https://xstate.js.org) or [Cogwheel](https://github.com/crinklesdev/cogwheel) might seem daunting at first. But, you will find soon enough it helps you avoid issues in the future.

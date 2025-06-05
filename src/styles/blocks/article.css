@@ -9,6 +9,16 @@ article {
   line-height: 1.6;
 }
 
+article :where(h1, h2, h3) {
+  font-family: var(--serif);
+  font-weight: bold;
+}
+
+article h1 {
+  font-weight: 900;
+  margin-bottom: var(--token-size-000);
+}
+
 /**
 * TEXT FLOW
 */

@@ -7,23 +7,32 @@
 
 .redirect,
 .redirect:active {
+  --button-bg: var(--primary);
+  --button-shadow: var(--text-0);
+  --button-text: var(--surface-0);
   position: relative;
   top: 0;
   left: 0;
   text-decoration: none;
-  color: var(--surface-0);
-  background: var(--primary);
+  color: var(--button-text);
+  background: var(--button-bg);
   padding: 0.5em var(--token-size-000);
-  border: 1px solid var(--text-0);
+  border: 1px solid var(--button-shadow);
   border-radius: var(--token-radius-1);
   transition: 0.3s;
-  box-shadow: 4px 4px 0 0 var(--text-0);
+  box-shadow: 4px 4px 0 0 var(--button-shadow);
+
+  @media (prefers-color-scheme: dark) {
+    --button-bg: var(--surface-1);
+    --button-shadow: var(--primary);
+    --button-text: var(--primary);
+  }
 }
 
 .redirect:hover {
-  box-shadow: 0 0 0 0 var(--text-0);
+  box-shadow: 0 0 0 0 var(--button-shadow);
   top: 4px;
   left: 4px;
-  color: var(--surface-0);
-  opacity: 0.8;
+  color: var(--button-text);
+  opacity: 1;
 }

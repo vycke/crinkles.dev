@@ -2,9 +2,9 @@
   /**
    * COLORS
    */
-  --token-brand-0: #fbb44e;
-  --token-brand-1: #c73d70;
-  --token-brand-2: #3e2cae;
+  --token-brand-0: #ddb17a;
+  --token-brand-1: #1c756a;
+  --token-brand-2: #c73d70;
 
   /**
    * FONT FAMILY
@@ -56,6 +56,6 @@
     --primary: var(--token-brand-0);
     --accent: var(--token-brand-1);
     --code-primary: var(--token-brand-0);
-    --code-secondary: var(--token-brand-1);
+    --code-secondary: var(--token-brand-2);
   }
 }

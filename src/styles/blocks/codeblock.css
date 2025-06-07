@@ -22,6 +22,7 @@ pre code {
 .token.tag,
 .token.keyword {
   color: var(--text-2);
+  font-weight: 300;
 }
 
 /** To overwrite the above colors */
@@ -30,14 +31,18 @@ pre code {
 }
 
 .token.attr-name,
-.token.selector,
-.token.string,
-.token.number {
+.token.selector {
   color: var(--code-primary);
 }
 
+.token.property,
 .token.function {
   color: var(--code-secondary);
+}
+
+.token.string,
+.token.number {
+  color: var(--code-tertiary);
 }
 
 .token.function,

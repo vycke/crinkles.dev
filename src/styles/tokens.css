@@ -38,11 +38,12 @@
   --accent: var(--token-brand-0);
   --code-primary: var(--token-brand-1);
   --code-secondary: var(--token-brand-2);
+  --code-tertiary: hsl(from var(--token-brand-0) h s calc(l * 0.5));
 }
 
 /**
-  * DARK THEME
-  */
+ * DARK THEME
+ */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -56,6 +57,7 @@
     --primary: var(--token-brand-0);
     --accent: var(--token-brand-1);
     --code-primary: var(--token-brand-0);
-    --code-secondary: var(--token-brand-2);
+    --code-secondary: hsl(from var(--token-brand-1) h s calc(l * 1.55));
+    --code-tertiary: hsl(from var(--token-brand-2) h s calc(l * 1.55));
   }
 }

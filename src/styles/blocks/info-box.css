@@ -10,7 +10,7 @@
   border-radius: var(--token-radius-1);
   padding: var(--token-size-0) var(--token-size-1);
   background-color: var(--surface-1);
-  font-size: var(--token-size-00);
+  font-size: 0.9em;
   position: relative;
   border-left: 1px solid var(--primary);
   border-top: 1px solid var(--primary);

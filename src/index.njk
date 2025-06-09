@@ -3,7 +3,6 @@ layout: base
 ---
 
 <section class="title-section page-section">
-
   <div class="card">
     <h1>Hi, I'm Kevin!</h1>
     <span class="size-0 text-primary">A software engineer specialised in the web platform.</span>
@@ -13,11 +12,11 @@ layout: base
   <img width="175" height="237.5" src="/site/sticker-laptop.svg" alt="Digital illustration of myself, Kevin, sitting behind a laptop.">
 </section>
 
-<main class="page-section | flex --column --gap-3 --start | mt-3">
+<secion class="page-section | flex --column --gap-3 --start | mt-3">
   <h2 class="size-3">Recent posts</h2>
   <div class="maxw-3 flex --column --gap-00">
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
     <a href="/writing" class="size-00 | redirect | self-end">Read more articles</a>
   </div>
-</main>
+</secion>

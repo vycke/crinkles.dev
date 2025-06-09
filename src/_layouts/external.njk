@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<main class="post | mb-2">
+<section class="post | mb-2">
     <article class="center">
         <div class="flex --column">
             <h1 class="text-center">{{ title }}</h1>
@@ -15,7 +15,7 @@ layout: base
         {{ content | safe }}
         <a href="{{ link }}" alt="{{ alt }}" target="_blank" class="redirect">Check it out</a>
     </article>
-</main>
+</section>
 
 {% set older = collections.posts | getNextCollectionItem(page) %}
 {% set newer = collections.posts | getPreviousCollectionItem(page) %}

@@ -30,7 +30,6 @@
 @import "blocks/linklist.css" layer(blocks);
 @import "blocks/canvas.css" layer(blocks);
 @import "blocks/card.css" layer(blocks);
-@import "blocks/icon.css" layer(blocks);
 
 /** Blog specific CSS for examples */
 @import "blog/dock-hover.css" layer(blog);

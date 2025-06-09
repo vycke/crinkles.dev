@@ -34,9 +34,11 @@
     </head>
 
     <body>
-        <div class="canvas"></div>
         {% include "partials/header.njk" %}
-        {{ content | safe }}
+        <main>
+          <div class="canvas"></div>
+          {{ content | safe }}
+        </main>
         {% include "partials/footer.njk" %}
     </body>
 </html>

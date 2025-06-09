@@ -1,8 +1,7 @@
 footer {
   padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
-  background: var(--token-brand-1);
+  background: var(--surface-1);
   font-size: var(--token-size-00);
-  color: var(--token-neutral-5);
   position: sticky;
   bottom: 0;
   left: 0;
@@ -15,18 +14,6 @@ footer li a {
   flex-direction: row;
   align-items: center;
   gap: 4px;
-}
-
-.icon {
-  color: var(--primary);
-  width: 2rem;
-  padding: 4px;
-  object-fit: contain;
-  aspect-ratio: 1 / 1;
-}
-
-footer .icon {
-  color: var(--token-neutral-4);
 }
 
 footer .title {

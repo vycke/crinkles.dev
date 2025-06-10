@@ -8,7 +8,7 @@ pre {
 }
 
 pre code {
-  padding: var(--token-size-0) var(--token-size-1);
+  padding: var(--token-size-0);
 }
 
 :not(pre) > code {
@@ -49,10 +49,4 @@ pre code {
 .token.comment,
 .token.keyword {
   font-style: italic;
-}
-
-@media only screen and (max-width: 670px) {
-  pre code {
-    padding: var(--token-size-0);
-  }
 }

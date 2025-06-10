@@ -1,5 +1,5 @@
 article {
-  --layout-threshold: 47rem;
+  --layout-threshold: calc(47rem + 2 * var(--token-size-0));
 
   container-type: inline-size;
   container-name: post;
@@ -81,7 +81,7 @@ article :where(img, pre, .info, .archive) {
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  max-width: calc(var(--layout-threshold) + 2 * var(--token-size-1));
+  max-width: var(--layout-threshold);
 }
 
 /** discard rounded corners on full width */

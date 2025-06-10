@@ -16,11 +16,11 @@ footer li a {
   gap: 4px;
 }
 
-footer .title {
-  font-family: var(--monospace);
-  font-size: var(--token-size-0);
-  line-height: 1.1;
-  font-style: italic;
-  font-weight: 600;
+footer .quote {
+  width: min(100%, var(--token-bp-2));
   opacity: 0.8;
+}
+
+footer .quote path {
+  fill: var(--primary);
 }

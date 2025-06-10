@@ -1,6 +1,9 @@
-.logo:hover {
-  animation: wiggle 0.6s;
-  animation-iteration-count: 1;
+.logo path {
+  transition: all 500ms;
+}
+
+.logo:hover path {
+  fill: var(--primary);
 }
 
 header nav a {

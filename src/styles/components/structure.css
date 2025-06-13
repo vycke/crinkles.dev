@@ -122,6 +122,7 @@ footer svg path {
 }
 
 footer .icon {
+  font-size: var(--token-size-0);
   color: var(--token-brand-2);
 }
 

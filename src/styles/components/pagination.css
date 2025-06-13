@@ -63,10 +63,13 @@
 
   .pagination .newer {
     border-right: none;
-    border-bottom: 1px solid var(--text-0);
   }
+
   .pagination .older {
     border-left: none;
-    border-top: 1px solid var(--text-0);
+  }
+
+  .pagination .newer[data-exists="true"] + .older[data-exists="true"] {
+    border-top: 2px solid var(--text-0);
   }
 }

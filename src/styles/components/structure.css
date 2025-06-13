@@ -103,6 +103,8 @@ footer {
 
 footer .signature {
   align-items: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 footer .signature svg {
@@ -133,7 +135,7 @@ footer a {
 
 @media only screen and (max-width: 628px) {
   footer .signature {
-    justify-items: center;
+    align-items: center;
   }
 
   footer .socials {

@@ -1,10 +1,10 @@
 <aside class="pagination">
   <div class="newer --start click-area" data-exists="{{'true' if newer else 'false'}}">
     {% if newer and newer.data.title %}<span class="subtitle">← Up next</span>{% endif %}
-    {% if newer %}<a href="{{ newer.url | url }}" class="bold">{{ newer.data.title or "← Newer posts" }}</a>{% endif %}
+    {% if newer %}<a href="{{ newer.url | url }}">{{ newer.data.title or "← Newer posts" }}</a>{% endif %}
   </div>
   <div class="older --end click-area" data-exists="{{'true' if older else 'false'}}">
       {% if older and older.data.title %}<span class="subtitle">The one before →</span>{% endif %}
-      {% if older %}<a href="{{ older.url | url }}" class="bold">{{ older.data.title or "Older posts →" }}</a>{% endif %}
+      {% if older %}<a href="{{ older.url | url }}">{{ older.data.title or "Older posts →" }}</a>{% endif %}
     </div>
 </aside>

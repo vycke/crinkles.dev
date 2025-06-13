@@ -11,3 +11,7 @@
   font-weight: bold;
   color: var(--primary);
 }
+
+.info-section > dd :is(a, span) {
+  font-weight: bold;
+}

@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "@11ty/font-awesome": "^1.0.0-beta.1",
-    "feo-css": "^5.4.3"
+    "feo-css": "^6.0.0-beta.0"
   }
 }

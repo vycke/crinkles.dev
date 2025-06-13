@@ -1,36 +1,30 @@
-@layer global, layout, utilities, blocks, blog;
+@layer global, layout, utilities, components, blog;
 
 /** Import feo-css */
-@import "../../node_modules/feo-css/feo.css";
-/* @import "fonts.css"; */
+@import "../../node_modules/feo-css/feo-core.min.css";
 
 /** Global styles to extend or overwrite feo.css */
 @import "tokens.css" layer(global);
 @import "global.css" layer(global);
 
-/** layout */
-@import "layout/title-section.css" layer(layout);
-@import "layout/page-section.css" layer(layout);
-@import "layout/info-section.css" layer(blocks);
-@import "layout/footer.css" layer(blocks);
-@import "layout/header.css" layer(blocks);
-
 /** utilities */
 @import "utilities/colors.css" layer(utilities);
-@import "utilities/decoration.css" layer(utilities);
 
-/** blocks */
-@import "blocks/codeblock.css" layer(blocks);
-@import "blocks/flag.css" layer(blocks);
-@import "blocks/info-box.css" layer(blocks);
-@import "blocks/article.css" layer(blocks);
-@import "blocks/pagination.css" layer(blocks);
-@import "blocks/redirect-link.css" layer(blocks);
-@import "blocks/tag.css" layer(blocks);
-@import "blocks/linklist.css" layer(blocks);
-@import "blocks/canvas.css" layer(blocks);
-@import "blocks/card.css" layer(blocks);
-@import "blocks/icon.css" layer(blocks);
+/** components */
+@import "components/article.css" layer(components);
+@import "components/structure.css" layer(components);
+@import "components/codeblock.css" layer(components);
+@import "components/pagination.css" layer(components);
+@import "components/tag.css" layer(components);
+@import "components/redirect-link.css" layer(components);
+
+@import "components/info-box.css" layer(components);
+@import "components/linklist.css" layer(components);
+@import "components/card.css" layer(components);
+@import "components/icon.css" layer(components);
+@import "components/title-section.css" layer(layout);
+@import "components/page-section.css" layer(layout);
+@import "components/info-section.css" layer(layout);
 
 /** Blog specific CSS for examples */
 @import "blog/dock-hover.css" layer(blog);

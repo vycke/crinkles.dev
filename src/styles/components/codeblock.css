@@ -12,6 +12,10 @@ pre code {
 }
 
 :not(pre) > code {
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+  word-break: break-all;
   color: var(--primary);
 }
 
@@ -19,10 +23,15 @@ pre code {
 .token.punctuation,
 .token.comment,
 .token.operator,
-.token.tag,
-.token.keyword {
+.token.tag {
   color: var(--text-2);
   font-weight: 300;
+}
+
+/** SYNTAX */
+
+.token.keyword {
+  color: var(--text-2);
 }
 
 /** To overwrite the above colors */

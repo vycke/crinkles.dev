@@ -7,9 +7,9 @@
 
 .redirect,
 .redirect:active {
-  --button-bg: var(--primary);
-  --button-shadow: var(--text-0);
-  --button-text: var(--surface-0);
+  --button-bg: var(--surface-1);
+  --button-shadow: var(--primary);
+  --button-text: var(--primary);
   position: relative;
   top: 0;
   left: 0;
@@ -17,16 +17,10 @@
   color: var(--button-text);
   background: var(--button-bg);
   padding: 0.5em var(--token-size-000);
-  border: 1px solid var(--button-shadow);
+  border: 2px solid var(--button-shadow);
   border-radius: var(--token-radius-1);
   transition: 0.3s;
   box-shadow: 4px 4px 0 0 var(--button-shadow);
-
-  @media (prefers-color-scheme: dark) {
-    --button-bg: var(--surface-1);
-    --button-shadow: var(--primary);
-    --button-text: var(--primary);
-  }
 }
 
 .redirect:hover {

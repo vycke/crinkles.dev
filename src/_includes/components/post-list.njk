@@ -1,7 +1,6 @@
-{% set latest = collections.posts | index(0) %}
-<ul role="list" class="post-list | hover-group | flex --column --gap-3 --start | maxw-3">
+<ul role="list" class="post-list | hover-group | flex --column --gap-3 | maxw-3">
   {% for post in posts %}
-    <li class="flex --column --gap-none --start | click-area" role="listitem">
+    <li class="flex --column --gap-none | click-area" role="listitem">
       <h3 class="size-1 bold">
         <a href="{{ post.page.url }}">
           {{ post.data.title }}
@@ -9,9 +8,8 @@
       </h3>
       <span class="italic text-2 size-00 | flex --row | mb-000">
         <time class="mr-00" date="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
-        {# {% if latest.data.title === post.data.title %} <span class="flag">new! 🤯</span> {% endif %} #}
-        {% if post.data.update %} <span class="flag size-00">updated!</span> {%  endif %}
-        {% if post.data.link %} <span class="flag size-00">external</span> {%  endif %}
+        {% if post.data.update %} <span class="tag size-00">updated!</span> {% endif %}
+        {% if post.data.link %} <span class="tag size-00">external</span> {% endif %}
       </span>
       <span class="text-1">{{ post.data.description }}</span>
     </li>

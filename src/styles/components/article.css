@@ -1,3 +1,4 @@
+/* Main wrapper */
 article {
   --layout-threshold: calc(47rem + 2 * var(--token-size-0));
 
@@ -5,19 +6,7 @@ article {
   container-name: post;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  line-height: 1.6;
   padding: 0 var(--token-size-0);
-}
-
-article :where(h1, h2, h3) {
-  font-family: var(--serif);
-  font-weight: bold;
-}
-
-article h1 {
-  font-weight: 900;
-  margin-bottom: var(--token-size-000);
 }
 
 /**
@@ -42,8 +31,14 @@ article h3 + p {
 /**
 * HEADERS
 */
+article h1 {
+  font-size: var(--token-size-4);
+  margin-bottom: var(--token-size-000);
+}
+
 article :where(h2, h3) {
   position: relative;
+  font-weight: 400;
   transition: color 300ms;
   outline: none;
 }
@@ -51,6 +46,7 @@ article :where(h2, h3) {
 article :where(h2 a, h3 a) {
   transition: all 300ms;
   cursor: pointer;
+  color: var(--text-2);
   font-weight: 400;
   opacity: 0.4;
   text-decoration: none;
@@ -76,6 +72,7 @@ article h2:hover a {
 /**
 * GENERAL STYLING OF ELEMENTS
 */
+
 article :where(img, pre, .info, .archive) {
   border-radius: var(--token-radius-1);
   margin-left: 50%;
@@ -175,11 +172,5 @@ ol:not([class]) {
 @media only screen and (max-width: 670px) {
   article {
     font-size: 1.1em;
-  }
-}
-
-@media only screen and (max-width: 670px) {
-  article {
-    padding-top: var(--token-size-0);
   }
 }

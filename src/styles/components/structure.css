@@ -1,0 +1,143 @@
+/**
+ * HEADER
+ */
+header .logo {
+  transition: transform 500ms;
+}
+
+header .logo path {
+  transition: all 500ms;
+}
+
+header .logo:is(:hover, :focus) {
+  animation: wiggle 0.5s;
+}
+
+header .logo:is(:hover, :focus) path {
+  fill: var(--primary);
+}
+
+header nav a {
+  background-image: linear-gradient(var(--primary), var(--primary));
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.15s ease-in-out;
+  text-decoration: 1px solid var(--surface-2);
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+  background-size: 100% 0.1em;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: skew(-10deg);
+  }
+  60% {
+    transform: skew(8deg);
+  }
+  80% {
+    transform: skew(-4deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+/**
+ * MAIN
+ */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--surface-0);
+  border-bottom: 2px solid var(--text-0);
+  width: 100%;
+  z-index: 1;
+}
+
+main:not(:has(.pagination)) {
+  padding-bottom: var(--token-size-5);
+}
+
+/* background pattern on the main */
+.pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 80vh;
+  z-index: -1;
+  background: linear-gradient(
+    var(--surface-0),
+    var(--token-brand-2),
+    var(--token-brand-2),
+    var(--surface-0)
+  );
+  opacity: 0.1;
+  mask-image: url("../site/pattern.svg");
+  mask-size: 16px;
+  mask-repeat: repeat;
+}
+
+/**
+ * FOOTER
+ */
+footer {
+  padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
+  background: var(--token-brand-0);
+  color: var(--token-neutral-5);
+  font-size: var(--token-size-00);
+
+  position: sticky;
+  inset: 0;
+  top: unset;
+}
+
+footer .signature {
+  align-items: flex-start;
+}
+
+footer .signature svg {
+  height: 3em;
+}
+
+footer .quote {
+  font-size: var(--token-size-1);
+  width: 100%;
+  text-align: center;
+}
+
+footer svg path {
+  fill: var(--token-brand-2);
+}
+
+footer .icon {
+  color: var(--token-brand-2);
+}
+
+footer .quote {
+  color: var(--token-neutral-5);
+}
+
+footer a {
+  --anchor-color: var(--token-brand-2);
+}
+
+@media only screen and (max-width: 628px) {
+  footer .signature {
+    justify-items: center;
+  }
+
+  footer .socials {
+    justify-items: center;
+    align-items: center;
+  }
+}

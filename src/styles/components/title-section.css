@@ -8,9 +8,6 @@
   animation: fade-in, slide-up-2;
   animation-timing-function: cubic-bezier(0.5, -0.9, 0.1, 1.5);
   animation-duration: 0.75s;
-
-  /* --card-width: calc(var(--token-bp-3) - var(--token-size-2) - 175px); */
-  /* --card-width: var(--token-bp-5); */
 }
 
 .title-section > img {

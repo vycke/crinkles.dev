@@ -4,13 +4,8 @@
   class="hover-group linklist | cluster --gap-00"
 >
   {% for tag in tags %}
-  <li class="tag | click-area">
-    <a
-      href="/tags/{{ tag }}/"
-      class="tag"
-      data-selected="{{tag === selected}}"
-      >{{ tag }}</a
-    >
+  <li>
+    <a href="/tags/{{ tag }}/" class="tag" data-selected="{{tag === selected}}">{{ tag }}</a>
   </li>
   {% endfor %}
 </ul>

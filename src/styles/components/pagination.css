@@ -6,6 +6,7 @@
   grid-template-columns: 1fr 1fr;
   border-top: 2px solid var(--text-0);
   margin-inline: auto;
+  margin-top: var(--token-size-5);
 }
 
 .pagination > * {
@@ -13,6 +14,13 @@
   display: flex;
   flex-direction: column;
   gap: none;
+}
+
+.pagination .newer {
+  border-right: 1px solid var(--text-0);
+}
+.pagination .older {
+  border-left: 1px solid var(--text-0);
 }
 
 .pagination .newer[data-exists="true"],
@@ -35,6 +43,7 @@
 
 .pagination > * a {
   align-self: flex-start;
+  font-weight: bold;
 }
 
 .pagination > *:last-child a {
@@ -50,5 +59,14 @@
   .pagination {
     --pagination-padding: var(--token-size-0);
     grid-template-columns: 1fr;
+  }
+
+  .pagination .newer {
+    border-right: none;
+    border-bottom: 1px solid var(--text-0);
+  }
+  .pagination .older {
+    border-left: none;
+    border-top: 1px solid var(--text-0);
   }
 }

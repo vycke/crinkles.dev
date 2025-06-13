@@ -5,34 +5,13 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  color: var(--text-0);
+  background-color: var(--surface-0);
 }
 
-main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-
-  background: var(--surface-0);
-  width: 100%;
-  z-index: 1;
-  border-bottom: 2px solid var(--text-0);
-  /* hack to make it work on safari */
-  transform: translate3d(0, 0, 0);
-}
-
-/**
- * LINKS
- */
-a,
-a:visited {
-  text-decoration-color: var(--primary);
-  transition: all 200ms;
-}
-
-a:hover,
-a:visited:hover {
-  text-decoration-color: var(--primary);
-  text-decoration-thickness: 2px;
+::selection {
+  color: var(--surface-0) !important;
+  background: var(--text-0) !important;
 }
 
 /**
@@ -41,14 +20,21 @@ a:visited:hover {
 :where(h1, h2, h3) {
   font-family: var(--sans-serif);
   line-height: 1.25;
-  text-wrap: revert;
 }
-h1 {
-  font-size: var(--token-size-3);
+
+/**
+ * LINKS
+ */
+a:not([class]) {
+  --anchor-color: var(--primary);
+
+  color: inherit;
+  transition: color 200ms;
 }
-h2 {
-  font-size: var(--token-size-1);
+a:not([class]):is(:hover, :focus) {
+  color: var(--primary);
+  text-decoration-color: var(--anchor-color);
 }
-h3 {
-  font-size: var(--token-size-0);
+a:not([class]):not(:is(:hover, :focus)) {
+  text-decoration-color: hsl(from var(--anchor-color) h s l / 50%);
 }

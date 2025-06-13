@@ -17,14 +17,7 @@ eleventyComputed:
 
 {% set selected = tag %}
 
-<div class="sidebar --right --threshold-0 --gap-5 | --start | mb-5">
+<div class="sidebar --right --threshold-0 --gap-5">
   {% set posts = collections[ tag ] | reverse or [] %}
   {% include "components/post-list.njk" %}
-  <aside class="flex --column --gap-1" data-size="small" aria-label="Top tags on the site">
-    <div class="card | flex --column --gap-0">
-      <h2>Categories</h2>
-      {% set tags = collections.posts | getAllTags %}
-      {% include "components/tag-list.njk" %}
-    </div>
-  </aside>
 </div>

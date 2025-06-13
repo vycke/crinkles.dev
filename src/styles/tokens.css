@@ -1,10 +1,21 @@
 :root {
   /**
-   * COLORS
+   * NEUTRAL
    */
-  --token-brand-0: #f2b25a;
+  --token-neutral-0: hsl(215, 24%, 8%);
+  --token-neutral-1: hsl(215, 18%, 22%);
+  --token-neutral-2: hsl(215, 18%, 36%);
+  --token-neutral-3: hsl(215, 18%, 78%);
+  --token-neutral-4: hsl(215, 24%, 92%);
+  --token-neutral-5: hsl(215, 24%, 98%);
+
+  /**
+   * BRAND COLORS
+   */
+  --token-brand-0: #0c312d;
   --token-brand-1: #1c756a;
-  --token-brand-2: #c73d70;
+  --token-brand-2: #61c569;
+  --token-brand-3: #828be2;
 
   /**
    * FONT FAMILY
@@ -12,7 +23,6 @@
   --sans-serif:
     Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro,
     sans-serif;
-  --serif: Charter, "Georgia Pro", Georgia, serif;
 
   /**
    * RADIUS & ELEVATION
@@ -25,20 +35,25 @@
     0 1px 1px hsl(0deg 0% 0% / 0.075), 0 3px 3px hsl(0deg 0% 0% / 0.075),
     0 6px 6px hsl(0deg 0% 0% / 0.075);
   --token-elevation: 4px 4px 0px 0px var(--text-0);
-}
 
-/**
- * LIGHT THEME
- */
-:root {
+  /**
+   * LIGHT THEME
+   */
   color-scheme: light;
   accent-color: var(--primary);
+  --text-0: var(--token-neutral-0);
+  --text-1: var(--token-neutral-1);
+  --text-2: var(--token-neutral-2);
+  --surface-0: var(--token-neutral-5);
+  --surface-1: var(--token-neutral-4);
+  --surface-2: var(--token-neutral-3);
 
   --primary: var(--token-brand-1);
-  --accent: var(--token-brand-0);
+  --accent: var(--token-brand-2);
+
   --code-primary: var(--token-brand-1);
-  --code-secondary: var(--token-brand-2);
-  --code-tertiary: hsl(from var(--token-brand-0) h s calc(l * 0.5));
+  --code-secondary: hsl(from var(--token-brand-3) h s calc(l * 0.8));
+  --code-tertiary: hsl(from var(--token-brand-2) h s calc(l * 0.7));
 }
 
 /**
@@ -54,10 +69,11 @@
     --surface-1: var(--token-neutral-1);
     --surface-2: var(--token-neutral-2);
 
-    --primary: var(--token-brand-0);
+    --primary: var(--token-brand-2);
     --accent: var(--token-brand-1);
-    --code-primary: var(--token-brand-0);
-    --code-secondary: hsl(from var(--token-brand-1) h s calc(l * 1.55));
-    --code-tertiary: hsl(from var(--token-brand-2) h s calc(l * 1.55));
+
+    --code-primary: var(--token-brand-2);
+    --code-secondary: var(--token-brand-3);
+    --code-tertiary: hsl(from var(--token-brand-1) h s calc(l * 1.5));
   }
 }

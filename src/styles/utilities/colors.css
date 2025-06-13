@@ -1,22 +1,12 @@
 /**
  * TEXT COLORS
  */
-.text-0 {
-  color: var(--text-0);
-}
 .text-1 {
   color: var(--text-1);
 }
 .text-2 {
   color: var(--text-2);
 }
-.surface-2 {
-  color: var(--surface-2);
-}
 .text-primary {
   color: var(--primary);
-}
-
-.text-accent {
-  color: var(--accent);
 }

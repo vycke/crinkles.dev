@@ -1,0 +1,33 @@
+/**
+ * TAG
+ *
+ * --tag-color: text color and hover background color
+ * --tag-hash-color: color of the # char
+ */
+
+.tag {
+  --tag-color: var(--primary);
+  --tag-hash-color: var(--tag-color);
+  color: inherit;
+
+  transition: all 300ms;
+}
+
+.tag[data-selected="true"] {
+  font-weight: bold;
+}
+
+.tag::before {
+  content: "#";
+  font-size: 0.9em;
+  transition: color 300ms;
+  color: var(--tag-hash-color);
+}
+
+a.tag {
+  text-decoration-color: var(--primary);
+}
+
+a.tag:hover {
+  color: var(--tag-color);
+}

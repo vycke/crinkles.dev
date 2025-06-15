@@ -30,3 +30,7 @@ a:not([class]):is(:hover, :focus) {
 a:not([class]):not(:is(:hover, :focus)) {
   text-decoration-color: hsl(from var(--anchor-color) h s l / 50%);
 }
+
+svg {
+  -webkit-transform: translate3d(0, 0, 0);
+}

@@ -7,7 +7,7 @@ layout: post
 description: Trying to automatically lay out a visual graph (e.g. state machine) that is human understandable is one of the most fun challenges I have ever encountered. Let me explain how I did it.
 ---
 
-In the last few months I worked on a [finite state machine editor](https://fsm.crinkles.dev/) build on [React Flow](https://reactflow.dev/). At a certain point I wanted to import a configuration, that _magically_ visualizes the state machine. I was in the need of a _graph layout algorithm_. A few years back, I have implemented a similar feature for a workflow editor. The biggest problem to solve? Ensuring the resulting visualization is understandable and readable. This requires a solid algorithm.
+In the last few months I worked on a finite state machine editor build on [React Flow](https://reactflow.dev/). At a certain point I wanted to import a configuration, that _magically_ visualizes the state machine. I was in the need of a _graph layout algorithm_. A few years back, I have implemented a similar feature for a workflow editor. The biggest problem to solve? Ensuring the resulting visualization is understandable and readable. This requires a solid algorithm.
 
 If all nodes in the graph are scattered across the screen, it will become hard to follow the lines between them. The approach I took is based on the paper ["A technique for drawing directed graphs (1993)"](https://ieeexplore.ieee.org/document/221135). It is a technique based on finding a (local) minimum in the number of crossing edges, as visualized below. My implementation consists out of three steps: (1) rank all nodes, (2) optimize the order of the nodes, and (3) determine the position of each node.
 
@@ -99,7 +99,7 @@ You could also go for a more balanced graph, where all nodes are laid out around
 
 ## Wrapping up
 
-Solving the automatic (or magical) layout of a directed graph (or state machine) is one of the most fun challenges I ever had. By doing research I found an algorithm I understood and could put in place. The described algorithm proves to be effective for small to medium-sized graphs. Most of these graphs are not spiderwebs and have limited edges (e.g. 2-3 outgoing edges per node). Don't believe me? I use the algorithm in an online [state machine editor](https://fsm.crinkles.dev) I have created. But, it is a heuristic and by definition not perfect. Some improvements I can think of already are:
+Solving the automatic (or magical) layout of a directed graph (or state machine) is one of the most fun challenges I ever had. By doing research I found an algorithm I understood and could put in place. The described algorithm proves to be effective for small to medium-sized graphs. Most of these graphs are not spiderwebs and have limited edges (e.g. 2-3 outgoing edges per node). Don't believe me? I use the algorithm in an online state machine editor I have created. But, it is a heuristic and by definition not perfect. Some improvements I can think of already are:
 
 - Make it possible to change the weight of certain types of crossing edges (e.g. edges crossing with a rank have a higher weight). This allows you to control the algorithm to your own needs.
 - Allow for nodes to move between ranks during the optimization step. This is a helpful improvement when you have a graph with a fixed start and end node, but a big variation in the length of paths.

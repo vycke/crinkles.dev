@@ -12,10 +12,6 @@ pre code {
 }
 
 :not(pre) > code {
-  border: none;
-  padding: 0;
-  white-space: nowrap;
-  word-break: break-all;
   color: var(--primary);
 }
 

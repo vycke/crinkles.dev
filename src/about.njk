@@ -2,12 +2,12 @@
 layout: page
 width: 5
 picture: sticker-coffee
-title: User manual
-description: Some quick things about me
+title: Some quick things about me
+description: User manual
 ---
 
 <section class="sidebar --right --threshold-0 --gap-3">
-  <dl class="info-section">
+  <dl class="info-section card">
     <dt>Who.</dt>
     <dd>I am a Dutch software engineer, specialised in the web platform as a whole. I enjoy <a href="/writing">writing</a> about all the exciting new stuff I encounter about the web and software development. Like many, I drink a lot of coffee to get throughout the day. Those two small kids of mine certainly won't help cut down on the caffeine intake. But whenever I have time and energy, and I am not working <span class="flag">crinkles</span> or <a href="https://feo.crinkles.dev">feo.css</a>, I do love to play some videogames. It is no secret that Pokemon is my favorite franchise.</dd>
 
@@ -32,25 +32,11 @@ description: Some quick things about me
   </dl>
   <aside class="flex --column --gap-1" data-size="small" aria-label="Top tags on the site">
     <div class="card | flex --column --center">
-      <h2>You can find me here</h2>
-      <ul role="list" class="linklist | hover-group | cluster --gap-000 | mt-2">
-        <li>
-          <a rel="me" href="https://github.com/crinkels" title="Link to my Github page">
-            <i class="fa-brands fa-github icon" aria-label="GitHub brand icon"></i>
-          </a>
-  			</li>
-  			<li>
-  			  <a rel="me" href="https://bsky.app/profile/crinkles.dev" title="Link to my Bluesky page">
-  					<i class="fa-brands fa-bluesky icon" aria-label="Bluesky brand icon"></i>
-  				</a>
-  			</li>
-  			<li>
-  			  <a rel="me" href="https://indieweb.social/@crinkles" title="Link to my Mastodon page">
-  					<i class="fa-brands fa-mastodon icon" aria-label="Mastodon brand icon"></i>
-  				</a>
-  			</li>
-      </ul>
-      <p class="mt-0 | text-center">Or take a look at my <a href="/uses">/uses</a> page.</p>
+      <h2 class="mb-2">You can find me here</h2>
+      {% include "partials/socials.njk" %}
+
+
+      <a href="/uses" class="mt-2 | btn">Or take a look at my /uses page.</a>
     </div>
   </aside>
 </section>

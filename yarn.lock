@@ -68,7 +68,7 @@
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-utils/-/eleventy-utils-2.0.7.tgz#40fa604864d64e98412f4f068a34379b471beddd"
   integrity sha512-6QE+duqSQ0GY9rENXYb4iPR4AYGdrFpqnmi59tFp9VrleOl0QSh8VlBr2yd6dlhkdtj7904poZW5PvGr9cMiJQ==
 
-"@11ty/eleventy@^3.1.0-beta.1":
+"@11ty/eleventy@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-3.1.1.tgz#9be05effd83b64811a129afaff467cc5597764cf"
   integrity sha512-nsMCW44WSYzpi6JSQ1ar/wlotj/2cxuP4AABX5Dxqwol3IQ3SkEMgcAugP1t1mthv5I0kIB9lql1Jv/lhUHIkg==
@@ -788,10 +788,10 @@ fdir@^6.4.4:
   resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.4.5.tgz#328e280f3a23699362f95f2e82acf978a0c0cb49"
   integrity sha512-4BG7puHpVsIYxZUbiUE3RqGloLaSSwzYie5jvasC4LWuBWzZawynvYouhjbQKw2JuIGYdm0DzIxl8iVidKlUEw==
 
-feo-css@^6.0.0-beta.0:
-  version "6.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-6.0.0-beta.0.tgz#e2fc1c8a9b5c187fff070e9dd62ddb2d51ec0031"
-  integrity sha512-VLKiMcU4MGfFEgUZoPUOiQCm6Y01PPJCns02lb5wRgdg0D455bcS0yajWGPP5vWoaOcnFyyAoCD8QjaJ9ukzpg==
+feo-css@^6.0.0-beta.2:
+  version "6.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-6.0.0-beta.2.tgz#d21cd5b6ab1e33c6b425676d4b25dcd05fc7ee9c"
+  integrity sha512-rf4YMGk0rrz7L7BbFdL5yNchFSeWPAnl1R6K/6l0RpE+i/atunSvIuqT+eTt/UA4agQTJBB80r+VRtP/AuU0fw==
 
 filesize@^10.1.6:
   version "10.1.6"

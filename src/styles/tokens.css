@@ -2,7 +2,7 @@
   /**
    * NEUTRAL
    */
-  --token-neutral-0: hsl(215, 24%, 8%);
+  --token-neutral-0: hsl(215, 18%, 8%);
   --token-neutral-1: hsl(215, 18%, 22%);
   --token-neutral-2: hsl(215, 18%, 36%);
   --token-neutral-3: hsl(215, 18%, 78%);
@@ -30,6 +30,8 @@
   --token-radius-0: 0.25rem;
   --token-radius-1: 0.5rem;
   --token-radius-2: 0.75rem;
+  --token-radius-3: 1rem;
+  --token-radius-4: 1.5rem;
 
   --token-shadow:
     0 1px 1px hsl(0deg 0% 0% / 0.075), 0 3px 3px hsl(0deg 0% 0% / 0.075),
@@ -49,7 +51,6 @@
   --surface-2: var(--token-neutral-3);
 
   --primary: var(--token-brand-1);
-  --accent: var(--token-brand-2);
 
   --code-primary: var(--token-brand-1);
   --code-secondary: hsl(from var(--token-brand-3) h s calc(l * 0.8));
@@ -70,7 +71,6 @@
     --surface-2: var(--token-neutral-2);
 
     --primary: var(--token-brand-2);
-    --accent: var(--token-brand-1);
 
     --code-primary: var(--token-brand-2);
     --code-secondary: var(--token-brand-3);

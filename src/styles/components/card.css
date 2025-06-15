@@ -1,16 +1,23 @@
+.card-test {
+  background-color: var(--surface-1);
+  padding: var(--token-size-3) var(--token-size-1);
+  border-radius: var(--token-radius-4);
+  max-width: var(--card-width, var(--token-bp-3));
+}
+
 .card {
   --border-width: 2px;
 
   background-color: var(--surface-1);
-  padding: var(--token-size-1);
+  padding: var(--token-size-3) var(--token-size-1);
   position: relative;
   border: var(--border-width) solid var(--text-0);
-  border-radius: 1rem;
+  border-radius: var(--token-radius-4);
   max-width: var(--card-width, var(--token-bp-3));
 }
 
 .card::after {
-  --offset: 8px;
+  --offset: 6px;
   content: "";
 
   position: absolute;
@@ -22,20 +29,17 @@
   border: var(--border-width) solid var(--text-0);
   background-color: var(--surface-2);
   z-index: -1;
-  border-radius: 1rem;
-
-  /* striped background */
+  border-radius: var(--token-radius-4);
+  background: var(--text-0);
   /* background: repeating-linear-gradient(
-    -45deg,
-    var(--accent),
-    var(--accent) 6px,
+    45deg,
+    hsl(from var(--primary) h s l / 100%),
+    hsl(from var(--primary) h s l / 100%) 6px,
     var(--surface-0) 6px,
     var(--surface-0) 12px
   ); */
-  /* gradient background */
-  background: linear-gradient(45deg, var(--primary), var(--accent));
 }
 
 .card[data-size="small"] {
-  padding: var(--token-size-0);
+  padding: var(--token-size-1) var(--token-size-0);
 }

@@ -1,16 +1,23 @@
 ---
-title: Blog
-description: Stuff I write about
+title: Stuff I write about
+description: Blog
 picture: sticker-book
 layout: paginated
 width: 5
 eleventyExcludeFromCollections: true
 pagination:
   data: collections.posts
-  size: 6
+  size: 5
   alias: posts
 ---
 
 <div class="sidebar --right --threshold-0 --gap-3">
   {% include "components/post-list.njk" %}
+  <aside>
+    <div class="card | flex --column --center --gap-1">
+      <h2>Categories</h2>
+      {% set tags = collections.posts | getAllTags %}
+      {% include "components/tag-list.njk" %}
+    </div>
+  </aside>
 </div>

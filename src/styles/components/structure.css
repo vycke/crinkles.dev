@@ -32,24 +32,6 @@ header nav a[aria-current="page"] {
   background-size: 100% 0.1em;
 }
 
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: skew(-10deg);
-  }
-  60% {
-    transform: skew(8deg);
-  }
-  80% {
-    transform: skew(-4deg);
-  }
-  100% {
-    transform: skew(0deg);
-  }
-}
-
 /**
  * MAIN
  */

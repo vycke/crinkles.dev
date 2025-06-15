@@ -15,14 +15,6 @@ body {
 }
 
 /**
- * HEADERS
- */
-:where(h1, h2, h3) {
-  font-family: var(--sans-serif);
-  line-height: 1.25;
-}
-
-/**
  * LINKS
  */
 a:not([class]) {

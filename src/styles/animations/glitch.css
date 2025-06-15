@@ -1,0 +1,41 @@
+.glitch {
+  animation:
+    glitch 3s linear infinite,
+    flicker 3s linear infinite;
+}
+
+.flicker {
+  animation: flicker 1.4s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(0.125rem, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-0.125rem, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@keyframes flicker {
+  45% {
+    opacity: 1;
+  }
+  47% {
+    opacity: 0.6;
+  }
+  49% {
+    opacity: 0.95;
+  }
+  51% {
+    opacity: 0.7;
+  }
+  53% {
+    opacity: 1;
+  }
+}

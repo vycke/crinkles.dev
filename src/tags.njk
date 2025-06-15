@@ -2,7 +2,7 @@
 layout: page
 eleventyExcludeFromCollections: true
 picture: sticker-book
-description: All articles within this category
+description: Blog
 pagination:
   data: collections
   size: 1
@@ -12,12 +12,18 @@ pagination:
     - writing
 permalink: /tags/{{ tag | slugify }}/
 eleventyComputed:
-  title: Category "{{ tag }}"
+  title: All articles tagged '{{ tag }}'
 ---
 
 {% set selected = tag %}
-
-<div class="sidebar --right --threshold-0 --gap-5">
+<div class="sidebar --right --threshold-0 --gap-3">
   {% set posts = collections[ tag ] | reverse or [] %}
   {% include "components/post-list.njk" %}
+  <aside>
+    <div class="card | flex --column --center --gap-1">
+      <h2>Categories</h2>
+      {% set tags = collections.posts | getAllTags %}
+      {% include "components/tag-list.njk" %}
+    </div>
+  </aside>
 </div>

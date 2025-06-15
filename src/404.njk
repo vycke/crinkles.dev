@@ -2,10 +2,12 @@
 title: 🙈🙊🙊 oh no 🙈🙊🙊
 description: 404
 permalink: 404.html
-layout: page
+layout: base
 ---
-<p class="size-1 | mb-4">It seems we can't find the page you are looking for. Maybe go back to the <a href="/">homepage</a>, or take a look at any of the recent posts.</p>
-<div class="flex --column --cross-start">
-  {% set posts =  collections.posts | head(3) %}
-  {% include "components/post-list.njk" %}
+
+<div class="page-section | center flex --column --gap-0 --center">
+  {% include "svg/robot.svg" %}
+  <p class="bold text-primary size-1">🙈🙊🙊 oh no 🙈🙊🙊</p>
+  <h1 class="text-center">You found a broken page.</h1>
+  <a href="/" class="btn">Go to the homepage</a>
 </div>

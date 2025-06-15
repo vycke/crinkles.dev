@@ -74,7 +74,7 @@ article h2:hover a {
 */
 
 article :where(img, pre, .info, .archive) {
-  border-radius: var(--token-radius-1);
+  border-radius: var(--token-radius-3);
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100vw;
@@ -172,5 +172,9 @@ ol:not([class]) {
 @media only screen and (max-width: 670px) {
   article {
     font-size: 1.1em;
+  }
+
+  article h1 {
+    font-size: var(--token-size-3);
   }
 }

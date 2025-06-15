@@ -3,19 +3,19 @@ layout: base
 ---
 
 <section class="title-section page-section">
-  <div class="card">
-    <h1>Hi, I'm Kevin!</h1>
-    <span class="size-0 text-primary">A software engineer specialised in the web platform.</span>
-    <p class="mt-1">This is my digital playground & corner of the internet, where I (mostly) write about <span class="tag">css</span> and work on <a href="https://feo.crinkles.dev">feo.css</a>.</p>
+  <div class="flex --column maxw-2">
+    <p class="bold text-primary size-1">Hi, I'm Kevin!</p>
+    <h1>I craft digital landscapes.</h1>
+    <p class="size-1 mt-1">This is my digital playground & corner of the internet, where I (mostly) write about <span class="tag">css</span> and work on <a href="https://feo.crinkles.dev">feo.css</a>.</p>
   </div>
-  <img width="175" height="237.5" src="/site/sticker-laptop.svg" alt="Digital illustration of myself, Kevin, sitting behind a laptop.">
+  <img width="250" height="267" src="/site/sticker-laptop.svg" alt="Digital illustration of myself, Kevin, sitting behind a laptop.">
 </section>
 
 <secion class="page-section | flex --column --gap-3 | mt-3">
-  <h2 class="size-3">Recent posts</h2>
-  <div class="maxw-3 flex --column --gap-00">
+  <div class="card flex --column --gap-00">
+    <h2 class="size-3 text-primary mb-0">Recent posts</h2>
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
-    <a href="/writing" class="size-00 | redirect | self-end">Read more articles</a>
+    <a href="/writing" class="size-00 | btn | self-end">Read more articles</a>
   </div>
 </secion>

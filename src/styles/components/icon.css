@@ -1,7 +1,7 @@
 .icon {
   color: var(--primary);
-  width: 1.75em;
-  padding: 4px;
+  width: 1.5em;
+  /* padding: 4px; */
   object-fit: contain;
   aspect-ratio: 1 / 1;
 }

@@ -1,17 +1,14 @@
 .title-section {
   display: grid;
   grid-template-columns:
-    min(var(--token-bp-3), calc(100% - 175px - var(--token-size-2)))
-    minmax(175px, 1fr);
+    min(var(--token-bp-3), calc(100% - 250px - var(--token-size-2)))
+    minmax(250px, 1fr);
   gap: var(--token-size-2);
   align-items: center;
-  animation: fade-in, slide-up-2;
-  animation-timing-function: cubic-bezier(0.5, -0.9, 0.1, 1.5);
-  animation-duration: 0.75s;
 }
 
 .title-section > img {
-  width: 175px;
+  width: 250px;
   margin-inline: auto;
 }
 
@@ -25,5 +22,6 @@
   .title-section > img {
     margin-inline: auto;
     grid-row: 1;
+    width: 225px;
   }
 }

@@ -1,0 +1,41 @@
+.test-card {
+  border-radius: 2rem;
+  background: var(--surface-1);
+  border: 2px solid var(--text-0);
+  box-shadow: 4px 4px 0 0 var(--text-0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--token-size-4) max(var(--token-size-0), 15vw);
+  max-width: var(--token-bp-4);
+  position: relative;
+}
+
+.test-card > * {
+  max-width: var(--token-bp-2);
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.test-card h1 {
+  font-size: var(--token-size-4);
+}
+
+.test-card > .profile {
+  position: absolute;
+  top: 2rem;
+  left: -4rem;
+}
+
+.test-card > .bracket {
+  position: absolute;
+  bottom: -3rem;
+  right: -2rem;
+  width: 175px;
+}
+
+.test-card > .code {
+  position: absolute;
+  top: -3rem;
+  right: -2rem;
+}

@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.title-section > img {
+.title-section > svg {
   width: 250px;
   margin-inline: auto;
 }
@@ -19,7 +19,7 @@
     text-align: center;
   }
 
-  .title-section > img {
+  .title-section > svg {
     margin-inline: auto;
     grid-row: 1;
     width: 225px;

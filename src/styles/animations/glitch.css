@@ -1,11 +1,11 @@
 .glitch {
   animation:
-    glitch 3s linear infinite,
-    flicker 3s linear infinite;
+    glitch 2s linear infinite,
+    flicker 4s linear infinite;
 }
 
 .flicker {
-  animation: flicker 1.4s linear infinite;
+  animation: flicker 1.2s linear infinite;
 }
 
 @keyframes glitch {
@@ -23,19 +23,19 @@
 }
 
 @keyframes flicker {
-  45% {
-    opacity: 1;
+  94%,
+  96%,
+  98%,
+  100% {
+    filter: hue-rotate(0deg);
   }
-  47% {
-    opacity: 0.6;
+  95% {
+    filter: hue-rotate(90deg);
   }
-  49% {
-    opacity: 0.95;
+  97% {
+    filter: hue-rotate(-90deg);
   }
-  51% {
-    opacity: 0.7;
-  }
-  53% {
-    opacity: 1;
+  99% {
+    filter: hue-rotate(180deg);
   }
 }

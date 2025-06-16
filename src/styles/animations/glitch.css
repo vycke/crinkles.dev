@@ -1,61 +1,69 @@
-.glitch {
-  animation:
-    glitch 2s linear infinite,
-    flicker 3.5s linear infinite,
-    stripes 4s linear infinite;
+@media (prefers-reduced-motion: no-preference) {
+  .svg-glitch {
+    animation:
+      glitch 2s linear infinite,
+      flicker 3.5s linear infinite,
+      stripes 4s linear infinite;
 
-  mask-image: unset;
-}
-
-.flicker {
-  animation: flicker 1.2s linear infinite;
-}
-
-@keyframes glitch {
-  2%,
-  64% {
-    transform: translate(0.125rem, 0) skew(0deg);
-  }
-  4%,
-  60% {
-    transform: translate(-0.125rem, 0) skew(0deg);
-  }
-  62% {
-    transform: translate(0, 0) skew(5deg);
-  }
-}
-
-@keyframes flicker {
-  94%,
-  96%,
-  98%,
-  100% {
-    filter: hue-rotate(0deg);
-  }
-  95%,
-  97%,
-  99% {
-    filter: hue-rotate(180deg);
-  }
-}
-
-@keyframes stripes {
-  94%,
-  96%,
-  98%,
-  100% {
     mask-image: unset;
   }
-  95%,
-  97%,
-  99% {
-    mask-image: repeating-linear-gradient(
-      -5deg,
-      transparent,
-      black 5px,
-      black 36px,
-      transparent 41px,
-      transparent 42px
-    );
+
+  .text-glitch {
+    animation:
+      glitch 2.5s linear infinite,
+      stripes 2.8s linear infinite;
+  }
+
+  .flicker {
+    animation: flicker 1.2s linear infinite;
+  }
+
+  @keyframes glitch {
+    2%,
+    64% {
+      transform: translate(0.125rem, 0) skew(0deg);
+    }
+    4%,
+    60% {
+      transform: translate(-0.125rem, 0) skew(0deg);
+    }
+    62% {
+      transform: translate(0, 0) skew(5deg);
+    }
+  }
+
+  @keyframes flicker {
+    94%,
+    96%,
+    98%,
+    100% {
+      filter: hue-rotate(0deg);
+    }
+    95%,
+    97%,
+    99% {
+      filter: hue-rotate(180deg);
+    }
+  }
+
+  @keyframes stripes {
+    94%,
+    96%,
+    98%,
+    100% {
+      mask-image: unset;
+    }
+    95%,
+    97%,
+    99% {
+      mask-image: repeating-linear-gradient(
+        -5deg,
+        transparent,
+        black 5px,
+        black 36px,
+        transparent 41px,
+        transparent 42px
+      );
+    }
   }
 }

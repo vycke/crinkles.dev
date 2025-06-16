@@ -1,7 +1,10 @@
 .glitch {
   animation:
     glitch 2s linear infinite,
-    flicker 4s linear infinite;
+    flicker 4s linear infinite,
+    stripes 4s linear infinite;
+
+  mask-image: unset;
 }
 
 .flicker {
@@ -29,13 +32,30 @@
   100% {
     filter: hue-rotate(0deg);
   }
-  95% {
-    filter: hue-rotate(90deg);
-  }
-  97% {
-    filter: hue-rotate(-90deg);
-  }
+  95%,
+  97%,
   99% {
     filter: hue-rotate(180deg);
+  }
+}
+
+@keyframes stripes {
+  94%,
+  96%,
+  98%,
+  100% {
+    mask-image: unset;
+  }
+  95%,
+  97%,
+  99% {
+    mask-image: repeating-linear-gradient(
+      -5deg,
+      transparent,
+      black 2px,
+      black 36px,
+      transparent 38px,
+      transparent 42px
+    );
   }
 }

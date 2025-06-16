@@ -1,5 +1,5 @@
 {
-  "name": "crinkels.dev",
+  "name": "crinkles.dev",
   "version": "4.1.0",
   "type": "module",
   "description": "",
@@ -12,7 +12,7 @@
     "favicons": "node ./src/_setup/generate-favicons.js"
   },
   "keywords": [],
-  "author": "Kevin Pennekamp<kevin@crinkels.dev>",
+  "author": "Kevin Pennekamp<kevin@crinkles.dev>",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.1",

@@ -1,21 +1,21 @@
 {
   "title": "Kevin Pennekamp",
-  "url": "https://crinkels.dev/",
-  "site": "Crinkels",
+  "url": "https://crinkles.dev/",
+  "site": "Crinkles",
   "language": "en",
   "description": "UI development studio of Kevin Pennekamp, a Dutch web craftsman, front-end engineer and engineering manager. I love CSS, creating development tooling and writing about it!",
   "keywords": "CSS, front-end, web design, consulting, architecture",
   "feed": {
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://crinkels.dev/"
+    "id": "https://crinkles.dev/"
   },
   "author": {
     "name": "Kevin Pennekamp",
-    "email": "kevin@crinkels.dev",
-    "url": "https://crinkels.dev/about"
+    "email": "kevin@crinkles.dev",
+    "url": "https://crinkles.dev/about"
   },
   "social": {
-    "img": "https://crinkels.dev/sm-image.png"
+    "img": "https://crinkles.dev/sm-image.png"
   }
 }

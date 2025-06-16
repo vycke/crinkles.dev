@@ -6,7 +6,7 @@ tags:
   - javascript
   - external
 layout: external
-link: https://github.com/crinkels/reference-architecture
+link: https://github.com/kpnnkmp/reference-architecture
 alt: The link to the github repository holding the reference architecte
 description: >-
   A reference architecture for SPA front-ends with React and Angular, focused on principles instead of rules.

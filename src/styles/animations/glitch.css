@@ -1,7 +1,7 @@
 .glitch {
   animation:
     glitch 2s linear infinite,
-    flicker 4s linear infinite,
+    flicker 3.5s linear infinite,
     stripes 4s linear infinite;
 
   mask-image: unset;

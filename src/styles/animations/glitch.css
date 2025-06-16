@@ -52,9 +52,9 @@
     mask-image: repeating-linear-gradient(
       -5deg,
       transparent,
-      black 2px,
+      black 5px,
       black 36px,
-      transparent 38px,
+      transparent 41px,
       transparent 42px
     );
   }

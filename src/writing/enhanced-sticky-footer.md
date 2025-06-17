@@ -53,7 +53,7 @@ Fully confident, I tried my original idea. Result? Nothing. It didn’t work. Ev
 
 ## Where did it go wrong?
 
-Turns out, it’s all about `container-type: size`. As soon as you give an element this property, it becomes a “block-size container.” That means its height no longer depends on its children. In other words: it won’t grow taller than `100vh` unless you *explicitly* tell it to.
+Turns out, it’s all about `container-type: size`. As soon as you give an element this property, it becomes a “block-size container” (thanks to [Nathan Knowler](https://sunny.garden/@knowler/114700150901598760) for letting me know). That means its height no longer depends on its children. In other words: it won’t grow taller than `100vh` unless you *explicitly* tell it to.
 
 But why did my test cases work then? Simple: user error. I wrote tests where the container query checked whether the height was *less than* `100vh`. It was just quicker to get a visible result that way. Classic mistake.
 

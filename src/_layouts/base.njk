@@ -42,6 +42,8 @@
         </main>
         {% include "partials/footer.njk" %}
     </body>
+    {% set js %}{% include "scripts/sticky-footer.js" %}{% endset %}
+    <script>{{ js | safe }}</script>
 </html>
 
 <!-- outputs all the icons used on the page -->

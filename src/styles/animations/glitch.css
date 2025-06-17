@@ -13,9 +13,8 @@
   }
 
   .text-glitch {
-    animation:
-      text-glitch 2.5s linear infinite,
-      stripes 2s linear infinite;
+    display: inline-block;
+    animation: text-glitch 2.5s linear infinite;
   }
 
   @keyframes glitch {
@@ -60,9 +59,9 @@
         -5deg,
         transparent,
         black 5px,
-        black 36px,
-        transparent 41px,
-        transparent 42px
+        black 56px,
+        transparent 61px,
+        transparent 62px
       );
     }
   }
@@ -70,16 +69,16 @@
   @keyframes text-glitch {
     0% {
       text-shadow:
-        -2px 3px 0 red,
-        2px -3px 0 blue;
-      transform: translate(8px);
+        -0.05em 0.05em 0 red,
+        0.05em -0.05em 0 blue;
+      transform: translate(0.125em);
     }
-    2% {
+    4% {
       text-shadow:
-        2px -3px 0 red,
-        -2px 3px 0 blue;
+        0.05em -0.05em 0 red,
+        -0.05em 0.05em 0 blue;
     }
-    4%,
+    8%,
     100% {
       text-shadow: none;
       transform: none;

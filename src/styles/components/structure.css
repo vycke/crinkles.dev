@@ -77,10 +77,12 @@ footer {
   background: var(--token-brand-0);
   color: var(--token-neutral-5);
   font-size: var(--token-size-00);
-
-  position: sticky;
   inset: 0;
   top: unset;
+}
+
+footer[data-sticky] {
+  position: sticky;
 }
 
 footer .signature {

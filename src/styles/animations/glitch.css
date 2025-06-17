@@ -1,5 +1,5 @@
 @media (prefers-reduced-motion: no-preference) {
-  .svg-glitch {
+  .glitch {
     animation:
       glitch 2s linear infinite,
       flicker 3.5s linear infinite,
@@ -8,14 +8,14 @@
     mask-image: unset;
   }
 
-  .text-glitch {
-    animation:
-      glitch 2.5s linear infinite,
-      stripes 2.8s linear infinite;
-  }
-
   .flicker {
     animation: flicker 1.2s linear infinite;
+  }
+
+  .text-glitch {
+    animation:
+      text-glitch 2.5s linear infinite,
+      stripes 2s linear infinite;
   }
 
   @keyframes glitch {
@@ -64,6 +64,25 @@
         transparent 41px,
         transparent 42px
       );
+    }
+  }
+
+  @keyframes text-glitch {
+    0% {
+      text-shadow:
+        -2px 3px 0 red,
+        2px -3px 0 blue;
+      transform: translate(8px);
+    }
+    2% {
+      text-shadow:
+        2px -3px 0 red,
+        -2px 3px 0 blue;
+    }
+    4%,
+    100% {
+      text-shadow: none;
+      transform: none;
     }
   }
 }

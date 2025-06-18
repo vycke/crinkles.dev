@@ -12,10 +12,10 @@
   /**
    * BRAND COLORS
    */
-  --token-brand-0: #0c312d;
   --token-brand-1: #1c756a;
-  --token-brand-2: #61c569;
-  --token-brand-3: #828be2;
+  --token-brand-2: #c1ef7a;
+  --token-brand-3: #939be6;
+  --token-brand-4: #ff8052;
 
   /**
    * FONT FAMILY
@@ -54,7 +54,7 @@
 
   --code-primary: var(--token-brand-1);
   --code-secondary: hsl(from var(--token-brand-3) h s calc(l * 0.8));
-  --code-tertiary: hsl(from var(--token-brand-2) h s calc(l * 0.7));
+  --code-tertiary: hsl(from var(--token-brand-4) h s calc(l * 0.5));
 }
 
 /**
@@ -74,6 +74,6 @@
 
     --code-primary: var(--token-brand-2);
     --code-secondary: var(--token-brand-3);
-    --code-tertiary: hsl(from var(--token-brand-1) h s calc(l * 1.5));
+    --code-tertiary: var(--token-brand-4);
   }
 }

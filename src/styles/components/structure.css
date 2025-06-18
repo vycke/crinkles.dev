@@ -74,7 +74,7 @@ main:not(:has(.pagination)) {
  */
 footer {
   padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
-  background: var(--token-brand-0);
+  background: var(--token-brand-1);
   color: var(--token-neutral-5);
   font-size: var(--token-size-00);
   inset: 0;
@@ -102,20 +102,16 @@ footer .quote {
 }
 
 footer svg path {
-  fill: var(--token-brand-2);
+  fill: var(--token-neutral-5);
 }
 
 footer .icon {
   font-size: var(--token-size-0);
-  color: var(--token-brand-2);
-}
-
-footer .quote {
   color: var(--token-neutral-5);
 }
 
 footer a {
-  --anchor-color: var(--token-brand-2);
+  --anchor-color: var(--token-brand-0);
 }
 
 @media only screen and (max-width: 628px) {

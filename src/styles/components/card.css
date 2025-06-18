@@ -1,17 +1,11 @@
-.card-test {
-  background-color: var(--surface-1);
-  padding: var(--token-size-3) var(--token-size-1);
-  border-radius: var(--token-radius-4);
-  max-width: var(--card-width, var(--token-bp-3));
-}
-
 .card {
   --border-width: 2px;
+  --card-shade: var(--primary);
 
   background-color: var(--surface-1);
   padding: var(--token-size-3) var(--token-size-1);
   position: relative;
-  border: var(--border-width) solid var(--text-0);
+  border: var(--border-width) solid var(--card-shade);
   border-radius: var(--token-radius-4);
   max-width: var(--card-width, var(--token-bp-3));
 }
@@ -26,18 +20,18 @@
   right: calc(var(--offset) * -1 - var(--border-width));
   bottom: calc(var(--offset) * -1 - var(--border-width));
 
-  border: var(--border-width) solid var(--text-0);
+  border: var(--border-width) solid var(--card-shade);
   background-color: var(--surface-2);
   z-index: -1;
   border-radius: var(--token-radius-4);
   background: var(--text-0);
-  /* background: repeating-linear-gradient(
+  background: repeating-linear-gradient(
     45deg,
-    hsl(from var(--primary) h s l / 100%),
-    hsl(from var(--primary) h s l / 100%) 6px,
+    hsl(from var(--card-shade) h s l / 100%),
+    hsl(from var(--card-shade) h s l / 100%) 6px,
     var(--surface-0) 6px,
     var(--surface-0) 12px
-  ); */
+  );
 }
 
 .card[data-size="small"] {

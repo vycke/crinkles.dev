@@ -162,4 +162,4 @@ To make it simple, we are going to adapt the UI to one big and two small items. 
 
 ## Wrapping up
 
-And voila! We are done. We now have an adaptable picture showcase that can work with different configurations and screen sizes. We have learned how to combine grid template areas and how they allow us to quickly adapt to various different use cases. Especially when combined with `:has` and media queries. Curious to see if all of this really works. Head to this [codepen](https://codepen.io/vyckes/pen/xbKPjza) to see for yourself.
+And voila! We are done. We now have an adaptable picture showcase that can work with different configurations and screen sizes. We have learned how to combine grid template areas and how they allow us to quickly adapt to various different use cases. Especially when combined with `:has` and media queries. Curious to see if all of this really works. Head to this [codepen](https://codepen.io/kpnnkmp/vyckes/pen/xbKPjza) to see for yourself.

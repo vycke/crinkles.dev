@@ -11,9 +11,9 @@ layout: base
   {% include "svg/sticker-laptop.svg" %}
 </section>
 
-<secion class="page-section | flex --column --gap-3 | mt-3">
+<secion class="page-section | flex --column | mt-3">
   <h2 class="size-3 text-primary mb-0">Recent posts</h2>
-  <div class="card flex --column --gap-00">
+  <div class="card flex --column --gap-00 | mb-3">
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
   </div>

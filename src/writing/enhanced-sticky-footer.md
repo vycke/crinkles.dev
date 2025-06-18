@@ -4,6 +4,7 @@ date: 2025-06-17
 tags:
   - css
   - trick
+  - progressive enhancement
 layout: post
 description: >-
   Andy Bell showed a nice little UI effect with his “sticky revealing footer”. However, on some pages, the experience was mediocre. A quest was started to improve it.
@@ -54,7 +55,6 @@ And yep, the `<h1>` shows up. Great! Next test: does `calc()` break it? Replace 
 Fully confident, I tried my original idea. Result? Nothing. It didn’t work. Even worse, it broke my layout. How? Why? Whyyyyy?
 
 ## Where did it go wrong?
-
 Turns out, it’s all about `container-type: size`. As soon as you give an element this property, it becomes a “block-size container” (thanks to [Nathan Knowler](https://sunny.garden/@knowler/114700150901598760) for letting me know). That means its height no longer depends on its children. In other words: it won’t grow taller than `100vh` unless you _explicitly_ tell it to.
 
 But why did my test cases work then? Simple: user error. I wrote tests where the container query checked whether the height was _less than_ `100vh`. It was just quicker to get a visible result that way. Classic mistake.
@@ -99,6 +99,6 @@ footer[data-sticky] {
 
 ## Wrapping up
 
-And that’s it—an enhanced sticky revealing footer! A little sprinkle of JavaScript runs on page load, and the result feels smoother across all page lengths.
+And that’s it—an enhanced sticky revealing footer! A little sprinkle of JavaScript runs on page load, and the result feels smoother across all page lengths. And whenever JavaScript is not available, the footer is just attached at the end of the page. Nice little *progressive enhancement*. 
 
 Of course... if anyone figures out a pure CSS solution, I’m all ears. Hit me up!

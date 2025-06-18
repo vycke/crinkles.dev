@@ -3,7 +3,6 @@ title: Combining :has and :only-child to change tab containers
 date: 2024-01-15
 tags:
   - css
-  - trick
 layout: post
 description: >-
   For a styling implementation detail, I set the challenge to come up with a CSS-only solution, instead of implementing the logic in a front-end framework.

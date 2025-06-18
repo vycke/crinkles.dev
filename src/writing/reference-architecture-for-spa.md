@@ -4,7 +4,6 @@ date: 2024-04-28
 tags:
   - architecture
   - javascript
-  - external
 layout: external
 link: https://github.com/kpnnkmp/reference-architecture
 alt: The link to the github repository holding the reference architecte

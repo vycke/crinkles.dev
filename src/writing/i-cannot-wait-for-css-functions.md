@@ -3,8 +3,6 @@ title: I cannot wait for the CSS @function
 date: 2024-12-29
 tags:
   - css
-  - trick
-  - csswg
 layout: post
 description: >-
   In my quest to apply as much cool CSS tricks as possible, I encountered an issue that navigated me towards a new and exciting CSSWG draft.

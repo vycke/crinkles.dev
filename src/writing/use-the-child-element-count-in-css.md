@@ -3,7 +3,6 @@ title: Use the child-element count in CSS
 date: 2023-02-21
 tags:
   - css
-  - trick
 layout: post
 description: >-
   A little CSS trick to get a count of child elements on your parent selector.

@@ -59,14 +59,20 @@ main:not(:has(.pagination)) {
   z-index: -1;
   background: linear-gradient(
     var(--surface-0),
-    var(--token-brand-2),
-    var(--token-brand-2),
+    var(--primary),
+    var(--primary),
     var(--surface-0)
   );
   opacity: 0.1;
   mask-image: url("../site/pattern.svg");
   mask-size: 16px;
   mask-repeat: repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pattern {
+    opacity: 0.15;
+  }
 }
 
 /**

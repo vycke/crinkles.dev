@@ -6,8 +6,8 @@ picture: svg/sticker-tech.svg
 
 ---
 
-<section>
-  <dl class="info-section card">
+<section class="sidebar --right --threshold-0 --gap-3">
+  <dl class="info-section">
     <dt>Hardware.</dt>
     <dd>
       <ul>
@@ -65,5 +65,10 @@ picture: svg/sticker-tech.svg
         <li><span>Apple Music & TV</span>: same as the above, but then for me!</li>
       </ul>
     </dd>
-  </dl>
+  </dl><aside class="flex --column --gap-1" data-size="small" aria-label="Top tags on the site">
+      <div class="card | flex --column --center">
+        <h2 class="mb-2">You can find me here</h2>
+        {% include "partials/socials.njk" %}
+      </div>
+    </aside>
 </section>

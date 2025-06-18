@@ -12,10 +12,10 @@ layout: base
 </section>
 
 <secion class="page-section | flex --column --gap-3 | mt-3">
+  <h2 class="size-3 text-primary mb-0">Recent posts</h2>
   <div class="card flex --column --gap-00">
-    <h2 class="size-3 text-primary mb-0">Recent posts</h2>
     {% set posts =  collections.posts | head(3) %}
     {% include "components/post-list.njk" %}
-    <a href="/writing" class="size-00 | btn | self-end">Read more articles</a>
   </div>
+  <a href="/writing" class="size-00 | btn | self-start">Read more articles</a>
 </secion>

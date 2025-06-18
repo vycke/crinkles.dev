@@ -3,7 +3,6 @@ title: Old man yelling at a cloud
 date: 2023-06-28
 tags:
   - engineering
-  - meta
 layout: post
 description: >-
   Front-end development really became a pop culture around big company frameworks. It has become an investor-focused industry.

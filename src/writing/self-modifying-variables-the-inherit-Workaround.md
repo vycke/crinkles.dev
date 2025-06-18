@@ -3,7 +3,6 @@ title: "Self-modifying variables: the inherit() workaround"
 date: 2024-05-08
 tags:
   - css
-  - external
 layout: external
 link: https://kizu.dev/self-modifying-variables/
 alt: The to original article on kizu.dev

@@ -3,7 +3,6 @@ title: MacOS-like dock effect with a “previous-sibling combinator”
 date: 2024-05-20
 tags:
   - css
-  - trick
 layout: post
 description: >-
   A guide on using the “previous-sibling combinator” trick to recreate the magnifier effect of the MacOS dock.

@@ -1,18 +1,18 @@
-<svg class="pattern" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3839_3)">
-<rect x="-2" y="-2" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="6" y="-2" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="14" y="-2" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="-2" y="6" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="6" y="6" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="14" y="6" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="-2" y="14" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="6" y="14" width="4" height="4" rx="1" fill="#B9C5D4"/>
-<rect x="14" y="14" width="4" height="4" rx="1" fill="#B9C5D4"/>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.4" clip-path="url(#clip0_4153_3)">
+<rect x="10" y="-2" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="22" y="-2" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="-2" y="10" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="10" y="10" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="-2" y="22" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="10" y="22" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="-2" y="-2" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="22" y="22" width="4" height="4" rx="1" fill="#1C756A"/>
+<rect x="22" y="10" width="4" height="4" rx="1" fill="#1C756A"/>
 </g>
 <defs>
-<clipPath id="clip0_3839_3">
-<rect width="16" height="16" />
+<clipPath id="clip0_4153_3">
+<rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </svg>

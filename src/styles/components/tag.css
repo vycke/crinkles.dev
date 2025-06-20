@@ -5,7 +5,7 @@
  * --tag-hash-color: color of the # char
  */
 
-.tag {
+.tag:not(.token) {
   --tag-color: var(--primary);
   --tag-hash-color: var(--tag-color);
   color: inherit;
@@ -13,21 +13,21 @@
   transition: all 300ms;
 }
 
-.tag[data-selected="true"] {
+.tag:not(.token)[data-selected="true"] {
   font-weight: bold;
 }
 
-.tag::before {
+.tag:not(.token)::before {
   content: "#";
   font-size: 0.9em;
   transition: color 300ms;
   color: var(--tag-hash-color);
 }
 
-a.tag {
+a.tag:not(.token) {
   text-decoration-color: var(--primary);
 }
 
-a.tag:hover {
+a.tag:not(.token):hover {
   color: var(--tag-color);
 }
